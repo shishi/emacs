@@ -1,3 +1,4 @@
 echo 'hoge'
 export EDITOR=emacsclient
 echo $EDITOR
+which ruby
