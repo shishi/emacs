@@ -1,7 +1,0 @@
-kind=defined
-names=callback
-visibility=public
-
---- callback(*args)
-
-

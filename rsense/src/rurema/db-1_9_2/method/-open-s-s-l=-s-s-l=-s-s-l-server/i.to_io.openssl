@@ -1,7 +1,0 @@
-kind=defined
-names=to_io
-visibility=public
-
---- to_io -> TCPServer
-ラップしている [[c:TCPServer]] オブジェクトを返します。
-

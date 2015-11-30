@@ -1,8 +1,0 @@
-kind=defined
-names=gzip
-visibility=public 
-
---- gzip(filename)
-[[m:Zlib::GzipWriter.open]] へのラッパーです。
-与えられたファイル名を圧縮して保存します。
-

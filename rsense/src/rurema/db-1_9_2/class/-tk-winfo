@@ -1,7 +1,0 @@
-superclass=
-type=module
-library=tk.winfo
-extended=Tk
-included=Tk
-
-

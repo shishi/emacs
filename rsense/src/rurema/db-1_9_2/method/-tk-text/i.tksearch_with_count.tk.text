@@ -1,6 +1,0 @@
-kind=defined
-names=tksearch_with_count
-visibility=public
-
---- tksearch_with_count(*args)
-

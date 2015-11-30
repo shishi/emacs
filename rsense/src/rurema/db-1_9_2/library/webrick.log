@@ -1,7 +1,0 @@
-methods=
-sublibraries=
-requires=
-classes=WEBrick=BasicLog,WEBrick=Log
-is_sublibrary=true
-
-

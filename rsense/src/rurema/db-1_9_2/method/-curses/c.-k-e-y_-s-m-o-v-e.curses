@@ -1,8 +1,0 @@
-kind=defined
-names=KEY_SMOVE
-visibility=public
-
---- KEY_SMOVE -> Integer
-
-Shift + Move キーを表す定数です。
-

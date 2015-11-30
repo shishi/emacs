@@ -1,8 +1,0 @@
-kind=defined
-names=canvasx
-visibility=public
-
---- canvasx(screen_x, *args)
-
-
-

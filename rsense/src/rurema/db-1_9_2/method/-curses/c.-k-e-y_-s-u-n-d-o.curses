@@ -1,8 +1,0 @@
-kind=defined
-names=KEY_SUNDO
-visibility=public
-
---- KEY_SUNDO -> Integer
-
-Shift + Undo キーを表す定数です。
-

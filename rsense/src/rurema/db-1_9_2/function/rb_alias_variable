@@ -1,8 +1,0 @@
-name=rb_alias_variable
-private=false
-macro=false
-type=void
-filename=variable.c
-params=(ID name1, ID name2)
-
-

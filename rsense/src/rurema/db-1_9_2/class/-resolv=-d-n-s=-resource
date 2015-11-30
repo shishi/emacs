@@ -1,7 +1,0 @@
-superclass=Resolv=DNS=Query
-type=class
-library=resolv
-extended=
-included=
-
-DNSリソースを表す抽象クラスです。

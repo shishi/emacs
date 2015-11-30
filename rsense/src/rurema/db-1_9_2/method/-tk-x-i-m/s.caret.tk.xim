@@ -1,6 +1,0 @@
-kind=defined
-names=caret
-visibility=public
-
---- caret(window, keys = nil)
-

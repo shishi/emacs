@@ -1,8 +1,0 @@
-kind=defined
-names=fix
-visibility=public
-
---- fix
-
-self の小数点以下の切り捨て。
-

@@ -1,8 +1,0 @@
-superclass=Resolv=DNS=Resource=NS
-type=class
-library=resolv
-extended=
-included=
-
-DNS リソースのクラス IN、タイプ NS に対応する
-クラスです。

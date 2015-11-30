@@ -1,8 +1,0 @@
-kind=defined
-names=external_encoding
-visibility=public
-
---- external_encoding -> Encoding | nil
-
-[[m:IO#external_encoding]] に委譲します。
-

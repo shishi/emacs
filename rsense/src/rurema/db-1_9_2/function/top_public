@@ -1,8 +1,0 @@
-name=top_public
-private=true
-macro=false
-type=VALUE
-filename=eval.c
-params=(int argc, VALUE *argv)
-
-

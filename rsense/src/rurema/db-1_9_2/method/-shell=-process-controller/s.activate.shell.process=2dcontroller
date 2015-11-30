@@ -1,6 +1,0 @@
-kind=defined
-names=activate
-visibility=public
-
---- activate(pc) -> ()
-

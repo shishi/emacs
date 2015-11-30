@@ -1,7 +1,0 @@
-superclass=
-type=module
-library=tk.winpkg
-extended=Tk,TkWinDDE
-included=
-
-

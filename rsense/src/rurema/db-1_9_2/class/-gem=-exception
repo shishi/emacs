@@ -1,7 +1,0 @@
-superclass=RuntimeError
-type=class
-library=rubygems.exceptions
-extended=
-included=
-
-RubyGems で扱う全ての例外のスーパークラスです。

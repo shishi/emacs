@@ -1,6 +1,0 @@
-kind=defined
-names=pack
-visibility=public
-
---- pack(keys = nil)
-

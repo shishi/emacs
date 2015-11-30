@@ -1,8 +1,0 @@
-kind=defined
-names=to_s
-visibility=public
-
---- to_s -> String
-オブジェクトに含まれる設定情報を OpenSSL の設定ファイルの形式で
-出力します。
-

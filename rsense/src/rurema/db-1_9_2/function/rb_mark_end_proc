@@ -1,8 +1,0 @@
-name=rb_mark_end_proc
-private=false
-macro=false
-type=void
-filename=eval.c
-params=(void)
-
-

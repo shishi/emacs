@@ -1,8 +1,0 @@
-kind=defined
-names=uid
-visibility=public 
-
---- uid -> Integer
-
-tar のヘッダに含まれる uid を返します。
-

@@ -1,6 +1,0 @@
-kind=defined
-names=__eval
-visibility=public
-
---- __eval(str)
-

@@ -1,6 +1,0 @@
-kind=defined
-names=set_bool_element_type
-visibility=public
-
---- set_bool_element_type(idxs, val)
-

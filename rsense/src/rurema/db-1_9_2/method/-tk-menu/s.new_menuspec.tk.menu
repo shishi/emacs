@@ -1,6 +1,0 @@
-kind=defined
-names=new_menuspec
-visibility=public
-
---- new_menuspec(menu_spec, parent = nil, tearoff = false, keys = nil)
-

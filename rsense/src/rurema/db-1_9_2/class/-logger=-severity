@@ -1,7 +1,0 @@
-superclass=
-type=module
-library=logger
-extended=
-included=
-
-[[lib:logger]] で使用するログレベルを定義したモジュール。

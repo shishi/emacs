@@ -1,6 +1,0 @@
-kind=redefined
-names=encode
-visibility=public
-
---- encode(content)
-

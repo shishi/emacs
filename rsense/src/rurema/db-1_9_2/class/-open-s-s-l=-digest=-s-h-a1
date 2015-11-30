@@ -1,7 +1,0 @@
-superclass=OpenSSL=Digest
-type=class
-library=openssl
-extended=
-included=
-
-ハッシュ関数 SHA1 を表すクラス

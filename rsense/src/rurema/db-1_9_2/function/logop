@@ -1,8 +1,0 @@
-name=logop
-private=true
-macro=false
-type=NODE *
-filename=parse.y
-params=(enum node_type type, NODE *left, NODE *right)
-
-

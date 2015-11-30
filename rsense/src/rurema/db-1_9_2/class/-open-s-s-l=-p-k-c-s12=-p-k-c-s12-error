@@ -1,7 +1,0 @@
-superclass=OpenSSL=OpenSSLError
-type=class
-library=openssl
-extended=
-included=
-
-PKCS#12 関連のエラーが生じた場合に発生する例外です。

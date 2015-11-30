@@ -1,7 +1,0 @@
-methods=
-sublibraries=
-requires=tcltklib,multi=2dtk,tkutil
-classes=MutiTkIp,RemoteTkIp
-is_sublibrary=true
-
-

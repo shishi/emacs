@@ -1,7 +1,0 @@
-superclass=OpenSSL=OpenSSLError
-type=class
-library=openssl
-extended=
-included=
-
-共通鍵暗号関連のエラーで発生する例外のクラス。

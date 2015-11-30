@@ -1,7 +1,0 @@
-kind=defined
-names=destroy,unset
-visibility=public
-
---- unset
---- destroy
-

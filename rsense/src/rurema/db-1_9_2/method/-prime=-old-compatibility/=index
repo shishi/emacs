@@ -1,3 +1,0 @@
-#each	Prime::OldCompatibility#each
-#next	Prime::OldCompatibility#next
-#succ	Prime::OldCompatibility#next

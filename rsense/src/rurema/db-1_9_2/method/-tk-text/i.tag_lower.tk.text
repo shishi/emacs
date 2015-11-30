@@ -1,6 +1,0 @@
-kind=defined
-names=tag_lower
-visibility=public
-
---- tag_lower(tag, below = Tk::None)
-

@@ -1,8 +1,0 @@
-kind=defined
-names=F13
-visibility=public
-
---- F13 -> Integer
-
-F13 キーを表す定数です。
-

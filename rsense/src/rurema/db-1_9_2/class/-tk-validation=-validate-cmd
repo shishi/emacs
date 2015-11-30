@@ -1,7 +1,0 @@
-superclass=TkValidateCommand
-type=class
-library=tk.validation
-extended=
-included=
-
-

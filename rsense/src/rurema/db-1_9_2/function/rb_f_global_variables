@@ -1,8 +1,0 @@
-name=rb_f_global_variables
-private=false
-macro=false
-type=VALUE
-filename=variable.c
-params=(void)
-
-

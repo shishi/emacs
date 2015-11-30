@@ -1,8 +1,0 @@
-kind=defined
-names=KEY_SFIND
-visibility=public
-
---- KEY_SFIND -> Integer
-
-Shift + Find キーを表す定数です。
-

@@ -1,9 +1,0 @@
-kind=defined
-names=session_cache_mode
-visibility=public
-
---- session_cache_mode -> Integer
-セッションキャッシュのモードを返します。
-
-@see [[m:OpenSSL::SSL::SSLContext#session_cache_mode=]]
-

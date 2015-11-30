@@ -1,7 +1,0 @@
-superclass=Win32=Registry
-type=class
-library=win32.registry
-extended=
-included=
-
-

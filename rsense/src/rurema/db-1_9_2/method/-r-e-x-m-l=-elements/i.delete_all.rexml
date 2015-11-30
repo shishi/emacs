@@ -1,6 +1,0 @@
-kind=defined
-names=delete_all
-visibility=public
-
---- delete_all(xpath)
-

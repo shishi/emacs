@@ -1,7 +1,0 @@
-kind=defined
-names=xmlschema
-visibility=public
-
---- xmlschema -> String
-XML Scheme (date) による書式の文字列を返します。
-

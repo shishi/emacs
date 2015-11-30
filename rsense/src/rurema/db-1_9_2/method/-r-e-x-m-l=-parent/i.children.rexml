@@ -1,7 +1,0 @@
-kind=defined
-names=children,to_a
-visibility=public
-
---- to_a
---- children
-

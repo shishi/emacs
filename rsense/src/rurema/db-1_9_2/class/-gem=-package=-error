@@ -1,7 +1,0 @@
-superclass=StandardError
-type=class
-library=rubygems.package
-extended=
-included=
-
-[[c:Gem::Package]] での基本的な例外です。

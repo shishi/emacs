@@ -1,8 +1,0 @@
-kind=defined
-names=set_value
-visibility=public
-
---- set_value(val)
-
-ラジオボタンをチェックしたときの値をvalにします。
-

@@ -1,7 +1,0 @@
-superclass=Object
-type=class
-library=rake.loaders.makefile
-extended=
-included=
-
-Makefile をロードするためのクラスです。

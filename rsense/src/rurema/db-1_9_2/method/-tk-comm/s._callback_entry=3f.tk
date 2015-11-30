@@ -1,6 +1,0 @@
-kind=defined
-names=_callback_entry?
-visibility=public
-
---- _callback_entry?(obj)
-

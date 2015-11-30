@@ -1,6 +1,0 @@
-kind=defined
-names=restart
-visibility=public
-
---- restart(app_name = nil, keys = {})
-

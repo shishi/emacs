@@ -1,7 +1,0 @@
-kind=defined
-names=quit
-visibility=public
-
---- quit -> nil
-FTP のセッションからログアウトします。
-

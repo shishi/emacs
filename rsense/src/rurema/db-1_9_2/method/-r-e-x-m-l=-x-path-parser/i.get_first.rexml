@@ -1,6 +1,0 @@
-kind=defined
-names=get_first
-visibility=public
-
---- get_first(path, nodeset)
-

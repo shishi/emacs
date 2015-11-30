@@ -1,7 +1,0 @@
-kind=defined
-names=current_interval,current_sleep
-visibility=public
-
---- current_sleep
---- current_interval
-

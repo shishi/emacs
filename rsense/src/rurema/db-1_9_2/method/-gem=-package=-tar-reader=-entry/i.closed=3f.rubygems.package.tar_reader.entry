@@ -1,9 +1,0 @@
-kind=defined
-names=closed?
-visibility=public 
-
---- closed? -> bool
-
-自身が close 済みである場合、真を返します。
-そうでない場合は、偽を返します。
-

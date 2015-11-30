@@ -1,6 +1,0 @@
-kind=defined
-names=transient
-visibility=public
-
---- transient(master = nil)
-

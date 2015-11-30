@@ -1,9 +1,0 @@
-kind=defined
-names=close
-visibility=public
-
---- close -> nil
-
-ウィンドウを閉じ、メモリを開放します。
-以降のこのウィンドウオブジェクトに対する操作は例外を発生します。
-

@@ -1,8 +1,0 @@
-kind=defined
-names=KEY_EOS
-visibility=public
-
---- KEY_EOS -> Integer
-
-スクリーンの末尾までクリアするキーを表す定数です。
-

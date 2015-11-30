@@ -1,6 +1,0 @@
-kind=defined
-names=tag_cget
-visibility=public
-
---- tag_cget(tagOrId, option)
-

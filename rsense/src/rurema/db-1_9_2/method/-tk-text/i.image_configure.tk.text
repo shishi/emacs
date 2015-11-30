@@ -1,6 +1,0 @@
-kind=defined
-names=image_configure
-visibility=public
-
---- image_configure(index, slot, value = Tk::None)
-

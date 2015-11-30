@@ -1,6 +1,0 @@
-kind=defined
-names=_get_variable
-visibility=public
-
---- _get_variable(var, flag)
-

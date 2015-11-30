@@ -1,8 +1,0 @@
-name=rb_thread_dead
-private=true
-macro=false
-type=int
-filename=eval.c
-params=(rb_thread_t th)
-
-

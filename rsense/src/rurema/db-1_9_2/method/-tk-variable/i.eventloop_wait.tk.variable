@@ -1,6 +1,0 @@
-kind=defined
-names=eventloop_wait
-visibility=public
-
---- eventloop_wait(check_root = false)
-

@@ -1,6 +1,0 @@
-kind=defined
-names=withdraw
-visibility=public
-
---- withdraw(ex = true)
-

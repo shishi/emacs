@@ -1,7 +1,0 @@
-kind=defined
-names=string,string=
-visibility=public
-
---- string
---- string=(value)
-

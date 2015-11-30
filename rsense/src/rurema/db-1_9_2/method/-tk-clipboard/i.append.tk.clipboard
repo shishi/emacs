@@ -1,6 +1,0 @@
-kind=defined
-names=append
-visibility=public
-
---- append(data, keys = nil)
-

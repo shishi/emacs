@@ -1,8 +1,0 @@
-kind=defined
-names=KEY_CTRL_E
-visibility=public
-
---- KEY_CTRL_E -> Integer
-
-Ctrl + E を表す定数です。
-

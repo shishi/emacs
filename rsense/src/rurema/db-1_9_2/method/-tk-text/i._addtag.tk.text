@@ -1,6 +1,0 @@
-kind=defined
-names=_addtag
-visibility=public
-
---- _addtag(name, obj)
-

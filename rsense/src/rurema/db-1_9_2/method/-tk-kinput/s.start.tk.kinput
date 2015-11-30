@@ -1,6 +1,0 @@
-kind=defined
-names=start
-visibility=public
-
---- start(win, style = Tk::None)
-

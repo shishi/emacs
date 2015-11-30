@@ -1,6 +1,0 @@
-kind=defined
-names=call
-visibility=public
-
---- call(*args)
-

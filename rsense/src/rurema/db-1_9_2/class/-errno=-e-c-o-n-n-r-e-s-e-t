@@ -1,7 +1,0 @@
-superclass=SystemCallError
-type=class
-library=webrick.compat
-extended=
-included=
-
-接続がリセットされた (POSIX.1)

@@ -1,6 +1,0 @@
-kind=defined
-names=update
-visibility=public
-
---- update(idle = nil)
-

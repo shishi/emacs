@@ -1,7 +1,0 @@
-kind=defined
-names=KEY_MOVE
-visibility=public
-
---- KEY_MOVE -> Integer
-Move キーを表す定数です。
-

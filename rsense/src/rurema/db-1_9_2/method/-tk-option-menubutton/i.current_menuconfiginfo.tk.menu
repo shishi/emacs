@@ -1,6 +1,0 @@
-kind=defined
-names=current_menuconfiginfo
-visibility=public
-
---- current_menuconfiginfo(key = nil)
-

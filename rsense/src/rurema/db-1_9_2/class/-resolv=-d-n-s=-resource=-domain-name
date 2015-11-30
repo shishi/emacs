@@ -1,7 +1,0 @@
-superclass=Resolv=DNS=Resource
-type=class
-library=resolv
-extended=
-included=
-
-DNSリソースのドメイン名を表す抽象クラスです。

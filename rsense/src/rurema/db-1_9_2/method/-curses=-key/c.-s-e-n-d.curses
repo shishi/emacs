@@ -1,8 +1,0 @@
-kind=defined
-names=SEND
-visibility=public
-
---- SEND -> Integer
-
-Shift + End キーを表す定数です。
-

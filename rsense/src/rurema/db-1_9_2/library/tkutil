@@ -1,7 +1,0 @@
-methods=
-sublibraries=
-requires=
-classes=TkKernel,TkUtil,TkCallbackEntry,TkObject,TkUtil=CallbackSubst,Tkutil=CallbackSubst=Info
-is_sublibrary=true
-
-

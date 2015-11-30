@@ -1,8 +1,0 @@
-kind=defined
-names=get3dcolor
-visibility=public
-
---- get3dcolor(path, bgcolor)
-
-
-

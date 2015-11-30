@@ -1,8 +1,0 @@
-name=rb_define_virtual_variable
-private=false
-macro=false
-type=void
-filename=variable.c
-params=(const char *name, VALUE (*getter)(), VALUE (*setter)())
-
-

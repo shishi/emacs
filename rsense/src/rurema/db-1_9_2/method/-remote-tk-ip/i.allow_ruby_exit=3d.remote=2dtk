@@ -1,6 +1,0 @@
-kind=defined
-names=allow_ruby_exit=
-visibility=public
-
---- allow_ruby_exit=(mode)
-

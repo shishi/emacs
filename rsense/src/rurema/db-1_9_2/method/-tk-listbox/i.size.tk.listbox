@@ -1,8 +1,0 @@
-kind=defined
-names=size
-visibility=public
-
---- size
-
-要素の数を返します。
-

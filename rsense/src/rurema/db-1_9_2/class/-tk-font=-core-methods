@@ -1,7 +1,0 @@
-superclass=
-type=module
-library=tk.font
-extended=TkCore
-included=Tk
-
-

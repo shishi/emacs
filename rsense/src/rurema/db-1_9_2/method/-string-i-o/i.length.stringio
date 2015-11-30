@@ -1,9 +1,0 @@
-kind=defined
-names=length,size
-visibility=public
-
---- size    -> Integer
---- length  -> Integer
-
-文字列の長さを返します。
-

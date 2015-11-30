@@ -1,7 +1,0 @@
-superclass=StandardError
-type=class
-library=getoptlong
-extended=
-included=
-
-このライブラリで発生する例外の基底クラスです。

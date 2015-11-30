@@ -1,6 +1,0 @@
-kind=defined
-names=fetcher=
-visibility=public
-
---- fetcher=(fetcher)
-

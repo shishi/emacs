@@ -1,8 +1,0 @@
-methods=
-sublibraries=
-requires=
-classes=Gem=Package=TarInput
-is_sublibrary=true
-
-gem-format な tar ファイルを読み込む [[c:Gem::Package::TarReader]] のラッ
-パークラスを提供するライブラリです。

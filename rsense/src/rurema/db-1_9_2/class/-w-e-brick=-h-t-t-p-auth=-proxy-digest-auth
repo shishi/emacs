@@ -1,7 +1,0 @@
-superclass=WEBrick=HTTPAuth=DigestAuth
-type=class
-library=webrick.httpauth.digestauth
-extended=
-included=WEBrick=HTTPAuth=ProxyAuthenticator
-
-プロクシの Digest 認証のためのクラスです。

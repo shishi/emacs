@@ -1,9 +1,0 @@
-kind=defined
-names=session_cache_size
-visibility=public
-
---- session_cache_size -> Integer
-自身が保持可能なセッションキャッシュのサイズを返します。
-
-@see [[m:OpenSSL::SSL::SSLContext#session_cache_size=]]
-

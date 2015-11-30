@@ -1,9 +1,0 @@
-methods=
-sublibraries=
-requires=test.unit.assertions
-classes=Test=Unit=TestCase
-is_sublibrary=true
-
-テストケースを記述するときに使います。
-
-test/unit の require 時に同時にrequireされます。

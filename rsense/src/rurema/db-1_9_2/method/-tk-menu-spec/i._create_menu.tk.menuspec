@@ -1,6 +1,0 @@
-kind=defined
-names=_create_menu
-visibility=private 
-
---- _create_menu(parent, menu_info, menu_name = nil, tearoff = false, default_opts = nil)
-

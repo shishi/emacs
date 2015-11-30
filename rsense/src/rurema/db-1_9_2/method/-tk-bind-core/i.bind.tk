@@ -1,8 +1,0 @@
-kind=defined
-names=bind
-visibility=public
-
---- bind(context, *args)
-
-
-

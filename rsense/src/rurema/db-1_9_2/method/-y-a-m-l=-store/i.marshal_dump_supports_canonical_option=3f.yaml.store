@@ -1,9 +1,0 @@
-kind=defined
-names=marshal_dump_supports_canonical_option?
-visibility=public
-
---- marshal_dump_supports_canonical_option? -> false
-
-[[c:YAML::Store]] では [[m:Marshal.#dump]] を使用しないので常に偽を返します。
-
-

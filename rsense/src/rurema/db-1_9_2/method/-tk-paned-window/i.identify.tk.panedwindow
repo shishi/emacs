@@ -1,6 +1,0 @@
-kind=defined
-names=identify
-visibility=public
-
---- identify(x, y)
-

@@ -1,7 +1,0 @@
-superclass=Object
-type=class
-library=rubygems.specification
-extended=
-included=
-
-Gem パッケージのメタデータを扱うためのクラスです。

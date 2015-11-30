@@ -1,7 +1,0 @@
-methods=
-sublibraries=
-requires=webrick.httpstatus,webrick.httputils,webrick.httpservlet.abstract,webrick.httpversion,webrick.utils,webrick.log,webrick.config
-classes=WEBrick=HTTPServlet=CGIHandler
-is_sublibrary=true
-
-CGI を扱うためのサーブレットを提供するライブラリです。

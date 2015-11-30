@@ -1,8 +1,0 @@
-kind=defined
-names=KEY_CTRL_F
-visibility=public
-
---- KEY_CTRL_F -> Integer
-
-Ctrl + F を表す定数です。
-

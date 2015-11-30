@@ -1,7 +1,0 @@
-kind=defined
-names=accept_uri_http
-visibility=public 
-
---- accept_uri_http
-HTTP の URI を扱えるようにするためのメソッドです。
-

@@ -1,8 +1,0 @@
-kind=defined
-names=KEY_MIN
-visibility=public
-
---- KEY_MIN -> Integer
-
-curses で利用可能なキーを表す定数の最小値です。
-

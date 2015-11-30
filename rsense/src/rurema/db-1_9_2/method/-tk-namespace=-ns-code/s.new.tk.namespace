@@ -1,6 +1,0 @@
-kind=defined
-names=new
-visibility=public
-
---- new(scope, use_obj_id = false)
-

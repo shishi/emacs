@@ -1,6 +1,0 @@
-kind=defined
-names=dump_tag
-visibility=public
-
---- dump_tag(*index) { ... }
-

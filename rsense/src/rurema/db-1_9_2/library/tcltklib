@@ -1,7 +1,0 @@
-methods=
-sublibraries=
-requires=
-classes=TclTkIp,TclTkLib,TclTkLib=EventFlag,TclTkLib=VarAccessFlag,TkCallbackBreak,TkCallbackContinue,TkCallbackReturn,TkCallbackRedo,TkCallbackRetry,TkCallbackThrow,TkLocalJumpError
-is_sublibrary=true
-
-

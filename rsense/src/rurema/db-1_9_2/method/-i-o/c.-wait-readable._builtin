@@ -1,7 +1,0 @@
-kind=defined
-names=WaitReadable
-visibility=public
-
---- WaitReadable -> Module
-[[m:IO#read_nonblock]] を参照してください。
-

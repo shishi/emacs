@@ -1,6 +1,0 @@
-kind=defined
-names=inject
-visibility=public
-
---- inject(xpath = nil, initial = nil) {|element| ... }
-

@@ -1,7 +1,0 @@
-superclass=TkObject
-type=class
-library=tk.image
-extended=
-included=Tk
-
-

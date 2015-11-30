@@ -1,7 +1,0 @@
-kind=defined
-names=pack_forget
-visibility=public
-
---- pack_forget(*args)
-
-

@@ -1,7 +1,0 @@
-superclass=
-type=module
-library=tk.validation
-extended=
-included=Tk=ValidateConfigure
-
-

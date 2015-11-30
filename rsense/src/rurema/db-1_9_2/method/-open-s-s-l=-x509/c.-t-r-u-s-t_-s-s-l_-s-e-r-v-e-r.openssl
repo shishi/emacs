@@ -1,6 +1,0 @@
-kind=defined
-names=TRUST_SSL_SERVER
-visibility=public
-
---- TRUST_SSL_SERVER -> Integer
-

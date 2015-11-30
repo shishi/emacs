@@ -1,6 +1,0 @@
-kind=defined
-names=create_from
-visibility=public
-
---- create_from(arg)
-

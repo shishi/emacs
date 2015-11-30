@@ -1,6 +1,0 @@
-kind=defined
-names=location
-visibility=public
-
---- location(master, x, y)
-

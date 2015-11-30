@@ -1,6 +1,0 @@
-kind=defined
-names=coerce
-visibility=public
-
---- coerce(other)
-

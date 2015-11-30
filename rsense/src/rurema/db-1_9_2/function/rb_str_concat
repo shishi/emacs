@@ -1,9 +1,0 @@
-name=rb_str_concat
-private=false
-macro=false
-type=VALUE
-filename=string.c
-params=(VALUE s1, VALUE s2)
-
-
-equivalent to "s1.concat s2"

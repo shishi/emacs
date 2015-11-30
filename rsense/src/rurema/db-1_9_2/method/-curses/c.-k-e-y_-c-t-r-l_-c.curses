@@ -1,8 +1,0 @@
-kind=defined
-names=KEY_CTRL_C
-visibility=public
-
---- KEY_CTRL_C -> Integer
-
-Ctrl + C を表す定数です。
-

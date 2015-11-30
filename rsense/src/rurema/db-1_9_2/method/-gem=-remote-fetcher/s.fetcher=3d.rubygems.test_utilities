@@ -1,8 +1,0 @@
-kind=added
-names=fetcher=
-visibility=public
-
---- fetcher=(fetcher)
-
-テスト用のメソッドです。
-

@@ -1,8 +1,0 @@
-kind=defined
-names=UNDO
-visibility=public
-
---- UNDO -> Integer
-
-Undo キーを表す定数です。
-

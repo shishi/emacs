@@ -1,6 +1,0 @@
-kind=defined
-names=present
-visibility=public
-
---- present(package, version=None)
-

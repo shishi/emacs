@@ -1,8 +1,0 @@
-kind=defined
-names=to_der
-visibility=public
-
---- to_der -> String
-自身を DER 形式に変換します。
-
-

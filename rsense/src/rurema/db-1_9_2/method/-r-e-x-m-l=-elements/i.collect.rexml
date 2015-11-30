@@ -1,6 +1,0 @@
-kind=defined
-names=collect
-visibility=public
-
---- collect(xpath = nil) {|element| .. }
-

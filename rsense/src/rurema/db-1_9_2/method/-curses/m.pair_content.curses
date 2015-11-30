@@ -1,9 +1,0 @@
-kind=defined
-names=pair_content
-visibility=public
-
---- pair_content(pair) -> Array
-与えられた pair に含まれる文字色と背景色を要素とする二要素の配列を返します。
-
-@param pair 
-

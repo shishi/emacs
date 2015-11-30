@@ -1,7 +1,0 @@
-methods=
-sublibraries=
-requires=webrick.httpstatus,webrick.htmlutils,webrick.httputils,webrick.httpversion
-classes=WEBrick=HTTPResponse
-is_sublibrary=true
-
-HTTP のレスポンスを表すためのクラスを提供するライブラリです。

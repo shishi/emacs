@@ -1,6 +1,0 @@
-kind=defined
-names=selection_range
-visibility=public
-
---- selection_range(s, e)
-

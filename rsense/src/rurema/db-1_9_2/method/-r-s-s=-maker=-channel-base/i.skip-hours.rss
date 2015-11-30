@@ -1,7 +1,0 @@
-kind=defined
-names=skipHours
-visibility=public
-
---- skipHours
-skipHoursを返します．
-

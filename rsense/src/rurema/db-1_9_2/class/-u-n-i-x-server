@@ -1,7 +1,0 @@
-superclass=UNIXSocket
-type=class
-library=socket
-extended=
-included=
-
-UNIXストリーム型接続のサーバ側のソケットのクラス。

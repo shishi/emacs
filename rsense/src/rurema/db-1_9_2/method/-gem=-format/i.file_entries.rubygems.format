@@ -1,8 +1,0 @@
-kind=defined
-names=file_entries
-visibility=public 
-
---- file_entries -> Array
-
-Gem パッケージに含まれるファイルの配列を返します。
-

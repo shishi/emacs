@@ -1,7 +1,0 @@
-superclass=RSS=Maker=ChannelBase=SkipHoursBase=HourBase
-type=class
-library=rss
-extended=
-included=
-
-

@@ -1,6 +1,0 @@
-kind=defined
-names=enc_key
-visibility=public
-
---- enc_key -> String
-

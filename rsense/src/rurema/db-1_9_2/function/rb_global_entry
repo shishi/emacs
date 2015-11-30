@@ -1,8 +1,0 @@
-name=rb_global_entry
-private=false
-macro=false
-type=struct global_entry *
-filename=variable.c
-params=(ID id)
-
-

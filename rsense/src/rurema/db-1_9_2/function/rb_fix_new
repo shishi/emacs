@@ -1,8 +1,0 @@
-name=rb_fix_new
-private=false
-macro=false
-type=VALUE
-filename=ruby.h
-params=(long v)
-
-

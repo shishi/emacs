@@ -1,8 +1,0 @@
-kind=defined
-names=ResponseField
-visibility=public
-
---- ResponseField -> "Proxy-Authenticate"
-
-レスポンスフィールドのキーの名前です。
-

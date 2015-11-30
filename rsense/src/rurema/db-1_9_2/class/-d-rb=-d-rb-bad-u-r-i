@@ -1,7 +1,0 @@
-superclass=DRb=DRbError
-type=class
-library=drb
-extended=
-included=
-
-Error raised by the DRbProtocol module when it cannot find any protocol implementation support the scheme specified in a URI.

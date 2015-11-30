@@ -1,7 +1,0 @@
-kind=defined
-names=next_update
-visibility=public
-
---- next_update -> Time
-CRL の次回更新日時を Time オブジェクトで返します。
-

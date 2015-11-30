@@ -1,7 +1,0 @@
-kind=defined
-names=SIC
-visibility=public
-
---- SIC -> Integer
-Shift + ... キーを表す定数です。
-

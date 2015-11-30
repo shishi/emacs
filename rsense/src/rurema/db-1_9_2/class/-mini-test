@@ -1,7 +1,0 @@
-superclass=
-type=module
-library=minitest.unit
-extended=
-included=
-
-[[lib:minitest/unit]] で使用するクラスやモジュールを定義しているモジュールです。

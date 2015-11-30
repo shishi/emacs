@@ -1,7 +1,0 @@
-kind=defined
-names=wm_grid
-visibility=public
-
---- wm_grid(*args)
-
-

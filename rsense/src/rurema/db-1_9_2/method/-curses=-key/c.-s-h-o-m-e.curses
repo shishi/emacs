@@ -1,8 +1,0 @@
-kind=defined
-names=SHOME
-visibility=public
-
---- SHOME -> Integer
-
-Shift + Home キーを表す定数です。
-

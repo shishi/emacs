@@ -1,9 +1,0 @@
-kind=defined
-names=attroff
-visibility=public
-
---- attroff(attrs) -> Integer
-Turns on the named attributes +attrs+ without affecting any others.
-
-@see [[m:Curses::Window.attrset]]
-

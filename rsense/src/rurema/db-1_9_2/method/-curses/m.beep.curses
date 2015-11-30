@@ -1,9 +1,0 @@
-kind=defined
-names=beep
-visibility=public
-
---- beep -> nil
-
-音を出します。
-この機能がないところでは単に無視されます。
-

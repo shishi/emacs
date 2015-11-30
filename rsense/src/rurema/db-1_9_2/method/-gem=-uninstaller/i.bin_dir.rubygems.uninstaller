@@ -1,8 +1,0 @@
-kind=defined
-names=bin_dir
-visibility=public 
-
---- bin_dir -> String
-
-Gem でインストールされたコマンドのあるディレクトリを返します。
-

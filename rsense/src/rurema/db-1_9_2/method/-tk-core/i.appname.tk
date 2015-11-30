@@ -1,6 +1,0 @@
-kind=defined
-names=appname
-visibility=public
-
---- appname(name = Tk::None)
-

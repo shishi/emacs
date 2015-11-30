@@ -1,6 +1,0 @@
-kind=defined
-names=eval_callback
-visibility=public
-
---- eval_callback(*args)
-

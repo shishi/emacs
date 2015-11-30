@@ -1,6 +1,0 @@
-kind=defined
-names=add
-visibility=public
-
---- add(*args)
-

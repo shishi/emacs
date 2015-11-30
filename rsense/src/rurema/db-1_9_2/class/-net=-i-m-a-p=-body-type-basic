@@ -1,7 +1,0 @@
-superclass=Struct
-type=class
-library=net.imap
-extended=
-included=
-
-Net::IMAP::BodyTypeBasic represents basic body structures of messages.

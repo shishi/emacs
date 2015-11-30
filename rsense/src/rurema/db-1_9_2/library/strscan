@@ -1,7 +1,0 @@
-methods=
-sublibraries=
-requires=
-classes=StringScanner,StringScanner=Error
-is_sublibrary=false
-
-strscan は 文字列を高速にスキャンするためのライブラリです。

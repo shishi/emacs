@@ -1,8 +1,0 @@
-kind=defined
-names=ver
-visibility=public
-
---- ver    -> String
-
-program_name、version と release から生成したバージョンを表す文字列を返します。
-

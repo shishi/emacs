@@ -1,6 +1,0 @@
-kind=defined
-names=boolean
-visibility=public
-
---- boolean(object = nil)
-

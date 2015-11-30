@@ -1,9 +1,0 @@
-kind=defined
-names=DEFAULT_PRIVATE_DIR
-visibility=public
-
---- DEFAULT_PRIVATE_DIR -> String
-デフォルトの秘密鍵ディレクトリ名。
-
-
-

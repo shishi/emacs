@@ -1,8 +1,0 @@
-name=rb_id_attrset
-private=false
-macro=false
-type=ID
-filename=parse.y
-params=(ID id)
-
-

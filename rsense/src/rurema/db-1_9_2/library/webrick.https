@@ -1,8 +1,0 @@
-methods=WEBrick=Config/c.HTTP.webrick.https,WEBrick=HTTPRequest/i.cipher.webrick.https,WEBrick=HTTPRequest/i.server_cert.webrick.https,WEBrick=HTTPRequest/i.client_cert.webrick.https,WEBrick=HTTPRequest/i.parse.webrick.https,WEBrick=HTTPRequest/i.meta_vars.webrick.https
-sublibraries=
-requires=webrick.ssl
-classes=
-is_sublibrary=true
-
-[[c:WEBrick::HTTPServer]] を SSL/TLS に対応させるための実装。
-このファイルを [[m:Kernel.#require]] すると [[c:WEBrick::HTTPServer]] が SSL/TLS 対応になります。

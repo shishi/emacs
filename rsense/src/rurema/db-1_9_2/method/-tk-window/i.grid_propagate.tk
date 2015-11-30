@@ -1,6 +1,0 @@
-kind=defined
-names=grid_propagate
-visibility=public
-
---- grid_propagate(mode = Tk::None)
-

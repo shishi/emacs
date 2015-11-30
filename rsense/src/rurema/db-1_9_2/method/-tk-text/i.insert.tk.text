@@ -1,6 +1,0 @@
-kind=defined
-names=insert
-visibility=public
-
---- insert(index, chars, *tags)
-

@@ -1,8 +1,0 @@
-superclass=
-type=module
-library=openssl
-extended=
-included=
-
-PKCS#12 (秘密鍵、証明書、関連するCA証明書を1つのファイルに保存する形式)
-を表すクラスです。

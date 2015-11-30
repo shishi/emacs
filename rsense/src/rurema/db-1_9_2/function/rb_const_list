@@ -1,8 +1,0 @@
-name=rb_const_list
-private=false
-macro=false
-type=VALUE
-filename=variable.c
-params=(void *data)
-
-

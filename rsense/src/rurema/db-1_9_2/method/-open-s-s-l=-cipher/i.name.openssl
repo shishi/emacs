@@ -1,8 +1,0 @@
-kind=defined
-names=name
-visibility=public
-
---- name -> String
-暗号化アルゴリズムの名前を文字列で返します。
-
-

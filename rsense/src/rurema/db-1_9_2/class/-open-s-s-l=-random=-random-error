@@ -1,7 +1,0 @@
-superclass=OpenSSL=OpenSSLError
-type=class
-library=openssl
-extended=
-included=
-
-OpenSSL の乱数関連のエラーが起きた場合に発生する例外

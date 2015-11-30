@@ -1,8 +1,0 @@
-kind=defined
-names=addtag_withtag
-visibility=public
-
---- addtag_withtag(tagOrId, tag)
-
-
-

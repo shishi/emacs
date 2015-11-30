@@ -1,8 +1,0 @@
-kind=defined
-names=post_install_message
-visibility=public
-
---- post_install_message -> String
-
-インストール完了後に表示するメッセージを返します。
-

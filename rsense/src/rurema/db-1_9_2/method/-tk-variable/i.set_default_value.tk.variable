@@ -1,6 +1,0 @@
-kind=defined
-names=set_default_value
-visibility=public
-
---- set_default_value(val)
-

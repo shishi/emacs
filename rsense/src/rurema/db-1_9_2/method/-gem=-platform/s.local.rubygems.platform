@@ -1,6 +1,0 @@
-kind=defined
-names=local
-visibility=public
-
---- local -> Gem::Platform
-

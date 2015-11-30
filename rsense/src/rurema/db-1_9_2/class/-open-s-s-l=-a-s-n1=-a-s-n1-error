@@ -1,7 +1,0 @@
-superclass=OpenSSL=OpenSSLError
-type=class
-library=openssl
-extended=
-included=
-
-OpenSSLの ASN.1 関連のエラーが起きたときに発生する例外です。

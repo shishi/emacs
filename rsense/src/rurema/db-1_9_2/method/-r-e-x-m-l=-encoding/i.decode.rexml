@@ -1,6 +1,0 @@
-kind=redefined
-names=decode
-visibility=public
-
---- decode(str)
-

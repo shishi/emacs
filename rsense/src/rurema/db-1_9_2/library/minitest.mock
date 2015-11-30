@@ -1,7 +1,0 @@
-methods=
-sublibraries=
-requires=
-classes=MiniTest=Mock,MockExpectationError
-is_sublibrary=false
-
-シンプルなモックライブラリです。

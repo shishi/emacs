@@ -1,7 +1,0 @@
-methods=
-sublibraries=
-requires=
-classes=WEBrick=HTTPAuth=Authenticator,WEBrick=HTTPAuth=ProxyAuthenticator
-is_sublibrary=true
-
-HTTP 認証で利用するモジュールを提供するライブラリです。

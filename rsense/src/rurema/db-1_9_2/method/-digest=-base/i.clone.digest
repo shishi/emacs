@@ -1,9 +1,0 @@
-kind=defined
-names=clone,dup
-visibility=public
-
---- dup
---- clone
-
-ダイジェストオブジェクトの複製を作る。
-

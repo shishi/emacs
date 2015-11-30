@@ -1,7 +1,0 @@
-superclass=TkWindow
-type=class
-library=tk.panedwindow
-extended=
-included=
-
-

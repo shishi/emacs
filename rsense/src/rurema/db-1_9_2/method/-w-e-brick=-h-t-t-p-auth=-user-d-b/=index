@@ -1,5 +1,0 @@
-#auth_type	WEBrick::HTTPAuth::UserDB#auth_type
-#auth_type=	WEBrick::HTTPAuth::UserDB#auth_type=
-#get_passwd	WEBrick::HTTPAuth::UserDB#get_passwd
-#make_passwd	WEBrick::HTTPAuth::UserDB#make_passwd
-#set_passwd	WEBrick::HTTPAuth::UserDB#set_passwd

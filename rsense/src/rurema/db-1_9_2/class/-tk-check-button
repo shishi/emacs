@@ -1,7 +1,0 @@
-superclass=TkRadioButton
-type=class
-library=tk.checkbutton
-extended=
-included=
-
-

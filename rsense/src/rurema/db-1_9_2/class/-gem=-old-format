@@ -1,9 +1,0 @@
-superclass=Object
-type=class
-library=rubygems.old_format
-extended=
-included=
-
-RubyGems の Gem ファイルの内部構造を表すクラスです。
-
-@see [[c:Gem::Format]]

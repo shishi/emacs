@@ -1,8 +1,0 @@
-name=thread_switch
-private=true
-macro=false
-type=int
-filename=eval.c
-params=(int n)
-
-

@@ -1,9 +1,0 @@
-kind=defined
-names=clear
-visibility=public
-
---- clear -> nil
-
-ウィンドウの表示を消去します。
-この操作は即座に実行されます。
-

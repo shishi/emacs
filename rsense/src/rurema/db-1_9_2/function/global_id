@@ -1,8 +1,0 @@
-name=global_id
-private=true
-macro=false
-type=ID
-filename=variable.c
-params=(const char *name)
-
-

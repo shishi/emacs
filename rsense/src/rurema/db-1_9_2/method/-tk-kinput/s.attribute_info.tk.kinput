@@ -1,6 +1,0 @@
-kind=defined
-names=attribute_info
-visibility=public
-
---- attribute_info(win, slot = nil)
-

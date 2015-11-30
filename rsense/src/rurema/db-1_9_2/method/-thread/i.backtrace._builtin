@@ -1,6 +1,0 @@
-kind=defined
-names=backtrace
-visibility=public
-
---- backtrace    -> [String] | nil
-

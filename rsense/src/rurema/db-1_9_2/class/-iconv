@@ -1,7 +1,0 @@
-superclass=Data
-type=class
-library=iconv
-extended=
-included=
-
-iconv 関数のラッパークラスです。

@@ -1,8 +1,0 @@
-kind=defined
-names=KEY_REPLACE
-visibility=public
-
---- KEY_REPLACE -> Integer
-
-Replace キーを表す定数です。
-

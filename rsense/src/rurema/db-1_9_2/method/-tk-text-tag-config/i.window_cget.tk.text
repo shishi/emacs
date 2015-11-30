@@ -1,6 +1,0 @@
-kind=defined
-names=window_cget
-visibility=public
-
---- window_cget(tagOrId, option)
-

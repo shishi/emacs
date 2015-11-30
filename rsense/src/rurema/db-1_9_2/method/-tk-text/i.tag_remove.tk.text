@@ -1,6 +1,0 @@
-kind=defined
-names=tag_remove
-visibility=public
-
---- tag_remove(tag, *indices)
-

@@ -1,6 +1,0 @@
-kind=defined
-names=wrap
-visibility=public
-
---- wrap(string, width, addnewline = false)
-

@@ -1,6 +1,0 @@
-kind=defined
-names=starts_with
-visibility=public
-
---- starts_with(string, test)
-

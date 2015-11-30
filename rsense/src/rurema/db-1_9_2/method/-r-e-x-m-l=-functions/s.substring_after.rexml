@@ -1,6 +1,0 @@
-kind=defined
-names=substring_after
-visibility=public
-
---- substring_after(string, test)
-

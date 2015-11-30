@@ -1,8 +1,0 @@
-kind=defined
-names=const_missing
-visibility=public 
-
---- const_missing
-
-prelude.c で定義されている内部用のメソッドです。
-

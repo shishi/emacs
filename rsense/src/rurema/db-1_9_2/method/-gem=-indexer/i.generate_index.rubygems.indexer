@@ -1,7 +1,0 @@
-kind=defined
-names=generate_index
-visibility=public 
-
---- generate_index
-インデックスを構築して保存します。
-

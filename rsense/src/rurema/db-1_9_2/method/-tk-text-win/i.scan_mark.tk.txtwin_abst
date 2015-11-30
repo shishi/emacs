@@ -1,6 +1,0 @@
-kind=defined
-names=scan_mark
-visibility=public
-
---- scan_mark(x, y)
-

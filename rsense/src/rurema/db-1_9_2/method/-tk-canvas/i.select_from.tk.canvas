@@ -1,8 +1,0 @@
-kind=defined
-names=select_from
-visibility=public
-
---- select_from(tagOrId, index)
-
-
-

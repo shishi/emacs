@@ -1,6 +1,0 @@
-kind=defined
-names=set_transparency
-visibility=public
-
---- set_transparency(x, y, st)
-

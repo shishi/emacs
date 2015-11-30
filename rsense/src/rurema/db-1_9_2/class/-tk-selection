@@ -1,7 +1,0 @@
-superclass=
-type=module
-library=tk.selection
-extended=Tk
-included=Tk
-
-

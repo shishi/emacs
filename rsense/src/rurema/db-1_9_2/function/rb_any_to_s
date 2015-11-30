@@ -1,8 +1,0 @@
-name=rb_any_to_s
-private=false
-macro=false
-type=VALUE
-filename=object.c
-params=(VALUE obj)
-
-

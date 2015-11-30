@@ -1,6 +1,0 @@
-kind=defined
-names=unnormalize
-visibility=public
-
---- unnormalize(string, entities = nil, filter = nil)
-

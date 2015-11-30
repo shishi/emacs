@@ -1,7 +1,0 @@
-superclass=Object
-type=class
-library=rubygems.dependency_list
-extended=
-included=TSort
-
-Gem の依存関係を扱うためのクラスです。

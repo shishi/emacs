@@ -1,6 +1,0 @@
-kind=defined
-names=replace_child
-visibility=public
-
---- replace_child(to_replace, replacement)
-

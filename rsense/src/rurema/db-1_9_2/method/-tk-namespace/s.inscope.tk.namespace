@@ -1,6 +1,0 @@
-kind=defined
-names=inscope
-visibility=public
-
---- inscope(namespace, script, *args)
-

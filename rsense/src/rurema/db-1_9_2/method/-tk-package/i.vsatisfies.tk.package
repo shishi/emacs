@@ -1,6 +1,0 @@
-kind=defined
-names=vsatisfies
-visibility=public
-
---- vsatisfies(version1, version2)
-

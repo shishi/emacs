@@ -1,8 +1,0 @@
-kind=defined
-names=closed?
-visibility=public
-
---- closed? -> bool
-
-[[m:IO#closed?]] に委譲します。
-

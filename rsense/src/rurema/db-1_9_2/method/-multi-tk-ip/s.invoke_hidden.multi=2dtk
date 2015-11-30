@@ -1,6 +1,0 @@
-kind=defined
-names=invoke_hidden
-visibility=public
-
---- invoke_hidden(slave, cmd, *args)
-

@@ -1,8 +1,0 @@
-kind=defined
-names=path
-visibility=public
-
---- path -> String
-
-リクエストする path を文字列で返します。
-

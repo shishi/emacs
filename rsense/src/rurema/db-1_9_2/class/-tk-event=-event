@@ -1,7 +1,0 @@
-superclass=TkUtil=CallbackSubst
-type=class
-library=tk.event
-extended=
-included=
-
-

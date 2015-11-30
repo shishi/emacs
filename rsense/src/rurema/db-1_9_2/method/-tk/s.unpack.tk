@@ -1,6 +1,0 @@
-kind=defined
-names=unpack
-visibility=public
-
---- unpack(*args)
-

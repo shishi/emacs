@@ -1,6 +1,0 @@
-kind=defined
-names=lower
-visibility=public
-
---- lower(below = Tk::None)
-

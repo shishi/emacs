@@ -1,8 +1,0 @@
-kind=defined
-names=IL
-visibility=public
-
---- IL -> Integer
-
-行を挿入するキーを表す定数です。
-

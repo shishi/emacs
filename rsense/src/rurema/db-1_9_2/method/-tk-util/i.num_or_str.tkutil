@@ -1,6 +1,0 @@
-kind=defined
-names=num_or_str
-visibility=public
-
---- num_or_str(value)
-

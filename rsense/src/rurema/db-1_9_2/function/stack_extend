@@ -1,8 +1,0 @@
-name=stack_extend
-private=true
-macro=false
-type=void
-filename=eval.c
-params=(rb_thread_t th, int exit)
-
-

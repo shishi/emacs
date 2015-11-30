@@ -1,8 +1,0 @@
-kind=defined
-names=bind
-visibility=public
-
---- bind(host, port)
-
-ソケットを host の port に結合します。
-

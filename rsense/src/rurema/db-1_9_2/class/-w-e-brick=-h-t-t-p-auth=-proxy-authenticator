@@ -1,8 +1,0 @@
-superclass=
-type=module
-library=webrick.httpauth.authenticator
-extended=
-included=
-
-このモジュールはプロキシのためにダイジェスト認証とベーシック認証の両方
-の一般的なサポートを提供します。

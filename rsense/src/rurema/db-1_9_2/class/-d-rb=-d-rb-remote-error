@@ -1,7 +1,0 @@
-superclass=DRb=DRbError
-type=class
-library=drb
-extended=
-included=
-
-An exception wrapping an error object

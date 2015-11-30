@@ -1,7 +1,0 @@
-superclass=URI=Generic
-type=class
-library=uri
-extended=
-included=
-
-HTTP URI を表すクラスです。

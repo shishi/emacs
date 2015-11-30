@@ -1,6 +1,0 @@
-kind=defined
-names=method_missing
-visibility=public
-
---- method_missing(m, *args, &block)
-

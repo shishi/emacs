@@ -1,6 +1,0 @@
-kind=defined
-names=_subst_UTF_backslash
-visibility=public
-
---- _subst_UTF_backslash(str)
-

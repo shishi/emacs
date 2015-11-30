@@ -1,7 +1,0 @@
-superclass=Object
-type=class
-library=rubygems.package.tar_writer
-extended=
-included=
-
-tar ファイルを書き込むためのクラスです。

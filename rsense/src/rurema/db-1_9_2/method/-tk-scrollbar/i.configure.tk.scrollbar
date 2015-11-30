@@ -1,6 +1,0 @@
-kind=defined
-names=configure
-visibility=public
-
---- configure(*args)
-

@@ -1,2 +1,0 @@
-.add_protocol	DRb::DRbProtocol.#add_protocol
-#add_protocol	DRb::DRbProtocol.#add_protocol

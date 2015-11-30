@@ -1,6 +1,0 @@
-kind=defined
-names=set_translation
-visibility=public
-
---- set_translation(locale, src_str, trans_str = Tk::None, enc = "utf-8")
-

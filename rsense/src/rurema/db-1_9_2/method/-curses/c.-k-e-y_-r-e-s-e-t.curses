@@ -1,8 +1,0 @@
-kind=defined
-names=KEY_RESET
-visibility=public
-
---- KEY_RESET -> Integer
-
-Reset キーを表す定数です。
-

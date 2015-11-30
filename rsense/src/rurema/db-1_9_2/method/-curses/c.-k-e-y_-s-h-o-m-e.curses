@@ -1,8 +1,0 @@
-kind=defined
-names=KEY_SHOME
-visibility=public
-
---- KEY_SHOME -> Integer
-
-Shift + Home キーを表す定数です。
-

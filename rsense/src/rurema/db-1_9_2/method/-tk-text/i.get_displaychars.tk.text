@@ -1,6 +1,0 @@
-kind=defined
-names=get_displaychars
-visibility=public
-
---- get_displaychars(*index)
-

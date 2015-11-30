@@ -1,6 +1,0 @@
-kind=defined
-names=protocol
-visibility=public
-
---- protocol(name = nil, cmd = nil, &block)
-

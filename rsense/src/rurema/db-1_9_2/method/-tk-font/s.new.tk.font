@@ -1,6 +1,0 @@
-kind=defined
-names=new
-visibility=public
-
---- new(ltn = nil, knj = nil, keys = nil)
-

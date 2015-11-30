@@ -1,8 +1,0 @@
-kind=defined
-names=F48
-visibility=public
-
---- F48 -> Integer
-
-F48 キーを表す定数です。
-

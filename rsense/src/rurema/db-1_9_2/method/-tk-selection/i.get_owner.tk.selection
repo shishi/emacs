@@ -1,6 +1,0 @@
-kind=defined
-names=get_owner
-visibility=public
-
---- get_owner(sel = nil)
-

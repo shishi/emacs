@@ -1,9 +1,0 @@
-kind=defined
-names=VT_UI4
-visibility=public
-
---- VT_UI4 -> Integer
-符号なし32ビット整数（unsigned int）を示します（19）。
-
-OLEオートメーションでは利用できません。代わりにVT_I4を利用してください。
-

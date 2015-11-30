@@ -1,7 +1,0 @@
-methods=
-sublibraries=
-requires=webrick.httpstatus,webrick.cookie,webrick.httputils,webrick.httpversion
-classes=WEBrick=HTTPRequest
-is_sublibrary=true
-
-HTTP リクエストのためのクラスを提供するライブラリです。

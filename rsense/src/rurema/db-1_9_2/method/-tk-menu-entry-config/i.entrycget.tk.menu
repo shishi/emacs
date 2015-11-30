@@ -1,6 +1,0 @@
-kind=defined
-names=entrycget
-visibility=public
-
---- entrycget(tagOrId, option)
-

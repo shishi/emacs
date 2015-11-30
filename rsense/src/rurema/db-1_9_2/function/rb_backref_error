@@ -1,8 +1,0 @@
-name=rb_backref_error
-private=true
-macro=false
-type=void
-filename=parse.y
-params=(NODE *node)
-
-

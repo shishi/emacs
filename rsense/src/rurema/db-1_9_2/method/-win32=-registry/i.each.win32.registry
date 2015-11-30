@@ -1,9 +1,0 @@
-kind=defined
-names=each,each_value
-visibility=public
-
---- each {|name, type, value| ... }
---- each_value {|name, type, value| ... }
-
-キーが持つレジストリ値を列挙します。
-

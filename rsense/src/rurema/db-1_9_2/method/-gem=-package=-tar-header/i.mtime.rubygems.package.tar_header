@@ -1,8 +1,0 @@
-kind=defined
-names=mtime
-visibility=public 
-
---- mtime -> Integer
-
-tar のヘッダに含まれる mtime を返します。
-

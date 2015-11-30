@@ -1,6 +1,0 @@
-kind=defined
-names=tag_bindinfo
-visibility=public
-
---- tag_bindinfo(tag, context = nil)
-

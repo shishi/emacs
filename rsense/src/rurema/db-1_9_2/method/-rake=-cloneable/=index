@@ -1,2 +1,0 @@
-#clone	Rake::Cloneable#clone
-#dup	Rake::Cloneable#dup

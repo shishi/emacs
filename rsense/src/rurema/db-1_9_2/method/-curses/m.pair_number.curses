@@ -1,8 +1,0 @@
-kind=defined
-names=pair_number
-visibility=public
-
---- pair_number(attrs) -> Integer
-Returns the Fixnum color pair number of attributes +attrs+.
-@param attrs 
-

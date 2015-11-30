@@ -1,6 +1,0 @@
-kind=defined
-names=share_stderr
-visibility=public
-
---- share_stderr(dist, src = '')
-

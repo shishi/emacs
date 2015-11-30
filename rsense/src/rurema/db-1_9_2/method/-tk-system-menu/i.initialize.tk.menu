@@ -1,5 +1,0 @@
-kind=defined
-names=initialize
-visibility=public
-
---- initialize(parent, keys = nil)

@@ -1,6 +1,0 @@
-kind=defined
-names=delete_at
-visibility=public
-
---- delete_at(index)
-

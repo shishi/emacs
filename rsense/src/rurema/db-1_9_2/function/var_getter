@@ -1,8 +1,0 @@
-name=var_getter
-private=true
-macro=false
-type=VALUE
-filename=variable.c
-params=(ID id, VALUE *var)
-
-

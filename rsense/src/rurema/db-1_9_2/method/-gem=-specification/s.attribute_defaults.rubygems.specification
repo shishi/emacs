@@ -1,8 +1,0 @@
-kind=defined
-names=attribute_defaults
-visibility=public
-
---- attribute_defaults -> Array
-
-@@attributes の複製を返します。
-

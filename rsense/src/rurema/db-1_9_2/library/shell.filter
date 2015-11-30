@@ -1,7 +1,0 @@
-methods=
-sublibraries=
-requires=
-classes=Shell=Filter
-is_sublibrary=true
-
-[[c:Shell::Filter]] を定義しているライブラリです。

@@ -1,7 +1,0 @@
-kind=defined
-names=WaitWritable
-visibility=public
-
---- WaitWritable -> Module
-[[m:IO#write_nonblock]] を参照してください。
-

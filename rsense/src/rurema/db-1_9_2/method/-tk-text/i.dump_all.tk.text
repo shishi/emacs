@@ -1,6 +1,0 @@
-kind=defined
-names=dump_all
-visibility=public
-
---- dump_all(*index) { ... }
-

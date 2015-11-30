@@ -1,6 +1,0 @@
-kind=defined
-names=numlist_element
-visibility=public
-
---- numlist_element(*idxs)
-

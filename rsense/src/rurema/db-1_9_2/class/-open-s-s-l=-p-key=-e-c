@@ -1,9 +1,0 @@
-superclass=OpenSSL=PKey=PKey
-type=class
-library=openssl
-extended=
-included=
-
-EC(Ellicptic Curve,楕円曲線)暗号鍵のクラスです。
-
-現在、楕円曲線暗号は SSL/TLS ではあまり一般的には用いられていません。

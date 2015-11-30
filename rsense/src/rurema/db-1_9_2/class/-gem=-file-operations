@@ -1,9 +1,0 @@
-superclass=Object
-type=class
-library=rubygems.package
-extended=
-included=
-
-このクラスは [[c:FileUtils]] のラッパーです。
-
-ロギングの機能を追加しています。

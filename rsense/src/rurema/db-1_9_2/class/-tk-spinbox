@@ -1,7 +1,0 @@
-superclass=TkEntry
-type=class
-library=tk.spinbox
-extended=
-included=
-
-

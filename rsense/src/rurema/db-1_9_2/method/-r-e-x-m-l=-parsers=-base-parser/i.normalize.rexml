@@ -1,6 +1,0 @@
-kind=defined
-names=normalize
-visibility=public
-
---- normalize(input, entities = nil, entity_filter = nil)
-

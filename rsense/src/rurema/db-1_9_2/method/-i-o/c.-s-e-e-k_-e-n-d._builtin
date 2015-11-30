@@ -1,8 +1,0 @@
-kind=defined
-names=SEEK_END
-visibility=public
-
---- SEEK_END -> Fixnum
-
-[[m:IO#seek]] を参照してください。
-

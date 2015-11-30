@@ -1,8 +1,0 @@
-kind=defined
-names=COLOR_WHITE
-visibility=public
-
---- COLOR_WHITE -> Integer
-
-白を表す定数です。
-

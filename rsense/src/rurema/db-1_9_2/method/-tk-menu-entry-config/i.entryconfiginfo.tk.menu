@@ -1,6 +1,0 @@
-kind=defined
-names=entryconfiginfo
-visibility=public
-
---- entryconfiginfo(tagOrId, slot = nil)
-

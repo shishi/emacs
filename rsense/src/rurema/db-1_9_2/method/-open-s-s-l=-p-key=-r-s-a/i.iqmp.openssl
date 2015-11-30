@@ -1,9 +1,0 @@
-kind=defined
-names=iqmp
-visibility=public
-
---- iqmp -> OpenSSL::BN
-鍵の coefficient (inverse of q mod p) です。
-
-秘密鍵の情報です。
-

@@ -1,6 +1,0 @@
-kind=defined
-names=anchor
-visibility=public
-
---- anchor(master, anchor = Tk::None)
-

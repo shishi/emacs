@@ -1,6 +1,0 @@
-kind=defined
-names=binary_request
-visibility=public
-
---- binary_request(service, topic, item)
-

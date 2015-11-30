@@ -1,7 +1,0 @@
-kind=defined
-names=public_key
-visibility=public
-
---- public_key -> OpenSSL::PKey::RSA
-公開鍵を複製して RSA オブジェクトとして返します。
-

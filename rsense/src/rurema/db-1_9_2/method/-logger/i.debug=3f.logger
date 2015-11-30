@@ -1,9 +1,0 @@
-kind=defined
-names=debug?
-visibility=public
-
---- debug? -> bool
-
-現在の Logger オブジェクトが DEBUG 以上のログレベルのメッセージを記録するなら
-真を返します。
-

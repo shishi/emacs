@@ -1,7 +1,0 @@
-methods=
-sublibraries=
-requires=
-classes=PTY,PTY=ChildExited
-is_sublibrary=false
-
-疑似端末(Pseudo tTY)を扱うライブラリです。

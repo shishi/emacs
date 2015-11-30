@@ -1,6 +1,0 @@
-kind=defined
-names=lappend
-visibility=public
-
---- lappend(*elems)
-

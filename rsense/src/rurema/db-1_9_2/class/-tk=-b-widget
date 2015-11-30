@@ -1,7 +1,0 @@
-superclass=
-type=module
-library=tkextlib.bwidget
-extended=TkCore
-included=
-
-

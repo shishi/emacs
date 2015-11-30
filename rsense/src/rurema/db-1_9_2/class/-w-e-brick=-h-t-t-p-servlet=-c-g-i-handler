@@ -1,7 +1,0 @@
-superclass=WEBrick=HTTPServlet=AbstractServlet
-type=class
-library=webrick.httpservlet.cgihandler
-extended=
-included=
-
-CGI を扱うためのサーブレットです。

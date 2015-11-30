@@ -1,8 +1,0 @@
-kind=defined
-names=stat
-visibility=public
-
---- stat    -> File::Stat
-
-[[m:IO#stat]] に委譲します。
-

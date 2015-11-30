@@ -1,6 +1,0 @@
-kind=defined
-names=delete_if
-visibility=public
-
---- delete_if {|object| ... }
-

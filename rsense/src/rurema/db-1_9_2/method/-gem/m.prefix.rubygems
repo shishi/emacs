@@ -1,8 +1,0 @@
-kind=defined
-names=prefix
-visibility=public
-
---- prefix -> String
-
-このライブラリがインストールされているディレクトリの親ディレクトリを返します。
-

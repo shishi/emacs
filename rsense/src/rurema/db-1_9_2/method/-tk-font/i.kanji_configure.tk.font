@@ -1,6 +1,0 @@
-kind=defined
-names=kanji_configure
-visibility=public
-
---- kanji_configure(slot, value = Tk::None)
-

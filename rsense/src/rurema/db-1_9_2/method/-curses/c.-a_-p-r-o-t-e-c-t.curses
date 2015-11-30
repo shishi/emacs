@@ -1,9 +1,0 @@
-kind=defined
-names=A_PROTECT
-visibility=public
-
---- A_PROTECT -> Integer
-プロテクトモードを表す属性マスク用の定数です。
-
-@see [[m:Curses.attrset]]
-

@@ -1,6 +1,0 @@
-kind=defined
-names=pack_propagate
-visibility=public
-
---- pack_propagate(mode = Tk::None)
-

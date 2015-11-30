@@ -1,7 +1,0 @@
-kind=defined
-names=parser,parser=
-visibility=public
-
---- parser
---- parser=(value)
-

@@ -1,6 +1,0 @@
-kind=defined
-names=new_without_utf_backslash
-visibility=public
-
---- new_without_utf_backslash(str, enc = nil)
-

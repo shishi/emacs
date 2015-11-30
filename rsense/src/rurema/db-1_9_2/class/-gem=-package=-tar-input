@@ -1,8 +1,0 @@
-superclass=Object
-type=class
-library=rubygems.package.tar_input
-extended=
-included=Gem=Package=FSyncDir,Enumerable
-
-gem-format な tar ファイルを読み込む [[c:Gem::Package::TarReader]] のラッ
-パークラスです。

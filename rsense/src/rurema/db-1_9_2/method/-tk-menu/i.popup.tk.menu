@@ -1,6 +1,0 @@
-kind=defined
-names=popup
-visibility=public
-
---- popup(x, y, index = nil)
-

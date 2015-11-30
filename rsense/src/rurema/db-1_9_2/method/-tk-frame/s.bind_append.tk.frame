@@ -1,6 +1,0 @@
-kind=defined
-names=bind_append
-visibility=public
-
---- bind_append(*args) { ... }
-

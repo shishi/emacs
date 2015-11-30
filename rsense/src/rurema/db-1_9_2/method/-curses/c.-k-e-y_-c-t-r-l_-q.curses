@@ -1,8 +1,0 @@
-kind=defined
-names=KEY_CTRL_Q
-visibility=public
-
---- KEY_CTRL_Q -> Integer
-
-Ctrl + Q を表す定数です。
-

@@ -1,6 +1,0 @@
-kind=defined
-names=containing
-visibility=public
-
---- containing(root_x, root_y, win = nil)
-

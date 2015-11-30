@@ -1,8 +1,0 @@
-kind=defined
-names=truncate
-visibility=public
-
---- truncate(path, length)    -> 0
-
-[[m:File#truncate]] に委譲します。
-

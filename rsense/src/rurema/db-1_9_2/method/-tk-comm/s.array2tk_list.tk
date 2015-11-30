@@ -1,8 +1,0 @@
-kind=defined
-names=array2tk_list
-visibility=public
-
---- array2tk_list(ary, enc = nil)
-
-
-

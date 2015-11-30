@@ -1,6 +1,0 @@
-kind=defined
-names=default_proc
-visibility=public
-
---- default_proc(cmd = Proc.new)
-

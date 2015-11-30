@@ -1,6 +1,0 @@
-kind=defined
-names=umask=
-visibility=public
-
---- umask=(umask)
-

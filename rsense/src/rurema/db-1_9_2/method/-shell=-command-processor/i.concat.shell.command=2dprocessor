@@ -1,6 +1,0 @@
-kind=defined
-names=concat
-visibility=public
-
---- concat(*jobs) -> Shell::Concat
-

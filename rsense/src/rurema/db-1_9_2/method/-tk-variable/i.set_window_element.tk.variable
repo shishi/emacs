@@ -1,6 +1,0 @@
-kind=defined
-names=set_window_element
-visibility=public
-
---- set_window_element(idxs, win)
-

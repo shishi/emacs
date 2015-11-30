@@ -1,8 +1,0 @@
-kind=defined
-names=KEY_CTRL_W
-visibility=public
-
---- KEY_CTRL_W -> Integer
-
-Ctrl + W を表す定数です。
-

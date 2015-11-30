@@ -1,6 +1,0 @@
-kind=defined
-names=grid_location
-visibility=public
-
---- grid_location(x, y)
-

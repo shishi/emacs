@@ -1,9 +1,0 @@
-kind=defined
-names=qop
-visibility=public
-
---- qop -> String
-
-Qop キーの値を返します。
-
-

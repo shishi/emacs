@@ -1,7 +1,0 @@
-superclass=TkValidateCommand
-type=class
-library=tk.spinbox
-extended=
-included=
-
-

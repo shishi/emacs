@@ -1,6 +1,0 @@
-kind=defined
-names=each_recursive
-visibility=public
-
---- each_recursive {|node| ... }
-

@@ -1,6 +1,0 @@
-kind=defined
-names=exist?
-visibility=public
-
---- exist?(ns)
-

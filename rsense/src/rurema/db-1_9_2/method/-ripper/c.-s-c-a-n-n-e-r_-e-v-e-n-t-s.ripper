@@ -1,8 +1,0 @@
-kind=defined
-names=SCANNER_EVENTS
-visibility=private 
-
---- SCANNER_EVENTS -> [Symbol]
-
-スキャナイベントのイベント ID (シンボル) のリストを返します。
-

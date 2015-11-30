@@ -1,8 +1,0 @@
-kind=defined
-names=host
-visibility=public
-
---- host -> String
-
-ホストを文字列で返します。
-

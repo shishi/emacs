@@ -1,7 +1,0 @@
-kind=defined
-names=getMultipleSaveFile
-visibility=public
-
---- getMultipleSaveFile(keys = nil)
-
-

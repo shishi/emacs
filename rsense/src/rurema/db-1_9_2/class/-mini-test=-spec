@@ -1,7 +1,0 @@
-superclass=MiniTest=Unit=TestCase
-type=class
-library=minitest.spec
-extended=
-included=
-
-BDD 風にテストを書くための [[c:MiniTest::Unit::TestCase]] に対するラッパークラスです。

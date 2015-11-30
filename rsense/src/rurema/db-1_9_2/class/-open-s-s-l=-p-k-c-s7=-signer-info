@@ -1,7 +1,0 @@
-superclass=Object
-type=class
-library=openssl
-extended=
-included=
-
-署名者の情報を表すクラスです。

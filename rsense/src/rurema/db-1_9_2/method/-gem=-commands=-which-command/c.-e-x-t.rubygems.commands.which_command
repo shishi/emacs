@@ -1,9 +1,0 @@
-kind=defined
-names=EXT
-visibility=public 
-
---- EXT -> [String]
-
-拡張子を表す配列です。
-
-  %w[.rb .rbw .so .dll .bundle]

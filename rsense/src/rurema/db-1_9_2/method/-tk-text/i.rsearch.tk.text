@@ -1,6 +1,0 @@
-kind=defined
-names=rsearch
-visibility=public
-
---- rsearch(pat, start, stop = Tk::None)
-

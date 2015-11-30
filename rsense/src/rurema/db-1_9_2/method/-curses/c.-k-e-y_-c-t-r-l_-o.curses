@@ -1,8 +1,0 @@
-kind=defined
-names=KEY_CTRL_O
-visibility=public
-
---- KEY_CTRL_O -> Integer
-
-Ctrl + O を表す定数です。
-

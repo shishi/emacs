@@ -1,7 +1,0 @@
-superclass=
-type=module
-library=openssl
-extended=
-included=
-
-公開鍵暗号関連を集めたモジュール

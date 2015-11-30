@@ -1,7 +1,0 @@
-superclass=Object
-type=class
-library=strscan
-extended=
-included=
-
-スキャン中に発生したエラーをあらわす例外です。

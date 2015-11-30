@@ -1,8 +1,0 @@
-kind=defined
-names=type2name
-visibility=public
-
---- type2name(type)
-
-レジストリ値の型を整数から可読文字列に変換します。
-

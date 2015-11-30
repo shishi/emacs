@@ -1,6 +1,0 @@
-kind=defined
-names=replace
-visibility=public
-
---- replace(idx1, idx2, *opts)
-

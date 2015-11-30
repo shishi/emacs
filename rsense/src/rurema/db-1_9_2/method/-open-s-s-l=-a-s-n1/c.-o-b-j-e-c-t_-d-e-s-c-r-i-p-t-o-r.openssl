@@ -1,9 +1,0 @@
-kind=defined
-names=OBJECT_DESCRIPTOR
-visibility=public
-
---- OBJECT_DESCRIPTOR -> Integer
-
-ASN.1 UNIVERSAL タグの、
-OBJECT_DESCRIPTOR のタグ番号 7 を表す定数です。
-

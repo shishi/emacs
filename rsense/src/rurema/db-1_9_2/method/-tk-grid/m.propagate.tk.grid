@@ -1,6 +1,0 @@
-kind=defined
-names=propagate
-visibility=public
-
---- propagate(master, mode = Tk::None)
-

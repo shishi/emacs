@@ -1,7 +1,0 @@
-superclass=PrettyPrint
-type=class
-library=pp
-extended=
-included=
-
-オブジェクトなどを見やすく出力するためのクラスです。

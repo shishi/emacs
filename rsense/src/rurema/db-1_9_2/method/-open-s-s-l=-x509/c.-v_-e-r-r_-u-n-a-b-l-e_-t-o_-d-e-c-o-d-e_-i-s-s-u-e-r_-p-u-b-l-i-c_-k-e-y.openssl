@@ -1,8 +1,0 @@
-kind=defined
-names=V_ERR_UNABLE_TO_DECODE_ISSUER_PUBLIC_KEY
-visibility=public
-
---- V_ERR_UNABLE_TO_DECODE_ISSUER_PUBLIC_KEY -> Integer
-証明書の SubjectPublicKeyInfo フィールドが読めなかった
-ことを意味します。
-

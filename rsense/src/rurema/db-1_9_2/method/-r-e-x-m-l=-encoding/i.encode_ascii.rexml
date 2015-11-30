@@ -1,6 +1,0 @@
-kind=added
-names=encode_ascii
-visibility=public
-
---- encode_ascii(content)
-

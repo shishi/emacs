@@ -1,6 +1,0 @@
-kind=defined
-names=sash_place
-visibility=public
-
---- sash_place(index, x, y)
-

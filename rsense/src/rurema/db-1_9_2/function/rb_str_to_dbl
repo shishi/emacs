@@ -1,8 +1,0 @@
-name=rb_str_to_dbl
-private=false
-macro=false
-type=double
-filename=object.c
-params=(VALUE str, int badcheck)
-
-

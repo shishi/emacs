@@ -1,8 +1,0 @@
-name=rb_interrupt
-private=false
-macro=false
-type=void
-filename=eval.c
-params=(void)
-
-

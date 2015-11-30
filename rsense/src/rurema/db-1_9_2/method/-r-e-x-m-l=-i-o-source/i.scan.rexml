@@ -1,6 +1,0 @@
-kind=defined
-names=scan
-visibility=public
-
---- scan(pattern, cons = false)
-

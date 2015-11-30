@@ -1,7 +1,0 @@
-kind=defined
-names=UNKNOWN
-visibility=public
-
---- UNKNOWN -> Integer
-ログレベル:不明なエラーを表す定数です。
-

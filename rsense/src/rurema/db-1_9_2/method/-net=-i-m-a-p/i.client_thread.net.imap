@@ -1,9 +1,0 @@
-kind=defined
-names=client_thread,client_thread=
-visibility=public
-
---- client_thread
---- client_thread=(th)
-
-The thread to receive exceptions.
-

@@ -1,8 +1,0 @@
-kind=defined
-names=package_dir_path
-visibility=public 
-
---- package_dir_path -> String
-
-パッケージに含むファイルを配置するディレクトリを返します。
-

@@ -1,8 +1,0 @@
-kind=defined
-names=digest
-visibility=public
-
---- digest -> String
-オブジェクトの内部状態から算出された HMAC を
-バイナリ文字列で返します。
-

@@ -1,6 +1,0 @@
-kind=defined
-names=add_kinsoku
-visibility=public
-
---- add_kinsoku(chars, mode = 'both')
-

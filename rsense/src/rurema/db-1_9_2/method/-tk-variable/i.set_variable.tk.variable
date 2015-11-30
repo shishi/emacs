@@ -1,7 +1,0 @@
-kind=defined
-names=set_variable,variable=
-visibility=public
-
---- set_variable(var)
---- variable=
-

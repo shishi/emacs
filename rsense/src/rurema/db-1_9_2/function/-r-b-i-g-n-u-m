@@ -1,8 +1,0 @@
-name=RBIGNUM
-private=false
-macro=true
-type=struct RBignum *
-filename=ruby.h
-params=(VALUE obj)
-
-

@@ -1,8 +1,0 @@
-kind=defined
-names=COLOR_CYAN
-visibility=public
-
---- COLOR_CYAN -> Integer
-
-シアンを表す定数です。
-

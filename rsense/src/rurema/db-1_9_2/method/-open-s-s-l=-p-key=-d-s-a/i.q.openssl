@@ -1,8 +1,0 @@
-kind=defined
-names=q
-visibility=public
-
---- q -> OpenSSL::BN
-DSA 鍵のパラメータ q を返します。
-
-q は公開鍵、秘密鍵の両方に属する情報です。

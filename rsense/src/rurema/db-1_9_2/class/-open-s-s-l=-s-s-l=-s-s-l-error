@@ -1,7 +1,0 @@
-superclass=OpenSSL=OpenSSLError
-type=class
-library=openssl
-extended=
-included=
-
-[[c:OpenSSL::SSL]] 関連のエラーが生じたときに発生する例外です。

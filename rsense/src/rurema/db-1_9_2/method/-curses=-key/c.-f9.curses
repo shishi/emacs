@@ -1,8 +1,0 @@
-kind=defined
-names=F9
-visibility=public
-
---- F9 -> Integer
-
-F9 キーを表す定数です。
-

@@ -1,8 +1,0 @@
-name=new_dvar
-private=true
-macro=false
-type=struct RVarmap *
-filename=eval.c
-params=(ID id, VALUE value, struct RVarmap *prev)
-
-

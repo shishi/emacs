@@ -1,8 +1,0 @@
-kind=defined
-names=library
-visibility=public
-
---- library(klass, *klasses)
-
-
-

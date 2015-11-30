@@ -1,6 +1,0 @@
-kind=defined
-names=set_eventloop_tick
-visibility=public
-
---- set_eventloop_tick(*args)
-

@@ -1,8 +1,0 @@
-kind=defined
-names=release
-visibility=public
-
---- release       -> String
-
-プログラムのリリースを文字列で返します。
-

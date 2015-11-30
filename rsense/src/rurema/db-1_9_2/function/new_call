@@ -1,8 +1,0 @@
-name=new_call
-private=true
-macro=false
-type=NODE *
-filename=parse.y
-params=(NODE *r, ID m, NODE *a)
-
-

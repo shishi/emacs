@@ -1,6 +1,0 @@
-kind=defined
-names=configinfo
-visibility=public
-
---- configinfo(win, slot = nil)
-

@@ -1,6 +1,0 @@
-kind=added
-names=decode_utf8
-visibility=public
-
---- decode_utf8(str)
-

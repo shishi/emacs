@@ -1,8 +1,0 @@
-kind=defined
-names=SCANNER_EVENT_TABLE
-visibility=private 
-
---- SCANNER_EVENT_TABLE -> {Symbol => Integer}
-
-スキャナイベントのイベント ID (シンボル) と対応するハンドラの引数の個数
-のリストをハッシュで返します。

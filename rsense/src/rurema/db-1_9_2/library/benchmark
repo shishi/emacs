@@ -1,7 +1,0 @@
-methods=
-sublibraries=
-requires=
-classes=Benchmark,Benchmark=Tms,Benchmark=Job,Benchmark=Report
-is_sublibrary=false
-
-ベンチマークを取るためのクラスです。

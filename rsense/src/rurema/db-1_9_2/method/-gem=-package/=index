@@ -1,2 +1,0 @@
-.open	Gem::Package.open
-.pack	Gem::Package.pack

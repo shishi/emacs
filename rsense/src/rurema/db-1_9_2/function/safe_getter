@@ -1,8 +1,0 @@
-name=safe_getter
-private=true
-macro=false
-type=VALUE
-filename=eval.c
-params=(void)
-
-

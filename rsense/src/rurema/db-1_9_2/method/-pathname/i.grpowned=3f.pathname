@@ -1,9 +1,0 @@
-kind=defined
-names=grpowned?
-visibility=public
-
---- grpowned? -> bool
-FileTest.grpowned?(self.to_s) と同じです。
-
-@see [[m:FileTest.#grpowned?]]
-

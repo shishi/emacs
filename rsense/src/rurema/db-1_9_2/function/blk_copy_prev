@@ -1,8 +1,0 @@
-name=blk_copy_prev
-private=true
-macro=false
-type=void
-filename=eval.c
-params=(struct BLOCK *block)
-
-

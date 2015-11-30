@@ -1,9 +1,0 @@
-kind=defined
-names=VERSION
-visibility=public
-
---- JSON::VERSION -> String
-
-このライブラリのバージョンを表す文字列です。
-
-

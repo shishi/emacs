@@ -1,9 +1,0 @@
-kind=defined
-names=V_ERR_CERT_REJECTED
-visibility=public
-
---- V_ERR_CERT_REJECTED -> Integer
-ルート CA 証明書に指定した目標に使ってはならないと
-されていることを意味します。
-
-

@@ -1,7 +1,0 @@
-kind=defined
-names=I
-visibility=public
-
---- I -> Complex
-
-虚数単位です。(0+1i) を返します。

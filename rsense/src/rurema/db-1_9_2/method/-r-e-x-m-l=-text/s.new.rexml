@@ -1,6 +1,0 @@
-kind=defined
-names=new
-visibility=public
-
---- new(arg, respect_whitespace = false, parent = nil, raw = nil, entity_filter = nil, illegal = REXML::Text::ILLEGAL)
-

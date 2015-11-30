@@ -1,7 +1,0 @@
-kind=defined
-names=unbind
-visibility=public
-
---- unbind    -> ()
-
-自身から関数をアンバインドします。

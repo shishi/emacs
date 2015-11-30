@@ -1,6 +1,0 @@
-kind=defined
-names=each_attribute
-visibility=public
-
---- each_attribute {|attribute| ... }
-

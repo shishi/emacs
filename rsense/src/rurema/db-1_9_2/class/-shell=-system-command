@@ -1,7 +1,0 @@
-superclass=Shell=Filter
-type=class
-library=shell.system=2dcommand
-extended=
-included=
-
-

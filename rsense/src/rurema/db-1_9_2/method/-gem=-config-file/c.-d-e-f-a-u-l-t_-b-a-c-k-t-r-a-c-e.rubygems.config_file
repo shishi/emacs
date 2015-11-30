@@ -1,8 +1,0 @@
-kind=defined
-names=DEFAULT_BACKTRACE
-visibility=protected 
-
---- DEFAULT_BACKTRACE -> false
-
-バックトレースが表示されるかどうかのデフォルト値です。
-

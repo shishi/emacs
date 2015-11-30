@@ -1,6 +1,0 @@
-kind=defined
-names=add_procs
-visibility=public
-
---- add_procs(*procs)
-

@@ -1,7 +1,0 @@
-methods=Kernel/i.timeout.timeout
-sublibraries=
-requires=
-classes=Timeout,Timeout=Error
-is_sublibrary=false
-
-タイムアウトを行うライブラリです。

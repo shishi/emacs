@@ -1,9 +1,0 @@
-kind=defined
-names=addr
-visibility=public
-
---- addr -> Array
-ラップされているソケットの接続情報を返します。
-
-[[m:IPSocket#addr]] と同様です。
-

@@ -1,8 +1,0 @@
-superclass=Net=ProtocolError
-type=class
-library=net.protocol
-extended=
-included=
-
-サーバへのリクエストが間違っているなど、致命的エラーの
-場合に発生するエラーです。

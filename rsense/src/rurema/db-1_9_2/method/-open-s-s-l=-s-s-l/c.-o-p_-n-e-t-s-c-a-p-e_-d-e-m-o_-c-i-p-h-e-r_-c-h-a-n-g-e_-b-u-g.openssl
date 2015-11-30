@@ -1,7 +1,0 @@
-kind=defined
-names=OP_NETSCAPE_DEMO_CIPHER_CHANGE_BUG
-visibility=public
-
---- OP_NETSCAPE_DEMO_CIPHER_CHANGE_BUG -> Integer
-[[m:OpenSSL::SSL::SSLContext#options=]] で利用します。
-

@@ -1,6 +1,0 @@
-kind=defined
-names=postcommand
-visibility=public
-
---- postcommand(cmd = Proc.new)
-

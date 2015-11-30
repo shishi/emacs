@@ -1,6 +1,0 @@
-<%
-headline_init
-headline_push
-headline_push
-%>
-<%= compile_rd(@source) %>

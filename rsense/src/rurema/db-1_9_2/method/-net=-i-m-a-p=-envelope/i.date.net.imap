@@ -1,8 +1,0 @@
-kind=defined
-names=date
-visibility=public
-
---- date
-
-Retunns a string that represents the date.
-

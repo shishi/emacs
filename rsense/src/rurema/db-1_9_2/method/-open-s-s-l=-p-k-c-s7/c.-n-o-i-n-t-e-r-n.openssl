@@ -1,9 +1,0 @@
-kind=defined
-names=NOINTERN
-visibility=public
-
---- NOINTERN -> Integer
-署名検証時に、署名者の証明書をメッセージに添付された証明書から探索しません。
-
-[[m:OpenSSL::PKCS7#verify]] でのみ利用可能なフラグです。
-

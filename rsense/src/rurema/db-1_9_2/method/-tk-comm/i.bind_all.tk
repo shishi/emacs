@@ -1,6 +1,0 @@
-kind=defined
-names=bind_all
-visibility=public
-
---- bind_all(context, *args)
-

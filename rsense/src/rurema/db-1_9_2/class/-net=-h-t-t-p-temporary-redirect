@@ -1,9 +1,0 @@
-superclass=Net=HTTPRedirection
-type=class
-library=net.http
-extended=
-included=
-
-HTTP レスポンス 307 (Temporary Redirect) を表現するクラスです。
-
-詳しくは [[RFC:2616]] を見てください。

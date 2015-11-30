@@ -1,8 +1,0 @@
-methods=
-sublibraries=
-requires=
-classes=Gem=RequirePathsBuilder
-is_sublibrary=true
-
-必要であれば、'.require_paths' というファイルを Gem ごとに作成するための
-モジュールを提供するためのライブラリです。

@@ -1,6 +1,0 @@
-kind=defined
-names=tag_nextrange
-visibility=public
-
---- tag_nextrange(tag, first, last = Tk::None)
-

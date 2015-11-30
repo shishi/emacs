@@ -1,6 +1,0 @@
-kind=defined
-names=cb_error
-visibility=public
-
---- cb_error(e)
-

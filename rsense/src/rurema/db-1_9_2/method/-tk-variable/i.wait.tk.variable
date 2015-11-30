@@ -1,8 +1,0 @@
-kind=defined
-names=wait
-visibility=public
-
---- wait
-
-値が変化するまで待ちます。
-

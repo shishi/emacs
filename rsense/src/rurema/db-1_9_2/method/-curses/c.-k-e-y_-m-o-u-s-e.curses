@@ -1,7 +1,0 @@
-kind=defined
-names=KEY_MOUSE
-visibility=public
-
---- KEY_MOUSE -> Integer
-Mouse event read
-

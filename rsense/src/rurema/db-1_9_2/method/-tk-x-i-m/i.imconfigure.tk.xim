@@ -1,6 +1,0 @@
-kind=defined
-names=imconfigure
-visibility=public
-
---- imconfigure(slot, value = Tk::None)
-

@@ -1,7 +1,0 @@
-kind=defined
-names=VT_I4
-visibility=public
-
---- VT_I4 -> Integer
-符号付き32ビット整数（int）を示します（3）。
-

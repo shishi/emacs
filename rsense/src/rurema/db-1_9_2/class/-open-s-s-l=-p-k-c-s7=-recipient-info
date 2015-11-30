@@ -1,9 +1,0 @@
-superclass=Object
-type=class
-library=openssl
-extended=
-included=
-
-PKCS7 の送信先を表すクラスです。
-
-S/MIME 暗号化する場合に指定した送信先を意味します。

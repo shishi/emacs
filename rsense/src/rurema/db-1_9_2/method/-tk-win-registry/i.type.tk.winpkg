@@ -1,6 +1,0 @@
-kind=defined
-names=type
-visibility=public
-
---- type(keynam, valnam)
-

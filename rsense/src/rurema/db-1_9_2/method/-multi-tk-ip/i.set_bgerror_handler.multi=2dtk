@@ -1,6 +1,0 @@
-kind=defined
-names=set_bgerror_handler
-visibility=public
-
---- set_bgerror_handler(cmd = Proc.new, slave = nil, &block)
-

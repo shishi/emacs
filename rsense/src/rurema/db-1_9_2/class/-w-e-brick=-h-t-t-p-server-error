@@ -1,7 +1,0 @@
-superclass=WEBrick=ServerError
-type=class
-library=webrick.httpserver
-extended=
-included=
-
-

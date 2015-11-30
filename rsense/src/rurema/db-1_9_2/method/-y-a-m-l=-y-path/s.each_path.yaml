@@ -1,6 +1,0 @@
-kind=defined
-names=each_path
-visibility=public
-
---- each_path(str) {|YPath.new(path)| ...} -> object
-

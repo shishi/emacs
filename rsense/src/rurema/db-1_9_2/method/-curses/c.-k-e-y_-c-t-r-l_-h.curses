@@ -1,8 +1,0 @@
-kind=defined
-names=KEY_CTRL_H
-visibility=public
-
---- KEY_CTRL_H -> Integer
-
-Ctrl + H を表す定数です。
-

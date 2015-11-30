@@ -1,9 +1,0 @@
-kind=defined
-names=issuer_certificate=
-visibility=public
-
---- issuer_certificate=(cert)
-自身に発行者(issuer)の証明書オブジェクトを設定します。
-
-@param cert 設定する証明書([[c:OpenSSL::X509::Certificate]])オブジェクト
-@see [[m:OpenSSL::X509::ExtensionFactory.new]]

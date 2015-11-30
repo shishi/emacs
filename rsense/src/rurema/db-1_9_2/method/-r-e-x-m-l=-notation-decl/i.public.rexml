@@ -1,7 +1,0 @@
-kind=defined
-names=public,public=
-visibility=public
-
---- public
---- public=(value)
-

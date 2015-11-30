@@ -1,7 +1,0 @@
-kind=defined
-names=add_source_option
-visibility=public 
-
---- add_source_option
-オプション --source を追加します。
-

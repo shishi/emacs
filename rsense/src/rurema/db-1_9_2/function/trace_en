@@ -1,8 +1,0 @@
-name=trace_en
-private=true
-macro=false
-type=VALUE
-filename=variable.c
-params=(struct global_variable *var)
-
-

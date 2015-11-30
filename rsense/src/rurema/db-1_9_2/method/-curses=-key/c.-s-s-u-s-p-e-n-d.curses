@@ -1,8 +1,0 @@
-kind=defined
-names=SSUSPEND
-visibility=public
-
---- SSUSPEND -> Integer
-
-Shift + Suspend キーを表す定数です。
-

@@ -1,6 +1,0 @@
-kind=defined
-names=clear_on_display
-visibility=public
-
---- clear_on_display(win, sel = nil)
-

@@ -1,8 +1,0 @@
-kind=defined
-names=DefaultResolver
-visibility=public
-
---- DefaultResolver -> Resolv
-[[c:Resolv]] の各クラスメソッドを呼びだしたときに
-利用されるリゾルバです。
-

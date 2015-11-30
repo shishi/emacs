@@ -1,9 +1,0 @@
-kind=defined
-names=OCTET_STRING
-visibility=public
-
---- OCTET_STRING -> Integer
-
-ASN.1 UNIVERSAL タグの、
-OCTET_STRING のタグ番号 4 を表す定数です。
-

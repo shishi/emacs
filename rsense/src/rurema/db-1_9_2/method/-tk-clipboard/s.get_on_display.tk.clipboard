@@ -1,6 +1,0 @@
-kind=defined
-names=get_on_display
-visibility=public
-
---- get_on_display(win, type = nil)
-

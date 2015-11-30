@@ -1,8 +1,0 @@
-kind=defined
-names=reopen
-visibility=public
-
---- reopen(io) -> self
-
-[[m:IO#reopen]] に委譲します。
-

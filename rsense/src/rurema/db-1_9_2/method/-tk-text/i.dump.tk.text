@@ -1,6 +1,0 @@
-kind=defined
-names=dump
-visibility=public
-
---- dump(type_info, *index) { ... }
-

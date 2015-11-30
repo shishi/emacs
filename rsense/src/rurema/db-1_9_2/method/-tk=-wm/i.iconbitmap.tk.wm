@@ -1,6 +1,0 @@
-kind=defined
-names=iconbitmap
-visibility=public
-
---- iconbitmap(bmp = nil)
-

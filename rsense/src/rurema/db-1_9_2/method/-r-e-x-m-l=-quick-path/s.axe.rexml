@@ -1,6 +1,0 @@
-kind=defined
-names=axe
-visibility=public
-
---- axe(elements, axe_name, rest)
-

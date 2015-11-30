@@ -1,8 +1,0 @@
-kind=defined
-names=shell=
-visibility=public
-
---- shell=(shell)
-
-このユーザのログインシェルを設定します。
-

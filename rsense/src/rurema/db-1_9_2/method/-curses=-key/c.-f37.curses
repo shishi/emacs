@@ -1,8 +1,0 @@
-kind=defined
-names=F37
-visibility=public
-
---- F37 -> Integer
-
-F37 キーを表す定数です。
-

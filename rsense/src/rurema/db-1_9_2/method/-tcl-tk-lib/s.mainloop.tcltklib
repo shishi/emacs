@@ -1,6 +1,0 @@
-kind=defined
-names=mainloop
-visibility=public
-
---- mainloop(*args)
-

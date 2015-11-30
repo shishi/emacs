@@ -1,8 +1,0 @@
-kind=defined
-names=PRINT
-visibility=public
-
---- PRINT -> Integer
-
-Print キーを表す定数です。
-

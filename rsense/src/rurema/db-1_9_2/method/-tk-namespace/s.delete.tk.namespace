@@ -1,6 +1,0 @@
-kind=defined
-names=delete
-visibility=public
-
---- delete(*ns_list)
-

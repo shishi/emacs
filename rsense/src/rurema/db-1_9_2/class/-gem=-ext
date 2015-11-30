@@ -1,7 +1,0 @@
-superclass=
-type=module
-library=rubygems.ext
-extended=
-included=
-
-拡張ライブラリをビルドするためのモジュールです。

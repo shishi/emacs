@@ -1,7 +1,0 @@
-kind=defined
-names=dir_stack,dirs
-visibility=public
-
---- dirs -> [String]
---- dir_stack -> [String]
-

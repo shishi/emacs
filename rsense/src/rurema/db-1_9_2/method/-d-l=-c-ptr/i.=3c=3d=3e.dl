@@ -1,8 +1,0 @@
-kind=defined
-names=<=>
-visibility=public
-
---- <=>(other)    -> Integer
-
-ポインタの指すアドレスの大小を比較します。
-

@@ -1,6 +1,0 @@
-kind=defined
-names=attribute_config
-visibility=public
-
---- attribute_config(win, slot, value = Tk::None)
-

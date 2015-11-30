@@ -1,8 +1,0 @@
-kind=defined
-names=KEY_SLEFT
-visibility=public
-
---- KEY_SLEFT -> Integer
-
-Shift + 左矢印キーを表す定数です。
-

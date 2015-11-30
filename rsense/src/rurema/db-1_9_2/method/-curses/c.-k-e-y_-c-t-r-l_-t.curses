@@ -1,8 +1,0 @@
-kind=defined
-names=KEY_CTRL_T
-visibility=public
-
---- KEY_CTRL_T -> Integer
-
-Ctrl + T を表す定数です。
-

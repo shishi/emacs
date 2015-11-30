@@ -1,9 +1,0 @@
-kind=added
-names=cert
-visibility=public
-
---- cert -> OpenSSL::X509::Certificate | nil
-クライアント証明書を返します。
-
-@see [[m:Net::HTTP#cert=]], [[m:OpenSSL::SSL::SSLContext#cert]]
-

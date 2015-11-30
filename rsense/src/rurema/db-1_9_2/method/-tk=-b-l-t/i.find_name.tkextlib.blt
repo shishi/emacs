@@ -1,8 +1,0 @@
-kind=defined
-names=find_name
-visibility=public
-
---- find_name(pat)
-
-
-

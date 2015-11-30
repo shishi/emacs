@@ -1,8 +1,0 @@
-name=rb_source_filename
-private=false
-macro=false
-type=char *
-filename=gc.c
-params=(const char *f)
-
-

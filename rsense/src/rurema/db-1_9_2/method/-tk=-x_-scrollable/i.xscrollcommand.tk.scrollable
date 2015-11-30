@@ -1,8 +1,0 @@
-kind=defined
-names=xscrollcommand
-visibility=public
-
---- xscrollcommand(cmd = Proc.new)
-
-
-

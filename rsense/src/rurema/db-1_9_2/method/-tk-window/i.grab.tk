@@ -1,6 +1,0 @@
-kind=defined
-names=grab
-visibility=public
-
---- grab(opt = nil)
-

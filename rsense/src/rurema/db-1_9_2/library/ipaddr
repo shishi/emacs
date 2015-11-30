@@ -1,7 +1,0 @@
-methods=
-sublibraries=
-requires=
-classes=IPAddr
-is_sublibrary=false
-
-IPアドレスを扱うライブラリです。

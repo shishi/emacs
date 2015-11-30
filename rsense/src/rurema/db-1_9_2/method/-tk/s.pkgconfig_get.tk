@@ -1,6 +1,0 @@
-kind=defined
-names=pkgconfig_get
-visibility=public
-
---- pkgconfig_get(mod, key)
-

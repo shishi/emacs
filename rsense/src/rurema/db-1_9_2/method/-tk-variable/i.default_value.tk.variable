@@ -1,7 +1,0 @@
-kind=defined
-names=default_value
-visibility=public
-
---- default_value(val = nil)
---- default_value(val = nil) { .... }
-

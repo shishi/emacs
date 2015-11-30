@@ -1,8 +1,0 @@
-kind=defined
-names=C3
-visibility=public
-
---- C3 -> Integer
-
-キーパッドの右下を表す定数です。
-

@@ -1,6 +1,0 @@
-kind=defined
-names=imconfiginfo
-visibility=public
-
---- imconfiginfo(slot = nil)
-

@@ -1,8 +1,0 @@
-name=rb_provide_feature
-private=true
-macro=false
-type=void
-filename=eval.c
-params=(VALUE feature)
-
-

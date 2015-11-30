@@ -1,7 +1,0 @@
-kind=defined
-names=install_bind
-visibility=public
-
---- install_bind(cmd, *args)
-
-

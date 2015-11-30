@@ -2,11 +2,12 @@
 
 *.elc
 ac-comphist.dat
+recentf
+tramp
 
 /auto-save-list
 /backup
 /history
-/tramp
 /trash
 /undohist
 /url
@@ -17,6 +18,3 @@ ac-comphist.dat
 !/elisp/el-get/.loaddefs.elc
 !/elisp/el-get/.status.el
 !/elisp/el-get/.status.elc
-
-projectile.cache
-projectile-bookmarks.eld

@@ -1,8 +1,0 @@
-kind=defined
-names=empty_marshal_data
-visibility=public
-
---- empty_marshal_data -> String
-
-空のデータを返します。
-

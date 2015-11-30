@@ -1,9 +1,0 @@
-kind=defined
-names=tagfont_configinfo
-visibility=public
-
---- tagfont_configinfo(tagOrId, key = nil)
-alias tagfontobj
-
-
-

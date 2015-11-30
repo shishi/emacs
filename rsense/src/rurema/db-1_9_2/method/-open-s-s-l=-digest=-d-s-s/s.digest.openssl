@@ -1,9 +1,0 @@
-kind=defined
-names=digest
-visibility=public
-
---- digest(data) -> String
-data のダイジェストを DSS で計算します。
-
-@param data ダイジェストを計算する文字列
-

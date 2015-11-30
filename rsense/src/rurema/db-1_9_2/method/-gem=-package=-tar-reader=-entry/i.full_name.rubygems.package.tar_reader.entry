@@ -1,8 +1,0 @@
-kind=defined
-names=full_name
-visibility=public 
-
---- full_name -> String
-
-自身の完全な名前を返します。
-

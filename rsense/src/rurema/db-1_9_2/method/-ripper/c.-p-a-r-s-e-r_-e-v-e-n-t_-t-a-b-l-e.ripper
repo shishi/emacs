@@ -1,9 +1,0 @@
-kind=defined
-names=PARSER_EVENT_TABLE
-visibility=private 
-
---- PARSER_EVENT_TABLE -> {Symbol => Integer}
-
-パーサイベントのイベント ID (シンボル) と対応するハンドラの引数の個数の
-リストをハッシュで返します。
-

@@ -1,6 +1,0 @@
-kind=defined
-names=which_command
-visibility=public
-
---- which_command(name)
-

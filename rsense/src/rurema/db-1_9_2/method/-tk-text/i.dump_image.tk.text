@@ -1,6 +1,0 @@
-kind=defined
-names=dump_image
-visibility=public
-
---- dump_image(*index) { ... }
-

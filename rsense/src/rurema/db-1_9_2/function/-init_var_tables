@@ -1,8 +1,0 @@
-name=Init_var_tables
-private=false
-macro=false
-type=void
-filename=variable.c
-params=(void)
-
-

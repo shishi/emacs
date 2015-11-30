@@ -1,6 +1,0 @@
-kind=defined
-names=store
-visibility=public
-
---- store(key, value)
-

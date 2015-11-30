@@ -1,6 +1,0 @@
-kind=defined
-names=event_generate
-visibility=public
-
---- event_generate(context, keys = nil)
-

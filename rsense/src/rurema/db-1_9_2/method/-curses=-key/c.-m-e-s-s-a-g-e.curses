@@ -1,8 +1,0 @@
-kind=defined
-names=MESSAGE
-visibility=public
-
---- MESSAGE -> Integer
-
-Message キーを表す定数です。
-

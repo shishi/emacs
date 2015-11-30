@@ -1,6 +1,0 @@
-kind=defined
-names=to_a
-visibility=public
-
---- to_a(xpath = nil)
-

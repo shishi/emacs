@@ -1,9 +1,0 @@
-kind=defined
-names=NOSIGS
-visibility=public
-
---- NOSIGS -> Integer
-署名の検証を行いません。
-
-[[m:OpenSSL::PKCS7#verify]] で利用可能なフラグです。
-

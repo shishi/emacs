@@ -1,6 +1,0 @@
-kind=defined
-names=bgerror
-visibility=public
-
---- bgerror(cmd = Proc.new, slave = nil, &block)
-

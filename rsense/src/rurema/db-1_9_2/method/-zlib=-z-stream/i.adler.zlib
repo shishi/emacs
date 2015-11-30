@@ -1,8 +1,0 @@
-kind=defined
-names=adler
-visibility=public
-
---- adler -> Integer
-
-adler-32 チェックサムを返します。
-

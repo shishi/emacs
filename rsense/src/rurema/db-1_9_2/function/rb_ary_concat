@@ -1,9 +1,0 @@
-name=rb_ary_concat
-private=false
-macro=false
-type=VALUE
-filename=array.c
-params=(VALUE ary, VALUE x)
-
-
-ary.concat x

@@ -1,7 +1,0 @@
-superclass=Object
-type=class
-library=resolv
-extended=
-included=
-
-ドメイン名を表すクラスです。

@@ -1,6 +1,0 @@
-kind=defined
-names=generate_event
-visibility=protected 
-
---- generate_event(event)
-

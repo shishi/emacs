@@ -1,7 +1,0 @@
-kind=defined
-names=issuer
-visibility=public
-
---- issuer -> OpenSSL::X509::Name
-CRL の発行者を返します。
-

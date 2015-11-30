@@ -1,6 +1,0 @@
-kind=defined
-names=export
-visibility=public
-
---- export(*patterns)
-

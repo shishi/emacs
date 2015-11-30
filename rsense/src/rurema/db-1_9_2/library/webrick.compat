@@ -1,7 +1,0 @@
-methods=
-sublibraries=
-requires=
-classes=Errno=EPROTO,Errno=ECONNRESET,Errno=ECONNABORTED
-is_sublibrary=true
-
-プラットフォーム間の互換性を確保するためのライブラリです。

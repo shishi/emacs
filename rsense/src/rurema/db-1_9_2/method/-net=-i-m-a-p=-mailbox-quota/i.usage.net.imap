@@ -1,8 +1,0 @@
-kind=defined
-names=usage
-visibility=public
-
---- usage
-
-Current storage usage of mailbox.
-

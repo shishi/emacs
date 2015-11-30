@@ -1,7 +1,0 @@
-superclass=WEBrick=HTTPStatus=ClientError
-type=class
-library=webrick.httpstatus
-extended=
-included=
-
-HTTP のステータスコード 414 Request-URI Too Long を表すクラスです。

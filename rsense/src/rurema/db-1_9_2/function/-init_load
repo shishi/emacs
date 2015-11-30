@@ -1,8 +1,0 @@
-name=Init_load
-private=false
-macro=false
-type=void
-filename=eval.c
-params=(void)
-
-

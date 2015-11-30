@@ -1,6 +1,0 @@
-kind=defined
-names=upvar
-visibility=public
-
---- upvar(namespace, *var_pairs)
-

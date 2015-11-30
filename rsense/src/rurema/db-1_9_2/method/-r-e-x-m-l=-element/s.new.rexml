@@ -1,6 +1,0 @@
-kind=defined
-names=new
-visibility=public
-
---- new(arg = UNDEFINED, parent = nil, context = nil)
-

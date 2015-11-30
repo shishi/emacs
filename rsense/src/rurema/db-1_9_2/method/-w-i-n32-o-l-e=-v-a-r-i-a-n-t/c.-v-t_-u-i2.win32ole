@@ -1,9 +1,0 @@
-kind=defined
-names=VT_UI2
-visibility=public
-
---- VT_UI2 -> Integer
-符号なし16ビット整数（unsigned short）を示します（18）。
-
-OLEオートメーションでは利用できません。代わりにVT_I2を利用してください。
-

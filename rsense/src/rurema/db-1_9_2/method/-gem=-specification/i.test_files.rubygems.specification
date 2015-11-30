@@ -1,9 +1,0 @@
-kind=defined
-names=test_files
-visibility=public
-
---- test_files -> [String]
-
-ユニットテストのファイルのリストを返します。
-
-

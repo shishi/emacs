@@ -1,7 +1,0 @@
-superclass=OpenSSL=ASN1=Primitive
-type=class
-library=openssl
-extended=
-included=
-
-ASN.1 の VideotexString 型(Universal タグのタグ番号21)を表すクラスです。

@@ -1,7 +1,0 @@
-superclass=RSS=Maker=ChannelBase=SkipDaysBase=DayBase
-type=class
-library=rss
-extended=
-included=
-
-

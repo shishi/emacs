@@ -1,6 +1,0 @@
-kind=defined
-names=install_list
-visibility=public
-
---- install_list(list)
-

@@ -1,6 +1,0 @@
-kind=defined
-names=translate
-visibility=public
-
---- translate(string, tr1, tr2)
-

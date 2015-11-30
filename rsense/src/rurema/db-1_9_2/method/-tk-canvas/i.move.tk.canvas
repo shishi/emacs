@@ -1,8 +1,0 @@
-kind=defined
-names=move
-visibility=public
-
---- move(tag, x, y)
-
-
-

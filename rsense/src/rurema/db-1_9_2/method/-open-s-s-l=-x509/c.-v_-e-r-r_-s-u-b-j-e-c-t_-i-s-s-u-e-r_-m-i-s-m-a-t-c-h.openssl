@@ -1,9 +1,0 @@
-kind=defined
-names=V_ERR_SUBJECT_ISSUER_MISMATCH
-visibility=public
-
---- V_ERR_SUBJECT_ISSUER_MISMATCH -> Integer
-証明書の issuer(発行者)名と上位の証明書のsubject(所有者)名が
-異なっていることを意味します。
-
-

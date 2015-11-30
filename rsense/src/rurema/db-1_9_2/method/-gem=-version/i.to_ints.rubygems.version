@@ -1,8 +1,0 @@
-kind=defined
-names=to_ints
-visibility=public 
-
---- to_ints -> [Integer]
-
-バージョン情報を数値の配列にして返します。
-

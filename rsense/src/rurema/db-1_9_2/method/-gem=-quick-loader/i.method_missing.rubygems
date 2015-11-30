@@ -1,8 +1,0 @@
-kind=defined
-names=method_missing
-visibility=public 
-
---- method_missing
-
-prelude.c で定義されている内部用のメソッドです。
-

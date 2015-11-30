@@ -1,8 +1,0 @@
-name=mark_entry
-private=true
-macro=false
-type=int
-filename=gc.c
-params=(ID key, VALUE value)
-
-

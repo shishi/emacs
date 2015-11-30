@@ -1,8 +1,0 @@
-kind=defined
-names=version=
-visibility=public 
-
---- version=(version)
-
-self のバージョン情報を書き換えます。
-

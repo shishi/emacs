@@ -1,8 +1,0 @@
-kind=defined
-names=set_value
-visibility=public
-
---- set_value(val)
-
-値を val に設定し、self を返します。
-

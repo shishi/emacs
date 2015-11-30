@@ -1,6 +1,0 @@
-kind=defined
-names=register
-visibility=public
-
---- register(enc) {|obj| ... }
-

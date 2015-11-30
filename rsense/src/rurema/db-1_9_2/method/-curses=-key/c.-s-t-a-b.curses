@@ -1,8 +1,0 @@
-kind=defined
-names=STAB
-visibility=public
-
---- STAB -> Integer
-
-Shift + TAB キーを表す定数です。
-

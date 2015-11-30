@@ -1,8 +1,0 @@
-kind=defined
-names=gname
-visibility=public 
-
---- gname -> String
-
-tar のヘッダに含まれるグループ名を返します。
-

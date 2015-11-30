@@ -1,6 +1,0 @@
-kind=defined
-names=share_stdin
-visibility=public
-
---- share_stdin(dist, src = '')
-

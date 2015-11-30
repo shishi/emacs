@@ -1,8 +1,0 @@
-name=set_backtrace
-private=true
-macro=false
-type=void
-filename=eval.c
-params=(VALUE info, VALUE bt)
-
-

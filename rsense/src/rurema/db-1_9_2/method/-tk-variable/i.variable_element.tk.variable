@@ -1,6 +1,0 @@
-kind=defined
-names=variable_element
-visibility=public
-
---- variable_element(*idxs)
-

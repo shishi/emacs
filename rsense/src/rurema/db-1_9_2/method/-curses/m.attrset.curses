@@ -1,9 +1,0 @@
-kind=defined
-names=attrset
-visibility=public
-
---- attrset(attrs) -> Integer
-Sets the current attributes of the given window to +attrs+.
-
-@see [[m:Curses::Window.attrset]]
-

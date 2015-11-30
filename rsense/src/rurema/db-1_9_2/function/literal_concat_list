@@ -1,8 +1,0 @@
-name=literal_concat_list
-private=true
-macro=false
-type=NODE *
-filename=parse.y
-params=(NODE *head, NODE *tail)
-
-

@@ -1,6 +1,0 @@
-kind=defined
-names=metrics_displayof
-visibility=public
-
---- metrics_displayof(win, option = nil)
-

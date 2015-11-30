@@ -1,9 +1,0 @@
-superclass=Digest=Base
-type=class
-library=digest.sha2
-extended=
-included=
-
-FIPS PUB 180-2に記述されているNIST (the US' National Institute of
-Standards and Technology) の SHA-512 Secure Hash Algorithmを
-実装するクラスです。

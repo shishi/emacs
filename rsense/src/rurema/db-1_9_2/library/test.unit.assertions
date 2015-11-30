@@ -1,7 +1,0 @@
-methods=
-sublibraries=
-requires=
-classes=Test=Unit=Assertions
-is_sublibrary=true
-
-各種の assert メソッドを提供します。

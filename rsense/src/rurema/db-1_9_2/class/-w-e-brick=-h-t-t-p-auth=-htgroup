@@ -1,7 +1,0 @@
-superclass=Object
-type=class
-library=webrick.httpauth.htgroup
-extended=
-included=
-
-Apache で証認に使用するユーザグループの一覧が格納されているテキストファイルを読み書きするためのクラスです。

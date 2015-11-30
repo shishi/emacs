@@ -1,6 +1,0 @@
-kind=defined
-names=active?
-visibility=public
-
---- active? -> bool
-

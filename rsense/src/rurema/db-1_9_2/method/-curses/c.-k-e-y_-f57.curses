@@ -1,8 +1,0 @@
-kind=defined
-names=KEY_F57
-visibility=public
-
---- KEY_F57 -> Integer
-
-F57 キーを表す定数です。
-

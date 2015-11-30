@@ -1,7 +1,0 @@
-kind=defined
-names=new
-visibility=public
-
---- new(event, *sequences)
-
-

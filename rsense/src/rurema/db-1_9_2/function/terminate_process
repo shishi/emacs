@@ -1,8 +1,0 @@
-name=terminate_process
-private=true
-macro=false
-type=void
-filename=eval.c
-params=(int status, const char *mesg, int mlen)
-
-

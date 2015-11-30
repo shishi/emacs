@@ -1,9 +1,0 @@
-kind=defined
-names=can_change_color?
-visibility=public
-
---- can_change_color? -> bool
-
-端末が色を変更できる場合は真を返します。
-そうでない場合は偽を返します。
-

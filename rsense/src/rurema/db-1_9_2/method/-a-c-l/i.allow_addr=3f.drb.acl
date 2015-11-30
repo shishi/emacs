@@ -1,8 +1,0 @@
-kind=defined
-names=allow_addr?
-visibility=public
-
---- allow_addr?(addr)
-
-
-

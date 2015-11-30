@@ -1,8 +1,0 @@
-kind=defined
-names=inspect
-visibility=public
-
---- inspect() -> String 
-
-オブジェクトの内容を文字列化します。
-

@@ -1,8 +1,0 @@
-kind=defined
-names=deleteln
-visibility=public
-
---- deleteln -> nil
-
-stdscr のカーソルがある行を削除し、後の行を上に詰めます。
-

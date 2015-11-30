@@ -1,8 +1,0 @@
-name=rb_set_class_path
-private=false
-macro=false
-type=void
-filename=variable.c
-params=(VALUE klass, VALUE under, const char *name)
-
-

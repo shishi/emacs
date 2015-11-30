@@ -1,8 +1,0 @@
-kind=defined
-names=allow_socket?
-visibility=public
-
---- allow_socket?(soc)
-
-
-

@@ -1,6 +1,0 @@
-kind=defined
-names=maxlen
-visibility=public
-
---- maxlen(*src_strings)
-

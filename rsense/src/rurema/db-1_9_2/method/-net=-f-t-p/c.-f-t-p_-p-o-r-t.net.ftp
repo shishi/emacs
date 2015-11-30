@@ -1,8 +1,0 @@
-kind=defined
-names=FTP_PORT
-visibility=public
-
---- FTP_PORT -> Integer
-FTPのデフォルトのポート番号(21)です。
-
-

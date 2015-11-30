@@ -1,6 +1,0 @@
-kind=defined
-names=current_entryconfiginfo
-visibility=public
-
---- current_entryconfiginfo(index, key = nil)
-

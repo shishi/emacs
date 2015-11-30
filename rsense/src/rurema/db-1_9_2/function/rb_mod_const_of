@@ -1,8 +1,0 @@
-name=rb_mod_const_of
-private=false
-macro=false
-type=void *
-filename=variable.c
-params=(VALUE mod, void *data)
-
-

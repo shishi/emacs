@@ -1,6 +1,0 @@
-kind=defined
-names=TRUST_OBJECT_SIGN
-visibility=public
-
---- TRUST_OBJECT_SIGN -> Integer
-

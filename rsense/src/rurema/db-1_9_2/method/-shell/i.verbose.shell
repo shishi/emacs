@@ -1,7 +1,0 @@
-kind=defined
-names=verbose,verbose?
-visibility=public
-
---- verbose -> bool  
---- verbose? -> bool
-

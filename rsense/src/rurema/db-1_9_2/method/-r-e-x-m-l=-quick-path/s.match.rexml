@@ -1,6 +1,0 @@
-kind=defined
-names=match
-visibility=public
-
---- match(element, path, namespaces = EMPTY_HASH)
-

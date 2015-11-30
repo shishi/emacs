@@ -1,8 +1,0 @@
-name=generic_ivar_set
-private=true
-macro=false
-type=void
-filename=variable.c
-params=(VALUE obj, ID id, VALUE val)
-
-

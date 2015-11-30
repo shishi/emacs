@@ -1,6 +1,0 @@
-kind=defined
-names=configure
-visibility=public
-
---- configure(key, value = nil)
-

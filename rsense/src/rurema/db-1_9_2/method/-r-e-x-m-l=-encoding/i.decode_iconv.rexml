@@ -1,6 +1,0 @@
-kind=added
-names=decode_iconv
-visibility=public
-
---- decode_iconv(str)
-

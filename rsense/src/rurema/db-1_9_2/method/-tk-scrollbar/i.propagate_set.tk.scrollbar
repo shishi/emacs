@@ -1,6 +1,0 @@
-kind=defined
-names=propagate_set
-visibility=public
-
---- propagate_set(src_win, first, last)
-

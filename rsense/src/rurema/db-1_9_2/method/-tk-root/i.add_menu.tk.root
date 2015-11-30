@@ -1,6 +1,0 @@
-kind=defined
-names=add_menu
-visibility=public
-
---- add_menu(menu_info, tearoff = false, opts = nil)
-

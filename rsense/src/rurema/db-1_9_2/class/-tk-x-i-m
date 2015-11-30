@@ -1,7 +1,0 @@
-superclass=
-type=module
-library=tk.xim
-extended=Tk
-included=Tk
-
-

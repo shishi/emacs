@@ -1,8 +1,0 @@
-kind=defined
-names=xview_scroll
-visibility=public
-
---- xview_scroll(*index)
-
-
-

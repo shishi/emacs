@@ -1,7 +1,0 @@
-superclass=OpenSSL=Cipher
-type=class
-library=openssl
-extended=
-included=
-
-IDEA 暗号を表すクラス

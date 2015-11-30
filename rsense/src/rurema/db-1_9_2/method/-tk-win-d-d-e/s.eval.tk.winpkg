@@ -1,6 +1,0 @@
-kind=defined
-names=eval
-visibility=public
-
---- eval(topic, cmd, *args)
-

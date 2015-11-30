@@ -1,6 +1,0 @@
-kind=defined
-names=read_with_substitution
-visibility=public
-
---- read_with_substitution(input, illegal = nil)
-

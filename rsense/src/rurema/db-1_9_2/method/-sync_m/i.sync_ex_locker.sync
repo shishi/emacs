@@ -1,6 +1,0 @@
-kind=defined
-names=sync_ex_locker
-visibility=public
-
---- sync_ex_locker -> Thread | nil
-

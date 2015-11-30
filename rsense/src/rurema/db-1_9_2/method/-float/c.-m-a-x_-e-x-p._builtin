@@ -1,8 +1,0 @@
-kind=defined
-names=MAX_EXP
-visibility=public
-
---- MAX_EXP -> Fixnum
-
-最大の Float::RADIX 進の指数
-

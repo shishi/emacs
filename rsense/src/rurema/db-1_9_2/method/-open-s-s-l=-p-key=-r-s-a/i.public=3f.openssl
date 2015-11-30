@@ -1,7 +1,0 @@
-kind=defined
-names=public?
-visibility=public
-
---- public? -> bool
-自身が公開鍵を持っているかどうか判定します。
-

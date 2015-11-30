@@ -1,8 +1,0 @@
-kind=defined
-names=uid
-visibility=public
-
---- uid -> Integer
-
-このユーザの uid を返します。
-

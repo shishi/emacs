@@ -1,6 +1,0 @@
-kind=defined
-names=prevrange
-visibility=public
-
---- prevrange(first, last = Tk::None)
-

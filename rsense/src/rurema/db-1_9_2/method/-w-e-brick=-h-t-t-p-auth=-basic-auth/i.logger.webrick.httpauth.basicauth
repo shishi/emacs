@@ -1,8 +1,0 @@
-kind=defined
-names=logger
-visibility=public
-
---- logger -> object
-
-ロガーオブジェクトを返します。
-

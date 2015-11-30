@@ -1,7 +1,0 @@
-superclass=Gem=Command
-type=class
-library=rubygems.commands.update_command
-extended=
-included=Gem=InstallUpdateOptions,Gem=LocalRemoteOptions,Gem=VersionOption
-
-ローカルリポジトリにインストールされている Gem パッケージを更新するためのクラスです。

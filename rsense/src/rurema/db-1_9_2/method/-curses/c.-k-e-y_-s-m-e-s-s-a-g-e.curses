@@ -1,8 +1,0 @@
-kind=defined
-names=KEY_SMESSAGE
-visibility=public
-
---- KEY_SMESSAGE -> Integer
-
-Shift + Message キーを表す定数です。
-

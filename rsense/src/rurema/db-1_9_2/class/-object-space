@@ -1,7 +1,0 @@
-superclass=
-type=module
-library=_builtin
-extended=
-included=
-
-全てのオブジェクトを操作するためのモジュールです。

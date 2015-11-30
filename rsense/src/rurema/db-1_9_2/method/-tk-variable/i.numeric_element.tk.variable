@@ -1,6 +1,0 @@
-kind=defined
-names=numeric_element
-visibility=public
-
---- numeric_element(*idxs)
-

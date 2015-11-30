@@ -1,8 +1,0 @@
-kind=defined
-names=gem_home
-visibility=public 
-
---- gem_home -> String
-
-Gem がインストールされているディレクトリを返します。
-

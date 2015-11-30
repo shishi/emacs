@@ -1,8 +1,0 @@
-superclass=Gem=Command
-type=class
-library=rubygems.commands.lock_command
-extended=
-included=
-
-指定された特定のバージョンの Gem パッケージに依存する Gem を使用するために
-必要な [[m:Kernel.#gem]] メソッドの呼び出し方法を文字列で出力します。

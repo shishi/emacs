@@ -1,7 +1,0 @@
-kind=defined
-names=numlist=,set_numlist
-visibility=public
-
---- set_numlist(val)
---- numlist=
-

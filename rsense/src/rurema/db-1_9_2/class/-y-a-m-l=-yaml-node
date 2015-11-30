@@ -1,7 +1,0 @@
-superclass=Object
-type=class
-library=yaml
-extended=
-included=YAML=BaseNode
-
-

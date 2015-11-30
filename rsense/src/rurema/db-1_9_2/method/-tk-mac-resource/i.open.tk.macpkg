@@ -1,6 +1,0 @@
-kind=defined
-names=open
-visibility=public
-
---- open(fname, access = nil)
-

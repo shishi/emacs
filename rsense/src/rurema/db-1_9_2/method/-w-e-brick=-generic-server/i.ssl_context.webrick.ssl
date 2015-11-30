@@ -1,8 +1,0 @@
-kind=redefined
-names=ssl_context
-visibility=public
-
---- ssl_context -> OpenSSL::SSL::SSLContext | nil
-
-サーバが保持する [[c:OpenSSL::SSL::SSLContext]] オブジェクトを返します。
-

@@ -1,8 +1,0 @@
-name=rb_mark_generic_ivar_tbl
-private=false
-macro=false
-type=void
-filename=variable.c
-params=(void)
-
-

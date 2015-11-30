@@ -1,9 +1,0 @@
-superclass=Object
-type=class
-library=openssl
-extended=
-included=
-
-楕円曲線から定義される群を表すクラスです。
-
-楕円曲線暗号のパラメータとしての役割をはたします。

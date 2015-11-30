@@ -1,7 +1,0 @@
-kind=defined
-names=VT_ARRAY
-visibility=public
-
---- VT_ARRAY -> Integer
-配列（SafeArray）を示します（0x2000）。
-

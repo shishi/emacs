@@ -1,6 +1,0 @@
-kind=defined
-names=ensemble_configinfo
-visibility=public
-
---- ensemble_configinfo(cmd, slot = nil))
-

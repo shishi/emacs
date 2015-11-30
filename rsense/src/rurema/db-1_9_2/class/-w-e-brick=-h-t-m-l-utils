@@ -1,7 +1,0 @@
-superclass=
-type=module
-library=webrick.htmlutils
-extended=
-included=
-
-HTML のためのユーティリティ関数を提供します。

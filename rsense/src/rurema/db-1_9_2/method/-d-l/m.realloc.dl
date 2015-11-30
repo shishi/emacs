@@ -1,6 +1,0 @@
-kind=defined
-names=realloc
-visibility=public
-
---- realloc(addr, size)   -> Integer
-

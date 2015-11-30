@@ -1,8 +1,0 @@
-kind=defined
-names=execute
-visibility=public 
-
---- execute -> ()
-
-コマンドを実行します。
-

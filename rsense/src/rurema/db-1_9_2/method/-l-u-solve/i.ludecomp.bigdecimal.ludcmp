@@ -1,7 +1,0 @@
-kind=defined
-names=ludecomp
-visibility=public
-
---- ludecomp(a, n, zero = 0, one = 1)
-
-

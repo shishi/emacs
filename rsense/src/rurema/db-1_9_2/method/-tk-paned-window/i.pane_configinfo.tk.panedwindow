@@ -1,7 +1,0 @@
-kind=defined
-names=pane_configinfo,paneconfiginfo
-visibility=public
-
---- paneconfiginfo(win, key = nil)
---- pane_configinfo(win, key = nil)
-

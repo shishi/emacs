@@ -1,8 +1,0 @@
-kind=defined
-names=auth_type
-visibility=public
-
---- auth_type -> Class
-
-[[c:WEBrick::HTTPAuth::BasicAuth]], [[c:WEBrick::HTTPAuth::DigestAuth]] のいずれかを返します。
-

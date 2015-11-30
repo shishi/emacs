@@ -1,6 +1,0 @@
-kind=defined
-names=read
-visibility=public
-
---- read(file, *opts)
-

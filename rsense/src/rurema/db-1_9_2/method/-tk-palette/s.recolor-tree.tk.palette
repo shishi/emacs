@@ -1,6 +1,0 @@
-kind=defined
-names=recolorTree
-visibility=public
-
---- recolorTree(win, colors)
-

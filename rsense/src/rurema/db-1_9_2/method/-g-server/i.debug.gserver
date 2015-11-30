@@ -1,8 +1,0 @@
-kind=defined
-names=debug
-visibility=public
-
---- debug -> bool
-
-デバッグモードなら真、そうでないなら偽を返します。
-

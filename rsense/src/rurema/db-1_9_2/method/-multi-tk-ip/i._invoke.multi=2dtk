@@ -1,6 +1,0 @@
-kind=defined
-names=_invoke
-visibility=public
-
---- _invoke(*args)
-

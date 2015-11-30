@@ -1,8 +1,0 @@
-name=rb_const_assign
-private=false
-macro=false
-type=void
-filename=variable.c
-params=(VALUE klass, ID id, VALUE val)
-
-

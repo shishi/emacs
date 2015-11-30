@@ -1,4 +1,0 @@
-.list	Signal.#list
-.trap	Signal.#trap
-#list	Signal.#list
-#trap	Signal.#trap

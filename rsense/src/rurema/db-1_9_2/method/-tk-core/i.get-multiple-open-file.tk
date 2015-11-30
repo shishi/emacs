@@ -1,6 +1,0 @@
-kind=defined
-names=getMultipleOpenFile
-visibility=public
-
---- getMultipleOpenFile(keys = nil)
-

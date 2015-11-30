@@ -1,8 +1,0 @@
-name=rb_mod_gt
-private=true
-macro=false
-type=VALUE
-filename=object.c
-params=(VALUE mod, VALUE arg)
-
-

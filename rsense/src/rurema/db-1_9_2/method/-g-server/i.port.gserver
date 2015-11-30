@@ -1,8 +1,0 @@
-kind=defined
-names=port
-visibility=public
-
---- port -> Fixnum
-
-ポートを数で返します。
-

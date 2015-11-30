@@ -1,8 +1,0 @@
-name=rb_mark_generic_ivar
-private=false
-macro=false
-type=void
-filename=variable.c
-params=(VALUE obj)
-
-

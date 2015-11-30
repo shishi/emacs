@@ -1,8 +1,0 @@
-kind=defined
-names=nearest
-visibility=public
-
---- nearest(y)
-
-((|y|))で指定したY座標に近い要素の要素番号を返します。
-

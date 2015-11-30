@@ -1,6 +1,0 @@
-kind=defined
-names=doctype
-visibility=public
-
---- doctype(name, pub_sys, long_name, uri)
-

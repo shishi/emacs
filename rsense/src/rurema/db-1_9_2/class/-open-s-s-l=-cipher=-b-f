@@ -1,7 +1,0 @@
-superclass=OpenSSL=Cipher
-type=class
-library=openssl
-extended=
-included=
-
-BF(BlowFish)暗号を表すクラス

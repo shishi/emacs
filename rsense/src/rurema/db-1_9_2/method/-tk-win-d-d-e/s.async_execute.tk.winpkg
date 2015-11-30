@@ -1,6 +1,0 @@
-kind=defined
-names=async_execute
-visibility=public
-
---- async_execute(service, topic, data)
-

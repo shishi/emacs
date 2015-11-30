@@ -1,8 +1,0 @@
-name=NUM2INT
-private=false
-macro=true
-type=int
-filename=ruby.h
-params=(VALUE x)
-
-

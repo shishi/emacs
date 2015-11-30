@@ -1,8 +1,0 @@
-kind=defined
-names=REDO
-visibility=public
-
---- REDO -> Integer
-
-Redo キーを表す定数です。
-

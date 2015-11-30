@@ -1,6 +1,0 @@
-kind=defined
-names=cb_eval
-visibility=public
-
---- cb_eval(cmd, *args)
-

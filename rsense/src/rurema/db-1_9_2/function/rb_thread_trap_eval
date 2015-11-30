@@ -1,8 +1,0 @@
-name=rb_thread_trap_eval
-private=false
-macro=false
-type=void
-filename=eval.c
-params=(VALUE cmd, int sig)
-
-

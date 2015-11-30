@@ -1,8 +1,0 @@
-kind=defined
-names=BREAK
-visibility=public
-
---- BREAK -> Integer
-
-BREAK キーを表す定数です。
-

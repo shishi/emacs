@@ -1,6 +1,0 @@
-kind=defined
-names=_set_global_var2
-visibility=public
-
---- _set_global_var2(var, idx, value)
-

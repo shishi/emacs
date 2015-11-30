@@ -1,8 +1,0 @@
-kind=defined
-names=IC
-visibility=public
-
---- IC -> Integer
-
-文字を挿入するか挿入モードに入るキーを表す定数です。
-

@@ -1,7 +1,0 @@
-superclass=
-type=module
-library=openssl
-extended=
-included=
-
-OpenSSL PKCS#5 関連の機能を集めたモジュール

@@ -1,7 +1,0 @@
-kind=defined
-names=address
-visibility=public
-
---- address -> String
-接続するアドレスです。
-

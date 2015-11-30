@@ -1,6 +1,0 @@
-kind=defined
-names=nextrange
-visibility=public
-
---- nextrange(first, last = Tk::None)
-

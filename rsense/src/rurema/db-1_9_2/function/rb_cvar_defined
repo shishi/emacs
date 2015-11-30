@@ -1,8 +1,0 @@
-name=rb_cvar_defined
-private=false
-macro=false
-type=VALUE
-filename=variable.c
-params=(VALUE klass, ID id)
-
-

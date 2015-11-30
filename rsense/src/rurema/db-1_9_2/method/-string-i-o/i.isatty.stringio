@@ -1,8 +1,0 @@
-kind=defined
-names=isatty
-visibility=public
-
---- isatty    -> false
-
-何もせず false を返します。
-

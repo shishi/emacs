@@ -1,8 +1,0 @@
-kind=defined
-names=nan?
-visibility=public
-
---- nan?
-
-a.nan? は a が NaN のとき真を返します。 
-

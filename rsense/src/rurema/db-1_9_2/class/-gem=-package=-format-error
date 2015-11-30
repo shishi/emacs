@@ -1,7 +1,0 @@
-superclass=Gem=Package=Error
-type=class
-library=rubygems.package
-extended=
-included=
-
-フォーマットに関する例外です。

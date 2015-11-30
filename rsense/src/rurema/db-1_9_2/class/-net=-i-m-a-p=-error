@@ -1,7 +1,0 @@
-superclass=StandardError
-type=class
-library=net.imap
-extended=
-included=
-
-すべての IMAP 例外クラスのスーパークラス。

@@ -1,6 +1,0 @@
-kind=defined
-names=insert_after
-visibility=public
-
---- insert_after(child1, child2)
-

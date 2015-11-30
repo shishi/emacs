@@ -1,8 +1,0 @@
-kind=defined
-names=source
-visibility=public 
-
---- source -> String
-
-現在のソースのコピーを返します。
-

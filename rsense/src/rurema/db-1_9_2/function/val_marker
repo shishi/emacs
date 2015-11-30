@@ -1,8 +1,0 @@
-name=val_marker
-private=true
-macro=false
-type=void
-filename=variable.c
-params=(VALUE data)
-
-

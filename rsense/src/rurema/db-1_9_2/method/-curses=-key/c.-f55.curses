@@ -1,8 +1,0 @@
-kind=defined
-names=F55
-visibility=public
-
---- F55 -> Integer
-
-F55 キーを表す定数です。
-

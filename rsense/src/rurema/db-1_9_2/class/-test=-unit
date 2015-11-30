@@ -1,7 +1,0 @@
-superclass=
-type=module
-library=test.unit
-extended=
-included=
-
-ユニットテストを行うためのモジュールです。

@@ -1,8 +1,0 @@
-name=undefine_final
-private=true
-macro=false
-type=VALUE
-filename=gc.c
-params=(VALUE os, VALUE obj)
-
-

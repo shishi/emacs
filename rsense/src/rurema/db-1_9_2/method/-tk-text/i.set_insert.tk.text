@@ -1,6 +1,0 @@
-kind=defined
-names=set_insert
-visibility=public
-
---- set_insert(index)
-

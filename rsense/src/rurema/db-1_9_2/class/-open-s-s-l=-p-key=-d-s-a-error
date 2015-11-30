@@ -1,7 +1,0 @@
-superclass=OpenSSL=PKey=PKeyError
-type=class
-library=openssl
-extended=
-included=
-
-DSA 関連のエラーが起きた場合に発生する例外です。

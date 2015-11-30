@@ -1,6 +1,0 @@
-kind=defined
-names=delegate
-visibility=public
-
---- delegate(option, *wins)
-

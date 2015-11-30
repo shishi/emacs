@@ -1,7 +1,0 @@
-kind=defined
-names=signed_time
-visibility=public
-
---- signed_time -> Time
-その署名者が署名した時刻を返します。
-

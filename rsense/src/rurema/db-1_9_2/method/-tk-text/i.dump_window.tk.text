@@ -1,6 +1,0 @@
-kind=defined
-names=dump_window
-visibility=public
-
---- dump_window(*index) { ... }
-

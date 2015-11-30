@@ -1,7 +1,0 @@
-superclass=ScriptError
-type=class
-library=_builtin
-extended=
-included=
-
-[[m:Kernel.#require]] や [[m:Kernel.#load]] が失敗したときに発生します。

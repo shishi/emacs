@@ -1,7 +1,0 @@
-kind=defined
-names=ns_tk_call,tk_call
-visibility=public
-
---- tk_call(*args)
---- ns_tk_call(*args)
-

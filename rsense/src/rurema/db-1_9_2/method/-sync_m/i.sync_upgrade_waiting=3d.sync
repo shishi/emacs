@@ -1,6 +1,0 @@
-kind=defined
-names=sync_upgrade_waiting=
-visibility=public
-
---- sync_upgrade_waiting=(arr)
-

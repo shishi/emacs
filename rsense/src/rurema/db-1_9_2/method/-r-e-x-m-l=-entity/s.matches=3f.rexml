@@ -1,6 +1,0 @@
-kind=defined
-names=matches?
-visibility=public
-
---- matches?(string)
-

@@ -1,9 +1,0 @@
-kind=defined
-names=subject_request
-visibility=public
-
---- subject_request -> OpenSSL::X509::Request | nil
-自身に設定されている証明書署名要求オブジェクトを返します。
-
-設定されていない場合は nil を返します。
-

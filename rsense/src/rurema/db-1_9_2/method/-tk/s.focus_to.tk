@@ -1,7 +1,0 @@
-kind=defined
-names=focus_to
-visibility=public
-
---- focus_to(win, force = false)
-
-

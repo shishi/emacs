@@ -1,6 +1,0 @@
-kind=defined
-names=cget
-visibility=public
-
---- cget(option)
-

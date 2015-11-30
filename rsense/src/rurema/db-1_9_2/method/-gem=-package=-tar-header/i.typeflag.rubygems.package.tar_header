@@ -1,8 +1,0 @@
-kind=defined
-names=typeflag
-visibility=public 
-
---- typeflag -> String
-
-tar のヘッダに含まれる typeflag を返します。
-

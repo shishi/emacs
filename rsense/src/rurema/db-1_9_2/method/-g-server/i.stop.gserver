@@ -1,8 +1,0 @@
-kind=defined
-names=stop
-visibility=public
-
---- stop -> ()
-
-自身をすぐに停止します。
-

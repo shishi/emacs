@@ -1,8 +1,0 @@
-kind=defined
-names=uclass
-visibility=public
-
---- uclass -> String
-
-ユーザアクセスクラス(文字列)を返します。このメンバはシステム依存です。
-

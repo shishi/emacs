@@ -1,6 +1,0 @@
-kind=defined
-names=_init_ip_env
-visibility=public
-
---- _init_ip_env(script)
-

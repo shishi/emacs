@@ -1,6 +1,0 @@
-kind=defined
-names=formatGMT
-visibility=public
-
---- formatGMT(clk, form = nil)
-

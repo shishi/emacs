@@ -1,9 +1,0 @@
-kind=defined
-names=rehash
-visibility=public
-
---- rehash -> {}
-
-登録されているシステムコマンドの情報をクリアします。
-通常、使うことはありません。
-

@@ -1,7 +1,0 @@
-kind=defined
-names=set_default_element_value_type
-visibility=public
-
---- set_default_element_value_type(idxs, type)
-
-

@@ -1,7 +1,0 @@
-superclass=StandardError
-type=class
-library=shell.error
-extended=
-included=
-
-メソッドを適用できないときに発生する例外です。
