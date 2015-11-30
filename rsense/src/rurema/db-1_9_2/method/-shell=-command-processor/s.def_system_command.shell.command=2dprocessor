@@ -1,0 +1,12 @@
+kind=defined
+names=def_system_command
+visibility=public
+
+--- def_system_command(command, path = command) -> ()
+
+与えられたコマンドをメソッドとして定義します。
+
+@param command 定義したいコマンドを指定します。
+
+@param path command のパスを指定します。省略すると環境変数 PATH から command を探します。
+

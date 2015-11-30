@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=webrick.httpstatus,webrick.httprequest,webrick.htmlutils,webrick.httpservlet.filehandler,webrick.httpservlet,webrick.httpservlet.erbhandler,webrick.httputils,webrick.cookie,webrick.httpservlet.abstract,webrick.accesslog,webrick.httpservlet.prochandler,webrick.httpresponse,webrick.httpversion,webrick.httpservlet.cgihandler,webrick.server,webrick.httpserver,webrick.utils,webrick.log,webrick.config
+classes=WEBrick=HTTPProxyServer
+is_sublibrary=true
+
+プロクシの機能を提供するライブラリです。CONNECT メソッドにも対応しています。

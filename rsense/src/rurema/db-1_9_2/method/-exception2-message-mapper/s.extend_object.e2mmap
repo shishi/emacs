@@ -1,0 +1,8 @@
+kind=defined
+names=extend_object
+visibility=public
+
+--- extend_object(cl) -> ()
+
+@param cl
+

@@ -1,0 +1,10 @@
+kind=defined
+names=READER
+visibility=public
+
+--- READER -> Fixnum
+
+[[m:GDBM.open]] の第3引数に指定します。
+
+読み込みモードでオープンします。
+

@@ -1,0 +1,38 @@
+kind=defined
+names=reason
+visibility=public
+
+--- reason -> Symbol
+
+例外を発生させた原因をシンボルで返します。
+
+返す値は以下のいずれかです。
+
+  * :break
+  * :redo
+  * :retry
+  * :next
+  * :return
+
+例:
+
+  def foo
+    proc { return 10 }
+  end
+  
+  begin
+    foo.call
+  rescue LocalJumpError => err
+    p err              # => #<LocalJumpError: return from block-closure>
+    p err.reason       # => :return
+    p err.exit_value   # => 10
+  end
+
+  begin
+    Block.new { break 5 }.call
+  rescue LocalJumpError => err
+    p err              # => #<LocalJumpError: break from block-closure>
+    p err.reason       # => :break
+    p err.exit_value   # => 5
+  end
+

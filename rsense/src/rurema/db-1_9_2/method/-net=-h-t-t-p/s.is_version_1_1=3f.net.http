@@ -1,0 +1,11 @@
+kind=defined
+names=is_version_1_1?,version_1_1?
+visibility=public
+
+--- version_1_1? -> bool
+--- is_version_1_1? -> bool 
+ライブラリの動作がバージョン1.1互換である場合に真を返します。
+
+@see [[m:Net::HTTP.version_1_1]], [[m:Net::HTTP.version_1_2]]
+     [[m:Net::HTTP.version_1_2?]]
+

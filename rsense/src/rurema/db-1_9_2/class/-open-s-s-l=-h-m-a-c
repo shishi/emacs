@@ -1,0 +1,19 @@
+superclass=Object
+type=class
+library=openssl
+extended=
+included=
+
+HMAC を表すクラス。
+
+HMAC とは MAC(message authentication code, ハッシュ関数(MD5やSHAなど)
+と鍵の文字列をパラメータとするハッシュ関数)の一種です。
+
+メッセージの認証に利用されます。
+
+[[c:OpenSSL::Digest]] のようにある与えられた文字列の
+ハッシュ値を直接計算するインターフェースと
+インスタンスを生成して入力文字列を順次与えてハッシュ値を
+計算するインターフェースの2つがあります。
+
+HMAC は[[RFC:2104]] で定義されています。

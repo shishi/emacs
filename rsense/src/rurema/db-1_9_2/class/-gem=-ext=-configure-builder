@@ -1,0 +1,7 @@
+superclass=Gem=Ext=Builder
+type=class
+library=rubygems.ext.configure_builder
+extended=
+included=
+
+configure スクリプトを元に拡張ライブラリをビルドするクラスです。

@@ -1,0 +1,14 @@
+kind=defined
+names=chmod
+visibility=public
+
+--- chmod(mode, *filename)    -> Integer
+
+[[c:File]] クラスにある同名のクラスメソッドと同じです.
+
+@param filename ファイル名を表す文字列を指定します。
+
+@param mode [[man:chmod(2)]] と同様に整数で指定します。
+
+@see [[m:File.chmod]]
+

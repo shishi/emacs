@@ -1,0 +1,8 @@
+kind=defined
+names=disconnected?
+visibility=public
+
+--- disconnected?
+
+Returns true if disconnected from the server.
+

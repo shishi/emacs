@@ -1,0 +1,26 @@
+kind=defined
+names===,===,eql?
+visibility=public
+
+--- ==(other)   -> bool
+--- ===(other)  -> bool
+--- eql?(other) -> bool
+
+パス名を比較し、 other と同じなら真を返します。大文字小文字は区別されます。
+other は Pathname オブジェクトでなければなりません。
+
+パス名の比較は単純にパス文字列の比較によって行われるので、論理的に
+同じパスでもパス文字列が違えば異なると判断されます。
+
+@param other 比較対象の Pathname オブジェクトを指定します。
+
+    require 'pathname'
+
+    p Pathname.new("foo/bar") == Pathname.new("foo/bar")
+    p Pathname.new("foo/bar") == Pathname.new("foo//bar")
+    p Pathname.new("foo/../foo/bar") == Pathname.new("foo/bar")
+
+    # => true
+         false
+         false
+

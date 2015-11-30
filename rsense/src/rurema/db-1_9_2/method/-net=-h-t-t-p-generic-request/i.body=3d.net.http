@@ -1,0 +1,12 @@
+kind=defined
+names=body=
+visibility=public
+
+--- body=(body)
+
+サーバに送るリクエストのエンティティボディを文字列で設定します。
+
+@param body 設定するボディを文字列で与えます。
+@see [[m:Net::HTTPGenericRequest#body]]
+
+

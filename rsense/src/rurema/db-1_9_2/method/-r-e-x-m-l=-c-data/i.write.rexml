@@ -1,0 +1,6 @@
+kind=defined
+names=write
+visibility=public
+
+--- write(output = $stdout, indent = -1, transitive = false, ie_hack = false)
+

@@ -1,0 +1,14 @@
+kind=defined
+names=det_e,determinant_e
+visibility=public
+
+--- determinant_e -> Rational | Float
+--- det_e -> Rational | Float
+
+行列式 (determinant) を返します。
+
+ユークリッドアルゴリズムに基づいて行列式を計算します。
+行列の全成分が整数([[c:Integer]])の場合は正しい値を返します。
+成分に[[c:Float]]があった場合には正しい値を返さないかもしれません。
+
+

@@ -1,0 +1,10 @@
+kind=defined
+names=OPENSSL_VERSION_NUMBER
+visibility=public
+
+--- OPENSSL_VERSION_NUMBER
+
+システムにインストールされている OpenSSL 本体のバージョンを表した数です。
+[[url:http://www.openssl.org/docs/crypto/OPENSSL_VERSION_NUMBER.html]]
+も参照してください。
+

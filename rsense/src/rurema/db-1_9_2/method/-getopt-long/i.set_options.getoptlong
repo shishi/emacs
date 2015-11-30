@@ -1,0 +1,36 @@
+kind=defined
+names=set_options
+visibility=public
+
+--- set_options(*arguments) -> self
+あなたのプログラムで、認識させたいオプションをセットします。
+個々のオプションは、オプション名と引数のフラグからなる配列でな
+ければいけません。
+
+配列中のオプション名は、一文字オプション (例: -d) か長いオプ
+ション (例: --debug) を表した文字列のいずれかでなければなり
+ません。配列の中の一番左端のオプション名が、オプションの正式名
+になります。配列中の引数のフラグは、[[m:GetoptLong::NO_ARGUMENT]],
+[[m:GetoptLong::REQUIRE_ARGUMENT]], [[m:GetoptLong::OPTIONAL_ARGUMENT]]
+のいずれかでなくてはなりません。
+
+オプションを設定できるのは、get, get_option, each,
+each_option メソッドを呼び出す前だけです。これらのメソッドを
+呼び出した後でオプションを設定しようとすると、RuntimeError
+例外が発生します。
+
+@param arguments オプションを表す配列を指定します。
+
+@raise ArgumentError 不正な引数が与えられるた場合、発生します。
+
+    parser.set_options(['-d', '--debug', GetoptLong::NO_ARGUMENT],
+                       ['--version',     GetoptLong::NO_ARGUMENT],
+                       ['--help',        GetoptLong::NO_ARGUMENT])
+
+オプション名と引数のフラグの順番に決まりはないので、次のような
+形式でも構いません。
+
+    parser.set_options([GetoptLong::NO_ARGUMENT, '-d', '--debug'],
+                       [GetoptLong::NO_ARGUMENT, '--version'],
+                       [GetoptLong::NO_ARGUMENT, '--help'])
+

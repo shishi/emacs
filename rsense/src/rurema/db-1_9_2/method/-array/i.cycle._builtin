@@ -1,0 +1,13 @@
+kind=defined
+names=cycle
+visibility=public
+
+--- cycle {|obj| block }
+
+Enumerable オブジェクトの要素を、繰り返し無限に生成し続けます。
+
+例:
+
+   a = ["a", "b", "c"]
+   a.cycle {|x| puts x }  # print, a, b, c, a, b, c,.. forever.
+

@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=rubygems.require_paths_builder,rubygems.ext.ext_conf_builder,rubygems.package.tar_writer,rubygems.specification,rubygems.spec_fetcher,rubygems.remote_fetcher,rubygems.requirement,rubygems.gem_openssl,rubygems.builder,rubygems.exceptions,rubygems.package,rubygems.package.tar_input,rubygems.source_index,rubygems.installer,rubygems.package.tar_reader,rubygems.package.tar_header,rubygems.source_info_cache_entry,rubygems.digest.sha2,rubygems.ext.configure_builder,rubygems.ext,rubygems.gem_path_searcher,rubygems.defaults.operating_system,rubygems.platform,rubygems.defaults,rubygems.ext.rake_builder,rubygems.package.tar_reader.entry,rubygems.package.f_sync_dir,rubygems.dependency,rubygems.source_info_cache,rubygems.user_interaction,rubygems,rubygems.digest.md5,rubygems.version,rubygems.ext.builder,rubygems.package.tar_output,rubygems.security,rubygems.format
+classes=Gem=Validator
+is_sublibrary=true
+
+様々な Gem ファイルや Gem データベースを懸賞するためのライブラリです。

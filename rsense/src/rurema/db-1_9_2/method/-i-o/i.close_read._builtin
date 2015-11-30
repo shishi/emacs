@@ -1,0 +1,13 @@
+kind=defined
+names=close_read
+visibility=public
+
+--- close_read    -> nil
+
+読み込み用の IO を close します。主にパイプや読み書き両用に作成し
+た IO オブジェクトで使用します。
+
+@raise IOError 自身が読み込み用にオープンされていなければ発生します。
+
+@raise Errno::EXXX close に失敗した場合に発生します。
+

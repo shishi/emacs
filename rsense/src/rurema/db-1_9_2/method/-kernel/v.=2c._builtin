@@ -1,0 +1,14 @@
+kind=defined
+names=,
+visibility=public
+
+--- $, -> String | nil
+
+デフォルトの出力フィールド区切り文字列です。
+[[m:Array#join]] で引数を省略した場合と、
+[[m:Kernel.#print]] の各引数の間で出力されます。
+
+デフォルト値は nil で、空文字列と同じ結果になります。
+
+この変数はグローバルスコープです。
+

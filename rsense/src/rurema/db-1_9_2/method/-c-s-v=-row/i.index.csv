@@ -1,0 +1,15 @@
+kind=defined
+names=index
+visibility=public
+
+--- index(header, minimum_index = 0) -> Fixnum
+
+与えられたヘッダの名前に対応するインデックスを返します。
+
+@param header ヘッダの名前を指定します。
+
+@param minimum_index このインデックスより後で、ヘッダの名前を探します。
+                     重複しているヘッダがある場合に便利です。
+
+@see [[m:CSV::Row#field]]
+

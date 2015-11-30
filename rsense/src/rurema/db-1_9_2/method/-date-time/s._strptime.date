@@ -1,0 +1,20 @@
+kind=defined
+names=_strptime
+visibility=public
+
+--- _strptime(str, format = '%FT%T%z') -> Hash
+
+与えられた雛型で日時表現を解析し、その情報に基づいてハッシュを生成します。
+
+@param str 日時をあらわす文字列
+@param format 書式
+
+例:
+
+  DateTime._strptime('2001-02-03T12:13:14Z')
+  # => {:sec=>14, :zone=>"Z", :year=>2001, :hour=>12, :mday=>3, :min=>13, :offset=>0, :mon=>2}
+
+[[m:DateTime.strptime]] の内部で使用されています。
+
+@see [[m:Date._strptime]], [[m:DateTime.strptime]]
+

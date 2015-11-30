@@ -1,0 +1,11 @@
+superclass=Resolv=DNS=Query
+type=class
+library=resolv
+extended=
+included=
+
+DNS のすべてのクラスに対するクエリーを表わす
+抽象クラスです。
+
+[[m:Resolv::DNS#getresource]] では
+[[c:Resolv::DNS::Resource::IN::ANY]] を使うべきです。

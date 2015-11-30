@@ -1,0 +1,10 @@
+kind=defined
+names=isutf8
+visibility=public
+
+--- isutf8(str) -> bool
+文字列 str が UTF-8 なバイト列として正当であるかどうかを判定します。
+
+@param str 判定対象の文字列
+@see [[m:String#isutf8]]
+

@@ -1,0 +1,8 @@
+kind=defined
+names=[]
+visibility=public
+
+--- [](key)    -> object
+
+self.config[key] と同じです。。
+

@@ -1,0 +1,7 @@
+superclass=Zlib=Error
+type=class
+library=zlib
+extended=
+included=
+
+zlib ライブラリのバージョンがこのライブラリの想定しているバージョンと互換でない場合に発生します。

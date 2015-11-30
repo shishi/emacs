@@ -1,0 +1,19 @@
+kind=added
+names=mkmf
+visibility=private 
+
+--- mkmf -> ()
+
+[[lib:mkmf]] を使って Makefile を作成します。
+
+  ruby -run -e mkmf -- [OPTION] EXTNAME [OPTION]
+
+  -d ARGS	run dir_config
+  -h ARGS	run have_header
+  -l ARGS	run have_library
+  -f ARGS	run have_func
+  -v ARGS	run have_var
+  -t ARGS	run have_type
+  -m ARGS	run have_macro
+  -c ARGS	run have_const
+  --vendor	install to vendor_ruby

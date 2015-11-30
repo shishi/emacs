@@ -1,0 +1,14 @@
+kind=defined
+names=re_exchange
+visibility=public
+
+--- re_exchange    -> Integer
+
+実ユーザ ID と実効ユーザ ID とを入れ換えます。
+保存ユーザ ID は新しい実効ユーザ ID と同じになります。
+新しい実効ユーザ ID を返します。
+
+利用できるかはプラットフォームに依存します。
+
+@raise NotImplementedError メソッドが現在のプラットフォームで実装されていない場合に発生します。
+

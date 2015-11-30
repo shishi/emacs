@@ -1,0 +1,14 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(in_stream, out_stream, err_stream = STDERR)
+
+このクラスを初期化します。
+
+@param in_stream 入力元のストリームを指定します。
+
+@param out_stream 出力先のストリームを指定します。
+
+@param err_stream エラー出力を指定します。
+

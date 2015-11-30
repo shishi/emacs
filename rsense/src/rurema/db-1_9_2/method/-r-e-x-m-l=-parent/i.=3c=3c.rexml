@@ -1,0 +1,8 @@
+kind=defined
+names=<<,add,push
+visibility=public
+
+--- add(object)
+--- push(object)
+--- <<(object)
+

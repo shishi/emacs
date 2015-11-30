@@ -1,0 +1,10 @@
+kind=defined
+names=hexdigest
+visibility=public 
+
+--- hexdigest(string) -> String
+
+与えられた文字列のヘックスダイジェストを返します。
+
+@param string ダイジェストを取得したい文字列を指定します。
+

@@ -1,0 +1,7 @@
+kind=defined
+names=lget,lindex
+visibility=public
+
+--- lindex(idx)
+--- lget(idx)
+

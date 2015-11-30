@@ -1,0 +1,7 @@
+kind=defined
+names=DefaultMimeTypes
+visibility=public
+
+--- DefaultMimeTypes -> Hash
+
+ファイルの拡張子をキー、 MIME Type を値とする要素を持つハッシュです。

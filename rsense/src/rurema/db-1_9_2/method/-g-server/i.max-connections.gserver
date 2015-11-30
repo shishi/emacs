@@ -1,0 +1,8 @@
+kind=defined
+names=maxConnections
+visibility=public
+
+--- maxConnections -> Fixnum
+
+受け付ける最大接続数を返します。
+

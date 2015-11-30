@@ -1,0 +1,7 @@
+superclass=RSS=Element
+type=class
+library=rss
+extended=
+included=RSS=TaxonomyTopicModel,RSS=RootElementMixin,RSS=XMLStyleSheetMixin
+
+

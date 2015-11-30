@@ -1,0 +1,10 @@
+kind=defined
+names=alive?
+visibility=public
+
+--- alive?     -> bool
+
+スレッドが「生きている」時、true を返します。
+
+[[m:Thread#status]] が真を返すなら、このメソッドも真です。
+

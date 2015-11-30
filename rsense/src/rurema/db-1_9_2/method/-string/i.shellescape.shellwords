@@ -1,0 +1,12 @@
+kind=added
+names=shellescape
+visibility=public
+
+--- shellescape -> String
+文字列を Bourne シェルのコマンドライン中で安全に使えるようにエスケープします。
+
+string.shellescape は、Shellwords.escape(string) と等価です。
+
+@return エスケープされた文字列を返します。
+@see [[m:Shellwords.#shellescape]]
+

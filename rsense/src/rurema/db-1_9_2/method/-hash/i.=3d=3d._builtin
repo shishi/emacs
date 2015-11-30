@@ -1,0 +1,22 @@
+kind=defined
+names===,===,eql?
+visibility=public
+
+--- ==(other) -> bool
+--- ===(other) -> bool
+--- eql?(other) -> bool
+
+自身と other が同じ数のキーを保持し、キーが eql? メソッドで比較して全て等しく、
+値が == メソッドで比較して全て等しい場合に真を返します。
+
+@param other 自身と比較したい Hash オブジェクトを指定します。
+
+  #(出力関数は省略)
+  { 1 => :a } == { 1 => :a }               #=> true
+  { 1 => :a } == { 1 => :a, 2 => :b }      #=> false
+  { 1 => :a } == { 1.0 => :a }             #=> false  ( 1.eql?(1.0) は false なので)
+  
+  { :x => 1 } == { :x => 1.0 }             #=> true   ( 1 == 1.0 は true なので)
+
+@see [[m:Hash#equal?]]
+

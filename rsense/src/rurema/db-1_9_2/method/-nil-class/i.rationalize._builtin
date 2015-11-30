@@ -1,0 +1,19 @@
+kind=defined
+names=rationalize
+visibility=public
+
+--- rationalize      -> Rational
+--- rationalize(eps) -> Rational
+
+0/1 を返します。
+
+@param eps 許容する誤差
+
+引数 eps は常に無視されます。
+
+例:
+
+  nil.rationalize      # => (0/1)
+  nil.rationalize(100) # => (0/1)
+  nil.rationalize(0.1) # => (0/1)
+

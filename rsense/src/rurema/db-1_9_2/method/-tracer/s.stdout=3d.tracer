@@ -1,0 +1,20 @@
+kind=defined
+names=stdout=
+visibility=public
+
+--- stdout=(fp)
+
+トレース出力先を変更します。
+
+@param fp 新しいトレース出力先を指定します。
+
+  require 'tracer'
+
+  fp = File.open('temptrace.txt', "w")
+  Tracer.stdout = fp
+  Tracer.on {
+    puts "Hello"
+  }
+  fp.close
+
+

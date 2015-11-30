@@ -1,0 +1,14 @@
+kind=defined
+names=h,html_escape
+visibility=public
+
+--- html_escape(s) -> String
+--- h(s) -> String
+
+文字列 s を HTML用にエスケープした文字列を返します。
+
+文字列 s 中に含まれる  &"<> を、実体参照 &amp; &quot; &lt; &gt; にそれぞれ変更した文字列を返します
+([[m:CGI.escapeHTML]]とほぼ同じです)。
+
+@param s HTMLエスケープを行う文字列
+

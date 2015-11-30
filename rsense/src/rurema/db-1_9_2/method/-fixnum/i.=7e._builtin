@@ -1,0 +1,11 @@
+kind=defined
+names=~
+visibility=public
+
+--- ~        -> Fixnum | Bignum
+ビット演算子。否定を計算します。
+
+  ~1  #=> -2
+  ~3  #=> -4
+  ~-4 #=> 3
+

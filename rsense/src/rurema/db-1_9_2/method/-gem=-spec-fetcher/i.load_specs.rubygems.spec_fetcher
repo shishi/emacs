@@ -1,0 +1,14 @@
+kind=defined
+names=load_specs
+visibility=public
+
+--- load_specs(source_uri, file) -> object
+
+指定された source_uri, file から gemspec をロードします。
+
+また、内部ではキャッシュの更新も行っています。
+
+@param source_uri gemspec の置いてある URI を指定します。
+
+@param file gemspec のファイル名を指定します。
+

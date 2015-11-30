@@ -1,0 +1,13 @@
+kind=defined
+names=lchown
+visibility=public
+
+--- lchown(owner, group) -> Integer
+File.lchown(owner, group, self.to_s) と同じです。
+
+@param owner オーナーを指定します。
+
+@param group グループを指定します。
+
+@see [[m:File.lchown]]
+

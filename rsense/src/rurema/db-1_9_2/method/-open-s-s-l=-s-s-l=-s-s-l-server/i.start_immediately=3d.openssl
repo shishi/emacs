@@ -1,0 +1,17 @@
+kind=defined
+names=start_immediately=
+visibility=public
+
+--- start_immediately=(bool)
+[[m:OpenSSL::SSL::SSLServer#accept]] で
+accept したらすぐに TLS/SSL ハンドシェイクを実行するかどうかを設定します。
+
+これを真に設定した場合は、[[m:OpenSSL::SSL::SSLServer#accept]] で
+接続したソケットに対し [[m:OpenSSL::SSL::SSLSocket#accept]] を
+呼び、ハンドシェイクを実行します。
+
+デフォルトでは true です。
+
+@param bool 設定する真偽値。
+@see [[m:OpenSSL::SSL::SSLServer#start_immediately]]
+

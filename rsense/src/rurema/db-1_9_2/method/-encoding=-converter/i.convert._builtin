@@ -1,0 +1,33 @@
+kind=defined
+names=convert
+visibility=public
+
+--- convert(source_string) -> String
+与えられた文字列を変換して、変換できた結果を返します。
+引数の末尾の文字がバイト列の途中で終わっている場合、そのバイト列は変換器内に取り置かれます。
+変換を終了させるには [[m:Encoding::Converter#finish]] を呼びます。
+
+[[c:Encoding::Converter]] を用いると、文字列の一部または全部を渡して変換を行うことができます。よって、不正なバイトを意識せずにストリームから読み出した文字列を変換したいときには Encoding::Converter が適します。
+
+なお、Encoding::Converter#convert では、これらの例外を捕獲しても、例外を起こしたところから変換を再開することはできません。不正なバイトや変換先で未定義な文字をエスケープしたい場合やさらに細かい指定を行いたい場合は、[[m:Encoding::Converter#primitive_convert]] を用います。
+
+@param source_string 変換する文字列の一部または全部です。
+@return 変換結果である文字列の一部または全部です。
+@raise Encoding::InvalidByteSequenceError 変換元のエンコーディングにおいて不正なバイト列があった場合に発生します。
+@raise Encoding::UndefinedConversionError 変換先のエンコーディングで未定義な文字があった場合に発生します。
+
+  ec = Encoding::Converter.new("utf-8", "euc-jp")
+  puts ec.convert("\u3042").dump     #=> "\xA4\xA2"
+  puts ec.finish.dump                #=> ""
+
+  ec = Encoding::Converter.new("euc-jp", "utf-8")
+  puts ec.convert("\xA4").dump       #=> ""
+  puts ec.convert("\xA2").dump       #=> "\xE3\x81\x82"
+  puts ec.finish.dump                #=> ""
+
+  ec = Encoding::Converter.new("utf-8", "iso-2022-jp")
+  puts ec.convert("\xE3").dump       #=> "".force_encoding("ISO-2022-JP")
+  puts ec.convert("\x81").dump       #=> "".force_encoding("ISO-2022-JP")
+  puts ec.convert("\x82").dump       #=> "\e$B$\"".force_encoding("ISO-2022-JP")
+  puts ec.finish.dump                #=> "\e(B".force_encoding("ISO-2022-JP")
+

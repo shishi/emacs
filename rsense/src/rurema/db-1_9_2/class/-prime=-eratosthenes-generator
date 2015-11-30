@@ -1,0 +1,8 @@
+superclass=Prime=PseudoPrimeGenerator
+type=class
+library=prime
+extended=
+included=
+
+[[c:Prime::PseudoPrimeGenerator]] の具象クラスです。
+素数の生成にエラトステネスのふるいを使用しています。

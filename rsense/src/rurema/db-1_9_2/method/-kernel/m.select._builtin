@@ -1,0 +1,14 @@
+kind=defined
+names=select
+visibility=public
+
+--- select(reads, writes = [], excepts = [], timeout = nil) -> [[IO]] | nil
+
+[[m:IO.select]] と同じです。
+
+@param reads [[m:IO.select]] 参照
+@param writes [[m:IO.select]] 参照
+@param excepts [[m:IO.select]] 参照
+@param timeout [[m:IO.select]] 参照
+@see [[m:IO.select]]
+

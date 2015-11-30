@@ -1,0 +1,14 @@
+kind=defined
+names=include?
+visibility=public
+
+--- include?(val)    -> bool
+
+配列が val と == において等しい要素を持つ時に真を返します。
+
+@param val オブジェクトを指定します。
+
+   a = [ "a", "b", "c" ]
+   a.include?("b")       #=> true
+   a.include?("z")       #=> false
+

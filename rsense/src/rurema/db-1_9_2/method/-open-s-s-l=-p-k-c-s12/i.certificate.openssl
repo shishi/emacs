@@ -1,0 +1,7 @@
+kind=defined
+names=certificate
+visibility=public
+
+--- certificate -> OpenSSL::X509::Certificate
+自身が保持している証明書を返します。
+

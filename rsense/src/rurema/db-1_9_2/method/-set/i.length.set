@@ -1,0 +1,11 @@
+kind=defined
+names=length,size
+visibility=public
+
+--- size -> Integer
+--- length -> Integer
+
+集合の要素数を返します。
+
+  p Set[10, 20, 30, 10].size #=> 3
+

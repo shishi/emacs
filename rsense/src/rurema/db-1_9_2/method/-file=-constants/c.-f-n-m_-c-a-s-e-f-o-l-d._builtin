@@ -1,0 +1,8 @@
+kind=defined
+names=FNM_CASEFOLD
+visibility=public
+
+--- FNM_CASEFOLD
+アルファベットの大小文字を区別せずにパターンマッチを行います。
+[[m:File.fnmatch]], [[m:Dir.glob]]で使用します。
+

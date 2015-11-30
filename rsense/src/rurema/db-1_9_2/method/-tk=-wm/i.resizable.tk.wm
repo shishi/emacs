@@ -1,0 +1,6 @@
+kind=defined
+names=resizable
+visibility=public
+
+--- resizable(*args)
+

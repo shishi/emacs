@@ -1,0 +1,10 @@
+kind=defined
+names=message_id
+visibility=public
+
+--- message_id
+
+Retunns a string that represents the message-id.
+
+
+

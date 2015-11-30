@@ -1,0 +1,9 @@
+superclass=Object
+type=class
+library=rake
+extended=
+included=Rake=TaskManager
+
+Rake で使用するメインのクラスです。
+
+コマンドラインで rake コマンドを実行した時に作成され、実行されます。

@@ -1,0 +1,10 @@
+kind=defined
+names=free
+visibility=public
+
+--- free     -> DL::CFunc
+
+GC がメモリを解放するのに使用する [[c:DL::CFunc]] オブジェクトを返します。
+
+これは普通 [[m:DL::CPtr#free=]] や [[m:DL::CPtr.new]] によって設定されます。
+

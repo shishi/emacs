@@ -1,0 +1,10 @@
+kind=defined
+names=[]
+visibility=public 
+
+--- [](key) -> object
+
+引数で与えられたキーに対応する設定情報を返します。
+
+@param key 設定情報を取得するために使用するキーを指定します。
+

@@ -1,0 +1,16 @@
+kind=defined
+names=current_server
+visibility=public
+
+--- current_server
+
+Get the 'current' server.
+
+In the context of execution taking place within the main thread
+of a dRuby server (typically, as a result of a remote call on
+the server or one of its objects), the current server is that
+server. Otherwise, the current server is the primary server.
+
+If the above rule fails to find a server, a DRbServerNotFound
+error is raised.
+

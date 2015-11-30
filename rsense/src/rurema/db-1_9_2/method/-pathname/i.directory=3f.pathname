@@ -1,0 +1,9 @@
+kind=defined
+names=directory?
+visibility=public
+
+--- directory? -> bool
+FileTest.directory?(self.to_s) と同じです。
+
+@see [[m:FileTest.#directory?]]
+

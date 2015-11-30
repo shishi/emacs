@@ -1,0 +1,6 @@
+kind=defined
+names=world_readable?
+visibility=public
+
+--- world_readable?
+

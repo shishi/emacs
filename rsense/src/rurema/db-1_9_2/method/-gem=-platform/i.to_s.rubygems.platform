@@ -1,0 +1,8 @@
+kind=defined
+names=to_s
+visibility=public 
+
+--- to_s -> String
+
+自身にセットされている CPU, OS, バージョンを文字列として返します。
+

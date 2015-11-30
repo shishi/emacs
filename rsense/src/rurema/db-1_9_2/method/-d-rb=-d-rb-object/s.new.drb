@@ -1,0 +1,12 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(obj, uri=nil)
+
+Create a new remote object stub.
+
+obj is the (local) object we want to create a stub for. Normally
+this is nil. uri is the URI of the remote object that this will
+be a stub for.
+

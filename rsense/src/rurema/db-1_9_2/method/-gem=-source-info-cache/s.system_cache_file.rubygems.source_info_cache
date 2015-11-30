@@ -1,0 +1,8 @@
+kind=defined
+names=system_cache_file
+visibility=public
+
+--- system_cache_file -> String
+
+システムキャッシュのファイル名を返します。
+

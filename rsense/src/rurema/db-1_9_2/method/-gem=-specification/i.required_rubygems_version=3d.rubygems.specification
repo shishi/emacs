@@ -1,0 +1,12 @@
+kind=defined
+names=required_rubygems_version=
+visibility=public
+
+--- required_rubygems_version=(requirement)
+
+この Gem パッケージを動作させるのに必要な RubyGems のバージョンをセットします。
+
+@param requirement [[m:Gem::Requirement.create]] が受け付ける形式のオブジェクトを指定します。
+
+@see [[c:Gem::Requirement]]
+

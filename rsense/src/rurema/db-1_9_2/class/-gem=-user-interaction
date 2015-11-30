@@ -1,0 +1,9 @@
+superclass=
+type=module
+library=rubygems.user_interaction
+extended=
+included=Gem=DefaultUserInteraction
+
+デフォルト UI にアクセスしやすくするためのモジュールです。
+
+このモジュール経由で呼び出されたメソッドは全て UI の実装クラスへ処理を委譲します。

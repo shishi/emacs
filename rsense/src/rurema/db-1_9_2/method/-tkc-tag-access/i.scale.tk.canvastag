@@ -1,0 +1,8 @@
+kind=defined
+names=scale
+visibility=public
+
+--- scale(xorigin, yorigin, xscale, yscale)
+
+
+

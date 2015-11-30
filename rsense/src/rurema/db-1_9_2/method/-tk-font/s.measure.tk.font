@@ -1,0 +1,6 @@
+kind=defined
+names=measure
+visibility=public
+
+--- measure(fnt, text)
+

@@ -1,0 +1,10 @@
+kind=defined
+names=pipe?
+visibility=public
+
+--- pipe?(path)    -> bool
+
+[[m:FileTest.#pipe?]] と同じです。
+
+@param path パスを表す文字列か IO オブジェクトを指定します。
+

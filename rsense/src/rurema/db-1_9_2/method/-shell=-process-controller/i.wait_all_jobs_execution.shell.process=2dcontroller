@@ -1,0 +1,8 @@
+kind=defined
+names=wait_all_jobs_execution
+visibility=public
+
+--- wait_all_jobs_execution -> ()
+
+全てのジョブの実行が終わるまで待ちます。
+

@@ -1,0 +1,12 @@
+kind=added
+names=wait_writable
+visibility=private 
+
+--- wait_writable -> ()
+ファイルが書き込み可能になるまで待ちます。
+
+  ruby -run -e wait_writable -- [OPTION] FILE
+
+  -n RETRY	リトライ回数
+  -w SEC	リトライごとに待つ秒数
+  -v		詳細表示

@@ -1,0 +1,26 @@
+kind=defined
+names=gettextfile
+visibility=public
+
+--- gettextfile(remotefile, localfile = File.basename(remotefile)) -> nil
+--- gettextfile(remotefile, localfile = File.basename(remotefile)){|line| ...} -> nil
+
+サーバ上のファイルをテキストモードで取得します。
+
+サーバー上にある remotefile という名前のファイルを取得し、
+ローカルの localfile という名前のファイルに保存します。
+
+localfile が nil である場合には保存はしません。
+
+ブロックが指定された場合は
+データを1行受信するごとに、その行をブロックに渡します。
+
+@param remotefile 取得対象のリモートのファイル名を与えます。
+@param localfile 取得したデータを格納するローカルのファイル名を与えます。
+
+
+@raise Net::FTPTempError 応答コードが 4yz のときに発生します。
+@raise Net::FTPPermError 応答コードが 5yz のときに発生します。
+@raise Net::FTPProtoError 応答コードが RFC 的に正しくない場合に発生します。
+@raise Net::FTPReplyError 応答コードが上の場合以外で正しくない場合(1xy, 3xyが来るべきでないときに来た場合など)に発生します。
+

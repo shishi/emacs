@@ -1,0 +1,8 @@
+kind=defined
+names=itemconfiginfo
+visibility=public
+
+--- itemconfiginfo(tagOrId, slot = nil)
+
+
+

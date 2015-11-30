@@ -1,0 +1,10 @@
+kind=defined
+names=getacl
+visibility=public
+
+--- getacl(mailbox)
+
+Send the GETACL command along with specified mailbox.
+If this mailbox exists, an array containing objects of
+[[c:Net::IMAP::MailboxACLItem]] will be returned.
+

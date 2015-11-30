@@ -1,0 +1,10 @@
+kind=defined
+names=latinfont_copy
+visibility=public
+
+--- latinfont_copy(win, wintag = nil)
+alias asciifont_copy
+
+
+
+

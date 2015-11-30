@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rubygems.remote_fetcher
+extended=
+included=Gem=UserInteraction
+
+リモートソースから Gem パッケージや Gem パッケージの情報を取得するためのクラスです。

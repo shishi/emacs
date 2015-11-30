@@ -1,0 +1,15 @@
+kind=defined
+names=create_ext_from_hash
+visibility=public
+
+--- create_ext_from_hash(hash)  -> OpenSSL::X509::Extension
+ハッシュから [[c:OpenSSL::X509::Extension]] オブジェクトを生成します。
+
+渡すハッシュテーブルは 
+  {"oid" => OID文字列, "value" => value文字列 "critical" => 真偽値 }
+という内容が必要です。"critical" を省略した場合は false が
+渡されるのと同じになります。
+
+@param hash 生成する拡張領域のデータのハッシュテーブル
+@see [[m:OpenSSL::X509::ExtensionFactory#create_ext]]
+

@@ -1,0 +1,18 @@
+kind=defined
+names=downcase!
+visibility=public
+
+--- downcase! -> self | nil
+
+文字列中の 'A' から 'Z' までの
+アルファベット大文字をすべて破壊的に小文字に置き換えます。
+アルファベット大文字以外の文字はすべてそのまま保存されます。
+
+このメソッドはマルチバイト文字を認識しません。
+@return self を変更して返します。変更が無かった場合は nil を返します。
+
+例:
+    p "STRing?".downcase   # => "string?"
+
+@see [[m:String#upcase]], [[m:String#swapcase]], [[m:String#capitalize]]
+

@@ -1,0 +1,10 @@
+kind=defined
+names=quote
+visibility=public 
+
+--- quote(str) -> String
+
+[[m:Rake::RDocTask#external]] が真の場合は与えられた文字列をクオートします。
+
+@param str クオートする文字列を指定します。
+

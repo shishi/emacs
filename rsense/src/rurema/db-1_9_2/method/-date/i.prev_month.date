@@ -1,0 +1,11 @@
+kind=defined
+names=prev_month
+visibility=public
+
+--- prev_month(n = 1) -> Date
+n ヶ月前を返します。
+
+[[m:Date#<<]] も参照してください。
+
+@param n 月数
+

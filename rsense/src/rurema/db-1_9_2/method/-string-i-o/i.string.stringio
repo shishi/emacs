@@ -1,0 +1,20 @@
+kind=defined
+names=string
+visibility=public
+
+--- string    -> String
+
+自身が表す文字列を返します。
+
+返されるのは生成時に与えられたバッファとして使われている文字列です。
+文字列は複製されないことに注意して下さい。
+
+例:
+
+  sio = StringIO.new
+  sio << "abc"
+  s = sio.string
+  p s                    #=> "abc"
+  sio << "xyz"
+  p s                    #=> "abcxyz"
+

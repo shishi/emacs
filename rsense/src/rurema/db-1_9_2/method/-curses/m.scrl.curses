@@ -1,0 +1,14 @@
+kind=defined
+names=scrl
+visibility=public
+
+--- scrl(num) -> bool
+Scrolls the current window Fixnum +num+ lines.
+The current cursor position is not changed.
+
+For positive +num+, it scrolls up.
+
+For negative +num+, it scrolls down.
+
+@param num スクロールする行数を指定します。
+

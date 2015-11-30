@@ -1,0 +1,12 @@
+kind=defined
+names=content_length=
+visibility=public
+
+--- content_length=(len)
+Content-Length: ヘッダフィールドに値を設定します。
+
+len に nil を与えると Content-Length: ヘッダフィールドを
+削除します。
+
+@param len 設定する値を整数で与えます。
+

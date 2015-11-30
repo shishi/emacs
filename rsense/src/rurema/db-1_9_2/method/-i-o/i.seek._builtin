@@ -1,0 +1,27 @@
+kind=defined
+names=seek
+visibility=public
+
+--- seek(offset, whence = IO::SEEK_SET)    -> 0
+
+ファイルポインタを whence の位置から offset だけ移動させます。
+offset 位置への移動が成功すれば 0 を返します。
+
+@param offset ファイルポインタを移動させるオフセットを整数で指定します。
+
+@param whence 値は以下のいずれかです。
+
+  * IO::SEEK_SET: ファイルの先頭から (デフォルト)
+  * IO::SEEK_CUR: 現在のファイルポインタから
+  * IO::SEEK_END: ファイルの末尾から
+
+@raise Errno::EXXX ファイルポインタの移動に失敗した場合に発生します。
+
+@raise IOError 既に close されていた場合に発生します。 
+
+     f = File.new("testfile")
+     f.seek(-13, IO::SEEK_END)   #=> 0
+     f.readline                  #=> "And so on...\n"
+
+@see [[m:IO#sysseek]]
+

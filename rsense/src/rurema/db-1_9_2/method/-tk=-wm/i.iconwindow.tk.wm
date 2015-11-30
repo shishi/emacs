@@ -1,0 +1,6 @@
+kind=defined
+names=iconwindow
+visibility=public
+
+--- iconwindow(win = nil)
+

@@ -1,0 +1,13 @@
+kind=defined
+names=protected_instance_methods
+visibility=public
+
+--- protected_instance_methods(inherited_too = true) -> [Symbol]
+
+そのモジュールで定義されている protected メソッド名
+の一覧を配列で返します。
+
+@param inherited_too false を指定するとそのモジュールで定義されているメソッドのみ返します。
+
+@see [[m:Object#protected_methods]], [[m:Module#instance_methods]]
+

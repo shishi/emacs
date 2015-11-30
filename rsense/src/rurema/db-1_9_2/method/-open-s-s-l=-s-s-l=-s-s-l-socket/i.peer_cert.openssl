@@ -1,0 +1,12 @@
+kind=defined
+names=peer_cert
+visibility=public
+
+--- peer_cert -> OpenSSL::X509::Certificate | nil
+接続相手の証明書オブジェクトを返します。
+
+[[m:OpenSSL::SSL::SSLSocket#connect]] や [[m:OpenSSL::SSL::SSLSocket#accept]] 
+で SSL/TLS ハンドシェイクを行う前にこのメソッドを呼ぶと nil を返します。
+
+@see [[m:OpenSSL::SSL::SSLSocket#peer_cert_chain]]
+

@@ -1,0 +1,16 @@
+kind=defined
+names=error
+visibility=public
+
+--- error -> Integer | nil
+最後に [[m:OpenSSL::X509::Store#verify]] を呼び、
+検証したときのエラーコードを返します。
+
+エラーコードの整数値は [[c:OpenSSL::X509]] に定数が定義されています。
+詳しくは [[ref:c:OpenSSL::X509#verify_error]] を見てください。
+検証に成功した場合は [[m:OpenSSL::X509::V_OK]] を返します。
+
+verify を一度も呼びだしていない場合は nil を返します。
+
+返り値は verify を呼ぶごとに更新されます。
+

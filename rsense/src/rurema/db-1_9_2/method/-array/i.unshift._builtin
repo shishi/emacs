@@ -1,0 +1,21 @@
+kind=defined
+names=unshift
+visibility=public
+
+--- unshift(*obj)        -> self
+
+指定された obj を順番に配列の先頭に挿入します。
+引数を指定しなければ何もしません。
+
+@param obj 自身に追加したいオブジェクトを指定します。
+
+    arr = [1,2,3]
+    arr.unshift 0
+    p arr             #=> [0, 1, 2, 3]
+    arr.unshift [0]
+    p arr             #=> [[0], 0, 1, 2, 3]
+    arr.unshift 1, 2
+    p arr             #=> [1, 2, [0], 0, 1, 2, 3]
+
+@see [[m:Array#push]], [[m:Array#pop]], [[m:Array#shift]]
+

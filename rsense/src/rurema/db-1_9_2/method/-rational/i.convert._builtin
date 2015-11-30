@@ -1,0 +1,13 @@
+kind=defined
+names=convert
+visibility=private 
+
+--- convert(*arg) -> Rational
+
+引数を有理数([[c:Rational]])に変換した結果を返します。
+
+@param arg 変換対象のオブジェクトです。
+
+[[m:Kernel.#Rational]] の本体です。
+
+@see [[m:Kernel.#Rational]]

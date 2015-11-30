@@ -1,0 +1,8 @@
+superclass=
+type=module
+library=etc
+extended=
+included=
+
+/etc に存在するデータベースから情報を得るためのモジュールです。
+クラスにインクルードして使うこともできます。

@@ -1,0 +1,28 @@
+kind=defined
+names=waitpid,waitpid2
+visibility=public
+
+--- waitpid(pid, flags = 0)    -> Integer | nil
+--- waitpid2(pid, flags = 0)   -> Array | nil
+
+pid で指定される特定の子プロセスの終了を待ち、そのプロセスが
+終了した時に pid を返します。
+waitpid2 は pid と [[c:Process::Status]] オブジェクトの配列を返します。
+ノンブロッキングモードで子プロセスがまだ終了していない時には
+nil を返します。
+
+[[m:$?]] に終了した子プロセスの [[c:Process::Status]] オブジェクトがセットされます。
+
+
+@param pid 子プロセスのプロセス ID を整数で指定します。
+
+@param flags Process モジュールの定数 [[m:Process::WNOHANG]](ノンブロッキングモード)と
+             [[m:Process::WUNTRACED]] の論理和を指定します。省略したときの値は 0 です。
+             ノンブロッキングモードで子プロセスがまだ終了していない時には
+             nil を返します。[[man:waitpid(2)]] か [[man:wait4(2)]] の実装されていないマシンでは
+             flags はいつも nil または 0 を指定する必要があります。
+
+@raise Errno::ECHILD 子プロセスが存在しない場合に発生します。
+
+@see [[man:waitpid(2)]]
+

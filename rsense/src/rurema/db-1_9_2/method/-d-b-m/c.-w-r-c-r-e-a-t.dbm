@@ -1,0 +1,10 @@
+kind=defined
+names=WRCREAT
+visibility=public
+
+--- WRCREAT -> Fixnum
+
+書き込みモードで、すでにファイルが存在しなかったら作ります．
+
+@see [[m:DBM.open]]
+

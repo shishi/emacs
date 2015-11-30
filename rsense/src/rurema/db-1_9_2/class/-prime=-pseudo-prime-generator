@@ -1,0 +1,12 @@
+superclass=Object
+type=class
+library=prime
+extended=
+included=Enumerable
+
+擬似素数列の列挙子のための抽象クラスです。
+
+[[c:Prime]] の各メソッドが使用する低水準の疑似素数列挙子は、 Prime::PseudoPrimeGenerator のインスタンスであることが期待されています。
+このクラスを継承する具象クラスは succ, next, rewind をオーバーライドしなければなりません。
+
+独自の素数列挙アルゴリズムを実装しようとする場合を除いて、ユーザーがこのクラスを利用する必要はありません。高水準の [[c:Prime]] クラスを利用してください。

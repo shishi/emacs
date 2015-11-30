@@ -1,0 +1,19 @@
+superclass=Object
+type=class
+library=openssl
+extended=
+included=
+
+X.509 v3 証明書の拡張領域のためのクラスです。
+
+[[c:OpenSSL::X509::Certificate]] オブジェクトは
+その拡張領域を Extension オブジェクトの配列として保持し、
+[[c:OpenSSL::X509::Certificate#extensions]] でその配列が得られます。
+
+このクラスのインスタンス生成は [[c:OpenSSL::ASN1::ASN1Data]] を
+取り扱う必要があり面倒です。
+[[c:OpenSSL::X509::ExtensionFactory]] を用いることで
+インスタンスの生成を簡便に行うことができます。
+
+=== 参照
+  * [[RFC:5280]]

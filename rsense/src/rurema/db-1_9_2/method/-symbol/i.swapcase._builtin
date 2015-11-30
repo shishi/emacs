@@ -1,0 +1,16 @@
+kind=defined
+names=swapcase
+visibility=public
+
+--- swapcase -> Symbol
+
+'A' から 'Z' までのアルファベット大文字を小文字に、'a' から 'z' までの
+アルファベット小文字を大文字に変更したシンボルを返します。
+
+(self.to_s.swapcase.intern と同じです。)
+
+  p :ABCxyz.swapcase   # => :abcXYZ
+  p :Access.swapcase   # => :aCCESS
+
+@see [[m:String#swapcase]]
+

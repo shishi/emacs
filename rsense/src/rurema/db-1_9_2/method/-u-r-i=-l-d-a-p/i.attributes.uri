@@ -1,0 +1,8 @@
+kind=defined
+names=attributes
+visibility=public
+
+--- attributes    -> String
+
+自身の Attribute を文字列で返します。
+

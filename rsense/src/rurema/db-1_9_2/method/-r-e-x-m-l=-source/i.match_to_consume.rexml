@@ -1,0 +1,6 @@
+kind=defined
+names=match_to_consume
+visibility=public
+
+--- match_to_consume(char, pattern)
+

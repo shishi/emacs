@@ -1,0 +1,6 @@
+.__def_validcmd	Tk::ItemValidateConfigure.__def_validcmd
+#__conv_item_vcmd_on_hash_kv	Tk::ItemValidateConfigure#__conv_item_vcmd_on_hash_kv
+#__get_item_validate_key2class	Tk::ItemValidateConfigure#__get_item_validate_key2class
+#__item_validation_class_list	Tk::ItemValidateConfigure#__item_validation_class_list
+#__item_validcmd_call	Tk::ItemValidateConfigure#__item_validcmd_call
+#itemconfigure	Tk::ItemValidateConfigure#itemconfigure

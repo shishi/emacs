@@ -1,0 +1,15 @@
+kind=defined
+names=default_record_separator,default_record_separator=
+visibility=public
+
+--- default_record_separator -> String
+--- default_record_separator=(rs)
+
+執筆者募集
+
+Shell で用いられる入力レコードセパレータを表す文字列を設定および参照します。
+なにも指定しない場合は[[m:$/]] の値が用いられます。
+
+@param rs Shell で用いられる入力レコードセパレータを表す文字列を指定します。
+
+

@@ -1,0 +1,10 @@
+kind=defined
+names=new,open
+visibility=public
+
+--- open(path)
+--- new(path)
+
+path で指定したパス名を用いて接続を受け付けるソケットを返
+します。
+

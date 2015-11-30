@@ -1,0 +1,8 @@
+kind=defined
+names=column_size
+visibility=public
+
+--- column_size -> Fixnum
+
+列の大きさを返します。
+

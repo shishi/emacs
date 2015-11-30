@@ -1,0 +1,11 @@
+kind=defined
+names=eval_history=
+visibility=public
+
+--- eval_history=(n)
+
+実行結果のヒストリ機能の設定.
+n は整数か nil で n > 0 であればその数だけヒストリにためる。
+n = 0の時は無制限に記憶する.
+n = nil だとヒストリ機能はやめる (デフォルト). 
+

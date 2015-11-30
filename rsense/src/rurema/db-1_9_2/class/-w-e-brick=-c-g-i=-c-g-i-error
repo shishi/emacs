@@ -1,0 +1,7 @@
+superclass=StandardError
+type=class
+library=webrick.cgi
+extended=
+included=
+
+CGI に関係する例外クラスです。

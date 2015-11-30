@@ -1,0 +1,18 @@
+kind=defined
+names=subtract
+visibility=public
+
+--- subtract(enum) -> self
+
+元の集合から、enum で与えられた要素を削除します。
+
+引数 enum には each メソッドが定義されている必要があります。
+
+@param enum 削除対象の要素を格納したオブジェクトを指定します。
+@raise NoMethodError 引数 enum に each メソッドが定義されていない場合に
+       発生します。
+
+  set = Set[10, 20, 40]
+  set.subtract([10, 20, 30])
+  p set #=> #<Set: {40}>
+

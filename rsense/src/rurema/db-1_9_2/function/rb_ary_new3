@@ -1,0 +1,22 @@
+name=rb_ary_new3
+private=false
+macro=false
+type=VALUE
+filename=array.c
+params=(long n, VALUE i0, i1, i2, ...)
+
+
+長さ n で要素に i0 i1 i2 …を格納した
+Ruby の配列を作成し返します。
+
+対応するRubyコード
+
+  ary = Array[i0, i1, i2...] または
+  ary = [i0, i1, i2...]
+
+使用例
+
+  VALUE ary;
+  int i[3] = { 1, 2, 3 };
+  ary = rb_ary_new3(3, INT2FIX(i[0]), INT2FIX(i[1]), INT2FIX(i[2]));
+

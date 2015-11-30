@@ -1,0 +1,35 @@
+kind=defined
+names=last
+visibility=public
+
+--- last    -> object | nil
+
+配列の末尾の要素を返します。配列が空のときは nil を返します。
+
+    p [0, 1, 2].last   #=> 2
+    p [].last          #=> nil
+
+@see [[m:Array#first]] 
+
+--- last(n)    -> Array
+
+末尾の n 要素を配列で返します。n は 0 以上でなければなりません。
+
+@param n 取得したい要素の個数を整数で指定します。
+
+@raise ArgumentError n が負値の場合発生します。
+
+    ary =  [0, 1, 2]
+    p ary.last(0)
+    p ary.last(1)
+    p ary.last(2)
+    p ary.last(3)
+    p ary.last(4)
+    # => []
+         [2]
+         [1, 2]
+         [0, 1, 2]
+         [0, 1, 2]
+
+@see [[m:Array#first]]
+

@@ -1,0 +1,6 @@
+kind=defined
+names=instate
+visibility=public
+
+--- instate(state, script = nil, &b)
+

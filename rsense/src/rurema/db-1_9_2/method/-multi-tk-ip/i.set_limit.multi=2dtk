@@ -1,0 +1,6 @@
+kind=defined
+names=set_limit
+visibility=public
+
+--- set_limit(limit_type, slave = '', opts = {})
+

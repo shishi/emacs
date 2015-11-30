@@ -1,0 +1,9 @@
+kind=defined
+names=pub_key
+visibility=public
+
+--- pub_key -> OpenSSL::BN
+DH 给倡赴芭规の给倡赴を手します。
+
+@see [[m:OpenSSL::PKey::DH#pub_key=]]
+

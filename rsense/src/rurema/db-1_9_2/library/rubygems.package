@@ -1,0 +1,7 @@
+methods=
+sublibraries=rubygems.package.tar_header,rubygems.package.tar_output,rubygems.package.f_sync_dir,rubygems.package.tar_reader.entry,rubygems.package.tar_reader,rubygems.package.tar_writer,rubygems.package.tar_input
+requires=rubygems.package.tar_writer,rubygems.spec_fetcher,rubygems.specification,rubygems.remote_fetcher,rubygems.requirement,rubygems.gem_openssl,rubygems.builder,rubygems.exceptions,rubygems.package.tar_input,rubygems.source_index,rubygems.package.tar_reader,rubygems.package.tar_header,rubygems.source_info_cache_entry,rubygems.digest.sha2,rubygems.gem_path_searcher,rubygems.defaults.operating_system,rubygems.platform,rubygems.defaults,rubygems.package.tar_reader.entry,rubygems.package.f_sync_dir,rubygems.dependency,rubygems.source_info_cache,rubygems.user_interaction,rubygems,rubygems.digest.md5,rubygems.version,rubygems.package.tar_output,rubygems.security
+classes=Gem=FileOperations,Gem=Package,Gem=Package=Error,Gem=Package=NonSeekableIO,Gem=Package=ClosedIO,Gem=Package=BadCheckSum,Gem=Package=TooLongFileName,Gem=Package=FormatError
+is_sublibrary=true
+
+このライブラリは Gem パッケージを扱うためのライブラリです。

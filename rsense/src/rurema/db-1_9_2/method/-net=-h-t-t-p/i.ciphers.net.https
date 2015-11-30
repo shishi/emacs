@@ -1,0 +1,12 @@
+kind=added
+names=ciphers
+visibility=public
+
+--- ciphers -> String | [String] | nil
+[[m:Net::HTTP#ciphers]] で設定した値を返します。
+
+[[m:OpenSSL::SSL::SSLContext#ciphers]] が返す値とは
+異なるので注意してください。
+
+@see [[m:Net::HTTP#ciphers=]]
+

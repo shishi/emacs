@@ -1,0 +1,16 @@
+kind=defined
+names=assert
+visibility=public 
+
+--- assert(test, message = nil) -> true
+
+与えられた式の評価結果が真である場合、検査にパスしたことになります。
+
+@param test 真偽値を返す式を指定します。
+
+@param message 検査に失敗した場合に表示するメッセージを指定します。
+               文字列か [[c:Proc]] を指定します。[[c:Proc]] である場合は [[m:Proc#call]] した
+               結果を使用します。
+
+@raise MiniTest::Assertion 与えられた式が偽である場合に発生します。
+

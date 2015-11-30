@@ -1,0 +1,11 @@
+kind=defined
+names=read_timeout
+visibility=public
+
+--- read_timeout -> Integer
+読みこみ ([[man:read(2)]] 一回) でブロックしてよい最大秒数を返します。
+
+デフォルトは60(秒)です。
+この秒数たっても読みこめなければ例外 TimeoutError を発生します。
+
+@see [[m:Net::SMTP#read_timeout=]]

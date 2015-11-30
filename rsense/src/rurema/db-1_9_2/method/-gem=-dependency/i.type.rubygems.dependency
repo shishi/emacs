@@ -1,0 +1,8 @@
+kind=defined
+names=type
+visibility=public 
+
+--- type -> Symbol
+
+依存関係の型を返します。
+

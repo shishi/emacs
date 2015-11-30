@@ -1,0 +1,22 @@
+kind=defined
+names=post_match
+visibility=public
+
+--- post_match -> String | nil
+前回マッチを行った文字列のうち、マッチしたところよりも後ろの
+部分文字列を返します。前回のマッチが失敗していると常に nil を
+返します。
+
+      s = StringScanner.new('test string')
+      s.post_match  # => nil
+      s.scan(/\w+/) # => "test"
+      s.post_match  # => " string"
+      s.scan(/\w+/) # => nil
+      s.post_match  # => nil
+      s.scan(/\s+/) # => " "
+      s.post_match  # => "string"
+      s.scan(/\w+/) # => "string"
+      s.post_match  # => ""
+      s.scan(/\w+/) # => nil
+      s.post_match  # => nil
+

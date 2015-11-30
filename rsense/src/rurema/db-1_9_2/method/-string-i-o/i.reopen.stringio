@@ -1,0 +1,40 @@
+kind=defined
+names=reopen
+visibility=public
+
+--- reopen(sio)           -> StringIO
+
+自身が表す文字列が指定された StringIO と同じものになります。
+
+@param sio 自身が表したい StringIO を指定します。
+
+例: 
+
+  require 'stringio'
+  sio = StringIO.new("hoge", 'r+')
+  sio2 = StringIO.new("foo", 'r+')
+  sio.reopen(sio2)
+  p sio.read                       #=> "foo"
+
+--- reopen(str, mode = 'r+')     -> StringIO
+
+自身が表す文字列が指定された文字列 str になります。
+
+与えられた str がフリーズされている場合には、mode はデフォルトでは読み取りのみに設定されます。
+ブロックを与えた場合は生成した StringIO オブジェクトを引数としてブロックを評価します。
+
+@param str 自身が表したい文字列を指定します。
+           この文字列はバッファとして使われます。[[m:StringIO#write]] などによって、
+           str 自身も書き換えられます。
+
+@param mode [[m:Kernel.#open]] 同様文字列か整数で自身のモードを指定します。
+
+@raise Errno::EACCES str がフリーズされていて、mode が書き込み可能に設定されている場合に発生します。
+
+例: 
+
+  require 'stringio'
+  sio = StringIO.new("hoge", 'r+')
+  sio.reopen('foo')
+  p sio.read                      #=> "foo"
+

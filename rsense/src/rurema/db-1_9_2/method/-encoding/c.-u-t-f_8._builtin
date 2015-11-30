@@ -1,0 +1,11 @@
+kind=defined
+names=UTF_8
+visibility=public
+
+--- UTF_8
+UTF-8、Unicode や ISO 10646 を ASCII 互換な形で符号化するための方式です。
+
+[[url:http://tools.ietf.org/html/rfc3629]]
+
+BOM を含みません。
+

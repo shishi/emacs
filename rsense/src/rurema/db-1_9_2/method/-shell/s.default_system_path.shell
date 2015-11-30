@@ -1,0 +1,20 @@
+kind=defined
+names=default_system_path,default_system_path=
+visibility=public
+
+--- default_system_path -> Array
+--- default_system_path=(path)
+
+Shellでもちいられるコマンドを検索する対象のパスを設定および、参照します。
+
+@param path Shellでもちいられるコマンドを検索する対象のパスを文字列で指定します。
+
+動作例
+  require 'shell'
+  p Shell.default_system_path 
+  # 例
+  #=> [ "/opt/local/bin", "/opt/local/sbin", "/usr/bin", "/bin", "/usr/sbin", "/sbin", "/usr/local/bin", "/usr/X11/bin", "/Users/kouya/bin"]
+  Shell.default_system_path = ENV["HOME"] + "/bin"
+  p Shell.default_system_path
+  # => "/Users/kouya/bin"
+

@@ -1,0 +1,10 @@
+kind=defined
+names=to_pem,to_s
+visibility=public
+
+--- to_pem -> String
+--- to_s -> String
+PEM 形式に変換します。
+
+@raise OpenSSL::X509::CRLError 変換に失敗した場合に発生します
+

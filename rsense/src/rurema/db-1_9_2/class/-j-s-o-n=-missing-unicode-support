@@ -1,0 +1,8 @@
+superclass=JSON=JSONError
+type=class
+library=json
+extended=
+included=
+
+要求されたユニコードサポートがシステムにインストールされていない場合に発生する例外です。
+通常、これは [[lib:iconv]] がインストールされていないことを意味します。

@@ -1,0 +1,10 @@
+kind=defined
+names=main
+visibility=public
+
+--- main    -> Thread
+
+メインスレッドを返します。
+
+  p Thread.main #=> #<Thread:0x4022e6fc run>
+

@@ -1,0 +1,13 @@
+kind=defined
+names=changed
+visibility=public
+
+--- changed(state = true) -> bool
+
+更新フラグを立てます。
+
+更新フラグを指定された内容へ変更し、変更後の更新フラグの状態を返します。
+明示的に引数を指定して、更新フラグを初期化することも出来ます。
+
+@param state 更新フラグを立てる場合はtrueを、初期化する場合はfalseを指定します。
+

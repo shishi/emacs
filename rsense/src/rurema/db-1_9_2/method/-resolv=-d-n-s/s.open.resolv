@@ -1,0 +1,19 @@
+kind=defined
+names=open
+visibility=public
+
+--- open(*args) -> Resolv::DNS
+--- open(*args){|dns| ...} -> object
+
+新しい DNS リゾルバを生成します。
+ブロックを与えた場合は生成したリゾルバでブロックを呼びだし、
+ブロック終了時にリゾルバを閉じます。
+
+ブロックを与えなかった場合は [[m:Resolv::DNS.new]] と
+同じです。
+
+@param args DNSの設定を与えます。意味は [[m:Resolv::DNS.new]] 
+            の引数と同じです。
+@return ブロックを与えた場合はブロックの返す値を返し、
+        与えなかった場合は生成したリゾルバを返します。
+

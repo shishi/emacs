@@ -1,0 +1,10 @@
+kind=defined
+names=ssl?,tls?
+visibility=public
+
+--- tls? -> bool
+--- ssl? -> bool
+その Net::SMTP オブジェクトが SMTPS を利用するならば真を返します。
+
+@see [[m:Net::SMTP#enable_tls]], [[m:Net::SMTP#disable_tls]], [[m:Net::SMTP#start]]
+

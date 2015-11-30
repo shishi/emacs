@@ -1,0 +1,9 @@
+kind=added
+names=sitelibdir
+visibility=private 
+
+--- $sitelibdir -> String
+
+サイト固有のライブラリを置くディレクトリです。
+通常は "/usr/local/lib/ruby/site_ruby/バージョン" です。
+

@@ -1,0 +1,18 @@
+kind=defined
+names=umask
+visibility=public
+
+--- umask           -> Integer
+
+現在の umask の値を返します。
+
+@see [[man:umask(2)]]
+
+--- umask(umask)    -> Integer
+
+umask を変更します。変更前の umask の値を返します。
+
+@param umask 設定したい umask の値を整数で指定します。
+
+@see [[man:umask(2)]]
+

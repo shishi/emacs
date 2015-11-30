@@ -1,0 +1,20 @@
+kind=defined
+names=size
+visibility=public
+
+--- size     -> Integer
+
+ファイルのサイズを返します。
+
+例:
+
+   File.open("/dev/null") do |f|
+     f.size   #=> 0
+   end
+
+@raise IOError 自身が close されている場合に発生します。
+
+@raise Errno::EXXX 失敗した場合に発生します。
+
+@see [[m:File#lstat]]
+

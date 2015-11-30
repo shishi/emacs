@@ -1,0 +1,12 @@
+kind=defined
+names=from_installed_gems
+visibility=public
+
+--- from_installed_gems(*deprecated) -> Gem::SourceIndex
+
+与えられたパスをもとに、インスタンスを作成するファクトリメソッドです。
+
+@param deprecated この引数は非推奨です。後方互換性のためにのみ提供されているので使用すべきではありません。
+
+@see [[m:Gem::SourceIndex.from_gems_in]]
+

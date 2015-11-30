@@ -1,0 +1,14 @@
+kind=defined
+names=length,size
+visibility=public
+
+--- length -> Integer
+--- size -> Integer
+テンポラリファイルのサイズを返します。
+
+  tf = Tempfile.new("foo")
+  tf.print("bar,ugo")
+  p tf.size # => 7
+  tf.close
+  p tf.size # => 0
+

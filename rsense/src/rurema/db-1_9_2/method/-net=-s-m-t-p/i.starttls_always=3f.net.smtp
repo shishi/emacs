@@ -1,0 +1,11 @@
+kind=defined
+names=starttls_always?
+visibility=public
+
+--- starttls_always? -> bool
+その Net::SMTP オブジェクトが 常にSTARTTLSを利用する
+(利用できない場合には例外を発生する)ならば
+真を返します。
+
+@see [[m:Net::SMTP#starttls?]], [[m:Net::SMTP#starttls_auto?]], [[m:Net::SMTP#enable_starttls]]
+

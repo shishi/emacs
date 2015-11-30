@@ -1,0 +1,16 @@
+kind=defined
+names=each,each_mail
+visibility=public
+
+--- each_mail {|popmail| .... } -> [Net::POPMail]
+--- each {|popmail| .... } -> [Net::POPMail]
+サーバ上の各メールを引数としてブロックを呼びだします。
+
+メールは [[c:Net::POPMail]] のインスタンスとして渡されます。
+
+pop3.mails.each と同じです。
+
+@raise TimeoutError 接続がタイムアウトした場合に発生します
+@raise Net::POPError サーバがエラーを報告した場合に発生します
+@raise Net::POPBadResponse サーバからの応答がプロトコル上不正であった場合に発生します
+

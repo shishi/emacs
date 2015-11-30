@@ -1,0 +1,25 @@
+kind=defined
+names=mkdir
+visibility=public
+
+--- mkdir(path, mode = 0777)    -> 0
+
+path で指定された新しいディレクトリを作ります。パーミッションは
+mode で指定された値に umask をかけた値 (mode & ~umask) になります。
+[[man:mkdir(2)]] も参照して下さい。
+ディレクトリの作成に成功すれば 0 を返します。
+
+@param path ディレクトリのパスを文字列で指定します。
+
+@param mode ディレクトリのモードを整数で与えます。
+
+@raise Errno::EXXX ディレクトリの作成に失敗した場合に発生します。
+
+例:
+
+  p File.umask                                  #=> 2
+  Dir.mkdir('t', 0666)
+  p "%#o" % (07777 & File.stat('t').mode)  #=> "0664"
+
+@see [[m:FileUtils.#makedirs]]
+

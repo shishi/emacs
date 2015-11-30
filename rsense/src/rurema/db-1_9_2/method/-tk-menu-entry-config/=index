@@ -1,0 +1,9 @@
+#current_entryconfiginfo	TkMenuEntryConfig#current_entryconfiginfo
+#current_itemconfiginfo	TkItemConfigMethod#current_itemconfiginfo
+#entrycget	TkMenuEntryConfig#entrycget
+#entryconfiginfo	TkMenuEntryConfig#entryconfiginfo
+#entryconfigure	TkMenuEntryConfig#entryconfigure
+#itemcget	TkItemConfigMethod#itemcget
+#itemconfiginfo	TkItemConfigMethod#itemconfiginfo
+#itemconfigure	TkItemConfigMethod#itemconfigure
+#tagid	TkItemConfigMethod#tagid

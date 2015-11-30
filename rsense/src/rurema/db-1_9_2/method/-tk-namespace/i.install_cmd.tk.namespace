@@ -1,0 +1,6 @@
+kind=defined
+names=install_cmd
+visibility=public
+
+--- install_cmd(cmd)
+

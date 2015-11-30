@@ -1,0 +1,27 @@
+kind=defined
+names=sort
+visibility=public
+
+--- sort               -> [object]
+--- sort {|a, b| ... } -> [object]
+
+全ての要素を昇順にソートした配列を生成して返します。
+
+ブロックなしのときは <=> メソッドを要素に対して呼び、
+その結果をもとにソートします。
+
+<=> 以外でソートしたい場合は、ブロックを指定します。
+この場合、ブロックの評価結果を元にソートします。
+ブロックの値は、a > b のとき正、a == b のとき 0、
+a < b のとき負の整数を、期待しています。
+ブロックが整数以外を返したときは例外 [[c:TypeError]] が発生します。
+
+Enumerable#sort は安定ではありません (unstable sort)。
+安定なソートが必要な場合は [[m:Enumerable#sort_by]] を使って工夫する必要があります。
+詳しくは [[m:Enumerable#sort_by]] の項目を参照してください。
+
+※ 比較結果が同じ要素は元の順序通りに並ぶソートを
+「安定なソート (stable sort)」と言います。
+
+@see [[m:Enumerable#sort_by]]
+

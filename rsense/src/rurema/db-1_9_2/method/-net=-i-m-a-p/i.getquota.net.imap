@@ -1,0 +1,11 @@
+kind=defined
+names=getquota
+visibility=public
+
+--- getquota(mailbox)
+
+Sends the GETQUOTA command along with specified mailbox.
+If this mailbox exists, then an array containing a
+[[c:Net::IMAP::MailboxQuota]] object is returned.  This
+command generally is only available to server admin.
+

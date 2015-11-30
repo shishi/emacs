@@ -1,0 +1,7 @@
+superclass=TkText
+type=class
+library=tk.text
+extended=
+included=
+
+

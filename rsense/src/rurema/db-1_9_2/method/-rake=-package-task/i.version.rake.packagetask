@@ -1,0 +1,8 @@
+kind=defined
+names=version
+visibility=public 
+
+--- version -> String
+
+作成するパッケージのバージョンを表す文字列を返します。
+

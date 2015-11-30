@@ -1,0 +1,8 @@
+kind=defined
+names=new_safeTk,new_safe_slave
+visibility=public
+
+--- new_safe_slave(safe = 4, keys = {})
+--- new_safeTk(safe = 4, keys = {})
+
+

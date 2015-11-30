@@ -1,0 +1,10 @@
+kind=defined
+names=BUTTON2_DOUBLE_CLICKED
+visibility=public
+
+--- BUTTON2_DOUBLE_CLICKED -> Integer
+
+マウスボタン 2 をダブルクリックしたことを表すマウスイベント用の定数です。
+
+@see [[m:Curses.getmouse]]
+

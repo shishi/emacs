@@ -1,0 +1,6 @@
+kind=defined
+names=yaml_initialize
+visibility=public
+
+--- yaml_initialize
+

@@ -1,0 +1,6 @@
+kind=defined
+names=element_lget_i
+visibility=public
+
+--- element_lget_i(elem_idxs, idx)
+

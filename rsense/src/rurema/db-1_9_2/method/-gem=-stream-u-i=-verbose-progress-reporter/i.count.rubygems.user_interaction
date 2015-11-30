@@ -1,0 +1,8 @@
+kind=defined
+names=count
+visibility=public 
+
+--- count -> Integer
+
+[[m:Gem::StreamUI::VerboseProgressReporter#updated]] が呼び出された回数を返します。
+

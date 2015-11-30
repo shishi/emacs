@@ -1,0 +1,9 @@
+kind=defined
+names=prev_day
+visibility=public
+
+--- prev_day(n = 1) -> Date
+n 日前を返します。
+
+@param n 日数
+

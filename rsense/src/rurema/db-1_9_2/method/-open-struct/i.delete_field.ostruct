@@ -1,0 +1,13 @@
+kind=defined
+names=delete_field
+visibility=public
+
+--- delete_field(name) -> object
+
+nameで指定された要素を削除します。
+
+その後その要素を参照したら nil が返ります。
+
+@param name 削除する要素を文字列かシンボルで指定します。
+@return 削除前の要素の値を返します。
+

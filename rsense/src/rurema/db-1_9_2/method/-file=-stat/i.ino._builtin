@@ -1,0 +1,11 @@
+kind=defined
+names=ino
+visibility=public
+
+--- ino -> Integer
+i-node 番号を返します。
+
+  fs = File::Stat.new($0)
+  #例
+  p fs.ino      #=> 0
+

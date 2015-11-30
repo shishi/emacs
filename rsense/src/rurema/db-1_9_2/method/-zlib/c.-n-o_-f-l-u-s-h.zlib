@@ -1,0 +1,9 @@
+kind=defined
+names=NO_FLUSH
+visibility=public
+
+--- NO_FLUSH -> Fixnum
+
+[[m:Zlib::Deflate#deflate]] 等に渡す、ストリームの出力を
+制御するための整数です。
+

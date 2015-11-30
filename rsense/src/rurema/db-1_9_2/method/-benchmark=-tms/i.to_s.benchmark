@@ -1,0 +1,9 @@
+kind=defined
+names=to_s
+visibility=public
+
+--- to_s -> String
+
+引数を省略して [[m:Benchmark::Tms#format]] を呼び出すのと同じです。
+
+

@@ -1,0 +1,24 @@
+kind=defined
+names=chmod
+visibility=public
+
+--- chmod(mode, list, options = {}) -> Array
+
+ファイル list のパーミッションを mode に変更します。
+
+@param mode パーミッションを8進数で指定します。
+
+@param list ファイルのリストを指定します。 対象のファイルが一つの場合は文字列でも指定可能です。
+           二つ以上指定する場合は配列で指定します。
+
+@param options :noop と :verbose が指定可能です。
+               [[ref:c:FileUtils#options]]
+
+@return list を配列として返します。
+
+例:
+
+  FileUtils.chmod(0644, ['my.rb', 'your.rb'])
+  FileUtils.chmod(0755, 'somecommand')
+  FileUtils.chmod(0755, '/usr/bin/ruby', {:verbose => true})
+

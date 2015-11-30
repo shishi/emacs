@@ -1,0 +1,2 @@
+#autoscroll	Tk::Scrollable#autoscroll
+#unautoscroll	Tk::Scrollable#unautoscroll

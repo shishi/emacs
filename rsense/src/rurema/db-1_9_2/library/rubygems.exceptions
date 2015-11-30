@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=
+classes=Gem=Exception,Gem=CommandLineError,Gem=DependencyError,Gem=DependencyRemovalException,Gem=GemNotInHomeException,Gem=DocumentError,Gem=EndOfYAMLException,Gem=FilePermissionError,Gem=FormatException,Gem=GemNotFoundException,Gem=InstallError,Gem=InvalidSpecificationException,Gem=OperationNotSupportedError,Gem=RemoteError,Gem=RemoteInstallationCancelled,Gem=RemoteInstallationSkipped,Gem=RemoteSourceException,Gem=VerificationError,Gem=SystemExitException
+is_sublibrary=true
+
+RubyGems で使用する例外クラスを定義したライブラリです。

@@ -1,0 +1,6 @@
+kind=defined
+names=_setup_subst_table
+visibility=public
+
+--- _setup_subst_table(key_inf, proc_inf)
+

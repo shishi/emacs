@@ -1,0 +1,15 @@
+kind=defined
+names=bkgdset
+visibility=public
+
+--- bkgdset(ch) -> nil
+
+Manipulate the background of the named window
+with character Integer +ch+
+
+The background becomes a property of the character
+and moves with the character through any scrolling
+and insert/delete line/character operations.
+
+@see [[man:curs_bkgd(3)]]
+

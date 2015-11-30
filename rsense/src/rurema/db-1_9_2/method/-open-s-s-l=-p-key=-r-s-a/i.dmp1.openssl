@@ -1,0 +1,9 @@
+kind=defined
+names=dmp1
+visibility=public
+
+--- dmp1 -> OpenSSL::BN
+鍵の exponent1 (d mod (p-1)) です。
+
+秘密鍵の情報です。
+

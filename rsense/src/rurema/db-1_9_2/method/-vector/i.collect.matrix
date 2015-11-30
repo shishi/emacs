@@ -1,0 +1,19 @@
+kind=defined
+names=collect,map
+visibility=public
+
+--- collect {|x| ... } -> Vector
+--- map {|x| ... } -> Vector
+
+ベクトルの各要素に対してブロックを評価した結果を、要素として持つベクトルを生成します。
+
+例:
+
+  a = [1, 2, 3.5, -10]
+  v1 = Vector.elements(a)
+  p v1 #=> Vector[1, 2, 3.5, -10]
+  v2 =  v1.map{|x|
+    x * -1
+  }
+  p v2 #=> Vector[-1, -2, -3.5, 10]
+

@@ -1,0 +1,6 @@
+kind=defined
+names=end_prefix_mapping
+visibility=public
+
+--- end_prefix_mapping(prefix)
+

@@ -1,0 +1,34 @@
+kind=defined
+names=configure,grid
+visibility=public
+
+--- configure(widget1, widget2, ..., options=nil)
+--- grid(widget1, widget2, ..., options=nil)
+
+wigetNに対して、optionsで指定した配置を行います。
+optionsは、以下のキーを持つハッシュです。
+
+*"column"
+
+桁位置を指定します。桁位置は左から順に0,1,2,...と数えます。
+
+*"columnspan"
+
+配置に使用する横方向のセルの数を指定します。
+
+*"in"
+*"ipadx"
+*"ipady"
+*"padx"
+*"pady"
+
+*"row"
+
+行位置を指定します。行位置は上から順に0,1,2,...と数えます。
+
+*"rowspan"
+
+配置に使用する縦方向のセルの数を指定します。
+
+*"sticky"
+

@@ -1,0 +1,17 @@
+kind=defined
+names=setgid?
+visibility=public
+
+--- setgid? -> bool
+setgidされている時に真を返します。
+
+  Dir.glob("/usr/sbin/*") {|bd|
+    if File::Stat.new(bd).setgid?
+      puts bd
+    end
+  }
+  #例
+  #...
+  #=> /usr/sbin/postqueue
+  #...
+

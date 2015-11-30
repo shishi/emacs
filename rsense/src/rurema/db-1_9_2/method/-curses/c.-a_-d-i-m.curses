@@ -1,0 +1,10 @@
+kind=defined
+names=A_DIM
+visibility=public
+
+--- A_DIM -> Integer
+
+文字列を半分明るくするための属性マスク用の定数です。
+
+@see [[m:Curses.attrset]]
+

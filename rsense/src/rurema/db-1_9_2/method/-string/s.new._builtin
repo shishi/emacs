@@ -1,0 +1,12 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(string = "") -> String
+
+string と同じ内容の新しい文字列を作成して返します。
+引数を省略した場合は空文字列を生成して返します。
+
+@param string   文字列
+@return         引数 string と同じ内容の文字列オブジェクト
+

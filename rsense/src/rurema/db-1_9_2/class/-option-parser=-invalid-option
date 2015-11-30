@@ -1,0 +1,7 @@
+superclass=OptionParser=ParseError
+type=class
+library=optparse
+extended=
+included=
+
+定義されていないオプションが与えられた場合に投げられます。

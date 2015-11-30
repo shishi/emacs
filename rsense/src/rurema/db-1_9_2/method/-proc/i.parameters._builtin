@@ -1,0 +1,7 @@
+kind=defined
+names=parameters
+visibility=public
+
+--- parameters -> [object]
+
+Proc オブジェクトの引数の情報を返します。

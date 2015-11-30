@@ -1,0 +1,14 @@
+kind=defined
+names=to_s
+visibility=public
+
+--- to_s         -> String
+--- to_s(len)    -> String
+
+自身が指す領域から長さ len の文字列を複製して返します。
+
+len を省略した場合は、文字列の終りは '\0' であると仮定して、
+[[man:strlen(3)]] を使って長さを算出します。
+
+@param len 文字列の長さを整数で指定します。
+

@@ -1,0 +1,10 @@
+name=FL_SET
+private=false
+macro=true
+type=void
+filename=ruby.h
+params=(VALUE x, int f)
+
+
+x に対してフラグ f をセットする。
+

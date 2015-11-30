@@ -1,0 +1,69 @@
+methods=
+sublibraries=
+requires=
+classes=Net=FTP,Net=FTP=NullSocket,Net=FTPError,Net=FTPReplyError,Net=FTPTempError,Net=FTPPermError,Net=FTPProtoError
+is_sublibrary=false
+
+FTP プロトコルを扱うライブラリです。
+
+基本的には  unix の ftp コマンドのような
+command-line interface の FTP クライアントを使ったことのある
+人にとってわかりやすいインターフェースになっています。
+より「Ruby 的」であるインターフェースも用意しています。
+
+FTP については [[RFC:959]]、[[RFC:3659]] を参考にしてください。
+
+=== バイナリモードとテキストモード
+FTP のデータ転送にはテキストモードとバイナリモード
+があります。テキストモードで転送する場合には
+改行を適宜CRLFに変換します。バイナリモードの場合は
+一切の変換をしません。
+
+通常はバイナリモード以外を使う必要はないでしょう。
+
+[[m:Net::FTP#get]]、[[m:Net::FTP#put]] は
+[[m:Net::FTP#binary]] の値に従ってテキストモードと
+バイナリモードの一方を選びます。また、
+[[m:Net::FTP#getbinaryfile]]、[[m:Net::FTP#putbinaryfile]]
+は [[m:Net::FTP#binary]] の値によらずバイナリモードで、
+[[m:Net::FTP#gettextfile]]、[[m:Net::FTP#puttextfile]] は
+[[m:Net::FTP#binary]] の値によらずテキストモードで
+データ転送が行われます。
+
+=== パッシブモードとアクティブモード
+FTP はファイル転送やディレクトリ情報取得のための
+データ転送用の TCP コネクションを、
+サーバとの制御コマンドをやりとり
+するためのコネクションとは別に作成します。
+
+このデータ転送用コネクションを作成する際に、
+アクティブモードでは
+サーバ側からクライアント側へコネクションを作り、
+パッシブモードでは
+クライアント側からサーバ側へコネクションを作ます。
+
+そのため、アクティブモードではサーバ-クライアント間に
+ファイアーウォールや NAT がある場合にはうまく接続できない
+場合があります。この時にはパッシブモードを利用してください。
+
+=== 例
+
+例1:
+  require 'net/ftp'
+  ftp = Net::FTP.new('ftp.example.org')
+  ftp.login
+  ftp.passive = true
+  ftp.chdir('pub/ruby')
+  files = ftp.list('ruby*')
+  ftp.getbinaryfile('ruby-1.9.1-p243.tar.bz2', 'ruby.bz2', 1024)
+  ftp.close
+
+例2:
+  require 'net/ftp'
+  Net::FTP.open('ftp.example.org') do |ftp|
+    ftp.login
+    ftp.passive = true
+    ftp.chdir('pub/ruby')
+    files = ftp.list('*.bz2')
+    ftp.getbinaryfile('ruby-1.9.1-p243.tar.bz2', 'ruby.bz2', 1024)
+  end

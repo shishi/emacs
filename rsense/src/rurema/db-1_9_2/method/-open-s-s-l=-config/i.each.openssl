@@ -1,0 +1,19 @@
+kind=defined
+names=each
+visibility=public
+
+--- each {|section, key, value| ... } -> self
+オブジェクトに含まれる全ての設定情報を順にブロックに渡し
+呼び出します。
+
+渡される値は、セクションを表す文字列、キーを表す文字列、キーに
+割り当てられた値の文字列、の3つです。
+
+  require 'openssl'
+  conf = OpenSSL::Config.load(OpenSSL::Config::DEFAULT_CONFIG_FILE)
+  conf.each{|section, key, value| p [section, key, value]}
+  # => ["req_distinguished_name", "countryName", "Country Name (2 letter code)"]
+  # => ["req_distinguished_name", "countryName_default", "AU"]
+  # => ["req_distinguished_name", "countryName_min", "2"]
+  # =>       :
+

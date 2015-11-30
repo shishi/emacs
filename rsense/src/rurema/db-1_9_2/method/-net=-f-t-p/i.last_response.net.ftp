@@ -1,0 +1,11 @@
+kind=defined
+names=last_response
+visibility=public
+
+--- last_response -> String
+サーバからの最後の応答を文字列で返します。
+
+例えばログイン([[m:Net::FTP#login]])に成功した場合には
+"230 Login successful.\n" を返します。
+
+@see [[m:Net::FTP#last_response_code]]

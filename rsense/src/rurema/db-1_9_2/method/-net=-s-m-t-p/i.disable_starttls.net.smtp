@@ -1,0 +1,9 @@
+kind=defined
+names=disable_starttls
+visibility=public
+
+--- disable_starttls -> ()
+その Net::SMTP オブジェクトがSTARTTLSを常に使わないよう設定します。
+
+@see [[m:Net::SMTP#starttls?]], [[m:Net::SMTP#enable_starttls]], [[m:Net::SMTP#enable_starttls_auto]]
+

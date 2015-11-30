@@ -1,0 +1,13 @@
+kind=defined
+names=to_a
+visibility=public
+
+--- to_a -> [String]
+
+[[m:$&]], [[m:$1]], [[m:$2]],... を格納した配列を返します。
+
+  /(foo)(bar)(BAZ)?/ =~ "foobarbaz"
+  p $~.to_a       # => ["foobar", "foo", "bar", nil]
+
+@see [[m:MatchData#captures]]
+

@@ -1,0 +1,9 @@
+kind=defined
+names=socket_type
+visibility=public
+
+--- socket_type -> Class
+
+このメソッドは obsolete です。
+使わないでください。
+

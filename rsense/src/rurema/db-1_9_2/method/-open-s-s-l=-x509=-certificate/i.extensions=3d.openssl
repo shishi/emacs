@@ -1,0 +1,10 @@
+kind=defined
+names=extensions=
+visibility=public
+
+--- extensions=(extensions)
+証明書の拡張領域の内容を設定します。
+
+@param extensions 設定する拡張([[c:OpenSSL::X509::Extension]] オブジェクト)の配列
+@raise OpenSSL::X509::CertificateError 設定に失敗した場合に発生します
+

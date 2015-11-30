@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=webrick.utils
+extended=
+included=
+
+ライブラリ webrick のための小さなユーティリティ関数を提供するモジュールです。

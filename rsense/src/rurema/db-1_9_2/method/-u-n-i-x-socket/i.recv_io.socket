@@ -1,0 +1,23 @@
+kind=defined
+names=recv_io
+visibility=public
+
+--- recv_io([klass[, mode]])
+
+ソケットの接続先からファイルディスクリプタを受け取ります。
+
+klass が nil の場合、ファイルディスクリプタが Fixnum として
+返されます。
+
+klass が nil でない場合、
+klass.for_fd(fd[, mode]) が呼ばれ、その値が返されます。
+klass が省略された場合は IO が指定されたものとみなされ、
+IO.for_fd(fd[, mode]) が呼ばれます。
+
+例:
+
+  s1, s2 = UNIXSocket.pair
+  s1.send_io STDOUT
+  io = s2.recv_io
+  p File.identical?(io, STDOUT)     #=> true
+

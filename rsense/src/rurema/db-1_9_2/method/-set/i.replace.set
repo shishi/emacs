@@ -1,0 +1,18 @@
+kind=defined
+names=replace
+visibility=public
+
+--- replace(enum) -> self
+
+集合の要素をすべて削除し、enum で与えられた要素に置き換えます。
+
+引数 enum には each メソッドが定義されている必要があります。
+
+@param enum 置き換え後の集合要素を格納するオブジェクトを指定します。
+@raise NoMethodError 引数 enum に each メソッドが定義されていない場合に
+       発生します。
+
+  p s = Set[10, 20, 30] #=> #<Set: {30, 20, 10}>
+  s.replace([15, 25])
+  p s #=> #<Set: {25, 15}>
+

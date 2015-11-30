@@ -1,0 +1,21 @@
+kind=defined
+names=+
+visibility=public
+
+--- +(n)   -> DL::CPtr
+
+自身のアドレスに n バイトを足した新しい CPtr オブジェクトを返します。
+
+この返り値には、free 関数がセットされていません。
+
+@param n アドレスの増分を整数で指定します。
+
+例:
+ require 'dl'
+ 
+ s = 'abc'
+ cptr = DL::CPtr[s]
+ p cptr[0,1]         #=> "a"
+ cptr += 1
+ p cptr[0,1]         #=> "b"
+

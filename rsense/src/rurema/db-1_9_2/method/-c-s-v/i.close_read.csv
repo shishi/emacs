@@ -1,0 +1,8 @@
+kind=defined
+names=close_read
+visibility=public
+
+--- close_read -> nil
+
+[[m:IO#close_read]] に委譲します。
+

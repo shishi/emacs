@@ -1,0 +1,34 @@
+kind=defined
+names=recv
+visibility=public
+
+--- recv(maxlen, flags = 0) -> String
+
+ソケットからデータを受け取り、文字列として返します。
+maxlen は受け取る最大の長さを指定します。
+flags については [[man:recv(2)]] を参照してください。flags の
+デフォルト値は 0 です。flags の指定に必要な定数は
+Socket クラスで定義されています。(例: Socket::MSG_PEEK)
+
+内部で呼び出す [[man:recv(2)]] が 0 を返した場合、このメソッドは "" を返します。
+この意味はソケットによって異なります。
+たとえば TCP では EOF を意味しますし、
+UDP では空のパケットを読み込んだことを意味します。
+
+@param maxlen 受け取る文字列の最大の長さを指定します。
+
+@param flags [[man:recv(2)]] を参照してください。
+
+@raise IOError
+
+@raise Errno::EXXX [[man:recvfrom(2)]] がエラーになった場合などに発生します。
+
+例:
+
+  s1, s2 = UNIXSocket.pair
+  s1.write "a"
+  s1.close
+  p s2.recv(10, Socket::MSG_PEEK)   #=> "a"
+  p s2.recv(10)                     #=> "a"
+  p s2.recv(10)                     #=> ""
+

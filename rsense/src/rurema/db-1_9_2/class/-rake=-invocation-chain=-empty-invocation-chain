@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rake
+extended=
+included=
+
+呼び出し関係のトップレベルを表します。

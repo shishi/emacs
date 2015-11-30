@@ -1,0 +1,19 @@
+kind=defined
+names=rest
+visibility=public
+
+--- rest -> String
+文字列の残り (rest) を返します。
+具体的には、スキャンポインタが指す位置からの文字列を返します。
+
+スキャンポインタが文字列の末尾を指していたら空文字列 ("") を返します。
+
+      s = StringScanner.new('test string')
+      s.rest         # => "test string"
+      s.scan(/\w+/)  # => "test"
+      s.rest         # => " string"
+      s.scan(/\s+/)  # => " "
+      s.rest         # => "string"
+      s.scan(/\w+/)  # => "string"
+      s.rest         # => ""
+

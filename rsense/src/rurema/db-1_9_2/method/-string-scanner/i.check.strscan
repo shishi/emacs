@@ -1,0 +1,21 @@
+kind=defined
+names=check
+visibility=public
+
+--- check(regexp) -> String | nil
+現在位置から regexp とのマッチを試みます。
+マッチに成功したらマッチした部分文字列を返します。
+マッチに失敗したら nil を返します。
+
+このメソッドはマッチが成功してもスキャンポインタを進めません。
+
+@param regexp マッチに用いる正規表現を指定します。
+
+使用例
+      s = StringScanner.new('test string')
+      s.check(/\w+/) # => "test"
+      s.pos          # => 0
+      s.matched      # => "test"
+      s.check(/\s+/) # => nil
+      s.matched      # => nil
+

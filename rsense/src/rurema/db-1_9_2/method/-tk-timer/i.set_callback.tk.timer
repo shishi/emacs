@@ -1,0 +1,6 @@
+kind=defined
+names=set_callback
+visibility=public
+
+--- set_callback(sleep, args = nil)
+

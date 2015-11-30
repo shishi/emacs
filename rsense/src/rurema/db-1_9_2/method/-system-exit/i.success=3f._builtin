@@ -1,0 +1,23 @@
+kind=defined
+names=success?
+visibility=public
+
+--- success? -> bool
+
+終了ステータスが正常終了を示す値ならば true を返します。
+
+大半のシステムでは、ステータス 0 が正常終了を表します。
+
+例:
+
+  begin
+    exit true
+  rescue SystemExit => err
+    p err.success?  # => true
+  end
+
+  begin
+    exit false
+  rescue SystemExit => err
+    p err.success?  # => false
+  end

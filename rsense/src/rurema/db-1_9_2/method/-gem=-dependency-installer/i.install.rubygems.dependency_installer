@@ -1,0 +1,14 @@
+kind=defined
+names=install
+visibility=public 
+
+--- install(dep_or_name, version = Gem::Requirement.default) -> Array
+
+指定された Gem とその依存する Gem を全てインストールします。
+
+@param dep_or_name Gem の名前か [[c:Gem::Dependency]] のインスタンスを指定します。
+
+@param version バージョンに関する条件を指定します。
+
+@return このメソッドでインストールした Gem のリストを返します。
+

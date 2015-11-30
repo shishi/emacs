@@ -1,0 +1,8 @@
+kind=defined
+names=WRONLY
+visibility=public
+
+--- WRONLY
+書き込みのみのモードでファイルを開くときに指定します。
+[[m:File.open]]で使用します。
+

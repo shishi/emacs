@@ -1,0 +1,12 @@
+kind=defined
+names=V_ERR_UNABLE_TO_DECRYPT_CRL_SIGNATURE
+visibility=public
+
+--- V_ERR_UNABLE_TO_DECRYPT_CRL_SIGNATURE -> Integer
+CRL の署名が復号できないことを意味します。
+
+[[m:OpenSSL::X509::Store#error]] や
+[[m:OpenSSL::X509::StoreContext#error]] のエラーコードとして
+使われます。
+
+

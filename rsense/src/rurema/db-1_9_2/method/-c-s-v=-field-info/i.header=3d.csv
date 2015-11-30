@@ -1,0 +1,10 @@
+kind=defined
+names=header=
+visibility=public
+
+--- header=(val)
+
+ヘッダを表す配列をセットします。
+
+@param val ヘッダを表す配列を指定します。
+

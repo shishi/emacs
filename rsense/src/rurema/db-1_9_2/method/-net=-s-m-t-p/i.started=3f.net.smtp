@@ -1,0 +1,11 @@
+kind=defined
+names=started?
+visibility=public
+
+--- started? -> bool
+SMTP セッションが開始されていたら真を返します。
+
+セッションがまだ開始していない、もしくは終了している場合には偽を返します。
+
+@see [[m:Net::SMTP#start]], [[m:Net::SMTP#finish]]
+

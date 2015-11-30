@@ -1,0 +1,11 @@
+kind=defined
+names=hash
+visibility=public
+
+--- hash -> Integer
+
+self のハッシュ値を返します。
+eql? で等しい文字列は、常にハッシュ値も等しくなります。
+
+@see [[c:Hash]]
+

@@ -1,0 +1,17 @@
+kind=defined
+names=to=
+visibility=public
+
+--- to=(s) 
+
+自身の e-mail アドレスを文字列で設定します。
+
+@param s 自身の e-mail アドレスを文字列で指定します。
+
+@raise URI::InvalidComponentError 不正な引数 s に対して発生します。
+
+例:
+  m = URI.parse("mailto:nospam@example.com")
+  m.to = "nospaaaam@example.com"
+  p m                                        #=> #<URI::MailTo:0xb7bf0614 URL:mailto:nospaaaam@example.com>
+

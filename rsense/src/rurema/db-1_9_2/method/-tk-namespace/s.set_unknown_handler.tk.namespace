@@ -1,0 +1,6 @@
+kind=defined
+names=set_unknown_handler
+visibility=public
+
+--- set_unknown_handler(cmd = Proc.new)
+

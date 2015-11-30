@@ -1,0 +1,45 @@
+kind=defined
+names=__
+visibility=public
+
+--- __ 
+
+実行結果の履歴です。
+__[lineno] で、lineno 行で実行した結果を得られます。
+lineno が負の時は、最新の結果から -lineno 行だけ前の
+結果を得られます。
+
+この変数はデフォルトでは使えません。
+この変数を使用するには、あらかじめ .irbrc などで
+conf.eval_history の値を指定しておかなければいけません。
+
+例：
+
+  $ irb
+  irb(main):001:0> conf.eval_history = 100
+  => 100
+  irb(main):002:0> 1 + 2
+  => 3
+  irb(main):003:0> 'hoge' + 'foo'
+  => "hogefoo"
+  irb(main):004:0> __[2]
+  => 3
+  irb(main):005:0> __[3]
+  => "hogefoo"
+  irb(main):006:0> __[-1]
+  => "hogefoo"
+  irb(main):007:0> 
+
+=== 履歴の保存
+
+さらに、.irbrc で以下のように
+conf.save_history の値を指定しておくと、
+実行結果の履歴がファイルに保存されます。
+
+  IRB.conf[:SAVE_HISTORY] = 100
+
+履歴ファイルの名前はデフォルトでは ~/.irb_history です。
+履歴ファイルの名前は IRB.conf[:HISTORY_FILE] で指定できます。
+
+
+

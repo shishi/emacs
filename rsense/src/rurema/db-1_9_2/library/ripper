@@ -1,0 +1,7 @@
+methods=
+sublibraries=ripper.filter,ripper.lexer,ripper.sexp
+requires=ripper.lexer,ripper.filter,ripper.sexp
+classes=Ripper
+is_sublibrary=false
+
+Ruby プログラムを解析するためのライブラリです。

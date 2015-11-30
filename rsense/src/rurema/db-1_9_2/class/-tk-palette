@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=tk.palette
+extended=
+included=Tk
+
+extend Tk

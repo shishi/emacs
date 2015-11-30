@@ -1,0 +1,8 @@
+kind=defined
+names=stand_alone?,standalone,standalone=
+visibility=public
+
+--- standalone
+--- standalone=(value)
+--- stand_alone?
+

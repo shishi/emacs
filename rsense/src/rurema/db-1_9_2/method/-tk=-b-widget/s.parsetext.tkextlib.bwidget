@@ -1,0 +1,8 @@
+kind=defined
+names=parsetext
+visibility=public
+
+--- parsetext(text)
+
+
+

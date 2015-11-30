@@ -1,0 +1,13 @@
+kind=defined
+names=open_timeout=
+visibility=public
+
+--- open_timeout=(seconds)
+接続時に待つ最大秒数を設定します。
+
+この秒数たってもコネクションが
+開かなければ例外 [[c:TimeoutError]] を発生します。
+
+@param second 待つ秒数を指定します。
+@see [[m:Net::HTTP#read_timeout]], [[m:Net::HTTP#open_timeout]]
+

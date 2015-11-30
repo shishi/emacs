@@ -1,0 +1,6 @@
+kind=defined
+names=delete_attribute
+visibility=public
+
+--- delete_attribute(key)
+

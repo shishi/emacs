@@ -1,0 +1,7 @@
+superclass=StandardError
+type=class
+library=yaml
+extended=
+included=
+
+意図しない入力がメソッドに与えられた時などに発生します。

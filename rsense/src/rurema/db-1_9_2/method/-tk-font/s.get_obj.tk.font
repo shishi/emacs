@@ -1,0 +1,6 @@
+kind=defined
+names=get_obj
+visibility=public
+
+--- get_obj(name)
+

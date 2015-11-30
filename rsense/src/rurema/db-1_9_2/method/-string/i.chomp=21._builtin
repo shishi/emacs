@@ -1,0 +1,29 @@
+kind=defined
+names=chomp!
+visibility=public
+
+--- chomp!(rs = $/) -> self | nil
+
+self の末尾から rs で指定する改行コードを取り除きます。
+ただし rs が "\n" ($/ のデフォルト値) のときは、
+システムによらず "\r", "\r\n", "\n" のすべてを改行コードとみなして取り除きます。
+
+rs に nil を指定した場合、このメソッドは何もしません。
+
+rs に空文字列 ("") を指定した場合は「パラグラフモード」になり、
+末尾の連続する改行コードをすべて取り除きます。
+
+@return chomp! は通常 self を返しますが、取り除く改行がなかった場合は nil を返します。
+
+例:
+
+  buf = "string\n"
+  buf.chomp!
+  p buf   # => "string"
+
+  $/ = "\n"   # デフォルトと同じ
+  p "foo\r".chomp!    # => "foo"
+  p "foo\r\n".chomp!  # => "foo"
+  p "foo\n".chomp!    # => "foo"
+  p "foo\n\r".chomp!  # => "foo\n"
+

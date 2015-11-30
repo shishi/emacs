@@ -1,0 +1,15 @@
+kind=defined
+names=DEFAULT_CERT_FILE_ENV
+visibility=public
+
+--- DEFAULT_CERT_FILE_ENV -> String
+CA 証明書ファイル名を指定する環境変数名。
+
+通常、"SSL_CERT_FILE" という文字列です。
+この環境変数を設定しておくことによって
+[[m:OpenSSL::X509::Store#set_default_paths]] で読み込まれる
+証明書ファイル名を変更できます。
+
+@see [[m:OpenSSL::X509::DEFAULT_CERT_FILE]]
+
+

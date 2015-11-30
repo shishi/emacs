@@ -1,0 +1,31 @@
+kind=defined
+names=chown_R
+visibility=public
+
+--- chown_R(user, group, list, options = {}) -> Array
+
+list 以下のファイルの所有ユーザと所有グループを
+user と group へ再帰的に変更します。
+
+user, group に nil または -1 を渡すとその項目は変更しません。
+
+@param user ユーザー名か uid を指定します。nil/-1 を指定すると変更しません。
+
+@param group グループ名か gid を指定します。nil/-1 を指定すると変更しません。
+
+@param list ファイルのリストを指定します。対象のファイルが一つの場合は文字列でも指定可能です。
+           二つ以上指定する場合は配列で指定します。
+
+@param options :noop と :verbose が指定可能です。
+               [[ref:c:FileUtils#options]]
+
+@return list を配列として返します。
+
+例:
+
+  FileUtils.chown 'root', 'staff', '/usr/local/bin/ruby'
+  FileUtils.chown nil, 'bin', Dir.glob('/usr/bin/*'), :verbose => true
+  
+  FileUtils.chown_R 'www', 'www', '/var/www/htdocs'
+  FileUtils.chown_R 'cvs', 'cvs', '/var/cvs', :verbose => true
+

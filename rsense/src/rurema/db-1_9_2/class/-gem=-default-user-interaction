@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=rubygems.user_interaction
+extended=
+included=
+
+このモジュールはデフォルトの [[c:Gem::UserInteraction]] を定義しています。

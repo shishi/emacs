@@ -1,0 +1,18 @@
+kind=defined
+names=each
+visibility=public
+
+--- each{|prime| ... } -> object
+--- each               -> object
+
+[[m:Prime#each]] を再定義します。
+
+全ての素数を列挙し、それぞれの素数をブロックに渡して評価します。
+無限ループになるので必ず break を入れてください。
+
+break 後に再度呼び出すと、最初からではなくインスタンス内部に保存されている中断位置から列挙を再開します。
+
+@return ブロック付きで呼び出された場合は break の引数が返り値になります。
+        ブロック無しで呼び出された場合は [[c:Prime::EratosthenesGenerator]] のインスタンスを返します。
+
+

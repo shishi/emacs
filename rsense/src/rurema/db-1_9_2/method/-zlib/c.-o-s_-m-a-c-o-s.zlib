@@ -1,0 +1,8 @@
+kind=defined
+names=OS_MACOS
+visibility=public
+
+--- OS_MACOS -> Fixnum
+
+OS の種類を表す定数です。
+

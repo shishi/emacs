@@ -1,0 +1,29 @@
+kind=defined
+names=parse!
+visibility=public
+
+--- parse!(source, options = {}) -> object
+
+与えられた JSON 形式の文字列を Ruby オブジェクトに変換して返します。
+
+[[m:JSON.#parse]] よりも危険なデフォルト値が指定されているので
+信頼できる文字列のみを入力として使用するようにしてください。
+
+@param source JSON 形式の文字列を指定します。
+
+@param options オプションをハッシュで指定します。
+       指定可能なオプションは以下の通りです。
+
+: :max_nesting
+  入れ子になっているデータの最大の深さを指定します。
+  数値を指定すると深さのチェックを行います。偽を指定すると深さのチェックを行いません。
+  デフォルトは偽です。
+: :allow_nan
+  真を指定すると [[rfc:4627]] を無視してパース時に [[m:JSON::NaN]], [[m:JSON::Infinity]],
+  [[m:JSON::MinusInfinity]] を許可するようになります。デフォルトは真です。
+: :create_additions
+  偽を指定するとマッチするクラスや [[m:JSON.create_id]] が見つかっても付加情報を生成しません。
+  デフォルトは真です。
+
+@see [[m:JSON::Parser#parse]]
+

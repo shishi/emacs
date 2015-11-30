@@ -1,0 +1,10 @@
+kind=defined
+names=COMBINED_LOG_FORMAT
+visibility=public
+
+--- COMBINED_LOG_FORMAT -> String
+
+Apache のアクセスログで一般的に使われる形式を表す以下の文字列です。
+
+  "%h %l %u %t \"%r\" %s %b \"%{Referer}i\" \"%{User-agent}i\""
+

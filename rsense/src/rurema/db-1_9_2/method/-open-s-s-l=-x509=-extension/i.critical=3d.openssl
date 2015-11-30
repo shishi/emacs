@@ -1,0 +1,10 @@
+kind=defined
+names=critical=
+visibility=public
+
+---critical=(bool)
+その拡張領域の重要度(critical)を真偽値で設定します。
+
+@param bool 設定する重要度の真偽値
+@see [[c:OpenSSL::X509::Extension#critical?]]
+

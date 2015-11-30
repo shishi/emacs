@@ -1,0 +1,25 @@
+kind=defined
+names=start
+visibility=public
+
+--- start(account, password) -> self
+--- start(account, password) {|pop| .... } -> object
+サーバへ接続し、POP3のセッションを開始します。
+
+ブロックが渡された場合にはセッション開始後
+そのオブジェクト自身を引数としてブロックが呼びだされます。
+ブロック終了時にセッションを終了させます。
+
+ブロックが渡されなかった場合にはそのオブジェクト自身を返します。
+この場合セッションを終了させるのはユーザの責任となります。
+
+
+@param account アカウント名文字列
+@param password パスワード文字列
+@raise IOError セッションが既に開始されている場合に発生します
+@raise TimeoutError 接続がタイムアウトした場合に発生します
+@raise Net::POPAuthenticationError 認証に失敗した、もしくはAPOPを利用しようとしたがサーバがAPOPを提供していない場合に発生します
+@raise Net::POPError サーバが認証失敗以外のエラーを報告した場合に発生します
+@raise Net::POPBadResponse サーバからの応答がプロトコル上不正であった場合に発生します
+
+

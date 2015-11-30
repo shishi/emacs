@@ -1,0 +1,8 @@
+kind=defined
+names=lower,lower_window
+visibility=public
+
+--- lower(below = Tk::None)
+--- lower_window(below = Tk::None)
+
+

@@ -1,0 +1,22 @@
+kind=defined
+names=localtime
+visibility=public
+
+--- localtime     -> self
+
+タイムゾーンを地方時に設定します。
+
+このメソッドを呼び出した後は時刻変換を協定地方時として行ないます。
+
+[[m:Time#localtime]], [[m:Time#gmtime]] の挙動はシステムの
+[[man:localtime(3)]] の挙動に依存します。Time クラ
+スでは時刻を起算時からの経過秒数として保持していますが、ある特定の
+時刻までの経過秒は、システムがうるう秒を勘定するかどうかによって異
+なる場合があります。システムを越えて Time オブジェクトを受け
+渡す場合には注意する必要があります。
+
+  t = Time.gm(2000, "jan", 1, 20, 15, 1)
+  t.gmt?        #=> true
+  t.localtime   #=> Sat Jan 01 14:15:01 CST 2000
+  t.gmt?        #=> false
+

@@ -1,0 +1,16 @@
+kind=defined
+names=delete
+visibility=public
+
+--- delete(key) -> String | nil
+--- delete(key) {|key| ... } -> String | nil
+
+key に対応する環境変数を取り除きます。取り除かれた環境変数の
+値を返しますが、key に対応する環境変数が存在しない時には
+nil を返します。
+
+ブロックが与えられた時には key にマッチするものがなかった時
+に評価されます。
+
+@param key  環境変数名を指定します。 to_str で文字列化されます。
+

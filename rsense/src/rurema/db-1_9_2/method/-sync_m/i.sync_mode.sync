@@ -1,0 +1,7 @@
+kind=defined
+names=sync_mode
+visibility=public
+
+--- sync_mode -> Symbol
+現在のロック状態を返します。
+

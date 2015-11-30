@@ -1,0 +1,9 @@
+kind=defined
+names=expunge
+visibility=public
+
+--- expunge
+
+Sends a EXPUNGE command to permanently remove from the currently
+selected mailbox all messages that have the \Deleted flag set.
+

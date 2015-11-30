@@ -1,0 +1,9 @@
+kind=defined
+names=background_eval_str,background_eval_string,bg_eval_str,bg_eval_string
+visibility=public
+
+--- bg_eval_string(cmd, *eval_args)
+--- bg_eval_str(cmd, *eval_args)
+--- background_eval_string(cmd, *eval_args)
+--- background_eval_str(cmd, *eval_args)
+

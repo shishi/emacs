@@ -1,0 +1,10 @@
+kind=defined
+names=A_HORIZONTAL
+visibility=public
+
+--- A_HORIZONTAL -> Integer
+
+水平方向のハイライトを表す属性マスク用の定数です。
+
+@see [[man:curs_attr(3x)]]
+

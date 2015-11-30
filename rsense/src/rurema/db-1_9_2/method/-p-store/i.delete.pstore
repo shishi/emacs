@@ -1,0 +1,31 @@
+kind=defined
+names=delete
+visibility=public
+
+--- delete(name) -> object
+
+ルートnameに対応する値を削除します。
+
+@param name 探索するルート。
+
+@return 削除した値を返します。
+
+@raise PStore::Error トランザクション外でこのメソッドが呼び出された場合に発生します。
+
+例:
+
+  require 'pstore'
+  db = PStore.new("/tmp/foo")
+  db.transaction do
+    p db.roots       # => []
+    ary = db["root"] = [1,2,3,4]
+    ary[0] = [1,1.5]
+  end
+  
+  db.transaction do |pstore|
+    pstore.delete("root")       # => [[1, 1.5], 2, 3, 4]
+    pstore.delete("root")       # => nil
+  end
+
+@see [[m:Hash#delete]]
+

@@ -1,0 +1,18 @@
+kind=defined
+names=capitalize
+visibility=public
+
+--- capitalize -> Symbol
+
+シンボルに対応する文字列の先頭の文字を大文字に、残りを小文字に変更した
+シンボルを返します。
+
+(self.to_s.capitalize.intern と同じです。)
+
+  :foobar.capitalize     #=> :Foobar
+  :fooBar.capitalize     #=> :Foobar
+  :FOOBAR.capitalize     #=> :Foobar
+  :"foobar--".capitalize # => "Foobar--"
+
+@see [[m:String#capitalize]]
+

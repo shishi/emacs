@@ -1,0 +1,77 @@
+kind=defined
+names=fnmatch,fnmatch?
+visibility=public
+
+--- fnmatch(pattern, path, flags = 0)     -> bool 
+--- fnmatch?(pattern, path, flags = 0)    -> bool
+
+ファイル名のパターンマッチ [[man:fnmatch(3)]] を行います。
+path が pattern にマッチすれば真を返します。そうでない場合には false を返します。
+
+@param pattern パターンを文字列で指定します。ワイルドカードとして `*', `?', `[]' が使用できま
+               す。[[m:Dir.glob]] とは違って `{}' や `**/' は使用できません。
+//emlist{
+    %w(foo foobar bar).each {|f|
+      p File.fnmatch("foo*", f)
+    }
+    # => true
+         true
+         false
+//}
+
+@param path パスを表す文字列を指定します。
+
+@param flags パターンマッチの動作を以下で述べる定数の論理和で指定します。
+             flags のデフォルト値は0(フラグ指定なし)です。
+
+引数 flags に指定できる定数は以下のとおりです。
+これらの定数は [[c:File::Constants]] で定義されていますが、
+[[c:File]] クラスの親クラスの IO が [[c:File::Constants]] をインクルードしているので、
+これらの定数は File::FNM_NOESCAPE などとして参照可能です。
+
+: FNM_NOESCAPE
+ エスケープ文字 `\' を普通の文字とみなします。
+
+ デフォルトでは \ を伴う任意の文字はその文字にマッチしますが、
+ このフラグをつけると、\ が普通の文字として扱われます。
+//emlist{
+  p File.fnmatch('\a', 'a')                       # => true
+  p File.fnmatch('\a', '\a', File::FNM_NOESCAPE)  # => true
+//}
+ 前者で * は、エスケープされているので "*" そのものにマッチ
+ します。
+//emlist{
+  p File.fnmatch('\*', 'a')                       # => false
+  p File.fnmatch('\*', '\a', File::FNM_NOESCAPE)  # => true
+//}
+  単体の \ は、このフラグの有無に関わらず \ にマッチします。
+  (シングルクォート文字列中では \\ は、\ であることに注意)
+//emlist{
+  p File.fnmatch('\\', '\\')                      # => true
+  p File.fnmatch('\\', '\\', File::FNM_NOESCAPE)  # => true
+//}
+
+: FNM_PATHNAME
+ ワイルドカード `*', `?', `[]' が `/' にマッチしなくなります。
+ シェルのパターンマッチにはこのフラグが使用されています。
+//emlist{
+  p File.fnmatch('*', '/', File::FNM_PATHNAME)   # => false
+  p File.fnmatch('?', '/', File::FNM_PATHNAME)   # => false
+  p File.fnmatch('[/]', '/', File::FNM_PATHNAME) # => false
+//}
+
+: FNM_CASEFOLD
+ アルファベットの大小文字を区別せずにパターンマッチを行います。
+//emlist{
+  p File.fnmatch('A', 'a', File::FNM_CASEFOLD)   # => true
+//}
+
+: FNM_DOTMATCH
+ ワイルドカード `*', `?', `[]' が先頭の `.' にマッチするようになります。
+//emlist{
+  p File.fnmatch('*', '.', File::FNM_DOTMATCH)           # => true
+  p File.fnmatch('?', '.', File::FNM_DOTMATCH)           # => true
+  p File.fnmatch('[.]', '.', File::FNM_DOTMATCH)         # => true
+  p File.fnmatch('foo/*', 'foo/.', File::FNM_DOTMATCH)   # => true
+//}
+

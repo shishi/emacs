@@ -1,0 +1,8 @@
+kind=defined
+names=revoked
+visibility=public
+
+--- revoked -> [OpenSSL::X509::Revoked]
+自身が持っている失効した証明書の配列を返します。
+
+

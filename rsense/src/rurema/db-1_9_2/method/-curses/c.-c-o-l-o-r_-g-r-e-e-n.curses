@@ -1,0 +1,8 @@
+kind=defined
+names=COLOR_GREEN
+visibility=public
+
+--- COLOR_GREEN -> Integer
+
+緑を表す定数です。
+

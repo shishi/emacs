@@ -1,0 +1,8 @@
+kind=defined
+names=initialize
+visibility=public
+
+--- initialize -> ()
+
+このクラスを初期化します。
+

@@ -1,0 +1,8 @@
+kind=defined
+names=CP_UTF8
+visibility=public
+
+--- CP_UTF8 -> Fixnum
+
+文字コードの変換にUTF-8を利用することを示します（65001）。
+

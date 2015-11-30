@@ -1,0 +1,8 @@
+name=init_mark_stack
+private=true
+macro=false
+type=void
+filename=gc.c
+params=(void)
+
+

@@ -1,0 +1,14 @@
+superclass=Object
+type=class
+library=tk.variable
+extended=TkCore
+included=Tk,Comparable
+
+Tclの変数をアクセスするためのクラスです。
+((-Tclの配列としての振る舞いは仕様が不安定のようです-))
+
+  require "tk"
+  p TkVariable.new(0).value                     # => "0"
+  p TkVariable.new(1.2).value                   # => "1.2"
+  p TkVariable.new(["a", "b"]).value            # => {"0"=>"a", "1"=>"b"}
+  p TkVariable.new(1=>"a", 2=>"b").value        # => {"1"=>"a", "2"=>"b"}

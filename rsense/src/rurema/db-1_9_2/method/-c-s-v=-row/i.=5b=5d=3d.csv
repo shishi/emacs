@@ -1,0 +1,30 @@
+kind=defined
+names=[]=
+visibility=public
+
+--- []=(header_or_index, value)
+
+ヘッダの名前かインデックスでフィールドを探し、値をセットします。
+
+末尾より後ろのインデックスを指定すると、ヘッダの名前は nil になります。
+存在しないヘッダを指定すると、新しい要素を末尾に追加します。
+
+@param header_or_index ヘッダの名前かインデックスを指定します。
+
+@param value 値を指定します。
+
+@see [[m:CSV::Row#field]]
+
+--- []=(header, offset, value)
+
+ヘッダの名前でフィールドを探し、値をセットします。
+
+@param header ヘッダの名前を指定します。
+
+@param offset このインデックスより後で、ヘッダの名前を探します。
+              重複しているヘッダがある場合に便利です。
+
+@param value 値を指定します。
+
+@see [[m:CSV::Row#field]]
+

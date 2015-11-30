@@ -1,0 +1,10 @@
+kind=defined
+names=lstat
+visibility=public
+
+--- lstat -> File::Stat
+File.lstat(self.to_s) と同じです。
+
+@see [[m:File.lstat]]
+
+

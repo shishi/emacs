@@ -1,0 +1,17 @@
+kind=added
+names=install_files
+visibility=private 
+
+--- install_files(mfile, ifiles, map = nil, srcprefix = nil) -> []
+
+このメソッドは create_makefile, install_rb が使用します。
+内部用のメソッドです。
+
+@param mfile Makefile を表す [[c:File]] のインスタンスです。
+
+@param ifiles インストールするファイルのリストを指定します。
+
+@param map ???
+
+@param srcprefix ソースディレクトリを指定します。
+

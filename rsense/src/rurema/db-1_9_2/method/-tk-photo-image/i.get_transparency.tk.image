@@ -1,0 +1,6 @@
+kind=defined
+names=get_transparency
+visibility=public
+
+--- get_transparency(x, y)
+

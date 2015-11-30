@@ -1,0 +1,7 @@
+kind=defined
+names=pkgconfig_list
+visibility=public
+
+--- pkgconfig_list(mod)
+
+

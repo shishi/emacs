@@ -1,0 +1,9 @@
+kind=defined
+names=use_ssl?
+visibility=public
+
+--- use_ssl? -> bool
+新しく生成する [[c:Net::POP3]] オブジェクトが
+SSL による通信利用するならば真を返します。
+
+

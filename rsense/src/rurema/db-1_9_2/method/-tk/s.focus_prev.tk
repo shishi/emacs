@@ -1,0 +1,6 @@
+kind=defined
+names=focus_prev
+visibility=public
+
+--- focus_prev(win)
+

@@ -1,0 +1,7 @@
+kind=defined
+names=KEY_LL
+visibility=public
+
+--- KEY_LL -> Integer
+Home down or bottom (lower left)
+

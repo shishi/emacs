@@ -1,0 +1,10 @@
+kind=defined
+names=signing_key=
+visibility=public
+
+--- signing_key=(key)
+
+この Gem パッケージの署名に使用するキーをセットします。
+
+@param key 署名に使用するキーを指定します。
+

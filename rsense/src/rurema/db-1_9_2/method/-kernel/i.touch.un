@@ -1,0 +1,15 @@
+kind=added
+names=touch
+visibility=private 
+
+--- touch -> ()
+
+ファイルのアクセス時刻と修正時刻を現在の時刻に変更します。
+
+
+  ruby -run -e touch -- [OPTION] FILE
+
+  -v          詳細表示
+
+@see [[man:touch(1)]]
+

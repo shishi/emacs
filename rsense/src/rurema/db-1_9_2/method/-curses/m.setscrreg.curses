@@ -1,0 +1,17 @@
+kind=defined
+names=setscrreg
+visibility=public
+
+--- setscrreg(top, bottom) -> bool
+Set a software scrolling region in a window.
++top+ and +bottom+ are lines numbers of the margin.
+
+If this option and Curses.scrollok are enabled, an attempt to move off
+the bottom margin line causes all lines in the scrolling region
+to scroll one line in the direction of the first line.
+Only the text of the window is scrolled.
+
+@param top 上方向のマージン行数を指定します。
+
+@param bottom 下方向のマージン行数を指定します。
+

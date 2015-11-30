@@ -1,0 +1,8 @@
+kind=defined
+names=write
+visibility=public
+
+--- write(file, mode = None)
+
+
+

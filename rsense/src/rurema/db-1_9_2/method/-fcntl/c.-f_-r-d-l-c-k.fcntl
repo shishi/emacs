@@ -1,0 +1,7 @@
+kind=defined
+names=F_RDLCK
+visibility=public
+
+--- F_RDLCK -> Integer
+読み出しリースを取得します。
+

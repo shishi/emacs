@@ -1,0 +1,7 @@
+kind=defined
+names=KEY_SBEG
+visibility=public
+
+--- KEY_SBEG -> Integer
+Shifted beginning key
+

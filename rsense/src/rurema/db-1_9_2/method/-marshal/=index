@@ -1,0 +1,8 @@
+.dump	Marshal.#dump
+.load	Marshal.#load
+.restore	Marshal.#load
+#dump	Marshal.#dump
+#load	Marshal.#load
+#restore	Marshal.#load
+:MAJOR_VERSION	Marshal::MAJOR_VERSION
+:MINOR_VERSION	Marshal::MAJOR_VERSION

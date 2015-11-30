@@ -1,0 +1,8 @@
+superclass=Resolv=DNS=Resource=ANY
+type=class
+library=resolv
+extended=
+included=
+
+DNS クエリーのクラス IN、タイプ ANY に対応する
+クラスです。

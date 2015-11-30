@@ -1,0 +1,11 @@
+kind=defined
+names=config
+visibility=public
+
+--- config
+
+Get the configuration of the current server.
+
+If there is no current server, this returns the default configuration.
+See #current_server and DRbServer::make_config.
+

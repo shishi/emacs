@@ -1,0 +1,12 @@
+name=rehash
+private=true
+macro=false
+type=void
+filename=st.c
+params=(register st_table *table)
+
+
+テーブルの全要素に対しハッシュ値を計算しなおして
+テーブルを再構成する。エントリに対して要素の数が
+増えすぎ、テーブルが狭くなってきたときに発生する。
+

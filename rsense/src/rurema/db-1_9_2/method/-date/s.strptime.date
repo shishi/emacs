@@ -1,0 +1,17 @@
+kind=defined
+names=strptime
+visibility=public
+
+--- strptime(str = '-4712-01-01', format = '%F', start = Date::ITALY) -> Date
+与えられた雛型で日付表現を解析し、
+その情報に基づいて日付オブジェクトを生成します。
+
+[[m:Date._strptime]] も参照してください。
+また [[man:strptime(3)]]、および [[m:Date#strftime]] も参照してください。
+
+@param str 日付をあらわす文字列
+@param format 書式
+@param start グレゴリオ暦をつかい始めた日をあらわすユリウス日
+@raise ArgumentError 正しくない日付になる組み合わせである場合に発生します。
+
+

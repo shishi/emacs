@@ -1,0 +1,8 @@
+kind=defined
+names=serve
+visibility=public
+
+--- serve
+Call this after you have added all you handlers to the server.
+This method starts the server to listen for XML-RPC requests and answer them.
+

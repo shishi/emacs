@@ -1,0 +1,10 @@
+kind=defined
+names=codepoints,each_codepoint
+visibility=public
+
+--- each_codepoint{|c| ... }     -> self
+--- codepoints{|c| ... }         -> self
+--- each_codepoint               -> Enumerator
+--- codepoints                   -> Enumerator
+
+IO の各コードポイントに対して繰り返します。

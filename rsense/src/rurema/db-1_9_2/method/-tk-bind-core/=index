@@ -1,0 +1,4 @@
+#bind	TkBindCore#bind
+#bind_append	TkBindCore#bind_append
+#bind_remove	TkBindCore#bind_remove
+#bindinfo	TkBindCore#bindinfo

@@ -1,0 +1,39 @@
+superclass=
+type=module
+library=mutex_m
+extended=
+included=
+
+スレッド同期機構である [[c:Mutex]] のモジュール版です。クラスに
+[[m:Module#include]] することでそのクラスに Mutex 機能を持たせることができます。
+また、普通のオブジェクトを [[m:Object#extend]] により Mutex にする事ができます。
+
+このモジュールによるロックは再入不可能です。再入可能な同等品が必要な場合は
+[[c:Sync_m]] の利用を考えてください。
+
+「mu_」の付かないメソッド([[m:Mutex_m#lock]], [[m:Mutex_m#synchronize]], 
+[[m:Mutex_m#locked?]], [[m:Mutex_m#try_lock]], [[m:Mutex_m#unlock]])
+はモジュールにincludeした場合には定義されません。
+
+[[ruby-list:1991]]
+
+=== 例
+クラスに [[m:Module#include]] する例
+  class Foo
+    include Mutex_m
+    ...
+  end
+  obj = Foo.new
+  obj.synchronize do 
+    # 危険領域(critical section)
+    ...
+  end
+
+オブジェクトに [[m:Object#extend]] する例
+  require "mutex_m"
+  obj = Object.new
+  obj.extend(Mutex_m)
+  obj.lock
+  # 危険領域(critical section)  
+  ... 
+  obj.unlock

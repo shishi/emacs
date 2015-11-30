@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=
+classes=Gem=Package=FSyncDir
+is_sublibrary=true
+
+

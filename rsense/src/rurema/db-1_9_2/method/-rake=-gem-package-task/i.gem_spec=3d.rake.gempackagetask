@@ -1,0 +1,10 @@
+kind=defined
+names=gem_spec=
+visibility=public 
+
+--- gem_spec=(gem_spec)
+
+gemspec をセットします。
+
+@param gem_spec [[c:Gem::Specification]] のインスタンスを指定します。
+

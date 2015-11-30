@@ -1,0 +1,10 @@
+kind=defined
+names=*
+visibility=public
+
+--- *(m) -> Matrix
+
+行列mを右から乗じた行列を返します。
+
+@param m 右から乗算する行列。乗算が定義可能な行列を渡します。
+

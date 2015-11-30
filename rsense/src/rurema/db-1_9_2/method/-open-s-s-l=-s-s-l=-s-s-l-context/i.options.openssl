@@ -1,0 +1,9 @@
+kind=defined
+names=options
+visibility=public
+
+--- options -> Integer | nil
+設定されているオプションフラグを返します。
+
+@see [[m:OpenSSL::SSL::SSLContext#options=]]
+

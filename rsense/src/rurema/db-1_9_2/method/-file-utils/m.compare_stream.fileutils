@@ -1,0 +1,12 @@
+kind=defined
+names=compare_stream
+visibility=public
+
+--- compare_stream(io_a, io_b) -> bool
+
+[[c:IO]] オブジェクト io_a と io_b の内容が同じなら真を返します。
+
+@param io_a [[c:IO]] オブジェクト。
+
+@param io_b [[c:IO]] オブジェクト。
+

@@ -1,0 +1,8 @@
+kind=defined
+names=MIN_10_EXP
+visibility=public
+
+--- MIN_10_EXP -> Fixnum
+
+最小の 10 進の指数
+

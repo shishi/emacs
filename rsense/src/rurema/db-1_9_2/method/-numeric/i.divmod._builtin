@@ -1,0 +1,32 @@
+kind=defined
+names=divmod
+visibility=public
+
+--- divmod(other)    -> [Numeric]
+
+self を other で割った商 q と余り r を、
+[q, r] という 2 要素の配列にして返します。
+商 q は常に整数ですが、余り r は整数であるとは限りません。
+
+ここで、商 q と余り r は、
+
+  * self == other * q + r  
+と
+  * other > 0 のとき:  0     <= r < other
+  * other < 0 のとき:  other <  r <= 0
+  * q は整数
+をみたす数です。
+divmod が返す商は [[m:Numeric#div]] と同じです。
+また余りは、[[m:Numeric#modulo]] と同じです。
+このメソッドは、メソッド / と % によって定義されています。
+
+@param other 自身を割る数を指定します。
+
+   11.divmod(3)         #=> [3, 2]
+   (11.5).divmod(3.5)   #=> [3, 1.0]
+   11.divmod(-3)        #=> [-4, -1]
+   11.divmod(3.5)       #=> [3, 0.5]
+   (-11).divmod(3.5)    #=> [-4, 3.0]
+
+@see [[m:Numeric#div]], [[m:Numeric#modulo]]
+

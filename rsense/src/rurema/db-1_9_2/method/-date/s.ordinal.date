@@ -1,0 +1,18 @@
+kind=defined
+names=ordinal
+visibility=public
+
+--- ordinal(year = -4712, yday = 1, start = Date::ITALY) -> Date
+年間通算日 (年日付) に相当する日付オブジェクトを生成します。
+
+年の日は負、
+または正の数でなければなりません (負のときは最後からの序数)。
+零であってはなりません。
+
+[[m:Date.jd]]、および [[m:Date.new]] も参照してください。
+
+@param year 年
+@param yday 年の日
+@param start グレゴリオ暦をつかい始めた日をあらわすユリウス日
+@raise ArgumentError 正しくない日付になる組み合わせである場合に発生します。
+

@@ -1,0 +1,10 @@
+name=rb_cvar_declear
+private=false
+macro=false
+type=void
+filename=variable.c
+params=(VALUE klass, ID name, VALUE val)
+
+
+klass のクラス変数 name に val を代入します。
+

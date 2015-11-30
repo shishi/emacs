@@ -1,0 +1,20 @@
+kind=defined
+names=new,open
+visibility=public
+
+--- new(path)               -> Dir
+--- open(path)              -> Dir
+--- open(path) {|dir| ...}  -> object
+
+path に対するディレクトリストリームをオープンして返します。
+
+ブロックを指定して呼び出した場合は、ディレクトリストリームを
+引数としてブロックを実行します。ブロックの実行が終了すると、
+ディレクトリは自動的にクローズされます。
+ブロックの実行結果を返します。
+
+@param path ディレクトリのパスを文字列で指定します。
+
+@raise Errno::EXXX オープンに失敗した場合に発生します。
+
+

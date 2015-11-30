@@ -1,0 +1,10 @@
+kind=defined
+names=test_files=
+visibility=public
+
+--- test_files=(files)
+
+ユニットテストのファイルのリストをセットします。
+
+@param files ユニットテストのファイルのリストを指定します。
+

@@ -1,0 +1,8 @@
+kind=defined
+names=latest_cache_data
+visibility=public 
+
+--- latest_cache_data -> Hash
+
+最新のキャッシュデータを返します。
+

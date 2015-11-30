@@ -1,0 +1,8 @@
+name=errat_setter
+private=true
+macro=false
+type=void
+filename=eval.c
+params=(VALUE val, ID id, VALUE *var)
+
+

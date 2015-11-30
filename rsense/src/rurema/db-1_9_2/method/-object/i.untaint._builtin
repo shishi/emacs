@@ -1,0 +1,16 @@
+kind=defined
+names=untaint
+visibility=public
+
+--- untaint -> self
+
+オブジェクトの「汚染マーク」を取り除きます。
+
+汚染マークを取り除くことによる危険性はプログラマが責任を負う必要が
+あります。
+
+オブジェクトの汚染に関しては[[d:spec/safelevel]]を参照してください。
+
+@raise SecurityError セキュリティレベルが3以上の時にこのメソッドを使用すると発生します。
+@see [[m:Object#taint]],[[m:Object#tainted?]]
+

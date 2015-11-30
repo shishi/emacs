@@ -1,0 +1,6 @@
+kind=defined
+names=set_no_event_wait
+visibility=public
+
+--- set_no_event_wait(*args)
+

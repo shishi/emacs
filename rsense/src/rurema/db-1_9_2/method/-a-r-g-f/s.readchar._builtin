@@ -1,0 +1,34 @@
+kind=defined
+names=readchar
+visibility=public
+
+--- readchar -> Integer
+ARGFから 1 文字読み込んで、その文字に対応する Fixnum を返します。EOF に到達した時には EOFErrorを発生します。
+
+@raise EOFError EOFに達した時発生する
+
+  # カレントディレクトリから適当にファイルを選ぶ
+  ARGV.replace(
+    Dir.glob("*").select{|name| FileTest.file?(name)}
+  )
+
+  begin
+    c = ARGF.readchar
+    printf("%4c is %4d\n", c, c)
+  rescue EOFError
+    p $!
+    break
+  end while true
+
+  # 例
+  #...
+  #=>    t is  116
+  #=>    a is   97
+  #=>    m is  109
+  #=>    a is   97
+  #=> 
+  #=>  is   10
+  #<EOFError: end of file reached>
+
+@see [[m:ARGF.getc]]
+

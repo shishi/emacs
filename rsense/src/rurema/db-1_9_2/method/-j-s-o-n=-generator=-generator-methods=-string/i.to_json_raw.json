@@ -1,0 +1,10 @@
+kind=defined
+names=to_json_raw
+visibility=public 
+
+--- to_json_raw -> String
+
+自身に対して [[m:String#to_json_raw_object]] を呼び出して [[m:Hash#to_json]] した結果を返します。
+
+@see [[m:String#to_json_raw_object]], [[m:Hash#to_json]]
+

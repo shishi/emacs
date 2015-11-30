@@ -1,0 +1,23 @@
+kind=defined
+names=lineno=
+visibility=public
+
+--- lineno=(number)
+
+現在の行番号を number にセットします。 [[m:$.]] は次回の読み込みの時に更新されます。
+
+@param number 行番号を整数で指定します。
+
+@raise IOError 読み込み用にオープンされていなければ発生します。
+
+  f = File.new("testfile")
+  f.gets                     #=> "This is line one\n"
+  $.                         #=> 1
+  f.lineno = 1000
+  f.lineno                   #=> 1000
+  $.                         #=> 1
+  f.gets                     #=> "This is line two\n"
+  $.                         #=> 1001
+
+@see [[m:$.]]
+

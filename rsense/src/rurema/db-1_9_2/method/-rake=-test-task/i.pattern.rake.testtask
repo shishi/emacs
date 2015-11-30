@@ -1,0 +1,10 @@
+kind=defined
+names=pattern
+visibility=public 
+
+--- pattern -> String
+
+テストファイルにマッチする glob パターンを返します。
+
+デフォルトは 'test/test*.rb' です。
+

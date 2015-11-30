@@ -1,0 +1,8 @@
+methods=
+sublibraries=
+requires=digest.rmd160,digest,digest.sha1,digest.sha2,digest.md5
+classes=Digest=SHA1
+is_sublibrary=true
+
+NIST (the US' National Institute of Standards and Technology) のSHA-1
+Secure Hash Algorithmを実装するクラスを提供するライブラリです。

@@ -1,0 +1,10 @@
+name=local_id
+private=true
+macro=false
+type=int
+filename=parse.y
+params=(ID id)
+
+
+現在のスコープでローカル変数 id が定義されていれば真。
+

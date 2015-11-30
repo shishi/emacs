@@ -1,0 +1,6 @@
+kind=defined
+names=safeip_find_in_access_path
+visibility=public
+
+--- safeip_find_in_access_path(dir)
+

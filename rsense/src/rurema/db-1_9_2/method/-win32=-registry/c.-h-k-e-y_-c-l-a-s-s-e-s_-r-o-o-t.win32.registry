@@ -1,0 +1,17 @@
+kind=defined
+names=HKEY_CLASSES_ROOT,HKEY_CURRENT_CONFIG,HKEY_CURRENT_USER,HKEY_DYN_DATA,HKEY_LOCAL_MACHINE,HKEY_PERFORMANCE_DATA
+visibility=public
+
+--- HKEY_CLASSES_ROOT
+--- HKEY_CURRENT_USER
+--- HKEY_LOCAL_MACHINE
+--- HKEY_PERFORMANCE_DATA
+--- HKEY_CURRENT_CONFIG
+--- HKEY_DYN_DATA
+
+それぞれの定義済キーを表す Win32::Registry オブジェクトです。
+
+詳細は以下の MSDN Library を参照してください。
+
+ * Predefined Keys: [[url:http://msdn.microsoft.com/library/en-us/sysinfo/base/predefined_keys.asp]]
+

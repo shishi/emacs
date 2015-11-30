@@ -1,0 +1,16 @@
+kind=defined
+names=>
+visibility=public
+
+--- >(other)  -> bool
+比較演算子。数値として大きいか判定します。
+
+@param other 比較対象の数値
+@return      self よりも other の方が小さい場合 true を返します。
+             そうでなければ false を返します。
+
+例:
+
+  p 3.14 >  3.1415  #=> false
+  p 3.14 >= 3.1415  #=> false
+

@@ -1,0 +1,13 @@
+kind=defined
+names=select!
+visibility=public
+
+--- select! {|item| block } -> self | nil
+--- select! -> Enumerator
+
+Invokes the block passing in successive elements from
+<i>array</i>, deleting elements for which the block returns a
+false value.  but returns <code>nil</code> if no changes were
+made.  Also see <code>Array#keep_if</code>
+
+@see [[m:Array#keep_if]]

@@ -1,0 +1,26 @@
+kind=defined
+names=div
+visibility=public
+
+--- div(other)    -> Integer
+
+self を other で割った整数の商 q を返します。
+
+ここで、商 q と余り r は、それぞれ
+
+  * self == other * q + r  
+と
+  * other > 0 のとき:  0     <= r < other
+  * other < 0 のとき:  other <  r <= 0
+  * q は整数
+をみたす数です。
+商に対応する余りは [[m:Numeric#modulo]] で求められます。
+div はメソッド / の呼び出しとして定義されています。
+
+@param other 自身を割る数を指定します。
+
+  p 3.div(2) # => 1
+  p (-3).div(2) # => -2
+  p (-3.0).div(2) # => -2
+
+

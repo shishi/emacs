@@ -1,0 +1,11 @@
+kind=defined
+names=V_ERR_KEYUSAGE_NO_CERTSIGN
+visibility=public
+
+--- V_ERR_KEYUSAGE_NO_CERTSIGN -> Integer
+署名できない証明書で署名しようしとたことを意味します。
+
+[[m:OpenSSL::X509::Store#error]] や
+[[m:OpenSSL::X509::StoreContext#error]] のエラーコードとして
+使われます。
+

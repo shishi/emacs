@@ -1,0 +1,8 @@
+name=rb_mod_append_features
+private=true
+macro=false
+type=VALUE
+filename=eval.c
+params=(VALUE module, VALUE include)
+
+

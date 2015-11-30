@@ -1,0 +1,11 @@
+name=rb_define_global_const
+private=false
+macro=false
+type=void
+filename=variable.c
+params=(const char *name, VALUE val)
+
+
+トップレベル (現在は [[c:Object]]) の定数 name を初期値 val で
+定義します。既に同名の定数が定義されていたら警告します。
+

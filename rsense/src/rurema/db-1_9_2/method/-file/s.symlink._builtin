@@ -1,0 +1,17 @@
+kind=defined
+names=symlink
+visibility=public
+
+--- symlink(old, new)    -> 0
+
+old への new という名前のシンボリックリンクを生成します。
+
+シンボリックリンクの作成に成功すれば 0 を返します。失敗した場合は
+例外 [[c:Errno::EXXX]] が発生します。
+
+@param old ファイル名を表す文字列を指定します。 
+
+@param new シンボリックリンクを表す文字列を指定します。 
+
+@raise Errno::EXXX 失敗した場合に発生します。
+

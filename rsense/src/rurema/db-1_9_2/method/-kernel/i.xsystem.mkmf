@@ -1,0 +1,13 @@
+kind=added
+names=xsystem
+visibility=private 
+
+--- xsystem(command) -> ()
+
+[[m:Kernel.#system]] と同じですが、コマンドの出力は(標準出力、標準エラー
+出力ともに)ログファイルに出力します。ログファイル名は mkmf.log です。
+
+@param command コマンドを指定します。
+
+@see [[m:Kernel.#system]]
+

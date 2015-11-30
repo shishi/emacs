@@ -1,0 +1,7 @@
+superclass=WEBrick=HTTPStatus=ServerError
+type=class
+library=webrick.httpstatus
+extended=
+included=
+
+HTTP のステータスコード 505 HTTP Version Not Supported を表すクラスです。

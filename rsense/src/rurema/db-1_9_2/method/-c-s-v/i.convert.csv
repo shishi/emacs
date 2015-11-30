@@ -1,0 +1,19 @@
+kind=defined
+names=convert
+visibility=public
+
+--- convert(name)
+--- convert{|field| ... }
+--- convert{|field, field_info| ... }
+
+組み込みの [[m:CSV::Converters]] を変換器として利用するために使います。
+また、独自の変換器を追加することもできます。
+
+ブロックパラメータを一つ受け取るブロックを与えた場合は、そのブロックは
+フィールドを受け取ります。ブロックパラメータを二つ受け取るブロックを与
+えた場合は、そのブロックは、フィールドと [[c:CSV::FieldInfo]] のインス
+タンスを受け取ります。ブロックは変換後の値かフィールドそのものを返さな
+ければなりません。
+
+@param name 変換器の名前を指定します。
+

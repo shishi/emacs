@@ -1,0 +1,34 @@
+kind=added
+names=to_yaml
+visibility=public
+
+--- to_yaml(opts = {})
+オブジェクトをYAMLドキュメントに変換します。
+
+@param opts YAMLドキュメント出力の際のオプションを指定する。
+
+
+  require 'yaml'
+  
+  h = {
+    :ugo => 17,
+    :hoge => "fuga",
+  }
+  
+  print h.to_yaml
+  #=> ---
+  #=> :ugo: 17
+  #=> :hoge: fuga
+  
+  class MyDog
+    attr_accessor :name, :age
+  end
+  
+  c = MyDog.new
+  c.name = "Pochi"
+  c.age = 3
+  print c.to_yaml
+  #=> --- !ruby/object:MyDog
+  #=> age: 3
+  #=> name: Pochi
+

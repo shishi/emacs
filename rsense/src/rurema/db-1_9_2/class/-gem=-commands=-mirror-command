@@ -1,0 +1,7 @@
+superclass=Gem=Command
+type=class
+library=rubygems.commands.mirror_command
+extended=
+included=
+
+リモートリポジトリをローカルリポジトリにミラーするためのクラスです。

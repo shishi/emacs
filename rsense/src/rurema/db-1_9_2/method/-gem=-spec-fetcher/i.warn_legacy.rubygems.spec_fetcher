@@ -1,0 +1,16 @@
+kind=defined
+names=warn_legacy
+visibility=public
+
+--- warn_legacy(exception){ ... } -> bool
+
+[[m:Gem::SpecFetcher#fetch]] で例外が発生した場合に呼び出されます。
+
+RubyGems 1.2 未満で作成したリポジトリにアクセスした事が原因で例外が発生した場合には
+警告が表示されます。またこの場合、ブロックを与えていればブロックは評価されます。
+
+それ以外の原因で例外が発生した場合は偽を返します。
+
+@param exception 例外オブジェクトを指定します。
+
+@see [[m:Gem::SpecFetcher#fetch]]

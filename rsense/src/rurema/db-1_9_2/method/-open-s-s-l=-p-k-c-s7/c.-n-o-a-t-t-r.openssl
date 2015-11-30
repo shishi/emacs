@@ -1,0 +1,10 @@
+kind=defined
+names=NOATTR
+visibility=public
+
+--- NOATTR -> Integer
+PKCS#7 autenticatedAttributes(署名した時間などの情報)
+を省略します。
+
+[[m:OpenSSL::PKCS7.sign]] で利用可能なフラグです。
+

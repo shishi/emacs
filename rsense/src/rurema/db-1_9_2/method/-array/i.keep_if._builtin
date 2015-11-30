@@ -1,0 +1,13 @@
+kind=defined
+names=keep_if
+visibility=public
+
+--- keep_if {|item| block } -> self
+--- keep_if -> Enumerator
+
+ブロックが false を返した要素を削除します。
+
+   a = %w{ a b c d e f }
+   a.keep_if {|v| v =~ /[aeiou]/}   #=> ["a", "e"]
+
+@see [[m:Array#select!]]

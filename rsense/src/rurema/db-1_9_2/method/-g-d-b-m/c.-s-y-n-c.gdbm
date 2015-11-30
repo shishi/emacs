@@ -1,0 +1,13 @@
+kind=defined
+names=SYNC
+visibility=public
+
+--- SYNC -> Fixnum
+
+[[m:GDBM.open]] の第3引数に指定します。
+
+書き込みの結果が、ディスク上のファイルにすぐに反映されます。
+libgdbm version 1.8.0 以前のデフォルトモードです。
+
+この定数は libgdbm version 1.8.0 以降より有効です。
+

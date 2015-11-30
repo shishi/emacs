@@ -1,0 +1,13 @@
+kind=defined
+names=nil?
+visibility=public
+
+--- nil? -> bool
+
+レシーバが nil であれば真を返します。
+
+  p false.nil? #=> false
+  p nil.nil? #=> true
+
+@see [[c:NilClass]]
+

@@ -1,0 +1,6 @@
+kind=added
+names=decode_sjis
+visibility=public
+
+--- decode_sjis(content)
+

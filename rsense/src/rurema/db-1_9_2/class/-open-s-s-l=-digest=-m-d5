@@ -1,0 +1,7 @@
+superclass=OpenSSL=Digest
+type=class
+library=openssl
+extended=
+included=
+
+ハッシュ関数 MD5 を表すクラス

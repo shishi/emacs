@@ -1,0 +1,29 @@
+kind=defined
+names=ole_func_methods
+visibility=public
+
+--- ole_func_methods -> [WIN32OLE_METHOD]
+オブジェクトのファンクション情報を[[c:WIN32OLE_METHOD]]の配列として返し
+ます。
+
+ole_func_methodsメソッドは、OLEオートメーションサーバのメソッドのうちファ
+ンクション（何らかの機能的な操作）に属するものを[[c:WIN32OLE_METHOD]]の
+配列として返します。
+
+@return [[c:WIN32OLE_METHOD]]の配列。
+@raise WIN32OLERuntimeError オートメーションサーバの呼び出しに失敗しました。
+                            型情報ライブラリ(TypeLib)が提供されていない場合などに発生します。
+
+   excel = WIN32OLE.new('Excel.Application')
+   excel.visible = true
+   excel.ole_func_methods.each do |fun|
+     if fun.name.upcase == 'QUIT'
+       excel._invoke(fun.dispid, [], [])
+       break
+     end
+   end
+
+@see [[m:WIN32OLE#ole_methods]]
+@see [[m:WIN32OLE#ole_get_methods]]
+@see [[m:WIN32OLE#ole_put_methods]]
+

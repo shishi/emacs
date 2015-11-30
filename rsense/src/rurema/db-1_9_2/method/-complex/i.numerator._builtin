@@ -1,0 +1,15 @@
+kind=defined
+names=numerator
+visibility=public
+
+--- numerator -> Complex
+
+分子を返します。
+
+例:
+
+  Complex('1/2+2/3i').numerator # => (3+4i)
+  Complex(3).numerator          # => (3+0i)
+
+@see [[c:Complex#denominator]]
+

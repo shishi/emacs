@@ -1,0 +1,11 @@
+kind=defined
+names===
+visibility=public
+
+--- ==(other)        -> true | false
+
+other が同じシンボルの時に真を返します。
+そうでない場合は偽を返します。
+
+@param other 比較対象のシンボルを指定します。
+

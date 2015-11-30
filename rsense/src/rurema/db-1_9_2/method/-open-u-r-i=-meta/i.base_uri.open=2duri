@@ -1,0 +1,15 @@
+kind=defined
+names=base_uri
+visibility=public
+
+--- base_uri    -> URI
+
+リソースの実際の URI を URI オブジェクトとして返します。
+リダイレクトされた場合は、リダイレクトされた後のデータが存在する URI を返します。
+
+例:
+
+  require 'open-uri'
+  p open('http://www.ruby-lang.org/').base_uri
+  #=> #<URI::HTTP:0xb7043aa0 URL:http://www.ruby-lang.org/en/>
+

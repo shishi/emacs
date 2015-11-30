@@ -1,0 +1,13 @@
+kind=defined
+names=open_timeout
+visibility=public
+
+--- open_timeout -> Integer
+接続時に待つ最大秒数を返します。
+
+この秒数たってもコネクションが
+開かなければ例外 [[c:TimeoutError]] を発生します。
+デフォルトは 30 (秒)です。
+
+@see [[m:Net::HTTP#read_timeout]], [[m:Net::HTTP#open_timeout=]]
+

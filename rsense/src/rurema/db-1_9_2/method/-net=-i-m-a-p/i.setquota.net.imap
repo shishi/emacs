@@ -1,0 +1,12 @@
+kind=defined
+names=setquota
+visibility=public
+
+--- setquota(mailbox, quota)
+
+Sends a SETQUOTA command along with the specified mailbox and
+quota.  If quota is nil, then quota will be unset for that
+mailbox.  Typically one needs to be logged in as server admin
+for this to work.  The IMAP quota commands are described in
+[[RFC:2087]].
+

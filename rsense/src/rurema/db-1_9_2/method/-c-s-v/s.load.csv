@@ -1,0 +1,24 @@
+kind=defined
+names=load
+visibility=public
+
+--- load(io_or_str, options = Hash.new) -> Array
+
+このメソッドは [[m:CSV.dump]] で出力されたデータを読み込みます。
+
+csv_load という名前のクラスメソッドを追加すると、データを読み込む方法を
+カスタマイズすることができます。csv_load メソッドはメタデータ、ヘッダ、行
+の三つのパラメータを受けとります。そしてそれらを元にして復元したオブジェクトを
+返します。
+
+Remember that all fields will be Strings after this load.  If you need
+something else, use +options+ to setup converters or provide a custom
+csv_load() implementation.
+
+
+@param io_or_str [[c:IO]] か [[c:String]] のインスタンスを指定します。
+
+@param options [[m:CSV.new]] のオプションと同じオプションを指定できます。
+
+@see [[m:CSV.new]], [[m:CSV.dump]]
+

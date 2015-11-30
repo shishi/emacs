@@ -1,0 +1,34 @@
+kind=defined
+names=def_system_command
+visibility=public
+
+--- def_system_command(command, path = command) -> nil
+
+Shell のメソッドとして command を登録します.
+
+OS上のコマンドを実行するにはまず, Shellのメソッドとして定義します.
+注) コマンドを定義しなくとも直接実行できる [[m:Shell#system]] コマンドもあります.
+
+@param command Shell のメソッドとして定義するコマンドを文字列で指定します。
+
+@param path command のパスを指定します。
+            指定しない場合はcommand と同じになります。
+
+例)
+  Shell.def_system_command "ls"
+  # ls を定義
+
+  Shell.def_system_command "sys_sort", "sort"
+  # sortコマンドをsys_sortとして定義
+
+  sh = Shell.new
+  sh.transact {
+    ls.each { |l|
+      puts l
+    }
+    (ls("-l") | sys_sort("-k 5")).each {|l|
+      puts l
+    }
+  }
+
+

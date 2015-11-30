@@ -1,0 +1,13 @@
+kind=defined
+names=inner_product
+visibility=public
+
+--- inner_product(v) -> Float
+
+ベクトル v との内積を返します。
+
+@param v 内積を求めるベクトル
+
+@raise ExceptionForMatrix::ErrDimensionMismatch 自分自身と引数のベクト
+       ルの要素の数(次元)が異なっていたときに発生します。
+

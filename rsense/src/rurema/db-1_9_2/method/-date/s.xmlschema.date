@@ -1,0 +1,13 @@
+kind=defined
+names=xmlschema
+visibility=public
+
+--- xmlschema(str = '-4712-01-01', start = Date::ITALY) -> Date
+XML Schema による書式の日付を解析し、
+その情報に基づいて日付オブジェクトを生成します。
+
+[[m:Date._xmlschema]] も参照してください。
+
+@param str 日付をあらわす文字列
+@param start グレゴリオ暦をつかい始めた日をあらわすユリウス日
+

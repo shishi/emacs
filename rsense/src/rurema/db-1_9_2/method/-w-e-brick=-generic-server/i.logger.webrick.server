@@ -1,0 +1,9 @@
+kind=defined
+names=logger
+visibility=public
+
+--- logger    -> WEBrick::Log
+
+生成する時に指定された、自身をロギングする [[c:WEBrick::Log]] のインス
+タンスを返します。
+

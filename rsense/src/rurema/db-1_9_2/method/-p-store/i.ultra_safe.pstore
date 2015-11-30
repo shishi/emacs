@@ -1,0 +1,11 @@
+kind=defined
+names=ultra_safe
+visibility=public
+
+--- ultra_safe -> bool
+真であれば、パフォーマンスと引き換えにファイル更新の衝突を避けることができます。
+デフォルトは偽です。
+
+このフラグの効果があるのは一部のプラットフォームだけです。
+(e.g. all POSIX platforms: Linux, MacOS X, FreeBSD, etc)
+

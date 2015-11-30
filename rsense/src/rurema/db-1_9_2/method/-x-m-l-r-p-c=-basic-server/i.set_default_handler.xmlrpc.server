@@ -1,0 +1,14 @@
+kind=defined
+names=set_default_handler
+visibility=public
+
+--- set_default_handler ( &handler )
+Sets handler as the default-handler, which is called when
+no handler for a method-name is found. handler is a code-block.
+The default-handler is called with the (XML-RPC) method-name as first argument, and
+the other arguments are the parameters given by the client-call.
+
+If no block is specified the default of XMLRPC::BasicServer is used, which raises a
+XMLRPC::FaultException saying "method missing".
+
+

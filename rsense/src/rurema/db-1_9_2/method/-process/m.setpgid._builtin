@@ -1,0 +1,19 @@
+kind=defined
+names=setpgid
+visibility=public
+
+--- setpgid(pid, pgrp)    -> 0
+
+プロセス ID が pid であるプロセスのプロセスグループを pgrp に設定します。
+
+@param pid プロセス ID を整数で指定します。pid が 0 の時はカレントプロセスの ID を指定したのと同じです。
+           プロセスグループの設定に成功した場合は 0 を返します。
+
+@param pgrp プロセスグループ ID を整数で指定します。pgrp が 0 の時は pid を指定したのと同じです。
+
+@raise Errno::EXXX プロセスグループの設定に失敗した場合に発生します。
+
+@raise NotImplementedError メソッドが現在のプラットフォームで実装されていない場合に発生します。
+
+@see [[man:setpgid(2)]]
+

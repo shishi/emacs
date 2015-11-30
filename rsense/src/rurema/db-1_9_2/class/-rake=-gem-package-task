@@ -1,0 +1,7 @@
+superclass=Rake=PackageTask
+type=class
+library=rake.gempackagetask
+extended=
+included=
+
+Gem Spec ファイルを元にして Gem パッケージを作成するタスクを定義するためのクラスです。

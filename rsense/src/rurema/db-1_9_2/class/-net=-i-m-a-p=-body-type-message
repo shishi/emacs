@@ -1,0 +1,8 @@
+superclass=Struct
+type=class
+library=net.imap
+extended=
+included=
+
+Net::IMAP::BodyTypeMessage represents MESSAGE/RFC822 body
+ structures of messages.

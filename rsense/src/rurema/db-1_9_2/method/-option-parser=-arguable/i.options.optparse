@@ -1,0 +1,28 @@
+kind=defined
+names=options
+visibility=public
+
+--- options                -> OptionParser
+--- options{|opt| ... }    -> object | nil
+
+自身をパースするための [[c:OptionParser]] オブジェクトを返します。
+初回呼び出し時に自動的に生成されます。
+この [[m:OptionParser#default_argv]] には self がセットされています。
+
+ブロックを与えた場合は、[[c:OptionParser]] を引数としてブロックを実行します。
+ブロックの実行結果を返します。
+ブロックの実行途中で [[c:OptionParser::ParseError]]
+が発生した場合は、全て rescue し、エラーメッセージを出力し、
+nil を返します。
+
+例:
+
+ require 'optparse'
+ 
+ o = nil
+ ARGV.options{|opt|
+   opt.on('-a'){ o = true }
+   opt.parse!
+ }
+ p o                         #=> true
+

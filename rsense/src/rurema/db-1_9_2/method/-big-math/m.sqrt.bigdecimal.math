@@ -1,0 +1,24 @@
+kind=defined
+names=sqrt
+visibility=public
+
+--- sqrt(x, prec) -> BigDecimal
+
+x の平方根を prec で指定した精度で計算します。
+
+@param x 平方根を求める数。
+
+@param prec 計算結果の精度。
+
+@raise FloatDomainError x に 0 以下、もしくは NaN が指定された場合に発生します。
+
+@raise ArgumentError prec に 0 未満が指定された場合に発生します。
+
+例:
+
+
+  require "bigdecimal/math"
+
+  puts BigMath::sqrt(BigDecimal.new('2'), 10) #=> 0.14142135623730950488016883515E1
+
+

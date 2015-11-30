@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=
+classes=CMath
+is_sublibrary=false
+
+複素数演算をサポートするライブラリです。

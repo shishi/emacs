@@ -1,0 +1,7 @@
+superclass=URI=HTTP
+type=class
+library=uri
+extended=
+included=
+
+HTTPS URI を表すクラスです。

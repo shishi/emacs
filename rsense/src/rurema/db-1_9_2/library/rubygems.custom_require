@@ -1,0 +1,9 @@
+methods=Kernel/i.require.rubygems.custom_require
+sublibraries=
+requires=rubygems.spec_fetcher,rubygems.specification,rubygems.remote_fetcher,rubygems.requirement,rubygems.builder,rubygems.exceptions,rubygems.source_index,rubygems.source_info_cache_entry,rubygems.digest.sha2,rubygems.defaults.operating_system,rubygems.gem_path_searcher,rubygems.platform,rubygems.defaults,rubygems.dependency,rubygems.source_info_cache,rubygems.user_interaction,rubygems,rubygems.version
+classes=
+is_sublibrary=true
+
+[[m:Kernel#require]] を再定義するためのライブラリです。
+
+Ruby1.9 以前で使用しています。

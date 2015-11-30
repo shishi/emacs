@@ -1,0 +1,32 @@
+kind=defined
+names=[]
+visibility=public
+
+--- [](nth) -> String | nil
+
+前回マッチした正規表現の nth 番目のかっこに対応する部分文字列を
+返します。インデックス 0 はマッチした部分全体です。前回のマッチが
+失敗していると常に nil を返します。
+
+@param nth 前回マッチした正規表現の nth 番目のかっこに対応する部分文字列を
+           返します。
+
+
+      s = StringScanner.new('test string')
+      s.scan(/\w(\w)(\w*)/) # => "test"
+      s[0]                  # => "test"
+      s[1]                  # => "e"
+      s[2]                  # => "st"
+      s.scan(/\w+/)         # => nil
+      s[0]                  # => nil
+      s[1]                  # => nil
+      s[2]                  # => nil
+      s.scan(/\s+/)         # => " "
+      s[0]                  # => " "
+      s[1]                  # => nil
+      s[2]                  # => nil
+      s.scan(/\w(\w)(\w*)/) # => "string"
+      s[0]                  # => "string"
+      s[1]                  # => "t"
+      s[2]                  # => "ring"
+

@@ -1,0 +1,11 @@
+kind=defined
+names=max_age,max_age=
+visibility=public
+
+--- max_age          -> Integer
+--- max_age=(value)
+
+クッキーの寿命を整数(単位は秒)で表すアクセサです。
+
+@param value クッキーの寿命を正の整数で指定します。0 は直ちに破棄される事を意味する。
+

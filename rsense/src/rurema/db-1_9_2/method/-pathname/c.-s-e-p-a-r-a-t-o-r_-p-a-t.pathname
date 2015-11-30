@@ -1,0 +1,9 @@
+kind=defined
+names=SEPARATOR_PAT
+visibility=public
+
+--- SEPARATOR_PAT
+パス名のなかのディレクトリを区切る部分にマッチする正規表現です。
+
+この値は環境依存です。
+

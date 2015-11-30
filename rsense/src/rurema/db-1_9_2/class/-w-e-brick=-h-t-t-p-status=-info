@@ -1,0 +1,7 @@
+superclass=WEBrick=HTTPStatus=Status
+type=class
+library=webrick.httpstatus
+extended=
+included=
+
+HTTP のステータスコード情報提供 1XX の親クラスです。

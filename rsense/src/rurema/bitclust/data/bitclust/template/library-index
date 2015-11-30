@@ -1,0 +1,35 @@
+<% @title = _('Library Index') %>
+<p>
+<%= manual_home_link() %>
+&gt; <%= _("All Libraries") %>
+</p>
+<%= search_form() %>
+
+<%
+    headline_init
+%>
+<%= headline(_("Library Index")) %>
+<table class="entries libraries">
+<%
+    headline_push
+    lib = @entries.detect {|lib| lib.id == '_builtin' }
+%>
+<tr>
+<td class="signature"><%= library_link(lib.name, _('Builtin Library')) %></td>
+<td class="description"><%= compile_rd(lib.synopsis_source) %></td>
+</tr>
+<%
+    @entries.each do |lib|
+      next if lib.id == '_builtin'
+      next if lib.is_sublibrary
+%>
+<tr>
+<td class="signature"><%= library_link(lib.name) %></td>
+<td class="description"><%= compile_rd(lib.synopsis_source) %></td>
+</tr>
+<%
+    end
+    headline_pop
+%>
+</table>
+

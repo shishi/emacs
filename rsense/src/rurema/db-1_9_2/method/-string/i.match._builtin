@@ -1,0 +1,10 @@
+kind=defined
+names=match
+visibility=public
+
+--- match(regexp, pos = 0) -> MatchData
+
+regexp.match(self, pos) と同じです。
+regexp が文字列の場合は、正規表現にコンパイルします。
+詳しくは [[m:Regexp#match]] を参照してください。
+

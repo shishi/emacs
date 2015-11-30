@@ -1,0 +1,8 @@
+kind=defined
+names=create
+visibility=public
+
+--- create(subkey, desired = KEY_ALL_ACCESS, opt = REG_OPTION_RESERVED)
+
+[[m:Win32::Registry.create]](self, subkey, desired, opt) と同じです。
+

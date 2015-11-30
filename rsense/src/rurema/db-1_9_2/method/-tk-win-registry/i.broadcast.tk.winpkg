@@ -1,0 +1,7 @@
+kind=defined
+names=broadcast
+visibility=public
+
+--- broadcast(keynam, timeout = nil)
+
+

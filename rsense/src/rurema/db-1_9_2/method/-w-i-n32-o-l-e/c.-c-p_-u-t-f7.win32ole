@@ -1,0 +1,8 @@
+kind=defined
+names=CP_UTF7
+visibility=public
+
+--- CP_UTF7 -> Fixnum
+
+文字コードの変換にUTF-7を利用することを示します（65000）。
+

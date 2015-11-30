@@ -1,0 +1,24 @@
+kind=defined
+names=ole_put_methods
+visibility=public
+
+--- ole_put_methods -> [WIN32OLE_METHOD]
+
+オブジェクトの設定可能プロパティ情報を[[c:WIN32OLE_METHOD]]の配列として
+返します。
+
+ole_put_methodsメソッドは、OLEオートメーションサーバのメソッドのうちプ
+ロパティ設定メソッドに属するものを[[c:WIN32OLE_METHOD]]の配列として返し
+ます。
+
+@return [[c:WIN32OLE_METHOD]]の配列。
+@raise WIN32OLERuntimeError オートメーションサーバの呼び出しに失敗しました。
+                            型情報ライブラリ(TypeLib)が提供されていない場合などに発生します。
+
+   excel = WIN32OLE.new('Excel.Application')
+   properties = excel.ole_put_methods
+
+@see [[m:WIN32OLE#ole_methods]]
+@see [[m:WIN32OLE#ole_function_methods]]
+@see [[m:WIN32OLE#ole_get_methods]]
+

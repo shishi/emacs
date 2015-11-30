@@ -1,0 +1,10 @@
+kind=defined
+names=add_crl
+visibility=public
+
+--- add_crl(crl) -> self
+署名に添付する CRL を追加します。
+
+@param crl 追加する CLR ([[c:OpenSSL::X509::CRL]] オブジェクト)
+@raise OpenSSL::PKCS7::PKCS7Error 追加に失敗した場合に発生します。
+

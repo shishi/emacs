@@ -1,0 +1,13 @@
+kind=defined
+names=require_paths=
+visibility=public
+
+--- require_paths=(paths)
+
+この Gem パッケージを使用した際に require するファイルが置かれているディレクトリ
+のリストをセットします。
+
+@param paths この Gem パッケージを使用した際に require するファイルが置かれているディレクトリ
+             のリストを指定します。
+
+

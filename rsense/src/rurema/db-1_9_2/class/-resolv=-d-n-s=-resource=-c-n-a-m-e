@@ -1,0 +1,11 @@
+superclass=Resolv=DNS=Resource=DomainName
+type=class
+library=resolv
+extended=
+included=
+
+DNS リソースの CNAME レコード
+を表す抽象クラスです。
+
+[[m:Resolv::DNS#getresource]] で CNAME レコードを得たい場合は
+[[c:Resolv::DNS::Resource::IN::CNAME]] を使うべきです。

@@ -1,0 +1,6 @@
+kind=defined
+names=winfo_widget
+visibility=public
+
+--- winfo_widget(id)
+

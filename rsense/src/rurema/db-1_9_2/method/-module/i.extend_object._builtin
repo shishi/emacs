@@ -1,0 +1,21 @@
+kind=defined
+names=extend_object
+visibility=private 
+
+--- extend_object(module) -> Module
+
+[[m:Object#extend]] の実体です。オブジェクトにモジュールの機能を追加します。
+
+[[m:Object#extend]] は、Ruby で書くと以下のように定義できます。
+
+  def extend(*modules)
+    modules.each {|mod| mod.__send__ :extend_object, self }
+  end
+
+extend_object のデフォルトの実装では、self に定義されて
+いるメソッドを object の特異メソッドとして追加します。
+
+@param module [[c:Enumerable]] など [[c:Module]] クラスのインスタンスを指定します。
+
+@return module で指定されたモジュールを返します。
+

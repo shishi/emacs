@@ -1,0 +1,10 @@
+kind=defined
+names=reject
+visibility=public
+
+--- reject(klass)    -> ()
+
+[[m:OptionParser.accept]] メソッドで登録したブロックを削除します。
+
+@param klass 削除したいクラスオブジェクトを指定します。
+

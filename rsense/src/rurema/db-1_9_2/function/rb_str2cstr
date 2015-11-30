@@ -1,0 +1,12 @@
+name=rb_str2cstr
+private=false
+macro=false
+type=char *
+filename=object.c
+params=(VALUE str, int *len)
+
+
+strl を C の文字列に変換します。第二引数も与えると
+*len にバイト長を書き込みます。str が String
+でない場合は to_str での変換を試みます。
+

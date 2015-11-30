@@ -1,0 +1,12 @@
+kind=defined
+names=new_offset
+visibility=public
+
+--- new_offset(offset = 0) -> DateTime
+self を複製して、その時差を設定しなおします。
+引数を省略した場合は、零 (協定世界時) になります。
+
+[[m:DateTime.new]] も参照してください。
+
+@param offset 時差
+

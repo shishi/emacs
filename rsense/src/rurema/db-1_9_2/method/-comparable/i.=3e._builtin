@@ -1,0 +1,13 @@
+kind=defined
+names=>
+visibility=public
+
+--- >(other)    -> bool
+
+比較演算子 <=> をもとにオブジェクト同士を比較します。
+<=> が正の整数を返した場合に、true を返します。
+それ以外の整数を返した場合に、false を返します。
+
+@param other 自身と比較したいオブジェクトを指定します。
+@raise ArgumentError <=> が nil を返したときに発生します。
+

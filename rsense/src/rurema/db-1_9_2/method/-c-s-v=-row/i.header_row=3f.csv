@@ -1,0 +1,7 @@
+kind=defined
+names=header_row?
+visibility=public
+
+--- header_row? -> bool
+ヘッダ行であれば真を返します。そうでなければ偽を返します。
+

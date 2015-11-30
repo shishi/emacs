@@ -1,0 +1,11 @@
+superclass=
+type=module
+library=optparse
+extended=
+included=
+
+主に [[m:Kernel::ARGV]] を拡張するために用意されたモジュールです。
+[[lib:optparse]] を require することにより、ARGV は
+OptionParser::Arguable を [[m:Object#extend]] します。
+
+コマンドライン引数を表す文字列の配列を、拡張するためにも使うことができます。

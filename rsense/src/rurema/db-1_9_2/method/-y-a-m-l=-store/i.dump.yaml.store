@@ -1,0 +1,10 @@
+kind=defined
+names=dump
+visibility=public
+
+--- dump(table) -> String
+
+YAML 形式の文字列を返します。
+
+@param table 使用されません。
+

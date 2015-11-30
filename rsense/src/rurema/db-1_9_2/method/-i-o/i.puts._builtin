@@ -1,0 +1,29 @@
+kind=defined
+names=puts
+visibility=public
+
+--- puts(*obj)    -> nil
+
+各 obj を self に出力し、それぞれの後に改行を出力します。
+引数の扱いは [[m:Kernel.#puts]] と同じです。詳細はこちらを参照し
+てください。
+
+@param obj 出力したいオブジェクトを指定します。[[m:Kernel.#puts]] と同じです。
+
+@raise IOError 自身が書き込み用にオープンされていなければ発生します。
+
+@raise Errno::EXXX 出力に失敗した場合に発生します。
+
+     $stdout.puts("this", "is", "a", "test", [1, [nil, 3]])
+     
+     #=>     
+     this
+     is
+     a
+     test
+     1
+     nil
+     3
+
+@see [[m:Kernel.#puts]]
+

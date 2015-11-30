@@ -1,0 +1,17 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(pwd = Dir.pwd, umask = nil) -> Shell
+
+プロセスのカレントディレクトリをpwd で指定されたディレクトリとするShellオ
+ブジェクトを生成します.
+
+@param pwd プロセスのカレントディレクトリをpwd で指定されたディレクトリとします。
+           指定しない場合は、[[m:Dir.pwd]] が使用されます。
+
+@param umask ファイル作成の際に用いられる umask を使用します。
+
+
+
+

@@ -1,0 +1,12 @@
+kind=defined
+names=array_attribute
+visibility=public
+
+--- array_attribute(name) -> ()
+
+[[m:Gem::Specification.attribute]] と同じですが、値を配列に格納するアクセサを作ります。
+
+@param name 属性の名前を指定します。
+
+@see [[m:Gem::Specification.attribute]]
+

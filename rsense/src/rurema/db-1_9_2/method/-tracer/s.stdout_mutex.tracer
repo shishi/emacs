@@ -1,0 +1,7 @@
+kind=defined
+names=stdout_mutex
+visibility=public
+
+--- stdout_mutex -> Mutex
+
+

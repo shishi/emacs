@@ -1,0 +1,10 @@
+kind=defined
+names=log
+visibility=protected 
+
+--- log(msg) -> ()
+
+与えられた文字列をログに記録します。
+
+@param msg ログとして記録する文字列を指定します。
+

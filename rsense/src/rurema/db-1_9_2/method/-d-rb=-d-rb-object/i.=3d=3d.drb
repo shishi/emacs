@@ -1,0 +1,10 @@
+kind=defined
+names===,eql?
+visibility=public
+
+--- ==(other)
+--- eql?(other)
+
+[[c:DRb::DRbObject]] オブジェクト同士の同値判定は、
+オブジェクトが参照している URI と識別子が等しいかどうかでします。
+

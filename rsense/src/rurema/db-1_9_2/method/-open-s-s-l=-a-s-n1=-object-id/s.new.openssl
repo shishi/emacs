@@ -1,0 +1,27 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(value) -> OpenSSL::ASN1::ObjectId
+--- new(value, tag, tagging, tag_class) -> OpenSSL::ASN1::ObjectId
+ASN.1 のオブジェクト識別子を表わす OpenSSL::ASN1::ObjectId の
+オブジェクトを生成します。
+
+value としては、ドット区切り数字表記、short name、long name の文字列の
+をいずれかを渡します。
+
+value 以外の引数を省略した場合はタグクラスは :UNIVERSAL、
+タグ は [[m:OpenSSL::ASN1::OBJECT]] となります。
+
+例:
+
+  require "openssl"
+  include OpenSSL
+  p ASN1::ObjectId.new("1.2.840.10040.4.3").long_name # => "dsaWithSHA1"
+  p ASN1::ObjectId.new("dsaWithSHA1").oid             # => "1.2.840.10040.4.3"
+
+@param value ASN.1 オブジェクト識別子を表す文字列
+@param tag タグ番号
+@param tagging タグ付けの方法(:IMPLICIT もしくは :EXPLICIT)
+@param tag_class タグクラス(:UNIVERSAL, :CONTEXT_SPECIFIC, :APPLICATION, :PRIVATE のいずれか)
+

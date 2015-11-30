@@ -1,0 +1,6 @@
+kind=defined
+names=rowconfiginfo
+visibility=public
+
+--- rowconfiginfo(master, index, slot=nil)
+

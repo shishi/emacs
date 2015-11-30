@@ -1,0 +1,14 @@
+kind=defined
+names=cover?
+visibility=public
+
+--- cover?(obj) -> bool
+
+obj が範囲内に含まれている時に真を返します。
+
+[[m:Range#include?]] と異なり <=> メソッドによる演算により範囲内かどうかを判定します。
+
+@param obj 比較対象のオブジェクトを指定します。
+
+@see [[m:Range#include?]]
+

@@ -1,0 +1,9 @@
+superclass=Object
+type=class
+library=drb.gw
+extended=
+included=
+
+以下の文章も参照。
+
+ * [[url:http://www2a.biglobe.ne.jp/~seki/ruby/drbssh.html]]

@@ -1,0 +1,10 @@
+name=rb_ary_delete
+private=false
+macro=false
+type=VALUE
+filename=array.c
+params=(VALUE ary, VALUE item)
+
+
+ary.delete
+

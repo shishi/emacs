@@ -1,0 +1,11 @@
+kind=defined
+names===
+visibility=public
+
+--- ==(other)    -> bool
+
+自身と other の各要素をそれぞれ順に == で比較し
+て、全要素が等しければ true を返します。そうでない場合には false を返します。
+
+@param other 自身と比較したい配列を指定します。
+

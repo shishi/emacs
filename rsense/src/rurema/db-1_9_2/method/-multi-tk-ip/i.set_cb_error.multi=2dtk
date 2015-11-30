@@ -1,0 +1,6 @@
+kind=defined
+names=set_cb_error
+visibility=public
+
+--- set_cb_error(cmd = Proc.new)
+

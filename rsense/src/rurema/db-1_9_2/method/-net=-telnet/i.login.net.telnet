@@ -1,0 +1,37 @@
+kind=defined
+names=login
+visibility=public
+
+--- login(opts, password=nil) -> String
+--- login(opts, password=nil){|mesg| ...}  -> String
+指定したユーザ名とパスワードでログインします。
+
+opts が文字列である場合は、 それをユーザ名、passwordをパスワードと
+してログインします。
+opts がハッシュである場合には、"Name" と "Password" をキーとする文字列を
+ユーザ名、パスワードとしてログインします。
+また、opts がハッシュの場合には以下のオプションが利用できます。
+
+"LoginPrompt" ログインプロンプトを正規表現で指定します。
+デフォルト値は /[Ll]ogin[: ]*\z/n です。
+
+"PasswordPrompt" パスワード入力プロンプトを正規表現で指定します。
+デフォルト値は /[Pp]ass(?:word|phrase)[: ]*\z/n です。
+
+パスワードを省略した場合には、パスワード入力プロンプトを
+待ちません。[[m:Net::Telnet.new]]の"Prompt"で指定した
+正規表現でプロンプトを待ちます。
+
+ログイン処理が終わるまでにホストから送られた文字列を返します。
+通常はユーザ名はエコーされるためそこに含まれているはずです。また
+パスワードはエコーされないため含まれいはずです。
+
+ブロックを指定した場合、ホストからの文字列を引数にブロックを逐次実行します。
+
+例
+  # 1つめの引数が文字列の場合
+  telnet.login("your name", "your password")
+  # 1つめの引数がハッシュの場合
+  telnet.login("Name" => "your name", "Password" => your password")
+
+

@@ -1,0 +1,19 @@
+kind=defined
+names=dlopen
+visibility=public
+
+--- dlopen(lib)                    -> DL::Handle
+--- dlopen(lib) {|handle| ... }    -> DL::Handle
+
+ダイナミックライブラリ lib をロードし、
+[[c:DL::Handle]] として返します。
+
+ブロックが与えられている場合は、[[c:DL::Handle]] 引数として
+与えられたブロックを実行します。[[c:DL::Handle]] を返します。
+
+[[m:DL::Handle.new]](lib) と等価です。
+
+@param lib ロードしたいライブラリを文字列で与えます。
+
+@raise RuntimeError [[man:dlopen(3)]] に失敗した時に発生します。
+

@@ -1,0 +1,37 @@
+kind=defined
+names=emit
+visibility=public
+
+--- emit(io = nil)
+ストリームに含まれる各ドキュメントをIOにYAML形式で書き込みます。
+io がnilの場合は文字列を返します。
+
+@param io 書き込み先のIOオブジェクト
+
+  require 'yaml'
+  
+  class Dog
+    attr_accessor :name
+    def initialize(name) 
+      @name = name
+    end
+  end
+  
+  ys = YAML::Stream.new
+  ys.add(Dog.new("pochi"))
+  ys.edit(1, { :age => 17, :color => "white"})
+  ys.edit(2, [ "Chiba", "Saitama"])
+  ys.emit.split(/\n/).each {|l|
+    puts l
+  }
+  
+  #結果
+  --- !ruby/object:Dog
+  name: pochi
+  ---
+  :age: 17
+  :color: white
+  ---
+  - Chiba
+  - Saitama
+

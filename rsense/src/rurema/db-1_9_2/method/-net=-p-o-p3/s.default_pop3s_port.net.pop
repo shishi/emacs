@@ -1,0 +1,7 @@
+kind=defined
+names=default_pop3s_port
+visibility=public
+
+--- default_pop3s_port -> Integer
+デフォルトのPOP3Sのポート番号(995)を返します。
+

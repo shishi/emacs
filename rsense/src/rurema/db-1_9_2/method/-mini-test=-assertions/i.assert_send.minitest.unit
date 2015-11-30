@@ -1,0 +1,20 @@
+kind=defined
+names=assert_send
+visibility=public 
+
+--- assert_send(array, message = nil) -> true
+
+引数から、式を取り出して評価した結果が真の場合、検査にパスしたことになります。
+
+@param array 第一要素にレシーバとなる任意のオブジェクト、第二要素にメソッド名、
+             第三要素にパラメータをそれぞれ指定した配列を指定します。
+
+@param message 検査に失敗した場合に表示するメッセージを指定します。
+               文字列か [[c:Proc]] を指定します。[[c:Proc]] である場合は [[m:Proc#call]] した
+               結果を使用します。
+
+@raise MiniTest::Assertion 取り出した式が偽を返す場合に発生します。
+
+例:
+  assert_send([%w[foo bar baz], :include?, 'baz'])
+

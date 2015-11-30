@@ -1,0 +1,30 @@
+kind=defined
+names=replace
+visibility=public
+
+--- replace(other) -> self
+
+self の内容を other の内容で置き換えます。
+
+@param other each_pair メソッドを持つオブジェクトでなければなりません。
+
+  require 'dbm'
+  
+  db1 = DBM.open('aaa.db', 0666, DBM::NEWDB)
+  db1[:a] = 'aaa'
+  db1[:b] = 'bbbbbb'
+  db2 = DBM.open('bbb.db', 0666, DBM::NEWDB)
+  db2[:bb] = 'bbb'
+  db2[:cc] = 'ccc'
+  
+  p db1.keys #=> ['b', 'a']
+  
+  db1.replace(db2)
+  
+  p db1.keys #=> ['bb', 'cc']
+  p db2.keys #=> ['bb', 'cc']
+  
+  hash = {'x' => 'xxx', 'y' => 'yyy' }
+  p db1               #=> #<DBM:0xb7c7eb08>
+  p db1.replace(hash) #=> #<DBM:0xb7c7eb08>
+

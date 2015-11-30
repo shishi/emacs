@@ -1,0 +1,15 @@
+kind=defined
+names=normalize,normalize!
+visibility=public
+
+--- normalize     -> URI::Generic
+--- normalize!    -> nil
+
+URI オブジェクトを正規化して返します。ホスト名を小文字にし、パスと
+構成要素がなければ '/' をセットします。
+
+例:
+  u = URI.parse('http://Example.Com')
+  p u.to_s                            #=> "http://Example.Com"
+  p u.normalize.to_s                  #=> "http://example.com/"
+

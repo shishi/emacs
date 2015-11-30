@@ -1,0 +1,9 @@
+superclass=Exception
+type=class
+library=_builtin
+extended=
+included=
+
+セキュリティ上の問題が起きたときに発生します。
+
+[[d:spec/safelevel]]も参照してください。

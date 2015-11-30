@@ -1,0 +1,9 @@
+kind=defined
+names=reverse_each
+visibility=public
+
+--- reverse_each -> Enumerator
+--- reverse_each {|element| ... } -> self
+
+逆順に各要素に対してブロックを評価します。
+

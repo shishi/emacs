@@ -1,0 +1,11 @@
+kind=defined
+names=stop
+visibility=public
+
+--- stop    -> ()
+
+サーバを停止します。
+
+実際にはサーバの状態を :Shutdown にするだけで、サーバがすぐに停止すると
+は限りません。
+

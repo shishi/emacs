@@ -1,0 +1,10 @@
+kind=defined
+names=!
+visibility=public
+
+--- ! -> bool
+
+自身を否定します。
+
+
+

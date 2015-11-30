@@ -1,0 +1,8 @@
+superclass=Net=ProtocolError
+type=class
+library=net.smtp
+extended=
+included=Net=SMTPError
+
+サーバで利用できないコマンドを送ろうとした時に発生する
+例外のクラスです。

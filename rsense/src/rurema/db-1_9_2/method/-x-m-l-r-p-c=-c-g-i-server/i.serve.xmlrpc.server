@@ -1,0 +1,10 @@
+kind=defined
+names=serve
+visibility=public
+
+--- serve
+Call this after you have added all you handlers to the server.
+This method processes a XML-RPC methodCall and sends the answer
+back to the client.
+Make sure that you don't write to standard-output in a handler, or in
+any other part of your program, this would case a CGI-based server to fail!

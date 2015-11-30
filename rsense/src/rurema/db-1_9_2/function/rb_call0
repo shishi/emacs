@@ -1,0 +1,12 @@
+name=rb_call0
+private=true
+macro=false
+type=VALUE
+filename=eval.c
+params=(VALUE klass, VALUE recv, ID id, int argc, VALUE *argv, NODE *body, int nosuper)
+
+
+クラス klass に定義されたメソッドのコード body を起動します。
+レシーバは recv で、引数は長さ argc の配列 argv で渡します。
+nosuper が非ゼロのときは、この呼び出し中の super がエラーになります。
+

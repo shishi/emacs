@@ -1,0 +1,12 @@
+kind=added
+names=cert=
+visibility=public
+
+--- cert=(certificate)
+クライアント証明書を設定します。
+
+デフォルトは nil (クライアント証明書による認証をしない)です。
+
+@param certificate 証明書オブジェクト([[c:OpenSSL::X509::Certificate]])
+@see [[m:Net::HTTP#cert]], [[m:OpenSSL::SSL::SSLContext#cert=]]
+

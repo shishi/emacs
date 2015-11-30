@@ -1,0 +1,19 @@
+kind=defined
+names=append
+visibility=public
+
+--- append(mailbox, message, flags = nil, date_time = nil)
+
+Sends a APPEND command to append the message to the end of
+the mailbox.
+
+ex).
+
+  imap.append("inbox", <<EOF.gsub(/\n/, "\r\n"), [:Seen], Time.now)
+  Subject: hello
+  From: shugo@ruby-lang.org
+  To: shugo@ruby-lang.org
+  
+  hello world
+  EOF
+

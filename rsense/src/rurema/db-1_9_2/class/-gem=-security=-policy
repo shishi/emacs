@@ -1,0 +1,10 @@
+superclass=Object
+type=class
+library=rubygems.security
+extended=
+included=
+
+署名付きの Gem パッケージを検証するための設定をカプセル化しているクラスです。
+
+ポリシーオブジェクトとしてこのクラスのインスタンスや、
+このライブラリで定義済みの定数を使用することができます。

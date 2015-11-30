@@ -1,0 +1,7 @@
+kind=defined
+names=inspect
+visibility=public
+
+--- inspect -> String
+@see [[m:Object#inspect]]
+

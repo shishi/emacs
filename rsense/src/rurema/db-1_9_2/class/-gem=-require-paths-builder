@@ -1,0 +1,8 @@
+superclass=
+type=module
+library=rubygems.require_paths_builder
+extended=
+included=
+
+必要であれば、'.require_paths' というファイルを Gem ごとに作成するための
+モジュールです。

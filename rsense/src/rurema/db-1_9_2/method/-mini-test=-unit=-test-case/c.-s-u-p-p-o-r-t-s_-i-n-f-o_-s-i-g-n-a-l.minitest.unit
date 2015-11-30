@@ -1,0 +1,9 @@
+kind=defined
+names=SUPPORTS_INFO_SIGNAL
+visibility=public
+
+--- SUPPORTS_INFO_SIGNAL -> Fixnum | nil
+
+[[c:Signal]] が INFO というシグナルをサポートしているかどうかを
+調べるための定数です。内部で使用します。
+

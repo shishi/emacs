@@ -1,0 +1,21 @@
+kind=defined
+names=tolocale
+visibility=public
+
+--- tolocale(str)
+
+文字列 str のエンコーディングをロケールエンコーディングに変換して返します。
+
+ロケールエンコーディングについては [[m:Encoding.locale_charmap]] を見てください。
+
+このメソッドは MIME エンコードされた文字列を展開し、
+いわゆる半角カナを全角に変換します。
+これらを変換したくない場合は、 [[m:String#encode]]
+を使ってください。
+
+Kconv.kconv(str, Encoding.locale_charmap)と同じです。
+
+@param str 変換元の文字列
+@see [[m:String#tolocale]]
+
+

@@ -1,0 +1,13 @@
+kind=defined
+names=global_variables
+visibility=public
+
+--- global_variables -> [Symbol]
+
+プログラム中で定義されているグローバル変数(`$'で始まる変数)名の
+配列を返します。
+
+  p global_variables #=> [:$;, :$-F, :$@, ... ]
+
+@see [[m:Kernel.#local_variables]],[[m:Object#instance_variables]],[[m:Module.constants]],[[m:Module#constants]],[[m:Module#class_variables]]
+

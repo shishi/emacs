@@ -1,0 +1,8 @@
+kind=defined
+names=read_all
+visibility=public
+
+--- read_all(tuple)
+
+詳細は [[m:Rinda::TupleSpace#read_all]] 参照
+

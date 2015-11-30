@@ -1,0 +1,10 @@
+kind=defined
+names=random_key
+visibility=public
+
+--- random_key -> String
+鍵を乱数で生成し、暗号オブジェクトに設定します。
+
+生成した鍵を文字列で返します。
+
+

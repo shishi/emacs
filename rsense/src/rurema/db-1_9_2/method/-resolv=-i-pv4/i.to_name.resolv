@@ -1,0 +1,7 @@
+kind=defined
+names=to_name
+visibility=public
+
+--- to_name -> Resolv::DNS::Name
+"x.y.z.w.in-addr.arpa." という形のドメイン名を返します。
+

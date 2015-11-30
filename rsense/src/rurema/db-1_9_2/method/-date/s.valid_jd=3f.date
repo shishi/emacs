@@ -1,0 +1,14 @@
+kind=defined
+names=valid_jd?
+visibility=public
+
+--- valid_jd? (jd, start = Date::GREGORIAN) -> bool
+真を返します。
+
+対称性のため用意されていますが、実際的に意味はありません。
+
+[[m:Date.jd]] も参照してください。
+
+@param jd ユリウス日
+@param start グレゴリオ暦をつかい始めた日をあらわすユリウス日
+

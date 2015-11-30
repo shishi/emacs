@@ -1,0 +1,9 @@
+kind=added
+names=verify_mode
+visibility=public
+
+--- verify_mode -> Integer | nil
+検証モードを返します。
+
+デフォルトは nil です。
+

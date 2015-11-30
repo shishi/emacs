@@ -1,0 +1,14 @@
+kind=defined
+names=add_trusted_cert
+visibility=public
+
+--- add_trusted_cert(cert, options = {}) -> nil
+
+信頼済み証明書リストに与えられた証明書を追加します。
+
+Note: しばらくの間 OPT[:trust_dir] に保存されますが、今後変更される可能性があります。
+
+@param cert 証明書を指定します。
+
+@param options オプションを指定します。
+

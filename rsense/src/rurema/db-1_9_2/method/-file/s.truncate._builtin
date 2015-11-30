@@ -1,0 +1,18 @@
+kind=defined
+names=truncate
+visibility=public
+
+--- truncate(path, length)    -> 0
+
+path で指定されたファイルのサイズを最大 length バイト
+にします。
+
+サイズの変更に成功すれば 0 を返します。失敗した場合は例外
+[[c:Errno::EXXX]] が発生します。
+
+@param path パスを表す文字列を指定します。
+
+@param length 変更したいサイズを整数で与えます。
+
+@raise Errno::EXXX 失敗した場合に発生します。
+

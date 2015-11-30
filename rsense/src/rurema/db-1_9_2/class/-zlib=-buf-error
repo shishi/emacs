@@ -1,0 +1,7 @@
+superclass=Zlib=Error
+type=class
+library=zlib
+extended=
+included=
+
+出力バッファのサイズが不足している場合に発生します。

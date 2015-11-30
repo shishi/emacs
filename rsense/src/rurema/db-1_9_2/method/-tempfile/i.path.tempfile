@@ -1,0 +1,15 @@
+kind=defined
+names=path
+visibility=public
+
+--- path -> String | nil
+
+テンポラリファイルのパス名を返します。
+
+Tempfile#close!を実行後だった場合にはnilを返します。
+
+  tf = Tempfile.new("hoo")
+  p tf.path # => "/tmp/hoo.10596.0" 
+  tf.close!
+  p tf.path # => nil
+

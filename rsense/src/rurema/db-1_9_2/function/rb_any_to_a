@@ -1,0 +1,8 @@
+name=rb_any_to_a
+private=true
+macro=false
+type=VALUE
+filename=object.c
+params=(VALUE obj)
+
+

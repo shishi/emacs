@@ -1,0 +1,12 @@
+kind=defined
+names=timeout=
+visibility=public
+
+--- timeout=(t)
+セッションタイムアウトの時間(秒数)を整数で設定します。
+
+これによってタイムアウト時刻が変更されます。
+@param t タイムアウト時間
+@see [[m:OpenSSL::SSL::Session#time]],
+     [[m:OpenSSL::SSL::Session#timeout]]
+

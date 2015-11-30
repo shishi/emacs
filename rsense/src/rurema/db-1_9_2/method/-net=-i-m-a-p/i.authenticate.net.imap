@@ -1,0 +1,15 @@
+kind=defined
+names=authenticate
+visibility=public
+
+--- authenticate(auth_type, arg...)
+
+Sends an AUTEHNTICATE command to authenticate the client.
+The auth_type parameter is a string that represents
+the authentication mechanism to be used. Currently Net::IMAP
+supports "LOGIN" and "CRAM-MD5" for the auth_type.
+
+ex).
+
+  imap.authenticate('LOGIN', user, password)
+

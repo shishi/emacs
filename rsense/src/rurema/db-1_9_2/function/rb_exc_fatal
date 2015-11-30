@@ -1,0 +1,10 @@
+name=rb_exc_fatal
+private=false
+macro=false
+type=void
+filename=eval.c
+params=(VALUE err)
+
+
+例外オブジェクト err を fatal として投げます。
+

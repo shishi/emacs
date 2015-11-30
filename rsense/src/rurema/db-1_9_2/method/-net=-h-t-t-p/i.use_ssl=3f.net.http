@@ -1,0 +1,12 @@
+kind=defined
+names=use_ssl?
+visibility=public
+
+--- use_ssl? -> bool
+SSLを利用して接続する場合に真を返します。
+
+[[lib:net/https]] を使わない場合には常に偽を返します。
+
+@see [[lib:net/https]], [[lib:openssl]] 
+
+

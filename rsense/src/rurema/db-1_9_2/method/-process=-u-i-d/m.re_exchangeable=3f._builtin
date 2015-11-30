@@ -1,0 +1,8 @@
+kind=defined
+names=re_exchangeable?
+visibility=public
+
+--- re_exchangeable?    -> bool
+
+[[m:Process::UID.#re_exchange]] が実装されているならば true を返します。そうでない場合に false を返します。
+

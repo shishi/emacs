@@ -1,0 +1,12 @@
+kind=defined
+names=noraw
+visibility=public
+
+--- noraw -> nil
+
+raw モードを抜け、通常の状態にします。
+つまり、キーボード入力のバッファリングを行い、
+割り込み(Ctrl-C)、サスペンド(Ctrl-Z) などの特殊キーの処理を行うようにします。
+
+@see [[m:Curses.#raw]]
+

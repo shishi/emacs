@@ -1,0 +1,11 @@
+kind=defined
+names=debug_mode=
+visibility=public
+
+--- debug_mode=(boolean)
+
+デバッグモードの on/off を設定します。
+
+@param boolean 真ならばデバッグモードを on にします。
+@see [[m:Net::FTP#debug_mode]]
+

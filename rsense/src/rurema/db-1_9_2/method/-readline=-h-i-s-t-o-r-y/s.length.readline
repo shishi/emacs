@@ -1,0 +1,19 @@
+kind=defined
+names=length
+visibility=public
+
+--- length -> Integer
+
+ヒストリに格納された内容の数を取得します。
+
+@raise SecurityError セーフレベル ($SAFE) が 4 の場合に発生します。
+
+例: ヒストリの内容を最初から順番に出力する。
+
+  require "readline"
+  
+  Readline::HISTORY.push("foo", "bar", "baz")
+  p Readline::HISTORY.length #=> 3
+
+@see [[m:Readline::HISTORY.empty?]]
+

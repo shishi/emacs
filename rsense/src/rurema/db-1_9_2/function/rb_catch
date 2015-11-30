@@ -1,0 +1,42 @@
+name=rb_catch
+private=false
+macro=false
+type=VALUE
+filename=eval.c
+params=(const char *tag, VALUE (*proc)(), VALUE data)
+
+
+catch と同等の動作を実行します。
+
+まず proc に、yield された値と data を渡して実行します。
+その途中で tag が throw されたら rb_catch 全体を終了します。
+
+throw が発生した場合はその値を返します。
+throw が発生しなかったときは proc の返り値を返します。
+
+  static VALUE
+  foo_yield(VALUE a, VALUE b)
+  {
+      return rb_yield(b);
+  }
+
+  static VALUE
+  foo_catch(VALUE obj)
+  {
+      return rb_catch("footag", foo_yield, INT2FIX(2));
+  }
+
+  static VALUE
+  foo_abort(VALUE obj)
+  {
+      return rb_throw("footag", Qnil);
+  }
+
+  void
+  Init_foo(void)
+  {
+      VALUE Foo = rb_define_class("Foo", rb_cObject);
+      rb_define_method(Foo, "catch", foo_catch, 0);
+      rb_define_method(Foo, "abort", foo_abort, 0);
+  }
+

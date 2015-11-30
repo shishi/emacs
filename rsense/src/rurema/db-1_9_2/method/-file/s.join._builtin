@@ -1,0 +1,14 @@
+kind=defined
+names=join
+visibility=public
+
+--- join(*item)    -> String
+
+File::SEPARATORを間に入れて文字列を連結します。
+
+  [item, item, ...].join(File::SEPARATOR)
+
+と同じです。[[d:platform/DOSISH-support]]で環境依存になる予定です。
+
+@param item 連結したいディレクトリ名やファイル名を文字列で与えます。
+

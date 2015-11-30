@@ -1,0 +1,23 @@
+kind=defined
+names=`
+visibility=public
+
+--- $` -> String | nil
+
+現在のスコープで最後に成功した正規表現のパターンマッチでマッチした
+部分より前の文字列です。
+最後のマッチが失敗していた場合には nil となります。
+
+[[m:Regexp.last_match]].pre_match と同じです。
+
+この変数はローカルスコープかつスレッドローカル、読み取り専用です。
+Ruby起動時の初期値は nil です。
+
+=== 例
+ str = '<p><a href="http://example.com">example.com</a></p>'
+ if %r[<a href="(.*?)">(.*?)</a>] =~ str
+   p $`
+ end
+ #=> "<p>"
+
+

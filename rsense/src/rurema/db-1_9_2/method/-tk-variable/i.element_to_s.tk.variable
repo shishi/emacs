@@ -1,0 +1,7 @@
+kind=defined
+names=element_to_s,string_element
+visibility=public
+
+--- element_to_s(*idxs)
+--- string_element(*idxs)
+

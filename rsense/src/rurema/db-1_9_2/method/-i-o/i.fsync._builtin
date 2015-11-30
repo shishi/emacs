@@ -1,0 +1,18 @@
+kind=defined
+names=fsync
+visibility=public
+
+--- fsync    -> 0 | nil
+
+書き込み用の IO に対して、システムコール [[man:fsync(2)]]
+を実行します。[[m:IO#flush]] を行ったあと、(OSレベルで)まだディスクに
+書き込まれていないメモリ上にあるデータをディスクに書き出します。
+
+成功すれば 0 を返します。
+[[man:fsync(2)]] がサポートされていない場合は nil を返します。
+
+@raise Errno::EXXX 失敗した場合に発生します。
+
+@raise IOError 既に close されている場合に発生します。
+
+

@@ -1,0 +1,13 @@
+superclass=StandardError
+type=class
+library=_builtin
+extended=
+included=
+
+Ruby の実装に用いられているシステムコールまたは一部の C 言語関数が失敗した時に発生する例外です。
+システムコールの失敗した原因を表すエラーコードを保持します。
+
+多くの場合、実際には SystemCallError そのものではなく
+サブクラスである [[c:Errno::EXXX]] (XXX はエラーコードの値によって異なる。
+システム定義のエラー名と同じ名前) が発生します。
+詳しくは [[c:Errno::EXXX]] を参照してください。

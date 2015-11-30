@@ -1,0 +1,21 @@
+kind=defined
+names=to_s
+visibility=public 
+
+--- to_s -> String
+
+自身を人間が読みやすい形の文字列表現にして返します。
+
+"3/5", "-17/7" のように10進数の表記を返します。
+
+@return 有理数の表記にした文字列を返します。
+
+例:
+
+  Rational(3, 4).to_s  # => "3/4"
+  Rational(8).to_s     # => "8"
+  Rational(-8, 6).to_s # => "-4/3"
+  Rational(0.5).to_s   # => "1/2"
+
+@see [[m:Rational#inspect]]
+

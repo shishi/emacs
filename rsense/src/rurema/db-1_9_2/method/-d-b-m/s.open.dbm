@@ -1,0 +1,24 @@
+kind=defined
+names=open
+visibility=public
+
+--- open(dbname, mode = 0666, flags = nil) -> DBM
+--- open(dbname, mode = 0666, flags = nil) {|db| ... } -> ()
+
+dbname で指定したデータベースをモードを mode に設定してオープンします。
+
+mode の省略値は 0666 です。mode として nil を指定すると
+データベースが存在しない時には新たなデータベースを作らず nil を返します。
+
+@param dbname データベース名
+@param mode   データベースのオープンモード
+@param flags  以下のいずれかを指定します。
+: DBM::READER
+  データベースの読み込みのみを行う
+: DBM::WRITER
+  データベースの新規作成はせず読み書きする
+: DBM::WRCREAT
+  データベースが存在しなければ新規作成して読み書きする
+: DBM::NEWDB
+  データベースを常に新規作成して既存のデータは破棄する
+

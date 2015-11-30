@@ -1,0 +1,6 @@
+kind=defined
+names=safeip_set_log_cmd
+visibility=public
+
+--- safeip_set_log_cmd(cmd = Proc.new)
+

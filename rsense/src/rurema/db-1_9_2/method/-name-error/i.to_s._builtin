@@ -1,0 +1,8 @@
+kind=defined
+names=to_s
+visibility=public
+
+--- to_s -> String
+
+例外オブジェクトを文字列に変換して返します。
+

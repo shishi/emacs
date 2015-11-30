@@ -1,0 +1,8 @@
+kind=defined
+names=md5
+visibility=public
+
+--- md5
+
+Returns a string giving the body MD5 value as defined in [MD5].
+

@@ -1,0 +1,21 @@
+kind=defined
+names=charset
+visibility=public
+
+--- charset       -> String | nil
+--- charset{ ... }  -> String
+
+対象となるリソースの文字コードを文字列で返します。Content-Type ヘッダの文字コード情報が使われます。
+文字列は小文字へと変換されています。
+
+Content-Type ヘッダがない場合は、nil を返します。ただし、ブロックが与えられている場合は、
+その結果を返します。また対象となる URI のスキームが HTTP であり、自身のタイプが text である場合は、
+[[RFC:2616]] 3.7.1 で定められているとおり、文字列 "iso-8859-1" を返します。
+
+例:
+
+  open("http://www.ruby-lang.org/en") {|f|
+    p f.content_type  # => "text/html"
+    p f.charset       # => "iso-8859-1"
+  }
+

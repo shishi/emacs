@@ -1,0 +1,11 @@
+kind=defined
+names=post_match
+visibility=public
+
+--- post_match -> String
+
+マッチした部分より後ろの文字列を返します([[m:$']]と同じ)。
+
+  /(bar)(BAZ)?/ =~ "foobarbaz"
+  p $~.post_match # => "baz"
+

@@ -1,0 +1,11 @@
+kind=defined
+names=expired?
+visibility=public
+
+--- expired?
+
+Has this tuple expired? (true/false).
+
+A tuple has expired when its expiry timer based on the sec argument
+to #initialize runs out.
+

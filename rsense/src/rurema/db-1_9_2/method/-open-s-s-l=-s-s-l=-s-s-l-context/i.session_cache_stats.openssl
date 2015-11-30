@@ -1,0 +1,20 @@
+kind=defined
+names=session_cache_stats
+visibility=public
+
+--- session_cache_stats -> {Symbol -> Integer}
+セッションキャッシュの内部統計情報をハッシュテーブルで返します。
+
+ハッシュテーブルの各キーとその意味は以下の通りです。
+  * :cache_num  内部キャッシュに保持されているセッションの数
+  * :connect クライアント側でハンドシェイクした回数
+  * :connect_good クライアント側でハンドシェイクが成功した回数
+  * :connect_renegotiate クライアント側で再ネゴシエイトした回数
+  * :accept サーバ側でハンドシェイクした回数
+  * :accept_good サーバ側でハンドシェイクが成功した回数
+  * :accept_renegotiate サーバ側で再ネゴシエイトした回数
+  * :cache_hits サーバ側で内部キャッシュにヒットした数
+  * :cb_hits サーバ側で外部キャッシュにヒットした数
+  * :cache_full キャッシュが満杯で破棄したセッションの数
+  * :timeouts ヒットしたキャッシュがタイムアウトしてしまっていた回数
+

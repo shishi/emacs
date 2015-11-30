@@ -1,0 +1,21 @@
+kind=defined
+names=[]
+visibility=public
+
+--- [](header)    -> String | nil
+
+自身が multipart/form-data なデータの場合に、header で指定された 
+ヘッダの値を文字列で返します。無ければ nil を返します。
+
+@param header ヘッダ名を文字列で指定します。大文字と小文字を区別しません。
+
+例:
+
+ require "webrick/cgi"
+ class MyCGI < WEBrick::CGI
+   def do_GET(req, res)
+     p req.query['q']['content-type']   #=> "plain/text"
+   end
+ end
+ MyCGI.new.start()
+

@@ -1,0 +1,15 @@
+kind=added
+names=ln
+visibility=private 
+
+--- ln -> ()
+ファイルへのリンクを作成します。
+
+  ruby -run -e ln -- [OPTION] TARGET LINK_NAME
+
+  -s          ハードリンクの代わりにシンボリックリンクを作成します
+  -f          LINK_NAME を上書きします
+  -v          詳細表示
+
+@see [[man:ln(1)]]
+

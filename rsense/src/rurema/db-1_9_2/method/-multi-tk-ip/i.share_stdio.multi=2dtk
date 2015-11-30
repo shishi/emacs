@@ -1,0 +1,6 @@
+kind=defined
+names=share_stdio
+visibility=public
+
+--- share_stdio(dist, src = '')
+

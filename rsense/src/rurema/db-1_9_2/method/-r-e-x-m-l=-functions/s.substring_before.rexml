@@ -1,0 +1,6 @@
+kind=defined
+names=substring_before
+visibility=public
+
+--- substring_before(string, test)
+

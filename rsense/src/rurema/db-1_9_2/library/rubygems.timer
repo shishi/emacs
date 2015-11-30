@@ -1,0 +1,7 @@
+methods=Kernel/i.time.rubygems.timer
+sublibraries=
+requires=
+classes=
+is_sublibrary=true
+
+このライブラリは、ログ取得のために $log というグローバル変数を定義します。

@@ -1,0 +1,9 @@
+kind=defined
+names=with_object
+visibility=public
+
+--- with_object(obj) -> Enumerator
+--- with_object(obj) {|(*args), memo_obj| ... } -> object
+
+@see [[m:Enumerable#each_with_object]]
+

@@ -1,0 +1,8 @@
+kind=defined
+names=expire
+visibility=public
+
+--- expire -> Integer
+プライマリサーバから得たゾーン情報をセカンダリサーバが
+何秒間有効なものとして保持するかを返します。
+

@@ -1,0 +1,17 @@
+kind=defined
+names=selection_includes
+visibility=public
+
+--- selection_includes(index)
+
+(({index}))で指定した((*位置*))の要素が((<選択>))されているかどうかを
+真偽値(({true}))/(({false}))で返します。
+
+      require "tk"
+      l = TkListbox.new {
+        100.times {|i| insert "end", i}
+      }.pack
+      p l.selection_set(0)
+      p l.selection_includes(0)
+      Tk.mainloop
+

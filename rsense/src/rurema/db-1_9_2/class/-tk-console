@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=tk.console
+extended=Tk
+included=Tk
+
+

@@ -1,0 +1,6 @@
+kind=defined
+names=find_system_command
+visibility=public
+
+--- find_system_command(command)
+

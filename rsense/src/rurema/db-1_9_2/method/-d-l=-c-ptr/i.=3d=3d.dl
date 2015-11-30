@@ -1,0 +1,21 @@
+kind=defined
+names===,eql?
+visibility=public
+
+--- eql?(other)     -> bool
+--- ==(other)       -> bool
+
+ポインタの指すアドレスが同一かどうかを判定します。
+
+例:
+
+ require 'dl' 
+ 
+ s = 'abc'
+ cptr  = DL::CPtr[s]
+ cptr0 = DL::CPtr[s]
+ cptr1 = cptr + 1
+ 
+ p cptr == cptr1     #=> false
+ p cptr == cptr0     #=> true
+

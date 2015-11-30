@@ -1,0 +1,14 @@
+kind=defined
+names=memberwise
+visibility=protected 
+
+--- memberwise(op, x) -> Benchmark::Tms
+
+[[c:Benchmark::Tms]] の四則演算を実行するために内部で使用されるメソッドです。
+
+@param op 演算子をシンボルで与えます。
+@param x [[c:Benchmark::Tms]] のオブジェクトか [[c:Float]] に暗黙の変換ができるオブジェクトです。
+
+@return 計算結果は新しい [[c:Benchmark::Tms]] オブジェクトです。
+
+

@@ -1,0 +1,19 @@
+kind=defined
+names=to_sym
+visibility=public
+
+--- to_sym -> Symbol | nil
+
+オブジェクトの整数値 self に対応する [[c:Symbol]] オブジェク
+トを返します。整数に対応するシンボルが存在しない時には nil
+を返します。
+
+
+@return シンボルか nil
+
+例:
+
+  :foo.to_i     #=> 14585
+  14585.to_sym  #=> :foo
+  1.to_sym      #=> nil
+

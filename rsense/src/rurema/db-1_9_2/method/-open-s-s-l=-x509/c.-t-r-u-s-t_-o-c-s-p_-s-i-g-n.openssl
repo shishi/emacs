@@ -1,0 +1,7 @@
+kind=defined
+names=TRUST_OCSP_SIGN
+visibility=public
+
+--- TRUST_OCSP_SIGN -> Integer
+
+

@@ -1,0 +1,7 @@
+kind=defined
+names=__drbref
+visibility=public
+
+--- __drbref
+
+Get the reference of the object, if local.

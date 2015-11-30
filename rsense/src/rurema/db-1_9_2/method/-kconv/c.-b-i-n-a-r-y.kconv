@@ -1,0 +1,9 @@
+kind=defined
+names=BINARY
+visibility=public
+
+--- BINARY -> Encoding
+
+JIS EUC SJIS 以外を表します。
+この値は[[m:Kconv.#guess]]の返り値としてのみ用いられます。
+

@@ -1,0 +1,10 @@
+kind=defined
+names=-
+visibility=public
+
+--- -(other)
+
+減算 (c = a - b)、または符号反転 (c = -a)。
+
+c の精度については「計算精度について」を参照してください。 
+

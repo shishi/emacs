@@ -1,0 +1,7 @@
+superclass=Gem=Command
+type=class
+library=rubygems.commands.dependency_command
+extended=
+included=Gem=LocalRemoteOptions,Gem=VersionOption
+
+インストールされている Gem パッケージの依存関係を表示するためのクラスです。

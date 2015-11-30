@@ -1,0 +1,14 @@
+kind=defined
+names=Regex_6Hex4Dec,Regex_8Hex,Regex_CompressedHex,Regex_CompressedHex4Dec
+visibility=public
+
+--- Regex_6Hex4Dec -> Regexp
+--- Regex_8Hex -> Regexp
+--- Regex_CompressedHex -> Regexp
+--- Regex_CompressedHex4Dec -> Regexp
+IPv6の各文字列表記とマッチする正規表現です。順に
+  * a:b:c:d:e:f:w.x.y.z
+  * a:b:c:d:e:f:g:h
+  * a::b
+  * a::b:w.x.y.z
+という文字列とマッチします。

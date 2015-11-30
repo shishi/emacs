@@ -1,0 +1,12 @@
+kind=defined
+names=find_all,select
+visibility=public
+
+--- find_all  -> Enumerator
+--- select    -> Enumerator
+--- find_all {|item| ... } -> [object]
+--- select {|item| ... }   -> [object]
+
+各要素に対してブロックを評価した値が真であった要素を全て含む配列を
+返します。真になる要素がひとつもなかった場合は空の配列を返します。
+

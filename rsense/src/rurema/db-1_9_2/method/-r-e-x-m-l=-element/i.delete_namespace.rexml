@@ -1,0 +1,6 @@
+kind=defined
+names=delete_namespace
+visibility=public
+
+--- delete_namespace(namespace = "xmlns")
+

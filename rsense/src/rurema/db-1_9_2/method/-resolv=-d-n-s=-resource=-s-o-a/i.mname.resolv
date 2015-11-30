@@ -1,0 +1,7 @@
+kind=defined
+names=mname
+visibility=public
+
+--- mname -> Resolv::DNS::Name
+対象のゾーンのマスターゾーンファイルが存在するホスト名を返します。
+

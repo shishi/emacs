@@ -1,0 +1,29 @@
+kind=defined
+names=to_s
+visibility=public
+
+--- to_s(flags=nil) -> String
+
+DNの文字列表現を返します。
+
+flags には通常は以下のいずれかを渡します。
+  * nil
+  * [[m:OpenSSL::X509::Name::COMPAT]]
+  * [[m:OpenSSL::X509::Name::RFC2253]]
+  * [[m:OpenSSL::X509::Name::ONELINE]]
+  * [[m:OpenSSL::X509::Name::MULTILINE]]
+
+* 
+例:
+  n = OpenSSL::X509::Name.parse('/C=JP/ST=Kanagawa/L=Yokohama/O=Example Company/OU=Lab3/CN=foobar/emailAddress=foobar@lab3.example.co.jp')
+  n.to_s 
+  # => "/C=JP/ST=Kanagawa/L=Yokohama/O=Example Company/OU=Lab3/CN=foobar/emailAddress=foobar@lab3.example.co.jp"
+  n.to_s(OpenSSL::X509::Name::COMPAT)
+  # => "C=JP, ST=Kanagawa, L=Yokohama, O=Example Company, OU=Lab3, CN=foobar/emailAddress=foobar@lab3.example.co.jp"
+  n.to_s(OpenSSL::X509::Name::RFC2253)
+  # => "emailAddress=foobar@lab3.example.co.jp,CN=foobar,OU=Lab3,O=Example Company,L=Yokohama,ST=Kanagawa,C=JP"
+  n.to_s(OpenSSL::X509::Name::ONELINE)
+  # => "C = JP, ST = Kanagawa, L = Yokohama, O = Example Company, OU = Lab3, CN = foobar, emailAddress = foobar@lab3.example.co.jp"
+  n.to_s(OpenSSL::X509::Name::MULTILINE)
+  # => "countryName               = JP\nstateOrProvinceName       = Kanagawa\nlocalityName              = Yokohama\norganizationName          = Example Company\norganizationalUnitName    = Lab3\ncommonName                = foobar\nemailAddress              = foobar@lab3.example.co.jp"
+

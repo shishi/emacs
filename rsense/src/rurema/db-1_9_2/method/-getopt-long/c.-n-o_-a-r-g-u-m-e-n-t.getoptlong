@@ -1,0 +1,8 @@
+kind=defined
+names=NO_ARGUMENT
+visibility=protected 
+
+--- NO_ARGUMENT -> 0
+
+オプションに引数が無いことを表す定数です。
+

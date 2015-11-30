@@ -1,0 +1,26 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(dllname, func, import, export)
+
+DLL dllname をロードし、API func のオブジェクトを生成します。
+
+第 3 引数 import には func の引数の型のリストを指定します。
+nil の場合は引数なしと見なされます。
+
+第 4 引数 export には func の戻り値の型を指定します。
+nil の場合は戻り値なし (void) と見なされます。
+
+第 3 引数 import と第 4 引数 export で
+型を指定するには以下の文字列を用います。
+
+: "p"
+    ポインタ
+: "n", "l"
+    long
+: "i"
+    int
+: "v"
+    void
+

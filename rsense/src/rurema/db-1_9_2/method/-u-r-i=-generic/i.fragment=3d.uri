@@ -1,0 +1,12 @@
+kind=defined
+names=fragment=
+visibility=public
+
+--- fragment=(s)
+
+自身の fragment を設定します。
+
+@param s 自身の fragment を表す文字列を指定します。
+
+@raise URI::InvalidComponentError 不正な引数 s に対して発生します。
+

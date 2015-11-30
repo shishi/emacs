@@ -1,0 +1,15 @@
+kind=defined
+names=values_at
+visibility=public
+
+--- values_at(*key) -> [String]
+
+引数で指定されたキー(環境変数名)に対応する値の配列を返します。存在
+しないキーに対しては nil が対応します。
+
+例:
+
+  ENV.update({'FOO','foo', 'BAR','bar'})
+  p ENV.values_at(*%w(FOO BAR BAZ))   # => ["foo", "bar", nil]
+
+@param key 環境変数名を指定します。 to_str で文字列化されます。

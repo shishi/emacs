@@ -1,0 +1,24 @@
+kind=defined
+names=parse
+visibility=public
+
+--- parse(str = '-4712-01-01T00:00:00+00:00', complete = true, start = Date::ITALY) -> DateTime
+与えられた日時表現を解析し、
+その情報に基づいて DateTime オブジェクトを生成します。
+
+年が "00" から "99" の範囲であれば、
+年の下2桁表現であるとみなしこれを補います。
+この振舞いを抑止したい場合は、ヒントとして、complete に false を与えます。
+
+@param str 日時をあらわす文字列
+@param complete 年を補完するか
+@param start グレゴリオ暦をつかい始めた日をあらわすユリウス日
+@raise ArgumentError 正しくない日時になる組み合わせである場合に発生します。
+
+例:
+
+  DateTime.parse('2001-02-03T12:13:14Z').to_s
+  # => "2001-02-03T12:13:14+00:00"
+
+@see [[m:Date._parse]], [[m:Date.parse]]
+

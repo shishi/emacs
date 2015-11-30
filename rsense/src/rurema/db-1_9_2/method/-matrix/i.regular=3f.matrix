@@ -1,0 +1,30 @@
+kind=defined
+names=regular?
+visibility=public
+
+--- regular? -> bool
+
+正則(regular)なら真(true)を返します。
+
+行列が正則であるとは、正方行列であり、かつ、その逆行列が存在することです。
+
+例:
+  a1 = [ 1,  2,  3]
+  a2 = [10, 15, 20]
+  a3 = [-1, -2, 1.5]
+  m = Matrix[a1, a2, a3]
+  p m.regular? #=> true
+
+  a1 = [ 1,  2,  3]
+  a2 = [10, 15, 20]
+  a3 = [-1, -2, -3]
+  m = Matrix[a1, a2, a3]
+  p m.regular? #=> false
+
+  a1 = [ 1,  2,  3]
+  a2 = [10, 15, 20]
+  a3 = [-1, -2, 1.5]
+  a4 = [1, 1, 1]
+  m = Matrix[a1, a2, a3, a4]
+  p m.regular? #=> false
+

@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rake
+extended=
+included=
+
+[[m:Kernel#import]] で使用するデフォルトのローダーです。

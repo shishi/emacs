@@ -1,0 +1,24 @@
+kind=defined
+names===
+visibility=public
+
+--- ==(other) -> bool
+
+比較演算子。数値として等しいか判定します。
+
+ただし、NaN 同士の比較では常に false を返します。
+
+@param other 比較対象の数値
+
+@return      self と other が等しい場合 true を返します。
+             そうでなければ false を返します。
+
+例:
+
+  p 3.14 == 3.14000 #=> true
+  p 3.14 == 3.1415  #=> false
+
+  # NaN 同士では常に false 
+  nan = 0.0/0
+  p nan == nan      # => false
+

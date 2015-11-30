@@ -1,0 +1,23 @@
+kind=defined
+names=loop
+visibility=public
+
+--- loop { ... } -> object
+(中断されない限り)永遠にブロックの評価を繰り返します。
+
+与えられたブロック内で [[c:StopIteration]] を [[m:Kernel.#raise]] すると
+ループを終了して nil を返します。
+ループを終了させる場合、通常は break を使用してください。
+
+@return break の引数など、ループ脱出時の値を返します。
+
+  def try int
+    n = 0
+    loop do
+      n += 1
+      break(n) if rand(n) > int
+    end
+  end
+  
+  puts "end on #{try(400)}" #=> end on ???
+

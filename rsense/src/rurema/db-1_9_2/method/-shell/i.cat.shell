@@ -1,0 +1,23 @@
+kind=defined
+names=cat
+visibility=public
+
+--- cat(*files) -> Shell::Filter
+実行すると, それらを内容とする Filter オブジェクトを返します.
+
+@param files シェルコマンド cat に与えるファイル名を文字列で指定します。
+
+動作例
+  require 'shell'
+  Shell.def_system_command("head")
+  sh = Shell.new
+  sh.transact {
+    glob("*.txt").to_a.each { |file|
+      file.chomp!
+      cat(file).each { |l|
+        echo(l) | tee(file + ".tee") >> "all.tee"
+      }
+    }
+  }
+
+

@@ -1,0 +1,8 @@
+kind=defined
+names=wait
+visibility=public
+
+--- wait(on_thread = true, check_root = false)
+
+
+

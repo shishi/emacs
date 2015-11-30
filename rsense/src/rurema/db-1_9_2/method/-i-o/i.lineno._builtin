@@ -1,0 +1,20 @@
+kind=defined
+names=lineno
+visibility=public
+
+--- lineno    -> Integer
+
+現在の行番号を整数で返します。実際には [[m:IO#gets]] が呼ばれた回数です。
+改行以外のセパレータで gets が呼ばれた場合など、実際の行番号と異なる場合があります。
+
+@raise IOError 読み込み用にオープンされていなければ発生します。
+
+  f = File.new("testfile")
+  f.lineno                 #=> 0
+  f.gets                   #=> "This is line one\n"
+  f.lineno                 #=> 1
+  f.gets                   #=> "This is line two\n"
+  f.lineno                 #=> 2
+
+@see [[m:$.]]
+

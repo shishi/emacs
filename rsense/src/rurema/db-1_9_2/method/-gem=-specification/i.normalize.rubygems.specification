@@ -1,0 +1,8 @@
+kind=defined
+names=normalize
+visibility=public
+
+--- normalize -> [String]
+
+この Gem パッケージの含まれるファイルリストから重複を取り除きます。
+

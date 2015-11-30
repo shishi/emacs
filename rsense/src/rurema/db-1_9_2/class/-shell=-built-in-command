@@ -1,0 +1,7 @@
+superclass=Shell=Filter
+type=class
+library=shell.builtin=2dcommand
+extended=
+included=
+
+クラスとして実装されている全てのビルトインコマンドのスーパークラスです。

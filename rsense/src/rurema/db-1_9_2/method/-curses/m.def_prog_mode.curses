@@ -1,0 +1,10 @@
+kind=defined
+names=def_prog_mode
+visibility=public
+
+--- def_prog_mode -> bool
+Save the current terminal modes as the "program"
+state for use by the Curses.reset_prog_mode
+
+This is done automatically by Curses.init_screen
+

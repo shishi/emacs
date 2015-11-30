@@ -1,0 +1,12 @@
+kind=defined
+names=headers
+visibility=public
+
+--- headers -> Array | true | nil
+
+nil を返した場合は、ヘッダは使用されません。
+真を返した場合は、ヘッダを使用するが、まだ読み込まれていません。
+配列を返した場合は、ヘッダは既に読み込まれています。
+
+@see [[m:CSV.new]]
+

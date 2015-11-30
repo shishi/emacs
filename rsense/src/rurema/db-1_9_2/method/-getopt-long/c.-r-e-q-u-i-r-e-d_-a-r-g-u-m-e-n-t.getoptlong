@@ -1,0 +1,8 @@
+kind=defined
+names=REQUIRED_ARGUMENT
+visibility=protected 
+
+--- REQUIRED_ARGUMENT -> 1
+
+オプションに必須引数があることを表す定数です。
+

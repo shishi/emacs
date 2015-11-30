@@ -1,0 +1,14 @@
+.append_features	Mutex_m.append_features
+.define_aliases	Mutex_m.define_aliases
+.extend_object	Mutex_m.extend_object
+#lock	Mutex_m#lock
+#locked?	Mutex_m#locked?
+#mu_extended	Mutex_m#mu_extended
+#mu_lock	Mutex_m#lock
+#mu_locked?	Mutex_m#locked?
+#mu_synchronize	Mutex_m#mu_synchronize
+#mu_try_lock	Mutex_m#mu_try_lock
+#mu_unlock	Mutex_m#mu_unlock
+#synchronize	Mutex_m#mu_synchronize
+#try_lock	Mutex_m#mu_try_lock
+#unlock	Mutex_m#mu_unlock

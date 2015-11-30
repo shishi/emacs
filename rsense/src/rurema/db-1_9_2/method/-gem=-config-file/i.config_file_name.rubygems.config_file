@@ -1,0 +1,8 @@
+kind=defined
+names=config_file_name
+visibility=public 
+
+--- config_file_name -> String
+
+設定ファイルの名前を返します。
+

@@ -1,0 +1,6 @@
+kind=defined
+names=command_processor
+visibility=public
+
+--- command_processor -> Shell::CommandProcessor
+

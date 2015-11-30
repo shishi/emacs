@@ -1,0 +1,20 @@
+kind=defined
+names=singleline_format
+visibility=public
+
+--- singleline_format(output = '', maxwidth = 79, newline = "\n", genspace = lambda{|n| ' ' * n}) {|pp| ...}    -> object
+
+PrettyPrint オブジェクトを生成し、それを引数としてブロックを実行します。
+[[m:PrettyPrint.format]] に似ていますが、改行しません。
+
+引数 maxwidth, newline と genspace は無視されます。ブロック中の breakable の実行は、
+改行せずに text の実行であるかのように扱います。
+
+@param output 出力先を指定します。output は << メソッドを持っていなければなりません。
+
+@param maxwidth 無視されます。
+
+@param newline 無視されます。
+
+@param genspace 無視されます。
+

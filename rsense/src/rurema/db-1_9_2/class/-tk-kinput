@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=tk.kinput
+extended=Tk
+included=Tk
+
+

@@ -1,0 +1,6 @@
+kind=defined
+names=_create_menubutton
+visibility=private 
+
+--- _create_menubutton(parent, menu_info, tearoff=false, default_opts = nil)
+

@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=tk.mngfocus
+extended=Tk
+included=
+
+

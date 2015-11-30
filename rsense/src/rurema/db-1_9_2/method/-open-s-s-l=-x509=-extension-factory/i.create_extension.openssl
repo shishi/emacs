@@ -1,0 +1,24 @@
+kind=defined
+names=create_extension
+visibility=public
+
+--- create_extension(obj)  -> OpenSSL::X509::Extension
+--- create_extension(oid, value, critical=false)  -> OpenSSL::X509::Extension
+[[c:OpenSSL::X509::Extension]] のインスタンスを生成して返します。
+
+引数の個数が1個である場合、それが配列、ハッシュ、文字列のいずれかである
+ならば、
+[[m:OpenSSL::X509::ExtensionFactory#create_ext_from_array]]、
+[[m:OpenSSL::X509::ExtensionFactory#create_ext_from_hash]]、
+[[m:OpenSSL::X509::ExtensionFactory#create_ext_from_string]]、
+がそれぞれ呼びだされてオブジェクトを生成します。
+
+引数が2個以上である場合は、
+[[m:OpenSSL::X509::ExtensionFactory#create_ext]] が呼びだされて
+オブジェクトを生成します。
+
+@param obj 拡張領域のデータ。配列、ハッシュ、文字列のいずれか
+@param oid 拡張領域の識別子を表す文字列
+@param value 拡張領域の値を表す文字列
+@param critical 重要度(真偽値)
+

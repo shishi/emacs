@@ -1,0 +1,12 @@
+kind=defined
+names=atime
+visibility=public
+
+--- atime(filename)    -> Time
+
+最終アクセス時刻を返します。
+
+@param filename ファイル名を表す文字列か IO オブジェクトを指定します。
+
+@raise Errno::EXXX ファイルの時刻の取得に失敗した場合に発生します。
+

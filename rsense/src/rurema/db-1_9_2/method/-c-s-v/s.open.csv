@@ -1,0 +1,67 @@
+kind=defined
+names=open
+visibility=public
+
+--- open(filename, mode = "rb", options = Hash.new){|csv| ... } -> nil
+--- open(filename, mode = "rb", options = Hash.new) -> CSV
+--- open(filename, options = Hash.new){|csv| ... } -> nil
+--- open(filename, options = Hash.new) -> CSV
+
+このメソッドは [[c:IO]] オブジェクトをオープンして [[c:CSV]] でラップします。
+これは CSV ファイルを書くための主要なインターフェイスとして使うことを意図しています。
+
+このメソッドは [[m:IO.open]] と同じように動きます。ブロックが与えられた場合は
+ブロックに [[c:CSV]] オブジェクトを渡し、ブロック終了時にそれをクローズします。
+ブロックが与えられなかった場合は [[c:CSV]] オブジェクトを返します。
+この挙動は Ruby1.8 の CSV ライブラリとは違います。Ruby1.8 では行をブロックに渡します。
+Ruby1.9 では [[m:CSV.foreach]] を使うとブロックに行を渡します。
+
+データが [[m:Encoding.default_external]] と異なる場合は、mode にエンコー
+ディングを指定する文字列を埋め込まなければなりません。データをどのよう
+に解析するか決定するために CSV ライブラリはユーザが mode に指定したエン
+コーディングをチェックします。"rb:UTF-32BE:UTF-8" のように mode を指定
+すると UTF-32BE のデータを読み込んでUTF-8 に変換してから解析します。
+
+CSV オブジェクトは多くのメソッドを [[c:IO]] や [[c:File]] に委譲します。
+
+  * [[m:IO#binmode]]
+  * [[m:IO#binmode?]]
+  * [[m:IO#close]]
+  * [[m:IO#close_read]]
+  * [[m:IO#close_write]]
+  * [[m:IO#closed?]]
+  * [[m:IO#eof]]
+  * [[m:IO#eof?]]
+  * [[m:IO#external_encoding]]
+  * [[m:IO#fcntl]]
+  * [[m:IO#fileno]]
+  * [[m:File#flock]]
+  * [[m:IO#flush]]
+  * [[m:IO#fsync]]
+  * [[m:IO#internal_encoding]]
+  * [[m:IO#ioctl]]
+  * [[m:IO#isatty]]
+  * [[m:File#path]]
+  * [[m:IO#pid]]
+  * [[m:IO#pos]]
+  * [[m:IO#pos=]]
+  * [[m:IO#reopen]]
+  * [[m:IO#seek]]
+  * [[m:IO#stat]]
+  * [[m:StringIO#string]]
+  * [[m:IO#sync]]
+  * [[m:IO#sync=]]
+  * [[m:IO#tell]]
+  * [[m:IO#to_i]]
+  * [[m:IO#to_io]]
+  * [[m:File#truncate]]
+  * [[m:IO#tty?]]
+
+@param filename ファイル名を指定します。
+
+@param mode [[m:IO.open]] に指定できるものと同じものを指定できます。
+
+@param options [[m:CSV.new]] のオプションと同じオプションを指定できます。
+
+@see [[m:CSV.new]], [[m:IO.open]]
+

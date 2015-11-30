@@ -1,0 +1,13 @@
+kind=defined
+names=bind
+visibility=public
+
+--- bind(my_sockaddr)
+
+ソケットを my_sockaddr に結合します。[[man:bind(2)]]
+と同じ働きをします。my_sockaddr は
+[[ref:lib:socket#pack_string]]
+です。
+
+0 を返します。
+

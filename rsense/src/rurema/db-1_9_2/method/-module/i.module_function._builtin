@@ -1,0 +1,57 @@
+kind=defined
+names=module_function
+visibility=private 
+
+--- module_function(*name) -> self
+
+メソッドをモジュール関数にします。
+
+引数が与えられた時には、
+引数で指定されたメソッドをモジュール関数にします。
+引数なしのときは今後このモジュール定義文内で
+新しく定義されるメソッドをすべてモジュール関数にします。
+
+モジュール関数とは、プライベートメソッドであると同時に
+モジュールの特異メソッドでもあるようなメソッドです。
+例えば [[c:Math]] モジュールのメソッドはすべてモジュール関数です。
+
+self を返します。
+
+@param name [[c:String]] または [[c:Symbol]] を 0 個以上指定します。
+
+=== 注意
+module_function はメソッドに「モジュール関数」という属性をつけるメ
+ソッドではなく、プライベートメソッドとモジュールの特異メソッドの 2
+つを同時に定義するメソッドです。
+そのため、以下のように書いてもモジュール関数の別名は定義できません。
+
+  module M
+    def foo
+      p "foo"
+    end
+    module_function :foo
+    alias bar foo
+  end
+
+  M.foo   # => "foo"
+  M.bar   # => undefined method `bar' for Foo:Module (NoMethodError)
+
+このコードでは、モジュール関数 foo と
+プライベートインスタンスメソッド bar を定義してしまいます。
+
+正しくモジュール関数に別名を付けるには、
+以下のように、先に別名を定義してから
+それぞれをモジュール関数にしなければいけません。
+
+  module M
+    def foo
+      p "foo"
+    end
+
+    alias bar foo
+    module_function :foo, :bar
+  end
+
+  M.foo   # => "foo"
+  M.bar   # => "foo"
+

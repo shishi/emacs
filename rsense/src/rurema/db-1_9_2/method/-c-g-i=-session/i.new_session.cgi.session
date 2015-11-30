@@ -1,0 +1,9 @@
+kind=defined
+names=new_session
+visibility=public
+
+--- new_session -> bool
+
+真であれば新しいセッション ID を生成します。
+
+

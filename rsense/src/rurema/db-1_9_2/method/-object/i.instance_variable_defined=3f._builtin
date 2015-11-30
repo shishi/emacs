@@ -1,0 +1,22 @@
+kind=defined
+names=instance_variable_defined?
+visibility=public
+
+--- instance_variable_defined?(var) -> bool
+
+インスタンス変数 var が定義されていたら真を返します。
+
+@param var インスタンス変数名を文字列か [[c:Symbol]] で指定します。
+
+   class Fred
+     def initialize(p1, p2)
+       @a, @b = p1, p2
+     end
+   end
+   fred = Fred.new('cat', 99)
+   p fred.instance_variable_defined?(:@a)    #=> true
+   p fred.instance_variable_defined?("@b")   #=> true
+   p fred.instance_variable_defined?("@c")   #=> false
+
+@see [[m:Object#instance_variable_get]],[[m:Object#instance_variable_set]],[[m:Object#instance_variables]]
+

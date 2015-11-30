@@ -1,0 +1,8 @@
+kind=defined
+names=push_gem_version_on_load_path
+visibility=public 
+
+--- push_gem_version_on_load_path
+
+prelude.c で定義されている内部用のメソッドです。
+

@@ -1,0 +1,20 @@
+kind=defined
+names=encode64
+visibility=public
+
+--- encode64(bin) -> String
+与えられたデータを Base64 エンコードした文字列を返します。
+
+このメソッドは [[RFC:2045]] に対応しています。
+エンコード後の文字で 60 文字ごとに改行を追加します。
+
+@param bin Base64 エンコードするデータを指定します。
+
+
+    require 'base64'
+    Base64.encode64("Now is the time for all good coders\nto learn Ruby")
+
+    # => Tm93IGlzIHRoZSB0aW1lIGZvciBhbGwgZ29vZCBjb2RlcnMKdG8gbGVhcm4g
+    #    UnVieQ==
+
+

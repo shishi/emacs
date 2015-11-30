@@ -1,0 +1,6 @@
+kind=defined
+names=number
+visibility=public
+
+--- number(object = nil)
+

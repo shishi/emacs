@@ -1,0 +1,13 @@
+kind=defined
+names=pos=
+visibility=public
+
+--- pos=(n)
+
+ファイルポインタを指定位置に移動します。
+[[m:IO#seek]](n, IO::SEEK_SET) と同じです。
+
+@param n 先頭からのオフセットを整数で指定します。
+
+@raise IOError 既に close されている場合に発生します。
+

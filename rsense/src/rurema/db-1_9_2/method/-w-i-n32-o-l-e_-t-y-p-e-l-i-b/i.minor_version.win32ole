@@ -1,0 +1,13 @@
+kind=defined
+names=minor_version
+visibility=public
+
+--- minor_version -> Integer
+TypeLibのマイナーバージョン番号を取得します。
+
+@return TypeLibのマイナーバージョン番号を整数で返します。
+@raise WIN32OLERuntimeError TypeLibの属性が読み取れない場合に通知します。
+
+   tlib = WIN32OLE_TYPELIB.new('Microsoft Excel 14.0 Object Library')
+   puts tlib.minor_version # -> 7
+

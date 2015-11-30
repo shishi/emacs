@@ -1,0 +1,15 @@
+kind=defined
+names=truncate
+visibility=public
+
+--- truncate   -> Integer
+
+自身と 0 との間にある整数で、自身にもっとも近い整数を返します。
+
+     1.truncate        #=> 1
+     1.2.truncate      #=> 1
+     (-1.2).truncate   #=> -1
+     (-1.5).truncate   #=> -1
+
+@see [[m:Numeric#ceil]], [[m:Numeric#floor]], [[m:Numeric#round]]
+

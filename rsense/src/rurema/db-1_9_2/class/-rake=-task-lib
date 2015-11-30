@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rake.tasklib
+extended=
+included=Rake=Cloneable
+
+タスクのライブラリを作成するためのベースとなるクラスです。

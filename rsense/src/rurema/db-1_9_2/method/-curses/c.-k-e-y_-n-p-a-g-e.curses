@@ -1,0 +1,8 @@
+kind=defined
+names=KEY_NPAGE
+visibility=public
+
+--- KEY_NPAGE -> Integer
+
+Next Page キーを表す定数です。
+

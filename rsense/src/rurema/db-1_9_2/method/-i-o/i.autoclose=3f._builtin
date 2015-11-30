@@ -1,0 +1,8 @@
+kind=defined
+names=autoclose?
+visibility=public
+
+--- autoclose? -> bool
+
+Returns +true+ if the underlying file descriptor of _ios_ will be
+closed automatically at its finalization, otherwise +false+.

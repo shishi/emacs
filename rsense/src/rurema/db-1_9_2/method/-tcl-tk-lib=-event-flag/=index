@@ -1,0 +1,7 @@
+:ALL	TclTkLib::EventFlag::ALL
+:DONT_WAIT	TclTkLib::EventFlag::DONT_WAIT
+:FILE	TclTkLib::EventFlag::FILE
+:IDLE	TclTkLib::EventFlag::IDLE
+:NONE	TclTkLib::EventFlag::NONE
+:TIMER	TclTkLib::EventFlag::TIMER
+:WINDOW	TclTkLib::EventFlag::WINDOW

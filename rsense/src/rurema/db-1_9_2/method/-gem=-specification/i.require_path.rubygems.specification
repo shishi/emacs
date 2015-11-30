@@ -1,0 +1,10 @@
+kind=defined
+names=require_path
+visibility=public
+
+--- require_path -> String
+
+[[m:Gem::Specification#require_paths]] の単数バージョンです。
+
+@see [[m:Gem::Specification#require_paths]]
+

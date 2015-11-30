@@ -1,0 +1,8 @@
+kind=defined
+names=umask
+visibility=public
+
+--- umask -> object
+
+umaskを返します。
+

@@ -1,0 +1,16 @@
+kind=defined
+names=item,report
+visibility=public
+
+--- item(label = "", *fmt){ ... } -> Benchmark::Tms
+--- report(label = "", *fmt){ ... } -> Benchmark::Tms
+
+ラベルと与えられたブロックの実行時間を標準出力に出力します。
+
+出力のフォーマットは [[m:Benchmark::Tms#format]] が行います。
+
+@param label ラベル
+@param fmt   結果に出力したいオブジェクト
+
+@see [[m:Benchmark::Tms#format]]
+

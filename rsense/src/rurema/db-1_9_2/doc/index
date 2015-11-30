@@ -1,0 +1,64 @@
+title=オブジェクト指向スクリプト言語 Ruby リファレンスマニュアル
+
+
+ * Ruby オフィシャルサイト [[url:http://www.ruby-lang.org/ja/]]
+ * version 1.9 未対応リファレンス
+ * 原著：まつもとゆきひろ
+ * 最新版URL: [[url:http://www.ruby-lang.org/ja/documentation/]]
+
+=== 使用上の注意
+
+このリファレンスマニュアルは、Ruby 1.9 に関して、言語仕様、組み込みライブラリ、
+標準添付ライブラリのいずれにもまったく対応していません。信用してはいけません。
+
+=== 目次
+
+ * [[d:spec/intro]]
+ * [[d:spec/commands]]
+ * [[d:spec/rubycmd]]
+ * [[d:spec/envvars]]
+
+==== Ruby 言語仕様
+
+Ruby でのオブジェクト:
+  * [[d:spec/object]]
+  * [[d:spec/class]]
+
+プロセスの実行:
+  * [[d:spec/eval]]
+  * [[d:spec/terminate]]
+  * [[d:spec/thread]]
+  * [[d:spec/safelevel]]
+
+Ruby の文法:
+  * [[d:spec/lexical]]
+  * [[d:spec/program]]
+  * [[d:spec/variables]]
+  * [[d:spec/literal]]
+  * [[d:spec/operator]]
+  * [[d:spec/control]]
+  * [[d:spec/call]]
+  * [[d:spec/def]]
+
+その他:
+  * [[d:spec/m17n]]
+  * [[d:spec/regexp]]
+  * [[d:spec/lambda_proc]]
+
+==== 組み込みライブラリ
+  * [[lib:_builtin]]
+
+==== 標準添付ライブラリ
+  * [[lib:/]]
+
+==== C API
+  * [[f:/]]
+
+==== その他
+  * [[d:pack_template]]
+  * [[d:print_format]]
+  * [[d:glossary]]
+  * [[d:symref]]
+  * [[d:spec/bnf]]
+  * [[d:license]]
+  * [[d:help]]

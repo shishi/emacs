@@ -1,0 +1,6 @@
+kind=defined
+names=locale=
+visibility=public
+
+--- locale=(locale)
+

@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rubygems.dependency
+extended=
+included=
+
+Gem の依存関係を管理するクラスです。

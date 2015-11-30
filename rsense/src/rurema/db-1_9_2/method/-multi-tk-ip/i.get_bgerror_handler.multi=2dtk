@@ -1,0 +1,6 @@
+kind=defined
+names=get_bgerror_handler
+visibility=public
+
+--- get_bgerror_handler(slave = '')
+

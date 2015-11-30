@@ -1,0 +1,8 @@
+name=RBASIC
+private=false
+macro=true
+type=struct RBasic *
+filename=ruby.h
+params=(VALUE obj)
+
+

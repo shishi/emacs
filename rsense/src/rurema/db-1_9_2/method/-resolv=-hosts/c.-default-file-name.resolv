@@ -1,0 +1,10 @@
+kind=defined
+names=DefaultFileName
+visibility=public
+
+--- DefaultFileName -> String
+
+システム標準の、
+ホスト情報が書かれたファイルの名前です。
+
+

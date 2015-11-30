@@ -1,0 +1,11 @@
+kind=defined
+names=number
+visibility=public
+
+--- number -> Integer
+メールに対して振られた、そのメールボックスで一意な番号を返します。
+
+サーバに接続しなおすとこの番号は変化する場合があります。
+メールごとに一意な識別子が必要なときは
+[[m:Net::POPMail#uidl]] を使ってください。
+

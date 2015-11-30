@@ -1,0 +1,19 @@
+kind=defined
+names=getc
+visibility=public
+
+--- getc    -> String | nil
+
+IO ポートから外部エンコーディングに従い 1 文字読み込んで返します。
+EOF に到達した時には nil を返します。
+
+テキスト読み込みメソッドとして動作します。
+[[m:IO#readchar]] との違いは EOF での振る舞いのみです。
+
+@raise IOError 自身が読み込み用にオープンされていなければ発生します。
+
+例:
+
+
+@see [[m:IO#readchar]]
+

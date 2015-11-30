@@ -1,0 +1,13 @@
+superclass=Struct
+type=class
+library=_builtin
+extended=
+included=
+
+[[m:Process.#times]] の返り値を表現する構造体です。
+
+この機能がサポートされているプラットフォーム上でプロセスの
+処理時間に関する情報を保持します。プラットフォームによっては
+使えない値があります。
+
+@see [[m:Process.#times]]

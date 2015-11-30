@@ -1,0 +1,13 @@
+kind=defined
+names=values
+visibility=public
+
+--- values -> [object]
+
+ハッシュの全値の配列を返します。
+
+   h1 = { "a" => 100, 2 => ["some"], :c => "c" }
+   p h1.values         #=> [100, ["some"], "c"]
+
+@see [[m:Hash#keys]],[[m:Hash#to_a]]
+

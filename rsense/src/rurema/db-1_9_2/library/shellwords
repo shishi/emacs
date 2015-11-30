@@ -1,0 +1,17 @@
+methods=String/i.shellsplit.shellwords,String/i.shellescape.shellwords,Array/i.shelljoin.shellwords
+sublibraries=
+requires=
+classes=Shellwords
+is_sublibrary=false
+
+UNIX Bourne シェルの単語分割規則に従った文字列割機能と文字列エスケープ
+機能を提供します。
+
+Shellwords モジュールは、空白区切りの単語分割を行う shellsplit、
+文字列をエスケープする shellescape、文字列エスケープを文字列リストに
+対して適用する shelljoin の3つのモジュール関数を提供します。
+
+また、shellwords ライブラリを require すると、組み込みクラス String
+と Array が拡張され、これらのモジュール関数と同じ機能が
+String#shellsplit, String#shellescape, Array#shelljoin として使える
+ようになります。

@@ -1,0 +1,10 @@
+kind=defined
+names=opendir
+visibility=public
+
+--- opendir -> Dir
+--- opendir{|dir| ... } -> nil
+Dir.open(self.to_s, &block) と同じです。
+
+@see [[m:Dir.open]]
+

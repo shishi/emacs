@@ -1,0 +1,7 @@
+kind=defined
+names=line,lines
+visibility=public
+
+--- lines(mod)
+--- line(mod)
+

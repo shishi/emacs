@@ -1,0 +1,9 @@
+kind=defined
+names=OP_ALL
+visibility=public
+
+--- OP_ALL -> Integer
+SSL 通信で各種のバグ回避コードを有効にするフラグです。
+
+[[m:OpenSSL::SSL::SSLContext#options=]] で利用します。
+

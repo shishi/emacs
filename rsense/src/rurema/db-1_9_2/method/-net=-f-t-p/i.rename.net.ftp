@@ -1,0 +1,15 @@
+kind=defined
+names=rename
+visibility=public
+
+--- rename(fromname, toname) -> nil
+ファイルをリネームします。
+
+リモートサーバ上の fromname という名前のファイルを
+toname という名前に変更します。
+
+@param fromname 変更前のファイル名を与えます。
+@param toname 変更後のファイル名を与えます。
+
+@raise Net::FTPReplyError 応答コードが正しくない場合に発生します。リネームに失敗した場合に発生します。
+

@@ -1,0 +1,6 @@
+kind=defined
+names=code
+visibility=public
+
+--- code(script = Proc.new)
+

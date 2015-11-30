@@ -1,0 +1,10 @@
+kind=defined
+names=add_spec
+visibility=public
+
+--- add_spec(gem_spec) -> Gem::Specification
+
+自身に引数で与えられた [[c:Gem::Specification]] のインスタンスを追加します。
+
+@param gem_spec [[c:Gem::Specification]] のインスタンスを指定します。
+

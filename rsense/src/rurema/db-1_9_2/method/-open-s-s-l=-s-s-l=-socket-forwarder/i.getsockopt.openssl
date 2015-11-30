@@ -1,0 +1,13 @@
+kind=defined
+names=getsockopt
+visibility=public
+
+--- getsockopt(level, optname) -> String
+ラップされているソケットのオプションを設定します。
+
+[[m:BasicSocket#getsockopt]] と同様です。
+
+@param level    [[man:getsockopt(2)]] の 第二引数のlevel に相当する整数を指定します
+@param optname  [[man:getsockopt(2)]] の 第三引数のoption_name に相当する整数を指定します
+
+

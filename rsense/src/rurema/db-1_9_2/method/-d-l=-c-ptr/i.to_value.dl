@@ -1,0 +1,18 @@
+kind=defined
+names=to_value
+visibility=public
+
+--- to_value    -> object
+
+自身はヒープに確保された Ruby のオブジェクトを指すポインタであると仮定して、
+自身が指すオブジェクトを返します。
+
+例:
+
+ require 'dl'
+ 
+ s = 'abc'
+ i = DL.dlwrap(s)
+ cptr = DL::CPtr.new(i)
+ p cptr.to_value   #=> "abc"
+

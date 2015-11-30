@@ -1,0 +1,8 @@
+kind=defined
+names=F8
+visibility=public
+
+--- F8 -> Integer
+
+F8 キーを表す定数です。
+

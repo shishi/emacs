@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=tk.timer
+extended=TkCore
+included=TkCore
+
+

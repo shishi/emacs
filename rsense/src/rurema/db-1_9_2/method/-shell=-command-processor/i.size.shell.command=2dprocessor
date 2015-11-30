@@ -1,0 +1,13 @@
+kind=defined
+names=size,size?
+visibility=public
+
+--- size(file) -> Integer
+--- size?(file) -> Integer | nil
+
+[[c:FileTest]] モジュールにある同名のクラスメソッドと同じです.
+
+@param file ファイル名を表す文字列を指定します。
+
+@see [[m:FileTest.#size]] [[m:FileTest.#size?]]
+

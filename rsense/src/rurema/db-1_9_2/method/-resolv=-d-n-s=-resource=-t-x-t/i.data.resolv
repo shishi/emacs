@@ -1,0 +1,7 @@
+kind=defined
+names=data
+visibility=public
+
+--- data -> String
+TXT レコードの最初の文字列を返します。
+

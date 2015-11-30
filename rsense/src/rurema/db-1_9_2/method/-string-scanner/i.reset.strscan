@@ -1,0 +1,22 @@
+kind=defined
+names=reset
+visibility=public
+
+--- reset -> self
+スキャンポインタを文字列の先頭 (インデックス 0) に戻し、
+マッチ記録を捨てます。
+
+pos = 0と同じ動作です。
+
+@return self を返します。
+
+      s = StringScanner.new('test string')
+      s.scan(/\w+/) # => "test"
+      s.matched     # => "test"
+      s.pos         # => 4
+      s[0]          # => "test"
+      s.reset
+      s.matched     # => nil
+      s[0]          # => nil
+      s.pos         # => 0
+

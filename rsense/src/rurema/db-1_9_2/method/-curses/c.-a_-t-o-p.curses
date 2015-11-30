@@ -1,0 +1,8 @@
+kind=defined
+names=A_TOP
+visibility=public
+
+--- A_TOP -> Integer
+top highlight
+@see [[man:curs_attr(3x)]]
+

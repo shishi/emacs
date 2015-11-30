@@ -1,0 +1,31 @@
+kind=defined
+names=readlines,to_a
+visibility=public
+
+--- readlines(rs = $/) -> [String]
+--- to_a(rs = $/) -> [String]
+ARGFの各行を配列に読み込んで返します。rsがnilの場合は要素に各ファイルをすべて読み込んだ配列を返します。
+
+@param rs 行区切り文字
+
+  # カレントディレクトリから適当にファイルを選ぶ
+  ARGV.replace(
+    Dir.glob("*").select{|name| FileTest.file?(name)}
+  )
+  aall = ARGF.readlines
+  p aall[0, 3]
+  # 例
+  #=> ["cat:\n", " - name: taro\n", "   age: 7\n"] 
+  p ARGF.closed? #=> true
+
+  ARGV.replace(
+    Dir.glob("*").select{|name| FileTest.file?(name)}
+  )
+
+  vsize = ARGV.size
+  aall = ARGF.readlines(nil)
+  p ARGF.closed? #=> true
+  p vsize == aall.size #=> true
+
+@see [[m:$/]] [[m:IO#readlines]]
+

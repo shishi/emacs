@@ -1,0 +1,15 @@
+kind=added
+names=ARGV
+visibility=public
+
+--- $ARGV -> [String]
+
+[[m:$*]] ¤ÎÊÌÌ¾
+
+  require "English"
+  p $ARGV
+  # end of sample.rb
+  
+  ruby sample.rb 31 /home/hoge/fuga.txt
+  #=> ["31", "/home/hoge/fuga.txt"]
+

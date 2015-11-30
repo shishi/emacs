@@ -1,0 +1,37 @@
+methods=
+sublibraries=
+requires=rubygems.remote_fetcher,rubygems.requirement,rubygems.specification,rubygems.spec_fetcher,rubygems.local_remote_options,rubygems.exceptions,rubygems.builder,rubygems.commands.query_command,rubygems.source_index,rubygems.source_info_cache_entry,rubygems.version_option,rubygems.digest.sha2,rubygems.gem_path_searcher,rubygems.defaults.operating_system,rubygems.platform,rubygems.defaults,rubygems,rubygems.dependency,rubygems.source_info_cache,rubygems.user_interaction,rubygems.command,rubygems.version
+classes=Gem=Commands=ListCommand
+is_sublibrary=true
+
+Gem パッケージの名前を前方一致で検索するためのライブラリです。
+
+  Usage: gem list [STRING] [options]
+    Options:
+      -i, --[no-]installed             Check for installed gem
+      -v, --version VERSION            指定されたバージョンの一覧を出力します
+      -d, --[no-]details               Gem パッケージの詳細も表示します
+          --[no-]versions              Gem パッケージの名前のみ表示します
+      -a, --all                        全ての Gem パッケージを表示します
+    Local/Remote Options:
+      -l, --local                      操作をローカルに限定します
+      -r, --remote                     操作をリモートに限定します
+      -b, --both                       ローカルとリモートの両方の操作を許可します
+      -B, --bulk-threshold COUNT       Threshold for switching to bulk
+                                       synchronization (default 1000)
+          --source URL                 Gem パッケージのリモートリポジトリの URL を指定します
+          --[no-]http-proxy [URL]      リモートの操作に HTTP プロクシを使用します
+      -u, --[no-]update-sources        ローカルソースキャッシュを更新します
+    Common Options:
+      -h, --help                       このコマンドのヘルプを表示します
+      -V, --[no-]verbose               表示を詳細にします
+      -q, --quiet                      静かに実行します
+          --config-file FILE           指定された設定ファイルを使用します
+          --backtrace                  バックトレースを表示します
+          --debug                      Ruby 自体のデバッグオプションを有効にします
+    Arguments:
+      STRING        探したい Gem の名前を前方一致で指定します
+    Summary:
+      指定された文字列で始まる Gem パッケージを列挙します
+    Defaults:
+      --local --no-details

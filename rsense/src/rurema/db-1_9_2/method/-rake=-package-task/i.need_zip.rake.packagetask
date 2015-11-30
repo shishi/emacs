@@ -1,0 +1,9 @@
+kind=defined
+names=need_zip
+visibility=public 
+
+--- need_zip -> bool
+
+この値が真である場合は zip ファイルを作成します。
+デフォルトは偽です。
+

@@ -1,0 +1,6 @@
+kind=defined
+names=ip_invoke
+visibility=public
+
+--- ip_invoke(*args)
+

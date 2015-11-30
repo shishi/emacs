@@ -1,0 +1,14 @@
+methods=
+sublibraries=
+requires=
+classes=YAML=Store
+is_sublibrary=true
+
+RubyのオブジェクトをYAML形式の外部ファイルに格納するためのクラスです。
+
+  require "yaml/store"
+
+  db = YAML::Store.new("sample.yml")
+  db.transaction do
+    db["hoge"] = {1 => 100, "bar" => 101}
+  end

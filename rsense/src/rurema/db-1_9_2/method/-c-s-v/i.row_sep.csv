@@ -1,0 +1,10 @@
+kind=defined
+names=row_sep
+visibility=public
+
+--- row_sep -> String
+
+行区切り文字列として使用する文字列を返します。
+
+@see [[m:CSV.new]]
+

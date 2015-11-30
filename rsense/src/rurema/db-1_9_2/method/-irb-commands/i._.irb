@@ -1,0 +1,21 @@
+kind=defined
+names=_
+visibility=public
+
+--- _  
+
+直前の式の実行結果です。
+
+例：
+
+  $ irb
+  irb(main):001:0> 10
+  => 10
+  irb(main):002:0> 2**32
+  => 4294967296
+  irb(main):003:0> _
+  => 4294967296
+  irb(main):004:0> _ - 2**31
+  => 2147483648
+  irb(main):005:0> 
+

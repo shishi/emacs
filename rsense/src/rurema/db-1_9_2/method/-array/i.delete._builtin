@@ -1,0 +1,27 @@
+kind=defined
+names=delete
+visibility=public
+
+--- delete(val)           -> object | nil
+--- delete(val) { ... }   -> object
+
+指定された val と == で等しい要素を自身からすべて取り除きます。
+val と等しい要素が見つかった場合は、val を返します。
+そうでない場合には nil を返します。
+
+ブロックが指定された場合、val と等しい要素が見つからなかったときにブロックを
+評価してその結果を返します。
+
+@param val 自身から削除したい値を指定します。
+
+    array = [1, 2, 3, 2, 1]
+    p array.delete(2)       #=> 2
+    p array                 #=> [1, 3, 1]
+
+    # ブロックなしの引数に nil を渡すとその戻り値から削除が
+    # 行われたかどうかの判定をすることはできない
+    ary = [nil,nil,nil]
+    p ary.delete(nil)       #=> nil
+    p ary                   #=> []
+    p ary.delete(nil)       #=> nil
+

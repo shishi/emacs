@@ -1,0 +1,35 @@
+kind=defined
+names=name,to_s
+visibility=public
+
+--- name -> String
+--- to_s -> String
+
+モジュールやクラスの名前を文字列で返します。
+
+このメソッドが返す「モジュール / クラスの名前」とは、
+より正確には「クラスパス」を指します。
+クラスパスとは、ネストしているモジュールすべてを
+「::」を使って表示した名前のことです。
+クラスパスの例としては「CGI::Session」「Net::HTTP」が挙げられます。
+
+@return 名前のないモジュール / クラスに対しては nil を返します。
+
+  module A
+    module B
+    end
+
+    p B.name  #=> "A::B"
+
+    class C
+    end
+  end
+
+  p A.name    #=> "A"
+  p A::B.name #=> "A::B"
+  p A::C.name #=> "A::C"
+
+  # 名前のないモジュール / クラス
+  p Module.new.name   #=> nil
+  p Class.new.name    #=> nil
+

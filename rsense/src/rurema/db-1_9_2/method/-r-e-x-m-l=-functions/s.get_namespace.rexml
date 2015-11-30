@@ -1,0 +1,6 @@
+kind=defined
+names=get_namespace
+visibility=public
+
+--- get_namespace(node_set = nil)
+

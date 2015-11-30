@@ -1,0 +1,16 @@
+kind=defined
+names=hypot
+visibility=public
+
+--- hypot(x, y) -> Float
+
+sqrt(x*x + y*y) を返します。
+
+この値は x, y を直交する 2 辺とする直角三角形の斜辺（hypotenuse）の長さです。
+
+@param x 実数
+@param y 実数
+
+  Math.hypot(3, 4) #=> 5.0
+
+

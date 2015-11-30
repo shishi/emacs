@@ -1,0 +1,22 @@
+superclass=Delegator
+type=class
+library=weakref
+extended=
+included=
+
+weak reference を実現するクラスです。
+
+[[c:WeakRef]] オブジェクトは与えられたオブジェクトをポイントしますが、
+ポイント先のオブジェクトは GC される可能性があります。
+アクセスしようとしたときにオブジェクトが GC されていれば
+[[c:WeakRef::RefError]] が発生します。
+
+[[lib:delegate]] も参照してください。
+
+=== サンプルコード
+
+  require 'weakref'
+
+  foo = Object.new
+  ref = WeakRef.new(foo)
+  ref.some_method_of_foo

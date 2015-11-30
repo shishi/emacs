@@ -1,0 +1,10 @@
+kind=defined
+names=unalias_command
+visibility=public
+
+--- unalias_command(alias) -> self
+
+エイリアスを削除します。
+
+@param alias 削除したいエイリアスを指定します。
+

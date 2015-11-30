@@ -1,0 +1,8 @@
+kind=defined
+names=OS_MSDOS
+visibility=public
+
+--- OS_MSDOS -> Fixnum
+
+OS の種類を表す定数です。
+

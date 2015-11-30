@@ -1,0 +1,8 @@
+superclass=StandardError
+type=class
+library=net.protocol
+extended=
+included=
+
+ネットワークプロトコル上のエラーが起きた場合に
+発生する例外です。

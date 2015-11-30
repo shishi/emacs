@@ -1,0 +1,21 @@
+kind=defined
+names=purpose=
+visibility=public
+
+--- purpose=
+証明書の使用目的を設定します。
+
+以下の定数値のうちいずれか1つを渡します。
+  * [[m:OpenSSL::X509::PURPOSE_ANY]]
+  * [[m:OpenSSL::X509::PURPOSE_CRL_SIGN]]
+  * [[m:OpenSSL::X509::PURPOSE_NS_SSL_SERVER]]
+  * [[m:OpenSSL::X509::PURPOSE_SMIME_ENCRYPT]]
+  * [[m:OpenSSL::X509::PURPOSE_SMIME_SIGN]]
+  * [[m:OpenSSL::X509::PURPOSE_SSL_CLIENT]]
+  * [[m:OpenSSL::X509::PURPOSE_SSL_SERVER]]
+  * [[m:OpenSSL::X509::PURPOSE_OSCP_HELPER]]
+
+証明書に記載されている使用目的が適合していない場合には検証が失敗します。
+@param purpose 証明書の使用目的を表す整数値
+@see [[m:OpenSSL::X509::Store#purpose=]]
+

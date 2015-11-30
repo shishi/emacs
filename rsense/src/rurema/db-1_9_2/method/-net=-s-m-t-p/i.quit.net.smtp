@@ -1,0 +1,11 @@
+kind=defined
+names=quit
+visibility=public
+
+--- quit -> Net::SMTP::Response
+QUIT コマンドを送ります。
+
+通常は [[m:Net::SMTP#finish]] で
+QUIT が送られるため利用する必要はないはずです。
+
+

@@ -1,0 +1,8 @@
+kind=defined
+names=synchronize
+visibility=public
+
+--- synchronize { ... } -> self
+
+mutex をロックし、ブロックを実行します。実行後に必ず mutex のロックを解放します。
+

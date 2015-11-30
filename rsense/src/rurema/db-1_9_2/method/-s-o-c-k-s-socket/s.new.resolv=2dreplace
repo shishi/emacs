@@ -1,0 +1,13 @@
+kind=redefined
+names=new
+visibility=public
+
+--- new(host, serv) -> SOCKSSocket
+[[m:SOCKSSocket.new]]のパラメータ host の名前解決に [[lib:resolv]] 
+ライブラリを使います。
+
+@param host ホスト名を文字列で指定します。
+@param serv ホスト名を文字列で指定します。
+@raise SocketError 名前解決に失敗した場合に発生します。
+
+

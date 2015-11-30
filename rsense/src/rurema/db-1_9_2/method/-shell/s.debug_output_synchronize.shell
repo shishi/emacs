@@ -1,0 +1,8 @@
+kind=defined
+names=debug_output_synchronize
+visibility=public
+
+--- debug_output_synchronize
+
+@see [[m:Mutex#synchronize]]
+

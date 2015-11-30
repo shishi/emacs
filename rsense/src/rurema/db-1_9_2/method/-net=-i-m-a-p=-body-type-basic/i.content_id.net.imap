@@ -1,0 +1,8 @@
+kind=defined
+names=content_id
+visibility=public
+
+--- content_id
+
+Returns a string giving the content id as defined in [MIME-IMB].
+

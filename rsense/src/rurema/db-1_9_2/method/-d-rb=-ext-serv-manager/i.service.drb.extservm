@@ -1,0 +1,6 @@
+kind=defined
+names=service
+visibility=public
+
+--- service(name)
+

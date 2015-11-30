@@ -1,0 +1,41 @@
+methods=
+sublibraries=
+requires=
+classes=Coverage
+is_sublibrary=false
+
+カバレッジを測定するためのライブラリです。
+
+=== 使い方
+
+以下のようにして測定を行います。
+
+  (1) require "coverage" する
+  (2) Coverage.start を実行する
+  (3) require か load を実行する
+  (4) Coverage.result の結果を確認する
+
+=== 例
+
+まず測定対象のソースを用意します。
+
+  # foo.rb
+  s = 0
+  10.times do |x|
+    s += x
+  end
+
+  if s == 45
+    p :ok
+  else
+    p :ng
+  end
+
+以下のようにして測定を行います。
+
+  require "coverage"
+  Coverage.start
+  require "foo"
+  p Coverage.result # => {"foo.rb"=>[1, 1, 10, nil, nil, 1, 1, nil, 0, nil]}
+
+Coverage.result["foo.rb"]から得られる配列は各行の実行回数になっています。

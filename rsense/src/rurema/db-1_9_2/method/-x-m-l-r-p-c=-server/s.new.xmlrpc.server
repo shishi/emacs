@@ -1,0 +1,13 @@
+kind=defined
+names=new
+visibility=public
+
+--- new( port=8080, host="127.0.0.1", maxConnections=4, stdlog=$stdout, audit=true, debug=true, *a )
+Creates a new XMLRPC::Server instance, which is a XML-RPC server listening on
+port port and accepts requests for the host host, which is by default only the localhost.
+The server is not started, to start it you have to call [[m:XMLRPC::Server#serve]].
+
+Parameters audit and debug are obsolete!
+
+All additionally given parameters in *a are by-passed to [[m:XMLRPC::BasicServer.new]].
+

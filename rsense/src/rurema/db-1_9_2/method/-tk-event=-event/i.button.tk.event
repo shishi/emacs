@@ -1,0 +1,7 @@
+kind=defined
+names=button,num
+visibility=public
+
+--- num
+--- button
+

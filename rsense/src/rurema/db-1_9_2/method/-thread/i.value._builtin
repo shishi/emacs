@@ -1,0 +1,26 @@
+kind=defined
+names=value
+visibility=public
+
+--- value    -> object 
+
+スレッド self が終了するまで待ち([[m:Thread#join]] と同じ)、
+そのスレッドのブロックが返した値を返します。スレッド実行中に例外が
+発生した場合には、その例外を再発生させます。
+
+スレッドが [[m:Thread#kill]] によって終了した場合は、返り値は不定です。
+
+以下は、生成したすべてのスレッドの終了を待ち結果を出力する例です。
+
+   threads = []
+   threads.push(Thread.new { n = rand(5); sleep n; n })
+   threads.push(Thread.new { n = rand(5); sleep n; n })
+   threads.push(Thread.new { n = rand(5); sleep n; n })
+
+   threads.each {|t| p t.value}
+
+最後の行で、待ち合わせを行っていることがわかりにくいと思うなら以下
+のように書くこともできます。
+
+   threads.each {|t| p t.join.value}
+

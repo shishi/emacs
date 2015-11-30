@@ -1,0 +1,8 @@
+kind=defined
+names=OS_CODE
+visibility=public
+
+--- OS_CODE -> Fixnum
+
+[[m:Zlib::GzipFile#os_code]] メソッドの返す値です。
+

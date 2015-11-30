@@ -1,0 +1,11 @@
+kind=defined
+names=to_json
+visibility=public 
+
+--- to_json -> String
+
+自身から生成した JSON 形式の文字列を返します。
+
+自身のエンコードは UTF-8 であるべきです。
+"\u????" のように UTF-16 ビッグエンディアンでエンコードされた文字列を返すことがあります。
+

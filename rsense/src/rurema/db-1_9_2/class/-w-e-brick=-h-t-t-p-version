@@ -1,0 +1,8 @@
+superclass=Object
+type=class
+library=webrick.httpversion
+extended=
+included=Comparable
+
+HTTP のバージョンのための小さなクラスです。
+バージョン同士の比較のために使います。

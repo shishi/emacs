@@ -1,0 +1,13 @@
+kind=defined
+names=text
+visibility=public
+
+--- text(obj)           -> ()
+--- text(obj, width = obj.length)    -> ()
+
+obj を width カラムのテキストとして自身に追加します。
+
+@param obj 自身に追加するテキストを文字列で指定します。
+
+@param width obj のカラムを指定します。指定されなかった場合、obj.length が利用されます。
+

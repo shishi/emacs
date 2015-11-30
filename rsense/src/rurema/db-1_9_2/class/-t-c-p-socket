@@ -1,0 +1,26 @@
+superclass=IPSocket
+type=class
+library=socket
+extended=
+included=
+
+インターネットドメインのストリーム型ソケットのクラス。通常の
+[[c:IO]] クラスのサブクラスと同
+様の入出力ができます。このクラスによってソケットを用いたクラ
+イアントを簡単に記述できるようになります。
+
+ユーザの入力をそのままサーバに転送するプログラムは以下の
+ようになります。
+
+  require "socket"
+  
+  port = if ARGV.size > 0 then ARGV.shift else 4444 end
+  print port, "\n"
+  
+  s = TCPSocket.open("localhost", port)
+  
+  while gets
+    s.write($_)
+    print(s.gets)
+  end
+  s.close

@@ -1,0 +1,10 @@
+kind=defined
+names=integer?
+visibility=public
+
+--- integer?    -> bool
+
+self が整数の時、真を返します。そうでない場合に false を返します。
+
+Numeric のサブクラスは、このメソッドを適切に再定義しなければなりません。
+

@@ -1,0 +1,18 @@
+kind=defined
+names=exp
+visibility=public
+
+--- exp(z) -> Float | Complex
+
+z の指数関数([[m:Math::E]] の z 乗)の値を返します。
+
+@param z [[m:Math::E]] を z 乗する数を指定します。
+
+
+例:
+
+  require "cmath"
+  CMath.exp(Complex(0, 0))              # => (1.0+0.0i)
+  CMath.exp(Complex(0, Math::PI))       # => (-1.0+1.2246063538223773e-16i)
+  CMath.exp(Complex(0, Math::PI / 2.0)) # => (6.123031769111886e-17+1.0i)
+

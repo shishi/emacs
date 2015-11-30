@@ -1,0 +1,12 @@
+kind=defined
+names=flunk
+visibility=public 
+
+--- flunk(message = nil)
+
+必ず失敗するメソッドです。
+
+@param message メッセージを指定します。
+
+@raise MiniTest::Assertion 必ず発生します。
+

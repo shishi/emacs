@@ -1,0 +1,12 @@
+kind=defined
+names=reload
+visibility=public
+
+--- reload()
+
+Attempt to load the wrapped marshalled object again.
+
+If the class of the object is now known locally, the object will be
+unmarshalled and returned. Otherwise, a new but identical DRbUnknown
+object will be returned.
+

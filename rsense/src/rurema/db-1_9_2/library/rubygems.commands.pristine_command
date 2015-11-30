@@ -1,0 +1,38 @@
+methods=
+sublibraries=
+requires=rubygems.require_paths_builder,rubygems.ext.ext_conf_builder,rubygems.requirement,rubygems.remote_fetcher,rubygems.specification,rubygems.spec_fetcher,rubygems.package.tar_writer,rubygems.gem_openssl,rubygems.exceptions,rubygems.builder,rubygems.package,rubygems.package.tar_input,rubygems.source_index,rubygems.installer,rubygems.package.tar_header,rubygems.package.tar_reader,rubygems.source_info_cache_entry,rubygems.version_option,rubygems.digest.sha2,rubygems.ext.configure_builder,rubygems.ext,rubygems.defaults.operating_system,rubygems.gem_path_searcher,rubygems.platform,rubygems.defaults,rubygems.ext.rake_builder,rubygems.digest.md5,rubygems.package.f_sync_dir,rubygems.package.tar_reader.entry,rubygems.dependency,rubygems.source_info_cache,rubygems,rubygems.user_interaction,rubygems.command,rubygems.version,rubygems.ext.builder,rubygems.security,rubygems.package.tar_output,rubygems.format
+classes=Gem=Commands=PristineCommand
+is_sublibrary=true
+
+インストールされている Gem パッケージを初期状態にするためのライブラリです。
+
+  Usage: gem pristine [args] [options]
+    Options:
+          --all                        インストールされている全ての Gem パッケージを
+                                       初期状態に戻します
+      -v, --version VERSION            指定したバージョンの Gem パッケージを
+                                       初期状態に戻します
+    Common Options:
+      -h, --help                       このコマンドのヘルプを表示します
+      -V, --[no-]verbose               表示を詳細にします
+      -q, --quiet                      静かに実行します
+          --config-file FILE           指定された設定ファイルを使用します
+          --backtrace                  バックトレースを表示します
+          --debug                      Ruby 自体のデバッグオプションを有効にします
+    Arguments:
+      GEMNAME       gem to restore to pristine condition (unless --all)
+    Summary:
+      Restores installed gems to pristine condition from files located in the gem
+      cache
+    Description:
+      The pristine command compares the installed gems with the contents of the
+      cached gem and restores any files that don't match the cached gem's copy.
+      
+      If you have made modifications to your installed gems, the pristine command
+      will revert them.  After all the gem's files have been checked all bin stubs
+      for the gem are regenerated.
+      
+      If the cached gem cannot be found, you will need to use `gem install` to
+      revert the gem.
+    Defaults:
+      --all

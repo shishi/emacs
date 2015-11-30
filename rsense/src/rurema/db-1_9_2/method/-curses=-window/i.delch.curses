@@ -1,0 +1,8 @@
+kind=defined
+names=delch
+visibility=public
+
+--- delch -> nil
+
+ウィンドウのカーソル位置から 1 バイト消去します。
+

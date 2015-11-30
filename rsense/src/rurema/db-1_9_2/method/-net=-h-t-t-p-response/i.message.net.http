@@ -1,0 +1,12 @@
+kind=defined
+names=message,msg
+visibility=public
+
+--- message -> String
+--- msg -> String
+
+HTTP サーバがリザルトコードに付加して返すメッセージです。
+例えば 'Not Found' などです。
+
+msg は obsolete です。使わないでください。
+

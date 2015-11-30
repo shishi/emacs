@@ -1,0 +1,29 @@
+kind=defined
+names=makedirs,mkdir_p,mkpath
+visibility=public
+
+--- mkdir_p(list, options = {})  -> String | Array
+--- mkpath(list, options = {})   -> String | Array
+--- makedirs(list, options = {}) -> String | Array
+
+ディレクトリ dir とその親ディレクトリを全て作成します。
+
+例えば、
+
+  FileUtils.mkdir_p('/usr/local/lib/ruby')
+
+は以下の全ディレクトリを (なければ) 作成します。
+
+  * /usr
+  * /usr/local
+  * /usr/local/bin
+  * /usr/local/bin/ruby
+
+@param list 作成するディレクトリ。一つの場合は文字列でも指定できます。
+            二つ以上指定する場合は配列で指定します。
+
+@param options :mode, :noop, :verbose が指定できます。
+               [[ref:c:FileUtils#options]]
+
+@return list を返します。
+

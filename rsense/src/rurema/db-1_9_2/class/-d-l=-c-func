@@ -1,0 +1,8 @@
+superclass=Object
+type=class
+library=dl
+extended=
+included=
+
+ダイナミックライブラリの関数を表すクラスです。通常、このクラスを直接使わずに
+ラッパークラスである [[c:DL::Function]] を使います。

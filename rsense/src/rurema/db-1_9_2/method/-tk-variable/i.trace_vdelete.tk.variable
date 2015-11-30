@@ -1,0 +1,9 @@
+kind=defined
+names=trace_vdelete
+visibility=public
+
+--- trace_vdelete(opts, cmd)
+
+[[m:TkVariable#trace]] で設定したcmdを削除します。opts が TkVariable#trace で
+設定したときと一致しなければ何もしません。
+

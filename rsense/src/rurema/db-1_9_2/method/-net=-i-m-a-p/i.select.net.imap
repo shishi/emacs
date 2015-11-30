@@ -1,0 +1,9 @@
+kind=defined
+names=select
+visibility=public
+
+--- select(mailbox)
+
+Sends a SELECT command to select a mailbox so that messages
+in the mailbox can be accessed.
+

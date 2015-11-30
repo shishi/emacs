@@ -1,0 +1,8 @@
+kind=defined
+names=assert
+visibility=public
+
+--- assert(exp, msg = None)
+
+
+

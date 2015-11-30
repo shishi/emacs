@@ -1,0 +1,28 @@
+kind=added
+names=to_yaml_properties
+visibility=public
+
+--- to_yaml_properties -> [String]
+[[m:Object#instance_variables]].sortの結果を返します。
+
+@return オブジェクトのインスタンス変数名の配列
+
+  require 'yaml'
+  
+  h = {
+    :ugo => 17,
+    :hoge => "fuga",
+  }
+  
+  p h.to_yaml_properties
+  #=> []
+  class MyDog
+    attr_accessor :name, :age
+  end
+  
+  c = MyDog.new
+  c.name = "Pochi"
+  c.age = 3
+  p c.to_yaml_properties.join(",")
+  #=> ["@age,@name"]
+

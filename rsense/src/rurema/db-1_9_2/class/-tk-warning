@@ -1,0 +1,7 @@
+superclass=TkWarningObj
+type=class
+library=tk.dialog
+extended=
+included=
+
+

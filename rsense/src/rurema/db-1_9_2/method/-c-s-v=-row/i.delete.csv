@@ -1,0 +1,17 @@
+kind=defined
+names=delete
+visibility=public
+
+--- delete(header_or_index, minimum_index = 0) -> [object, object] | nil
+
+ヘッダの名前かインデックスで行からフィールドを削除するために使用します。
+
+@param header_or_index ヘッダの名前かインデックスを指定します。
+
+@param minimum_index このインデックスより後で、ヘッダの名前を探します。
+                     重複しているヘッダがある場合に便利です。
+
+@return 削除したヘッダとフィールドの組を返します。削除対象が見つからなかった場合は nil を返します。
+
+@see [[m:CSV::Row#field]]
+

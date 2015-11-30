@@ -1,0 +1,8 @@
+kind=defined
+names=extra_rdoc_files
+visibility=public
+
+--- extra_rdoc_files -> [String]
+
+RDoc でドキュメントを作成する際に使用する特別なファイルのリストを返します。
+

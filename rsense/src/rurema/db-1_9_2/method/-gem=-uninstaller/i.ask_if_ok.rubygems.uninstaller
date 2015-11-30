@@ -1,0 +1,10 @@
+kind=defined
+names=ask_if_ok
+visibility=public 
+
+--- ask_if_ok(spec) -> bool
+
+アンインストール指定された Gem を削除すると依存関係を満たせなくなる場合に呼び出されます。
+
+@param spec アンインストール指定されている Gem の [[c:Gem::Specification]] を指定します。
+

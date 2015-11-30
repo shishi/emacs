@@ -1,0 +1,157 @@
+doc,spec/call,block_arg,ブロックパラメータの挙動
+doc,spec/literal,backslash,バックスラッシュ記法
+method,Kernel.#lambda,should_use_next,手続きを中断して値を返す
+doc,symref,period,.
+method,String#scanf,format,scanfフォーマット文字列
+doc,spec/lambda_proc,orphan,orphan な手続きオブジェクトの挙動
+doc,spec/control,END,END
+doc,spec/def,operator,演算子式の定義
+doc,spec/operator,selfassign,自己代入
+library,optparse,help,ヘルプ
+doc,spec/control,BEGIN,BEGIN
+doc,spec/def,method,メソッド定義
+doc,spec/literal,here,ヒアドキュメント (行指向文字列リテラル)
+doc,spec/control,until,until
+library,socket,pack_string,ソケットアドレス構造体を pack した文字列
+doc,spec/control,unless,unless
+doc,symref,at,@
+doc,spec/variables,instance,インスタンス変数
+doc,spec/m17n,ruby18,Ruby 1.8 からの移行
+method,Kernel.#proc,lambda_proc,lambda と proc と Proc.new とイテレータの違い
+doc,symref,rbra,}
+class,Proc,block,Proc オブジェクトをブロック付きメソッド呼び出しに使う
+doc,spec/def,singleton_method,特異メソッド定義
+doc,symref,and,&
+doc,symref,dq,"
+doc,spec/def,undef,undef
+doc,spec/def,nest_method,メソッド定義のネスト
+class,OpenSSL::X509,verify_error,検証時エラー定数
+doc,symref,rangl,>
+library,optparse,longoption,ロングオプション
+doc,spec/def,eval_method,メソッドの評価
+doc,spec/lambda_proc,def,手続きオブジェクトとは
+doc,spec/operator,range,範囲式
+doc,spec/operator,cond,条件演算子
+doc,spec/control,for,for
+doc,symref,eq,=
+doc,spec/m17n,convert,エンコーディングの変更
+doc,spec/lexical,comment,コメント
+doc,spec/literal,num,数値リテラル
+doc,spec/operator,and,and
+library,optparse,hyphen_start_file,'-'で始まるファイル名
+doc,symref,hat,^
+doc,spec/control,begin,begin
+doc,spec/lexical,reserved,予約語
+doc,spec/m17n,binary,バイナリの取扱い
+doc,spec/call,block,ブロック付きメソッド呼び出し
+doc,spec/variables,global,グローバル変数
+doc,spec/def,limit,呼び出し制限
+doc,symref,langl,<
+doc,spec/operator,assign,代入
+doc,symref,per,%
+doc,spec/def,class_method,クラスメソッドの定義
+doc,spec/literal,range,範囲オブジェクト
+doc,spec/control,redo,redo
+doc,symref,sq,'
+class,String,mutable,破壊的な変更
+method,Kernel.#proc,should_use_next,手続きを中断して値を返す
+doc,spec/regexp,regexp,正規表現記号
+library,openssl,references,参考文献
+doc,spec/variables,const,定数
+doc,spec/variables,local,ローカル変数
+doc,spec/operator,not,not
+doc,spec/m17n,m17n_prog,M17N プログラミングの基本
+doc,spec/m17n,ascii_compat,ASCII互換エンコーディング
+doc,spec/lexical,embed,埋め込みドキュメント
+class,Proc,lambda_proc,lambda と proc と Proc.new とイテレータの違い
+doc,spec/m17n,incompat,1.8 からのスクリプトエンコーディングに関する非互換性
+library,optparse,subcmd,サブコマンド
+doc,spec/literal,exp,式展開
+doc,spec/rubycmd,shebang,インタプリタ行の解釈
+doc,symref,minus,-
+doc,symref,lbra,{
+doc,symref,ac,`
+doc,spec/control,retry,retry
+doc,symref,lbra2,[
+doc,spec/regexp,string,文字クラス
+doc,symref,lbra3,(
+doc,spec/control,raise,raise
+doc,spec/call,yield,yield
+doc,spec/variables,class,クラス変数
+doc,spec/literal,percent,%記法
+doc,spec/literal,array,配列式
+doc,spec/literal,regexp,正規表現リテラル
+doc,spec/literal,hash,ハッシュ式
+doc,symref,plus,+
+doc,spec/control,break,break
+doc,symref,backslash,\
+doc,symref,tilde,~
+doc,symref,rbra3,)
+doc,spec/control,return,return
+doc,spec/control,if,if
+library,optparse,argv,ARGV の機能
+class,IO,io_encoding,IO のエンコーディングとエンコーディングの変換
+doc,spec/def,alias,alias
+doc,spec/regexp,backtrack,バックトラック
+library,socket,service_format,サービス指定形式
+method,Kernel.#proc,orphan,orphan な手続きオブジェクトの挙動
+doc,spec/operator,range_cond,条件式としての範囲式
+doc,spec/lexical,identifier,識別子
+class,String,m17n,多言語化と文字列のエンコーディング
+doc,symref,slash,/
+doc,spec/control,next,next
+doc,spec/m17n,7bit_clean,7bit クリーンな文字列
+doc,symref,dollar,$
+doc,spec/m17n,literal,リテラルのエンコーディング
+doc,spec/thread,exception,例外発生時のスレッドの振る舞い
+doc,spec/lambda_proc,lambda_proc,lambda と proc と Proc.new とイテレータの違い
+doc,spec/literal,command,コマンド出力
+doc,symref,comma,\,
+doc,symref,num,#
+doc,spec/regexp,backref,後方参照
+doc,symref,under,_
+class,Proc,orphan,orphan な手続きオブジェクトの挙動
+doc,spec/control,case,case
+doc,spec/m17n,dummy,ダミーエンコーディング
+doc,spec/operator,or,or
+doc,spec/m17n,magic_comment,magic comment
+doc,spec/lambda_proc,should_use_next,手続きを中断して値を返す
+doc,spec/def,defined,defined?
+doc,symref,or,|
+class,Proc,should_use_next,手続きを中断して値を返す
+doc,symref,rbra2,]
+method,Kernel.#proc,block,Proc オブジェクトをブロック付きメソッド呼び出しに使う
+doc,spec/variables,pseudo,疑似変数
+doc,spec/program,terminate,プログラムの終り
+method,Kernel.#lambda,orphan,orphan な手続きオブジェクトの挙動
+library,optparse,optionarg,オプションの引数
+doc,spec/lambda_proc,block,Proc オブジェクトをブロック付きメソッド呼び出しに使う
+doc,spec/variables,class_var_scope,クラス変数のスコープ
+doc,spec/literal,symbol,シンボル
+doc,spec/rubycmd,cmd_option,コマンドラインオプション
+class,Thread,exception,例外発生時のスレッドの振る舞い
+doc,spec/def,singleton_class,特異クラス定義
+doc,spec/variables,prio,定数参照の優先順位
+doc,spec/literal,string,文字列リテラル
+method,Kernel.#lambda,lambda_proc,lambda と proc と Proc.new とイテレータの違い
+doc,spec/regexp,sample,サンプル
+doc,spec/def,module,モジュール定義
+doc,spec/call,super,super
+doc,spec/operator,multiassign,多重代入
+class,FileUtils,options,オプションの説明
+doc,symref,ast,*
+library,socket,host_format,ホスト指定形式
+doc,spec/def,class,クラス定義
+doc,spec/safelevel,level4,レベル 4
+doc,symref,q,?
+doc,spec/program,exp,式
+doc,symref,ex,!
+library,iconv,gnu_options,環境依存の機能
+doc,symref,colon,:
+doc,spec/control,while,while
+doc,spec/m17n,encoding,Ruby がサポートするエンコーディング
+doc,spec/m17n,script_encoding,スクリプトエンコーディング
+doc,symref,semicolon,;
+method,Kernel.#lambda,block,Proc オブジェクトをブロック付きメソッド呼び出しに使う
+library,optparse,optiondef,オプションの定義
+class,IO,m17n,多言語化と IO のエンコーディング

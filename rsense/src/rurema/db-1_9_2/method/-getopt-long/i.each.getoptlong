@@ -1,0 +1,11 @@
+kind=defined
+names=each,each_option
+visibility=public
+
+--- each {|optname, optarg|...}
+--- each_option {|optname, optarg|...}
+get メソッドのイテレータ版です。オプションとその引数の取得を
+繰り返し行います。
+
+@see [[m:GetoptLong#get]]
+

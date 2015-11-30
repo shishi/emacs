@@ -1,0 +1,10 @@
+kind=defined
+names=trust
+visibility=public
+
+--- trust -> self
+
+オブジェクトの「untrustマーク」を取り除きます。
+
+@see [[m:Object#untrusted?]],[[m:Object#untrust]]
+

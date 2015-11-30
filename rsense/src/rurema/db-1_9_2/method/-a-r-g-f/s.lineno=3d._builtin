@@ -1,0 +1,27 @@
+kind=defined
+names=lineno=
+visibility=public
+
+--- lineno=(number)
+全引数ファイルを一つのファイルとみなしたときの現在の行番号を number に書き換えます。
+
+@param number 更新後の行番号を指定する
+
+  ARGV.replace(
+    Dir.glob("*").reject{|name| FileTest.file?(name) == false}
+  )
+
+  ARGF.each {|line|
+    if ARGF.lineno == 4
+      ARGF.lineno = 5
+    end
+    p [ARGF.lineno, line]
+  }
+  #=> 例
+  #=> [1, "cat:\n"]
+  #=> [2, " - name: taro\n"]
+  #=> [3, "   age: 7\n"]
+  #=> [5, " - name: jiro\n"] 
+  #=> [6, "   age: 23\n"]
+  # ...
+

@@ -1,0 +1,11 @@
+kind=defined
+names=minimum
+visibility=public
+
+--- minimum -> Integer
+リソースレコードで TTL の値として使われる最小の秒数を
+返します。
+
+
+
+

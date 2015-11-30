@@ -1,0 +1,6 @@
+kind=defined
+names=set_eventloop_weight
+visibility=public
+
+--- set_eventloop_weight(loop_max, no_event)
+

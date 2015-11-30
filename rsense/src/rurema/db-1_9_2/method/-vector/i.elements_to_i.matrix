@@ -1,0 +1,14 @@
+kind=defined
+names=elements_to_i
+visibility=public
+
+--- elements_to_i -> Vector
+ベクトルの各成分を[[c:Integer]]に変換したベクトルを返します。
+
+例:
+  require 'matrix'
+
+  v = Vector.elements([2.5, 3.0, 5.01, 7])
+  vi = v.elements_to_i
+  p vi #=> "Vector[2, 3, 5, 7]"
+

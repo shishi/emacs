@@ -1,0 +1,18 @@
+kind=defined
+names=open_uri_or_path
+visibility=public
+
+--- open_uri_or_path(uri, last_modified = nil, head = false, depth = 0) -> StringIO | File
+
+@param uri URI を指定します。
+
+@param last_modified 最終更新時刻を指定します。
+
+@param head 真を指定するとヘッダ情報のみ取得します。
+
+@param depth 現在のリダイレクト回数を指定します。
+
+@raise Gem::RemoteFetcher::FetchError デフォルトでは 11 回リダイレクトした場合に発生します。
+       depth を指定すると 10 - depth 回より多くリダイレクトした場合にこの例外が発生するようになります。
+       また HTTP のレスポンスが想定外のものの場合にも発生します。
+

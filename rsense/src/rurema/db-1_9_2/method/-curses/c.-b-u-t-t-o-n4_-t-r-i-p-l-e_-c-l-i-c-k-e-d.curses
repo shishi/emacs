@@ -1,0 +1,10 @@
+kind=defined
+names=BUTTON4_TRIPLE_CLICKED
+visibility=public
+
+--- BUTTON4_TRIPLE_CLICKED -> Integer
+
+マウスボタン 3 をトリプルクリックしたことを表すマウスイベント用の定数です。
+
+@see [[m:Curses.getmouse]]
+

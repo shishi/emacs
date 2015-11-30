@@ -1,0 +1,10 @@
+name=FIXNUM_MIN
+private=false
+macro=true
+type=long
+filename=ruby.h
+params=
+
+
+Fixnum にできる整数の下限値。
+

@@ -1,0 +1,6 @@
+kind=defined
+names=kanji_replace
+visibility=public
+
+--- kanji_replace(knj)
+

@@ -1,0 +1,8 @@
+kind=added
+names=CRLF
+visibility=public
+
+--- CRLF -> "\x0d\x0a"
+
+内部で利用する定数です。
+

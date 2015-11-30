@@ -1,0 +1,8 @@
+kind=defined
+names=required_ruby_version
+visibility=public
+
+--- required_ruby_version -> Gem::Requirement
+
+この Gem パッケージを動作させるのに必要な Ruby のバージョンを返します。
+

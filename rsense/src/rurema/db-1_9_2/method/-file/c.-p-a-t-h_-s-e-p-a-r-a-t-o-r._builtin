@@ -1,0 +1,9 @@
+kind=defined
+names=PATH_SEPARATOR
+visibility=public
+
+--- PATH_SEPARATOR
+
+PATH 環境変数の要素のセパレータです。UNIX では ":" MS-DOS な
+どでは ";" です。
+

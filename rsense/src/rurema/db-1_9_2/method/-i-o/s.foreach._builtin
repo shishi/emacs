@@ -1,0 +1,26 @@
+kind=defined
+names=foreach
+visibility=public
+
+--- foreach(path, rs = $/) {|line| ... }    -> nil
+--- foreach(path, rs = $/)                  -> Enumerator
+
+path で指定されたファイルの各行を引数としてブロックを繰り返し実行します。
+path のオープンに成功すれば nil を返します。
+
+ブロックが与えられなかった場合は、path で指定されたファイルの各行を繰り返す
+[[c:Enumerator]] オブジェクトを生成して返します。
+
+テキスト読み込みメソッドとして動作します。
+path が空ファイルの場合、何もせずに nil を返します。
+[[m:Kernel.#open]] と同様 path の先頭が "|" ならば、"|" に続くコマンドの出力を読み取ります。
+
+@param path ファイル名を表す文字列か "|コマンド名" を指定します。
+
+@param rs 行の区切りを文字列で指定します。rs に nil を指定すると行区切りなしとみなします。
+          空文字列 "" を指定すると連続する改行を行の区切りとみなします(パラグラフモード)。
+
+@raise Errno::EXXX path のオープンに失敗した場合、発生します。
+
+@see [[m:$/]]
+

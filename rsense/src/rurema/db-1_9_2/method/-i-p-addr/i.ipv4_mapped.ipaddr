@@ -1,0 +1,9 @@
+kind=defined
+names=ipv4_mapped
+visibility=public
+
+--- ipv4_mapped -> IPAddr
+
+IPv4 アドレスから IPv4 射影 IPv6 アドレスの
+新しい IPAddr オブジェクトを返します。
+

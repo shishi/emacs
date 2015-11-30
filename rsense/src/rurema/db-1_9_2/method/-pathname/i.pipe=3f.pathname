@@ -1,0 +1,9 @@
+kind=defined
+names=pipe?
+visibility=public
+
+--- pipe? -> bool
+FileTest.pipe?(self.to_s) と同じです。
+
+@see [[m:FileTest.#pipe?]]
+

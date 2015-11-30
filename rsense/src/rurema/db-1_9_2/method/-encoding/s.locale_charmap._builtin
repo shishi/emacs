@@ -1,0 +1,21 @@
+kind=defined
+names=locale_charmap
+visibility=public
+
+--- locale_charmap -> String | nil
+ロケールエンコーディングを決定するために用いる、locale charmap 名を返します。nl_langinfo 等がない環境では nil を、miniruby では ASCII_8BIT を返します。
+
+  Debian GNU/Linux
+    LANG=C
+      Encoding.locale_charmap  => "ANSI_X3.4-1968" 
+  LANG=ja_JP.EUC-JP
+      Encoding.locale_charmap  => "EUC-JP"
+
+  SunOS 5
+    LANG=C
+      Encoding.locale_charmap  => "646"
+    LANG=ja
+      Encoding.locale_charmap  => "eucJP"
+
+@see [[man:charmap(5)]]
+

@@ -1,0 +1,9 @@
+kind=defined
+names=audit
+visibility=public
+
+--- audit -> bool
+真であれば、サーバの起動時、接続時、切断時、停止時にログを出力します。
+
+@see [[m:GServer#starting]], [[m:GServer#connecting]], [[m:GServer#disconnecting]], [[m:GServer#stopping]]
+

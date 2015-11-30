@@ -1,0 +1,12 @@
+kind=defined
+names=sqrt
+visibility=public
+
+--- sqrt(x) -> Float
+
+x の平方根を返します。
+
+@param x 正の実数
+
+@raise Errno::EDOM  引数が負の値である場合に発生します。
+

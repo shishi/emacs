@@ -1,0 +1,17 @@
+kind=defined
+names=round
+visibility=public
+
+--- round   -> Integer
+
+自身ともっとも近い整数を返します。
+
+中央値 0.5, -0.5 はそれぞれ 1,-1 に切り上げされます。いわゆる四捨五入ですが、偶数丸めではありません。
+
+     1.round        #=> 1
+     1.2.round      #=> 1
+     (-1.2).round   #=> -1
+     (-1.5).round   #=> -2
+
+@see [[m:Numeric#ceil]], [[m:Numeric#floor]], [[m:Numeric#truncate]]
+

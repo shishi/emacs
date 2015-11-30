@@ -1,0 +1,11 @@
+kind=defined
+names=session
+visibility=public
+
+--- session -> OpenSSL::SSL::Session
+利用している SSL セッションを [[c:OpenSSL::SSL::Session]]
+オブジェクトで返します。
+
+@see [[m:OpenSSL::SSL::SSLSocket#session=]],
+     [[m:OpenSSL::SSL::SSLSocket#session_reused?]]
+

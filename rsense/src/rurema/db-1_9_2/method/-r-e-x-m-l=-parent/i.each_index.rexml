@@ -1,0 +1,6 @@
+kind=defined
+names=each_index
+visibility=public
+
+--- each_index {|index| ... }
+

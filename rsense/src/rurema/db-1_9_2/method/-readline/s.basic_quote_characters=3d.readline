@@ -1,0 +1,19 @@
+kind=defined
+names=basic_quote_characters=
+visibility=public
+
+--- basic_quote_characters=(string)
+
+スペースなどの単語の区切りをクオートするための
+複数の文字で構成される文字列 string を指定します。
+
+GNU Readline のデフォルト値は、「"'」です。
+
+@param string 文字列を指定します。
+
+@raise NotImplementedError サポートしていない環境で発生します。
+
+@raise SecurityError セーフレベル ($SAFE) が 4 の場合に発生します。
+
+@see [[m:Readline.basic_quote_characters]]
+

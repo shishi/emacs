@@ -1,0 +1,12 @@
+kind=defined
+names=status
+visibility=public
+
+--- status    -> [String]
+
+対象となるリソースのステータスコードと reason phrase を文字列の配列として返します。
+
+例:
+  require 'open-uri'
+  p open('http://example.com/').status  #=> ["200", "OK"]
+ 

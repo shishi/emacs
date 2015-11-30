@@ -1,0 +1,25 @@
+kind=defined
+names=shift
+visibility=public
+
+--- shift(n = 1) -> Array  | nil
+
+自身の先頭から指定された n 個だけ要素を取り除いてそれを返します。
+
+また、自身が空配列の時は n が指定されていない場合はnil を、
+n が明示的に指定されている場合は空の配列を返します。
+
+@param n 自身から取り除きたい要素の個数を非負整数で指定します。
+
+
+例:
+
+  a = [0, 1, 2, 3, 4]
+  p a.shift            #=> 0
+  p a                  #=> [1, 2, 3, 4]
+
+  p [].shift           #=> nil
+  p [].shift(1)        #=> []
+
+@see [[m:Array#push]], [[m:Array#pop]], [[m:Array#unshift]]
+

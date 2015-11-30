@@ -1,0 +1,17 @@
+kind=defined
+names=to_i
+visibility=public
+
+--- to_i  -> Integer
+
+自身が表す関数のアドレスを整数で返します。
+
+ require 'dl/import'
+
+ h = DL::Handle.new
+ addr = h.sym('strncmp')
+ cfunc = DL::CFunc.new(addr, DL::TYPE_INT)
+ func = DL::Function.new(cfunc, [DL::TYPE_VOIDP, DL::TYPE_VOIDP, DL::TYPE_INT])
+
+ p func.to_i    #=>  3084587680
+

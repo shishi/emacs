@@ -1,0 +1,15 @@
+kind=defined
+names=NO_PADDING
+visibility=public
+
+--- NO_PADDING -> Integer
+パディングをしないパディングモードです。
+
+セキュリティ上の問題を引き起すため、基本的に使わないでください。
+
+[[m:OpenSSL::PKey::RSA#public_encrypt]]、
+[[m:OpenSSL::PKey::RSA#public_decrypt]]、
+[[m:OpenSSL::PKey::RSA#private_encrypt]]、
+[[m:OpenSSL::PKey::RSA#private_decrypt]] の
+第二引数に指定できます。
+

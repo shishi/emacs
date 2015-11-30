@@ -1,0 +1,21 @@
+kind=defined
+names=instance_variable_set
+visibility=public
+
+--- instance_variable_set(var, value) -> object
+
+オブジェクトのインスタンス変数 var に値 value を設定します。
+
+インスタンス変数が定義されていなければ新たに定義されます。
+
+@param var インスタンス変数名を文字列か [[c:Symbol]] で指定します。
+@param value 設定する値です。
+@return value を返します。
+
+    obj = Object.new
+    p obj.instance_variable_set("@foo", 1)  #=> 1
+    p obj.instance_variable_set(:@foo, 2)   #=> 2
+    p obj.instance_variable_get(:@foo)      #=> 2
+
+@see [[m:Object#instance_variable_get]],[[m:Object#instance_variables]],[[m:Object#instance_variable_defined?]]
+

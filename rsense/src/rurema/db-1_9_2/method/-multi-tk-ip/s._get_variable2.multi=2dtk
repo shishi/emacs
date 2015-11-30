@@ -1,0 +1,6 @@
+kind=defined
+names=_get_variable2
+visibility=public
+
+--- _get_variable2(var, idx, flag)
+

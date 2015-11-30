@@ -1,0 +1,42 @@
+kind=defined
+names=!=
+visibility=public
+
+--- !=(other) -> bool
+オブジェクトが other と等しくないことを判定します。
+
+デフォルトでは self == other を評価した後に結果を論理否定して返します。
+このため、サブクラスで [[m:BasicObject#==]] を再定義しても != とは自動的に整合性が
+とれるようになっています。
+
+ただし、 [[m:BasicObject#!=]] 自身や [[m:BasicObject#!]] を再定義した際には、ユーザーの責任で
+整合性を保たなくてはなりません。
+
+このメソッドは主に論理式の評価に伴って副作用を引き起こすことを目的に
+再定義するものと想定されています。
+
+@param other 比較対象となるオブジェクト
+@see [[m:BasicObject#==]]
+@see [[m:BasicObject#!]]
+
+例
+ class NonequalityRecorder < BasicObject
+   def initialize
+     @count = 0
+   end
+   attr_reader :count
+
+   def !=(other)
+     @count += 1
+     super
+   end
+ end
+ recorder = NonequalityRecorder.new
+
+ recorder != 1
+ puts 'hoge' if recorder != "str"
+
+ p recorder.count #=> 2
+
+
+

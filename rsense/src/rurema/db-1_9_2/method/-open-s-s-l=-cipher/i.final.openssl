@@ -1,0 +1,11 @@
+kind=defined
+names=final
+visibility=public
+
+--- final -> String
+暗号オブジェクト内部に残されたデータを暗号化/復号化し、文字列で
+返します。
+
+パディング([[m:OpenSSL::Cipher#padding=]])を有効にしている場合は、
+残されたデータにパディングを付加した上で暗号化します。
+

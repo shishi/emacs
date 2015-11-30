@@ -1,0 +1,8 @@
+kind=defined
+names=DEFAULT_AUTH_TYPE
+visibility=public
+
+--- DEFAULT_AUTH_TYPE -> Symbol
+デフォルトの認証スキーム(:plain)です。
+
+

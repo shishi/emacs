@@ -1,0 +1,10 @@
+kind=defined
+names=read_only
+visibility=public
+
+--- read_only(*names) -> ()
+
+与えられた属性名を読み取り専用にします。
+
+@param names 属性名を一つ以上指定します。
+

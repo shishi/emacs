@@ -1,0 +1,36 @@
+name=Data_Wrap_Struct
+private=false
+macro=true
+type=VALUE
+filename=ruby.h
+params=(VALUE klass, RUBY_DATA_FUNC mark, RUBY_DATA_FUNC free, void *sval)
+
+
+C の構造体 sval をラップして klass クラスの
+インスタンスである Ruby オブジェクトを生成し、それを返します。
+mark、free はそれぞれ sval のマーク用・解放用の
+関数へのポインタです。どちらも、必要ないときはかわりに 0 を渡します。
+
+また RUBY_DATA_FUNC の定義は以下のようです。
+
+    typedef void (*RUBY_DATA_FUNC)(void *st)
+
+第一引数 st には sval が渡されます。
+
+使用例
+
+    struct mytype {
+        int i;
+        char *s;
+    };
+
+    VALUE
+    my_s_new(klass)
+        VALUE klass;
+    {
+        struct mytype *m = malloc(sizeof(struct mytype));
+        m->i = 0;
+        m->s = 0;
+        return Data_Wrap_Struct(MyClass, 0, free_my, m);
+    }
+

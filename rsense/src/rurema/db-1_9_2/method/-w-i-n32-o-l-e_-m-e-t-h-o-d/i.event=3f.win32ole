@@ -1,0 +1,18 @@
+kind=defined
+names=event?
+visibility=public
+
+--- event? -> bool
+メソッドがイベントかどうかを取得します。
+
+イベントとはこのサーバが実装しているメソッドではなく、クライアント側が
+サーバ側の通知を受けるために実装するメソッドです。
+
+@return メソッドがイベントであれば真。
+
+   tobj = WIN32OLE_TYPE.new('Microsoft Excel 14.0 Object Library', 'Workbook')
+   method = WIN32OLE_METHOD.new(tobj, 'SheetActivate')
+   puts method.event? # => true
+
+@see [[c:WIN32OLE_EVENT]]
+

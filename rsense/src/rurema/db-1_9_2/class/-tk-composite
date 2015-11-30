@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=tk.composite
+extended=Tk
+included=Tk
+
+

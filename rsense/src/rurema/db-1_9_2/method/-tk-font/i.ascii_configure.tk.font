@@ -1,0 +1,7 @@
+kind=defined
+names=ascii_configure,latin_configure
+visibility=public
+
+--- latin_configure(slot, value = Tk::None)
+--- ascii_configure(slot, value = Tk::None)
+

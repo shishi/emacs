@@ -1,0 +1,24 @@
+kind=defined
+names=remove_class_variable
+visibility=private 
+
+--- remove_class_variable(name) -> object
+
+引数で指定したクラス変数を取り除き、そのクラス変数に設定さ
+れていた値を返します。
+
+@param name [[c:String]] または [[c:Symbol]] を指定します。
+
+@return 引数で指定されたクラス変数に設定されていた値を返します。
+
+@raise NameError 引数で指定されたクラス変数がそのモジュールやクラスに定義されていない場合に発生します。
+
+  class Foo
+    @@foo = 1
+    remove_class_variable(:@@foo)   # => 1
+    p @@foo   # => uninitialized class variable @@foo in Foo (NameError)
+  end
+
+@see [[m:Module#remove_const]], [[m:Object#remove_instance_variable]]
+
+

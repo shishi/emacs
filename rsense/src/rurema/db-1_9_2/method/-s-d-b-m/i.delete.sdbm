@@ -1,0 +1,22 @@
+kind=defined
+names=delete
+visibility=public
+
+--- delete(key) -> String
+
+key をキーとする項目を削除します。
+
+@param key キー。
+
+@return 削除した要素の値を返します。
+
+  require 'sdbm'
+  
+  db1 = SDBM.open('aaa.gdbm', 0666)
+  db1['a'] = 'aaa'
+  db1['b'] = 'bbb'
+  db1['c'] = 'ccc'
+  
+  p db1.delete('a') #=> 'aaa'
+
+

@@ -1,0 +1,27 @@
+kind=defined
+names=delete_if,reject!
+visibility=public
+
+--- delete_if -> Enumerator
+--- reject!   -> Enumerator
+--- delete_if {|key, value| ... } -> self
+--- reject! {|key, value| ... } -> self|nil
+
+キーと値を引数としてブロックを評価した結果が真であ
+るような要素を self から削除します。
+
+delete_if は常に self を返します。
+reject! は、要素を削除しなかった場合には nil を返し、
+そうでなければ self を返します。
+
+  h = { 2 => "8" ,4 => "6" ,6 => "4" ,8 => "2" }
+  
+  p h.reject!{|key, value| key.to_i < value.to_i }   #=> { 6 => "4", 8 => "2" }
+  p h                                                #=> { 6 => "4", 8 => "2" }
+  
+  p h.delete_if{|key, value| key.to_i < value.to_i } #=> { 6 => "4", 8 => "2" }
+  p h.reject!{|key, value| key.to_i < value.to_i }   #=> nil
+
+@see [[m:Hash#reject]],[[m:Hash#delete]]
+@see [[m:Hash#keep_if]],[[m:Hash#select!]]
+

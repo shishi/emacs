@@ -1,0 +1,14 @@
+superclass=Struct
+type=class
+library=net.imap
+extended=
+included=
+
+Net::IMAP::ContinuationRequest represents command continuation requests.
+
+The command continuation request response is indicated by a "+" token
+instead of a tag.  This form of response indicates that the server is
+ready to accept the continuation of a command from the client.  The
+remainder of this response is a line of text.
+
+  continue_req    ::= "+" SPACE (resp_text / base64)

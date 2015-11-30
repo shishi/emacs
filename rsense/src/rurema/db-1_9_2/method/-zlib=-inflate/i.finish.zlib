@@ -1,0 +1,23 @@
+kind=defined
+names=finish
+visibility=public
+
+--- finish -> String
+
+展開ストリームを終了します。
+
+ストリーム内に残っていたデータ (つまり圧縮データの後についていた
+ゴミデータ) を返します。
+[[m:Zlib::ZStream#finished?]] が真でない時に finish を呼ぶと
+例外が発生します。
+
+展開ストリームは圧縮データ内に終了コードを発見した時点で
+自ら終了するため、明示的に finish を呼ぶ必要は必ずしも
+ありませんが、このメソッドは圧縮データが正しく終了しているかを
+確認するのに便利です。
+
+  cstr = "x\234\313\310OOUH+MOTH\315K\001\000!\251\004\276"
+  inz = Zlib::Inflate.new
+  inz << cstr
+  p inz.finish #=> "hoge fuga end"
+

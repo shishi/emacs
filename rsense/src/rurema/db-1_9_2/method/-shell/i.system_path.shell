@@ -1,0 +1,17 @@
+kind=defined
+names=system_path,system_path=
+visibility=public
+
+--- system_path -> Array 
+--- system_path=(path)
+コマンドサーチパスの配列を返す。
+
+@param path コマンドサーチパスの配列を指定します。
+
+使用例
+
+  require 'shell'
+  sh = Shell.new
+  sh.system_path = [ "./" ]
+  p sh.system_path #=> ["./"]
+

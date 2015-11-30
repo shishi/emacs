@@ -1,0 +1,11 @@
+kind=defined
+names=compact_specs
+visibility=public 
+
+--- compact_specs(specs) -> Array
+
+与えられたスペックを元にスペックを一意に特定できるだけの情報を持った配列を作成して
+返します。
+
+@param specs [[c:Gem::Specification]] の配列を指定します。
+

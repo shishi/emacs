@@ -1,0 +1,13 @@
+kind=defined
+names=bit_set?
+visibility=public
+
+--- bit_set?(n) -> bool
+自身の n ビット目が立っているなら真を返します。
+
+例:
+  BN.new("129").bit_set?(0) # => true
+  BN.new("129").bit_set?(1) # => false
+
+@param n 調べるビットの位置
+

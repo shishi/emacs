@@ -1,0 +1,12 @@
+kind=defined
+names=getaddresses
+visibility=public
+
+--- getaddresses(name) -> [Resolv::IPv4 | Resolv::IPv6]
+ホスト名 name の IP アドレスをルックアップし、
+ルックアップ結果のアドレスリストを返します。
+
+ルックアップに失敗した場合は空の配列が返されます。
+
+@param name ホスト名を文字列もしくは[[c:Resolv::DNS::Name]]のインスタンスで与えます。
+

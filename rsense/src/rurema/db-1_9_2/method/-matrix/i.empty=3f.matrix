@@ -1,0 +1,8 @@
+kind=defined
+names=empty?
+visibility=public
+
+--- empty? -> bool
+
+Returns +true+ if this is an empty matrix, i.e. if the number of rows
+or the number of columns is 0.

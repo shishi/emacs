@@ -1,0 +1,17 @@
+kind=defined
+names=WUNTRACED
+visibility=public
+
+--- WUNTRACED
+
+[[m:Process.#waitpid]] の第二引数に指定するフラグです。
+このフラグが指定された場合、waitpid は停止しているだけで
+終了していない子プロセスのプロセス ID も返すようになります。
+trace されている子プロセスの ID は返しません。
+
+ include Process
+ pid = fork{ Process.kill('SIGSTOP', Process.pid) }
+ p pid                          #=> 4336
+ p waitpid2(pid, WUNTRACED)     #=> [4336, #<Process::Status: pid=4336,stopped(SIGSTOP=19)>]
+
+@see [[man:waitpid(2)]]

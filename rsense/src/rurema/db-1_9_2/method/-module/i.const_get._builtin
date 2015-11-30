@@ -1,0 +1,37 @@
+kind=defined
+names=const_get
+visibility=public
+
+--- const_get(name, inherit = true) -> object
+
+モジュールに定義されている name で指定される名前の定数の値を
+取り出します。
+
+[[m:Module#const_defined?]] と違って [[c:Object]] を特別扱いすることはありません。
+
+@param name 定数名。[[c:String]] か [[c:Symbol]] で指定します。
+
+@param inherit false を指定するとスーパークラスや include したモジュールで
+       定義された定数は対象にはなりません。
+
+@raise NameError 定数が定義されていないときに発生します。
+
+  module Bar
+    BAR = 1
+  end
+  class Object
+    include Bar
+  end
+  # Object では include されたモジュールに定義された定数を見付ける
+  p Object.const_get(:BAR)   # => 1
+
+  class Baz
+    include Bar
+  end
+  # Object以外でも同様
+  p Baz.const_get(:BAR)      # => 1
+  # 定義されていない定数
+  p Baz.const_get(:NOT_DEFINED) #=> raise NameError
+  # 第二引数に false を指定すると自分自身に定義された定数から探す
+  p Baz.const_get(:BAR, false) #=> raise NameError
+

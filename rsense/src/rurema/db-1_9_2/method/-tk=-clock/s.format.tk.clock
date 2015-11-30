@@ -1,0 +1,6 @@
+kind=defined
+names=format
+visibility=public
+
+--- format(clk, form = nil)
+

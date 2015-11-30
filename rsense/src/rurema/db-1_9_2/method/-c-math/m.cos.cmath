@@ -1,0 +1,11 @@
+kind=defined
+names=cos
+visibility=public
+
+--- cos(z) -> Float | Complex
+
+z の余弦関数の値をラジアンで返します。
+
+@param z 数値
+
+

@@ -1,0 +1,8 @@
+kind=defined
+names=email
+visibility=public
+
+--- email -> String
+
+メールアドレスを返します。
+

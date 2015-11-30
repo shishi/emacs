@@ -1,0 +1,23 @@
+kind=defined
+names=assoc
+visibility=public
+
+--- assoc(key)   ->  Array | nil
+
+ハッシュが key をキーとして持つとき、見つかった要素のキーと値のペア
+を配列として返します。
+
+key が見つからなかった場合は、nil を返します。
+
+@param key 検索するキー
+
+   h = {"colors"  => ["red", "blue", "green"],
+        "letters" => ["a", "b", "c" ]}
+   h.assoc("letters")  #=> ["letters", ["a", "b", "c"]]
+   h.assoc("foo")      #=> nil
+
+
+
+@see [[m:Array#assoc]]
+
+

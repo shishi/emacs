@@ -1,0 +1,22 @@
+kind=defined
+names=chmod
+visibility=public
+
+--- chmod(mode)    -> 0
+
+ファイルのモードを指定された mode に変更します。
+
+モードの変更に成功した場合は 0 を返します。失敗した場合は例外 [[c:Errno::EXXX]] が発生し
+ます。
+
+@param mode [[man:chmod(2)]] と同様に整数で指定します。
+
+@raise IOError 自身が close されている場合に発生します。
+
+@raise Errno::EXXX 失敗した場合に発生します。
+
+例:
+
+   f = File.new("out", "w");
+   f.chmod(0644)   #=> 0
+

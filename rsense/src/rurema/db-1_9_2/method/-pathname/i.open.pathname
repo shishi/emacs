@@ -1,0 +1,10 @@
+kind=defined
+names=open
+visibility=public
+
+--- open(mode = 'r', perm = 0666) -> File
+--- open(mode = 'r', perm = 0666){|file| ... } -> object
+File.open(self.to_s, *args, &block) と同じです。
+
+@see [[m:File.open]]
+

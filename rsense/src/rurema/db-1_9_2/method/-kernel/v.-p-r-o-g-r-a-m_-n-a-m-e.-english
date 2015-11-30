@@ -1,0 +1,17 @@
+kind=added
+names=PROGRAM_NAME
+visibility=public
+
+--- $PROGRAM_NAME -> String
+
+[[m:$0]] ¤ÎÊÌÌ¾
+
+  require "English"
+  
+  p $PROGRAM_NAME
+  #end of sample.rb
+
+  ruby sample.rb  #=> "sample.rb"
+  ruby ./sample.rb #=> "./sample.rb"
+  ruby /home/hoge/bin/sample.rb #=> "/home/hoge/bin/sample.rb"
+

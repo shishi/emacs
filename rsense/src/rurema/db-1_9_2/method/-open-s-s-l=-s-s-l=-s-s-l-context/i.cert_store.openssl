@@ -1,0 +1,12 @@
+kind=defined
+names=cert_store
+visibility=public
+
+--- cert_store -> OpenSSL::X509::Store | nil
+接続相手の証明書の検証のために使う、信頼している CA 証明書を
+含む証明書ストアを返します。
+
+デフォルトは nil です。
+
+@see [[m:OpenSSL::SSL::SSLContext#cert_store=]]
+

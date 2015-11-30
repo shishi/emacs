@@ -1,0 +1,8 @@
+kind=defined
+names=CURRENT
+visibility=public
+
+--- CURRENT -> String
+
+特定のプラットフォーム向けの Gem をビルドするときに使用します。
+

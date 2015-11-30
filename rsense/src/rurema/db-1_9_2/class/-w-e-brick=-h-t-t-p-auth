@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=webrick.httpauth
+extended=
+included=
+
+ユーザ認証の機能を提供するモジュールです。

@@ -1,0 +1,12 @@
+kind=defined
+names=format_datetime
+visibility=public
+
+--- format_datetime(time) -> String
+時刻オブジェクトを IMAP の日付時刻フォーマットでの文字列に変換します
+
+  Net::IMAP.format_datetime(Time.new(2011, 6, 20, 13, 20, 1))
+  # => "20-Jun-2011 13:20 +0900"
+
+@param time 変換する時刻オブジェクト
+

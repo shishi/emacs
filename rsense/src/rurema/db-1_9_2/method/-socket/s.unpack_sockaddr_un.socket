@@ -1,0 +1,14 @@
+kind=defined
+names=unpack_sockaddr_un
+visibility=public
+
+--- unpack_sockaddr_un(sockaddr)
+
+[[ref:lib:socket#pack_string]]を
+unpack したソケットパス名を返します。
+
+例:
+
+  require 'socket'
+  p Socket.unpack_sockaddr_un(Socket.sockaddr_un("/tmp/.X11-unix/X0"))
+  => "/tmp/.X11-unix/X0"

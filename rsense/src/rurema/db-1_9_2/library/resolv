@@ -1,0 +1,22 @@
+methods=
+sublibraries=
+requires=
+classes=Resolv,Resolv=ResolvError,Resolv=Hosts,Resolv=DNS,Resolv=DNS=Requester=RequestError,Resolv=DNS=Resource=Generic,Resolv=DNS=Resource=DomainName,Resolv=DNS=Resource=NS,Resolv=DNS=Resource=CNAME,Resolv=DNS=Resource=SOA,Resolv=DNS=Resource=PTR,Resolv=DNS=Resource=HINFO,Resolv=DNS=Resource=MINFO,Resolv=DNS=Resource=MX,Resolv=DNS=Resource=TXT,Resolv=DNS=Resource=ANY,Resolv=DNS=Resource=IN,Resolv=DNS=Resource=IN=NS,Resolv=DNS=Resource=IN=CNAME,Resolv=DNS=Resource=IN=SOA,Resolv=DNS=Resource=IN=HINFO,Resolv=DNS=Resource=IN=MINFO,Resolv=DNS=Resource=IN=MX,Resolv=DNS=Resource=IN=TXT,Resolv=DNS=Resource=IN=ANY,Resolv=DNS=Resource=IN=A,Resolv=DNS=Resource=IN=WKS,Resolv=DNS=Resource=IN=PTR,Resolv=DNS=Resource=IN=AAAA,Resolv=DNS=Resource=IN=SRV,Resolv=DNS=DecodeError,Resolv=DNS=EncodeError,Resolv=DNS=Config=OtherResolvError,Resolv=DNS=Query,Resolv=DNS=Name,Resolv=DNS=Resource,Resolv=IPv4,Resolv=IPv6
+is_sublibrary=false
+
+DNSによる名前解決を行うライブラリです。 Ruby で書かれているため thread-aware であり、並列に多くのホスト名を解決することができます。
+
+DNS モジュールを使うことで、さまざまなリソースを直接ルックアップできます。
+
+なお、単にホスト名から IP アドレスを得たいだけであれば、
+[[lib:socket]] ライブラリの [[m:IPSocket.getaddress]] などが使用できます。
+
+=== 例:
+  Resolv.getaddress("www.ruby-lang.org")
+  Resolv.getname("210.251.121.214").to_s
+  Resolv::DNS.new.getresources("www.ruby-lang.org", Resolv::DNS::Resource::IN::A).collect {|r| r.address}
+  Resolv::DNS.new.getresources("ruby-lang.org", Resolv::DNS::Resource::IN::MX).collect {|r| [r.exchange.to_s, r.preference]}
+
+
+=== Bugs
+NIS はサポートされていません。

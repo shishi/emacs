@@ -1,0 +1,7 @@
+kind=defined
+names=numeric_type=,set_numeric_type
+visibility=public
+
+--- set_numeric_type(val)
+--- numeric_type=
+

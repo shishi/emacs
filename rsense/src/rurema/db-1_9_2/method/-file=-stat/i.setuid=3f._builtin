@@ -1,0 +1,18 @@
+kind=defined
+names=setuid?
+visibility=public
+
+--- setuid? -> bool
+setuidされている時に真を返します。
+
+  Dir.glob("/bin/*") {|bd|
+    if File::Stat.new(bd).setuid?
+      puts bd
+    end
+  }
+  #例
+  #...
+  #=> /bin/ping
+  #=> /bin/su
+  #...
+

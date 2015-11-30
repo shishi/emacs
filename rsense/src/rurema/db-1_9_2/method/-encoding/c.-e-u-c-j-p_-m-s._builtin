@@ -1,0 +1,14 @@
+kind=defined
+names=EUCJP_MS,EUC_JP_MS,EucJP_ms
+visibility=public
+
+--- EUCJP_MS
+--- EucJP_ms
+--- EUC_JP_MS
+eucJP-ms、Unix 系で用いられる、日本語 EUC 亜種です。
+
+EUC-JPに加え、Windowsの機種依存文字とユーザ定義文字を扱うことができます。
+[[url:http://www2d.biglobe.ne.jp/~msyk/charcode/cp932/eucJP-ms.html]]
+[[url:http://legacy-encoding.sourceforge.jp/wiki/index.php?eucJP-ms]]
+[[url:http://blog.livedoor.jp/numa2666/archives/50980727.html]]
+

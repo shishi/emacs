@@ -1,0 +1,8 @@
+kind=defined
+names=to_hash
+visibility=public
+
+--- to_hash -> Hash
+
+self の各要素を格納したハッシュを返します。
+

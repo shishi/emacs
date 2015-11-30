@@ -1,0 +1,8 @@
+kind=defined
+names=[]
+visibility=public
+
+--- [](key)
+
+Retrieves key from the tuple.
+

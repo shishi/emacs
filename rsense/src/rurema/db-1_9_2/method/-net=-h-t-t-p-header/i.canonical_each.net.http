@@ -1,0 +1,14 @@
+kind=defined
+names=canonical_each,each_capitalized
+visibility=public
+
+--- each_capitalized {|name, value| .... } -> ()
+--- canonical_each {|name, value| .... } -> ()
+
+ヘッダフィールドの正規化名とその値のペアを
+ブロックに渡し、呼びだします。
+
+正規化名は name に対し
+  name.downcase.split(/-/).capitalize.join('-')
+で求まる文字列です。
+

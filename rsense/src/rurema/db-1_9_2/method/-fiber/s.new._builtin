@@ -1,0 +1,22 @@
+kind=defined
+names=new
+visibility=public
+
+--- new{|obj| ... } -> Fiber
+
+与えられたブロックとともにファイバーを生成して返します。
+ブロックは [[m:Fiber#resume]] に与えられた引数をその引数として実行されます。
+
+ブロックが終了した場合は親にコンテキストが切り替わります。
+その時ブロックの評価値が返されます。
+
+ a = nil
+ f = Fiber.new do |obj|
+   a = obj
+   :hoge
+ end
+  
+ b = f.resume(:foo)
+ p a  #=> :foo
+ p b  #=> :hoge
+

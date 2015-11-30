@@ -1,0 +1,31 @@
+kind=defined
+names=remainder
+visibility=public
+
+--- remainder(other)    -> Numeric
+
+self を other で割った余り r を返します。
+
+ここで、商 q と余り r は、
+
+  * self == other * q + r  
+と
+
+  * self > 0 のとき  0 <= r < |other|
+  * self < 0 のとき -|other| < r <= 0
+  * q は整数
+
+をみたす数です。r の符号は self と同じになります。
+商 q を直接返すメソッドはありません。self.quo(other).truncate がそれに相当します。
+
+@param other 自身を割る数を指定します。
+
+  p 13.remainder(4)       #=>  1
+  p (11.5).remainder(3.5) #=> 1.0
+  p 13.remainder(-4)      #=>  1
+  p (-13).remainder(4)    #=> -1
+  p (-13).remainder(-4)   #=> -1
+  p (-11).remainder(3.5)  #=> -0.5
+
+@see [[m:Numeric#divmod]], [[m:Numeric#modulo]]
+

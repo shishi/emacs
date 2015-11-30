@@ -1,0 +1,6 @@
+kind=defined
+names=namespace
+visibility=public
+
+--- namespace(prefix = prefix())
+

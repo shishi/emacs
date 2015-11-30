@@ -1,0 +1,8 @@
+methods=Gem/s.ssl_available=3f.rubygems.gem_openssl,Gem/s.ensure_ssl_available.rubygems.gem_openssl
+sublibraries=
+requires=
+classes=Gem=SSL
+is_sublibrary=true
+
+OpenSSL がインストールされていないシステムがあるかもしれないので、
+OpenSSL が使えるかどうかを確認するためのライブラリです。

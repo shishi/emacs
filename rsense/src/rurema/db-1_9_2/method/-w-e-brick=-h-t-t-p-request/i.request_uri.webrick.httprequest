@@ -1,0 +1,8 @@
+kind=defined
+names=request_uri
+visibility=public
+
+--- request_uri -> URI
+
+リクエスト URI を表す [[c:URI]] オブジェクトを返します。
+

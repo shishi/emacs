@@ -1,0 +1,7 @@
+superclass=OpenSSL=ASN1=Constructive
+type=class
+library=openssl
+extended=
+included=
+
+ASN.1 の Sequence 型(Universal タグのタグ番号16)を表すクラスです。

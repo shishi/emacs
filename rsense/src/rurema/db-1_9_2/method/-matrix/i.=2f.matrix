@@ -1,0 +1,10 @@
+kind=defined
+names=/
+visibility=public
+
+--- /(m) -> Matrix
+
+行列mの逆行列を右から乗じた行列を返します。
+
+@param m 逆行列を右から乗算する行列。可逆行列でselfと乗算可能な行列を渡します。
+

@@ -1,0 +1,38 @@
+kind=defined
+names=client_cert_cb=
+visibility=public
+
+--- client_cert_cb=(cb)
+[[m:OpenSSL::SSL::SSLContext#cert=]] でクライアント証明書を
+セットしていなかった場合にサーバからクライアント証明書の要求が来たときに
+呼びだされるコールバックオブジェクトを設定します。
+
+コールバックに渡される引数は以下のように
+  proc{|sslsocket| ... }
+1つで、利用している [[c:OpenSSL::SSL::SSLSocket]]
+オブジェクトが渡されます。そのオブジェクトから必要な証明書を見つけるのに
+必要な情報を取得します。
+コールバックはクライアント証明書([[c:OpenSSL::X509::Certificate]])
+とその秘密鍵([[c:OpenSSL::PKey::PKey]])のペアの配列を返さなければなりません。
+
+証明書と鍵が見付からない場合は nil を返してください。
+また、このコールバック内で例外が発生すると、適当な証明書が見付からなかったと
+判断されます。このとき例外は OpenSSL のライブラリによって握り潰されて
+しまいます。
+
+デフォルトは nil で、コールバックなしを意味します。この場合は
+クライアント証明書は利用されません。
+
+このメソッドはクライアント側でのみ意味を持ちます。
+
+例
+  ctx = OpenSSL::SSL::SSLContext.new(ssl_method)
+  ctx.client_cert_cb = proc{|sslsocket|
+    # sslsocket からコネクションの情報を取り出し、
+    # クライアント証明書(cert)とその秘密鍵(privkey)を探しだす
+    [cert, privkey]
+  }
+
+@param cb コールバックオブジェクト([[c:Proc]]、[[c:Method]] など)
+@see [[m:OpenSSL::SSL::SSLContext#client_cert_cb]]
+

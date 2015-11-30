@@ -1,0 +1,6 @@
+kind=defined
+names=group_flag
+visibility=public
+
+--- group_flag(id)
+

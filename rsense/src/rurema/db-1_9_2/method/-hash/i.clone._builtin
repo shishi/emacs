@@ -1,0 +1,26 @@
+kind=defined
+names=clone,dup
+visibility=public
+
+--- clone -> Hash
+--- dup -> Hash
+
+selfと同じ内容を持つ新しいハッシュを返します。
+
+clone は frozen tainted singleton-class の情報も含めてコピーしますが、 dup は内容だけをコピーします。
+またどちらのメソッドも要素それ自体のコピーはしません。つまり参照しているオブジェクトが
+変わらない「浅い(shallow)」コピーを行います。
+
+  h1 = {"have" => "have a","as" => "as a" }
+  h2 = h1.dup
+  
+  h2["have"] = "has"
+  p h2 #=> {"have"=>"has", "as"=>"as a"}
+  p h1 #=> {"have"=>"have a", "as"=>"as a"}
+  
+  h2["as"].upcase!
+  p h2 #=> {"have"=>"has", "as"=>"AS A"}
+  p h1 #=> {"have"=>"have a", "as"=>"AS A"}
+
+@see [[m:Object#clone]]
+

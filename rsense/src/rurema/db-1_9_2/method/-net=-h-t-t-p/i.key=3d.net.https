@@ -1,0 +1,16 @@
+kind=added
+names=key=
+visibility=public
+
+--- key=(key)
+クライアント証明書の秘密鍵を設定します。
+
+[[c:OpenSSL::PKey::RSA]] オブジェクトか
+[[c:OpenSSL::PKey::DSA]] オブジェクトを設定します。
+
+デフォルトは nil (鍵なし)です。
+
+@param key 設定する秘密鍵
+@see [[m:Net::HTTP#key]],
+     [[m:OpenSSL::SSL::SSLContext#key=]]
+

@@ -1,0 +1,11 @@
+kind=defined
+names=sync_unlock,unlock
+visibility=public
+
+--- sync_unlock(mode = EX) -> self
+--- unlock(mode = EX) -> self
+ロックを解除します。
+
+@param mode 変更後の状態を指定します。
+            通常、 [[m:Sync_m::UN]], [[m:Sync_m::EX]], [[m:Sync_m::SH]] のどれかを指定します。
+

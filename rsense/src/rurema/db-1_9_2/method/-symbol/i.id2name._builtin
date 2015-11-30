@@ -1,0 +1,18 @@
+kind=defined
+names=id2name,to_s
+visibility=public
+
+--- id2name -> String
+--- to_s -> String
+
+シンボルに対応する文字列を返します。
+
+逆に、文字列に対応するシンボルを得るには
+[[m:String#intern]] を使います。
+
+  p :foo.id2name  # => "foo"
+  p :foo.id2name.intern == :foo  # => true
+  
+@see [[m:String#intern]]
+
+

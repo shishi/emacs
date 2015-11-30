@@ -1,0 +1,8 @@
+kind=added
+names=default_system_source_cache_dir
+visibility=public
+
+--- default_system_source_cache_dir -> String
+
+デフォルトのシステム全体のソースキャッシュファイルのパスを返します。
+

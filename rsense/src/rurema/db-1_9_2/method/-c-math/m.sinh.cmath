@@ -1,0 +1,11 @@
+kind=defined
+names=sinh
+visibility=public
+
+--- sinh(z) -> Float | Complex
+
+z の双曲線正弦関数の値を返します。
+
+@param z 数値
+
+

@@ -1,0 +1,9 @@
+kind=defined
+names=OP_NO_SSLv2
+visibility=public
+
+--- OP_NO_SSLv2 -> Integer
+SSL v2 の使用を禁止するフラグです。
+
+[[m:OpenSSL::SSL::SSLContext#options=]] で利用します。
+

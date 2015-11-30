@@ -1,0 +1,9 @@
+kind=defined
+names=F_SETFL
+visibility=public
+
+--- F_SETFL -> Integer
+ファイル状態フラグを設定します。
+
+@see [[man:open(2)]]
+

@@ -1,0 +1,7 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(digest_class)
+
+自身を初期化します。

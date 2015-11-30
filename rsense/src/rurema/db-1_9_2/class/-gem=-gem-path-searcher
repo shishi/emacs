@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rubygems.gem_path_searcher
+extended=
+included=
+
+Gem パッケージに含まれているファイルのうちロード可能なものを検索するためのクラスです。

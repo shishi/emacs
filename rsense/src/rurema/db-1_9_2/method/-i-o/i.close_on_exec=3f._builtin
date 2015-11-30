@@ -1,0 +1,16 @@
+kind=defined
+names=close_on_exec?
+visibility=public
+
+--- close_on_exec?   -> bool
+
+自身に close-on-exec フラグが設定されていた場合 true を返します。
+そうでない場合に false を返します。
+
+   f = open("/dev/null")
+   f.close_on_exec?                 #=> false
+   f.close_on_exec = true
+   f.close_on_exec?                 #=> true
+   f.close_on_exec = false
+   f.close_on_exec?                 #=> false
+

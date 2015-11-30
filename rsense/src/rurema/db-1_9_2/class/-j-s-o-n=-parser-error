@@ -1,0 +1,7 @@
+superclass=JSON=JSONError
+type=class
+library=json
+extended=
+included=
+
+JSON のパースエラーを通知する例外です。

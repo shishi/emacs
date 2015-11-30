@@ -1,0 +1,9 @@
+kind=defined
+names=zip_file
+visibility=public 
+
+--- zip_file -> String
+
+zip ファイル用のファイル名を返します。
+
+

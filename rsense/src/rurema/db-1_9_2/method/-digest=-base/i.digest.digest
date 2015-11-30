@@ -1,0 +1,21 @@
+kind=defined
+names=digest
+visibility=public
+
+--- digest -> String
+
+updateや<<によって追加した文字列に対するハッシュ値を文字列で返します。
+
+返す文字列は、MD5では16バイト長、SHA1およびRMD160では20バイト長、
+SHA256では32バイト長、SHA384では48バイト長、SHA512では64バイト長です。
+
+例:
+
+  # MD5の場合
+  require 'digest/md5'
+  digest = Digest::MD5.new
+  digest.update("ruby")
+  p digest.digest # => "X\345=\023$\356\366&_\333\227\260\216\331\252\337"
+
+@see [[m:Digest::Base#hexdigest]]
+

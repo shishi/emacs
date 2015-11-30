@@ -1,0 +1,16 @@
+kind=added
+names=prime?
+visibility=public
+
+--- prime? -> bool
+
+自身が素数である場合、真を返します。
+そうでない場合は偽を返します。
+
+例:
+
+  1.prime? # => false
+  2.prime? # => true
+
+@see [[m:Prime#prime?]]
+

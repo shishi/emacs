@@ -1,0 +1,25 @@
+methods=
+sublibraries=
+requires=rubygems.package.tar_writer,rubygems.spec_fetcher,rubygems.specification,rubygems.remote_fetcher,rubygems.requirement,rubygems.ext.ext_conf_builder,rubygems.require_paths_builder,rubygems.package,rubygems.gem_openssl,rubygems.exceptions,rubygems.builder,rubygems.package.tar_input,rubygems.source_index,rubygems.package.tar_header,rubygems.package.tar_reader,rubygems.source_info_cache_entry,rubygems.installer,rubygems.version_option,rubygems.digest.sha2,rubygems.ext,rubygems.ext.configure_builder,rubygems.defaults.operating_system,rubygems.gem_path_searcher,rubygems.platform,rubygems.defaults,rubygems.digest.md5,rubygems.package.f_sync_dir,rubygems.package.tar_reader.entry,rubygems.ext.rake_builder,rubygems.dependency,rubygems.source_info_cache,rubygems,rubygems.user_interaction,rubygems.command,rubygems.version,rubygems.format,rubygems.security,rubygems.package.tar_output,rubygems.ext.builder
+classes=Gem=Commands=UnpackCommand
+is_sublibrary=true
+
+指定された Gem パッケージをカレントディレクトリに展開するためのライブラリです。
+
+  Usage: gem unpack GEMNAME [options]
+    Options:
+          --target                     展開先のディレクトリを指定します
+      -v, --version VERSION            展開する Gem パッケージのバージョンを指定します
+    Common Options:
+      -h, --help                       このコマンドのヘルプを表示します
+      -V, --[no-]verbose               表示を詳細にします
+      -q, --quiet                      静かに実行します
+          --config-file FILE           指定された設定ファイルを使用します
+          --backtrace                  バックトレースを表示します
+          --debug                      Ruby 自体のデバッグオプションを有効にします
+    Arguments:
+      GEMNAME       展開する Gem パッケージ名を指定します
+    Summary:
+      Gem パッケージをカレントディレクトリに展開します
+    Defaults:
+      --version '>= 0'

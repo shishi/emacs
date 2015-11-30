@@ -1,0 +1,13 @@
+kind=defined
+names=empty?
+visibility=public
+
+--- empty? -> bool
+
+自身が :"" (length が 0 のシンボル)かどうかを返します。
+
+  :"".empty?  #=> true
+  :foo.empty? #=> false
+
+@see [[m:String#empty?]]
+

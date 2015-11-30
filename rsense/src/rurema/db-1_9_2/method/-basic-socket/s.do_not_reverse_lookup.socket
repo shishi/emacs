@@ -1,0 +1,34 @@
+kind=defined
+names=do_not_reverse_lookup,do_not_reverse_lookup=
+visibility=public
+
+--- do_not_reverse_lookup -> bool
+--- do_not_reverse_lookup=(bool)
+
+この値が真ならアドレスからホスト名への逆引きを行わなくなります。
+デフォルトは true です。
+この設定は大域的に作用します。
+
+以下のメソッドの動作に影響します。
+
+  * [[m:BasicSocket#recv]]
+  * [[m:IPSocket#recvfrom]]
+  * [[m:UNIXSocket#recvfrom]]
+  * [[m:Socket#recvfrom]]
+  * [[m:IPSocket#addr]]
+  * [[m:IPSocket#peeraddr]]
+  * [[m:Socket.getaddrinfo]]
+
+@param bool この値が真ならアドレスからホスト名への逆引きを行わなくなります。
+
+例:
+
+  require 'socket'
+  
+  p TCPSocket.new('localhost', 'telnet').addr
+  TCPSocket.do_not_reverse_lookup = true
+  p TCPSocket.new('localhost', 'telnet').addr
+  
+  => ["AF_INET", 2253, "localhost", "127.0.0.1"]
+     ["AF_INET", 2254, "127.0.0.1", "127.0.0.1"]
+

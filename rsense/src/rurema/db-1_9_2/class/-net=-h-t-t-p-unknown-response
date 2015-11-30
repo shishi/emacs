@@ -1,0 +1,7 @@
+superclass=Net=HTTPResponse
+type=class
+library=net.http
+extended=
+included=
+
+このライブラリが知らないレスポンスを表現するクラスです。

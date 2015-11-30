@@ -1,0 +1,8 @@
+name=undef_setter
+private=true
+macro=false
+type=void
+filename=variable.c
+params=(VALUE val, ID id, void *data, struct global_variable *var)
+
+

@@ -1,0 +1,20 @@
+kind=defined
+names=wait,wait2
+visibility=public
+
+--- wait    -> Integer
+--- wait2   -> Array
+
+子プロセスのうちのひとつが終了するまで待ち、終了した子プロセスの pid を返します。
+wait2 は子プロセスの pid と終了ステータスを表す [[c:Process::Status]] オブジェクトの配列を返します。
+
+[[m:$?]] に終了した子プロセスの [[c:Process::Status]] オブジェクトがセットされます。
+
+
+@raise Errno::ECHILD 子プロセスが一つもなければ発生します。
+
+ pid = fork{ sleep 1 }
+ Process.wait2 #=> [2756, #<Process::Status: pid=2756,exited(0)>]
+
+@see [[man:wait(2)]]
+

@@ -1,0 +1,11 @@
+kind=defined
+names=add_delegate_command_to_shell
+visibility=public
+
+--- add_delegate_command_to_shell(id)
+
+[[c:Shell]] 自体を初期化する時に呼び出されるメソッドです。
+ユーザが使用することはありません。
+
+@param id メソッド名を指定します。
+

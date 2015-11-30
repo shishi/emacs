@@ -1,0 +1,6 @@
+kind=defined
+names=add
+visibility=public
+
+--- add(type, keys = nil)
+

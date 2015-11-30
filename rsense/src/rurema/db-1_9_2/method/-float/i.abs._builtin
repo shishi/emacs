@@ -1,0 +1,13 @@
+kind=defined
+names=abs
+visibility=public
+
+--- abs    -> Float
+
+自身の絶対値を返します。
+
+例:
+
+ p   34.56.abs     #=> 34.56
+ p  -34.56.abs     #=> 34.56
+

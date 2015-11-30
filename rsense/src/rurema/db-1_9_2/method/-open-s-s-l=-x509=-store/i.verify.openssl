@@ -1,0 +1,24 @@
+kind=defined
+names=verify
+visibility=public
+
+--- verify(cert, chain = nil) -> bool
+--- verify(cert, chain = nil){|ok, ctx| ... } -> bool
+証明書を証明書ストアに存在する CA 証明書で検証します。
+
+chain には検証したい証明書の証明書チェイン全体を 
+[[c:OpenSSL::X509::Certificate]] の配列で渡します。
+
+検証に成功した場合は true を、失敗した場合は false を返します。
+
+このメソッドをブロック付きで呼び出すと、そのブロックが
+検証をフィルタするコールバックと見做されます。このコールバックについては
+[[m:OpenSSL::X509::Store#verify_callback=]] を参照してください。
+
+内部では [[m:OpenSSL::X509::StoreContext.new]] と
+[[m:OpenSSL::X509::StoreContext#verify]] を呼びだすことによって検証しています。
+
+@param cert 検証したい証明書の [[c:OpenSSL::X509::Certificate]]
+@param chain 検証したい証明書の証明書チェイン全体の配列
+@raise OpenSSL::X509::StoreError 検証時にエラーが生じたときに発生します
+

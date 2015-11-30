@@ -1,0 +1,9 @@
+kind=defined
+names=header_row?
+visibility=public
+
+--- header_row? -> bool
+
+次に読み込まれる行が、ヘッダである場合に真を返します。
+そうでない場合は、偽を返します。
+

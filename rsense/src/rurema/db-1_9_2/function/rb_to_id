@@ -1,0 +1,10 @@
+name=rb_to_id
+private=false
+macro=false
+type=VALUE
+filename=object.c
+params=(VALUE name)
+
+
+String・Fixnum・Symbol を ID に変換します。
+

@@ -1,0 +1,17 @@
+kind=defined
+names=compare_by_identity?
+visibility=public
+
+--- compare_by_identity? -> bool
+
+ハッシュがキーの一致判定をオブジェクトの同一性を用いて行っているならば真を返します。
+
+   h1 = {}
+   p h1.compare_by_identity? #=> false
+   
+   h1.compare_by_identity
+   
+   p h1.compare_by_identity? #=> true
+
+@see [[m:Hash#compare_by_identity]]
+

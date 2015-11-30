@@ -1,0 +1,7 @@
+superclass=StandardError
+type=class
+library=resolv
+extended=
+included=
+
+名前解決に失敗したときに発生する例外のクラスです。

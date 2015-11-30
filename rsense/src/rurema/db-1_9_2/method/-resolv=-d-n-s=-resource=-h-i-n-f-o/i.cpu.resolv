@@ -1,0 +1,7 @@
+kind=defined
+names=cpu
+visibility=public
+
+--- cpu -> String
+ホストで使われる CPU 名(ハードウェア名)を返します。
+

@@ -1,0 +1,12 @@
+kind=defined
+names=to_i
+visibility=public
+
+--- to_i    -> Integer
+
+C 言語での終了ステータス表現の整数を返します。
+
+多くのシステムの実装では、この値の上位 8 bit に [[man:exit(2)]]
+に渡した終了ステータスが、下位 8 bit にシグナル等で終了した等の情
+報が入っています。
+

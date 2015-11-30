@@ -1,0 +1,10 @@
+kind=defined
+names=A_ATTRIBUTES
+visibility=public
+
+--- A_ATTRIBUTES -> Integer
+
+属性を展開するために使用する文字列の属性マスク用定数です。
+
+@see [[m:Curses.inch]], [[m:Curses::Window.inch]]
+

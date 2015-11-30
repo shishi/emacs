@@ -1,0 +1,16 @@
+kind=defined
+names=inspect_mode=
+visibility=public
+
+--- inspect_mode=(val)
+
+インスペクトモードを設定する.
+
+: true
+    inspect の結果を表示する
+: false
+    to_s の結果を表示する
+: nil
+    irb が通常モードであれば inspect mode、
+    math モードなら non inspect mode
+

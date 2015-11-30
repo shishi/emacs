@@ -1,0 +1,35 @@
+kind=defined
+names=arity
+visibility=public
+
+--- arity    -> Integer
+
+メソッドが受け付ける引数の数を返します。
+
+ただし、メソッドが可変長引数を受け付ける場合、負の整数
+  -(必要とされる引数の数 + 1)
+を返します。C 言語レベルで実装されたメソッドが可変長引数を
+受け付ける場合、-1 を返します。
+  
+  class C
+    def one;    end
+    def two(a); end
+    def three(*a);  end
+    def four(a, b); end
+    def five(a, b, *c);    end
+    def six(a, b, *c, &d); end
+  end
+  
+  p C.instance_method(:one).arity     #=> 0
+  p C.instance_method(:two).arity     #=> 1
+  p C.instance_method(:three).arity   #=> -1
+  p C.instance_method(:four).arity    #=> 2
+  p C.instance_method(:five).arity    #=> -3
+  p C.instance_method(:six).arity     #=> -3
+  
+  
+  String.instance_method(:size).arity      #=> 0
+  String.instance_method(:replace).arity   #=> 1
+  String.instance_method(:squeeze).arity   #=> -1
+  String.instance_method(:count).arity     #=> -1
+

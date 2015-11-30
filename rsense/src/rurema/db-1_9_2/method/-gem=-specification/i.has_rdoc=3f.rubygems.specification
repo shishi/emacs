@@ -1,0 +1,10 @@
+kind=defined
+names=has_rdoc?
+visibility=public
+
+--- has_rdoc? -> bool
+
+真の場合は RDoc を生成しせん。偽の場合は RDoc を生成します。
+
+@see [[m:Gem::Specification#has_rdoc]]
+

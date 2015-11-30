@@ -1,0 +1,6 @@
+kind=defined
+names=namespace_uri
+visibility=public
+
+--- namespace_uri(node_set = nil)
+

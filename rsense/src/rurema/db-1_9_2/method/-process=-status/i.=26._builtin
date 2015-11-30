@@ -1,0 +1,11 @@
+kind=defined
+names=&
+visibility=public
+
+--- &(other)    -> Integer
+
+self.to_i & other と同じです。
+このメソッドは後方互換性のためにあります。
+
+@param other 自身との & 演算をしたい整数を指定します。
+

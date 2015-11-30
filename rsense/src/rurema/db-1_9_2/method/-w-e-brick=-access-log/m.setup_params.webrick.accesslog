@@ -1,0 +1,14 @@
+kind=defined
+names=setup_params
+visibility=public
+
+--- setup_params(config, request, response) -> Hash
+
+与えられた引数を使用してログ出力に使用するパラメータを作成して返します。
+
+@param config ハッシュを指定します。
+
+@param request [[c:WEBrick::HTTPRequest]] のインスタンスを指定します。
+
+@param response [[c:WEBrick::HTTPResponse]] のインスタンスを指定します。
+

@@ -1,0 +1,14 @@
+kind=defined
+names=path
+visibility=public
+
+--- path
+
+UNIX ソケットのパスを返します。
+
+例:
+
+  UNIXServer.open("/tmp/s") {|serv|
+    p serv.path     #=> "/tmp/s"
+  }
+

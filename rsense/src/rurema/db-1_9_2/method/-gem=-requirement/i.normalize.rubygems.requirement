@@ -1,0 +1,8 @@
+kind=defined
+names=normalize
+visibility=public 
+
+--- normalize -> nil
+
+self を正規化します。
+

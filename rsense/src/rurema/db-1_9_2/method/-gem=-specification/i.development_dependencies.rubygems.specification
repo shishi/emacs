@@ -1,0 +1,8 @@
+kind=defined
+names=development_dependencies
+visibility=public
+
+--- development_dependencies -> Array
+
+この Gem が依存している Gem のリストを返します。
+

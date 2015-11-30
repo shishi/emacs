@@ -1,0 +1,13 @@
+kind=defined
+names=reset
+visibility=public
+
+--- reset -> ()
+セッションをリセットします。
+
+リセットによって [[m:Net::POPMail#delete]] で付けた削除マークがすべて
+取り除かれます。
+
+POP3 ではメール一個だけを復活する方法はありません。
+
+

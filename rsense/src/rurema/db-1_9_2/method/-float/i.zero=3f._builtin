@@ -1,0 +1,14 @@
+kind=defined
+names=zero?
+visibility=public
+
+--- zero?  -> bool
+
+自身がゼロの時、真を返します。そうでない場合は false を返します。
+
+例:
+
+  p 10.0.zero?            #=> false
+  p 0.zero?               #=> true
+  p 0.0.zero?             #=> true
+

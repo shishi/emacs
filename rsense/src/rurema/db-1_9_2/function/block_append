@@ -1,0 +1,14 @@
+name=block_append
+private=true
+macro=false
+type=NODE *
+filename=parse.y
+params=(NODE *head, NODE *tail)
+
+
+head と tail を NODE_BLOCK のリストとして連結し、
+先頭ノードを返します。head または tail が NODE_BLOCK
+でない場合は NODE_BLOCK に入れたうえでそれを連結します。
+head もしくは tail が NULL なら連結はせず、
+NULL でないほうを返します。
+

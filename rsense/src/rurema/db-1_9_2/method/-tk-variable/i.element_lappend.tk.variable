@@ -1,0 +1,6 @@
+kind=defined
+names=element_lappend
+visibility=public
+
+--- element_lappend(idxs, *elems)
+

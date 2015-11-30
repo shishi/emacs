@@ -1,0 +1,22 @@
+kind=defined
+names=nl
+visibility=public
+
+--- nl -> nil
+
+cooked モードのとき、return キーの入力に対して
+LF (Ctrl-j) を返すようにします。
+
+詳しくは、 man ページの curs_outopts(3X) の nl 関数を参照ください。
+
+ Enable the underlying display device to translate
+ the return key into newline on input, and whether it
+ translates newline into return and line-feed on output
+ (in either case, the call Curses.addch('\n') does the
+ equivalent of return and line feed on the virtual screen).
+ 
+ Initially, these translations do occur. If you disable
+ them using Curses.nonl, curses will be able to make better use
+ of the line-feed capability, resulting in faster cursor
+ motion. Also, curses will then be able to detect the return key.
+

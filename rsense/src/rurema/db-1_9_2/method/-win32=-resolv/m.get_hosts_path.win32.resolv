@@ -1,0 +1,13 @@
+kind=defined
+names=get_hosts_path
+visibility=public
+
+--- get_hosts_path -> String | nil
+
+hosts ファイルのパスを返します。ファイルが存在しない場合は nil を返します。
+
+例:
+
+  require "win32/resolv"
+  p Win32::Resolv.get_hosts_path #=> "C:\Windows\System32\drivers\etc\hosts"
+

@@ -1,0 +1,14 @@
+kind=defined
+names=debug=
+visibility=public
+
+--- debug=(val) 
+
+デバッグ用のフラグを設定します。
+
+@param val bool 値や整数値を指定します。詳細は下記を参照してください。
+
+  # debug: true -> normal debug
+  # debug: 1    -> eval definition debug
+  # debug: 2    -> detail inspect debug
+

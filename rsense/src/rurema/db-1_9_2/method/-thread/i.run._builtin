@@ -1,0 +1,12 @@
+kind=defined
+names=run
+visibility=public
+
+--- run    -> self
+
+停止状態(stop)のスレッドを再開させます。
+[[m:Thread#wakeup]] と異なりすぐにスレッドの切り替え
+を行います。
+
+@raise ThreadError 死んでいるスレッドに対して実行すると発生します。
+

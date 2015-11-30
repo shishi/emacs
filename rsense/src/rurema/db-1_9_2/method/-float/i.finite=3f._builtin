@@ -1,0 +1,15 @@
+kind=defined
+names=finite?
+visibility=public
+
+--- finite? -> bool
+
+数値が ∞, -∞, あるいは NaN でない場合に true を返します。
+そうでない場合に false を返します。
+
+例:
+
+  p 3.14.finite? #=> true
+  inf = 1.0/0
+  p inf.finite? #=> false
+

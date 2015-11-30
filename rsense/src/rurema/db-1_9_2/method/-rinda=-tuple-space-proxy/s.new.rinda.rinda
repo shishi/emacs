@@ -1,0 +1,8 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(ts)
+
+Creates a new TupleSpaceProxy to wrap +ts+.
+

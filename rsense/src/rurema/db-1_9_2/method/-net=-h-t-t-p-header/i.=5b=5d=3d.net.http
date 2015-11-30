@@ -1,0 +1,18 @@
+kind=defined
+names=[]=
+visibility=public
+
+--- []=(key, val)
+key ヘッダフィールドに文字列 val をセットします。
+
+key に元々設定されていた値は破棄されます。
+key は大文字小文字を区別しません。
+val に nil を与えるとそのフィールドを削除します。
+
+@param key ヘッダフィール名を文字列で与えます。
+@param val keyで指定したフィールドにセットする文字列を与えます。
+
+@see [[m:Net::HTTPHeader#[] ]],
+     [[m:Net::HTTPHeader#add_field]],
+     [[m:Net::HTTPHeader#get_fields]]
+

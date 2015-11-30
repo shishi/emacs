@@ -1,0 +1,14 @@
+kind=defined
+names=find_name
+visibility=public 
+
+--- find_name(full_name) -> Gem::Specification | nil
+
+自身に含まれる与えられた名前を持つ [[c:Gem::Specification]] のインスタンスを返します。
+
+見つからなかった場合は nil を返します。
+
+@param full_name バージョンを含むフルネームで Gem の名前を指定します。
+
+@see [[m:Gem::Specification#full_name]]
+

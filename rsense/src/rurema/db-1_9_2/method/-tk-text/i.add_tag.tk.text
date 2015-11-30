@@ -1,0 +1,8 @@
+kind=defined
+names=add_tag,addtag,tag_add
+visibility=public
+
+--- tag_add(tag, index1, index2 = Tk::None)
+--- addtag(tag, index1, index2 = Tk::None)
+--- add_tag(tag, index1, index2 = Tk::None)
+

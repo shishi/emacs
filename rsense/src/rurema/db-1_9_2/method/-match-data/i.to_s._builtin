@@ -1,0 +1,12 @@
+kind=defined
+names=to_s
+visibility=public
+
+--- to_s -> String
+
+マッチした文字列全体を返します。
+
+  /bar/ =~ "foobarbaz"
+  p $~            # => #<MatchData:0x401b1be4>
+  p $~.to_s       # => "bar"
+

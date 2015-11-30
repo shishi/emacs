@@ -1,0 +1,17 @@
+kind=defined
+names=to_i
+visibility=public
+
+--- to_i -> Integer
+
+自身を整数に変換します。
+
+@raise RangeError 虚部が 0 ではない場合に発生します。
+
+例:
+
+  Complex(3).to_i    # => 3
+  Complex(3).to_i    # => 3
+  Complex(3.5).to_i  # => 3
+  Complex(3, 2).to_i # => RangeError
+

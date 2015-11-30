@@ -1,0 +1,8 @@
+kind=defined
+names=standend
+visibility=public
+
+--- standend -> nil
+
+強調書き込みを終了します。
+

@@ -1,0 +1,10 @@
+kind=defined
+names=gem_path=
+visibility=public 
+
+--- gem_path=(path)
+
+Gem のパスをセットします。
+
+@param path Gem のパスをセットします。
+

@@ -1,0 +1,20 @@
+kind=defined
+names=PI
+visibility=public
+
+--- PI(prec) -> BigDecimal
+
+円周率を prec で指定した精度で計算します。
+
+@param prec 計算結果の精度。
+
+@raise ArgumentError prec に 0 以下が指定された場合に発生します。
+
+例:
+
+
+  require "bigdecimal/math"
+
+  puts BigMath::PI(10) #=> 0.314159265359224236485984067E1
+
+

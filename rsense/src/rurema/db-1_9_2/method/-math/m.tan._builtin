@@ -1,0 +1,12 @@
+kind=defined
+names=tan
+visibility=public
+
+--- tan(x) -> Float
+
+x の正接関数の値をラジアンで返します。
+
+@param x 実数
+
+@return 実数
+

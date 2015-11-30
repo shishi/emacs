@@ -1,0 +1,11 @@
+kind=defined
+names=attroff
+visibility=public
+
+--- attroff(attrs) -> Integer | true
+Turns off the named attributes +attrs+ without affecting any others.
+
+@param attrs
+
+@see [[m:Curses::Window#attrset]]
+

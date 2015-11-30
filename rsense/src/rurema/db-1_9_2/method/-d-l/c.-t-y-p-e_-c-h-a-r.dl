@@ -1,0 +1,20 @@
+kind=defined
+names=TYPE_CHAR,TYPE_DOUBLE,TYPE_FLOAT,TYPE_INT,TYPE_LONG,TYPE_LONG_LONG,TYPE_SHORT,TYPE_VOID,TYPE_VOIDP
+visibility=public
+
+--- TYPE_CHAR
+--- TYPE_DOUBLE
+--- TYPE_FLOAT
+--- TYPE_INT
+--- TYPE_LONG
+--- TYPE_LONG_LONG
+--- TYPE_SHORT
+--- TYPE_VOID
+--- TYPE_VOIDP
+
+変数の型を表す定数です。unsigned char などを表したい場合は - を付けて
+
+ - TYPE_CHAR
+
+などとします。
+

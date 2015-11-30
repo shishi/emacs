@@ -1,0 +1,10 @@
+kind=defined
+names=yaml_initialize
+visibility=public 
+
+--- yaml_initialize(tag, values) -> String
+
+
+
+
+

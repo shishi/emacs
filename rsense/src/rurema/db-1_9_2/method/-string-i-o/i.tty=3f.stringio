@@ -1,0 +1,8 @@
+kind=defined
+names=tty?
+visibility=public
+
+--- tty?    -> false
+
+何もせず false を返します。
+

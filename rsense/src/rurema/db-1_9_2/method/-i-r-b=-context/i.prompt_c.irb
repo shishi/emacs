@@ -1,0 +1,9 @@
+kind=defined
+names=prompt_c
+visibility=public
+
+--- prompt_c
+
+if の直後など, 行が継続している時のプロンプトを
+表現するフォーマット文字列を返します。
+

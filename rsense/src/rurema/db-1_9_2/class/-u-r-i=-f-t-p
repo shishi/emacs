@@ -1,0 +1,7 @@
+superclass=URI=Generic
+type=class
+library=uri
+extended=
+included=
+
+FTP URI を表すクラスです。

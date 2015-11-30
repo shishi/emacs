@@ -1,0 +1,14 @@
+kind=defined
+names=oid
+visibility=public
+
+--- oid -> String
+オブジェクト識別子のドット区切り数値を文字列で返します。
+
+例:
+  require "openssl"
+  oid = OpenSSL::ASN1::ObjectId.new("subjectAltName")
+  p oid.oid   #=> "2.5.29.17"
+
+@raise OpenSSL::ASN1::ASN1Error オブジェクト識別子名が未知である場合に発生します
+

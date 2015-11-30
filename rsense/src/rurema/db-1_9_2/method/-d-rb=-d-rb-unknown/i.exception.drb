@@ -1,0 +1,8 @@
+kind=defined
+names=exception
+visibility=public
+
+--- exception()
+
+Create a DRbUnknownError exception containing this object. 
+

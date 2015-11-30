@@ -1,0 +1,15 @@
+kind=defined
+names=imag,imaginary
+visibility=public
+
+--- imaginary -> Matrix
+--- imag -> Matrix
+
+Returns the imaginary part of the matrix.
+
+  Matrix[[Complex(1,2), Complex(0,1), 0], [1, 2, 3]]
+    => 1+2i  i  0
+          1  2  3
+  Matrix[[Complex(1,2), Complex(0,1), 0], [1, 2, 3]].imaginary
+    =>   2i  i  0
+          0  0  0

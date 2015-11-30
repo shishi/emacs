@@ -1,0 +1,7 @@
+superclass=StandardError
+type=class
+library=matrix
+extended=
+included=
+
+

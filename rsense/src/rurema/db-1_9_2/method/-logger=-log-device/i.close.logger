@@ -1,0 +1,12 @@
+kind=defined
+names=close
+visibility=public
+
+--- close -> nil
+
+出力先の IO オブジェクトを閉じます。
+
+このメソッドは同期されます。
+
+@see [[m:IO#close]]
+

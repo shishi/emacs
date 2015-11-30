@@ -1,0 +1,10 @@
+kind=defined
+names=MULTILINE
+visibility=public
+
+--- MULTILINE -> Fixnum
+
+複数行モード。正規表現 "." が改行にマッチするようになります。
+正規表現リテラルの //m オプションと同じです。
+
+

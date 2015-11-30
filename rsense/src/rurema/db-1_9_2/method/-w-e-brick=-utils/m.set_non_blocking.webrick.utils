@@ -1,0 +1,10 @@
+kind=defined
+names=set_non_blocking
+visibility=public
+
+--- set_non_blocking(io)    -> ()
+
+指定された io をノンブロッキングに設定します。
+
+@param io IO オブジェクトを指定します。
+

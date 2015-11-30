@@ -1,0 +1,8 @@
+kind=defined
+names=stopped?
+visibility=public
+
+--- stopped? -> bool
+
+自身が停止しているなら真を返します。
+

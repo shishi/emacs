@@ -1,0 +1,13 @@
+kind=defined
+names=\
+visibility=public
+
+--- $\ -> String | nil
+
+出力レコード区切りを表す文字列です。
+[[m:Kernel.#print]] が最後にこの文字列を出力します。
+
+デフォルトは nil で、何も出力しません。
+
+この変数はグローバルスコープです。
+

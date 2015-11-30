@@ -1,0 +1,8 @@
+kind=defined
+names=bindMouseWheel
+visibility=public
+
+--- bindMouseWheel(widget)
+
+
+

@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=
+classes=DRb=ExtServManager
+is_sublibrary=true
+
+

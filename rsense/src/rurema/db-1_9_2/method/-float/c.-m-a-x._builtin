@@ -1,0 +1,7 @@
+kind=defined
+names=MAX
+visibility=public
+
+--- MAX -> Float
+Float が取り得る最大値
+

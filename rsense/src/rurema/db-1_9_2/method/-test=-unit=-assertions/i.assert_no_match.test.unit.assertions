@@ -1,0 +1,20 @@
+kind=defined
+names=assert_no_match
+visibility=public
+
+--- assert_no_match(regexp, string, message = "")    -> ()
+
+regexp !~ string が真ならばパスします。
+
+@param regexp マッチしないと期待するパターンを正規表現で指定します。
+
+@param string 検証する文字列を指定します。
+
+@param message assert が失敗した時に表示するメッセージを文字列で指定し
+               ます。指定しなかった場合は表示しません。
+
+@raise MiniTest::Assertion assert が失敗した時に発生します。
+
+[[m:MiniTest::Assertions#assert_match]] とは異なり regexp には正規表現
+以外は指定できません。
+

@@ -1,0 +1,8 @@
+kind=defined
+names=synchronize
+visibility=public
+
+--- synchronize{ ... } -> object
+
+与えられたブロックを評価するだけで何もしません。
+

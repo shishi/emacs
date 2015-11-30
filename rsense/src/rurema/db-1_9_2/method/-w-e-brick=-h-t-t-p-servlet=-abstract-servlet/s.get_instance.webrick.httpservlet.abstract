@@ -1,0 +1,16 @@
+kind=defined
+names=get_instance
+visibility=public
+
+--- get_instance(server, *options)    -> WEBrick::HTTPServlet::AbstractServlet
+
+new(server, *options) を呼び出してサーブレットを生成して返します。
+[[c:WEBrick::HTTPServer]] オブジェクトは実際にはこの get_instance メソッドを呼び出して
+サーブレットを生成します。
+
+特に理由が無い限り AbstractServlet のサブクラスがこのメソッドを再定義する必要はありません。
+
+@param server [[m:WEBrick::HTTPServer#mount]] 第3引数以降に指定された値がそのまま与えられます。
+
+@param options [[m:WEBrick::HTTPServer#mount]] 第3引数以降に指定された値がそのまま与えられます。
+

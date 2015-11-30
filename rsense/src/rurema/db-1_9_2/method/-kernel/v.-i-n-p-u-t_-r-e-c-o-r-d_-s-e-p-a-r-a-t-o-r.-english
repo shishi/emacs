@@ -1,0 +1,22 @@
+kind=added
+names=INPUT_RECORD_SEPARATOR,RS
+visibility=public
+
+--- $RS                     -> String | nil
+--- $INPUT_RECORD_SEPARATOR -> String | nil
+
+[[m:$/]] §Œ ÃÃæ
+
+  require "English"
+
+  $INPUT_RECORD_SEPARATOR = '|'
+  array = []
+  while line = DATA.gets
+    array << line
+  end
+  p array #=> ["ugo|", "ego|", "fogo\n"]
+
+  __END__
+  ugo|ego|fogo
+
+

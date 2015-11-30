@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=minitest.unit
+extended=
+included=
+
+各種 assert メソッドを提供します。

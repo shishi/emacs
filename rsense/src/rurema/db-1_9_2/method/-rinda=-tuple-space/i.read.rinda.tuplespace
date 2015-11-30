@@ -1,0 +1,8 @@
+kind=defined
+names=read
+visibility=public
+
+--- read(tuple, sec=nil)
+
+Reads +tuple+, but does not remove it.
+

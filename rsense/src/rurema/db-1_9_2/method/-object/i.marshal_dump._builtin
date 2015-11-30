@@ -1,0 +1,51 @@
+kind=defined
+names=marshal_dump
+visibility=public
+
+--- marshal_dump -> object
+
+[[m:Marshal.#dump]] を制御するメソッドです。
+
+Marshal.dump(some) において、出力するオブジェクト some がメソッド marshal_dump を
+持つ場合には、その返り値がダンプされたものが Marshal.dump(some) の返り値となります。 
+
+marshal_dump/marshal_load の仕組みは Ruby 1.8.0 から導入されました。
+これから書くプログラムでは _dump/_load ではなく
+marshal_dump/marshal_load を使うべきです。
+
+@return 任意のオブジェクトで marshal_load の引数に利用できます。
+
+  class Foo
+    def initialize(arg)
+      @foo = arg
+    end
+    def marshal_dump
+      @foo
+    end
+    def marshal_load(obj)
+      p obj
+      @foo = obj
+    end
+  end
+  foo = Foo.new(['foo', 'bar'])
+  p foo                      #=> #<Foo:0xbaf3b0 @foo=["foo", "bar"]>
+  dms = Marshal.dump(foo)
+  p dms                      #=> "\004\bU:\bFoo[\a\"\bfoo\"\bbar"
+  result = Marshal.load(dms) #=> ["foo", "bar"] # marshal_load の引数
+  p result                   #=> #<Foo:0xbaf2ac @foo=["foo", "bar"]>
+
+インスタンス変数の情報は普通マーシャルデータに含まれるので、
+上例のように marshal_dump を定義する必要はありません
+(ただし marshal_dump を定義するとインスタンス変数の情報は
+ダンプされなくなるので、marshal_dump/marshal_load で扱う必要があります)。
+marshal_dump/marshal_load はより高度な制御を行いたい場合や
+拡張ライブラリで定義したクラスのインスタンスがインスタンス変数以外
+に情報を保持する場合に利用します。
+
+特に、marshal_dump/marshal_load を定義したオブジェクトは
+特異メソッドが定義されていてもマーシャルできるようになります
+(特異メソッドの情報が自動的に dump されるようになるわけではなく、
+marshal_dump/marshal_load によりそれを実現する余地があるということです)。
+
+@see [[m:Kernel.#_dump]], [[m:Object#marshal_load]], [[c:Marshal]]
+

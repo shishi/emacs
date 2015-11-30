@@ -1,0 +1,24 @@
+kind=defined
+names=add,log
+visibility=public
+
+--- add(severity, message = nil, progname = nil) -> true
+--- add(severity, message = nil, progname = nil){ ... } -> true
+--- log(severity, message = nil, progname = nil) -> true
+--- log(severity, message = nil, progname = nil){ ... } -> true
+
+メッセージをログに記録します。
+
+ブロックを与えた場合はブロックを評価した返り値をメッセージとしてログに記録します。
+ユーザがこのメソッドを直接使うことはあまりありません。
+
+@param severity ログレベル。[[c:Logger]] クラスで定義されている定数を指定します。
+                この値がレシーバーに設定されているレベルよりも低い場合、
+                メッセージは記録されません。
+
+@param message ログに出力するメッセージを文字列か例外オブジェクトを指定します。
+               省略すると nil が用いられます。
+
+@param progname ログメッセージと一緒に記録するプログラム名を指定します。
+                省略すると nil が使用されますが、実際には内部で保持されている値が使用されます。
+

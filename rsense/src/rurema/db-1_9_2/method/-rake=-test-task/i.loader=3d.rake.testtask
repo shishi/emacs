@@ -1,0 +1,19 @@
+kind=defined
+names=loader=
+visibility=public 
+
+--- loader=(style)
+
+テストをロードする方法を指定します。
+
+指定できる方法は以下の通りです。
+
+: rake
+  Rake が提供する方法でテストをロードします。デフォルトはこれです。
+: testrb
+  Ruby が提供する testrb コマンドを用いてテストをロードします。
+: direct
+  コマンドラインで指定したファイルをロードします。
+
+@param style シンボルでテストをロードする方法を指定します。
+

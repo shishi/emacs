@@ -1,0 +1,12 @@
+kind=defined
+names=DEFAULT_OBJECT_TYPE
+visibility=public
+
+--- DEFAULT_OBJECT_TYPE -> Integer
+属性値のデフォルトの ASN.1 の型です。
+
+[[m:OpenSSL::X509::Name.parse]] や [[m:OpenSSL::X509::Name.new]] で
+template に指定されなかった属性はこの型であると仮定して処理されます。
+
+[[m:OpenSSL::ASN1::UTF8STRING]] を返します。
+

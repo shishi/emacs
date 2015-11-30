@@ -1,0 +1,8 @@
+kind=defined
+names=option_string
+visibility=public 
+
+--- option_string -> String
+
+rdoc コマンドに渡すオプションを文字列として返します。
+

@@ -1,0 +1,7 @@
+superclass=Sync_m=Err
+type=class
+library=sync
+extended=
+included=
+
+スレッドがロックされているべきタイミングでロックさせない場合に発生する例外です。

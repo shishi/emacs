@@ -1,0 +1,10 @@
+kind=defined
+names=dequote
+visibility=public
+
+--- dequote(str) -> String
+
+与えられた文字列からダブルクオートとバックスラッシュを削除して返します。
+
+@param str 文字列を指定します。
+

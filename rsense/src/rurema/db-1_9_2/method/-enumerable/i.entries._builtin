@@ -1,0 +1,9 @@
+kind=defined
+names=entries,to_a
+visibility=public
+
+--- to_a    -> [object]
+--- entries -> [object]
+
+全ての要素を含む配列を返します。
+

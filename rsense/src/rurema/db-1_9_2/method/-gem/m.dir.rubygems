@@ -1,0 +1,8 @@
+kind=defined
+names=dir
+visibility=public
+
+--- dir -> String
+
+Gem のインストールされているディレクトリを返します。
+

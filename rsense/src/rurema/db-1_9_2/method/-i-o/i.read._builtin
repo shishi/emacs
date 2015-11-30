@@ -1,0 +1,40 @@
+kind=defined
+names=read
+visibility=public
+
+--- read(length = nil, outbuf = "")    -> String | nil
+
+length バイト読み込んで、その文字列を返します。
+
+引数 length が指定された場合はバイナリ読み込みメソッド、そうでない場合はテキスト読み込みメソッドとして
+動作します。
+既に EOF に達していれば nil を返します。
+ただし、length に nil か 0 が指定されている場合は、空文字列 "" を返します。
+例えば、open(空ファイル) {|f| f.read } は "" となります。
+
+@param length 読み込むサイズを整数で指定します。
+              nil が指定された場合、EOF までの全てのデータを読み込んで、その文字列を返します。
+
+@param outbuf 出力用のバッファを文字列で指定します。IO#read は読み込んだ
+              データをその文字列オブジェクトに上書きして返します。指定し
+              た文字列オブジェクトがあらかじめ length 長の領域であれば、
+              余計なメモリの割当てが行われません。指定した文字列の長さが
+              length と異なる場合、その文字列は一旦 length 長に拡張(ある
+              いは縮小)されたあと、実際に読み込んだデータのサイズになります。
+
+@raise IOError 自身が読み込み用にオープンされていなければ発生します。
+
+@raise Errno::EXXX データの読み込みに失敗した場合に発生します。
+
+@raise ArgumentError length が負の場合に発生します。
+
+第二引数を指定した read の呼び出しでデータが空であった場合
+(read が nil を返す場合)、outbuf は空文字列になります。
+
+  outbuf = "x" * 20;
+  io = File.open("/dev/null")
+  p io.read(10,outbuf)
+  p outbuf
+  => nil
+     ""
+

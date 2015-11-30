@@ -1,0 +1,10 @@
+kind=defined
+names=test_suite_file=
+visibility=public
+
+--- test_suite_file=(file)
+
+この属性は非推奨です。 [[m:Gem::Specification#test_files=]] を使用してください。
+
+@param file テストスイートのファイルを指定します。
+

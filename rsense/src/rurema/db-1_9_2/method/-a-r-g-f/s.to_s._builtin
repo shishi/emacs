@@ -1,0 +1,22 @@
+kind=defined
+names=to_s
+visibility=public
+
+--- to_s -> String
+常に文字列 "ARGF" を返します。
+
+  # カレントディレクトリから適当にファイルを選ぶ
+  ARGV.replace(
+    Dir.glob("*").reject{|name| FileTest.file?(name) == false}
+  )
+  while line = ARGF.gets
+    p [ARGF.filename, ARGF.to_s, ARGV]
+    ARGF.skip
+  end
+
+  #例
+  #=> ["test.rb", "ARGF", ["test.rb~", "third.txt", "ugo.yaml"]]
+  #=> ["test.rb~", "ARGF", ["third.txt", "ugo.yaml"]]
+  #...
+
+

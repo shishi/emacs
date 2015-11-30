@@ -1,0 +1,11 @@
+kind=defined
+names=VT_BSTR
+visibility=public
+
+--- VT_BSTR -> Integer
+文字列（BSTR）を示します（8）。
+
+OLEオートメーションのBSTRはUnicodeで表現された長さ付き文字列です。Ruby
+のStringとBSTRの相互変換は、WIN32OLEが[[m:WIN32OLE#codepage]]に基づいて
+自動的に行います。
+

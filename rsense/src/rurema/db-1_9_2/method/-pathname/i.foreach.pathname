@@ -1,0 +1,12 @@
+kind=defined
+names=foreach
+visibility=public
+
+--- foreach(*args){|path| ... } -> nil
+このメソッドは obsolete です。 each_line か each_entry を使ってください。
+
+self の指し示すパスがディレクトリなら
+Dir.foreach(self.to_s, *args, &block) と、さもなければ
+IO.foreach(self.to_s, *args, &block) と同じです。
+
+

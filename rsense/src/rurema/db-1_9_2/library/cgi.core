@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=
+classes=CGI,CGI=QueryExtension,CGI=QueryExtension=Value,CGI=InvalidEncoding
+is_sublibrary=true
+
+cgi ライブラリのコア機能を提供するライブラリです。

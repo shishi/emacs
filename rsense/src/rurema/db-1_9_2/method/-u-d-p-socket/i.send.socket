@@ -1,0 +1,28 @@
+kind=defined
+names=send
+visibility=public
+
+--- send(mesg, flags[, dest_sockaddr])
+--- send(mesg, flags, host, port)
+
+ソケットを介してデータを送ります。flags に関しては
+[[man:send(2)]] を参照してください。connect していないソケット
+に対しては送り先を指定するため dest_sockaddr あるいは、host と
+port を指定する必要があります。実際に送ったデータの長さを返
+します。
+
+dest_sockaddr には[[ref:lib:socket#pack_string]]
+を指定します。
+
+host, port に関しては [[ref:lib:socket#host_format]]、
+[[ref:lib:socket#service_format]]を参照してください。
+
+2 引数、3 引数の形式の場合の動作は、
+[[m:BasicSocket#send]] と同じです。
+
+4 引数の形式で、指定したホストが複数のアドレスを持つ場合、いずれか
+のアドレスへの送信が成功するまで(あるいはすべての送信が失敗するま
+で)、各アドレスへの送信を順に試みます。
+
+データの送信に失敗した場合は例外 [[c:Errno::EXXX]] が発生します。
+

@@ -1,0 +1,8 @@
+kind=defined
+names=dn
+visibility=public
+
+--- dn    -> String
+
+自身の Distinguished Name を文字列で返します。
+

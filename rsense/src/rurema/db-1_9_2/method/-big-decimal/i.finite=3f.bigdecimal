@@ -1,0 +1,8 @@
+kind=defined
+names=finite?
+visibility=public
+
+--- finite?
+
+a.finite? は a が∞または NaN でないとき真を返します。 
+

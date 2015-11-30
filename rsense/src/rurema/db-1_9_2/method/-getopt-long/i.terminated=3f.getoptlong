@@ -1,0 +1,8 @@
+kind=defined
+names=terminated?
+visibility=public
+
+--- terminated? -> true | false
+エラーが起きずにオプションの処理が終了しているときは真が
+返ります。それ以外のときは、偽が返ります。
+

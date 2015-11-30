@@ -1,0 +1,6 @@
+kind=defined
+names=TCL_LIBRARY_PATH
+visibility=public
+
+--- TCL_LIBRARY_PATH
+

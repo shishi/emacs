@@ -1,0 +1,24 @@
+kind=defined
+names=pos=,seek
+visibility=public
+
+--- pos=(pos)
+--- seek(pos)    -> self
+
+ディレクトリストリームの読み込み位置を pos に移動させます。
+pos は [[m:Dir#tell]] で与えられた値でなければなりま
+せん。
+
+@param pos 変更したい位置を整数で与えます。
+
+@raise IOError 既に自身が close している場合に発生します。
+
+例:
+
+   d = Dir.new("testdir")   #=> #<Dir:0x401b3c40>
+   d.read                   #=> "."
+   i = d.tell               #=> 12
+   d.read                   #=> ".."
+   d.seek(i)                #=> #<Dir:0x401b3c40>
+   d.read                   #=> ".."
+

@@ -1,0 +1,16 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(*args, &block)    -> object
+
+自身のインスタンスを生成して返します。
+このメソッドの引数はブロック引数も含め [[m:Object#initialize]] に渡されます。
+
+new は [[m:Class#allocate]] でインスタンスを生成し、
+[[m:Object#initialize]] で初期化を行います。
+
+@param args [[m:Object#initialize]] に渡される引数を指定します。
+
+@param block [[m:Object#initialize]] に渡されるブロックを指定します。
+

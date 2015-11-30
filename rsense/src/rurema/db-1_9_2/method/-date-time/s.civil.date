@@ -1,0 +1,21 @@
+kind=defined
+names=civil,new
+visibility=public
+
+--- civil(year = -4712, mon = 1, mday = 1, hour = 0, min = 0, sec = 0, offset = 0, start = Date::ITALY) -> DateTime
+--- new(year = -4712, mon = 1, mday = 1, hour = 0, min = 0, sec = 0, offset = 0, start = Date::ITALY) -> DateTime
+暦日付に相当する日時オブジェクトを生成します。
+
+時差の単位は日です。
+1.8.6 以降では、"+0900" のような時差をあらわす文字列もつかえます。
+
+@param year 年
+@param mon 月
+@param mday 日
+@param hour 時
+@param min 分
+@param sec 秒
+@param offset 時差
+@param start グレゴリオ暦をつかい始めた日をあらわすユリウス日
+@raise ArgumentError 正しくない日時
+

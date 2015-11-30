@@ -1,0 +1,6 @@
+kind=defined
+names=tksearch
+visibility=public
+
+--- tksearch(*args)
+

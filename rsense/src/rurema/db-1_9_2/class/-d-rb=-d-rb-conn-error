@@ -1,0 +1,7 @@
+superclass=DRb=DRbError
+type=class
+library=drb
+extended=
+included=
+
+Error raised when an error occurs on the underlying communication protocol.

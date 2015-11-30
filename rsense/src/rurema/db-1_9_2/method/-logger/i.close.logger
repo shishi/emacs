@@ -1,0 +1,8 @@
+kind=defined
+names=close
+visibility=public
+
+--- close -> nil
+
+ログ出力に使用していた IO オブジェクトを閉じます。
+

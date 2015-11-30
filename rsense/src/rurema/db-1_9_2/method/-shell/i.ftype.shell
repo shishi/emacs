@@ -1,0 +1,12 @@
+kind=defined
+names=ftype
+visibility=public
+
+--- ftype(filename)    -> String
+
+[[c:File]] クラスにある同名のクラスメソッドと同じです.
+
+@param filename ファイル名を表す文字列を指定します。
+
+@see [[m:File.ftype]]
+

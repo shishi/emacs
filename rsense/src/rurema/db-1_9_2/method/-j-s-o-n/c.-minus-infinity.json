@@ -1,0 +1,10 @@
+kind=defined
+names=MinusInfinity
+visibility=public
+
+--- MinusInfinity -> Float
+
+負の無限大を表します。
+
+@see [[c:Float]]
+

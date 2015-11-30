@@ -1,0 +1,11 @@
+kind=defined
+names=log10
+visibility=public
+
+--- log10(z) -> Float | Complex
+
+x の常用対数を返します。
+
+@param x 数値
+
+

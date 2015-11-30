@@ -1,0 +1,8 @@
+.h	ERB::Util.#h
+.html_escape	ERB::Util.#h
+.u	ERB::Util.#u
+.url_encode	ERB::Util.#u
+#h	ERB::Util.#h
+#html_escape	ERB::Util.#h
+#u	ERB::Util.#u
+#url_encode	ERB::Util.#u

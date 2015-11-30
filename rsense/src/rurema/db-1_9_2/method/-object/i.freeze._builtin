@@ -1,0 +1,44 @@
+kind=defined
+names=freeze
+visibility=public
+
+--- freeze -> self
+
+オブジェクトを凍結（内容の変更を禁止）します。
+
+凍結されたオブジェクトの変更は
+例外 [[c:RuntimeError]] を発生させます。
+いったん凍結されたオブジェクトを元に戻す方法はありません。
+
+凍結されるのはオブジェクトであり、変数ではありません。代入などで変数の指す
+オブジェクトが変化してしまうことは freeze では防げません。 freeze が防ぐのは、
+`破壊的な操作' と呼ばれるもの一般です。変数への参照自体を凍結したい
+場合は、グローバル変数なら [[m:Kernel.#trace_var]] が使えます。
+
+@return self を返します。
+
+  a1 = "foo".freeze
+  a1 = "bar"
+  p a1 #=> "bar"
+  
+  a2 = "foo".freeze
+  a2.replace("bar")# can't modify frozen string (RuntimeError)
+
+凍結を解除することはできませんが、[[m:Object#dup]] を使えばほぼ同じ内容の凍結されていない
+オブジェクトを得ることはできます。
+
+  a = [1].freeze
+  p a.frozen?     #=> true
+  
+  a[0] = "foo"
+  p a             # can't modify frozen array (RuntimeError)
+  
+  b = a.dup
+  p b             #=> [1]
+  p b.frozen?     #=> false
+  
+  b[0] = "foo"
+  p b             #=> ["foo"]
+
+@see [[m:Object#frozen?]],[[m:Object#dup]],[[m:Kernel.#trace_var]]
+

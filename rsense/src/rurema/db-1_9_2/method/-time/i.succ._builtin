@@ -1,0 +1,15 @@
+kind=defined
+names=succ
+visibility=public
+
+--- succ    -> Time
+
+self に 1 秒足した Time オブジェクトを生成して返します。
+
+  t = Time.now
+  p t
+  p t.succ
+  # => Sun Jul 18 01:41:22 JST 2004
+       Sun Jul 18 01:41:23 JST 2004
+
+

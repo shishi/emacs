@@ -1,0 +1,12 @@
+kind=defined
+names=to_json
+visibility=public 
+
+--- to_json(state = nil, depth = 0) -> String
+
+自身から生成した JSON 形式の文字列を返します。
+
+@param state 生成する JSON 形式の文字列をカスタマイズするために [[c:JSON::State]] のインスタンスを指定します。
+
+@param depth ネストの深さを見つけるために使用されます。
+

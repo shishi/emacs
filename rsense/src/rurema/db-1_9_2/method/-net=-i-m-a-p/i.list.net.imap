@@ -1,0 +1,17 @@
+kind=defined
+names=list
+visibility=public
+
+--- list(refname, mailbox)
+
+Sends a LIST command, and returns a subset of names from
+the complete set of all names available to the client.
+The return value is an array of [[c:Net::IMAP::MailboxList]].
+
+ex).
+
+  imap.create("foo/bar")
+  imap.create("foo/baz")
+  p imap.list("", "foo/%")
+  #=> [#<Net::IMAP::MailboxList attr=[:Noselect], delim="/", name="foo/">, #<Net::IMAP::MailboxList attr=[:Noinferiors, :Marked], delim="/", name="foo/bar">, #<Net::IMAP::MailboxList attr=[:Noinferiors], delim="/", name="foo/baz">]
+

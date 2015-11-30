@@ -1,0 +1,11 @@
+kind=defined
+names=day,mday
+visibility=public
+
+--- mday    -> Integer
+--- day     -> Integer
+
+日を整数で返します。
+
+  p Time.local(2000, 1, 1).day #=> 1
+

@@ -1,0 +1,28 @@
+kind=defined
+names=regexp
+visibility=public
+
+--- regexp             -> Regexp
+--- regexp(schemes)    -> Regexp
+
+URIにマッチする正規表現を返します。
+
+schemes を与えた場合は、そのスキームの URI にのみマッチする
+正規表現を返します。
+
+いずれの場合も返り値の正規表現は不定数の正規表現グループ
+(括弧) を含みます。この括弧の数はバージョンによって変動
+する可能性があるので、それに依存したコードを書くべきでは
+ありません。
+
+また、有効なURIではない文字列(たとえば"http://") にも
+マッチするため、有効なURIかどうかは必要に応じて別途
+検査してください。
+
+@param schemes マッチさせたいスキームを、文字列の配列として与えます。
+
+例:
+  require 'uri'
+  p URI.regexp =~ "http://www.ruby-lang.org/"  #=> 0
+
+

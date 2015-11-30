@@ -1,0 +1,18 @@
+kind=added
+names=DEFAULT_INPUT
+visibility=public
+
+--- $DEFAULT_INPUT -> IO
+
+[[m:$<]] ¤ÎÊÌÌ¾
+  
+  require "English"
+  while line = $DEFAULT_INPUT.gets
+    p line
+  end
+  # end of sample.rb
+
+  ruby sample.rb < /etc/passwd 
+  # => "hoge:x:500:501::/home/hoge:/bin/bash\n"
+       ...
+

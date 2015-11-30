@@ -1,0 +1,7 @@
+kind=defined
+names=current_configinfo
+visibility=public
+
+--- current_configinfo(slot = nil)
+
+

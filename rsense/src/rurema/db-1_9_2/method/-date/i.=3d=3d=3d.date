@@ -1,0 +1,9 @@
+kind=defined
+names====
+visibility=public
+
+--- === (other) -> bool
+同じ日なら真を返します。
+
+@param other 日付オブジェクト
+

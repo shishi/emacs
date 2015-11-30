@@ -1,0 +1,26 @@
+kind=defined
+names=info
+visibility=public
+
+--- info
+
+キー情報を以下の値の配列で返します:
+  * num_keys
+    サブキーの個数
+  * max_key_length
+    サブキー名の最大長
+  * num_values
+    値の個数
+  * max_value_name_length
+    値の名前の最大長
+  * max_value_length
+    値の最大長
+  * descriptor_length
+    セキュリティ記述子の長さ
+  * wtime
+    最終更新時刻 (FILETIME)
+
+詳細は以下の Win32 API を参照してください。
+
+ * RegQueryInfoKey: [[url:http://msdn.microsoft.com/library/en-us/sysinfo/base/regqueryinfokey.asp]]
+

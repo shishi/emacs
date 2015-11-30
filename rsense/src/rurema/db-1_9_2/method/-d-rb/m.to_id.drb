@@ -1,0 +1,11 @@
+kind=defined
+names=to_id
+visibility=public
+
+--- to_id(obj)
+
+Get a reference id for an object using the current server.
+
+This raises a DRbServerNotFound error if there is no current
+server. See #current_server.
+

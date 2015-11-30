@@ -1,0 +1,10 @@
+kind=defined
+names=append_features
+visibility=public
+
+--- append_features(klass) -> Class | nil
+
+ユーザが直接、使うことはありません。
+
+@see [[m:Module#append_features]]
+

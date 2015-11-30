@@ -1,0 +1,6 @@
+kind=defined
+names=_toUTF8
+visibility=public
+
+--- _toUTF8(str, encoding = nil)
+

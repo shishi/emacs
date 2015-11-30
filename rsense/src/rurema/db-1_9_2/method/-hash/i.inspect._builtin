@@ -1,0 +1,12 @@
+kind=defined
+names=inspect,to_s
+visibility=public
+
+--- to_s     -> String
+--- inspect  -> String
+
+ハッシュの内容を inspect によって文字列化して返します。
+
+    h = { "c" => 300, "a" => 100, "d" => 400, "c" => 300  }
+    h.to_s   #=> "{\"a\"=>100, \"c\"=>300, \"d\"=>400}"
+

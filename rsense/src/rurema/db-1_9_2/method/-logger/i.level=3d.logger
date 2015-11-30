@@ -1,0 +1,12 @@
+kind=defined
+names=level=,sev_threshold=
+visibility=public
+
+--- level=(level)
+--- sev_threshold=(level)
+
+Logger オブジェクトのログレベルを設定します。ログレベルがこれより低いメッセージは
+出力されません。
+
+@param level ログレベルを指定します。
+

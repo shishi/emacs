@@ -1,0 +1,8 @@
+kind=defined
+names=exclude_end?
+visibility=public
+
+--- exclude_end? -> bool
+
+範囲オブジェクトが終端を含まないとき真を返します。
+

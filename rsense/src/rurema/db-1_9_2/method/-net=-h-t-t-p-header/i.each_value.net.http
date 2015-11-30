@@ -1,0 +1,9 @@
+kind=defined
+names=each_value
+visibility=public
+
+--- each_value {|value| .... } -> ()
+保持しているヘッダの値をブロックに渡し、呼びだします。
+
+渡される文字列は ", " で連結したものです。
+

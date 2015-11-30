@@ -1,0 +1,21 @@
+superclass=Object
+type=class
+library=openssl
+extended=
+included=
+
+公開鍵暗号のための抽象クラス
+
+以下のサブクラスを持つ。
+  * [[c:OpenSSL::PKey::RSA]]
+  * [[c:OpenSSL::PKey::DSA]]
+  * [[c:OpenSSL::PKey::DH]]
+  * [[c:OpenSSL::PKey::EC]]
+
+例:
+  require "openssl"
+  dsa512 = OpenSSL::PKey::DSA.new(512)
+  dss1 = OpenSSL::Digest::DSS1.new
+  data = 'hoge'
+  sign = dsa512.sign(dss1, data)
+  p dsa512.verify(dss1, sign, data)

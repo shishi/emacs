@@ -1,0 +1,15 @@
+kind=defined
+names=esmtp=
+visibility=public
+
+--- esmtp=(bool)
+その Net::SMTP オブジェクトが ESMTP を使うかどうかを指定します。
+
+この指定は [[m:Net::SMTP#start]] を呼ぶ前にする必要があります。
+ESMTPモードで [[m:Net::SMTP#start]] を呼び、うまくいかなかった
+場合には 普通の SMTP モードに切り替えてやりなおします
+(逆はしません)。
+
+
+@see [[m:Net::SMTP#esmtp?]]
+

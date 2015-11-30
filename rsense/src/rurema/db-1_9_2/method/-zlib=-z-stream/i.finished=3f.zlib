@@ -1,0 +1,9 @@
+kind=defined
+names=finished?,stream_end?
+visibility=public
+
+--- finished? -> bool
+--- stream_end? -> bool
+
+ストリームへの入力が終了している時に真を返します。
+

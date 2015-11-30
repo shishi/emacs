@@ -1,0 +1,8 @@
+kind=defined
+names=fsync_dir
+visibility=private 
+
+--- fsync_dir(dirname) -> ()
+
+ディスクの同期をします。
+

@@ -1,0 +1,10 @@
+kind=defined
+names=OPERATING_SYSTEM_DEFAULTS
+visibility=protected 
+
+--- OPERATING_SYSTEM_DEFAULTS -> {}
+
+Ruby をパッケージングしている人がデフォルトの設定値をセットするために使用します。
+
+使用するファイルは rubygems/defaults/operating_system.rb です。
+

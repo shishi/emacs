@@ -1,0 +1,21 @@
+kind=defined
+names=-K,KCODE
+visibility=public
+
+--- $KCODE -> nil
+--- $-K    -> nil
+
+この特殊変数は何の影響も持たなくなりました。
+
+値を代入しても無視され、参照すると常に nil です。
+
+  >> $KCODE = true
+  (irb):1: warning: variable $KCODE is no longer effective; ignored
+  => true
+  >> $KCODE
+  (irb):2: warning: variable $KCODE is no longer effective
+  => nil
+
+@see [[d:spec/rubycmd]]
+
+

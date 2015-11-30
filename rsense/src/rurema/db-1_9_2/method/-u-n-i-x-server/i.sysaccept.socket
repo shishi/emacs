@@ -1,0 +1,15 @@
+kind=defined
+names=sysaccept
+visibility=public
+
+--- sysaccept
+
+接続したクライアントのソケットをファイル記述子で返すことを除けば
+[[m:UNIXServer#accept]] と同じです。
+
+例:
+
+  UNIXServer.open("/tmp/s") {|serv|
+    c = UNIXSocket.open("/tmp/s")
+    p serv.sysaccept        #=> 6
+  }

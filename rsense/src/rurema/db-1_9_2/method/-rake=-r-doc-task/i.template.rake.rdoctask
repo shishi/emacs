@@ -1,0 +1,9 @@
+kind=defined
+names=template
+visibility=public 
+
+--- template -> String
+
+使用するテンプレートを返します。
+デフォルトは RDoc のデフォルトです。
+

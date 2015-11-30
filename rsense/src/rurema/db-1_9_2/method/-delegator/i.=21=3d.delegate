@@ -1,0 +1,11 @@
+kind=defined
+names=!=
+visibility=public
+
+--- !=(obj) -> bool
+
+自身が与えられたオブジェクトと等しくない場合は、真を返します。
+そうでない場合は、偽を返します。
+
+@param obj 比較対象のオブジェクトを指定します。
+

@@ -1,0 +1,13 @@
+kind=defined
+names=call_finalizer
+visibility=public
+
+--- call_finalizer(obj)    -> object
+
+このメソッドは obsolete です。
+
+obj をファイナライザの対象オブジェクトとして設定します。
+obj を返します。
+
+@param obj ファイナライザの対象とするオブジェクトを指定します。
+

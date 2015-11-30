@@ -1,0 +1,11 @@
+kind=defined
+names=eventloop_tkwait_destroy,eventloop_tkwait_window,eventloop_wait_destroy,eventloop_wait_window
+visibility=public
+
+--- eventloop_wait_destroy
+--- eventloop_tkwait_destroy
+--- eventloop_wait_window
+--- eventloop_tkwait_window
+
+
+

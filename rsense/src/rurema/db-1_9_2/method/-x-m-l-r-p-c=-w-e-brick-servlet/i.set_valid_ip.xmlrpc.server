@@ -1,0 +1,8 @@
+kind=defined
+names=set_valid_ip
+visibility=public
+
+--- set_valid_ip( *ip_addr )
+Specifies the valid IP addresses that are allowed to connect to the server.
+Each IP is either a String or a Regexp.
+

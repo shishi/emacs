@@ -1,0 +1,10 @@
+kind=defined
+names=_load
+visibility=public
+
+--- _load(str)    -> Class
+
+[[m:Object#_dump]] を参照して下さい。
+
+@param str Ruby のオブジェクトがダンプされた文字列を指定します。
+

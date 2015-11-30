@@ -1,0 +1,10 @@
+kind=defined
+names=readable_real?
+visibility=public
+
+--- readable_real?(path)    -> bool
+
+[[m:FileTest.#readable_real?]] と同じです。
+
+@param path パスを表す文字列か IO オブジェクトを指定します。
+

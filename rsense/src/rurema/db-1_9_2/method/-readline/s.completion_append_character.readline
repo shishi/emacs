@@ -1,0 +1,14 @@
+kind=defined
+names=completion_append_character
+visibility=public
+
+--- completion_append_character -> String
+
+ユーザの入力の補完が完了した場合に、最後に付加する文字を取得します。
+
+@raise NotImplementedError サポートしていない環境で発生します。
+
+@raise SecurityError セーフレベル ($SAFE) が 4 の場合に発生します。
+
+@see [[m:Readline.completion_append_character=]]
+

@@ -1,0 +1,8 @@
+kind=defined
+names=uid=
+visibility=public
+
+--- uid=(uid)
+
+このユーザの uid を設定します。
+

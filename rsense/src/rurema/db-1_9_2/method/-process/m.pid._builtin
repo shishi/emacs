@@ -1,0 +1,11 @@
+kind=defined
+names=pid
+visibility=public
+
+--- pid    -> Integer
+
+カレントプロセスのプロセス ID を返します。変数 [[m:$$]]
+の値と同じです。
+
+@see [[man:getpid(2)]]
+

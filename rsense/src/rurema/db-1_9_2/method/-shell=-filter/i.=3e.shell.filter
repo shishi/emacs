@@ -1,0 +1,19 @@
+kind=defined
+names=>
+visibility=public
+
+--- >(to) -> self
+
+toをフィルタの出力とする。 toが, 文字列ならばファイルに, IOオブジェクトであれ
+ばそれをそのまま出力とする。
+
+@param to 出力先を指定します。文字列ならばファイルに,IOオブジェクトならばそれに出力します。
+
+使用例
+  Shell.def_system_command("tail")
+  sh = Shell.new
+  sh.transact {
+    (sh.tail("-n 3") < "/etc/passwd") > File.open("tail.out", "w")
+    #(sh.tail("-n 3") < "/etc/passwd") > "tail.out" # と同じ.
+  }
+

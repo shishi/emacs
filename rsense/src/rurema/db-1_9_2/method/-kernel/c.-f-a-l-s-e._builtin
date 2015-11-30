@@ -1,0 +1,11 @@
+kind=defined
+names=FALSE
+visibility=public
+
+--- FALSE -> FalseClass
+非推奨です。代表的な偽の値。false と同じ。
+
+この定数は過去との互換性のために提供されています。擬似変数 false を使ってください。
+Ruby では false と nil が偽として扱われます。
+偽でない値(false でも nil でもない値) は全て真とみなされます。
+

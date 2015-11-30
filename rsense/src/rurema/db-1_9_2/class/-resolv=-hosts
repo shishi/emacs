@@ -1,0 +1,9 @@
+superclass=Object
+type=class
+library=resolv
+extended=
+included=
+
+/etc/hosts (Windows であれば 
+%SystemRoot%\System32\drivers\etc\hosts など)
+を使用するホスト名リゾルバです。

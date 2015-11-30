@@ -1,0 +1,8 @@
+kind=defined
+names=KEY_DOWN
+visibility=public
+
+--- KEY_DOWN -> Integer
+
+下矢印キーを表す定数です。
+

@@ -1,0 +1,9 @@
+kind=defined
+names=executable_real?
+visibility=public
+
+--- executable_real? -> bool
+FileTest.executable_real?(self.to_s) と同じです。
+
+@see [[m:FileTest.#executable_real?]]
+

@@ -1,0 +1,26 @@
+kind=defined
+names=eof,eof?
+visibility=public
+
+--- eof -> bool
+--- eof? -> bool
+
+圧縮データの終端に達した場合真を返します。
+フッターが読み込まれていなくても真を返すことに注意して下さい。
+
+  =begin
+  # hoge.gz がない場合はこれで作成する。
+  Zlib::GzipWriter.open('hoge.gz') { |gz|
+    gz.puts 'hoge'
+    gz.puts 'fuga'
+    gz.puts 'foga'
+  }
+  =end
+
+  Zlib::GzipReader.open('hoge.gz'){|gz|
+    gz.each_line{|line|
+      puts line
+    }
+    p gz.eof? #=> true
+  }
+

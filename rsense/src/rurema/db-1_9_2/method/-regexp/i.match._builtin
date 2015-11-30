@@ -1,0 +1,69 @@
+kind=defined
+names=match
+visibility=public
+
+--- match(str, pos = 0) -> MatchData | nil
+
+指定された文字列 str に対して
+位置 pos から
+自身が表す正規表現によるマッチングを行います。マッチした場合には結果を MatchData オブジェクトで返します。
+マッチしなかった場合 nil を返します。
+
+省略可能な第二引数 pos を指定すると、マッチの開始位置を pos から行
+うよう制御できます(pos のデフォルト値は 0)。
+
+  p(/(.).(.)/.match("foobar", 3).captures)   # => ["b", "r"]
+  p(/(.).(.)/.match("foobar", -3).captures)  # => ["b", "r"]
+
+pos を指定しても [[m:MatchData#offset]] 等の結果
+には影響しません。つまり、
+  re.match(str[pos..-1])
+と
+  re.match(str, pos)
+は異なります。
+
+@param str 文字列を指定します。str との正規表現マッチを行います。
+
+@param pos 整数を指定します。マッチの開始位置を pos から行うよう制御できます(pos のデフォルト値は 0)。
+
+使用例
+
+  reg = Regexp.new("foo")
+
+  if reg.match("foobar")
+    print "match\n" #=> match
+  end
+
+  p reg.match("foobar") #=> #<MatchData:0x29403fc>
+  p reg.match("bar")    #=> nil
+
+  p /(foo)(bar)(baz)/.match("foobarbaz").to_a.values_at(1,2,3) #=> ["foo", "bar", "baz"]
+
+==== 便利な使いかた
+正規表現にマッチした部分文字列だけが必要な場合に、
+
+  bar = /foo(.*)baz/.match("foobarbaz").to_a[1]
+  
+  foo, bar, baz = /(foo)(bar)(baz)/.match("foobarbaz").to_a.values_at(1,2,3)
+
+のように使用できます。(to_a は、マッチに失敗した場合を考慮しています。)
+
+多重代入の規則では右辺が配列でない一つのオブジェクトで to_a
+メソッドを持つ場合、右辺に * を付けることで to_a の結果を利用でき
+ます。つまり、上記は以下のように書くことができます。(ここでの
+`_' は、[[m:$&]] を捨てるために適当に選んだ変数名)
+
+  _, foo, bar, baz = */(foo)(bar)(baz)/.match("foobarbaz")
+  p [foo, bar, baz]
+
+  # => ["foo", "bar", "baz"]
+
+このような用途に [[m:MatchData#captures]] が使
+えると考えるかも知れませんが、captures では、マッチに失敗した場合、
+nil.captures を呼び出そうとして例外 [[c:NoMethodError]] が発生して
+しまいます。
+
+  foo, bar, baz = /(foo)(bar)(baz)/.match("foobar").captures
+
+  # => -:1: undefined method `captures' for nil:NilClass (NoMethodError)
+

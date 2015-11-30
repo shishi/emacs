@@ -1,0 +1,6 @@
+kind=defined
+names=ensemble_exist?
+visibility=public
+
+--- ensemble_exist?(cmd)
+

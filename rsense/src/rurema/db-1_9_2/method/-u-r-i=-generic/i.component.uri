@@ -1,0 +1,10 @@
+kind=defined
+names=component
+visibility=public
+
+--- component     -> [Symbol]
+
+self.class.component を返します。
+
+@see [[m:URI::Generic.component]]
+

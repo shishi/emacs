@@ -1,0 +1,6 @@
+kind=defined
+names=flush
+visibility=public
+
+--- flush -> ()
+

@@ -1,0 +1,12 @@
+kind=defined
+names=remove_file
+visibility=public
+
+--- remove_file(path, force = false) -> ()
+
+ファイル path を削除します。
+
+@param path 削除するファイル。
+
+@param force 真のときは削除中に発生した [[c:StandardError]] を無視します。
+

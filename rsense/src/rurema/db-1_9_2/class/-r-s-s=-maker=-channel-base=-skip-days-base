@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rss
+extended=
+included=
+
+RSS 0.91/2.0を生成するときだけ利用されます．

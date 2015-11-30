@@ -1,0 +1,34 @@
+kind=defined
+names=exit,kill,terminate
+visibility=public
+
+--- exit         -> self
+--- kill         -> self
+--- terminate    -> self
+
+スレッドの実行を終了させます。終了時に ensure 節が実行されます。
+
+ただし、スレッドは終了処理中(aborting)にはなりますが、
+直ちに終了するとは限りません。すでに終了している場合は何もしません。このメソッドにより
+終了したスレッドの [[m:Thread#value]] の返り値は不定です。
+自身がメインスレッドであるか最後のスレッドである場合は、プロセスを [[m:Kernel.#exit]](0) 
+により終了します。
+
+[[m:Kernel.#exit]] と違い例外  [[c:SystemExit]] を発生しません。
+
+  th1 = Thread.new do
+    begin
+      sleep 10
+    ensure
+      p "this will be displayed"
+    end
+  end
+
+  sleep 0.1
+  th1.kill
+
+  #=> "this will be displayed"
+
+@see [[m:Kernel.#exit]], [[m:Kernel.#exit!]]
+
+

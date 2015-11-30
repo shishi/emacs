@@ -1,0 +1,11 @@
+kind=defined
+names=*
+visibility=public
+
+--- *(other)
+
+乗算 (c = a * b)。
+
+c の精度は (a の精度) + (b の精度) 程度です。
+詳しくは「計算精度について」を参照してください。 
+

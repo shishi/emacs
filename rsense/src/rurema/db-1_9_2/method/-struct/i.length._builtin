@@ -1,0 +1,9 @@
+kind=defined
+names=length,size
+visibility=public
+
+--- length -> Fixnum
+--- size -> Fixnum
+(このメソッドは Struct の下位クラスにのみ定義されています)
+構造体のメンバの数を返します。
+

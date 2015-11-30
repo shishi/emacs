@@ -1,0 +1,10 @@
+kind=defined
+names=A_CHARTEXT
+visibility=public
+
+--- A_CHARTEXT -> Integer
+
+文字を抽出するための属性マスク用定数です。
+
+@see [[m:Curses.attrset]]
+

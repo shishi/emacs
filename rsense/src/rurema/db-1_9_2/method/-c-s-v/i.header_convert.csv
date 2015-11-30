@@ -1,0 +1,16 @@
+kind=defined
+names=header_convert
+visibility=public
+
+--- header_convert(name)
+--- header_convert{|field| ... }
+--- header_convert{|field, field_info| ... }
+
+[[m:CSV#convert]] に似ていますが、ヘッダ行用のメソッドです。
+
+このメソッドはヘッダ行を読み込む前に呼び出さなければなりません。
+
+@param name 変換器の名前を指定します。
+
+@see [[m:CSV#convert]]
+

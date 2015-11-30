@@ -1,0 +1,32 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(cfunc, argtypes)                  -> DL::Function
+--- new(cfunc, argtypes){|*arg| ... }     -> DL::Function
+
+指定された [[c:DL::CFunc]] オブジェクト cfunc をラップする
+DL::Function オブジェクトを生成して返します。
+
+@param cfunc [[c:DL::CFunc]] オブジェクトを指定します。
+
+@param argtypes cfunc の引数の型を[[c:DL]]に定義された定数の配列で指定します。
+                unsigned char など unsigned を指定したい場合は - を付けて
+//emlist{
+    - TYPE_CHAR
+//}
+                を使います。
+
+例:
+
+ require 'dl/import'
+
+ h = DL::Handle.new
+ addr = h.sym('strncmp')
+ cfunc = DL::CFunc.new(addr, DL::TYPE_INT)
+ func = DL::Function.new(cfunc, [DL::TYPE_VOIDP, DL::TYPE_VOIDP, DL::TYPE_INT])
+ 
+ p func.call("abcd", "abcz", 3)    #=> 0
+
+@see [[m:DL::TYPE_INT]]
+

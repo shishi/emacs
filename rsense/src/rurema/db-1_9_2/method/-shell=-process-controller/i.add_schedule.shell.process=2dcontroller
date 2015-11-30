@@ -1,0 +1,11 @@
+kind=defined
+names=add_schedule
+visibility=public
+
+--- add_schedule(command) -> ()
+
+指定されたコマンドを待機ジョブとして登録します。
+ただし、実行中のジョブが存在しない場合は、そのジョブを直ちに実行します。
+
+@param command コマンドを指定します。
+

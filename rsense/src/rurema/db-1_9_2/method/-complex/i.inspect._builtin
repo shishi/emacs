@@ -1,0 +1,10 @@
+kind=defined
+names=inspect
+visibility=public
+
+--- inspect -> String
+
+自身を人間が読みやすい形の文字列表現にして返します。
+
+"(1+1i)", "(1-1i)" のような文字列を返します。
+

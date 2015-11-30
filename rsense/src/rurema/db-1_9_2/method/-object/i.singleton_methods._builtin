@@ -1,0 +1,76 @@
+kind=defined
+names=singleton_methods
+visibility=public
+
+--- singleton_methods(inherited_too = true) -> [Symbol]
+そのオブジェクトに対して定義されている特異メソッド名
+(public あるいは protected メソッド) の一覧を返します。
+
+クラスメソッド([[c:Class]]のインスタンスの特異メソッド)に関しては
+引数が真のとき、スーパークラスのクラスメソッドも対象になります。
+
+singleton_methods(false) は、[[m:Object#methods]](false) と同じです。
+
+@param inherited_too 引数が真のとき、スーパークラスのクラスメソッドも対象になります。これが意味を持つのは
+  self がクラスオブジェクトであるときだけです。
+
+  #例1:
+  
+  Parent = Class.new
+  
+  class <<Parent
+    private;   def private_class_parent() end
+    protected; def protected_class_parent() end
+    public;    def public_class_parent() end
+  end
+  
+  Foo = Class.new(Parent)
+  
+  class <<Foo
+    private;   def private_class_foo() end
+    protected; def protected_class_foo() end
+    public;    def public_class_foo() end
+  end
+  
+  module Bar
+    private;   def private_bar()   end
+    protected; def protected_bar() end
+    public;    def public_bar()    end
+  end
+  
+  obj = Foo.new
+  class <<obj
+    include Bar
+    private;   def private_self()   end
+    protected; def protected_self() end
+    public;    def public_self()    end
+  end
+  
+  # あるオブジェクトの特異メソッドの一覧を得る。
+  p obj.singleton_methods(false)
+  p obj.methods(false)
+  p Foo.singleton_methods(false)
+  
+  #実行結果
+  
+  [:protected_self, :public_self]
+  [:protected_self, :public_self]
+  [:protected_class_foo, :public_class_foo]
+
+  
+  #例2:
+  
+  # あるオブジェクトの特異メソッドの一覧を得る。
+  # 親クラスのクラスメソッドも含まれるよう true を指定したが、
+  # Object のクラスメソッドは一覧から排除している。
+  
+  p obj.singleton_methods(true)
+  p Foo.singleton_methods(true) - Object.singleton_methods(true)
+  
+  #実行結果
+  
+  [:protected_self, :public_self, :protected_bar, :public_bar]
+  [:protected_class_foo, :public_class_foo, :protected_class_parent, :public_class_parent]
+
+@see [[m:Object#methods]],[[m:Object#extend]]
+

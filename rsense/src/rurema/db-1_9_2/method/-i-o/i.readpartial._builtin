@@ -1,0 +1,65 @@
+kind=defined
+names=readpartial
+visibility=public
+
+--- readpartial(maxlen, outbuf = "")    -> String
+
+IO から長さ maxlen を上限として読み込み、文字列として返します。
+即座に得られるデータが存在しないときにはブロックしてデータの到着を待ちます。
+即座に得られるデータが 1byte でも存在すればブロックしません。
+
+バイナリ読み込みメソッドとして動作します。
+既に EOF に達していれば EOFError が発生します。
+ただし、maxlen に 0 が指定されている場合は、空文字列 "" を返します。
+
+readpartial はブロックを最小限に抑えることによって、
+パイプ、ソケット、端末などのストリームに対して適切に動作するよう設計されています。
+readpartial がブロックするのは次の全ての条件が満たされたときだけです。
+  * IO オブジェクト内のバッファが空
+  * ストリームにデータが到着していない
+  * ストリームが EOF になっていない
+これらの条件が満たされる場合、何らかのデータが到着するか EOF になるまで readpartial はブロックします。
+
+readpartial の結果は以下のようになります。
+  (1) バッファが空でなければ、そのバッファのデータを読み込んで返します。
+  (2) ストリームにデータがあれば、ストリームからデータを読み込んで返します。
+  (3) ストリームが EOF になっていれば、例外 [[c:EOFError]] を発生させます。
+
+例えば、パイプに対しては次のように動作します。
+
+  r, w = IO.pipe           #               buffer          pipe content
+  w << "abc"               #               ""              "abc".
+  r.readpartial(4096)      #=> "abc"       ""              ""
+  r.readpartial(4096)      # バッファにもパイプにもデータがないのでブロックする
+  
+  r, w = IO.pipe           #               buffer          pipe content
+  w << "abc"               #               ""              "abc"
+  w.close                  #               ""              "abc" EOF
+  r.readpartial(4096)      #=> "abc"       ""              EOF
+  r.readpartial(4096)      # 例外 EOFError 発生
+  
+  r, w = IO.pipe           #               buffer          pipe content
+  w << "abc\ndef\n"        #               ""              "abc\ndef\n"
+  r.gets                   #=> "abc\n"     "def\n"         ""
+  w << "ghi\n"             #               "def\n"         "ghi\n"
+  r.readpartial(4096)      #=> "def\n"     ""              "ghi\n"
+  r.readpartial(4096)      #=> "ghi\n"     ""              ""
+
+なお、readpartial は nonblock フラグに影響されません。
+つまり、nonblock フラグが設定されていて sysread であれば Errno::EAGAIN になる場合でもブロックします。
+
+また、readpartial の挙動は sysread によく似ています。
+とくに、バッファが空の場合には同じ挙動を示します。
+ただし、EAGAIN および EINTR エラーは内部で発生したとしても通知されず、データが到着するまでブロックし続けます。
+
+@param maxlen 読み込む長さの上限を整数で指定します。
+
+@param outbuf 文字列で指定します。IO#readpartial は読み込んだデータを outbuf に破壊的に格納し、
+              返り値は outbuf となります。outbuf は一旦 maxlen 長に拡張(あるいは縮小)されたあと、
+              実際に読み込んだデータのサイズになります。IO が既に EOF に達していれば、空文字列になります。
+
+@raise IOError 自身が読み込み用にオープンされていなければ発生します。
+
+@raise EOFError IO が既に EOF に達していれば発生します。
+
+

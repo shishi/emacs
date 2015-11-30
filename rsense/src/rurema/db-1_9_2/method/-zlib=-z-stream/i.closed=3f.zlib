@@ -1,0 +1,8 @@
+kind=defined
+names=closed?,ended?
+visibility=public
+
+--- closed? -> bool
+--- ended? -> bool
+
+ストリームが閉じられている時に真を返します。

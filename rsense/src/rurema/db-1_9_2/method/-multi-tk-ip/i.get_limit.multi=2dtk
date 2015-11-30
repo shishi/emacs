@@ -1,0 +1,6 @@
+kind=defined
+names=get_limit
+visibility=public
+
+--- get_limit(limit_type, slave = '', slot = nil)
+

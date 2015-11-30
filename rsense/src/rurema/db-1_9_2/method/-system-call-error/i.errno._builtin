@@ -1,0 +1,27 @@
+kind=defined
+names=errno
+visibility=public
+
+--- errno -> Fixnum | nil
+
+レシーバに対応するシステム依存のエラーコードを返します。
+
+エラーコードを渡さない形式で生成した場合は nil を返します。
+
+  begin
+    raise Errno::ENOENT
+  rescue Errno::ENOENT => err
+    p err.errno                 # => 2
+    p Errno::ENOENT::Errno      # => 2
+  end
+
+  begin
+    raise SystemCallError, 'message'
+  rescue SystemCallError => err
+    p err.errno                 # => nil
+  end
+
+
+なお、例外を発生させずにエラーコードを得るには、
+[[m:Errno::EXXX::Errno]] 定数を使います。
+

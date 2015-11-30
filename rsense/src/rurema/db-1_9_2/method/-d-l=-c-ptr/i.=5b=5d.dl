@@ -1,0 +1,40 @@
+kind=defined
+names=[]
+visibility=public
+
+--- [](offset)            -> Integer
+
+自身の指すアドレスに offset バイトを足したメモリ領域の先頭を整数として返します。
+
+
+例:
+
+ require 'dl'
+ 
+ s = 'abc'
+ cptr  = DL::CPtr[s]
+ p cptr[0]            #=> 97           
+ p cptr[1]            #=> 98
+
+--- [](offset, len)       -> String
+
+自身の指すアドレスに offset バイトを足したメモリ領域の先頭 len バイトを複製し、
+文字列として返します。
+
+(self + offset).to_s(len) と同等です。
+offset + len が自身のサイズより小さいかを検証しません。
+
+@param offset 値を得たい領域の先頭のアドレスまでのオフセットを整数で与えます。
+
+@param len 値を得たい領域のサイズを指定します。
+
+
+例:
+
+ require 'dl'
+ 
+ s = 'abc'
+ cptr  = DL::CPtr[s]
+ p cptr[0, 1]            #=> "a"
+ p cptr[1, 2]            #=> "bc"
+

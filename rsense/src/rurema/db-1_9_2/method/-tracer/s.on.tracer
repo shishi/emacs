@@ -1,0 +1,24 @@
+kind=defined
+names=on
+visibility=public
+
+--- on -> nil
+--- on {...}
+
+トレース出力を開始します。
+ブロックを与えられた場合はそのブロック内のみトレース出力を行います。
+
+  require 'tracer'
+
+  Tracer.on
+  class Test
+    def test
+      b = 2
+    end
+  end
+
+  t = Test.new
+  t.test
+
+@see [[m:Tracer.off]]
+

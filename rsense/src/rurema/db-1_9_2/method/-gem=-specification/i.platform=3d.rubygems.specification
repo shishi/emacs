@@ -1,0 +1,13 @@
+kind=defined
+names=platform=
+visibility=public
+
+--- platform=(platform)
+
+この Gem パッケージを使用できるプラットフォームをセットします。
+
+@param platform この Gem パッケージを使用できるプラットフォームを指定します。
+       デフォルトは [[m:Gem::Platform::RUBY]] です。
+
+@see [[m:Gem::Platform::RUBY]]
+

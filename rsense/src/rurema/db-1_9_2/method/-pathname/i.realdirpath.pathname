@@ -1,0 +1,12 @@
+kind=defined
+names=realdirpath
+visibility=public
+
+--- realdirpath(basedir = nil) -> Pathname
+
+[[m:Pathname#realpath]] とほぼ同じで、最後のコンポーネントは実際に
+存在しなくてもエラーになりません。
+
+@param basedir ベースディレクトリを指定します。省略するとカレントディレクトリになります。
+
+@see [[m:Pathname#realpath]]

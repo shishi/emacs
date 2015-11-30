@@ -1,0 +1,14 @@
+kind=defined
+names=instance_method
+visibility=public
+
+--- instance_method(name) -> UnboundMethod
+
+self のインスタンスメソッドをオブジェクト化した [[c:UnboundMethod]] を返します。
+
+@param name [[c:Symbol]] か [[c:String]] です。
+
+@raise NameError self に存在しないメソッドを指定した場合に発生します。
+
+@see [[m:Object#method]]
+

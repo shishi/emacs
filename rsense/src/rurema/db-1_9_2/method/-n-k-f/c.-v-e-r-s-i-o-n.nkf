@@ -1,0 +1,8 @@
+kind=defined
+names=VERSION
+visibility=public
+
+--- VERSION -> String
+"#{NKF::NKF_VERSION} (#{NKF_RELEASE_DATE})" と
+あらわされる文字列です。
+

@@ -1,0 +1,8 @@
+kind=defined
+names=written
+visibility=public 
+
+--- written -> Integer
+
+既に書き込んだデータのサイズを返します。
+

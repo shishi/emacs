@@ -1,0 +1,10 @@
+kind=defined
+names=value
+visibility=public
+
+---value -> String
+
+拡張領域の値(extnValue)を返します。
+
+@see [[c:OpenSSL::X509::Extension#value=]]
+

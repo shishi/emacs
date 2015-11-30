@@ -1,0 +1,16 @@
+kind=defined
+names=gets,readline,shift
+visibility=public
+
+--- shift    -> Array | CSV::Row
+--- gets     -> Array | CSV::Row
+--- readline -> Array | CSV::Row
+
+[[c:String]] や [[c:IO]] をラップしたデータソースから一行だけ読み込んで
+フィールドの配列か [[c:CSV::Row]] のインスタンスを返します。
+
+データソースは読み込み用にオープンされている必要があります。
+
+@return ヘッダを使用しない場合は配列を返します。
+        ヘッダを使用する場合は [[c:CSV::Row]] を返します。
+

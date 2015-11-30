@@ -1,0 +1,12 @@
+kind=defined
+names=ehlo
+visibility=public
+
+--- ehlo(domain) -> Net::SMTP::Response
+EHLO コマンドを送ります(ESMTP を使います)。
+
+通常は [[m:Net::SMTP.start]], [[m:Net::SMTP#start]] で EHLO が
+送られるため利用する必要はないはずです。
+
+@param domain EHLOで送るドメイン名
+

@@ -1,0 +1,10 @@
+kind=defined
+names=irb_push_workspace,irb_pushws,pushws
+visibility=public
+
+--- pushws([obj])
+--- irb_pushws([obj])
+--- irb_push_workspace([obj])
+
+UNIX シェルコマンドの pushd と同じです。
+

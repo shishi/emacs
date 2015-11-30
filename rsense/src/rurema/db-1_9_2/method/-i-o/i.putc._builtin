@@ -1,0 +1,18 @@
+kind=defined
+names=putc
+visibility=public
+
+--- putc(ch)    -> object
+
+文字 ch を self に出力します。
+引数の扱いは [[m:Kernel.#putc]] と同じです。詳細はこちらを参照し
+てください。ch を返します。
+
+@param ch 出力したい文字を、文字列か文字コード(整数)で与えます。
+
+@raise IOError 自身が書き込み用にオープンされていなければ発生します。
+
+@raise Errno::EXXX 出力に失敗した場合に発生します。
+
+@see [[m:Kernel.#putc]]
+

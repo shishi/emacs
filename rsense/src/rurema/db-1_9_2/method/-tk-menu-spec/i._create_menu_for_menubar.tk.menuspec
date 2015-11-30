@@ -1,0 +1,6 @@
+kind=defined
+names=_create_menu_for_menubar
+visibility=private 
+
+--- _create_menu_for_menubar(parent)
+

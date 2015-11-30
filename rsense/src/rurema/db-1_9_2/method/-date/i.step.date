@@ -1,0 +1,15 @@
+kind=defined
+names=step
+visibility=public
+
+--- step(limit, step = 1){|date| ...} -> self
+--- step(limit, step = 1) -> Enumerator
+ブロックの評価を繰り返します。ブロックは日付オブジェクトをとります。
+limit は日付オブジェクトでなければなりません、
+また step は非零でなければなりません。
+
+@param limit 日付オブジェクト
+@param step 歩幅
+
+@see [[m:Date#downto]], [[m:Date#upto]]
+

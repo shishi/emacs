@@ -1,0 +1,6 @@
+kind=defined
+names=set_start_proc
+visibility=public
+
+--- set_start_proc(sleep = nil, init_proc = nil, *init_args) { .... }
+

@@ -1,0 +1,6 @@
+kind=defined
+names=function
+visibility=public
+
+--- function(elements, fname, rest)
+

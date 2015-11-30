@@ -1,0 +1,6 @@
+kind=defined
+names=receive
+visibility=public
+
+--- receive(event)
+

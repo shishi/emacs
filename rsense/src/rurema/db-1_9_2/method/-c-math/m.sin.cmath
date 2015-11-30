@@ -1,0 +1,11 @@
+kind=defined
+names=sin
+visibility=public
+
+--- sin(z) -> Float | Complex
+
+z の正弦関数の値をラジアンで返します。
+
+@param z 数値
+
+

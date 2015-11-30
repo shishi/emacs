@@ -1,0 +1,9 @@
+kind=defined
+names=eof,eof?
+visibility=public
+
+--- eof -> bool
+--- eof? -> bool
+
+[[m:IO#eof]], [[m:IO#eof?]] に委譲します。
+

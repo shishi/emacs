@@ -1,0 +1,19 @@
+kind=defined
+names=read,readlines
+visibility=public
+
+--- read(path, options = Hash.new) -> [Array]
+--- readlines(path, options = Hash.new) -> [Array]
+
+CSV ファイルを配列の配列にするために使います。
+
+
+@param path CSV ファイルのパスを指定します。
+
+@param options [[m:CSV.new]] のオプションと同じオプションを指定できます。
+               :encoding というキーを使用すると入力のエンコーディングを指定することができます。
+               入力のエンコーディングか [[m:Encoding.default_external]] と異なる場合は
+               必ず指定しなければなりません。
+
+@see [[m:CSV.new]]
+

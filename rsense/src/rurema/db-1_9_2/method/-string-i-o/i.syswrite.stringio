@@ -1,0 +1,13 @@
+kind=defined
+names=syswrite,write_nonblock
+visibility=public
+
+--- syswrite(obj)    -> Integer
+--- write_nonblock(obj) -> Integer
+
+自身に obj を書き込みます。[[m:StringIO#write]] と同じです。
+
+@param obj 書き込みたいオブジェクトを指定します。
+
+@raise IOError 自身が書き込み用にオープンされていなければ発生します。
+

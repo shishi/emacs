@@ -1,0 +1,14 @@
+kind=defined
+names=delete_if,reject!
+visibility=public
+
+--- delete_if {|key, value| ... } -> ENV
+--- reject! {|key, value| ... }   -> ENV | nil
+--- delete_if  -> Enumerator
+--- reject!    -> Enumerator
+
+key と value を引数としてブロックを評価した値が真であ
+る時、環境変数を削除します。
+
+reject! は要素に変化がなければ nil を返します。
+

@@ -1,0 +1,8 @@
+name=rb_thread_fd_close
+private=false
+macro=false
+type=void
+filename=eval.c
+params=(int fd)
+
+

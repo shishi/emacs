@@ -1,0 +1,22 @@
+name=rb_load
+private=false
+macro=false
+type=void
+filename=eval.c
+params=(VALUE fname, int wrap)
+
+
+参考: [[ruby-list:21651]]
+
+((<load|組込み関数>))の低レベルインタフェースです。Rubyスクリプ
+トが格納されたファイルfname をロードします。
+
+引数wrapが、non-zeroなら無名のモジュールを生成して、ロー
+ドした内容をそのモジュールに閉じ込めます。閉じ込めるのは
+
+  * 定数
+  * クラス、モジュール
+  * トップレベルメソッド
+
+です。グローバル変数の変更などは閉じ込められません。
+

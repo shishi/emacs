@@ -1,0 +1,11 @@
+kind=defined
+names=add_extension
+visibility=public
+
+--- add_extension(ext) -> OpenSSL::X509::Extension
+拡張領域に拡張を追加します。
+
+@return 追加した拡張を返します
+@param ext 追加する拡張([[c:OpenSSL::X509::Extension]] オブジェクト)
+@raise OpenSSL::X509::CertificateError 設定に失敗した場合に発生します
+

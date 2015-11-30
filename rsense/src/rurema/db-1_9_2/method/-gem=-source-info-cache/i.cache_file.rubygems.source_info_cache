@@ -1,0 +1,11 @@
+kind=defined
+names=cache_file
+visibility=public 
+
+--- cache_file -> String
+
+使用可能なキャッシュファイル名を返します。
+
+システムキャッシュが使用可能な場合はシステムキャッシュのファイル名を返します。
+そうでない場合はユーザーキャッシュのファイル名を返します。
+

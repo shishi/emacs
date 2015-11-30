@@ -1,0 +1,10 @@
+kind=defined
+names=irb_load
+visibility=public
+
+--- irb_load(path, prev)
+
+ファイル path を Ruby スクリプトとみなし、
+現在の irb インタプリタ上で実行します。
+Ruby の load の irb 版です。
+

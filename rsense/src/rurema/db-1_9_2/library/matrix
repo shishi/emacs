@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=
+classes=Vector,ExceptionForMatrix=ErrDimensionMismatch,ExceptionForMatrix=ErrNotRegular,ExceptionForMatrix=ErrOperationNotDefined,Matrix
+is_sublibrary=false
+
+行列と数ベクトルを扱うためのライブラリです。

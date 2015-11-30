@@ -1,0 +1,10 @@
+kind=defined
+names=NAN
+visibility=public
+
+--- NAN -> Float
+
+NaN(Not a number)
+
+@see [[m:Numeric#nan?]]
+

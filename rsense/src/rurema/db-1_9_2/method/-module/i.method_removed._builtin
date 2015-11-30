@@ -1,0 +1,28 @@
+kind=defined
+names=method_removed
+visibility=private 
+
+--- method_removed(name) -> ()
+
+メソッドが [[m:Module#remove_method]] により削除
+された時にインタプリタがこのメソッドを呼び出します。
+
+特異メソッドの削除に対するフックには
+[[m:Object#singleton_method_removed]]
+を使います。
+
+@param name 削除されたメソッド名が [[c:Symbol]] で渡されます。
+
+  class Foo
+    def Foo.method_removed(name)
+      puts "method \"#{name}\" was removed"
+    end
+
+    def foo
+    end
+    remove_method :foo
+  end
+
+  => method "foo" was removed
+
+

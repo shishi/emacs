@@ -1,0 +1,11 @@
+kind=defined
+names=log2
+visibility=public
+
+--- log2(z) -> Float | Complex
+
+2 を底とする z の対数 (binary logarithm) を返します。
+
+@param z 真数を指定します。
+
+

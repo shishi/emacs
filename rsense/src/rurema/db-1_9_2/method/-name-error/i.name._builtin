@@ -1,0 +1,18 @@
+kind=defined
+names=name
+visibility=public
+
+--- name -> Symbol
+
+この例外オブジェクトを発生させる原因となった
+変数や定数、メソッドの名前をシンボルで返します。
+
+例:
+
+  begin
+    foobar
+  rescue NameError => err
+    p err       # => #<NameError: undefined local variable or method `foobar' for main:Object>
+    p err.name  # => :foobar
+  end
+

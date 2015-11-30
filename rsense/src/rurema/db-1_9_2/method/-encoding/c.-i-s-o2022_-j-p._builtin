@@ -1,0 +1,9 @@
+kind=defined
+names=ISO2022_JP,ISO_2022_JP
+visibility=public
+
+--- ISO_2022_JP
+--- ISO2022_JP
+ISO-2022-JP エンコーディングです。
+[[url:http://tools.ietf.org/html/rfc1468]]
+

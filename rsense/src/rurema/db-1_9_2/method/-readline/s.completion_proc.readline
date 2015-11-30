@@ -1,0 +1,13 @@
+kind=defined
+names=completion_proc
+visibility=public
+
+--- completion_proc -> Proc
+
+ユーザからの入力を補完する時の候補を取得する [[c:Proc]] オブジェクト
+proc を取得します。
+
+@raise SecurityError セーフレベル ($SAFE) が 4 の場合に発生します。
+
+@see [[m:Readline.completion_proc]]
+

@@ -1,0 +1,6 @@
+kind=defined
+names=try_implicit
+visibility=public
+
+--- try_implicit(obj)
+

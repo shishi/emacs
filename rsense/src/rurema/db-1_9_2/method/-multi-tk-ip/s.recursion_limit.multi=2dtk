@@ -1,0 +1,6 @@
+kind=defined
+names=recursion_limit
+visibility=public
+
+--- recursion_limit(slave = '', limit = Tk::None)
+

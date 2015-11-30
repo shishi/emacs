@@ -1,0 +1,3 @@
+echo 'hoge'
+export EDITOR=emacsclient
+echo $EDITOR

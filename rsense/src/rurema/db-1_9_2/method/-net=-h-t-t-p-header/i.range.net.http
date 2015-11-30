@@ -1,0 +1,13 @@
+kind=defined
+names=range
+visibility=public
+
+--- range -> Range|nil
+
+Range: ヘッダの示す範囲を [[c:Range]] オブジェクトで返します。
+
+ヘッダにない場合は nil を返します。
+
+@raise Net::HTTPHeaderSyntaxError Range:ヘッダの中身が規格通り
+                                  でない場合に発生します。
+

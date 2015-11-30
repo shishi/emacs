@@ -1,0 +1,16 @@
+kind=defined
+names=maxgroups,maxgroups=
+visibility=public
+
+--- maxgroups        -> Integer
+--- maxgroups=(num)
+
+設定できる補助グループ ID の数を指定します。
+
+実際に返される補助グループ ID の数よりも少ない値を設定していると、
+[[m:Process.#groups]] で例外が発生します。
+
+@param num 整数を指定します。
+
+@raise NotImplementedError メソッドが現在のプラットフォームで実装されていない場合に発生します。
+

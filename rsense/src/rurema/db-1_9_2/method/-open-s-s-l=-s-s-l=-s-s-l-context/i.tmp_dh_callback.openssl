@@ -1,0 +1,9 @@
+kind=defined
+names=tmp_dh_callback
+visibility=public
+
+--- tmp_dh_callback -> Proc | nil
+一時的 DH 鍵を生成するためのコールバックを返します。
+
+@see [[m:OpenSSL::SSL::SSLContext#tmp_dh_callback=]]
+

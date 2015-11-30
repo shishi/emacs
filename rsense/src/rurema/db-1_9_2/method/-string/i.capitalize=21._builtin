@@ -1,0 +1,26 @@
+kind=defined
+names=capitalize!
+visibility=public
+
+--- capitalize! -> self | nil
+
+文字列先頭の文字を大文字に、残りを小文字に変更します。
+ただし、アルファベット以外の文字は位置に関わらず変更しません。
+
+@return capitalize! は self を変更して返しますが、
+        変更が起こらなかった場合は nil を返します。
+
+例:
+
+  str = "foobar"
+  str.capitalize!
+  p str   # => "Foobar"
+
+  str = "fooBAR"
+  str.capitalize!
+  p str   # => "Foobar"
+
+
+@see [[m:String#capitalize]], [[m:String#upcase]],
+     [[m:String#downcase]], [[m:String#swapcase]]
+

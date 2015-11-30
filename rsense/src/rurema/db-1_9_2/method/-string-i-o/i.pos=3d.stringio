@@ -1,0 +1,17 @@
+kind=defined
+names=pos=
+visibility=public
+
+--- pos=(n)
+
+自身の位置を n に移動します。自身が表す文字列のサイズより大きくても構いません。
+
+@param n 自身の位置を整数で指定します。
+
+@raise Errno::EINVAL n がマイナスである場合に発生します。
+
+  a = StringIO.new("hoge", 'r+')
+  a.pos = 10
+  a << 'Z'
+  a.string                        #=> "hoge\000\000\000\000\000\000Z"
+

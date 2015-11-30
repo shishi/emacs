@@ -1,0 +1,12 @@
+kind=defined
+names=each_key
+visibility=public
+
+--- each_key {|subkey, wtime| ... }
+
+キーのサブキーを列挙します。
+
+subkey はサブキーの名前を表す String です。
+wtime は最終更新時刻を表す FILETIME (64-bit 整数) です。
+(⇒[[m:Win32::Registry.wtime2time]])
+

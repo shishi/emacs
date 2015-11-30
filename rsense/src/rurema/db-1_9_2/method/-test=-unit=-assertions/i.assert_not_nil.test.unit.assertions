@@ -1,0 +1,17 @@
+kind=defined
+names=assert_not_nil
+visibility=public
+
+--- assert_not_nil(object, message = "")    -> ()
+
+object が nil でないならばパスします。
+
+@param object 検証するオブジェクトを指定します。
+
+@param message assert が失敗した時に表示するメッセージを文字列で指定し
+               ます。指定しなかった場合は表示しません。
+
+@raise MiniTest::Assertion assert が失敗した時に発生します。
+
+@see [[m:MiniTest::Assertions#assert_nil]]
+

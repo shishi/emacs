@@ -1,0 +1,8 @@
+kind=defined
+names=getch
+visibility=public
+
+--- getch -> Integer
+
+ウィンドウへの入力から 1 バイト読みこみます。
+

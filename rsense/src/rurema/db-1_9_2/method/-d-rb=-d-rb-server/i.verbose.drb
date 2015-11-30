@@ -1,0 +1,10 @@
+kind=defined
+names=verbose,verbose=
+visibility=public
+
+--- verbose
+--- verbose=
+
+Get whether the server is in verbose mode.
+In verbose mode, failed calls are logged to stdout.
+

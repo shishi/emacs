@@ -1,0 +1,9 @@
+kind=defined
+names=tagfontobj
+visibility=public
+
+--- tagfontobj(tagOrId, key = nil)
+
+Alias for #tagfont_configinfo
+
+

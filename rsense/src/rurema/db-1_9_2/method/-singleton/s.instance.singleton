@@ -1,0 +1,11 @@
+kind=defined
+names=instance
+visibility=public
+
+--- instance -> object
+
+そのクラスの唯一のインスタンスを返します。
+最初に呼ばれたときはそのインスタンスを生成します。
+
+Singleton を include したクラスで定義されますので、
+正確には Singleton モジュールのメソッドではありません。

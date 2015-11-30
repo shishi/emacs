@@ -1,0 +1,10 @@
+kind=defined
+names=summary_width
+visibility=public
+
+--- summary_width         -> Integer
+
+サマリを表示するときの幅を整数で返します。
+
+@return サマリを表示するときの幅を整数で返します。
+

@@ -1,0 +1,12 @@
+kind=defined
+names=read_cache_data
+visibility=public 
+
+--- read_cache_data(file) -> Hash
+
+与えられたファイル名からデータを読み込んでキャッシュデータを返します。
+
+@param file キャッシュのファイル名を指定します。
+
+@return 内部で例外が発生した場合は、空のハッシュを返します。
+

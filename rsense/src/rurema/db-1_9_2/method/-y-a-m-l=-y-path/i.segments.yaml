@@ -1,0 +1,8 @@
+kind=defined
+names=segments,segments=
+visibility=public
+
+--- segments -> String
+--- segments=(val)
+執筆者募集。 クラス変数にsegments に対する参照、代入をおこなうためのメソッドです。
+

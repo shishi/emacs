@@ -1,0 +1,14 @@
+kind=added
+names=to_json
+visibility=public 
+
+--- to_json(*args) -> String
+
+自身を JSON 形式の文字列に変換して返します。
+
+内部的にはハッシュにデータをセットしてから [[m:Hash#to_json]] を呼び出しています。
+
+@param args 引数はそのまま [[m:Hash#to_json]] に渡されます。
+
+@see [[m:Hash#to_json]]
+

@@ -1,0 +1,12 @@
+kind=defined
+names=do_GET,do_POST
+visibility=public
+
+--- do_GET(request, response) -> ()
+--- do_POST(request, response) -> ()
+
+GET, POST リクエストを処理します。
+
+@param request [[c:WEBrick::HTTPRequest]] のインスタンスを指定します。
+
+@param response [[c:WEBrick::HTTPResponse]] のインスタンスを指定します。

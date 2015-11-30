@@ -1,0 +1,15 @@
+kind=added
+names=ca_path=
+visibility=public
+
+--- ca_path=(path)
+信頼する CA 証明書ファイルが存在するディレクトリを設定します。
+
+ファイル名はハッシュ値の文字列にしなければなりません。
+詳しくは [[m:OpenSSL::SSL::SSLContext#ca_path=]] を見てください。
+
+デフォルトは nil (指定なし)です。
+
+@param path ディレクトリ名文字列
+@see [[m:Net::HTTP#ca_path]], [[m:OpenSSL::SSL::SSLContext#ca_path=]]
+

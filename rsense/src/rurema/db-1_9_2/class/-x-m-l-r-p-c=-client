@@ -1,0 +1,39 @@
+superclass=Object
+type=class
+library=xmlrpc.client
+extended=
+included=
+
+Class XMLRPC::Client provides remote procedure calls to a XML-RPC server.
+
+After setting the connection-parameters with [[unknown:XMLRPC::Client.new]] which
+creates a new XMLRPC::Client instance, you can execute a remote procedure
+by sending the [[m:XMLRPC::Client#call]] or [[m:XMLRPC::Client#call2]]
+message to this new instance. The given parameters indicate which method to
+call on the remote-side and of course the parameters for the remote procedure.
+
+    require "xmlrpc/client"
+
+    server = XMLRPC::Client.new("www.ruby-lang.org", "/RPC2", 80)
+    begin
+      param = server.call("michael.add", 4, 5)
+      puts "4 + 5 = #{param}"
+    rescue XMLRPC::FaultException => e
+      puts "Error:"
+      puts e.faultCode
+      puts e.faultString
+    end
+
+or
+
+    require "xmlrpc/client"
+
+    server = XMLRPC::Client.new("www.ruby-lang.org", "/RPC2", 80)
+    ok, param = server.call2("michael.add", 4, 5)
+    if ok then
+      puts "4 + 5 = #{param}"
+    else
+      puts "Error:"
+      puts param.faultCode
+      puts param.faultString
+    end

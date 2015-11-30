@@ -1,0 +1,14 @@
+kind=defined
+names=certificates=
+visibility=public
+
+--- certificates=(certificates)
+署名に付ける証明書を指定します。
+
+PKCS7 オブジェクトに元々つけられていた証明書はクリアされます。
+通常は [[c:OpenSSL::PKCS7.sign]] の引数で添付する証明書を指定した
+ほうがよいでしょう。
+
+@param certificates 証明書([[c:OpenSSL::X509::Certificate]] オブジェクト)の配列
+@raise OpenSSL::PKCS7::PKCS7Error 変更に失敗した場合に発生します。
+

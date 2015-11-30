@@ -1,0 +1,15 @@
+kind=defined
+names=shuffle
+visibility=public
+
+--- shuffle -> Array
+
+配列の要素をシャッフルして，その結果を配列として返します。
+
+srand()が有効です。
+
+例:
+
+   a = [ 1, 2, 3 ]           #=> [1, 2, 3]
+   a.shuffle                 #=> [2, 3, 1]
+

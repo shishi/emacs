@@ -1,0 +1,27 @@
+kind=defined
+names=singleton_method_added
+visibility=private 
+
+--- singleton_method_added(name) -> object
+
+特異メソッドが追加された時にインタプリタから呼び出されます。
+
+通常のメソッドの追加に対するフックには
+[[m:Module#method_added]]を使います。
+
+@param name 追加されたメソッド名が [[c:Symbol]] で渡されます。
+
+    class Foo
+      def singleton_method_added(name)
+        puts "singleton method \"#{name}\" was added"
+      end
+    end
+
+    obj = Foo.new
+    def obj.foo
+    end
+
+    #=> singleton method "foo" was added
+
+@see [[m:Module#method_added]],[[m:Object#singleton_method_removed]],[[m:Object#singleton_method_undefined]]
+

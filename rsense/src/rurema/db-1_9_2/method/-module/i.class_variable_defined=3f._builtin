@@ -1,0 +1,20 @@
+kind=defined
+names=class_variable_defined?
+visibility=public
+
+--- class_variable_defined?(name) -> bool
+
+name で与えられた名前のクラス変数がモジュールに存在する場合 true を
+返します。
+
+@param name [[c:Symbol]] か [[c:String]] を指定します。
+
+   class Fred
+     @@foo = 99
+   end
+   Fred.class_variable_defined?(:@@foo)    #=> true
+   Fred.class_variable_defined?(:@@bar)    #=> false
+   Fred.class_variable_defined?('@@foo')    #=> true
+   Fred.class_variable_defined?('@@bar')    #=> false
+
+

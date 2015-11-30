@@ -1,0 +1,6 @@
+kind=defined
+names=_default_delete_hook
+visibility=public
+
+--- _default_delete_hook(slave)
+

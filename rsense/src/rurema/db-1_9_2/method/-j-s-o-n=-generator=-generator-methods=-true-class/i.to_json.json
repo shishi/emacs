@@ -1,0 +1,10 @@
+kind=defined
+names=to_json
+visibility=public 
+
+--- to_json -> String
+
+自身から生成した JSON 形式の文字列を返します。
+
+"true" という文字列を返します。
+

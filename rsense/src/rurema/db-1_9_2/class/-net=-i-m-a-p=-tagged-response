@@ -1,0 +1,17 @@
+superclass=Struct
+type=class
+library=net.imap
+extended=
+included=
+
+Net::IMAP::TaggedResponse represents tagged responses.
+
+The server completion result response indicates the success or
+failure of the operation.  It is tagged with the same tag as the
+client command which began the operation.
+
+  response_tagged ::= tag SPACE resp_cond_state CRLF
+  
+  tag             ::= 1*<any ATOM_CHAR except "+">
+  
+  resp_cond_state ::= ("OK" / "NO" / "BAD") SPACE resp_text

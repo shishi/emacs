@@ -1,0 +1,14 @@
+kind=defined
+names=asinh
+visibility=public
+
+--- asinh(x) -> Float
+
+x の逆双曲線正弦関数の値を返します。
+
+=== 定義
+
+    asinh(x) = log(x + sqrt(x * x + 1))
+
+@param x 実数
+

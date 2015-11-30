@@ -1,0 +1,26 @@
+superclass=Object
+type=class
+library=openssl
+extended=
+included=Enumerable,OpenSSL=SSL=SocketForwarder,OpenSSL=Buffering
+
+ソケットをラップして SSL での認証と暗号通信を実現するためのクラスです。
+
+
+=== 例
+
+SSL/TLS サーバに接続して write します。
+
+  require 'socket'
+  require 'openssl'
+  include OpenSSL
+  
+  soc = TCPSocket.new('www.example.com', 443)
+  ssl = SSL::SSLSocket.new(soc)
+  ssl.connect
+  ssl.post_connection_check('www.example.com')
+  raise "verification error" if ssl.verify_result != OpenSSL::X509::V_OK
+  ssl.write('hoge')
+  print ssl.peer_cert.to_text
+  ssl.close
+  soc.close

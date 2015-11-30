@@ -1,0 +1,6 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(real_IO, encd = "iso-8859-1")
+

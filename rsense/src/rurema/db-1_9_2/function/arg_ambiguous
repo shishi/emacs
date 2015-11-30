@@ -1,0 +1,11 @@
+name=arg_ambiguous
+private=true
+macro=false
+type=void
+filename=parse.y
+params=(void)
+
+
+メソッド引数の括弧が省略され、最初の引数の一文字目が
+演算子とも解釈できる場合に警告を出します。
+

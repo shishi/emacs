@@ -1,0 +1,7 @@
+superclass=TkWindow
+type=class
+library=tk.label
+extended=
+included=
+
+

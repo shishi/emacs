@@ -1,0 +1,11 @@
+kind=defined
+names=failed
+visibility=public
+
+--- failed    -> String | Array
+
+[[c:Iconv]] が起こす例外が発生した位置から最後までの文字列を返します。
+
+[[m:Iconv.iconv]] でこの例外が起こったときに返される値は、
+変換対象の文字列の配列のうち、変換が失敗した文字列の変換が失敗した位置から最後までの文字列と以降の文字列の配列を返します。
+

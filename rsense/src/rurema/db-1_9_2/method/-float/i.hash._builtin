@@ -1,0 +1,17 @@
+kind=defined
+names=hash
+visibility=public
+
+--- hash -> Fixnum
+ハッシュ値を返します。
+
+例:
+
+  pi1 = 3.14
+  pi2 = 3.14
+  pi3 = 3.1415
+
+  p pi1.hash #=> 335364239
+  p pi2.hash #=> 335364239
+  p pi3.hash #=> 420540030
+

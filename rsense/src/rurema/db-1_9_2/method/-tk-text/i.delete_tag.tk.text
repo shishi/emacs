@@ -1,0 +1,8 @@
+kind=defined
+names=delete_tag,deltag,tag_delete
+visibility=public
+
+--- tag_delete(*tags)
+--- deltag(*tags)
+--- delete_tag(*tags)
+

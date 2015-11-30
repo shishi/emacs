@@ -1,0 +1,9 @@
+kind=defined
+names=exist?
+visibility=public
+
+--- exist? -> bool
+FileTest.exist?(self.to_s) と同じです。
+
+@see [[m:FileTest.#exist?]]
+

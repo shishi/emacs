@@ -1,0 +1,17 @@
+kind=defined
+names=[]
+visibility=public
+
+--- [](name, wtype = nil)
+
+レジストリ値 name に value を書き込みます。
+
+オプション引数 wtype を指定した場合は，その型で書き込みます。
+指定しなかった場合，value のクラスに応じて次の型で書き込みます:
+  * Integer
+    REG_DWORD
+  * String
+    REG_SZ
+  * Array
+    REG_MULTI_SZ
+

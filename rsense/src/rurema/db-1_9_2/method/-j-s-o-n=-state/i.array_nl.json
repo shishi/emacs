@@ -1,0 +1,8 @@
+kind=defined
+names=array_nl
+visibility=public 
+
+--- array_nl -> String
+
+JSON の配列の後に出力する文字列を返します。
+

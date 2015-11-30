@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=_builtin
+extended=
+included=Enumerable
+
+ディレクトリの操作を行うためのクラスです。

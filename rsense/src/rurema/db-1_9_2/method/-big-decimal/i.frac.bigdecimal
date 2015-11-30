@@ -1,0 +1,8 @@
+kind=defined
+names=frac
+visibility=public
+
+--- frac
+
+self の整数部分の切り捨て。
+

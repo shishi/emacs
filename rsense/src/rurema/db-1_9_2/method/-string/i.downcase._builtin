@@ -1,0 +1,16 @@
+kind=defined
+names=downcase
+visibility=public
+
+--- downcase -> String
+
+'A' から 'Z' までの
+アルファベット大文字をすべて小文字に置き換えた新しい文字列を生成し返します。
+アルファベット大文字以外の文字はすべてそのまま保存されます。
+
+このメソッドはマルチバイト文字を認識しません。
+例:
+    p "STRing?".downcase   # => "string?"
+
+@see [[m:String#upcase]], [[m:String#swapcase]], [[m:String#capitalize]]
+

@@ -1,0 +1,30 @@
+kind=defined
+names=to_s
+visibility=public
+
+--- to_s -> String
+
+オブジェクトの文字列表現を返します。
+
+[[m:Kernel.#print]] や [[m:Kernel.#sprintf]] は文字列以外の
+オブジェクトが引数に渡された場合このメソッドを使って文字列に変換し
+ます。
+
+  class Foo
+    def initialize num
+      @num = num
+    end
+  end
+  it = Foo.new(40)
+  
+  puts it #=> #<Foo:0x2b69110>
+  
+  class Foo
+   def to_s
+     "Class:Foo Number:#{@num}"
+   end
+  end
+  
+  puts it #=> Class:Foo Number:40
+
+@see [[m:Object#to_str]],[[m:Kernel.#String]]

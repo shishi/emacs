@@ -1,0 +1,6 @@
+kind=defined
+names=entity
+visibility=public
+
+--- entity(name)
+

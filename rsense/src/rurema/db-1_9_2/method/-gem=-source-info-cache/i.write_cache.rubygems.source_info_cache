@@ -1,0 +1,8 @@
+kind=defined
+names=write_cache
+visibility=public 
+
+--- write_cache -> nil
+
+適切なキャッシュファイルにキャッシュデータを書き込みます。
+

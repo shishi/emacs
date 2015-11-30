@@ -1,0 +1,6 @@
+kind=defined
+names=attlistdecl
+visibility=public
+
+--- attlistdecl(element, pairs, contents)
+

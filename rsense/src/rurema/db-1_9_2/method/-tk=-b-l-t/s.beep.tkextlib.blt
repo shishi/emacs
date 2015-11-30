@@ -1,0 +1,8 @@
+kind=defined
+names=beep
+visibility=public
+
+--- beep(percent = 50)
+
+
+

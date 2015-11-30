@@ -1,0 +1,17 @@
+kind=defined
+names=floor
+visibility=public
+
+--- floor  -> Integer
+
+自身と等しいかより小さな整数のうち最大のものを返します。
+
+例:
+
+     1.0.floor      #=> 1
+     1.2.floor      #=> 1
+     (-1.2).floor   #=> -2
+     (-1.5).floor   #=> -2
+
+@see [[m:Numeric#ceil]], [[m:Numeric#round]], [[m:Float#truncate]]
+

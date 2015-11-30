@@ -1,0 +1,7 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(event_type, event_arg = nil)
+
+

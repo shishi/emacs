@@ -1,0 +1,8 @@
+kind=defined
+names=remainder
+visibility=public
+
+--- remainder(n)
+
+詳細は [[m:Float#remainder]] を参照して下さい。 
+

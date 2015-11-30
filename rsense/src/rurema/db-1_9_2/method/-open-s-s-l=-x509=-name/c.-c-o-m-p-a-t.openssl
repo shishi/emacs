@@ -1,0 +1,8 @@
+kind=defined
+names=COMPAT
+visibility=public
+
+--- COMPAT -> Integer
+[[m:OpenSSL::X509::Name#to_s]] のフラグとして使います。
+
+

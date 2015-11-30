@@ -1,0 +1,10 @@
+kind=defined
+names=hash
+visibility=public
+
+--- hash    -> Integer
+
+始点と終点のハッシュ値と [[m:Range#exclude_end?]] の値からハッシュ値を計算して整数として返します。
+
+  p (1..2).hash    #=> 5646
+  p (1...2).hash   #=> 16782863

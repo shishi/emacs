@@ -1,0 +1,7 @@
+kind=defined
+names=total_time
+visibility=public
+
+--- total_time -> Float
+
+return total time that GC used. (msec)

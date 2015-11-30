@@ -1,0 +1,31 @@
+kind=defined
+names==~
+visibility=public
+
+--- =~(other) -> Integer
+
+正規表現 other とのマッチを行います。
+マッチが成功すればマッチした位置のインデックスを、そうでなければ nil を返します。
+
+other が正規表現でも文字列でもない場合は
+other =~ self を行います。
+
+Ruby 1.6 までは、other が文字列であった場合には
+other を正規表現にコンパイルして self とのマッチを実行していました。
+しかし Ruby 1.8 以降では other に文字列を指定すると
+例外 [[c:TypeError]] が発生します。
+
+このメソッドが実行されると、組み込み変数 [[m:$~]], [[m:$1]], ...
+にマッチに関する情報が設定されます。
+
+@param other        正規表現もしくは =~ メソッドを持つオブジェクト
+@raise TypeError    other が文字列であった
+
+例:
+
+    p "string" =~ /str/   # => 0
+    p "string" =~ /not/   # => nil
+    p "abcfoo" =~ /foo/   # => 3
+
+
+

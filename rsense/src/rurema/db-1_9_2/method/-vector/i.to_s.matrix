@@ -1,0 +1,16 @@
+kind=defined
+names=to_s
+visibility=public
+
+--- to_s -> String
+
+ベクトル([[c:Vector]])から文字列 ([[c:String]]) に変換します。
+
+例:
+
+  require 'matrix'
+
+  v = Vector[2, 3, 5, 7, 9]
+  s = v.to_s
+  p s #=> "Vector[2, 3, 5, 7, 9]"
+

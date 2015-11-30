@@ -1,0 +1,41 @@
+kind=defined
+names=method_missing
+visibility=public
+
+--- method_missing(name, *args) -> object
+
+呼びだされたメソッドが定義されていなかった時、Rubyインタプリタがこのメソッド
+を呼び出します。
+
+呼び出しに失敗したメソッドの名前 ([[c:Symbol]]) が name に
+その時の引数が第二引数以降に渡されます。
+
+デフォルトではこのメソッドは例外 [[c:NameError]] を発生させます。
+
+
+@param name 未定義メソッドの名前（シンボル）です。
+@param args 未定義メソッドに渡された引数です。
+@return ユーザー定義の method_missing メソッドの返り値が未定義メソッドの返り値で
+  あるかのように見えます。
+
+  class Foo
+    def initialize(data)
+      @data = data
+    end
+    def method_missing(name, lang)
+      if name.to_s =~ /\Afind_(\d+)_in\z/
+        if @data[lang]
+          p @data[lang][$1.to_i]
+        else
+          raise "#{lang} unknown"
+        end
+      else
+        super
+      end
+    end
+  end
+  
+  dic = Foo.new({:English => %w(zero one two), :Esperanto => %w(nulo unu du)})
+  dic.find_2_in :Esperanto #=> "du"
+
+

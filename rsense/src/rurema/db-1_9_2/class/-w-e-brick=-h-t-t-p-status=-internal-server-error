@@ -1,0 +1,7 @@
+superclass=WEBrick=HTTPStatus=ServerError
+type=class
+library=webrick.httpstatus
+extended=
+included=
+
+HTTP のステータスコード 500 Internal Server Error を表すクラスです。

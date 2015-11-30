@@ -1,0 +1,5 @@
+#yscrollbar	Tk::Y_Scrollable#yscrollbar
+#yscrollcommand	Tk::Y_Scrollable#yscrollcommand
+#yview	Tk::Y_Scrollable#yview
+#yview_moveto	Tk::Y_Scrollable#yview_moveto
+#yview_scroll	Tk::Y_Scrollable#yview_scroll

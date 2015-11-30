@@ -1,0 +1,11 @@
+kind=defined
+names=z
+visibility=public
+
+--- z -> Integer
+
+マウスのイベントが発生した文字の位置の Z 座標を返します。
+
+@see [[m:Curses.#getmouse]]
+
+

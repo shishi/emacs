@@ -1,0 +1,8 @@
+kind=defined
+names=file_name
+visibility=public
+
+--- file_name -> String
+
+生成される Gem パッケージの名前を返します。
+

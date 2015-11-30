@@ -1,0 +1,7 @@
+methods=
+sublibraries=tkextlib.itcl.setup,tkextlib.itcl.incr_tcl
+requires=tkextlib.itcl.setup,tkextlib.itcl.incr_tcl,tkextlib.setup
+classes=
+is_sublibrary=true
+
+

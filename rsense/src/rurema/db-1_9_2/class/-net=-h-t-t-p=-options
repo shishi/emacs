@@ -1,0 +1,7 @@
+superclass=Net=HTTPRequest
+type=class
+library=net.http
+extended=
+included=
+
+HTTP の OPTIONS リクエストを表すクラスです。

@@ -1,0 +1,8 @@
+kind=defined
+names=nil?
+visibility=public
+
+--- nil? -> bool
+
+常に true を返します。
+

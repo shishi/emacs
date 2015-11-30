@@ -1,0 +1,9 @@
+kind=defined
+names=open_timeout=
+visibility=public
+
+--- open_timeout=(n)
+接続時に待つ最大秒数を設定します。
+
+@see [[m:Net::POP3#open_timeout]]
+

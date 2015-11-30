@@ -1,0 +1,11 @@
+kind=defined
+names=next_update=
+visibility=public
+
+--- next_update=(time)
+CRL の次回更新日時を Time オブジェクトで設定します。
+
+@param time 最終更新日時
+@raise OpenSSL::X509::CRLError 設定に失敗した場合に発生します
+@see [[m:OpenSSL::X509::CRL#next_update]]
+

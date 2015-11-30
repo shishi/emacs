@@ -1,0 +1,7 @@
+superclass=TkObject
+type=class
+library=tk.texttag
+extended=
+included=TkTreatTagFont,TkText=IndexModMethods
+
+

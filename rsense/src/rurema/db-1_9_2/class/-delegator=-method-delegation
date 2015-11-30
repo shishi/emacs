@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=delegate
+extended=
+included=
+
+委譲先のオブジェクト管理のためのメソッドを集めたモジュールです。

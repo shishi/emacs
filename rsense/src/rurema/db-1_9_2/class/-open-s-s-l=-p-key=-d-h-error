@@ -1,0 +1,7 @@
+superclass=OpenSSL=PKey=PKeyError
+type=class
+library=openssl
+extended=
+included=
+
+DH 公開鍵暗号関連のエラーが生じた場合に発生する例外です。

@@ -1,0 +1,8 @@
+name=rb_f_autoload
+private=false
+macro=false
+type=VALUE
+filename=variable.c
+params=(VALUE obj, VALUE klass, VALUE file)
+
+

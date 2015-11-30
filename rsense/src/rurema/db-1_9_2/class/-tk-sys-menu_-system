@@ -1,0 +1,7 @@
+superclass=TkMenu
+type=class
+library=tk.menu
+extended=
+included=TkSystemMenu
+
+

@@ -1,0 +1,9 @@
+kind=defined
+names=rmtree
+visibility=public
+
+--- rmtree -> nil
+FileUtils.rm_r(self.to_s) と同じです。
+
+@see [[m:FileUtils.#rm_r]]
+

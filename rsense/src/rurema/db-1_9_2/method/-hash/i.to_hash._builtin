@@ -1,0 +1,10 @@
+kind=defined
+names=to_hash
+visibility=public
+
+--- to_hash -> self
+
+self を返します。
+
+@see [[m:Object#to_hash]]
+

@@ -1,0 +1,8 @@
+kind=defined
+names=focus,set_focus
+visibility=public
+
+--- focus(force = false)
+--- set_focus(force = false)
+set_focus¤¬ËÜÂÎ
+

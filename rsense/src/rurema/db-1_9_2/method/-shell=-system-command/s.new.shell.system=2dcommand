@@ -1,0 +1,12 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(sh, command, *opts)
+
+@param sh
+
+@param command
+
+@param opts
+

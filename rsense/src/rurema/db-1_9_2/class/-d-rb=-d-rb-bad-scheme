@@ -1,0 +1,7 @@
+superclass=DRb=DRbError
+type=class
+library=drb
+extended=
+included=
+
+Error raised by a dRuby protocol when it doesn't support the scheme specified in a URI. See DRb::DRbProtocol.

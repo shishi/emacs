@@ -1,0 +1,8 @@
+superclass=Gem=Command
+type=class
+library=rubygems.commands.server_command
+extended=
+included=
+
+ローカルにインストールされている Gem パッケージとそのドキュメントを HTTP サーバに
+載せて公開するためのクラスです。

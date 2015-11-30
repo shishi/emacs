@@ -1,0 +1,110 @@
+<% @title = "library #{@entrh.name}" %>
+<div id="main">
+
+<p>
+<%= manual_home_link() %>
+&gt; <a href="<%= library_index_url() %>"><%= _('All Libraries') %></a>
+&gt; library <%=h @entry.name %>
+</p>
+<%
+    headline_init
+%>
+<%= headline(@entry.id == '_builtin' ? '組み込みライブラリ' : "library #{@entry.name}") %>
+
+<%
+    headline_push
+    err_classes = @entry.error_classes
+    classes = (@entry.all_classes - @entry.all_error_classes).sort
+%>
+
+
+<%= headline(_("Abstract")) %>
+<%= compile_rd(@entry.source) %>
+<%
+  [[classes,      _('Classes/Modules')],
+   [err_classes,  _('Exception Classes')]].each do |cs, msg|
+    unless cs.empty?
+%>
+<%= headline(msg) %>
+<table class="entries libraries">
+<%    cs.each do |c| %>
+<tr>
+<td class="signature"><%= class_link(c.name, "#{c.type} #{c.name}") %></td>
+<td class="description"><%= compile_rd(c.synopsis_source) %></td>
+<%    end %>
+</table>
+<%
+    end
+  end
+%>
+<%
+  [[@entry.requires.sort, _('Required Libraries')],
+   [(@entry.sublibraries - @entry.requires).sort, _('Sub-Libraries')]].each do |cs, msg|
+    unless cs.empty?
+%>
+<%= headline(msg) %>
+<table class="entries libraries">
+<%    cs.each do |c| %>
+<tr>
+<td class="signature"><%= library_link(c.name) %></td>
+<td class="description"><%= compile_rd(c.synopsis_source) %></td>
+<%    end %>
+</table>
+<%
+    end
+  end
+%>
+<%
+    ents = @entry.methods.sort
+    unless ents.empty? 
+%>
+<%=   headline(_("Added/Redefined Methods")) %>
+<dl class="rightlist">
+<%    headline_push
+      ents.each do |m|
+%> 
+<span id="<%= BitClust::NameUtils.encodename_url(m.name) %>"></span>
+<%=     compile_method(m, true) %>
+<%
+      end
+      headline_pop
+%>
+</dl>
+<%
+    end
+%>
+
+</div>
+
+
+<div id="leftbox">
+
+<div class="leftlist" id="leftlist-up">
+<h2>Classes</h2>
+<form>
+<input type="text" name="pattern" onkeyup="isearch('index-classes-list', this.value)">
+</form>
+<ul id="index-classes-list">
+<%
+    ((@entry.all_classes - @entry.all_error_classes).sort + @entry.all_error_classes.sort).each do |c| 
+%> 
+<li><%= class_link(c.name, "#{c.name}") %></li>
+<%  end  %>    
+</ul>
+</div>
+
+<div class="leftlist" id="leftlist-bottom">
+<h2>Sublibraries</h2>
+<form>
+<input type="text" name="pattern" onkeyup="isearch('index-libraries-list', this.value)">
+</form>
+<ul id="index-libraries-list">
+<%
+    (@entry.sublibraries.sort + (@entry.requires - @entry.sublibraries).sort).each do |lib| 
+%> 
+<li><%= library_link(lib.name) %></li>
+<%  end  %>    
+</ul>
+</div>
+
+</div>

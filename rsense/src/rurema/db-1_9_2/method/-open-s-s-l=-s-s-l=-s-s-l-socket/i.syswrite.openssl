@@ -1,0 +1,17 @@
+kind=defined
+names=syswrite
+visibility=public
+
+--- syswrite(string) -> Integer
+データをバッファを経由せずに暗号化通信路に書き込みます。
+
+書き込んだバイト数を整数で返します。
+
+基本的にはこのメソッドは使わず、[[c:OpenSSL::Buffering]] の
+メソッドを使ってデータを書き込むべきです。
+
+[[m:IO#syswrite]] と同様です。
+
+@param string 書き込むデータ文字列
+@raise OpenSSL::SSL::SSLError 書き込みに失敗した場合に発生します
+

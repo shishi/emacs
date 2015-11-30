@@ -1,0 +1,10 @@
+kind=defined
+names=callback
+visibility=public
+
+--- callback(args)
+
+[[m:TkVariable#trace]]により登録されたProcオブジェクトを実行します。
+args は、 [TkVariableのインスタンス, "キー", "操作"]
+である配列です。
+

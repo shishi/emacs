@@ -1,0 +1,6 @@
+kind=defined
+names=create_copy
+visibility=public
+
+--- create_copy(font)
+

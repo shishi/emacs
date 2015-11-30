@@ -1,0 +1,6 @@
+kind=defined
+names=get
+visibility=public
+
+--- get(x = Tk::None, y = Tk::None)
+

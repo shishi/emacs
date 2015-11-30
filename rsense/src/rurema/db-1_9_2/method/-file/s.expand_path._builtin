@@ -1,0 +1,21 @@
+kind=defined
+names=expand_path
+visibility=public
+
+--- expand_path(path, default_dir = '.')    -> String
+
+path を絶対パスに展開した文字列を返します。
+path が相対パスであれば default_dir を基準にします。
+
+先頭の ~ はホームディレクトリ(環境変数 HOME が使われます)に、
+~USER はそのユーザのホームディレクトリに展開されます。
+
+  p File.expand_path("..")         #=> "/home/matz/work"
+  p File.expand_path("..", "/tmp") #=> "/"
+  p File.expand_path("~")          #=> "/home/matz"
+  p File.expand_path("~foo")       #=> "/home/foo"
+
+@param path パスを表す文字列を指定します。
+
+@param default_dir path が相対パスであれば default_dir を基準に展開されます。
+

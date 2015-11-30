@@ -1,0 +1,15 @@
+kind=defined
+names=short_name,sn
+visibility=public
+
+--- sn -> String | nil
+--- short_name -> String | nil
+オブジェクト識別子に対応する short name を返します。
+
+例:
+  require "openssl"
+  oid = OpenSSL::ASN1::ObjectId.new("subjectAltName")
+  p oid.sn   #=> "subjectAltName"
+
+@see [[m:OpenSSL::ASN1::ObjectId#ln]]
+

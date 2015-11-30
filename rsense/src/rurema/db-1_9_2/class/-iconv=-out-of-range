@@ -1,0 +1,7 @@
+superclass=RuntimeError
+type=class
+library=iconv
+extended=
+included=Iconv=Failure
+
+Iconv ライブラリの内部エラーです。この例外は起こらないはずです。

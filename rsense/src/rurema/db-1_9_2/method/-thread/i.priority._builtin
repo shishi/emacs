@@ -1,0 +1,13 @@
+kind=defined
+names=priority,priority=
+visibility=public
+
+--- priority    -> Integer
+--- priority=(val)
+
+スレッドの優先度を返します。この値の大きいほど優先度が高くなります。
+メインスレッドのデフォルト値は 0 です。新しく生成されたスレッドは親スレッドの
+priority を引き継ぎます。
+
+@param val スレッドの優先度を指定します。プラットフォームに依存します。
+

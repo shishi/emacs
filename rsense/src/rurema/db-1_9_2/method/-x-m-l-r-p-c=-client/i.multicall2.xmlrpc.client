@@ -1,0 +1,8 @@
+kind=defined
+names=multicall2
+visibility=public
+
+--- multicall2( *methods )
+Same as [[unknown:XMLRPC::Client#multicall]], but returns like [[unknown:XMLRPC::Client#call2]] two parameters
+instead of raising an XMLRPC::FaultException.
+

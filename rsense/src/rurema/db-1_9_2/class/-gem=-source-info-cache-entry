@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rubygems.source_info_cache_entry
+extended=
+included=
+
+[[c:Gem::SourceInfoCache]] が持つエントリを表すためのクラスです。

@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=net.smtp
+extended=
+included=
+
+SMTP 関連の例外に include されるモジュールです。

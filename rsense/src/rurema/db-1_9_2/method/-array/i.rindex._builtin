@@ -1,0 +1,22 @@
+kind=defined
+names=rindex
+visibility=public
+
+--- rindex(val)           -> Integer | nil
+--- rindex {|item| ... }  -> Integer | nil
+
+指定された val と == で等しい最後の要素の位置を返します。
+等しい要素がひとつもなかった時には nil を返します。
+
+ブロックが与えられた時には、ブロックが真を返した最後の要素の位置を返し
+ます。ブロックには、要素が順に渡されます。
+
+@param val オブジェクトを指定します。
+
+    p [1, 0, 0, 1, 0].rindex(1)   #=> 3
+    p [1, 0, 0, 0, 0].rindex(1)   #=> 0
+    p [0, 0, 0, 0, 0].rindex(1)   #=> nil
+    p [0, 1, 0, 1, 0].rindex {|v| v > 0}   #=> 3
+
+@see [[m:Array#index]]
+

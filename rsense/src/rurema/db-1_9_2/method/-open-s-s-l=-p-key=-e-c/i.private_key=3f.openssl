@@ -1,0 +1,7 @@
+kind=defined
+names=private_key?
+visibility=public
+
+--- private_key? -> bool
+EC オブジェクトが秘密鍵を保持していれば真を返します。
+

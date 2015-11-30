@@ -1,0 +1,17 @@
+kind=defined
+names=hash
+visibility=public
+
+--- hash    -> Integer
+
+自身のハッシュ値を整数で返します。ハッシュ値は自身の各要素のハッシュ値から
+計算されます。[[m:Array#eql?]] で比較して等しい配列同士は同じハッシュ値を返します。
+
+  a = ["a", "b", 1]
+  a.hash                #=>  321
+  b = a.dup
+  b.hash                #=>  321
+  
+  ["a", 1, "b"].hash    #=>  491
+  ["a", 1.0, "b"].hash  #=>  466227
+

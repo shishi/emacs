@@ -1,0 +1,10 @@
+kind=defined
+names=stdlog=
+visibility=public
+
+--- stdlog=(io)
+
+ログを出力する先の [[c:IO]] オブジェクトを設定します。
+
+@param io ログを出力する先の [[c:IO]] オブジェクトを設定します。
+

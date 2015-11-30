@@ -1,0 +1,7 @@
+kind=defined
+names=mark_set,set_mark
+visibility=public
+
+--- mark_set(mark, index)
+--- set_mark(mark, index)
+

@@ -1,0 +1,22 @@
+kind=added
+names=CHILD_STATUS
+visibility=public
+
+--- $CHILD_STATUS -> Process::Status | nil
+
+[[m:$?]] ¤ÎÊÌÌ¾
+
+  require "English"
+
+  out = `wget http://www2.ruby-lang.org/ja/LICENSE.txt -O - 2>/dev/null`
+
+  if $CHILD_STATUS.to_i == 0
+    print "wget success\n"
+    out.split(/\n/).each { |line|
+      printf "%s\n", line
+    }
+  else
+    print "wget failed\n"
+  end
+
+

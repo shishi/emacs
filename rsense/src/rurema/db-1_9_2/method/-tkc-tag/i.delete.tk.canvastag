@@ -1,0 +1,8 @@
+kind=defined
+names=delete,destroy,remove
+visibility=public
+
+--- delete
+--- remove
+--- destroy
+

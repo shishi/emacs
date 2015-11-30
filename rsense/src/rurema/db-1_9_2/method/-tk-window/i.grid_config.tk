@@ -1,0 +1,8 @@
+kind=defined
+names=grid_config,grid_configure
+visibility=public
+
+--- grid_config(slot, value = Tk::None)
+--- grid_configure(slot, value = Tk::None)
+
+

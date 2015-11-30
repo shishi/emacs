@@ -1,0 +1,10 @@
+kind=defined
+names=need_zip=
+visibility=public 
+
+--- need_zip=(flag)
+
+zip ファイル (tgz) を作成するかどうかを設定します。
+
+@param flag 真または偽を指定します。
+

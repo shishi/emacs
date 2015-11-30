@@ -1,0 +1,8 @@
+kind=defined
+names=create
+visibility=public
+
+--- create(mailbox)
+
+Sends a CREATE command to create a new mailbox.
+

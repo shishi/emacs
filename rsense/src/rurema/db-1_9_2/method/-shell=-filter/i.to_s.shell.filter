@@ -1,0 +1,14 @@
+kind=defined
+names=to_s
+visibility=public
+
+--- to_s -> String
+実行結果を文字列で返します。
+
+  Shell.def_system_command("wc")
+  sh = Shell.new
+
+  sh.transact {
+    puts (cat("/etc/passwd") | wc("-l")).to_s
+  }
+

@@ -1,0 +1,27 @@
+kind=defined
+names=for_fd,new,open
+visibility=public
+
+--- new(fd, mode = "r")                -> IO
+--- for_fd(fd, mode = "r")             -> IO
+--- open(fd, mode = "r")               -> IO
+--- open(fd, mode = "r") {|io| ... }   -> object
+
+オープン済みのファイルディスクリプタ fd に対する新しい
+IO オブジェクトを生成して返します。
+
+IO.open にブロックが与えられた場合、IO オブジェクトを生成しそれを引数としてブロックを
+実行します。ブロックの終了とともに fd はクローズされます。ブロックの結果を返します。
+IO.new, IO.for_fd はブロックを受け付けません。
+
+@param fd ファイルディスクリプタである整数を指定します。
+
+@param mode [[m:Kernel.#open]] と同じ形式で IO のモードを指定します。[[m:File::Constants::RDONLY]] などの
+            定数(数値)でモードを指定できます。詳細は組み込み関数 [[m:Kernel.#open]] を参照
+            してください。
+            mode は省略可能で、省略時のデフォルトのモードは、
+            [[man:fcntl(2)]] で F_GETFL フラグが利用できる環境では第一引数で指定した fd のモードを引き継ぎ、
+            利用できない環境では "r" になります。
+
+@raise Errno::EXXX IO オブジェクトの生成に失敗した場合に発生します。
+

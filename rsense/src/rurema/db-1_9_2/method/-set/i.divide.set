@@ -1,0 +1,52 @@
+kind=defined
+names=divide
+visibility=public
+
+--- divide {|o| ... } -> Set
+--- divide {|o1, o2| ... } -> Set
+
+元の集合をブロックで定義される関係で分割し、その結果を集合として返します。
+
+ブロックパラメータが 1 個の場合、block.call(o1) == block.call(o2) が真
+ならば、o1 と o2 は同じ分割に属します。
+
+ブロックパラメータが 2 個の場合、block.call(o1, o2) が真ならば、
+o1 と o2 は同じ分割に属します。
+この場合、block.call(o1, o2) == block.call(o2, o1)
+が成立しないブロックを与えると期待通りの結果が得られません。
+
+==== 例1
+  numbers = Set.new(1..6)
+  set = numbers.divide {|i| i % 3}
+  p set
+  #=> #<Set: {#<Set: {5, 2}>, #<Set: {1, 4}>, #<Set: {6, 3}>}>
+
+==== 例2
+  numbers = Set[1, 3, 4, 6, 9, 10, 11]
+  set = numbers.divide {|i, j| (i - j).abs == 1}
+  p set     #=> #<Set: {#<Set: {1}>,
+            #           #<Set: {11, 9, 10}>,
+            #           #<Set: {3, 4}>,
+            #           #<Set: {6}>}>
+
+==== 応用例
+8x2 のチェス盤上で、ナイトが到達できる位置に関する分類を作成します。
+
+  require 'set'
+
+  board = Set.new
+  m, n = 8, 2
+  for i in 1..m
+    for j in 1..n
+      board << [i,j]
+    end
+  end
+  knight_move = Set[1,2]
+  p board.divide { |i,j|
+    Set[(i[0] - j[0]).abs, (i[1] - j[1]).abs] == knight_move
+  }
+  #=> #<Set: {#<Set: {[6, 2], [4, 1], [2, 2], [8, 1]}>,
+  #            #<Set: {[2, 1], [8, 2], [6, 1], [4, 2]}>,
+  #            #<Set: {[1, 1], [3, 2], [5, 1], [7, 2]}>,
+  #            #<Set: {[1, 2], [5, 2], [3, 1], [7, 1]}>}>
+

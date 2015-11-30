@@ -1,0 +1,2 @@
+#add_platform_option	Gem::VersionOption#add_platform_option
+#add_version_option	Gem::VersionOption#add_version_option

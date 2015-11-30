@@ -1,0 +1,15 @@
+kind=defined
+names=_id2ref
+visibility=public
+
+--- _id2ref(id)    -> object
+
+オブジェクト ID([[m:Object#__id__]])からオブジェクトを得ます。
+
+@param id 取得したいオブジェクトの ID を整数で指定します。
+
+@raise RangeError 対応するオブジェクトが存在しなければ発生します。
+
+ a = "hoge"
+ p ObjectSpace._id2ref(a.__id__) #=> "hoge"
+

@@ -1,0 +1,14 @@
+kind=defined
+names=attribute
+visibility=public
+
+--- attribute(name) -> ()
+
+デフォルト値を指定したアクセサを定義するために使用します。
+
+以下の副作用があります。
+
+ * クラス変数 @@attributes, @@default_value を変更します。
+ * 通常の属性書き込みメソッドを定義します。
+ * デフォルト値を持つ属性読み取りメソッドのように振る舞うメソッドを定義します。
+

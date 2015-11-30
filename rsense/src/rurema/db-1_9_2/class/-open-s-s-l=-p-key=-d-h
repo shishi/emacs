@@ -1,0 +1,51 @@
+superclass=OpenSSL=PKey=PKey
+type=class
+library=openssl
+extended=
+included=
+
+Diffie-Hellman 公開鍵暗号クラス
+
+Diffie-Hellman 公開鍵暗号は署名ができないため、
+[[m:OpenSSL::PKey::PKey#sign]] や [[m:OpenSSL::PKey::PKey#verify]] 
+を呼び署名や署名の検証を行おうとすると例外
+[[c:OpenSSL::PKey::PKeyError]] が発生します。
+
+Diffie-Hellman はこのライブラリでは基本的には鍵合意にしか利用できません。
+
+
+=== 例
+
+鍵合意の例。
+  # パラメータの生成
+  dh = OpenSSL::PKey::DH.generate(1024, 5)
+  # パラメータのチェック
+  raise "bad DH parameter" unless dh.params_ok?
+  # 以下、dh1 と dh2 が通信の両端であるとする
+  #  dh1 と dh2 は鍵パラメータ p と g を共有しなければならない
+  #  そのためここでは、単純に2つ複製することにしている
+    
+  # dh1 は dh をそのまま使う
+  dh1 = dh
+  # パラメータを複製して dh2 に渡す
+  dh2 = OpenSSL::PKey::DH.new(dh)
+  
+  # 両端が鍵パラメータから鍵対を生成する
+  dh1.generate_key!
+  dh2.generate_key!
+  # 通信の両端で公開鍵を交換する
+  #  公開鍵の交換は秘密で行われる必要はないが、それが確かに
+  #  相手の公開鍵であることを確認しなければばならない。
+  #  (さもなければ中間車攻撃などによって秘密情報は危険にされされる)
+  #  そのため自分の公開鍵を DSA などで署名してから交換する必要がある
+  #  ここでは例を簡単にするため、そのような処置はしていない
+  # dh1 の秘密鍵と dh2 の公開鍵、共有された鍵パラメータを
+  # 用いて dh1 側で鍵となる文字列を得る
+  key1 = dh1.compute_key(dh2.pub_key)
+  # dh2 の秘密鍵と dh1 の公開鍵、共有された鍵パラメータを
+  # 用いて dh2 側で鍵となる文字列を得る
+  key2 = dh1.compute_key(dh1.pub_key)
+  # key1 と key2 は同じ文字列となり、しかもこれは秘密鍵なしでは
+  # 得られないため、安全に秘密情報(ランダムな鍵文字列)を交換
+  # できたこととなる
+  p(key1 == key2)

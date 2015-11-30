@@ -1,0 +1,6 @@
+kind=defined
+names=TRUST_EMAIL
+visibility=public
+
+--- TRUST_EMAIL -> Integer
+

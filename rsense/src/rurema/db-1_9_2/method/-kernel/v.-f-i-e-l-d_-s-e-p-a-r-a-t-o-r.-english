@@ -1,0 +1,16 @@
+kind=added
+names=FIELD_SEPARATOR,FS
+visibility=public
+
+--- $FS              -> String | nil
+--- $FIELD_SEPARATOR -> String | nil
+
+[[m:$;]] ¤ÎÊÌÌ¾
+
+  require "English"
+
+  str = "hoge,fuga,ugo,bar,foo"
+  p str.split #=> ["hoge,fuga,ugo,bar,foo"]
+  $FIELD_SEPARATOR = ","
+  p str.split #=> ["hoge", "fuga", "ugo", "bar", "foo"]
+

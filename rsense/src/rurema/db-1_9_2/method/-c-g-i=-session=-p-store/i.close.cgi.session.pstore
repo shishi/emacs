@@ -1,0 +1,7 @@
+kind=defined
+names=close
+visibility=public
+
+--- close -> ()
+セッションの状態をファイルに保存してファイルを閉じます。
+

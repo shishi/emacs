@@ -1,0 +1,22 @@
+kind=defined
+names=build
+visibility=public
+
+--- build(ary)     -> URI::MailTo 
+--- build(hash)    -> URI::MailTo 
+
+引数で与えられた URI 構成要素から URI::MailTo オブジェクトを生成します。
+引数の正当性をチェックします。
+
+@param ary 構成要素を
+      [to, headers]
+という文字列の配列で与えます。headers は、以下のような文字列か配列で
+与えます。
+  "subject=subscribe&cc=addr"
+  
+  [["subject", "subscribe"], ["cc", "addr"]]
+
+@param hash 構成要素をハッシュで与えます。ハッシュのキーは :to, :headers です。ハッシュの値は ary と同様です。
+
+@raise URI::InvalidComponentError 不正な引数に対して発生します。
+

@@ -1,0 +1,10 @@
+name=MEMMOVE
+private=false
+macro=true
+type=void
+filename=ruby.h
+params=(p1, p2, type, n)
+
+
+type 型のメモリ領域 p2 のうち先頭の n 個を p1 に移動する。
+

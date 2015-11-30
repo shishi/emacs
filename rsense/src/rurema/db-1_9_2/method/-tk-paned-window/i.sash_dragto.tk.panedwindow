@@ -1,0 +1,6 @@
+kind=defined
+names=sash_dragto
+visibility=public
+
+--- sash_dragto(index, x, y)
+

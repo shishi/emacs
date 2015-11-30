@@ -1,0 +1,27 @@
+kind=defined
+names=put2,request_put
+visibility=public
+
+--- request_put(path, data, initheader = nil) -> Net::HTTPResponse
+--- request_put(path, data, initheader = nil) {|response| .... } -> Net::HTTPResponse
+--- put2(path, data, initheader = nil) -> Net::HTTPResponse
+--- put2(path, data, initheader = nil) {|response| .... } -> Net::HTTPResponse
+サーバ上の path にあるエンティティに対し文字列 data を
+PUT で送ります。
+
+返り値は [[c:Net::HTTPResponse]] のインスタンスです。
+
+ブロックとともに呼び出されたときは、
+ボディをソケットから読み出す前に、
+接続を維持した状態で [[c:Net::HTTPResponse]]
+オブジェクトをブロックに渡します。
+
+@param path 取得するエンティティのパスを文字列で指定します。
+@param data 送るデータを文字列で指定します。
+@param initheader リクエストの HTTP ヘッダをハッシュで指定します。
+
+put2 は時代遅れなので使わないでください。
+
+@see [[m:Net::HTTP#put]]
+
+

@@ -1,0 +1,7 @@
+superclass=Gem=Command
+type=class
+library=rubygems.commands.cert_command
+extended=
+included=
+
+Gem パッケージの証明書や書名の設定を管理するためのクラスです。

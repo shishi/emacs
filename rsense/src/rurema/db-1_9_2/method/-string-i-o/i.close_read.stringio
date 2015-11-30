@@ -1,0 +1,10 @@
+kind=defined
+names=close_read
+visibility=public
+
+--- close_read    -> nil
+
+自身に対する読み取りを禁止します。
+
+@raise IOError 自身がすでに読みとり不可だった場合に発生します。
+

@@ -1,0 +1,9 @@
+superclass=Object
+type=class
+library=rubygems.source_index
+extended=Gem=UserInteraction
+included=Enumerable,Gem=UserInteraction
+
+個々のソースから取得した全ての有効な Gem パッケージをインデックス化するためのクラスです。
+
+Gem パッケージのフルネームと それぞれの [[c:Gem::Specification]] オブジェクトを対応付けます。

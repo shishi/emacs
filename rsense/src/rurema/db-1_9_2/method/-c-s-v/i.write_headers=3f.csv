@@ -1,0 +1,12 @@
+kind=defined
+names=write_headers?
+visibility=public
+
+--- write_headers? -> bool
+
+ヘッダを出力先に書き込む場合は真を返します。
+そうでない場合は偽を返します。
+
+@see [[m:CSV.new]]
+
+

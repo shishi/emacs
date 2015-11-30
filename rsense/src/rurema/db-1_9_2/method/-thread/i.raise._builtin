@@ -1,0 +1,28 @@
+kind=defined
+names=raise
+visibility=public
+
+--- raise(error_type, message, traceback)     -> ()
+
+自身が表すスレッドで強制的に例外を発生させます。
+
+@param error_type [[m:Kernel.#raise]] を参照してください。
+
+@param message [[m:Kernel.#raise]] を参照してください。
+
+@param traceback [[m:Kernel.#raise]] を参照してください。
+
+  Thread.new {
+    sleep 1
+    Thread.main.raise "foobar"
+  }
+
+  begin
+    sleep
+  rescue
+    p $!, $@
+  end
+
+  => #<RuntimeError: foobar>
+     ["-:3"]
+

@@ -1,0 +1,11 @@
+kind=defined
+names=A_LEFT
+visibility=public
+
+--- A_LEFT -> Integer
+
+
+???を表す属性マスク用の定数です。
+
+@see [[man:curs_attr(3x)]]
+

@@ -1,0 +1,10 @@
+kind=defined
+names=precs
+visibility=public
+
+--- precs
+a の有効数字 (n) と最大有効数字 (m) の配列を返します。 
+
+    n, m = a.precs
+
+

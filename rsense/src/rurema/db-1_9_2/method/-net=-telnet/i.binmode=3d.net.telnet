@@ -1,0 +1,11 @@
+kind=defined
+names=binmode=
+visibility=public
+
+--- binmode=(mode)
+"Binmode" を設定します。これは改行文字の変換をするかどうかを意味します。
+
+@param mode 設定する値をtrue/falseで与えます
+@see [[m:Net::Telnet.new]], [[m:Net::Telnet#binmode]]
+
+

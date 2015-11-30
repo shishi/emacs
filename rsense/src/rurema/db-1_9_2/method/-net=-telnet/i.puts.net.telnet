@@ -1,0 +1,12 @@
+kind=defined
+names=puts
+visibility=public
+
+--- puts(string) -> ()
+改行を付加した文字列をホストに送ります。
+
+改行の付加以外は [[m:Net::Telnet#print]] と同じです。
+
+@param string ホストに送る文字列
+@see [[m:Net::Telnet#write]], [[m:Net::Telnet#print]]
+

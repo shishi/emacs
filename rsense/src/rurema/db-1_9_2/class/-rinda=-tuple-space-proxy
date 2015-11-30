@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rinda.rinda
+extended=
+included=
+
+ TupleSpaceProxy allows a remote Tuplespace to appear as local.

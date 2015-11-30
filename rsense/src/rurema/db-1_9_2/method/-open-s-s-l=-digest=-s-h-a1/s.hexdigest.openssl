@@ -1,0 +1,9 @@
+kind=defined
+names=hexdigest
+visibility=public
+
+--- hexdigest(data) -> String
+data のダイジェストを SHA1 で計算し、16進文字列で返します。
+
+@param data ダイジェストを計算する文字列
+

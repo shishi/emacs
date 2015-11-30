@@ -1,0 +1,10 @@
+kind=defined
+names=V_ERR_AKID_SKID_MISMATCH
+visibility=public
+
+--- V_ERR_AKID_SKID_MISMATCH -> Integer
+証明書の authorityKeyIdentifier 拡張領域の内容が
+issuer(発行者)の証明書の subjectKeyIdentifier の内容と
+食い違っていることを意味します。
+
+

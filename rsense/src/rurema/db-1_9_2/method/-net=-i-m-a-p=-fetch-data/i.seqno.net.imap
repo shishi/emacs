@@ -1,0 +1,9 @@
+kind=defined
+names=seqno
+visibility=public
+
+--- seqno
+
+Returns the message sequence number.
+(Note: not the unique identifier, even for the UID command response.)
+

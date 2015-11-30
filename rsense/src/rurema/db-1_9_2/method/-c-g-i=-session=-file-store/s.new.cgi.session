@@ -1,0 +1,31 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(session, option = {}) -> CGI::Session::FileStore
+
+自身を初期化します。
+
+[[c:CGI::Session]] クラス内部で使用します。
+ユーザが明示的に呼び出す必要はありません。
+
+@param session [[c:CGI::Session]] のインスタンスを指定します。
+
+@param option ハッシュを指定します。
+
+以下の文字列をキーとして指定することができます。
+
+: tmpdir
+    セッションデータを作成するディレクトリの名前を指定します。
+    デフォルトは [[m:Dir.tmpdir]] です。
+
+: prefix
+    セッションデータのファイル名に与えるプレフィックスを指定します。
+    デフォルトは空文字列です。
+
+: suffix
+    セッションデータのファイル名に与えるサフィックスを指定します。
+    デフォルトは空文字列です。
+
+@raise CGI::Session::NoSession セッションが初期化されていない場合に発生します。
+

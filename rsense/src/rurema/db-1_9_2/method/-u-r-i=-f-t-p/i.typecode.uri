@@ -1,0 +1,9 @@
+kind=defined
+names=typecode
+visibility=public
+
+--- typecode      -> String | nil
+
+ファイル転送のタイプを文字列で返します。"a" はテキスト、"i" はバイナリ、"d" はディレクトリを表します。
+設定されていない場合は nil を返します。
+

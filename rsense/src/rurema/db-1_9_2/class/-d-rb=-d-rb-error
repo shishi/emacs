@@ -1,0 +1,7 @@
+superclass=RuntimeError
+type=class
+library=drb
+extended=
+included=
+
+

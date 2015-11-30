@@ -1,0 +1,9 @@
+kind=defined
+names=size
+visibility=public
+
+--- size -> Integer
+FileTest.size(self.to_s) と同じです。
+
+@see [[m:FileTest.#size]]
+

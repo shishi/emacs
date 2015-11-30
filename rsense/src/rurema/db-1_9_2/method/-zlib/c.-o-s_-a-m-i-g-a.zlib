@@ -1,0 +1,8 @@
+kind=defined
+names=OS_AMIGA
+visibility=public
+
+--- OS_AMIGA -> Fixnum
+
+OS の種類を表す定数です。
+

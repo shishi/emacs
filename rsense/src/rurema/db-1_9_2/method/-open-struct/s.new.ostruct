@@ -1,0 +1,18 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(hash = nil) -> OpenStruct
+
+OpenStruct オブジェクトを生成します。
+
+ハッシュが与えられたとき、それぞれのキーを生成したオブジェクトの要素にし、値をセットします。
+
+@param hash 設定する要素とその値を指定します。
+       hash には [[c:Hash]] クラスのインスタンス、または配列の配列を用いることができます。
+@raise NoMethodError hash のキーが to_sym メソッドを持たないときに発生します。
+
+  require 'ostruct'
+  some1 = OpenStruct.new({:a =>"a",:b =>"b"}) # => #<OpenStruct b="b", a="a">
+  some2 = OpenStruct.new([[:a,"a"],[:b,"b"]]) # => #<OpenStruct b="b", a="a">
+

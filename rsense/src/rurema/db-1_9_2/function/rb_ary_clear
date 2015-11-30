@@ -1,0 +1,10 @@
+name=rb_ary_clear
+private=false
+macro=false
+type=VALUE
+filename=array.c
+params=(VALUE ary)
+
+
+ary.clear
+

@@ -1,0 +1,7 @@
+kind=defined
+names=set_list_element_type
+visibility=public
+
+--- set_list_element_type(idxs, val)
+
+

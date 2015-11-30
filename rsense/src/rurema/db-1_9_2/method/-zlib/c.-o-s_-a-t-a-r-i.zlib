@@ -1,0 +1,8 @@
+kind=defined
+names=OS_ATARI
+visibility=public
+
+--- OS_ATARI -> Fixnum
+
+OS の種類を表す定数です。
+

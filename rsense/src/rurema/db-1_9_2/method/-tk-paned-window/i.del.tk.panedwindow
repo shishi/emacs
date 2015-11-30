@@ -1,0 +1,9 @@
+kind=defined
+names=del,delete,forget,remove
+visibility=public
+
+--- forget(win, *wins)
+--- del(win, *wins)
+--- delete(win, *wins)
+--- remove(win, *wins)
+

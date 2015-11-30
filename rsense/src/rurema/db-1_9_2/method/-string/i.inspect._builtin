@@ -1,0 +1,25 @@
+kind=defined
+names=inspect
+visibility=public
+
+--- inspect -> String
+
+文字列オブジェクトの内容を、出力したときに人間が読みやすいような適当な形式に変換します。
+変換された文字列は印字可能な文字のみによって構成されます
+
+現在の実装では、Ruby のリテラル形式を使って、
+文字列中の不可視文字をエスケープシーケンスに変換します。
+
+
+このメソッドは主にデバッグのために用意されています。
+永続化などの目的で文字列をダンプしたいときは、
+[[m:String#dump]] を使うべきです。
+
+例：
+
+  # p ではないことに注意
+  puts "string".inspect    # => "string"
+  puts "\t\r\n".inspect    # => "\t\r\n"
+
+@see [[m:String#dump]]
+

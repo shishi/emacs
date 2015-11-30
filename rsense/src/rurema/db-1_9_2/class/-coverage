@@ -1,0 +1,9 @@
+superclass=Object
+type=class
+library=coverage
+extended=
+included=
+
+カバレッジを測定する機能を提供するクラスです。
+
+実験的な機能のため、APIは将来変更になる可能性があります。

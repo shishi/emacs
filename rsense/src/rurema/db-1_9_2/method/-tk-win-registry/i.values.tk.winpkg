@@ -1,0 +1,8 @@
+kind=defined
+names=values
+visibility=public
+
+--- values(keynam, pattern = nil)
+
+
+

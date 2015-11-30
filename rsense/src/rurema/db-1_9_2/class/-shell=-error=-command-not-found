@@ -1,0 +1,7 @@
+superclass=StandardError
+type=class
+library=shell.error
+extended=
+included=
+
+コマンドが見つからないときに発生する例外です。

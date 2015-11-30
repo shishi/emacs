@@ -1,0 +1,14 @@
+kind=defined
+names=extensions=
+visibility=public
+
+--- extensions=(extensions)
+拡張領域を extensions で更新します。
+
+extensions には [[c:OpenSSL::X509::Extension]] の配列を渡します。
+
+更新前の拡張領域のデータは破棄されます。
+
+@param extensions 拡張領域のデータ
+@raise OpenSSL::X509::RevokedError 更新に失敗した場合に発生します
+

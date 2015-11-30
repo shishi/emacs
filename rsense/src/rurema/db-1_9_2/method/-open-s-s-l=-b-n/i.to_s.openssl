@@ -1,0 +1,16 @@
+kind=defined
+names=to_s
+visibility=public
+
+--- to_s(base=10) -> String
+自身を表す文字列を返します。
+
+base で基数を指定します。10,16を指定できます。
+2を指定すると自身の絶対値を big-endian の符号無し整数のバイナリ列に
+変換します。
+0を指定した場合には MPI 形式の文字列(バイト列)に変換します。
+
+@param base 文字列変換の基数
+@raise OpenSSL::BNError 変換に失敗した場合に発生します
+@see [[m:OpenSSL::BN.new]]
+

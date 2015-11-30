@@ -1,0 +1,11 @@
+kind=defined
+names=add_crl
+visibility=public
+
+--- add_crl(crl) -> self
+信頼する CRL(証明書失効リスト)
+を証明書ストアに加えます。
+
+@param crl 追加する CRL の [[c:OpenSSL::X509::CRL]] オブジェクト
+@raise OpenSSL::X509::StoreError 追加に失敗した場合に発生します
+

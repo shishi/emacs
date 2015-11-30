@@ -1,0 +1,44 @@
+kind=defined
+names=params
+visibility=public
+
+--- params(level, strategy) -> nil
+
+圧縮ストリームの設定を変更します。詳しくは zlib.h を
+参照して下さい。設定の変更に伴うストリームからの出力は
+出力バッファに保存されます。
+
+@param level 0-9の範囲の整数, または [[m:Zlib::DEFAULT_COMPRESSION]] を指定します。
+             詳細はzlib.hを参照してください。
+@param strategy [[m:Zlib::FILTERED]], [[m:Zlib::HUFFMAN_ONLY]],
+                [[m:Zlib::DEFAULT_STRATEGY]] など指定します。詳細は zlib.h を参照してください。　
+
+  require 'zlib'
+
+  def case1
+    dez = Zlib::Deflate.new
+    comp_str = dez.deflate('hoge'*5);
+    comp_str << dez.deflate('0'*80)
+    comp_str << dez.finish
+    p comp_str
+    p Zlib::Inflate.inflate(comp_str)
+  end
+
+  def case2
+    dez = Zlib::Deflate.new
+    comp_str = dez.deflate('hoge'*5);
+    dez.params(Zlib::BEST_COMPRESSION, Zlib::HUFFMAN_ONLY)
+    comp_str << dez.deflate('0'*80)
+    comp_str << dez.finish
+    p comp_str
+    p Zlib::Inflate.inflate(comp_str)
+  end
+
+  case1
+  case2
+  #=> "x\234\313\310OO\315@\303\006T\006\000D\367\0270"
+  #=> "hogehogehogehogehoge00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  #=> "x\234\005\3011\r\000\000\f\003 K\230j\326\257\376\277Aw\351.\335\245\273t\027\000\000\000\000\000\000\000\000\000\200\aD\367\0270"
+  #=> "hogehogehogehogehoge00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+
+

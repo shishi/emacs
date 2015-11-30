@@ -1,0 +1,23 @@
+kind=defined
+names=minmax_by
+visibility=public
+
+--- minmax_by                -> Enumerator
+--- minmax_by {|obj| ... }   -> [object, object]
+
+Enumerable オブジェクトの各要素をブロックに渡して評価し、その結果を <=> で比較して
+最小の要素と最大の要素を要素とするサイズ 2 の配列を返します。
+
+該当する要素が複数存在する場合、どの要素を返すかは不定です。
+
+[[m:Enumerable#minmax]] と [[m:Enumerable#minmax_by]] の
+違いは sort と sort_by の違いと同じです。
+詳細は [[m:Enumerable#sort_by]] を参照してください。
+
+   a = %w(albatross dog horse)
+   a.minmax_by {|x| x.length }   #=> ["dog", "albatross"]
+
+   [].minmax_by{} # => [nil, nil]
+
+@see [[m:Enumerable#sort_by]]
+

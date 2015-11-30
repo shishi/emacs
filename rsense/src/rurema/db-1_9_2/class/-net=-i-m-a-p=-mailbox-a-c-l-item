@@ -1,0 +1,14 @@
+superclass=Struct
+type=class
+library=net.imap
+extended=
+included=
+
+Net::IMAP::MailboxACLItem represents response from GETACL.
+
+  acl_data        ::= "ACL" SPACE mailbox *(SPACE identifier SPACE
+                       rights)
+  
+  identifier      ::= astring
+  
+  rights          ::= astring

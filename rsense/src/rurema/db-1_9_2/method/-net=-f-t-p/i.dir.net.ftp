@@ -1,0 +1,23 @@
+kind=defined
+names=dir,list,ls
+visibility=public
+
+--- list(*args) -> [String]
+--- list(*args) {|line| ... } -> nil
+--- ls(*args) -> [String] 
+--- ls(*args) {|line| ... } -> nil
+--- dir(*args) -> [String]
+--- dir(*args) {|line| ...} -> nil
+
+LIST コマンドを送信し、結果を返します。
+
+ブロックとともに呼び出された場合は各行に対してブロックを
+実行します。ブロックなしの場合には文字列の配列で結果を返します。
+
+@param args LIST の引数を文字列で渡します。複数渡すことができます。
+
+@raise Net::FTPTempError 応答コードが 4yz のときに発生します。
+@raise Net::FTPPermError 応答コードが 5yz のときに発生します。
+@raise Net::FTPProtoError 応答コードが RFC 的に正しくない場合に発生します。
+@raise Net::FTPReplyError 応答コードが上の場合以外で正しくない場合(1xy, 3xyが来るべきでないときに来た場合など)に発生します。
+

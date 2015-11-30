@@ -1,0 +1,14 @@
+kind=defined
+names=body_stream,body_stream=
+visibility=public
+
+--- body_stream -> object
+--- body_stream=(f)
+
+サーバに送るリクエストのエンティティボディを
+[[c:IO]] オブジェクトなどのストリームで設定します。
+f は read(size) メソッドが定義されている必要があります。
+
+@param f エンティティボディのデータを得るストリームオブジェクトを与えます。
+
+

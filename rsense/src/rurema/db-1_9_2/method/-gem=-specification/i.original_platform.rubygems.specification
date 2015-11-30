@@ -1,0 +1,8 @@
+kind=defined
+names=original_platform
+visibility=public
+
+--- original_platform -> String
+
+この属性は古いバージョンの Gem パッケージをアンインストールするために残されています。
+

@@ -1,0 +1,6 @@
+kind=defined
+names=measure_displayof
+visibility=public
+
+--- measure_displayof(win, text)
+

@@ -1,0 +1,7 @@
+superclass=OpenSSL=ASN1=Primitive
+type=class
+library=openssl
+extended=
+included=
+
+ASN.1 の GeneralString 型(Universal タグのタグ番号27)を表すクラスです。

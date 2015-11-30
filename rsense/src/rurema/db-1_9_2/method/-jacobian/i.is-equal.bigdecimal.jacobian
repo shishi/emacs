@@ -1,0 +1,7 @@
+kind=defined
+names=isEqual
+visibility=public
+
+--- isEqual(a, b, zero = 0.0, e = 1.0e-8)
+
+

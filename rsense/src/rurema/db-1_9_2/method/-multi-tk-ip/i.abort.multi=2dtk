@@ -1,0 +1,6 @@
+kind=defined
+names=abort
+visibility=public
+
+--- abort(msg = nil)
+

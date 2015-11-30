@@ -1,0 +1,18 @@
+kind=defined
+names=<<,enq,push
+visibility=public
+
+--- push(obj) -> ()
+--- <<(obj)   -> ()
+--- enq(obj)  -> ()
+
+キューに与えられたオブジェクトを追加します。
+
+キューのサイズが [[m:SizedQueue#max]] に達している場合は、
+キューのサイズが [[m:SizedQueue#max]] より小さくなるまで他のスレッドに実行を譲ります。
+その後、キューに与えられたオブジェクトを追加します。
+
+@param obj キューに追加したいオブジェクトを指定します。
+
+@see  [[m:Queue#push]]
+

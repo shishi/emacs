@@ -1,0 +1,6 @@
+kind=defined
+names=add_attribute
+visibility=public
+
+--- add_attribute(key, value = nil)
+

@@ -1,0 +1,37 @@
+methods=
+sublibraries=
+requires=rubygems.requirement,rubygems.remote_fetcher,rubygems.specification,rubygems.spec_fetcher,rubygems.local_remote_options,rubygems.exceptions,rubygems.builder,rubygems.commands.query_command,rubygems.source_index,rubygems.source_info_cache_entry,rubygems.version_option,rubygems.digest.sha2,rubygems.defaults.operating_system,rubygems.gem_path_searcher,rubygems.platform,rubygems.defaults,rubygems.dependency,rubygems.source_info_cache,rubygems,rubygems.user_interaction,rubygems.command,rubygems.version
+classes=Gem=Commands=SearchCommand
+is_sublibrary=true
+
+指定された文字列を含む Gem パッケージを全て表示するためのライブラリです。
+
+  Usage: gem search [STRING] [options]
+    Options:
+      -i, --[no-]installed             Check for installed gem
+      -v, --version VERSION            Specify version of gem to search
+      -d, --[no-]details               Display detailed information of gem(s)
+          --[no-]versions              Display only gem names
+      -a, --all                        Display all gem versions
+    Local/Remote Options:
+      -l, --local                      操作をローカルに限定します
+      -r, --remote                     操作をリモートに限定します
+      -b, --both                       ローカルとリモートの両方の操作を許可します
+      -B, --bulk-threshold COUNT       Threshold for switching to bulk
+                                       synchronization (default 1000)
+          --source URL                 Gem パッケージのリモートリポジトリの URL を指定します
+          --[no-]http-proxy [URL]      リモートの操作に HTTP プロクシを使用します
+      -u, --[no-]update-sources        ローカルソースキャッシュを更新します
+    Common Options:
+      -h, --help                       このコマンドのヘルプを表示します
+      -V, --[no-]verbose               表示を詳細にします
+      -q, --quiet                      静かに実行します
+          --config-file FILE           指定された設定ファイルを使用します
+          --backtrace                  バックトレースを表示します
+          --debug                      Ruby 自体のデバッグオプションを有効にします
+    Arguments:
+      STRING        検索したい Gem パッケージ名の一部を指定します
+    Summary:
+      STRING を含む全ての Gem パッケージ名を表示します
+    Defaults:
+      --local --no-details

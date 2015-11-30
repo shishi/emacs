@@ -1,0 +1,30 @@
+kind=defined
+names=push
+visibility=public
+
+--- push(*string) -> self
+
+ヒストリの最後に string で指定した文字列を追加します。複数の string を指定できます。
+self を返します。
+
+@param string 文字列を指定します。複数指定できます。
+
+@raise SecurityError セーフレベル ($SAFE) が 4 の場合に発生します。
+
+例: "foo"を追加する。
+
+  require "readline"
+
+  Readline::HISTORY.push("foo")
+  p Readline::HISTORY[-1] #=> "foo"
+
+例: "foo"、"bar"を追加する。
+
+  require "readline"
+
+  Readline::HISTORY.push("foo", "bar")
+  p Readline::HISTORY[-1] #=> "bar"
+  p Readline::HISTORY[-2] #=> "foo"
+
+@see [[m:Readline::HISTORY.<<]]
+

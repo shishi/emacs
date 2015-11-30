@@ -1,0 +1,8 @@
+kind=defined
+names=test_file
+visibility=public
+
+--- test_file -> String
+
+[[m:Gem::Specification#test_files]] の単数バージョンです。
+

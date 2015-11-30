@@ -1,0 +1,40 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(ole, event = nil) -> WIN32OLE_EVENT
+
+OLEオートメーションサーバのイベント受信機構をオブジェクト化して返します。
+
+newメソッドは、OLEオートメーションサーバがイベント通知に利用するインター
+フェイスを取得し、オブジェクトとして返します。
+
+@param ole イベントの通知元のWIN32OLEオブジェクトを指定します。
+
+@param event イベントのインターフェイスを示すインターフェイス名または
+             IIDを文字列で指定します。省略時にはoleパラメータで指定した
+             オブジェクトの既定のイベントインターフェイスを利用します。
+
+@return 指定したオブジェクトのイベントを管理するWIN32OLE_EVENTオブジェクト。
+
+@raise RuntimeError eventパラメータで指定したIIDが見つかりません。また
+                    はオブジェクトがイベントをサポートしていません。
+
+以下の3例はいずれも同等です。
+
+デフォルトイベントインターフェイスを指定した例
+
+   ie = WIN32OLE.new('InternetExplorer.Application')
+   ev = WIN32OLE_EVENT.new(ie)
+
+インターフェイス名を指定した例
+
+   ie = WIN32OLE.new('InternetExplorer.Application')
+   ev = WIN32OLE_EVENT.new(ie, 'DWebBrowserEvents2')
+
+IIDを指定した例
+
+   ie = WIN32OLE.new('InternetExplorer.Application')
+   ev = WIN32OLE_EVENT.new(ie, '{34A715A0-6587-11D0-924A-0020AFC7AC4D}')
+
+

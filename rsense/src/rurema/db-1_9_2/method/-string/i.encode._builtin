@@ -1,0 +1,52 @@
+kind=defined
+names=encode
+visibility=public
+
+--- encode(encoding, options = nil) -> String
+--- encode(encoding, from_encoding, options = nil) -> String
+--- encode(options = nil) -> String
+
+self を指定したエンコーディングに変換した文字列を作成して返します。引数
+を2つ与えた場合、第二引数は変換元のエンコーディングを意味します。さもな
+くば self のエンコーディングが使われます。
+無引数の場合は、[[m:Encoding.default_internal]] が nil でなければそれが変換先のエンコーディングになり、かつ :invalid => replace と :undef => replace が指定されたと見なされ、nil ならば変換は行われません。
+
+@param encoding       変換先のエンコーディングを表す文字列か [[c:Encoding]] オブジェクトを指定します。
+@param from_encoding  変換元のエンコーディングを表す文字列か [[c:Encoding]] オブジェクトを指定します。
+@param option         変換オプションをハッシュで与えます。
+@return               変換された文字列
+
+変換オプション
+
+: :invalid => nil
+  変換元のエンコーディングにおいて不正なバイトがあった場合に、例外 [[c:Encoding::InvalidByteSequenceError]] を投げます。(デフォルト)
+: :invalid => :replace
+  変換元のエンコーディングにおいて不正なバイトがあった場合に、不正なバイトを置換文字で置き換えます。
+: :undef => nil
+  変換先のエンコーディングにおいて文字が定義されていない場合に、例外 [[c:Encoding::UndefinedConversionError]] を投げます。(デフォルト)
+: :undef => :replace
+  変換先のエンコーディングにおいて文字が定義されていない場合に、未定義文字を置換文字で置き換えます。
+: :replace => string
+  前述の :invalid => :replace や :undef => :replace で用いられる置換文字を指定します。デフォルトは Unicode 系のエンコーディングならば U+FFFD、それ以外では "?" です。
+: :xml => :text
+  文字列を XML の CharData として適するように処理します。具体的には、'&'、'<'、'>'、をそれぞれ '&amp;'、'&lt;'、'&gt;' に変換し、未定義文字を文字参照 (大文字16進数) に置き換えます。この出力は HTML の #PCDATA として利用することもできます。
+: :xml => :attr
+  文字列を XML の AttValue として適するように処理します。具体的には、'&'、'<'、'>'、'"'、をそれぞれ '&amp;'、'&lt;'、'&gt;'、'&quot;' に変換し、未定義文字を文字参照 (大文字16進数) に置き換えます。この出力は HTML の属性値として利用することもできます。
+: :universal_newline => true
+  CR 改行および CRLF 改行を LF 改行に置き換えます。
+: :cr_newline => true
+  LF 改行を CR 改行に置き換えます。(CRLF は CRCR になります)
+: :crlf_newline => true
+  LF 改行を CRLF 改行に置き換えます。(CRLF は CRCRLF になります)
+
+これ以上細かい指定を行いたい場合は、[[m:Encoding::Converter#convert]] を用いましょう。
+
+例:
+
+  #coding:UTF-8
+  s = "いろは"
+  s.encode("EUC-JP")
+  s.encode(Encoding::UTF_8)
+
+@see [[m:String#encode!]]
+

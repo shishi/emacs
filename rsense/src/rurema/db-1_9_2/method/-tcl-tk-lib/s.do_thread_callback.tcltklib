@@ -1,0 +1,7 @@
+kind=defined
+names=do_thread_callback
+visibility=public
+
+--- do_thread_callback(*args)
+
+

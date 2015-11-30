@@ -1,0 +1,59 @@
+kind=defined
+names=add_protocol
+visibility=public
+
+--- add_protocol(prot)
+
+Add a new protocol to the DRbProtocol module. 
+
+A protocol must define the following class methods:
+
+: open(uri, config)
+ Open a client connection to the server at uri, using configuration config.  Return a protocol instance for this connection.
+
+: open_server(uri, config)
+ Open a server listening at uri, using configuration config.  Return a protocol instance for this listener.
+
+: uri_option(uri, config)
+ Take a URI, possibly containing an option component (e.g. a trailing '?param=val'), and return a [uri, option] tuple.
+
+The DRbProtocol module asks each registered protocol in turn to try to open the URI. Each protocol signals that it does not handle that URI by raising a [[c:DRb::DRbBadScheme]] error. If no protocol recognises the URI, then a [[c:DRb::DRbBadURI]] error is raised. If a protocol accepts the URI, but an error occurs in opening it, a [[c:DRb::DRbConnError]] is raised.
+==== open_server
+The protocol instance returned by open_server must have the following methods:
+
+: accept
+ Accept a new connection to the server. Returns a protocol instance capable of communicating with the client. 
+
+: close
+ Close the server connection. 
+
+: uri
+ Get the URI for this server. 
+
+==== open
+The protocol instance returned by open must have the following methods:
+
+: send_request (ref, msg_id, arg, b)
+ Send a request to ref with the given message id and arguments. This is most easily implemented by calling DRbMessage.send_request, providing a stream that sits on top of the current protocol. 
+
+: recv_reply
+ Receive a reply from the server and return it as a [success-boolean, reply-value] pair. This is most easily implemented by calling DRb.recv_reply, providing a stream that sits on top of the current protocol. 
+
+: alive?
+ Is this connection still alive? 
+
+: close
+ Close this connection. 
+
+==== open_server().accept()
+The protocol instance returned by open_server().accept() must have the following methods:
+
+: recv_request
+ Receive a request from the client and return a [object, message, args, block] tuple. This is most easily implemented by calling DRbMessage.recv_request, providing a stream that sits on top of the current protocol. 
+
+: send_reply(succ, result)
+ Send a reply to the client. This is most easily implemented by calling DRbMessage.send_reply, providing a stream that sits on top of the current protocol. 
+
+: close
+ Close this connection. 
+

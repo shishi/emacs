@@ -1,0 +1,7 @@
+kind=added
+names=encoding=
+visibility=public
+
+--- encoding=(name)
+
+[[m:TkCore::INTERP.encoding=]] を呼び出す

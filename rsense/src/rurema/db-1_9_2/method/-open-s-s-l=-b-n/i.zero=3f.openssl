@@ -1,0 +1,7 @@
+kind=defined
+names=zero?
+visibility=public
+
+--- zero? -> bool
+自身が0である場合に真を返します。
+

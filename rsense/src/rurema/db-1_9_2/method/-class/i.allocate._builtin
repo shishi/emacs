@@ -1,0 +1,9 @@
+kind=defined
+names=allocate
+visibility=public
+
+--- allocate    -> object
+
+自身のインスタンスを生成して返します。生成したオブジェクトは
+自身のインスタンスであること以外には何も特性を持ちません。
+

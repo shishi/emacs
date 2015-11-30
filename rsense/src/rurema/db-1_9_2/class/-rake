@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=rake
+extended=
+included=
+
+Rake の主要なモジュールです。

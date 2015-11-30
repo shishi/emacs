@@ -1,0 +1,11 @@
+kind=defined
+names=has_value?,value?
+visibility=public
+
+--- has_value?(val) -> bool
+--- value?(val)     -> bool
+
+val を値として持つ環境変数が存在する時、真を返します。
+
+@param val  値を指定します。to_str で文字列化されます。
+

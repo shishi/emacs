@@ -1,0 +1,7 @@
+kind=defined
+names=INSECURE_METHOD
+visibility=public
+
+--- INSECURE_METHOD
+List of insecure methods.
+These methods are not callable via dRuby. 

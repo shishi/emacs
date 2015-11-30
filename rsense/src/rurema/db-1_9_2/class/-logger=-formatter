@@ -1,0 +1,9 @@
+superclass=Object
+type=class
+library=logger
+extended=
+included=
+
+ロガーのフォーマット文字列を扱うクラス。
+
+[[c:Logger]] のデフォルトのフォーマッターです。

@@ -1,0 +1,12 @@
+kind=defined
+names=complain
+visibility=public 
+
+--- complain(message) -> ()
+
+指定されたメッセージを表示します。--strict が有効な場合は例外が発生します。
+
+@param message 表示するメッセージを指定します。
+
+@raise Gem::Exception コマンドラインオプションに --strict が指定されている場合に発生します。
+

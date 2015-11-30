@@ -1,0 +1,10 @@
+kind=defined
+names=email=
+visibility=public
+
+--- email=(email)
+
+メールアドレスをセットします。
+
+@param email メールアドレスを指定します。
+

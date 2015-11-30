@@ -1,0 +1,11 @@
+superclass=Object
+type=class
+library=drb
+extended=
+included=
+
+Class representing a drb server instance.
+
+A DRbServer must be running in the local process before any incoming dRuby calls can be accepted, or any local objects can be passed as dRuby references to remote processes, even if those local objects are never actually called remotely. You do not need to start a DRbServer in the local process if you are only making outgoing dRuby calls passing marshalled parameters.
+
+Unless multiple servers are being used, the local DRbServer is normally started by calling DRb.start_service.

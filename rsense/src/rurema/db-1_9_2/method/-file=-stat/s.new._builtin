@@ -1,0 +1,20 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(path)    -> File::Stat
+
+path に関する File::Stat オブジェクトを生成して返します。
+[[m:File.stat]] と同じです。
+
+@param path ファイルのパスを指定します。
+
+@raise Errno::ENOENT pathに該当するファイルが存在しない場合発生します。
+
+  p $:[0] 
+  #=> 例
+  # "C:/Program Files/ruby-1.8/lib/ruby/site_ruby/1.8"
+  p File::Stat.new($:[0])
+  #=> 例
+  #<File::Stat dev=0x2, ino=0, mode=040755, nlink=1, uid=0, gid=0, rdev=0x2, size=0, blksize=nil, blocks=nil, atime=Sun Sep 02 14:15:20 +0900 2007, mtime=Tue Apr 24 23:03:44 +0900 2007, ctime=Tue Apr 24 23:03:37 +0900 2007>
+

@@ -1,0 +1,6 @@
+kind=defined
+names=bind
+visibility=public
+
+--- bind(tag_or_class, context, *args)
+

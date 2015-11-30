@@ -1,0 +1,11 @@
+name=rb_newobj
+private=false
+macro=false
+type=VALUE
+filename=gc.c
+params=(void)
+
+
+未使用のオブジェクト領域一つへのポインタを返す。
+返り値が返ってきたときは失敗はない。
+

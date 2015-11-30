@@ -1,0 +1,21 @@
+kind=defined
+names=indexes,indices
+visibility=public
+
+--- indexes(*index)     
+--- indices(*index)     
+
+このメソッド obsolete です。
+代わりに [[m:Array#values_at]] を使用します。
+使用すると警告メッセージが表示されます。
+
+各引数の値をインデックスとする要素の配列を返します。範囲外の
+インデックス指定に対しては nil が対応します。
+
+    ary = %w( a b c d e )
+    p ary.indexes( 0, 2, 4 )          #=> ["a", "c", "e"]
+    p ary.indexes( 3, 4, 5, 6, 35 )   #=> ["d", "e", nil, nil]
+    p ary.indexes( 0, -1, -2 )        #=> ["a", "e", "d"]
+    p ary.indexes( -4, -5, -6, -35 )  #=> ["b", "a", nil, nil]
+
+

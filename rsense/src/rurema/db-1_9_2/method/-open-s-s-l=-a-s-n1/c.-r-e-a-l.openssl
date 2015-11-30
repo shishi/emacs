@@ -1,0 +1,9 @@
+kind=defined
+names=REAL
+visibility=public
+
+--- REAL -> Integer
+
+ASN.1 UNIVERSAL タグの、
+REAL のタグ番号 9 を表す定数です。
+

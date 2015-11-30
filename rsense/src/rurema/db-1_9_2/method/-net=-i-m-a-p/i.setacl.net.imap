@@ -1,0 +1,11 @@
+kind=defined
+names=setacl
+visibility=public
+
+--- setacl(mailbox, user, rights)
+
+Sends the SETACL command along with mailbox, user and the
+rights that user is to have on that mailbox.  If rights is nil,
+then that user will be stripped of any rights to that mailbox.
+The IMAP ACL commands are described in [[RFC:2086]].
+

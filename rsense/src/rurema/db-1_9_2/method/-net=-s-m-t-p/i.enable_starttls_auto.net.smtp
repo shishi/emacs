@@ -1,0 +1,13 @@
+kind=defined
+names=enable_starttls_auto
+visibility=public
+
+--- enable_starttls_auto(context = Net::SMTP.default_ssl_context) -> ()
+その Net::SMTP オブジェクトがSTARTTLSが利用可能な場合
+(つまりサーバがSTARTTLSを広告した場合)のみにSTARTTLSを利用する
+ように設定します。
+
+@see [[m:Net::SMTP#starttls?]], [[m:Net::SMTP#starttls_auto?]], [[m:Net::SMTP#enable_starttls_auto]]
+@param context SSL接続で利用する [[c:OpenSSL::SSL::SSLContext]] 
+@see [[m:Net::SMTP#starttls?]], [[m:Net::SMTP#starttls_auto?]], [[m:Net::SMTP#enable_starttls]]
+

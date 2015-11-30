@@ -1,0 +1,13 @@
+kind=defined
+names=replacement=
+visibility=public
+
+--- replacement=(string)
+置換文字を設定します。
+
+@param string 変換器に設定する置換文字
+
+  ec = Encoding::Converter.new("utf-8", "us-ascii", :undef => :replace)
+  ec.replacement = "<undef>"
+  p ec.convert("a \u3042 b")      #=> "a <undef> b"
+

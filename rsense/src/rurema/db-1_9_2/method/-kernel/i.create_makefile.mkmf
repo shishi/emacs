@@ -1,0 +1,42 @@
+kind=added
+names=create_makefile
+visibility=private 
+
+--- create_makefile(target, srcprefix = nil) -> true
+
+[[m:Kernel.#have_library]] などの各種検査の結果を元に、拡張ライブラリを
+ビルドするための Makefile を生成します。
+
+extconf.rb は普通このメソッドの呼び出しで終ります。
+
+@param target ターゲットとなる拡張ライブラリの名前を指定します。
+              例えば、拡張ライブラリで "Init_foo" という関数を定義して
+              いる場合は、"foo" を指定します。
+              '/' を含む場合は、最後のスラッシュ以降のみをターゲット名
+              として使用します。残りはトップレベルのディレクトリ名と見
+              なされ、生成された Makefile はそのディレクトリ構造に従い
+              ます。
+              例えば、'test/foo' を指定した場合、拡張ライブラリは
+              'test' ディレクトリにインストールされます。この拡張ライブ
+              ラリを Ruby スクリプトから使用するときは
+              "require 'test/foo'" とする必要があります。
+
+@param srcprefix ソースコードがあるディレクトリ名を指定します。
+                 省略した場合は extconf.rb があるディレクトリを使用します。
+                 
+以下のようなディレクトリ構成の場合:
+
+   ext/
+      extconf.rb
+      test/
+         foo.c
+
+このようにします。
+
+   create_makefile('test/foo', 'test')
+
+このようにして作った Makefile で 'make install' すると拡張ライブラリは、
+以下のパスにインストールされます。
+
+  /path/to/ruby/sitearchdir/test/foo.so
+

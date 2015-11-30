@@ -1,0 +1,18 @@
+kind=defined
+names=lstrip
+visibility=public
+
+--- lstrip -> String
+
+文字列の先頭にある空白文字を全て取り除いた新しい文字列を返します。
+空白文字の定義は " \t\r\n\f\v" です。
+
+例:
+
+  p "  abc\n".lstrip     #=> "abc\n"
+  p "\t abc\n".lstrip    #=> "abc\n"
+  p "abc\n".lstrip       #=> "abc\n"
+
+@see [[m:String#strip]], [[m:String#rstrip]]
+
+

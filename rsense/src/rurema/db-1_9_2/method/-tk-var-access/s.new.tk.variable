@@ -1,0 +1,9 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(name, *args)
+
+Tcl変数 varname と生成したインスタンスを関連付けます。
+val を指定すると値の設定も行います。
+

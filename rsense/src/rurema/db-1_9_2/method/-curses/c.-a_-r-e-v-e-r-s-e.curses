@@ -1,0 +1,10 @@
+kind=defined
+names=A_REVERSE
+visibility=public
+
+--- A_REVERSE -> Integer
+
+文字列を反転を表す属性マスク用の定数です。
+
+@see [[m:Curses.attrset]]
+

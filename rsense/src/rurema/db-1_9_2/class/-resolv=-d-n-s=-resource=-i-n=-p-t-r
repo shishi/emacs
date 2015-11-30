@@ -1,0 +1,8 @@
+superclass=Resolv=DNS=Resource=PTR
+type=class
+library=resolv
+extended=
+included=
+
+DNS リソースのクラス IN、タイプ PTR に対応する
+クラスです。

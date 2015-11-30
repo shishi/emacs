@@ -1,0 +1,25 @@
+kind=defined
+names=bytes,each_byte
+visibility=public
+
+--- each_byte {|byte| ... } -> self
+--- bytes {|byte| ... } -> self
+--- each_byte -> Enumerator
+--- bytes     -> Enumerator
+
+文字列の各バイトに対して繰り返します。
+
+なお、バイトごとに分割した配列を得たいときは、
+Ruby 1.8 までなら unpack('C*') を、
+Ruby 1.9 以降は String#bytes.to_a を使ってください。
+
+例:
+    "str".each_byte do |byte|
+      p byte
+    end
+        # => 115
+        # => 116
+        # => 114
+
+@see [[m:String#unpack]]
+

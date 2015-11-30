@@ -1,0 +1,9 @@
+.followsMouse	TkManageFocus.#followsMouse
+.next	TkManageFocus.#next
+.prev	TkManageFocus.#prev
+#focusNext	TkManageFocus#focusNext
+#focusPrev	TkManageFocus#focusPrev
+#followsMouse	TkManageFocus.#followsMouse
+#next	TkManageFocus.#next
+#prev	TkManageFocus.#prev
+:TkCommandNames	TkManageFocus::TkCommandNames

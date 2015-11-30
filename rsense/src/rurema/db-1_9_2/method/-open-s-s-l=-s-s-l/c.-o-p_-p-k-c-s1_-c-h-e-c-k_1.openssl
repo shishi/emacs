@@ -1,0 +1,7 @@
+kind=defined
+names=OP_PKCS1_CHECK_1
+visibility=public
+
+--- OP_PKCS1_CHECK_1 -> Integer
+[[m:OpenSSL::SSL::SSLContext#options=]] で利用します。
+

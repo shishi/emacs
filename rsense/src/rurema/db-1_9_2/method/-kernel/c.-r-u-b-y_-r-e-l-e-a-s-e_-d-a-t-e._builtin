@@ -1,0 +1,8 @@
+kind=defined
+names=RUBY_RELEASE_DATE
+visibility=public
+
+--- RUBY_RELEASE_DATE -> String
+
+Ruby のリリース日を表す文字列。
+

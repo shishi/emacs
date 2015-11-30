@@ -1,0 +1,25 @@
+kind=defined
+names=syscall
+visibility=public
+
+--- syscall(num, *arg ) -> Integer
+
+numで指定された番号のシステムコールを実行します。
+第2引数以降をシステムコールの引数として渡します。
+
+どの数値がどのシステムコールに対応するかは、
+[[man:syscall(2)]] や
+/usr/include/sys/syscall.h を参照してください。
+
+システムコールの慣習に従い、[[man:syscall(2)]]
+が -1 を返す場合には例外 [[c:Errno::EXXX]] が発生します。
+それ以外では、返した値をそのまま数値で返します。
+
+ライブラリ [[lib:dl]] を使えばより高レベルな操作ができます。
+
+@param num システムコール番号です。
+@param arg 文字列か、整数です。最大 9 個まで渡すことができます。
+@raise Errno::EXXX syscall(2) が -1 を返した場合に発生します。
+@raise NotImplementedError 実行環境がこのメソッドに対応していないとき発生します。
+@see [[lib:dl]]
+

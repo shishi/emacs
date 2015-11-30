@@ -1,0 +1,12 @@
+.add_trusted_cert	Gem::Security.add_trusted_cert
+.build_cert	Gem::Security.build_cert
+.build_self_signed_cert	Gem::Security.build_self_signed_cert
+.sign_cert	Gem::Security.sign_cert
+.verify_trust_dir	Gem::Security.verify_trust_dir
+:AlmostNoSecurity	Gem::Security::AlmostNoSecurity
+:HighSecurity	Gem::Security::HighSecurity
+:LowSecurity	Gem::Security::LowSecurity
+:MediumSecurity	Gem::Security::MediumSecurity
+:NoSecurity	Gem::Security::NoSecurity
+:OPT	Gem::Security::OPT
+:Policies	Gem::Security::Policies

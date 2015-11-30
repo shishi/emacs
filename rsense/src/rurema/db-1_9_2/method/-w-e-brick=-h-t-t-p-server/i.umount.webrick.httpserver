@@ -1,0 +1,13 @@
+kind=defined
+names=umount,unmount
+visibility=public
+
+--- unmount(dir)    -> ()
+--- umount(dir)     -> ()
+
+サーバ上のディレクトリ dir とサーブレットとの対応を解消します。
+
+@param dir 対応を解消するディレクトリを指定します。
+
+  srv.mount('/img')
+

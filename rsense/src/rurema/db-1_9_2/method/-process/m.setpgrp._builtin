@@ -1,0 +1,26 @@
+kind=defined
+names=setpgrp
+visibility=public
+
+--- setpgrp    -> 0
+
+カレントプロセスの ID と同じ ID をもつプロセスグループを作成し、カレントプロセスをそのリーダーにします。
+[[m:Process.#setpgid]](0, 0) と同じです。
+
+@raise Errno::EXXX プロセスグループの設定に失敗した場合に発生します。
+
+@raise NotImplementedError メソッドが現在のプラットフォームで実装されていない場合に発生します。
+
+ fork do
+   p [Process.pid, Process.getpgrp]
+   p Process.setpgrp
+   p [Process.pid, Process.getpgrp]
+ end
+ Process.wait
+ #=>
+   [3427, 3426]
+   0
+   [3427, 3427]
+
+@see [[man:setpgrp(2)]]
+

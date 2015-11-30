@@ -1,0 +1,8 @@
+kind=defined
+names=zlib_version
+visibility=public
+
+--- zlib_version -> String
+
+zlib ライブラリのバージョンを表す文字列を返します。
+

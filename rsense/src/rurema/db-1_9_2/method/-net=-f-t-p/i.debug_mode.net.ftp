@@ -1,0 +1,13 @@
+kind=defined
+names=debug_mode
+visibility=public
+
+--- debug_mode -> bool
+デバッグモードであれば真を、そうでなければ偽を返します。
+
+値が真であるとき、送受信の記録と ABOR, STAT の結果が
+[[m:$stdout]] に随時表示されます。
+
+デフォルトは偽です。
+@see [[m:Net::FTP#debug_mode=]]
+

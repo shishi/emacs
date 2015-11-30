@@ -1,0 +1,10 @@
+kind=defined
+names=name,to_s
+visibility=public
+
+--- name -> String
+--- to_s -> String
+エンコーディングの名前を返します。
+
+    Encoding::UTF_8.name       => "UTF-8"
+

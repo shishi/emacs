@@ -1,0 +1,10 @@
+kind=defined
+names=quota
+visibility=public
+
+--- quota
+
+Quota limit imposed on mailbox.
+
+
+

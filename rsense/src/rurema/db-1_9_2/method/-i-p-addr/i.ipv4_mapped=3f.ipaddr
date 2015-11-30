@@ -1,0 +1,8 @@
+kind=defined
+names=ipv4_mapped?
+visibility=public
+
+--- ipv4_mapped? -> bool
+
+IPv4 射影 IPv6 アドレスなら 真を返します。
+

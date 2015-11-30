@@ -1,0 +1,8 @@
+kind=defined
+names=key=
+visibility=public 
+
+--- key=(key)
+
+鍵をセットします。
+

@@ -1,0 +1,16 @@
+kind=defined
+names=local_variables
+visibility=public
+
+--- local_variables -> [Symbol]
+
+現在のスコープで定義されているローカル変数名の配列を返します。
+
+  yuyu = 0
+  p local_variables #=> [:yuyu]
+
+@see [[m:Kernel.#global_variables]],[[m:Object#instance_variables]],[[m:Module.constants]],[[m:Module#constants]],[[m:Module#class_variables]]
+
+
+
+

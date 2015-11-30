@@ -1,0 +1,7 @@
+kind=defined
+names=any_char,any_chars
+visibility=public
+
+--- any_chars(mod)
+--- any_char(mod)
+

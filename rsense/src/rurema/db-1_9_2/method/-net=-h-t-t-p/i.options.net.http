@@ -1,0 +1,16 @@
+kind=defined
+names=options
+visibility=public
+
+--- options(path, initheader = nil) -> Net::HTTPResponse
+サーバの path に OPTIONS リクエストを
+ヘッダが initheader として送り、
+レスポンスを [[c:Net::HTTPResponse]] のオブジェクト
+で返します。
+
+@param path リクエストを送るパスを文字列で与えます。
+@param initheader リクエストのヘッダを「文字列=>文字列」の
+                  ハッシュで与えます。
+
+@see [[c:Net::HTTP::Options]]
+

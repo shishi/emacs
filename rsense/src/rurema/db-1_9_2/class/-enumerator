@@ -1,0 +1,34 @@
+superclass=Object
+type=class
+library=_builtin
+extended=
+included=Enumerable
+
+each 以外のメソッドにも [[c:Enumerable]] の機能を提供するためのラッパークラスです。
+また、外部イテレータとしても使えます。
+
+[[c:Enumerable]] モジュールは、 [[m:Module#include]] 先のクラスが持つ
+each メソッドを元に様々なメソッドを提供します。
+例えば Array#map は [[m:Array#each]] の繰り返しを元にして定義されます。
+Enumerator を介することにより [[m:String#each_byte]] のような
+異なる名前のイテレータについても each と同様に Enumerable の機能を利用できます。
+
+Enumerator を生成するには
+[[m:Enumerator.new]]
+あるいは [[m:Object#to_enum]], [[m:Object#enum_for]] を利用します。
+また、一部のイテレータはブロックを渡さずに呼び出すと繰り返しを実行する代わりに
+enumerator を生成して返します。
+
+=== 注意
+外部イテレータとしての機能は [[c:Fiber]] を用いて実装されているため Fiber と同じ制限があります。
+例えば以下のようなスレッドをまたいだ呼び出しはエラーになります。
+
+ a = nil
+ Thread.new do
+   a = [1, 2, 3].each
+   a.next
+ end.join
+ 
+ p a.next
+ #=> t.rb:7:in `next': fiber called across threads (FiberError)
+         from t.rb:7:in `<main>'

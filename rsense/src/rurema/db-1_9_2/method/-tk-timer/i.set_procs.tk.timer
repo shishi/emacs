@@ -1,0 +1,6 @@
+kind=defined
+names=set_procs
+visibility=public
+
+--- set_procs(interval, loop_exec, *procs)
+

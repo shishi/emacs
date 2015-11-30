@@ -1,0 +1,8 @@
+kind=defined
+names=configured_args
+visibility=public
+
+--- configured_args -> Array
+
+RDoc に渡す引数を返します。
+

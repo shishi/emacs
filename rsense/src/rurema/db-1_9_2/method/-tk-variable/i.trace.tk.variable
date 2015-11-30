@@ -1,0 +1,32 @@
+kind=defined
+names=trace
+visibility=public
+
+--- trace(opts, cmd)
+
+optsは、"r", "w", "u" のいずれか、またはこれらの組み合わせで、それぞれ
+変数が参照、設定、削除 されたときに[[c:Proc]]オブジェクト cmd を
+呼び出します。2回目以降の呼び出しでは、opts が以前の設定と異なれ
+ばcmdを再設定します。
+
+cmdは、引数に、self、空配列、"操作" を渡されて呼ばれ
+ます。"配列のキー" は、変数が配列の場合以外は空文字列です。"操作"は、
+"r","w","u" のいずれかです。
+
+  require "tk"
+  
+  var = TkVariable.new(0)
+  
+  var.trace "rwu", proc {|arg| puts "callback called with #{arg.inspect}"}
+  
+  p var.value
+  p var.value = 1
+  p var.unset
+  
+  =>callback called with [<TkVariable: v00000>, [], "r"]
+    "0"
+    callback called with [<TkVariable: v00000>, [], "w"]
+    "1"
+    callback called with [<TkVariable: v00000>, [], "u"]
+    ""
+

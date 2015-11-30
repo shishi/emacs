@@ -1,0 +1,12 @@
+kind=defined
+names=choose_from_list
+visibility=public 
+
+--- choose_from_list(*args) -> Array
+
+リストから回答を選択する質問をします。
+
+@param args 委譲先のメソッドに与える引数です。
+
+@return 選択肢の名称と選択肢のインデックスを要素とする配列を返します。
+

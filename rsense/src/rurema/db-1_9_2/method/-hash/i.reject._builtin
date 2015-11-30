@@ -1,0 +1,20 @@
+kind=defined
+names=reject
+visibility=public
+
+--- reject {|key, value| ... } -> Hash
+--- reject                     -> Enumerable::Enumerator
+
+self を複製して、ブロックを評価した値が真になる要
+素を削除したハッシュを返します。
+
+ハッシュを返すことを除けば
+[[m:Enumerable#reject]] とほぼ同じです。
+selfを破壊的に変更したい場合はかわりに[[m:Hash#delete_if]]か[[m:Hash#reject!]]を使います。
+
+  h = { 2 =>"8" ,4 =>"6" ,6 =>"4" ,8 =>"2" }
+  
+  p h.reject{|key, value| key.to_i < value.to_i} #=> {6=>"4", 8=>"2"}
+
+@see [[m:Hash#delete_if]],[[m:Hash#delete]],[[m:Enumerable#reject]]
+

@@ -1,0 +1,18 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(error_message = "", name = nil) -> NameError
+
+例外オブジェクトを生成して返します。
+
+@param error_message エラーメッセージを表す文字列です
+
+@param name 未定義だったシンボルです
+
+例:
+
+  err = NameError.new("message", "foo")
+  p err       # => #<NameError: message>
+  p err.name  # => "foo"
+

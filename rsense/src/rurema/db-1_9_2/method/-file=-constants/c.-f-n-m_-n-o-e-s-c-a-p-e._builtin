@@ -1,0 +1,8 @@
+kind=defined
+names=FNM_NOESCAPE
+visibility=public
+
+--- FNM_NOESCAPE
+エスケープ文字 `\' を普通の文字とみなします。
+[[m:File.fnmatch]], [[m:Dir.glob]]で使用します。
+

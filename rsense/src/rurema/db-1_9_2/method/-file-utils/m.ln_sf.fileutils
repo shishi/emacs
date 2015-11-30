@@ -1,0 +1,22 @@
+kind=defined
+names=ln_sf
+visibility=public
+
+--- ln_sf(src, dest, options = {}) -> ()
+
+src へのシンボリックリンク dest を作成します。
+
+ln_s(src, dest, :force => true) と同じです。
+
+@param src リンク元。一つの場合は文字列でも指定可能です。
+           二つ以上指定する場合は配列で指定します。
+
+@param dest リンク作成先のファイルかディレクトリです。
+
+@param options :force, :noop, :verbose が指定できます。
+               [[ref:c:FileUtils#options]]
+
+@raise Errno::ENOTDIR dest がディレクトリでない場合に発生します。
+
+@see [[m:FileUtils.#ln_s]]
+

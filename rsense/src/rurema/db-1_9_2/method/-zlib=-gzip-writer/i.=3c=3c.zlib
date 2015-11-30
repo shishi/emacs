@@ -1,0 +1,26 @@
+kind=defined
+names=<<
+visibility=public
+
+--- <<(str) -> self
+
+str を出力します。str が文字列でない場合は to_s を用いて
+文字列に変換します。
+
+@param str 出力したいオブジェクトを与えます。
+
+  require 'zlib'
+
+  filename='hoge1.gz'
+  fw = File.open(filename, "w")
+  Zlib::GzipWriter.wrap(fw, Zlib::BEST_COMPRESSION){|gz|
+    gz << "hoge" << "fuga"
+  }
+  fr = File.open(filename)
+  Zlib::GzipReader.wrap(fr){|gz|
+    puts gz.read
+  }
+  #=> hogefuga
+
+@see [[m:IO#<<]]
+

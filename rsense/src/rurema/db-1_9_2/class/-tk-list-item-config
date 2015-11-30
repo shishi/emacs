@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=tk.listbox
+extended=
+included=TkItemConfigMethod
+
+

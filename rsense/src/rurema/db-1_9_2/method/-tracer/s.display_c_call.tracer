@@ -1,0 +1,10 @@
+kind=defined
+names=display_c_call,display_c_call?
+visibility=public
+
+--- display_c_call -> bool
+--- display_c_call? -> bool
+
+真ならば、ビルトインメソッドの呼び出しを表示します。
+デフォルトは偽です。
+

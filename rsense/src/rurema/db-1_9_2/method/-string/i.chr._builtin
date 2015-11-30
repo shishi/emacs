@@ -1,0 +1,10 @@
+kind=defined
+names=chr
+visibility=public
+
+--- chr -> String
+
+self の最初の文字だけを含む文字列を返します。
+
+@see [[m:String#ord]], [[m:Integer#chr]]
+

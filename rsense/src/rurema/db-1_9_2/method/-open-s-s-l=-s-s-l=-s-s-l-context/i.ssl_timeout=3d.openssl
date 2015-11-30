@@ -1,0 +1,15 @@
+kind=defined
+names=ssl_timeout=,timeout=
+visibility=public
+
+--- timeout=(seconds)
+--- ssl_timeout=(seconds)
+
+このコンテキストから生成するセッションのタイムアウト秒数を設定します。
+
+nil を指定すると OpenSSL のデフォルトのタイムアウト秒数(300秒)を用います。
+
+@param seconds タイムアウト秒数(整数)
+@see [[m:OpenSSL::SSL::Session#timeout]]
+
+

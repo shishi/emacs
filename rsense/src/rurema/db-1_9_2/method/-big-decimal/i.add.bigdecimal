@@ -1,0 +1,15 @@
+kind=defined
+names=add
+visibility=public
+
+--- add(b, n)
+
+以下のように使用します。
+
+  c = a.add(b, n)
+
+c = a + b を最大で n 桁まで計算します。
+a + b の精度が n より大きいときは
+[[m:BigDecimal.mode]] で指定された方法で丸められます。
+n がゼロなら + と同じです。 
+

@@ -1,0 +1,18 @@
+kind=defined
+names=<
+visibility=public
+
+--- <(src) -> self
+
+srcをフィルタの入力とする。 srcが, 文字列ならばファイルを, IOオブジェクトであれ
+ばそれをそのまま入力とする。
+
+@param src フィルタの入力を, 文字列もしくは,IO オブジェクトで指定します。
+
+使用例
+  Shell.def_system_command("head")
+  sh = Shell.new
+  sh.transact {
+    (sh.head("-n 30") < "/etc/passwd") > "ugo.txt"
+  }
+

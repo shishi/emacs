@@ -1,0 +1,14 @@
+kind=defined
+names=kill
+visibility=public
+
+--- kill(signal) -> Integer
+
+自身のプロセスにシグナルを送ります。
+
+@param signal シグナルを整数かその名前の文字列で指定します。
+              負の値を持つシグナル(あるいはシグナル名の前に-)を指定すると、
+              プロセスではなくプロセスグループにシグナルを送ります。 
+
+@see [[m:Porocess.kill]]
+

@@ -1,0 +1,18 @@
+kind=defined
+names=intern,to_sym
+visibility=public
+
+--- intern -> Symbol
+--- to_sym -> Symbol
+
+文字列に対応するシンボル値 [[c:Symbol]] を返します。
+
+なお、このメソッドの逆にシンボルに対応する文字列を得るには
+[[m:Symbol#to_s]] または [[m:Symbol#id2name]] を使います。
+
+Ruby 1.9 以降では、シンボル文字列にナルキャラクタ("\0")、空の文字列が使用可能になりました。
+
+例:
+    p "foo".intern                 # => :foo
+    p "foo".intern.to_s == "foo"   # => true
+

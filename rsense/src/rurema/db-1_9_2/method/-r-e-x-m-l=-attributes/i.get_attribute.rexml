@@ -1,0 +1,6 @@
+kind=defined
+names=get_attribute
+visibility=public
+
+--- get_attribute(name)
+

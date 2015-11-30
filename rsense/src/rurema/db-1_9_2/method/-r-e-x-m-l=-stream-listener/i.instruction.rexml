@@ -1,0 +1,6 @@
+kind=defined
+names=instruction
+visibility=public
+
+--- instruction(name, instruction)
+

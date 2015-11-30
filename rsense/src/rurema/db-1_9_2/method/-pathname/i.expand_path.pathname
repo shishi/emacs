@@ -1,0 +1,11 @@
+kind=defined
+names=expand_path
+visibility=public
+
+--- expand_path(default_dir = '.') -> Pathname
+Pathname.new(File.expand_path(self.to_s, *args)) と同じです。
+
+@param default_dir self が相対パスであれば default_dir を基準に展開されます。
+
+@see [[m:File.expand_path]]
+

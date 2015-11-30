@@ -1,0 +1,7 @@
+superclass=WEBrick=HTTPStatus=Redirect
+type=class
+library=webrick.httpstatus
+extended=
+included=
+
+HTTP のステータスコード 307 Temporary Redirect を表すクラスです。

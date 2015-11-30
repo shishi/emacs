@@ -1,0 +1,14 @@
+kind=defined
+names=vartype
+visibility=public
+
+--- vartype -> Integer
+selfの型情報を取得します。
+
+型情報は、[[c:WIN32OLE::VARIANT]]の定数値の組み合わせです。
+
+   obj = WIN32OLE_VARIANT.new("string")
+   obj.vartype   # => 8 (WIN32OLE::VARIANT::VT_BSTR)
+   bytes = WIN32OLE_VARIANT.new([1,2,3,4,5], VT_UI1 | VT_ARRAY)
+   bytes.vartype # => 8209 (WIN32OLE::VARIANT::VT_ARRAY | VT_UI1)
+

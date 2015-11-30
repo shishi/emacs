@@ -1,0 +1,6 @@
+kind=defined
+names=send
+visibility=public
+
+--- send(thread, ret = nil)
+

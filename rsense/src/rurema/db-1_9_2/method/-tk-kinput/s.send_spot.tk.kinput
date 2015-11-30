@@ -1,0 +1,6 @@
+kind=defined
+names=send_spot
+visibility=public
+
+--- send_spot(win)
+

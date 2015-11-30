@@ -1,0 +1,27 @@
+kind=defined
+names=@
+visibility=public
+
+--- $@ -> [String] | nil
+
+最後に例外が発生した時のバックトレースを表す配列です。
+[[m:Kernel.#raise]] によって設定されます。
+
+配列の各要素はメソッドの呼び出し位置を示す文字列で形式は
+
+  "filename:line"
+
+または
+
+  "filename:line:in `methodname'"
+
+です。これは [[m:Kernel.#caller]] が返す値と同じ形式です。
+
+$@ へ値を代入するときは、[[m:$!]] が nil であってはいけません。
+$@ の値は、[[m:$!]].backtrace の値と同じです。
+また、$@ への代入は [[m:$!]].set_backtrace 呼び出しと同じです。
+
+文字列の配列でも nil でもない値を代入しようとすると、 [[c:TypeError]] 例外が発生します。
+
+この変数はスレッドローカルです。
+

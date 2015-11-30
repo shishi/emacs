@@ -1,0 +1,10 @@
+kind=defined
+names=verify_signer=
+visibility=public 
+
+--- verify_signer=(flag)
+
+署名者を検証するかどうかを設定します。
+
+@param flag 真、または偽を指定します。
+

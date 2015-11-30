@@ -1,0 +1,12 @@
+kind=defined
+names=session_id_context
+visibility=public
+
+--- session_id_context -> String | nil
+セッション ID コンテキスト文字列を返します。
+
+設定されていない場合は nil を返します。
+
+@see [[c:OpenSSL::SSL::Session]],
+     [[m:OpenSSL::SSL::SSLContext#session_id_context=]]
+

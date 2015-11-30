@@ -1,0 +1,11 @@
+kind=defined
+names=abbreviate
+visibility=public 
+
+--- abbreviate(spec) -> Gem::Specification
+
+ダウンロードを速くするために与えられた [[c:Gem::Specification]] の持つデータを
+小さくします。
+
+@param spec [[c:Gem::Specification]] を指定します。
+

@@ -1,0 +1,19 @@
+kind=defined
+names=capitalize
+visibility=public
+
+--- capitalize -> String
+
+文字列先頭の文字を大文字に、残りを小文字に変更した文字列を返します。
+ただし、アルファベット以外の文字は位置に関わらず変更しません。
+
+例:
+
+  p "foobar--".capitalize   # => "Foobar--"
+  p "fooBAR--".capitalize   # => "Foobar--"
+  p "FOOBAR--".capitalize   # => "Foobar--"
+
+
+@see [[m:String#capitalize!]], [[m:String#upcase]],
+     [[m:String#downcase]], [[m:String#swapcase]]
+

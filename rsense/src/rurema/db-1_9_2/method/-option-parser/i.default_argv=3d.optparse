@@ -1,0 +1,13 @@
+kind=defined
+names=default_argv=
+visibility=public
+
+--- default_argv=(argv)
+
+自身がデフォルトでパースする引数を文字列の配列で指定します。
+
+[[m:OptionParser#parse]] の引数が指定されなかったときに使われます。
+
+@param argv デフォルトでパースしたい文字列の配列を指定します。
+
+

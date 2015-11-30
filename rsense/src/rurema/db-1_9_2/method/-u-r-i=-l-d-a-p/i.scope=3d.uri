@@ -1,0 +1,10 @@
+kind=defined
+names=scope=
+visibility=public
+
+--- scope=(s)
+
+自身の Scope を文字列で設定します。
+
+@param s 自身の Scope を文字列で設定します。
+

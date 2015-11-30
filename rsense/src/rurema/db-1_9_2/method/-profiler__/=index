@@ -1,0 +1,7 @@
+.print_profile	Profiler__.#print_profile
+.start_profile	Profiler__.#start_profile
+.stop_profile	Profiler__.#stop_profile
+#print_profile	Profiler__.#print_profile
+#start_profile	Profiler__.#start_profile
+#stop_profile	Profiler__.#stop_profile
+:PROFILE_PROC	Profiler__::PROFILE_PROC

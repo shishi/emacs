@@ -1,0 +1,14 @@
+kind=defined
+names=get_passwd
+visibility=public
+
+--- get_passwd(realm, user, reload_db) -> String
+
+与えられたレルムとユーザ名からパスワードのハッシュ値を取得して返します。
+
+@param realm レルムを指定します。
+
+@param user ユーザ名を指定します。
+
+@param reload_db 真を指定すると [[m:WEBrick::HTTPAuth::Htdigest#reload]] を呼んでから値を返します。
+

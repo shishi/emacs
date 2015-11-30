@@ -1,0 +1,9 @@
+kind=defined
+names=maxx
+visibility=public
+
+--- maxx -> Integer
+
+移動可能な最大の x 座標を返します。
+表示可能なバイト数 + 1 です。
+

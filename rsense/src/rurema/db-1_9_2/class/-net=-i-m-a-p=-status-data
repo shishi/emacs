@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=net.imap
+extended=
+included=
+
+Net::IMAP::StatusData represents contents of the STATUS response.

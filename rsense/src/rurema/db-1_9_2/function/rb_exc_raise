@@ -1,0 +1,10 @@
+name=rb_exc_raise
+private=false
+macro=false
+type=void
+filename=eval.c
+params=(VALUE err)
+
+
+例外オブジェクト err を投げます。
+

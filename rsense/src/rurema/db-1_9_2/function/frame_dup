@@ -1,0 +1,10 @@
+name=frame_dup
+private=true
+macro=false
+type=void
+filename=eval.c
+params=(struct FRAME *frame)
+
+
+frame とその親 FRAME 全てをスタックからヒープに割り当てなおします。
+

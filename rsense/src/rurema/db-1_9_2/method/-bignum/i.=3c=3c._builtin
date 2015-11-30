@@ -1,0 +1,13 @@
+kind=defined
+names=<<
+visibility=public
+
+--- <<(bits) -> Fixnum | Bignum
+
+シフト演算子。bits だけビットを左にシフトします。
+
+@param bits シフトさせるビット数
+
+    printf("%#b\n", 0b0101 << 1) #=> 0b1010
+    p -1 << 1 #=> -2
+

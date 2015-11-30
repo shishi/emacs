@@ -1,0 +1,12 @@
+kind=defined
+names=mtime
+visibility=public
+
+--- mtime(filename)    -> Time
+
+最終更新時刻を返します。
+
+@param filename ファイル名を表す文字列か IO オブジェクトを指定します。
+
+@raise Errno::EXXX ファイルの時刻の取得に失敗した場合に発生します。
+

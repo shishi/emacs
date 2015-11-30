@@ -1,0 +1,7 @@
+kind=defined
+names=userdb
+visibility=public
+
+--- userdb -> WEBrick::HTTPAuth::Htpasswd
+
+ユーザ名とパスワードを保存した [[c:WEBrick::HTTPAuth::Htpasswd]] オブジェクトを返します。

@@ -1,0 +1,15 @@
+kind=defined
+names=to_i,truncate
+visibility=public
+
+--- to_i -> Integer
+--- truncate -> Integer
+
+小数点以下を切り捨てて値を整数に変換します。
+
+例:
+
+   p 3.14.to_i   #=> 3
+
+@see [[m:Numeric#round]], [[m:Numeric#ceil]], [[m:Numeric#floor]]
+

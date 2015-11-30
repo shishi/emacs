@@ -1,0 +1,8 @@
+kind=defined
+names=magic
+visibility=public 
+
+--- magic -> String
+
+tar のヘッダに含まれる magic を返します。
+

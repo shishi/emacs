@@ -1,0 +1,10 @@
+superclass=
+type=module
+library=zlib
+extended=
+included=
+
+zlib ライブラリに含まれている雑多な機能を提供するモジュール。
+各モジュール関数の詳細は zlib.h を参照して下さい。
+
+@see [[man:zlib(3)]]

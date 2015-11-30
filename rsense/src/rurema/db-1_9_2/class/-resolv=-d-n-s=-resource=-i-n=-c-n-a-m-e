@@ -1,0 +1,8 @@
+superclass=Resolv=DNS=Resource=CNAME
+type=class
+library=resolv
+extended=
+included=
+
+DNS リソースのクラス IN、タイプ CNAME に対応する
+クラスです。

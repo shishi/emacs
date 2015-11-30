@@ -1,0 +1,7 @@
+superclass=Gem=Exception
+type=class
+library=rubygems.exceptions
+extended=
+included=
+
+コマンドラインの例外です。

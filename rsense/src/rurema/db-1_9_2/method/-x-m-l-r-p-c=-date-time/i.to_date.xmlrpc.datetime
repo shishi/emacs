@@ -1,0 +1,9 @@
+kind=defined
+names=to_date
+visibility=public
+
+--- to_date
+
+Return a Date object of the date which self represents.
+The Date object do ((*not*)) contain the time component (only date).
+

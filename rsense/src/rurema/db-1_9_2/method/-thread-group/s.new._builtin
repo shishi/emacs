@@ -1,0 +1,8 @@
+kind=defined
+names=new
+visibility=public
+
+--- new    -> ThreadGroup
+
+新たな ThreadGroup を生成して返します。
+

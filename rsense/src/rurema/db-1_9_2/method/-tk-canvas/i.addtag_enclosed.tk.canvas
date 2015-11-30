@@ -1,0 +1,8 @@
+kind=defined
+names=addtag_enclosed
+visibility=public
+
+--- addtag_enclosed(tagOrId, x1, y1, x2, y2)
+
+
+

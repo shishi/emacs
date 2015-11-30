@@ -1,0 +1,7 @@
+kind=defined
+names=keys
+visibility=public
+
+--- keys(keynam, pattern = nil)
+
+

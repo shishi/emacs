@@ -1,0 +1,8 @@
+kind=defined
+names=inspect
+visibility=public
+
+--- inspect -> String
+
+ENV オブジェクトを文字列化します。 [[m:Hash#inspect]] と同じように動作します。
+

@@ -1,0 +1,6 @@
+kind=defined
+names=session_new_cb
+visibility=public
+
+--- session_new_cb
+

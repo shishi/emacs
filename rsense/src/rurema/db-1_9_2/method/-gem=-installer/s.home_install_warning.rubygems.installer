@@ -1,0 +1,8 @@
+kind=defined
+names=home_install_warning
+visibility=public
+
+--- home_install_warning -> bool
+
+この値が真の場合、ホームディレクトリに Gem をインストールしようとすると警告を表示します。
+

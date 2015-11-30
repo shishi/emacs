@@ -1,0 +1,13 @@
+kind=defined
+names=binmode
+visibility=public
+
+--- binmode    -> self
+
+ストリームをバイナリモードにします。MSDOS などバイナリモードの存在
+する OS でのみ有効です。そうでない場合このメソッドは何もしません。
+
+バイナリモードから通常のモードに戻す方法は再オープンしかありません。
+
+@raise Errno::EXXX モードの変更に失敗した場合に発生します。
+

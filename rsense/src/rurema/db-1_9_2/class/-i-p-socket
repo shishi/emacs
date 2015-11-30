@@ -1,0 +1,8 @@
+superclass=BasicSocket
+type=class
+library=socket
+extended=
+included=
+
+インターネットドメインソケットの抽象クラス。
+通常の [[c:IO]] クラスのサブクラスと同様の入出力ができます。

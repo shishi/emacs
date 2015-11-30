@@ -1,0 +1,14 @@
+kind=defined
+names=pack
+visibility=public
+
+--- pack(src, destname, signer = nil)
+
+???
+
+@param src ???
+
+@param destname ???
+
+@param signer ???
+

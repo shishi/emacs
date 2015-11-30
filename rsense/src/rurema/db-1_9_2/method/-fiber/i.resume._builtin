@@ -1,0 +1,28 @@
+kind=defined
+names=resume
+visibility=public
+
+--- resume(*arg = nil)   -> object
+
+自身が表すファイバーへコンテキストを切り替えます。
+自身は resume を呼んだファイバーの子となります。
+
+コンテキストの切り替えの際に [[m:Fiber.yield]] に与えられた引数を resume メソッドは返します。
+
+@param arg self が表すファイバーに渡したいオブジェクトを指定します。
+
+@raise FiberError 自身が既に終了している場合、コンテキストの切替が
+                  Thread クラスが表すスレッド間をまたがる場合、自身が resume を
+                  呼んだファイバーの親かその祖先である場合に発生します。
+
+例:
+
+ f = Fiber.new do
+   Fiber.yield(:hoge)
+ end
+  
+ a = f.resume()
+ f.resume()
+
+ p b  #=> :hoge
+

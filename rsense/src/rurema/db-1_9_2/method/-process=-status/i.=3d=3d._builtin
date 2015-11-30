@@ -1,0 +1,13 @@
+kind=defined
+names===
+visibility=public
+
+--- ==(other)    -> bool
+
+同じステータスの場合に真を返します。
+
+other が数値の場合、self.to_i との比較が行われます。こ
+れは後方互換性のためです。
+
+@param other 自身と比較したいオブジェクトを指定します。
+

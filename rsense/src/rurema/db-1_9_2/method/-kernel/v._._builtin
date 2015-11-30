@@ -1,0 +1,34 @@
+kind=defined
+names=_
+visibility=public
+
+--- $_ -> String | nil
+
+最後に [[m:Kernel.#gets]] または [[m:Kernel.#readline]] で読み込んだ文字列です。
+EOF に達した場合には、 nil になります。
+(覚え方: Perlと同じ)
+
+[[m:Kernel.#print]] のような Perl 由来の幾つかのメソッドは、引数を省略すると代わりに $_ を利用します。
+
+この変数はローカルスコープかつスレッドローカルです。
+Ruby起動時の初期値は nil です。
+
+@see [[m:Kernel.#print]], [[m:Kernel.#gets]], [[m:Kernel.#readline]], [[m:Kernel::ARGF]]
+
+=== 例
+example.txt:
+ foo
+ bar
+ baz
+
+このとき、コマンド ruby -e 'print while gets' example.txt は次を出力します
+ foo
+ bar
+ baz
+
+ただし、このプログラムは次のように書く方がよりRuby的です。
+ ARGF.each do |line|
+   print line
+ end
+
+

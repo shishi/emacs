@@ -1,0 +1,9 @@
+kind=defined
+names=accept_charset
+visibility=public
+
+--- accept_charset    -> [String]
+
+Accept-Charset  ヘッダの内容を文字セットを表す文字列の配列で返します。
+配列は品質係数(qvalue)でソートされています。
+

@@ -1,0 +1,6 @@
+kind=defined
+names=minsize
+visibility=public
+
+--- minsize(*args)
+

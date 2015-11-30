@@ -1,0 +1,13 @@
+kind=defined
+names=jisx0301
+visibility=public
+
+--- jisx0301(str = '-4712-01-01', start = Date::ITALY) -> Date
+いくつかの代表的な [[JIS:X 0301]] 書式の日付を解析し、
+その情報に基づいて日付オブジェクトを生成します。
+
+[[m:Date._jisx0301]] も参照してください。
+
+@param str 日付をあらわす文字列
+@param start グレゴリオ暦をつかい始めた日をあらわすユリウス日
+

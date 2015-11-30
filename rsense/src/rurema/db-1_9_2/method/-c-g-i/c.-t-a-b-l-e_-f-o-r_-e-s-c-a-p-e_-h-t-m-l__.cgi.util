@@ -1,0 +1,13 @@
+kind=added
+names=TABLE_FOR_ESCAPE_HTML__
+visibility=public
+
+--- TABLE_FOR_ESCAPE_HTML__ -> Hash
+
+HTML 上でエスケープする文字列の変換テーブルを返します。
+
+    '&' => '&amp;',
+    '"' => '&quot;',
+    '<' => '&lt;',
+    '>' => '&gt;',
+

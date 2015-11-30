@@ -1,0 +1,25 @@
+kind=defined
+names=class_variable_set
+visibility=private 
+
+--- class_variable_set(name, val) -> object
+
+クラス／モジュールにクラス変数 name を定義して、その値として
+val をセットします。val を返します。
+
+@param name [[c:String]] または [[c:Symbol]] を指定します。
+
+  class Fred
+    @@foo = 99
+    def foo
+      @@foo
+    end
+  end
+
+  def Fred.foo(val)
+    class_variable_set(:@@foo, val)
+  end
+
+  p Fred.foo(101)   # => 101
+  p Fred.new.foo    # => 101
+

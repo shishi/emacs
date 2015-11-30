@@ -1,0 +1,6 @@
+kind=defined
+names=client
+visibility=public
+
+--- client(name = Tk::None)
+

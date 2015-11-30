@@ -1,0 +1,16 @@
+kind=defined
+names=public_key
+visibility=public
+
+--- public_key -> OpenSSL::PKey::PKey
+証明書に記載された公開鍵を返します。
+
+鍵の種類によって以下のいずれかのクラスのインスタンスを返します。
+  * [[c:OpenSSL::PKey::RSA]]
+  * [[c:OpenSSL::PKey::DSA]]
+  * [[c:OpenSSL::PKey::DH]]
+  * [[c:OpenSSL::PKey::EC]]
+
+@raise OpenSSL::X509::CertificateError 鍵の取得に失敗した場合に発生します
+@raise OpenSSL::PKey::PKeyError サポートしていない種類の鍵である場合に発生します
+

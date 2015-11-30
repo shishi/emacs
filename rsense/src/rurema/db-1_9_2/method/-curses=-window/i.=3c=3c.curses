@@ -1,0 +1,11 @@
+kind=defined
+names=<<,addstr
+visibility=public
+
+--- addstr(str) -> nil
+--- <<(str)     -> nil
+
+ウィンドウのカーソル位置に文字列 str を上書きします。
+
+@param str 文字列を指定します。
+

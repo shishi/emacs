@@ -1,0 +1,17 @@
+kind=defined
+names=fork
+visibility=public
+
+--- fork -> Integer | nil
+--- fork { ... } -> Integer | nil
+
+[[man:fork(2)]] システムコールを使ってプロセスの複製を作
+ります。親プロセスでは子プロセスのプロセスIDを、子プロセスでは
+nil を返します。ブロックを指定して呼び出した場合には、生成し
+た子プロセスでブロックを評価します。
+
+fork 前に STDOUT と STDERR を [[m:IO#flush]] します。
+
+@raise NotImplementedError 実行環境がこのメソッドに対応していないとき発生します。
+@see [[m:IO.popen]],[[m:IO.pipe]], [[man:fork(2)]]
+

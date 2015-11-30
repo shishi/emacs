@@ -1,0 +1,8 @@
+kind=defined
+names=rubygems_version
+visibility=public
+
+--- rubygems_version -> String
+
+この Gem パッケージを作成した RubyGems のバージョンを返します。
+

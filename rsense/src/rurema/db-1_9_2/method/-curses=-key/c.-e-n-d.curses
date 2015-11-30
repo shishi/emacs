@@ -1,0 +1,8 @@
+kind=defined
+names=END
+visibility=public
+
+--- END -> Integer
+
+End キーを表す定数です。
+

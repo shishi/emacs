@@ -1,0 +1,9 @@
+kind=defined
+names=stat
+visibility=public
+
+--- stat -> File::Stat
+File.stat(self.to_s) と同じです。
+
+@see [[m:File.stat]]
+

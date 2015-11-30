@@ -1,0 +1,6 @@
+kind=defined
+names=tk_call_to_list_with_enc
+visibility=public
+
+--- tk_call_to_list_with_enc(*args)
+

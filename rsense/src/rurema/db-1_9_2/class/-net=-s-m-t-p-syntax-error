@@ -1,0 +1,8 @@
+superclass=Net=ProtoSyntaxError
+type=class
+library=net.smtp
+extended=
+included=Net=SMTPError
+
+SMTP コマンド文法エラー(エラーコード 500) に対応する
+例外クラスです。

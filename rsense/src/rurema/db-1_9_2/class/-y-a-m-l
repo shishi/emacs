@@ -1,0 +1,24 @@
+superclass=
+type=module
+library=yaml
+extended=
+included=
+
+YAML (YAML Ain't Markup Language) を扱うモジュールです。
+
+=== 参考
+
+* YAML Specification
+  * [[url:http://www.yaml.org/spec/]]
+  * [[url:http://www.yaml.org/type/]]
+* YAML4R
+  * [[url:http://yaml4r.sourceforge.net/]]
+  * [[url:http://yaml4r.sourceforge.net/cookbook/]]
+  * [[url:http://yaml4r.sourceforge.net/doc/]]
+* Ruby with YAML[[url:http://www.namikilab.tuat.ac.jp/~sasada/prog/yaml.html]]
+* Rubyist Magazine[[url:http://jp.rubyist.net/magazine/]]
+  * プログラマーのための YAML 入門 (初級編)[[url:http://jp.rubyist.net/magazine/?0009-YAML]]
+  * プログラマーのための YAML 入門 (中級編)[[url:http://jp.rubyist.net/magazine/?0010-YAML]]
+  * プログラマーのための YAML 入門 (実践編)[[url:http://jp.rubyist.net/magazine/?0011-YAML]]
+  * プログラマーのための YAML 入門 (検証編)[[url:http://jp.rubyist.net/magazine/?0012-YAML]]
+  * プログラマーのための YAML 入門 (探索編)[[url:http://jp.rubyist.net/magazine/?0013-YAML]]

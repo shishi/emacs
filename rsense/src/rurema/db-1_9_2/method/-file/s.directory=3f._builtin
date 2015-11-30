@@ -1,0 +1,10 @@
+kind=defined
+names=directory?
+visibility=public
+
+--- directory?(path)    -> bool
+
+[[m:FileTest.#directory?]] と同じです。
+
+@param path パスを表す文字列か IO オブジェクトを指定します。
+

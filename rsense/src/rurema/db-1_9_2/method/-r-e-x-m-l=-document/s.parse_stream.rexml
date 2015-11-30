@@ -1,0 +1,6 @@
+kind=defined
+names=parse_stream
+visibility=public
+
+--- parse_stream(source, listener)
+

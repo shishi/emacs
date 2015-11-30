@@ -1,0 +1,13 @@
+kind=defined
+names=/
+visibility=public
+
+--- /(other) -> Float
+»»½Ñ±é»»»Ò¡£¾¦¤ò·×»»¤·¤Þ¤¹¡£
+
+@param other Æó¹à±é»»¤Î±¦Â¦¤Î°ú¿ô(ÂÐ¾Ý)
+
+  # ¾¦ 
+  p 1.3 / 2.4 #=> 0.541666666666667
+  p 1.0 / 0   #=> Infinity
+

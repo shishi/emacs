@@ -1,0 +1,7 @@
+kind=defined
+names=dfdxi
+visibility=public
+
+--- dfdxi(f, fx, x, i)
+
+

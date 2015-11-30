@@ -1,0 +1,6 @@
+kind=defined
+names=set_next_callback
+visibility=public
+
+--- set_next_callback(args)
+

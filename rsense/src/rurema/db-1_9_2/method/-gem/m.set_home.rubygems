@@ -1,0 +1,10 @@
+kind=defined
+names=set_home
+visibility=public
+
+--- set_home
+
+Gem のホームディレクトリをセットします。
+
+@see [[m:Gem.#set_home]]
+

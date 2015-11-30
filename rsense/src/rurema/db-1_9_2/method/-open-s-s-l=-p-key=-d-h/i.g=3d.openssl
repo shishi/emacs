@@ -1,0 +1,13 @@
+kind=defined
+names=g=
+visibility=public
+
+--- g=(g)
+DH 公開鍵暗号の鍵パラメータ g を設定します。
+
+通常このメソッドで値を変更することはありません。
+よく考えて必要な場合のみ利用してください。
+
+@param g 設定する整数値(OpenSSL::BN)
+@see [[m:OpenSSL::PKey::DH#g]]
+

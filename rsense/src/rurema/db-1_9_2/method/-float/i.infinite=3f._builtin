@@ -1,0 +1,25 @@
+kind=defined
+names=infinite?
+visibility=public
+
+--- infinite? -> 1 | -1 | nil
+
+数値が +∞ のとき 1、-∞のとき -1 を返します。それ以外は nil を返
+します。
+
+例:
+
+  inf = 1.0/0
+  p inf
+  p inf.infinite?
+  
+  => Infinity
+     1
+  
+  inf = -1.0/0
+  p inf
+  p inf.infinite?
+  
+  => -Infinity
+     -1
+

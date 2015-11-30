@@ -1,0 +1,21 @@
+kind=defined
+names=MAJOR_VERSION,MINOR_VERSION
+visibility=public
+
+--- MAJOR_VERSION -> Fixnum
+--- MINOR_VERSION -> Fixnum
+
+[[m:Marshal.#dump]] が出力するデータフォーマットのバージョン番号です。
+
+[[m:Marshal.#load]] は、メジャーバージョンが異なるか、バージョンの大きな
+マーシャルデータを読み込んだとき例外 [[c:TypeError]] を発生させます。
+
+マイナーバージョンが古いだけのフォーマットは読み込み可能ですが、
+[[m:$VERBOSE]] = true のときには警告メッセージが出力されます
+
+マーシャルされたデータのバージョン番号は以下のようにして取得するこ
+とができます。
+
+  obj = Object.new
+  major, minor = Marshal.dump(obj).unpack("cc")
+  p [major, minor]

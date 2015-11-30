@@ -1,0 +1,9 @@
+kind=defined
+names=eof,eof?
+visibility=public
+
+--- eof    -> bool
+--- eof?   -> bool
+
+自身の pos が文字列の終端にあれば true を返します。そうでないなら false を返します。
+

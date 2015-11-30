@@ -1,0 +1,15 @@
+kind=defined
+names=dependent_gems
+visibility=public
+
+--- dependent_gems -> Array
+
+この Gem に依存している全ての Gem の情報のリストを返します。
+
+それぞれのエントリは配列になっており、各要素は以下のようになっています。
+
+ (0) [[c:Gem::Specification]]
+ (1) [[c:Gem::Dependency]]
+ (2) [[c:Gem::Specification]] の配列
+
+

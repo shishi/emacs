@@ -1,0 +1,33 @@
+kind=defined
+names=write_smime
+visibility=public
+
+--- write_smime(p7sig, data=nil, flags = 0) -> String
+PKCS7 オブジェクトから S/MIME 形式の文字列を返します。
+
+data には署名対象のデータを渡します。
+data に nil を渡すと [[m:OpenSSL::PKCS7#data]] で得られる
+文字列を用います。通常は nil を渡してください。
+
+flags には以下の定数の or を渡します。
+  * [[m:OpenSSL::PKCS7::DETACHED]]
+      クリア署名をします。これは [[m:OpenSSL::PKCS7.sign]] で
+      [[m:OpenSSL::PKCS7::DETACHED]] を渡した場合にのみ意味を持ちます。
+  * [[m:OpenSSL::PKCS7::TEXT]]
+      MIME ヘッダに text/plain を付加します。
+      これは [[m:OpenSSL::PKCS7.sign]] で
+      [[m:OpenSSL::PKCS7::DETACHED]] を渡した場合にのみ意味を持ちます。
+
+例:
+
+  data = "foobar"
+  p7 = PKCS7.sign( X509::Certificate.new(File.read('cert.pem')),
+                   PKey::RSA.new(File.read('privkey.pem')),
+                   data)
+  smime = PKCS7.write_smime(p7)
+
+@param p7sig PKCS#7 オブジェクト
+@param data 署名されたデータ文字列
+@param flags フラグ(整数値)
+@raise OpenSSL::PKCS::PKCS7Error S/MIME形式への変換に失敗した場合に発生します
+

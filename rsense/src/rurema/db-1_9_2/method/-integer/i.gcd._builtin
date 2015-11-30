@@ -1,0 +1,24 @@
+kind=defined
+names=gcd
+visibility=public
+
+--- gcd(n) -> Integer
+
+自身と整数 n の最大公約数を返します。
+
+@raise ArgumentError n に整数以外のものを指定すると発生します。
+
+例:
+
+  2.gcd(2)                    # => 2
+  3.gcd(7)                    # => 1
+  3.gcd(-7)                   # => 1
+  ((1<<31)-1).gcd((1<<61)-1)  # => 1
+
+また、self や n が 0 だった場合は、0 ではない方の整数の絶対値を返します。
+
+  3.gcd(0)                    # => 3
+  0.gcd(-7)                   # => 7
+
+@see [[m:Integer#lcm]], [[m:Integer#gcdlcm]]
+

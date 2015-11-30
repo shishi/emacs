@@ -1,0 +1,10 @@
+kind=defined
+names=display_c_call=
+visibility=public
+
+--- display_c_call=(flag)
+
+ビルトインメソッドの呼び出しを表示するかどうかを設定します。
+
+@param flag ビルトインメソッドの呼び出しを表示するならば、真を指定します。
+

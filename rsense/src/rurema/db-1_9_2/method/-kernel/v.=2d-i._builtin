@@ -1,0 +1,70 @@
+kind=defined
+names=-I,:,LOAD_PATH
+visibility=public
+
+--- $:         -> [String]
+--- $LOAD_PATH -> [String]
+--- $-I        -> [String]
+Rubyライブラリをロードするときの検索パスです。
+
+[[m:Kernel.#load]] や [[m:Kernel.#require]]
+がファイルをロードする時に検索するディレクトリのリストを含む配列です。
+
+起動時にはコマンドラインオプション -I で指定したディレクトリ、
+環境変数 RUBYLIB の値、
+コンパイル時に指定したデフォルト値、
+"." (カレントディレクトリ) をこの順番で含みます。
+
+以下に典型的な UNIX システム上でのロードパスを示します。
+
+  -I で指定したパス
+  環境変数 RUBYLIB の値
+  /usr/local/lib/ruby/site_ruby/VERSION        サイト固有、バージョン依存のライブラリ
+  /usr/local/lib/ruby/site_ruby/VERSION/ARCH   サイト固有、システム依存、拡張ライブラリ
+  /usr/local/lib/ruby/site_ruby                サイト固有ライブラリ
+  /usr/local/lib/ruby/VERSION                  標準ライブラリ
+  /usr/local/lib/ruby/VERSION/ARCH             標準、システム依存、拡張ライブラリ
+  .                                            カレントディレクトリ
+
+上記表中の VERSION は Ruby のバージョンを表す文字列で、
+「1.6」や「1.8」です。
+ARCH はハードウェアと OS を表す文字列で、
+「i686-linux」や「alpha-osf5.1」などです。
+ARCH の値は Config::CONFIG['arch'] で得られます。
+
+コンパイル時のデフォルトパスは
+多くの UNIX システムでは "/usr/local/lib/ruby" です。
+[[d:platform/mswin32]]、[[d:platform/mingw32]]、[[d:platform/Cygwin]]、
+[[d:platform/bccwin32]]、[[d:platform/mswince]] 環境では
+ruby.dll の位置からの相対で決まります。
+[[d:platform/DJGPP]] と [[d:platform/emx]] (OS/2) では
+ruby.exe の位置からの相対で決まります。
+
+-T オプションで起動時に [[m:$SAFE]] を 1 以上に
+設定したときは "." (カレントディレクトリ) はロードパスに入りません。
+
+require 'foo' を実行すると、
+以下のように foo.rb と foo.so が交互に探索されます。
+
+  /usr/local/lib/ruby/site_ruby/VERSION/foo.rb
+  /usr/local/lib/ruby/site_ruby/VERSION/foo.so
+  /usr/local/lib/ruby/site_ruby/VERSION/ARCH/foo.rb
+  /usr/local/lib/ruby/site_ruby/VERSION/ARCH/foo.so
+    :
+    :
+
+なお、共有ライブラリの拡張子が .so でないシステムでは
+「.so」が適切な拡張子に変更されます。
+例えば HP-UX では require 'foo.so' とすると foo.sl を検索します。
+したがって Ruby で記述されたコードでは常に .so を使うべきです。
+
+なお、ロードパスをコマンドラインから調べるには
+
+  $ ruby -e 'puts $:'
+
+とします。
+
+この変数はグローバルスコープです。
+
+@see [[d:spec/rubycmd]], [[d:spec/envvars]]
+

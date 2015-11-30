@@ -1,0 +1,25 @@
+kind=defined
+names=ordering=
+visibility=public
+
+--- ordering=(ordering)
+順序形式を設定します。
+
+環境変数 POSIXLY_CORRECT が定義されていると、引数に 
+[[m:GetoptLong::PERMUTE]] を与えてこのメソッドを呼び出しても、実際のところの順
+序形式は [[m:GetoptLong::REQUIRE_ORDER]] に設定されます。
+
+環境変数 POSIXLY_CORRECT が定義されていない限り、[[m:GetoptLong::PERMUTE]]
+が初期値です。定義されていれば、[[m:GetoptLong::REQUIRE_ORDER]] が初期値になり
+ます。
+
+@param ordering [[m:GetoptLong::REQUIRE_ORDER]], [[m:GetoptLong::PERMUTE]],
+                [[m:GetoptLong::RETURN_IN_ORDER]] のいずれかを指定します。
+
+@raise ArgumentError [[m:GetoptLong::REQUIRE_ORDER]], [[m:GetoptLong::PERMUTE]],
+                 [[m:GetoptLong::RETURN_IN_ORDER]] 以外の値を指定した場合に発生します。
+
+@raise RuntimeError [[m:GetoptLong#get]], [[m:GetoptLong#get_option]],
+                    [[m:Get_Option#each]], [[m:Get_Option#each_option]] メソッドを
+                    呼び出した後にこのメソッドを呼び出した場合に発生します。
+

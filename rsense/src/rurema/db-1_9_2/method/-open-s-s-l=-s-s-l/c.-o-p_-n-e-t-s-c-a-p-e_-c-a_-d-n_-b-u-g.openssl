@@ -1,0 +1,10 @@
+kind=defined
+names=OP_NETSCAPE_CA_DN_BUG
+visibility=public
+
+--- OP_NETSCAPE_CA_DN_BUG -> Integer
+Netscape の CA の DN のエンコーディングバグを
+回避するコードを有効にします。
+
+[[m:OpenSSL::SSL::SSLContext#options=]] で利用します。
+

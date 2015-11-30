@@ -1,0 +1,34 @@
+kind=defined
+names=each,each_pair
+visibility=public
+
+--- each {|key, value| ... } -> self
+--- each_pair {|key, value| ... } -> self
+--- each      -> Enumerator
+--- each_pair -> Enumerator
+
+ハッシュのキーと値を引数としてブロックを評価します。
+
+反復の際の評価順序はキーが追加された順です。
+ブロック付きの場合 self を、
+無しで呼ばれた場合 [[c:Enumerator]] を返します。
+
+
+each_pair は each のエイリアスです。
+
+  {:a=>1, :b=>2}.each {|a| p a}
+  #=> [:a, 1]
+      [:b, 2]
+ 
+  {:a=>1, :b=>2}.each_pair {|*a| p a} 
+  #=> [[:a, 1]]
+      [[:b, 2]]
+  
+  {:a=>1, :b=>2}.each {|k, v| p [k, v]}  #each_pairでも同じ結果
+  #=> [:a, 1]
+      [:b, 2]
+  
+  p({:a=>1, :b=>2}.each_pair)  # => #<Enumerator: {:a=>1, :b=>2}:each_pair>
+
+@see [[m:Hash#each_key]],[[m:Hash#each_value]]
+

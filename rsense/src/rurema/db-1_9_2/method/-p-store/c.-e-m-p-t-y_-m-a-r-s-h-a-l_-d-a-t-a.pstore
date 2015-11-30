@@ -1,0 +1,7 @@
+kind=defined
+names=EMPTY_MARSHAL_DATA
+visibility=private 
+
+--- EMPTY_MARSHAL_DATA -> String
+内部で利用する定数です。
+

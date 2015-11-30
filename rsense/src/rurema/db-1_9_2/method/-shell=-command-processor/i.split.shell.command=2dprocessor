@@ -1,0 +1,12 @@
+kind=defined
+names=split
+visibility=public
+
+--- split(pathname)    -> [String]
+
+[[c:File]] クラスにある同名のクラスメソッドと同じです.
+
+@param pathname パス名を表す文字列を指定します。
+
+@see [[m:File.split]]
+

@@ -1,0 +1,9 @@
+kind=defined
+names=default_argc_limit
+visibility=public
+
+--- default_argc_limit(argc)
+
+Set the default value for the :argc_limit option.
+See new(). The initial default value is 256.  
+

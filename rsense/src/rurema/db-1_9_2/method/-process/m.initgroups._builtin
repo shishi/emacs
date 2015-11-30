@@ -1,0 +1,17 @@
+kind=defined
+names=initgroups
+visibility=public
+
+--- initgroups(user, group)    -> [Integer]
+
+user が属するグループのリストを更新し、group をそのリストに加えます。
+
+このメソッドを呼ぶには root 権限が必要です。
+
+@param user ユーザ名を表す文字列で指定します。
+
+@param group ユーザグループ ID を整数で指定します。
+
+@raise NotImplementedError メソッドが現在のプラットフォームで実装されていない場合に発生します。
+
+

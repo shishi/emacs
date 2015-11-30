@@ -1,0 +1,15 @@
+kind=defined
+names=getaddress
+visibility=public
+
+--- getaddress(host) -> String
+
+ホスト名からホストのアドレスを返します。ホストのアドレスは文
+字列は octet decimal の文字列 (例: 127.0.0.1) です。
+
+@param host ホスト名を文字列で指定します。
+
+例:
+
+  p IPSocket.getaddress("www.ruby-lang.org")        #=> "210.163.138.100"
+

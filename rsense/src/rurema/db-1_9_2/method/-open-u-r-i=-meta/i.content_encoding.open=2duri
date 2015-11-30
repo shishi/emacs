@@ -1,0 +1,14 @@
+kind=defined
+names=content_encoding
+visibility=public
+
+--- content_encoding    -> [String]
+
+対象となるリソースの Content-Encoding を文字列の配列として返します。
+Content-Encoding ヘッダがない場合は、空の配列を返します。
+
+例:
+
+  require 'open-uri'
+  p open('http://example.com/f.tar.gz').content_encoding  #=> ["x-gzip"]
+

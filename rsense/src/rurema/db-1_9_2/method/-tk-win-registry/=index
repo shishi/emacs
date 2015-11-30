@@ -1,0 +1,14 @@
+.delete	TkWinRegistry.delete
+.get	TkWinRegistry.get
+.keys	TkWinRegistry.keys
+.set	TkWinRegistry.set
+.type	TkWinRegistry.type
+.values	TkWinRegistry.values
+#broadcast	TkWinRegistry#broadcast
+#delete	TkWinRegistry#delete
+#get	TkWinRegistry#get
+#keys	TkWinRegistry#keys
+#set	TkWinRegistry#set
+#type	TkWinRegistry#type
+#values	TkWinRegistry#values
+:TkCommandNames	TkWinRegistry::TkCommandNames

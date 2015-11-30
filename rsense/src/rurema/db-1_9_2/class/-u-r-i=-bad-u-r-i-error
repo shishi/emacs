@@ -1,0 +1,7 @@
+superclass=URI=Error
+type=class
+library=uri
+extended=
+included=
+
+URI として正しいが、使い方が悪いときに発生します。

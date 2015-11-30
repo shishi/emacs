@@ -1,0 +1,13 @@
+kind=defined
+names=respond_to?
+visibility=public
+
+--- respond_to?(m) -> bool
+
+[[m:Delegator#__getobj__]] が返すオブジェクトが メソッド m を持つとき真を返します。
+
+@param m メソッド名
+
+@see [[m:Object#respond_to?]]
+
+

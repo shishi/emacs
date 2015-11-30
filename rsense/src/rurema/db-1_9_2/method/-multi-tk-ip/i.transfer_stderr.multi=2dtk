@@ -1,0 +1,6 @@
+kind=defined
+names=transfer_stderr
+visibility=public
+
+--- transfer_stderr(dist, src = '')
+

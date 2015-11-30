@@ -1,0 +1,7 @@
+superclass=RuntimeError
+type=class
+library=csv
+extended=
+included=
+
+不正な CSV をパースしようとしたときに発生する例外です。

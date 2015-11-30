@@ -1,0 +1,8 @@
+kind=added
+names=default_bindir
+visibility=public
+
+--- default_bindir -> String
+
+実行ファイルのデフォルトのパスを返します。
+

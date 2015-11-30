@@ -1,0 +1,59 @@
+superclass=TCPSocket
+type=class
+library=socket
+extended=
+included=
+
+TCP/IP ストリーム型接続のサーバ側のソケットのクラス。このクラ
+スによって簡単にソケットを利用したサーバのプログラミングがで
+きます。
+
+例えば echo サーバは以下のようになります。
+
+  require "socket"
+  
+  gs = TCPServer.open(0)
+  socks = [gs]
+  addr = gs.addr
+  addr.shift
+  printf("server is on %s\n", addr.join(":"))
+  
+  while true
+    nsock = select(socks)
+    next if nsock == nil
+    for s in nsock[0]
+      if s == gs
+        socks.push(s.accept)
+        print(s, " is accepted\n")
+      else
+        if s.eof?
+          print(s, " is gone\n")
+          s.close
+          socks.delete(s)
+        else
+          str = s.gets
+          s.write(str)
+        end
+      end
+    end
+  end
+
+Thread を使えばもっと短くなります。
+
+  require "socket"
+  
+  gs = TCPServer.open(0)
+  addr = gs.addr
+  addr.shift
+  printf("server is on %s\n", addr.join(":"))
+  
+  while true
+    Thread.start(gs.accept) do |s|       # save to dynamic variable
+      print(s, " is accepted\n")
+      while s.gets
+        s.write($_)
+      end
+      print(s, " is gone\n")
+      s.close
+    end
+  end

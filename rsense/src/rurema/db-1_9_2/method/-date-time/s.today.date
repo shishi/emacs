@@ -1,0 +1,11 @@
+kind=defined
+names=today
+visibility=public
+
+--- today(start = Date::ITALY) -> Date
+このクラスでは利用できません。
+
+[[m:DateTime.now]] を参照してください。
+
+@param start グレゴリオ暦をつかい始めた日をあらわすユリウス日
+

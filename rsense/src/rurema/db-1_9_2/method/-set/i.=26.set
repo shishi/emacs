@@ -1,0 +1,18 @@
+kind=defined
+names=&,intersection
+visibility=public
+
+--- intersection(enum) -> Set
+--- &(enum) -> Set
+
+共通部分、すなわち、2つの集合のいずれにも属するすべての要素からなる
+新しい集合を作ります。
+
+@param enum each メソッドが定義されたオブジェクトを指定します。
+@raise NoMethodError 引数 enum に each メソッドが定義されていない場合に
+       発生します。
+
+  s1 = Set[10, 20, 30]
+  s2 = Set[10, 30, 50]
+  p s1 & s2 #=> #<Set: {30, 10}>
+

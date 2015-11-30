@@ -1,0 +1,9 @@
+kind=defined
+names=cstime
+visibility=public
+
+--- cstime -> Float
+終了した子プロセスのシステム CPU 時間の合計(秒)を返します。
+
+Windows 上では常に 0 を返します。
+

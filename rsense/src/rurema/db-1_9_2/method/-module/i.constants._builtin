@@ -1,0 +1,39 @@
+kind=defined
+names=constants
+visibility=public
+
+--- constants(inherit = true) -> [Symbol]
+
+そのモジュール(またはクラス)で定義されている定数名の配列を返します。
+
+@param inherit true を指定するとスーパークラスや include したモジュールで
+       定義された定数が対象にはなります。false を指定した場合 対象にはなりません。
+
+@see [[m:Module.constants]], [[m:Kernel.#local_variables]], [[m:Kernel.#global_variables]], [[m:Object#instance_variables]], [[m:Module#class_variables]]
+
+ Module.constants と Module#constants の違い
+
+  # 出力の簡略化のため起動時の定数一覧を取得して後で差し引く
+  $clist = Module.constants
+
+  class Foo
+    FOO = 1
+  end
+  class Bar
+    BAR = 1
+
+    # Bar は BAR を含む
+    p constants - $clist                # => [:BAR]
+    # 出力に FOO は含まれない
+    p Module.constants - $clist         # => [:BAR, :Bar, :Foo]
+    class Baz
+      # Baz は定数を含まない
+      p constants - $clist              # => []
+
+      # ネストしたクラスでは、外側のクラスで定義した定数は
+      # 参照可能なので、BAR は、Module.constants には含まれる
+      # (クラス Baz も Bar の定数なので同様)
+      p Module.constants - $clist       # => [:BAR, :Baz, :Foo, :Bar]
+    end
+  end
+

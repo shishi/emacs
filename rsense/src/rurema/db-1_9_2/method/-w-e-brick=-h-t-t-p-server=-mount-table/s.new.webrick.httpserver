@@ -1,0 +1,8 @@
+kind=defined
+names=new
+visibility=public
+
+--- new -> WEBrick::HTTPServer::MountTable
+
+自身を初期化します。
+

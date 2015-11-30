@@ -1,0 +1,20 @@
+superclass=Object
+type=class
+library=_builtin
+extended=
+included=
+
+正規表現のクラス。正規表現のリテラルはスラッシュで囲んだ形式
+で記述します。
+
+  /^this is regexp/
+
+Regexp.new(string) を使って正規表現オブジェクトを動的に生成する
+こともできます。
+
+  str = "this is regexp"
+  rp1 = Regexp.new("^this is regexp")
+  p rp1 =~ str           #=> 0
+  p Regexp.last_match[0] #=> "this is regexp"
+
+[[d:spec/regexp]] や [[ref:d:spec/literal#regexp]] も参照してください。

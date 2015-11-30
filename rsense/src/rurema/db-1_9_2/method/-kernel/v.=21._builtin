@@ -1,0 +1,14 @@
+kind=defined
+names=!
+visibility=public
+
+--- $! -> Exception | nil
+
+最後に例外が発生したときの [[c:Exception]] オブジェクトです。
+該当する例外がないときは nil です。
+
+[[m:Kernel.#raise]] によって設定されます。
+
+この変数はスレッドローカル、読み取り専用です。
+
+

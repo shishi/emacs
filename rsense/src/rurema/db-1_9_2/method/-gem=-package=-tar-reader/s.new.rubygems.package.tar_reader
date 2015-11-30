@@ -1,0 +1,11 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(io) -> Gem::Package::TarReader
+
+io に関連付けて [[c:Gem::Package::TarReader]] を初期化します。
+
+@param io pos, eof?, read, getc, pos= というインスタンスメソッドを持つ
+          オブジェクトを指定します。
+

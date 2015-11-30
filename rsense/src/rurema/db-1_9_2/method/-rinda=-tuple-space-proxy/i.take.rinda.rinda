@@ -1,0 +1,8 @@
+kind=defined
+names=take
+visibility=public
+
+--- take(tuple, sec = nil){|template| ... }
+
+詳細は [[m:Rinda::TupleSpace#take]] 参照
+

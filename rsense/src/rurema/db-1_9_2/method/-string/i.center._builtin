@@ -1,0 +1,27 @@
+kind=defined
+names=center
+visibility=public
+
+--- center(width, padding = ' ') -> String
+
+長さ width の文字列に self を中央寄せした文字列を返します。
+self の長さが width より長い時には元の文字列の複製を返します。
+また、第 2 引数 padding を指定したときは
+空白文字の代わりに padding を詰めます。
+
+@param width      返り値の文字列の最小の長さ
+@param padding    長さが width になるまで self の両側に詰める文字
+
+例:
+
+  p "foo".center(10)       # => "   foo    "
+  p "foo".center(9)        # => "   foo   "
+  p "foo".center(8)        # => "  foo   "
+  p "foo".center(7)        # => "  foo  "
+  p "foo".center(3)        # => "foo"
+  p "foo".center(2)        # => "foo"
+  p "foo".center(1)        # => "foo"
+  p "foo".center(10, "*")  # => "***foo****"
+
+@see [[m:String#ljust]], [[m:String#rjust]]
+

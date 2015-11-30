@@ -1,0 +1,8 @@
+kind=defined
+names=MAX_MEM_LEVEL
+visibility=public
+
+--- MAX_MEM_LEVEL -> Fixnum
+
+[[m:Zlib::Deflate.new]] 等に渡す、memory level を表す整数です。
+

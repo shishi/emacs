@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rubygems.uninstaller
+extended=
+included=Gem=UserInteraction
+
+Gem のアンインストールを行うためのクラスです。

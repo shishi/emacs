@@ -1,0 +1,14 @@
+kind=defined
+names=close_on_empty_response=
+visibility=public
+
+--- close_on_empty_response=(bool)
+レスポンスがボディを持っていない場合にコネクションを
+閉じるかどうかを設定します。
+
+
+@param bool レスポンスがボディを持っていない場合にコネクションを
+            閉じるかどうか指定します。
+
+@see [[m:Net::HTTP#close_on_empty_response]]
+

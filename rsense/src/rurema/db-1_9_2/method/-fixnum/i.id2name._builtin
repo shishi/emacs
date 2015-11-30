@@ -1,0 +1,28 @@
+kind=defined
+names=id2name
+visibility=public
+
+--- id2name -> String | nil
+
+オブジェクトの整数値 self を、ある [[c:Symbol]] オブジェクトに対応する整数値とみなした上で、
+そのシンボルを示す文字列を返します。
+整数に対応するシンボルは必ずしも存在せず、その場合は nil を返します。
+
+
+@return オブジェクト名を示す文字列か nil
+
+例:
+
+  :foo.to_i      #=> 14585
+  14585.id2name  #=> "foo"
+  1.id2name      #=> nil
+
+[[m:Fixnum#to_sym]] で得たシンボルに対して
+[[m:Symbol#to_s]] で文字列にしたものとおおかた一致しますが、
+nil のときの挙動が異なります。
+
+例:
+
+  1.id2name     #=> nil
+  1.to_sym.to_s #=> ""
+

@@ -1,0 +1,12 @@
+kind=redefined
+names=rsqrt
+visibility=public
+
+--- rsqrt(a) -> Numeric
+
+複素数を考慮しないので、負の数や Complex をあたえないでください。
+
+a が Float の時は、Float を返します。
+それ以外の時、平方根が有理数であれば、Rational または Integer を返します。
+無理数であれば、Float を返します。
+

@@ -1,0 +1,9 @@
+kind=defined
+names=fdatasync
+visibility=public
+
+--- fdatasync -> 0 | nil
+
+IO のすべてのバッファされているデータを直ちにディスクに書き込みます。
+
+@raise NotImplementedError [[man:fdatasync(2)]] がサポートされていない OS で発生します。

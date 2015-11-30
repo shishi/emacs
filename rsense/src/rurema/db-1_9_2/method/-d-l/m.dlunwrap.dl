@@ -1,0 +1,17 @@
+kind=defined
+names=dlunwrap
+visibility=public
+
+--- dlunwrap(addr)  -> object
+
+指定されたアドレスの Ruby オブジェクトを返します。
+
+@param addr [[m:DL.#dlwrap]] が返した Ruby オブジェクトのアドレス(整数)を指定します。
+
+例:
+
+  require 'dl'
+  s = 'abc'
+  p addr = DL.dlwrap(s)   #=> 136122440
+  p DL.dlunwrap(addr)     #=> "abc"
+

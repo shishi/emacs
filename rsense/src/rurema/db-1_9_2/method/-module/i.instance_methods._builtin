@@ -1,0 +1,60 @@
+kind=defined
+names=instance_methods
+visibility=public
+
+--- instance_methods(inherited_too = true) -> [Symbol]
+
+そのモジュールで定義されている public および protected メソッド名
+の一覧を配列で返します。
+
+@param inherited_too false を指定するとそのモジュールで定義されているメソッドのみ返します。
+
+@see [[m:Object#methods]]
+
+例1:
+
+  class Foo
+    private;   def private_foo()   end
+    protected; def protected_foo() end
+    public;    def public_foo()    end
+  end
+
+  # あるクラスのインスタンスメソッドの一覧を得る
+  p Foo.instance_methods(false)
+  p Foo.public_instance_methods(false)
+  p Foo.private_instance_methods(false)
+  p Foo.protected_instance_methods(false)
+
+  class Bar < Foo
+  end
+
+実行結果
+
+     [:protected_foo, :public_foo]
+     [:public_foo]
+     [:private_foo]
+     [:protected_foo]
+
+例2:
+
+  class Bar
+    private;   def private_foo()   end
+    protected; def protected_foo() end
+    public;    def public_foo()    end
+  end
+
+  # あるクラスのインスタンスメソッドの一覧を得る。
+  # 親のクラスのインスタンスメソッドも含めるため true を指定して
+  # いるが、Object のインスタンスメソッドは一覧から排除している。
+  p Bar.instance_methods(true)           - Object.instance_methods(true)
+  p Bar.public_instance_methods(true)    - Object.public_instance_methods(true)
+  p Bar.private_instance_methods(true)   - Object.private_instance_methods(true)
+  p Bar.protected_instance_methods(true) - Object.protected_instance_methods(true)
+
+実行結果
+
+     [:protected_foo, :public_foo]
+     [:public_foo]
+     [:private_foo]
+     [:protected_foo]
+

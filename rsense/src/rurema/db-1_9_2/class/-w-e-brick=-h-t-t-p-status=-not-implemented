@@ -1,0 +1,7 @@
+superclass=WEBrick=HTTPStatus=ServerError
+type=class
+library=webrick.httpstatus
+extended=
+included=
+
+HTTP のステータスコード 501 Not Implemented を表すクラスです。

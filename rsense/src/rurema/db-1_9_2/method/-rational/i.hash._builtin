@@ -1,0 +1,10 @@
+kind=defined
+names=hash
+visibility=public 
+
+--- hash -> Integer
+
+自身のハッシュ値を返します。
+
+@return ハッシュ値を返します。
+

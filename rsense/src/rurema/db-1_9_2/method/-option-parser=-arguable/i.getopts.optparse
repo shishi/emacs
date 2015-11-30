@@ -1,0 +1,34 @@
+kind=defined
+names=getopts
+visibility=public
+
+--- getopts(short_opt, *long_opt)    -> Hash
+
+指定された short_opt や long_opt に応じて自身をパースし、結果を Hash として返します。
+
+コマンドラインに - もしくは -- を指定した場合、それ以降の解析を行ないません。
+
+@param short_opt ショートネームのオプション(-f や -fx)を文字列で指定します。オプションが -f と -x の
+                 2つの場合は "fx" の様に指定します。ここでオプションがないときは空文字列を指定します。
+                 オプションが引数をとる場合は直後に ":" を付けます。
+
+@param long_opt ロングネームのオプション(--version や --bufsize=512)を文字列で指定をします。
+                オプションが引数をとる場合は後ろに ":" を付けます。
+                オプションの引数のデフォルト値を ":" の直後に指定することができます。
+                例えば、"bufsize:1024" となります。
+
+@raise OptionParser::ParseError 自身のパースに失敗した場合、発生します。
+                                実際は OptionParser::ParseError のサブク
+                                ラスの例外になります。
+
+例:
+
+ # t.rb の内容
+ require 'optparse'
+ params = ARGV.getopts("ab:", "foo", "bar:", "bufsize:1024")
+ p params
+
+ # 実行結果
+ $ ruby t.rb -b 1 --foo  --bar xxx -- -a
+ {"bufsize"=>"1024", "a"=>false, "b"=>"1", "foo"=>true, "bar"=>"xxx"}  # "a"=>false であることに注意。
+

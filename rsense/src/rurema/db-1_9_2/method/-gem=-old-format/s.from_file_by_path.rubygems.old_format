@@ -1,0 +1,10 @@
+kind=defined
+names=from_file_by_path
+visibility=public
+
+--- from_file_by_path(file_path) -> Gem::OldFormat
+
+Gem ファイルのパスからデータを読み込んで、自身を初期化して返します。
+
+@param file_path Gem ファイルへのパスを指定します。
+

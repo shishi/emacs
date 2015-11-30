@@ -1,0 +1,18 @@
+superclass=Object
+type=class
+library=openssl
+extended=
+included=Enumerable
+
+OpenSSL の設定ファイルを表すクラスです。
+
+OpenSSL の設定ファイルは、キーと文字列を対応付けた単純な構造をしています。
+また、キーはセクションによってグループ分けされています。
+どのセクションにも属さないグローバルなキーを作ることもできます。
+
+デフォルトの設定ファイルを読み込む例
+  require 'openssl'
+  conf = OpenSSL::Config.load(OpenSSL::Config::DEFAULT_CONFIG_FILE)
+  p conf.sections # => ["req_distinguished_name", "req_attributes", "proxy_cert_ext", "policy_anything", "CA_default", ...]
+  p conf.get_value("", "HOME") # => "." 
+  p conf.get_value("CA_default", "default_days") # => "365"

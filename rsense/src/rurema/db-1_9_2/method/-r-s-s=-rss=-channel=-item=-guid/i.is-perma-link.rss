@@ -1,0 +1,8 @@
+kind=defined
+names=isPermaLink
+visibility=public
+
+--- isPermaLink
+
+ * [[url:http://purl.org/dc/elements/1.1/]]
+

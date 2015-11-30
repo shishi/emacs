@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=
+classes=Win32API
+is_sublibrary=false
+
+Win32 API を呼び出すためのライブラリです。

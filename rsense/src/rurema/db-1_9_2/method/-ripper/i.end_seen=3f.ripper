@@ -1,0 +1,9 @@
+kind=defined
+names=end_seen?
+visibility=public
+
+--- end_seen? -> bool
+
+これまでに解析した Ruby プログラムの中に __END__ が含まれていたかどうか
+を返します。
+

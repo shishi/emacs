@@ -1,0 +1,16 @@
+kind=defined
+names=search
+visibility=public 
+
+--- search(pattern, platform_only = false, all = false) -> [Gem::Specification]
+
+与えられた条件を満たす [[c:Gem::Specification]] のリストを返します。
+
+@param pattern 検索したい Gem を表す [[c:Gem::Dependency]] のインスタンスを指定します。
+
+@param platform_only 真を指定するとプラットフォームが一致するもののみを返します。デフォルトは偽です。
+
+@param all 真を指定するとキャッシュを更新してから検索を実行します。
+
+@see [[m:Gem::SourceIndex#search]]
+

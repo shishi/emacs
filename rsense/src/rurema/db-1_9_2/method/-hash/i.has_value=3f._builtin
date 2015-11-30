@@ -1,0 +1,17 @@
+kind=defined
+names=has_value?,value?
+visibility=public
+
+--- has_value?(value) -> bool
+--- value?(value)     -> bool
+
+ハッシュが value を値として持つ時真を返します。
+値の一致判定は == で行われます。
+
+@param value 探索する値を指定します。
+
+  p({1 => "one"}.has_value?("one")) #=> true
+  p({1 => "one"}.has_value?("two")) #=> false
+
+@see [[m:Hash#has_key?]]
+

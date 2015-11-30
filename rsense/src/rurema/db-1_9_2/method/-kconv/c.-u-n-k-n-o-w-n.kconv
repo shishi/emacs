@@ -1,0 +1,9 @@
+kind=defined
+names=UNKNOWN
+visibility=public
+
+--- UNKNOWN -> nil
+
+出力においては「エンコーディングを判定できなかった」
+入力においては AUTO と同様に「自動検出」を表します。
+

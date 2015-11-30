@@ -1,0 +1,10 @@
+kind=defined
+names=max_nesting
+visibility=public 
+
+--- max_nesting -> Integer
+
+生成される JSON 形式の文字列のネストの深さの最大値を返します。
+
+この値がゼロである場合は、ネストの深さのチェックを行いません。
+

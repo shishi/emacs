@@ -1,0 +1,13 @@
+kind=defined
+names=list
+visibility=public
+
+--- list    -> Hash
+
+シグナル名とシグナル番号を対応づけた [[c:Hash]] オブジェクトを返し
+ます。
+
+例:
+
+  p Signal.list   # => {"WINCH"=>28, "PROF"=>27, ...}
+

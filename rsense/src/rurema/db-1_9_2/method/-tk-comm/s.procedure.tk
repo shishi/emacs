@@ -1,0 +1,6 @@
+kind=defined
+names=procedure
+visibility=public
+
+--- procedure(val)
+

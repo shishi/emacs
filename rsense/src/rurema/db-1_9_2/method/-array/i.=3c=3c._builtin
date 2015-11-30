@@ -1,0 +1,21 @@
+kind=defined
+names=<<
+visibility=public
+
+--- <<(obj)    -> self
+
+指定された obj を自身の末尾に破壊的に追加します。[[m:Array#push]] と同じです。
+
+  ary = [1]
+  ary << 2
+  p ary      # [1, 2]
+
+またこのメソッドは self を返すので、以下のように連続して
+書くことができます。
+
+  ary = [1]
+  ary << 2 << 3 << 4
+  p ary   #=> [1, 2, 3, 4]
+
+@param obj 自身に加えたいオブジェクトを指定します。
+

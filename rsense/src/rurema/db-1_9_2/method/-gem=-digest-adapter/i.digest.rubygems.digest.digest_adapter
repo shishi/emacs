@@ -1,0 +1,10 @@
+kind=defined
+names=digest
+visibility=public 
+
+--- digest(string) -> String
+
+与えられた文字列のダイジェストを返します。
+
+@param string ダイジェストを取得したい文字列を指定します。
+

@@ -1,0 +1,8 @@
+kind=defined
+names=DIG
+visibility=public
+
+--- DIG -> Fixnum
+
+Float が表現できる最大の 10 進桁数
+

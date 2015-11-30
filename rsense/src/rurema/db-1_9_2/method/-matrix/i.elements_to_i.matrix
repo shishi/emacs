@@ -1,0 +1,7 @@
+kind=defined
+names=elements_to_i
+visibility=public
+
+--- elements_to_i -> Array
+各要素を整数 [[c:Integer]] に変換した行列を返します。
+

@@ -1,0 +1,10 @@
+kind=defined
+names=FNM_DOTMATCH
+visibility=public
+
+--- FNM_DOTMATCH
+ワイルドカード `*', `?', `[]' が先頭の `.' にマッチするようになります。
+[[m:File.fnmatch]], [[m:Dir.glob]]で使用します。
+
+1.8.0以前では、FNM_DOTMATCHという名前でした。
+

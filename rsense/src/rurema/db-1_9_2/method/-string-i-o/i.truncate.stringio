@@ -1,0 +1,22 @@
+kind=defined
+names=truncate
+visibility=public
+
+--- truncate(len)    -> Integer
+
+自身のサイズが len になるように、自身を切り詰め、もしくは拡大します。
+拡大した場合は、その部分を 0 で埋めます。
+len を返します。
+
+@param len 変更したいサイズを整数で指定します。
+
+@raise IOError 自身が書き込み可能でない時に発生します。
+
+@raise Errno::EINVAL len がマイナスの時に発生します。
+
+  a = StringIO.new("hoge", 'r+')
+  a.truncate(2)
+  a.string                       #=> "ho"
+  a.truncate(5)
+  a.string                       #=> "ho\000\000\000"
+

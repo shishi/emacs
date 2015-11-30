@@ -1,0 +1,11 @@
+kind=defined
+names=load_rdoc
+visibility=public
+
+--- load_rdoc
+
+Gem の RDoc が使用可能な場合は使用します。
+そうでない場合は、標準添付の RDoc を使用します。
+
+@raise Gem::DocumentError RDoc が使用できない場合に発生します。
+

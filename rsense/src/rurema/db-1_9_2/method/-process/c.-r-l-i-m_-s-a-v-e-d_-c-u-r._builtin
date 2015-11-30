@@ -1,0 +1,8 @@
+kind=defined
+names=RLIM_SAVED_CUR
+visibility=public
+
+--- RLIM_SAVED_CUR
+
+[[m:Process.#getrlimit]], [[m:Process.#setrlimit]] で使われます。詳しくは [[man:setrlimit(2)]] を参照して下さい。
+

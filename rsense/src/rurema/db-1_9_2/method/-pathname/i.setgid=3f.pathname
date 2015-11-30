@@ -1,0 +1,9 @@
+kind=defined
+names=setgid?
+visibility=public
+
+--- setgid? -> bool
+FileTest.setgid?(self.to_s) と同じです。
+
+@see [[m:FileTest.#setgid?]]
+

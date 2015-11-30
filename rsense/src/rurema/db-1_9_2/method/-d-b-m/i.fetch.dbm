@@ -1,0 +1,25 @@
+kind=defined
+names=fetch
+visibility=public
+
+--- fetch(key, ifnone = nil) -> String
+
+データベースからキーを探して対応する要素の値を返します。
+
+@param key    キー。
+@param ifnone キーが見つからなかった場合に返す値。
+
+@raise IndexError ifnone を指定していないとき、キーが見つからなかった場合に発生します。
+
+  require 'dbm'
+  
+  db1 = DBM.open('aaa.db', 0666, DBM::NEWDB)
+  db1[:a] = 'aaa'
+  db1[:b] = 'bbbbbb'
+  p db1.fetch('a')                     #=> 'aaa'
+  p db1.fetch('z', 'zzz')              #=> 'zzz'
+  p db1.fetch('z'){|key| [:key, key] } #=> [:key, 'z']
+  p db1.fetch('z')                     #=> IndexError 発生
+
+@see [[m:Hash#fetch]]
+

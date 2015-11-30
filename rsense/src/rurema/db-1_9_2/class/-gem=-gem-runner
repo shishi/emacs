@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rubygems.gem_runner
+extended=
+included=
+
+gem コマンドを実行するためのクラスです。

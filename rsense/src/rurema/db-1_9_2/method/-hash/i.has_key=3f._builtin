@@ -1,0 +1,18 @@
+kind=defined
+names=has_key?,include?,key?,member?
+visibility=public
+
+--- has_key?(key) -> bool
+--- include?(key) -> bool
+--- key?(key)     -> bool
+--- member?(key)  -> bool
+
+ハッシュが key をキーとして持つ時真を返します。
+
+@param key 探索するキーを指定します。
+
+  p({1 => "one"}.has_key?(1)) #=> true
+  p({1 => "one"}.has_key?(2)) #=> false
+
+@see [[m:Hash#has_value?]]
+

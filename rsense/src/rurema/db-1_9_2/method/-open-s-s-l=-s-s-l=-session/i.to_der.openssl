@@ -1,0 +1,10 @@
+kind=defined
+names=to_der
+visibility=public
+
+--- to_der -> String
+自身を DER 形式に変換します。
+
+これによってセッションキャッシュをディスク上に保持することができます。
+
+@raise OpenSSL::SSL::Session::SessionError 変換に失敗した場合に発生します

@@ -1,0 +1,6 @@
+kind=defined
+names=has_name?
+visibility=public
+
+--- has_name?(other, ns = nil)
+

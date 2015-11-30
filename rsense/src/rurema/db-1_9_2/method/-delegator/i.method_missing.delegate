@@ -1,0 +1,16 @@
+kind=defined
+names=method_missing
+visibility=public
+
+--- method_missing(m, *args) -> object
+
+渡されたメソッド名と引数を使って、[[m:Delegator#__getobj__]] が返すオブジェクトへメソッド委譲を行います。
+
+@param m メソッドの名前（シンボル）
+
+@param args メソッドに渡された引数
+
+@return 委譲先のメソッドからの返り値
+
+@see [[m:Object#method_missing]]
+

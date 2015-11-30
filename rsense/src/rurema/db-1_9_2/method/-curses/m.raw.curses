@@ -1,0 +1,13 @@
+kind=defined
+names=raw
+visibility=public
+
+--- raw -> nil
+
+[[m:Curses.#cbreak]] と同様に、キーボード入力のバッファリングをやめ、
+ユーザの入力を即座に処理できるようにします。なおかつ、
+割り込み(Ctrl-C)、サスペンド(Ctrl-Z) などの特殊キーの処理をやめます。
+この状態のことを「raw」モードといいます。
+
+@see [[m:Curses.#cbreak]]、[[m:Curses.#noraw]]
+

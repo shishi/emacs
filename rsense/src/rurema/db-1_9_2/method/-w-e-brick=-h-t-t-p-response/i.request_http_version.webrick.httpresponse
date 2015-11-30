@@ -1,0 +1,8 @@
+kind=defined
+names=request_http_version
+visibility=public
+
+--- request_http_version           -> WEBrick::HTTPVersion
+リクエストの HTTP バージョンを返します。
+デフォルトでは自身の [[m:WEBrick::HTTPResponse#http_version]] が使われます。
+

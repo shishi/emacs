@@ -1,0 +1,11 @@
+kind=defined
+names=METHODS
+visibility=public
+
+--- METHODS -> [Symbol]
+利用可能なメソッド(プロトコル)を [[c:Symbol]] の配列で返します。
+
+  require 'openssl'
+  OpenSSL::SSL::SSLContext::METHODS
+  # => [:TLSv1, :TLSv1_server, :TLSv1_client, :SSLv2, :SSLv2_server, ...]
+

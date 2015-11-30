@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=net.smtp
+extended=
+included=
+
+[[c:Net::SMTP]] の内部用クラスです。

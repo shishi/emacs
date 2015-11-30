@@ -1,0 +1,20 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(host = nil, user = nil, passwd = nil, acct = nil) -> Net::FTP
+
+新しい Net::FTP のインスタンスを生成します。
+
+host が指定された場合、生成されたインスタンスに対して 
+[[m:Net::FTP#connect]] を呼び出し、
+さらに user が指定された場合は [[m:Net::FTP#login]] 
+を呼び出します。
+
+@param host 接続するホストを指定します。
+@param user ログインに使うユーザ名を指定します。
+@param passwd ログインに使うパスワードを指定します。
+@param acct ログイン後に送る ACCT コマンドのパラメータを指定します。
+
+@see [[m:Net::FTP.open]]
+

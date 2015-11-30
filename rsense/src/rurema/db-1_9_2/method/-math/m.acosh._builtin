@@ -1,0 +1,16 @@
+kind=defined
+names=acosh
+visibility=public
+
+--- acosh(x) -> Float
+
+x の逆双曲線余弦関数の値を返します。
+
+=== 定義
+
+    acosh(x) = log(x + sqrt(x * x - 1)) [x >= 1]
+
+@param x x >= 1 の範囲の実数
+
+@raise Errno::EDOM 範囲外の値を引数に指定した場合に発生します
+

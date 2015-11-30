@@ -1,0 +1,15 @@
+kind=defined
+names=NI_DGRAM,NI_MAXHOST,NI_MAXSERV,NI_NAMEREQD,NI_NOFQDN,NI_NUMERICHOST,NI_NUMERICSERV
+visibility=public
+
+--- NI_DGRAM
+--- NI_MAXHOST
+--- NI_MAXSERV
+--- NI_NAMEREQD
+--- NI_NOFQDN
+--- NI_NUMERICHOST
+--- NI_NUMERICSERV
+
+Socket.getnameinfoの第2引数 flags に与える定数です。
+[[man:getnameinfo(3)]]も参照して下さい。
+

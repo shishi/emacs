@@ -1,0 +1,10 @@
+kind=defined
+names=name=
+visibility=public
+
+--- name=(name)
+
+この Gem パッケージの名前をセットします。
+
+@param name この Gem パッケージの名前を指定します。
+

@@ -1,0 +1,6 @@
+kind=defined
+names=_set_variable2
+visibility=public
+
+--- _set_variable2(var_name, index_name, value, flag)
+

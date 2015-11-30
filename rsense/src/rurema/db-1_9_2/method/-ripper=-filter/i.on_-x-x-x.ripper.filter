@@ -1,0 +1,21 @@
+kind=defined
+names=on_XXX
+visibility=private 
+
+--- on_XXX(token, data) -> object
+
+各種スキャナイベントを実行します。
+
+実際には on_XXX というメソッドは存在しません。「XXX」の部分を
+[[m:Ripper::SCANNER_EVENTS]] にあるスキャナイベントに読み替えてください。
+
+@param token 現在のトークンが指定されます。
+
+@param data 前のイベントハンドラの戻り値です。最初のイベントの場合は
+            [[m:Ripper::Filter#parse]] の引数になります。
+
+オーバライドしなかった場合は on_default が実行されます。
+
+このメソッドの戻り値は次のイベントハンドラの data 引数に渡されます。
+
+@see [[m:Ripper::Filter#parse]], [[m:Ripper::Filter#on_default]], [[m:Ripper::SCANNER_EVENTS]]

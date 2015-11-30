@@ -1,0 +1,29 @@
+kind=defined
+names=ungetc
+visibility=public
+
+--- ungetc(ch)    -> nil
+
+整数で指定された文字 ch を自身に書き戻します。
+nil を返します。
+
+何回でも書き戻すことが可能です。
+現在位置が自身のサイズよりも大きい場合は、自身をリサイズしてから、ch を書き戻します。
+また現在位置が 0 である場合は何も行いません。
+
+@param ch 書き戻したい文字を整数で指定します。
+
+@raise IOError 自身が読み込み可能でない時に発生します。
+
+      s = StringIO.new("hoge")
+      s.pos = 1
+      s.ungetc(?H)
+      p s.string   #=> "Hoge"
+      p s.pos        #=> 0
+
+      s = StringIO.new("hoge")
+      s.pos = 8
+      s.ungetc(?A)
+      p s.string   #=> "hoge\000\000\000A"
+      p s.pos        #=> 7
+

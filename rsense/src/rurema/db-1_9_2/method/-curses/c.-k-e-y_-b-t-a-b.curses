@@ -1,0 +1,8 @@
+kind=defined
+names=KEY_BTAB
+visibility=public
+
+--- KEY_BTAB -> Integer
+
+Back TAB キーを表す定数です。
+

@@ -1,0 +1,18 @@
+kind=defined
+names=+
+visibility=public
+
+--- +(other)    -> Array
+
+自身と other の内容を繋げた配列を生成して返します。
+
+@param other 自身と繋げたい配列を指定します。other が配列でなければ other.to_ary の戻り値を用います。
+
+@raise TypeError other が配列でなく、さらに other.to_ary の戻り値がまた配列でなかった場合に発生します。
+
+    a = [1, 2]
+    b = [8, 9]
+    p a + b     #=> [1, 2, 8, 9]
+    p a         #=> [1, 2]        (変化なし)
+    p b         #=> [8, 9]        (こちらも変化なし)
+

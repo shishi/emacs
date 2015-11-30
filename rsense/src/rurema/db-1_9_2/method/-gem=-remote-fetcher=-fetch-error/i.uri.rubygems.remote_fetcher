@@ -1,0 +1,8 @@
+kind=defined
+names=uri
+visibility=public
+
+--- uri -> URI
+
+問題が発生した URI を返します。
+

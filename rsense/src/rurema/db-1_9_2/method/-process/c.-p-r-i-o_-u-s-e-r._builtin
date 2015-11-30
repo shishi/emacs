@@ -1,0 +1,10 @@
+kind=defined
+names=PRIO_USER
+visibility=public
+
+--- PRIO_USER
+
+対象とするプライオリティがユーザプライオリティであることを表す定数です。
+
+[[m:Process.#getpriority]] または [[m:Process.#setpriority]] で使われます。
+

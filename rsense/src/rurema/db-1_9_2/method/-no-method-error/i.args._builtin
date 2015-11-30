@@ -1,0 +1,23 @@
+kind=defined
+names=args
+visibility=public
+
+--- args -> [object]
+
+メソッド呼び出しに使われた引数を配列で返します。
+
+例:
+
+  begin
+    foobar(1,2,3)
+  rescue NoMethodError
+    p $!
+    p $!.name
+    p $!.args
+  end
+  
+  # => #<NoMethodError: undefined method `foobar' for main:Object>
+       :foobar
+       [1, 2, 3]
+
+

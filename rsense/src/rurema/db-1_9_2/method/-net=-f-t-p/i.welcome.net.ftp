@@ -1,0 +1,10 @@
+kind=defined
+names=welcome
+visibility=public
+
+--- welcome -> String
+サーバのウェルカムメッセージを返します。
+
+このメッセージはログイン([[m:Net::FTP#login]])時に
+サーバから送られます。
+

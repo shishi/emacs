@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rake
+extended=
+included=Comparable,Singleton
+
+このクラスは全てのタイムスタンプより前の時刻をあらわします。

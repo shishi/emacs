@@ -1,0 +1,12 @@
+kind=defined
+names=content_type=,set_content_type
+visibility=public
+
+--- content_type=(type)
+--- set_content_type(type, params = {})
+type と params から Content-Type: ヘッダフィールドの
+値を設定します。
+
+@param type メディアタイプを文字列で指定します。
+@param params パラメータ属性をハッシュで指定します。
+

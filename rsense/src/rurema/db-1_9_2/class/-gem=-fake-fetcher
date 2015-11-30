@@ -1,0 +1,9 @@
+superclass=Object
+type=class
+library=rubygems.test_utilities
+extended=
+included=
+
+[[c:Gem::RemoteFetcher]] を置き換えるテスト用のクラスです。
+
+使用例が見たい場合はテストコードを参照してください。

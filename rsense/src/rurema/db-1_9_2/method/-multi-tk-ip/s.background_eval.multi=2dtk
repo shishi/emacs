@@ -1,0 +1,7 @@
+kind=defined
+names=background_eval,bg_eval
+visibility=public
+
+--- bg_eval(*args, &block)
+--- background_eval(*args, &block)
+

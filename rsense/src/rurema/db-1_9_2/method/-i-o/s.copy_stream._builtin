@@ -1,0 +1,29 @@
+kind=defined
+names=copy_stream
+visibility=public
+
+--- copy_stream(src, dst, copy_length = nil)             -> Integer
+--- copy_stream(src, dst, copy_length, src_offset) -> Integer
+
+指定された src から dst へコピーします。
+コピーしたバイト数を返します。
+
+コピー元の src が IO オブジェクトの場合は、src のオフセットから
+ファイル名の場合はファイルの最初からコピーを開始します。
+コピー先の dst に関しても同様です。
+
+dst にファイル名を指定し、そのファイルが存在しない場合、
+ファイルは作成されます。ファイルが存在する場合は長さ 0 に切り詰められます。
+
+src が IO オブジェクトでかつ src_offset が指定されている場合、
+src のオフセット(src.pos)は変更されません。
+
+@param src コピー元となる IO オブジェクトかファイル名を指定します。
+
+@param dst コピー先となる IO オブジェクトかファイル名を指定します。
+
+@param copy_length コピーする長さをバイト単位で指定します。最大 copy_length までコピーされます。
+                   nil を指定した場合、コピーする長さに制限はありません。
+
+@param src_offset  コピーを始めるオフセットを数値で指定します。
+

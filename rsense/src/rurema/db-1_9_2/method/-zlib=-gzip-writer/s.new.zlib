@@ -1,0 +1,27 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(io, level = Zlib::DEFAULT_COMPRESSION, strategy = Zlib::DEFAULT_STRATEGY) -> Zlib::GzipWriter
+
+io と関連付けられた GzipWriter オブジェクトを作成します。
+level, strategy は [[m:Zlib::Deflate.new]] と同じです。
+GzipWriter オブジェクトは io に gzip 形式のデータを
+逐次ライトします。io には少なくとも、[[m:IO#write]] と
+同じ動作をする write メソッドが定義されている必要があります。
+
+@param io  IOオブジェクト、もしくは少なくとも、
+           [[m:IO#write]] と 同じ動作をする write メソッドが定義されている必要があります。
+@param level  0-9の範囲の整数を指定します。詳細はzlib.hを参照してください。 
+@param strategy [[m:Zlib::FILTERED]], [[m:Zlib::HUFFMAN_ONLY]], [[m:Zlib::DEFAULT_STRATEGY]]など指定します。詳細はzlib.h を>参照してください。
+
+  require 'zlib'
+
+  filename='hoge1.gz'
+  f = File.open(filename, "w")
+  gz = Zlib::GzipWriter.new(f)
+  gz.puts "hogehoge" * 100
+  gz.close  
+  p gz.closed? #=> true
+  p FileTest.size(filename) #=> 32
+

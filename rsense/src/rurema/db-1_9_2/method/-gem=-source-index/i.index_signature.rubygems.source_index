@@ -1,0 +1,10 @@
+kind=defined
+names=index_signature
+visibility=public
+
+--- index_signature -> String
+
+ソースインデックスの SHA256 ダイジェストを返します。
+
+この値はインデックスが変更されると変化します。
+

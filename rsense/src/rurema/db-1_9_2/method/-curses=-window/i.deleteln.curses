@@ -1,0 +1,8 @@
+kind=defined
+names=deleteln
+visibility=public
+
+--- deleteln -> nil
+
+ウィンドウの、カーソルがある行を消去します。
+

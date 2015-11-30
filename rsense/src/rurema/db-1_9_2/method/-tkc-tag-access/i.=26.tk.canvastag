@@ -1,0 +1,14 @@
+kind=defined
+names=&
+visibility=public
+
+--- &(tag)
+
+Following operators support logical expressions of canvas tags
+(for Tk8.3+). If tag1.path is 't1' and tag2.path is 't2', then
+
+     ltag = tag1 & tag2; ltag.path => "(t1)&&(t2)"
+     ltag = tag1 | tag2; ltag.path => "(t1)||(t2)"
+     ltag = tag1 ^ tag2; ltag.path => "(t1)^(t2)"
+     ltag = - tag1;      ltag.path => "!(t1)"
+

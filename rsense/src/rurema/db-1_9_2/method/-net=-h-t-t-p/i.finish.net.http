@@ -1,0 +1,11 @@
+kind=defined
+names=finish
+visibility=public
+
+--- finish -> ()
+
+HTTP セッションを終了します。セッション開始前にこのメソッドが
+呼ばれた場合は例外 IOError を発生します。
+
+@raise IOError セッション開始前に呼ぶと発生します。
+

@@ -1,0 +1,14 @@
+kind=defined
+names=set_error
+visibility=protected 
+
+--- set_error(type, message) -> ()
+
+引数で与えられた例外を発生させます。
+
+その際、静粛モードでなければ標準エラー出力に与えられたメッセージを出力します。
+
+@param type 例外クラスを指定します。
+
+@param message 例外にセットするメッセージを指定します。
+

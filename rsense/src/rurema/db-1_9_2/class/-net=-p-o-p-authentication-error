@@ -1,0 +1,7 @@
+superclass=Net=ProtoAuthError
+type=class
+library=net.pop
+extended=
+included=
+
+POP3 で認証に失敗したときに発生します。

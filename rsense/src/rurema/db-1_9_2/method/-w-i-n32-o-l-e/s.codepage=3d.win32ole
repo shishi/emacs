@@ -1,0 +1,22 @@
+kind=defined
+names=codepage=
+visibility=public
+
+--- codepage=(cp) -> nil
+
+WIN32OLEがOLEオートメーションのインターフェイスに利用するコードページを
+設定します。
+
+WIN32OLEは、OLEオートメーション呼び出しに利用する文字列のUnicode変換に
+ここで設定したコードページを利用します。通常、WIN32OLEはロード時の
+Encoding.default_internalまたはEncoding.default_externalから適切なコー
+ドページを判断し、それを利用します。したがって、当メソッドを呼び出す必
+要があるのは、WIN32OLEをrequireしたスクリプトと異なるエンコーディングを
+利用しているスクリプトや、異なるエンコーディングを利用しているファイル
+から読み込んだ文字列を利用してWIN32OLEを呼び出す場合です。
+
+@param cp コードページを指定します。
+
+
+   WIN32OLE.codepage = WIN32OLE::CP_UTF8
+

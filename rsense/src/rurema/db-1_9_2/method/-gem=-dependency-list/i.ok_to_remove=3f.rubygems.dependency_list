@@ -1,0 +1,16 @@
+kind=defined
+names=ok_to_remove?
+visibility=public 
+
+--- ok_to_remove?(full_name) -> bool
+
+与えられた名前を持つ [[c:Gem::Specification]] を自身から削除しても OK な場合は真を返します。
+そうでない場合は、偽を返します。
+
+与えられた名前を持つ [[c:Gem::Specification]] を自身から削除すると、
+依存関係を壊してしまう場合が、それを削除してはいけない場合です。
+
+@param full_name バージョンを含むフルネームで Gem の名前を指定します。
+
+@see [[m:Gem::Specification#full_name]]
+

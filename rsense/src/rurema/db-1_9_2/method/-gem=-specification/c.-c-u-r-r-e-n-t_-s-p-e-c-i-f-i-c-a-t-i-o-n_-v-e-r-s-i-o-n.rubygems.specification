@@ -1,0 +1,9 @@
+kind=defined
+names=CURRENT_SPECIFICATION_VERSION
+visibility=public
+
+--- CURRENT_SPECIFICATION_VERSION -> 2
+
+現在の gemspec のバージョンを表す定数です。
+
+

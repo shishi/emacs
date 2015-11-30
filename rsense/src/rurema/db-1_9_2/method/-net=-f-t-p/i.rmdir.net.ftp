@@ -1,0 +1,11 @@
+kind=defined
+names=rmdir
+visibility=public
+
+--- rmdir(dirname) -> nil
+リモートサーバ上のディレクトリを削除します。
+
+@param dirname 削除するディレクトリ名を文字列で指定します。
+
+@raise Net::FTPReplyError 応答コードが正しくない場合に発生します。削除に失敗した場合に発生します。
+

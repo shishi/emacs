@@ -1,0 +1,33 @@
+methods=String/i.scanf.scanf,IO/i.scanf.scanf,Kernel/i.scanf.scanf
+sublibraries=
+requires=
+classes=Scanf,Scanf=FormatString,Scanf=FormatSpecifier
+is_sublibrary=false
+
+[[m:String#scan]] のフォーマット指定版といえるメソッド [[m:String#scanf]]
+を定義します。
+
+組み込みクラス [[c:String]] と [[c:IO]] を拡張します。
+
+=== 例
+  require 'scanf'
+  
+  p "a 10  1.2".            scanf("%s %d %f")   # => ["a", 10, 1.2]
+  p "a 10  1.2 b 20 1.5e10".scanf("%s %d %f")   # => ["a", 10, 1.2]
+  p "a 10  1.2 b 20 1.5e10".scanf("%s %d %f") {|*v| v}
+                  # => [["a", 10, 1.2], ["b", 20, 15000000000.0]]
+  
+  p "a 10  1.2 b 20 1.5e10 c".scanf("%s %d %f") {|*v| v}
+                 # => [["a", 10, 1.2], ["b", 20, 15000000000.0], [["c"]]]
+  
+                                                       #    [["c"]] (?)
+  
+  require 'scanf'
+  p "a, 10, 1.2".scanf("%s,%d,%f")
+  # => ["a,"]      %s が "," を飲み込むからダメらしい
+  
+  p "a, 10, 1.2".scanf("%1s,%d,%f")
+  # => ["a", 10, 1.2]
+  
+  p "a, 10, 1.2".scanf("%[^,],%d,%f")
+  # => ["a", 10, 1.2]

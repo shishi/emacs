@@ -1,0 +1,10 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(policy = {}, options = {}) -> Gem::Security::Policy
+
+@param policy モードを指定します。
+
+@param options その他のオプションを指定します。
+

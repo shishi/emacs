@@ -1,0 +1,6 @@
+kind=defined
+names=mainloop_abort_on_exception=
+visibility=public
+
+--- mainloop_abort_on_exception=(mode)
+

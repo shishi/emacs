@@ -1,0 +1,21 @@
+kind=defined
+names=delete_all
+visibility=public
+
+--- delete_all -> ()
+--- delete_all {|popmail| .... } -> ()
+サーバ上のメールを全て消去します。
+
+ブロックを与えられたときは消去する前に各メールを引数としてブロックを呼びだします。
+メールは [[c:Net::POPMail]] のインスタンスとして渡されます。
+
+使用例:
+
+  require 'net/pop'
+
+  n = 1
+  pop.delete_all do |m|
+    File.open("inbox/#{n}") {|f| f.write m.pop }
+    n += 1
+  end
+

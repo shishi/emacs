@@ -1,0 +1,15 @@
+kind=defined
+names=numerator
+visibility=public
+
+--- numerator -> Integer
+
+自身を [[c:Rational]] に変換した時の分子を返します。
+
+@return 分子を返します。
+
+  2.0.numerator           # => 2
+  0.5.numerator           # => 1
+
+@see [[m:Float#denominator]]
+

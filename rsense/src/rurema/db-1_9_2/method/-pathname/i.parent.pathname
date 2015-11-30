@@ -1,0 +1,7 @@
+kind=defined
+names=parent
+visibility=public
+
+--- parent -> Pathname
+self の親ディレクトリを指す新しい Pathname オブジェクトを返します。
+

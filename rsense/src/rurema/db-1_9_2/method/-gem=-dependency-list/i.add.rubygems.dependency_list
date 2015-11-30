@@ -1,0 +1,10 @@
+kind=defined
+names=add
+visibility=public 
+
+--- add(*gemspecs)
+
+与えられた [[c:Gem::Specification]] のインスタンスを自身に追加します。
+
+@param gemspecs [[c:Gem::Specification]] のインスタンスを一つ以上指定します。
+

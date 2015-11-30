@@ -1,0 +1,17 @@
+kind=defined
+names=insert
+visibility=public
+
+--- insert(pos, other) -> ()
+
+nth 番目の文字の直前に文字列 other を挿入します。
+self[pos, 0] = other と同じ操作です。
+
+@param pos      文字列を挿入するインデックス
+@param other    挿入する文字列
+
+例:
+    str = "foobaz"
+    str.insert(3, "bar")
+    p str   # => "foobarbaz"
+

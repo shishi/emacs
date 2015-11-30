@@ -1,0 +1,17 @@
+kind=defined
+names=dsa_verify_asn1
+visibility=public
+
+--- dsa_verify_asn1(data, sig) -> bool
+公開鍵を用い、署名を ECDSA で検証します。
+
+data のダイジェストを取る処理はこのメソッドに含まれていません。
+自身で適当なダイジェストを取る必要があります。
+
+検証に成功した場合は true を返します。
+
+@param data 署名対象のデータ(文字列)
+@param sig 署名データ(文字列)
+@raise OpenSSL::PKey::ECError 署名の検証時にエラーが生じた場合に発生します
+@see [[m:OpenSSL::PKey::EC#dsa_sign_asn1]]
+

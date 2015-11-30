@@ -1,0 +1,8 @@
+kind=defined
+names=square?
+visibility=public
+
+--- square? -> bool
+
+正方行列であるなら、真を返します。
+

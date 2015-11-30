@@ -1,0 +1,24 @@
+kind=added
+names=y
+visibility=private 
+
+--- y(obj)
+オブジェクトをYAMLフォーマットで表示します。
+
+@param obj YAML フォーマットで表示したいオブジェクト
+
+  require 'yaml'
+  
+  class MyDog
+    attr_accessor :name, :age
+  end
+  
+  mydog = MyDog.new
+  mydog.age = 17
+  
+  p mydog
+  #=> #<MyDog:0x2b080b8 @age=17>
+  y mydog
+  #=> --- !ruby/object:MyDog
+  #=> age: 17
+  

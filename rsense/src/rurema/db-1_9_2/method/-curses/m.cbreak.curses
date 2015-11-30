@@ -1,0 +1,15 @@
+kind=defined
+names=cbreak,crmode
+visibility=public
+
+--- cbreak -> nil
+--- crmode -> nil
+
+キーボード入力のバッファリングをやめ、ユーザの入力を即座に処理できるようにします。
+
+このメソッドの中で [[m:Curses.#init_screen]] を呼び出します。
+
+セーフレベル ($SAFE) が 4 の場合、例外 SecurityError を発生します。
+
+@see [[m:Curses.#nocbreak]]、[[m:Curses.#nocrmode]]
+

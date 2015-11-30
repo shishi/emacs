@@ -1,0 +1,47 @@
+kind=defined
+names====,=~
+visibility=public
+
+--- =~(string) -> Fixnum | nil
+--- ===(string) -> bool
+
+文字列 string との正規表現マッチを行います。マッチした場合、
+マッチした位置のインデックスを返します(先頭は0)。マッチしなかった
+場合、あるいは string が nil の場合には nil を返
+します。
+
+  p /foo/ =~ "foo"  #=> 0
+  p /foo/ =~ "afoo" #=> 1
+  p /foo/ =~ "bar"  #=> nil
+
+組み込み変数 [[m:$~]] もしくは [[m:Regexp.last_match]] にマッチに関する情報 [[c:MatchData]] が設定されます。
+
+string がnil でも [[c:String]] オブジェクトでもなけれ
+ば例外 [[c:TypeError]] が発生します。
+
+Regexp#=== は、真偽値を返します。引数が文
+字列でないか、マッチしなければ false を、マッチすれば
+true を返します。
+
+@param string 文字列を指定します。
+
+@raise TypeError string がnil でも [[c:String]] オブジェクトでもない
+                 場合発生します。
+
+  p /foo/ =~ "foo"        #=> 0
+  p Regexp.last_match(0)  #=> "foo"
+  p /foo/ =~ "afoo"       #=> 1
+  p $~[0]                 #=> "foo"
+  p /foo/ =~ "bar"        #=> nil
+
+  unless /foo/ === "bar"
+    puts "not match " #=> not match
+  end
+
+  str = []
+  begin
+    /ugo/ =~ str
+  rescue TypeError
+    printf "! %s\t%s\n", $!, $@ #=> ! can't convert Array into String       r5.rb:15
+  end
+

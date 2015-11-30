@@ -1,0 +1,8 @@
+name=LONG2NUM
+private=false
+macro=true
+type=VALUE
+filename=ruby.h
+params=(long v)
+
+

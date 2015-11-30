@@ -1,0 +1,10 @@
+kind=defined
+names=insertln
+visibility=public
+
+--- insertln -> nil
+
+現在のカーソル位置に一行挿入します。
+
+
+

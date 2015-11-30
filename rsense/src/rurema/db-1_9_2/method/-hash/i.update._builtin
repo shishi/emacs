@@ -1,0 +1,27 @@
+kind=defined
+names=update
+visibility=public
+
+--- update(other) -> self
+--- update(other) {|key, self_val, other_val| ... } -> self
+
+selfとotherのハッシュの内容をマージ(統合)します。[[m:Hash#merge!]]と同じです。
+
+デフォルト値はselfの設定のままです。
+otherがハッシュではない場合、otherのメソッドto_hashを使って暗黙の変換を試みます。
+
+@param other マージ用のハッシュまたはメソッド to_hash でハッシュに変換できるオブジェクトです。
+@return マージ後のselfを返します。
+
+  foo = {1 => 'a', 2 => 'b', 3 => 'c'}
+  bar = {2 => 'B', 3 => 'C', 4 => 'D'}
+  
+  p foo.update(bar) #=> {1=>"a", 2=>"B", 3=>"C", 4=>"D"}
+  p foo  #=> {1=>"a", 2=>"B", 3=>"C", 4=>"D"}
+  
+  p foo.update(bar) {|key, foo_val, bar_val| foo_val + bar_val } #=> {1=>"a", 2=>"BB", 3=>"CC", 4=>"DD"}
+  p foo  #=> {1=>"a", 2=>"BB", 3=>"CC", 4=>"DD"}
+
+@see [[m:Hash#merge!]]
+
+

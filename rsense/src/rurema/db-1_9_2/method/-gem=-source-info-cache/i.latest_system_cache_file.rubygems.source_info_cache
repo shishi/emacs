@@ -1,0 +1,8 @@
+kind=defined
+names=latest_system_cache_file
+visibility=public 
+
+--- latest_system_cache_file -> String
+
+最新のシステムキャッシュのファイル名を返します。
+

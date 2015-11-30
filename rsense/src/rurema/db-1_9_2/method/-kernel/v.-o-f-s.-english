@@ -1,0 +1,16 @@
+kind=added
+names=OFS,OUTPUT_FIELD_SEPARATOR
+visibility=public
+
+--- $OFS                    -> String | nil
+--- $OUTPUT_FIELD_SEPARATOR -> String | nil
+
+[[m:$,]] ¤ÎÊÌÌ¾
+
+  require "English"
+
+  array = %w|hoge fuga ugo bar foo|
+  p array.join #=> "hogefugaugobarfoo"
+  $OUTPUT_FIELD_SEPARATOR = ","
+  p array.join #=> "hoge,fuga,ugo,bar,foo"
+

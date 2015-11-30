@@ -1,0 +1,8 @@
+kind=defined
+names=path
+visibility=public
+
+--- path -> String
+
+データベースのファイル名を得ます。
+

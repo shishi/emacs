@@ -1,0 +1,9 @@
+kind=defined
+names=chardev?
+visibility=public
+
+--- chardev? -> bool
+FileTest.chardev?(self.to_s) と同じです。
+
+@see [[m:FileTest.#chardev?]]
+

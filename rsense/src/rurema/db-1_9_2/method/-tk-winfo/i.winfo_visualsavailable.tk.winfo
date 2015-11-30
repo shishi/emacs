@@ -1,0 +1,6 @@
+kind=defined
+names=winfo_visualsavailable
+visibility=public
+
+--- winfo_visualsavailable(includeids = false)
+

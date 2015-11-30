@@ -1,0 +1,8 @@
+kind=added
+names=merge_libs
+visibility=private 
+
+--- merge_libs(*libs) -> [String]
+
+@param libs ???
+

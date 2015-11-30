@@ -1,0 +1,14 @@
+kind=defined
+names=path
+visibility=public
+
+--- path     -> String | nil
+
+自身の path を文字列で返します。設定されていない場合は nil を返します。
+
+  p URI.parse('http://example.com/hoge').path       #=> "/hoge"
+  p URI.parse('http://example.com').path            #=> ""
+  p URI.parse('mailto:nospam@localhost').path       #=> nil
+  p URI('ftp://example.com/foo').path    #=> 'foo'
+  p URI('ftp://example.com/%2Ffoo').path #=> '/foo'
+

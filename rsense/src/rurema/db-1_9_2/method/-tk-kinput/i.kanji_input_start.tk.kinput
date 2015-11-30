@@ -1,0 +1,6 @@
+kind=defined
+names=kanji_input_start
+visibility=public
+
+--- kanji_input_start(keys = nil)
+

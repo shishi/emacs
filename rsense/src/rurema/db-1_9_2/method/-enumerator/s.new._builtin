@@ -1,0 +1,56 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(obj, method = :each, *args) -> Enumerator
+
+オブジェクト obj について、 each の代わりに method という
+名前のメソッドを使って繰り返すオブジェクトを生成して返します。
+args を指定すると、 method の呼び出し時に渡されます。
+
+@param obj イテレータメソッドのレシーバとなるオブジェクト
+@param method イテレータメソッドの名前を表すシンボルまたは文字列
+@param args イテレータメソッドの呼び出しに渡す任意個の引数
+
+例:
+
+  str = "xyz"
+  
+  enum = Enumerator.new(str, :each_byte)
+  p enum.map {|b| '%02x' % b }   # => ["78", "79", "7a"]
+
+
+--- new{|y| ... }                   -> Enumerator
+
+Enumerator オブジェクトを生成して返します。与えられたブロックは Enumerator::Yielder オブジェクトを
+引数として実行されます。
+
+生成された Enumerator オブジェクトに対して each を呼ぶと、この生成時に指定されたブロックを
+実行し、Yielder オブジェクトに対して << メソッドが呼ばれるたびに、
+each に渡されたブロックが繰り返されます。
+
+例:
+
+  enum = Enumerator.new{|y|
+    (1..10).each{|i|   
+      y << i if i % 5 == 0
+    }
+  }
+  enum.each{|i| p i }  
+
+  #=>  5 
+      10
+
+
+  fib = Enumerator.new { |y|
+    a = b = 1
+    loop {
+      y << a
+      a, b = b, a + b
+    }
+  }
+
+  p fib.take(10) #=> [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+
+
+

@@ -1,0 +1,9 @@
+superclass=Object
+type=class
+library=_builtin
+extended=
+included=
+
+true のクラス。
+true は TrueClass クラスの唯一のインスタンスです。
+true は真を表す代表のオブジェクトです。

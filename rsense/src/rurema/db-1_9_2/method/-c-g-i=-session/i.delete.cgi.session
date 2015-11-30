@@ -1,0 +1,12 @@
+kind=defined
+names=delete
+visibility=public
+
+--- delete -> ()
+
+データベースクラスの delete メソッドを呼び出して、
+セッションをストレージから削除します。
+
+FileStore の場合はセッションファイルを削除します。
+セッションファイルは明示的に削除しなければ残っています。
+

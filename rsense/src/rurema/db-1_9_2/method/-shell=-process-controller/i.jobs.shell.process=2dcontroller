@@ -1,0 +1,8 @@
+kind=defined
+names=jobs
+visibility=public
+
+--- jobs -> Array
+
+全てのジョブの配列を返します。
+

@@ -1,0 +1,16 @@
+kind=defined
+names=route_to
+visibility=public
+
+--- route_to(dst)     -> URI::Generic
+
+自身から dst への相対パスを返します。
+
+@param dst URI を文字列かURIオブジェクトで与えます。
+
+例:
+  require 'uri'
+  p URI.parse('http://www.ruby-lang.org/').route_to('http://www.ruby-lang.org/en/raa.html')
+  
+  #=> #<URI::Generic:0x20100198 URL:en/raa.html>
+

@@ -1,0 +1,13 @@
+kind=defined
+names=size,size=
+visibility=public
+
+--- size        -> Integer
+--- size=(s)
+
+自身の指す領域のサイズを表すアクセサです。
+
+s を指定しても自身が指すメモリ領域のサイズが s になるように再割り当てはしません。
+
+@param s 自身が指すメモリのサイズを整数で指定します。
+

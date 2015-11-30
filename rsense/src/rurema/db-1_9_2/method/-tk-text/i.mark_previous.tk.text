@@ -1,0 +1,7 @@
+kind=defined
+names=mark_previous,previous_mark
+visibility=public
+
+--- mark_previous(index)
+--- previous_mark(index)
+

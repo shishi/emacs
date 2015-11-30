@@ -1,0 +1,46 @@
+kind=defined
+names=decode
+visibility=public
+
+--- decode(der) -> OpenSSL::ASN1::ASN1Data
+DER 表現の文字列を解析し、そこにエンコードされている ASN.1 の値を
+[[c:OpenSSL::ASN1::ASN1Data]] のサブクラスのインスタンスとして返します。
+
+複数の ASN.1 の値が含まれている場合、先頭の値だけを返します。
+
+ASN.1 オブジェクトが Constructive である場合は、
+それを構成する要素も再帰的に解析します。
+
+例:
+
+  ruby -e '
+  require "openssl"
+  require "pp"
+  pem = File.read(ARGV[0])
+  cert = OpenSSL::X509::Certificate.new(pem)
+  pp OpenSSL::ASN1.decode(cert.to_der)
+  ' mycert.pem
+  #<OpenSSL::ASN1::Sequence:0x814e9fc
+   @tag=16,
+   @tag_class=:UNIVERSAL,
+   @tagging=nil,
+   @value=
+    [#<OpenSSL::ASN1::Sequence:0x814ead8
+      @tag=16,
+      @tag_class=:UNIVERSAL,
+      @tagging=nil,
+      @value=
+       [#<OpenSSL::ASN1::ASN1Data:0x814f690
+         @tag=0,
+         @tag_class=:CONTEXT_SPECIFIC,
+         @value=
+          [#<OpenSSL::ASN1::Integer:0x814f6a4
+            @tag=2,
+            @tag_class=:UNIVERSAL,
+            @tagging=nil,
+            @value=2>]>,
+            ...
+
+@param der DER形式の文字列
+@raise OpenSSL::ASN1Error 解析に失敗した場合に発生します
+

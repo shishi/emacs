@@ -1,0 +1,25 @@
+kind=defined
+names=civil,new
+visibility=public
+
+--- civil(year = -4712, mon = 1, mday = 1, start = Date::ITALY) -> Date
+--- new(year = -4712, mon = 1, mday = 1, start = Date::ITALY) -> Date
+暦日付に相当する日付オブジェクトを生成します。
+
+このクラスでは、紀元前の年を天文学の流儀で勘定します。
+1年の前は零年、零年の前は-1年、のようにします。
+月、および月の日は負、
+または正の数でなければなりません (負のときは最後からの序数)。
+零であってはなりません。
+
+最後の引数は、グレゴリオ暦をつかい始めた日をあらわすユリウス日です。
+省略した場合は、[[m:Date::ITALY]] (1582年10月15日) になります。
+
+[[m:Date.jd]] も参照してください。
+
+@param year 年
+@param mon 月
+@param mday 日
+@param start グレゴリオ暦をつかい始めた日をあらわすユリウス日
+@raise ArgumentError 正しくない日付になる組み合わせである場合に発生します。
+

@@ -1,0 +1,13 @@
+kind=defined
+names=sync
+visibility=public
+
+--- sync -> self
+
+要素の変更をファイルに反映します。
+
+FAST モード([[m:GDBM.open]] の第3引数に [[m:GDBM::FAST]] を指定)のときだけ意味があります。
+
+==== 注意
+GNU gdbm version 1.8 以降より FAST モードがデフォルトになりました。
+

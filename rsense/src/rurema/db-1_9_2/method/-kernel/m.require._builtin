@@ -1,0 +1,30 @@
+kind=defined
+names=require
+visibility=public
+
+--- require(feature) -> bool
+
+Ruby ライブラリ feature をロードします。拡張子補完を行い、
+同じファイルの複数回ロードはしません。
+
+feature が絶対パスのときは feature からロードします。
+feature が相対パスのときは組み込み変数 [[m:$:]]
+に示されるパスを順番に探し、最初に見付かったファイルを
+ロードします。このとき、$: の要素文字列の先頭文字が
+`~' (チルダ) だと、環境変数 HOME の値に展開されます。
+
+Ruby ライブラリとは Ruby スクリプト (*.rb) か拡張ライブラリ
+(*.so,*.o,*.dll など) であり、feature の拡張子が省略された場合はその
+両方から探します( *.rb が優先されます)。
+省略されなかった場合は指定された種別のみを探します。
+また、feature の拡張子にはアーキテクチャで実際に使われる拡張子に
+関らず拡張ライブラリの拡張子として常に .so を用いることができます（内部で適切に変換されます）。
+
+ライブラリのロードに成功した時には true を返し、ロードした feature の名前を(拡
+張子も含めて) 変数 [[m:$"]] に追加します。ただし、feature の名前が既に $"
+に含まれていた場合はロードせずに false を返します。
+
+@param feature ファイル名の文字列です。
+@raise LoadError ロードに失敗した場合に発生します。
+@see [[m:Kernel.#load]],[[m:Kernel.#autoload]],[[m:Kernel.#require_relative]]
+

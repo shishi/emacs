@@ -1,0 +1,7 @@
+superclass=DRb=DRbError
+type=class
+library=drb
+extended=
+included=
+
+An exception wrapping a [[c:DRb::DRbUnknown]] object

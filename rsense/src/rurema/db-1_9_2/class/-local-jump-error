@@ -1,0 +1,11 @@
+superclass=StandardError
+type=class
+library=_builtin
+extended=
+included=
+
+ある [[c:Proc]] オブジェクトの作成元スコープがすでに終了しているとき、
+その [[c:Proc]] オブジェクト内で
+return, break, retry のいずれかを実行すると発生します。
+
+[[c:Proc]] の例を参照してください。

@@ -1,0 +1,10 @@
+kind=defined
+names=pair,socketpair
+visibility=public
+
+--- pair(domain, type, protocol)
+--- socketpair(domain, type, protocol)
+
+相互に結合されたソケットのペアを含む2要素の配列を返します。
+引数の指定は Socket.open と同じです。
+

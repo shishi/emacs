@@ -1,0 +1,14 @@
+kind=defined
+names=truncate
+visibility=public
+
+--- truncate(path, length)    -> 0
+
+[[c:File]] クラスにある同名のクラスメソッドと同じです.
+
+@param path パスを表す文字列を指定します。
+
+@param length 変更したいサイズを整数で与えます。
+
+@see [[m:File.truncate]]
+

@@ -1,0 +1,8 @@
+name=OBJ_FROZEN
+private=false
+macro=true
+type=int
+filename=ruby.h
+params=(VALUE x)
+
+

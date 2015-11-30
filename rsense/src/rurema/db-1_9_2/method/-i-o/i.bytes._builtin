@@ -1,0 +1,10 @@
+kind=defined
+names=bytes
+visibility=public
+
+--- bytes    -> Enumerator
+自身を 1 バイトずつ整数としてイテレートするような
+[[c:Enumerator]] オブジェクトを生成して返します。
+
+   "hello".bytes.to_a        #=> [104, 101, 108, 108, 111]
+

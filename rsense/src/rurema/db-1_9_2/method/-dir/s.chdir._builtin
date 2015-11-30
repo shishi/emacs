@@ -1,0 +1,31 @@
+kind=defined
+names=chdir
+visibility=public
+
+--- chdir           -> 0
+--- chdir(path)     -> 0
+--- chdir {|path| ... }          -> object
+--- chdir(path) {|path| ... }    -> object
+
+カレントディレクトリを path に変更します。
+
+path を省略した場合、環境変数 HOME または LOGDIR
+が設定されていればそのディレクトリに移動します。
+カレントディレクトリの変更に成功すれば 0 を返します。
+
+ブロックが指定された場合、カレントディレクトリの変更はブロックの実行中に限
+られます。ブロックの実行結果を返します。
+
+@param path ディレクトリのパスを文字列で指定します。
+
+@raise Errno::EXXX 失敗した場合に発生します。
+
+例:
+
+   Dir.chdir("/var/spool/mail")
+   p Dir.pwd                    #=> "/var/spool/mail"
+   Dir.chdir("/tmp") do
+     p Dir.pwd                  #=> "/tmp"
+   end 
+   p Dir.pwd                    #=> "/var/spool/mail"
+

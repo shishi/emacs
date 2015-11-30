@@ -1,0 +1,15 @@
+kind=added
+names=scanf
+visibility=private 
+
+--- scanf(format) -> Array
+--- scanf(format) {|*ary| ...} -> Array
+
+STDIN.scanf と同じです。
+[[m:IO#scanf]]、[[m:Stdin#scanf]]も参照してください。
+
+@param format スキャンするフォーマットを文字列で指定します。
+              詳細は、[[ref:m:String#scanf#format]] を参照してください。
+
+@see [[m:IO#scanf]], [[m:Stdin#scanf]]
+

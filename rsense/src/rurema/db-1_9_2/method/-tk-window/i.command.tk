@@ -1,0 +1,6 @@
+kind=defined
+names=command
+visibility=public
+
+--- command(cmd = nil, &block)
+

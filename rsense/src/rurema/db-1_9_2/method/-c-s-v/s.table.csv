@@ -1,0 +1,19 @@
+kind=defined
+names=table
+visibility=public
+
+--- table(path, options = Hash.new) -> Array
+
+以下の例と同等のことを行うメソッドです。
+日本語の CSV ファイルを扱う場合はあまり使いません。
+
+例:
+
+  CSV.read( path, { headers:           true,
+                    converters:        :numeric,
+                    header_converters: :symbol }.merge(options) )
+
+@param path ファイル名を指定します。
+
+@param options [[m:CSV.new]] のオプションと同じオプションを指定できます。
+

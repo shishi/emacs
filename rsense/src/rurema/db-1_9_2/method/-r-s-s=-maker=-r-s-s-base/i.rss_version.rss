@@ -1,0 +1,7 @@
+kind=defined
+names=rss_version
+visibility=public
+
+--- rss_version
+作成するRSSのバージョンを返します．
+

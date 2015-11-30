@@ -1,0 +1,18 @@
+kind=defined
+names=conv
+visibility=public
+
+--- conv(str) -> String
+
+文字列を変換し、変換後の文字列を返します。
+str が nil の場合、空文字列""を返します。
+
+@param str 変換される文字列を指定します。
+
+例:
+  utf8 = ["E38182E38184E38186E38188E3818A"].pack("H*") # あいうえお
+
+  iconv = Iconv.new('EUC-JP', 'UTF-8') # UTF-8 から EUC へ変換
+  str = iconv.conv(utf8)
+  puts str #=> "あいうえお"
+

@@ -1,0 +1,16 @@
+kind=defined
+names=grpowned?
+visibility=public
+
+--- grpowned? -> bool
+グループIDが実効グループIDと等しい時に真を返します。
+
+補助グループIDは考慮されません。
+
+  printf "%s %s\n", $:[0], File::Stat.new($:[0]).grpowned?
+  #例
+  #=> /usr/local/lib/site_ruby/1.8 false
+  printf "%s %s\n", $0, File::Stat.new($0).grpowned?
+  #例
+  #=> filestat.rb true
+

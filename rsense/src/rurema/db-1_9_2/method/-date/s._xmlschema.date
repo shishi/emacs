@@ -1,0 +1,12 @@
+kind=defined
+names=_xmlschema
+visibility=public
+
+--- _xmlschema(str) -> Hash
+このメソッドは [[m:Date.xmlschema]] と似ていますが、日付オブジェクトを生成せずに、
+見いだした要素をハッシュで返します。
+
+[[m:Date.xmlschema]] も参照してください。
+
+@param str 日付をあらわす文字列
+

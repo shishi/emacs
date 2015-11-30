@@ -1,0 +1,3 @@
+#output_encoding	RSS::RootElementMixin#output_encoding
+#output_encoding=	RSS::RootElementMixin#output_encoding
+#to_xml	RSS::RootElementMixin#to_xml

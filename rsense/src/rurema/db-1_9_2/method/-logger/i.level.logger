@@ -1,0 +1,9 @@
+kind=defined
+names=level,sev_threshold
+visibility=public
+
+--- level -> Integer
+--- sev_threshold -> Integer
+
+レシーバにセットされているログレベルを取得します。
+

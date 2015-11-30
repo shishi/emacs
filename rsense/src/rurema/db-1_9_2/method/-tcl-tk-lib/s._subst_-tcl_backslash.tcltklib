@@ -1,0 +1,6 @@
+kind=defined
+names=_subst_Tcl_backslash
+visibility=public
+
+--- _subst_Tcl_backslash(str)
+

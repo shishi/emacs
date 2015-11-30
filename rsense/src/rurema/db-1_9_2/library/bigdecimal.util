@@ -1,0 +1,16 @@
+methods=Float/i.to_d.bigdecimal.util,String/i.to_d.bigdecimal.util,BigDecimal/i.to_digits.bigdecimal.util,Rational/i.to_d.bigdecimal.util
+sublibraries=
+requires=
+classes=
+is_sublibrary=true
+
+String、Float、Rational オブジェクト を BigDecimal オブジェクトに変換する機能を提供
+します。
+
+ * [[m:String#to_d]]
+ * [[m:Float#to_d]]
+ * [[m:Rational#to_d]]
+
+
+これらのメソッドを使うには 'bigdecimal' と 'bigdecimal/util'を require
+する必要があります。

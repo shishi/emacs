@@ -1,0 +1,11 @@
+kind=defined
+names=to_json
+visibility=public 
+
+--- to_json -> String
+
+自身を to_s で文字列にした結果を JSON 形式の文字列に変換して返します。
+
+このメソッドはあるオブジェクトに to_json メソッドが定義されていない場合に使用する
+フォールバックのためのメソッドです。
+

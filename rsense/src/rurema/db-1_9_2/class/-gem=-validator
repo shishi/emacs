@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rubygems.validator
+extended=
+included=
+
+様々な Gem ファイルや Gem データベースを懸賞するためのクラスです。

@@ -1,0 +1,9 @@
+kind=defined
+names=VT_PTR
+visibility=public
+
+--- VT_PTR -> Integer
+ポインタ型を示します（26）。
+
+VT_PTRは、VOID*に相当するため、OLEオートメーションでは利用できません。
+

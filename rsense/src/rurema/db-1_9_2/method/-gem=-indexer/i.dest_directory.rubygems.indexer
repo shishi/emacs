@@ -1,0 +1,8 @@
+kind=defined
+names=dest_directory
+visibility=public 
+
+--- dest_directory -> String
+
+インデックスを保存するディレクトリを返します。
+

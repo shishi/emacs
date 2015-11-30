@@ -1,0 +1,58 @@
+kind=defined
+names=[],new
+visibility=public
+
+--- new(*args) -> Class
+
+[[c:Struct]] クラスに新しいサブクラスを作って、それを返します。
+
+サブクラスでは構造体のメンバに対するアクセスメソッドが定義されています。
+
+  dog = Struct.new("Dog", :name, :age)
+  fred = dog.new("fred", 5)
+  fred.age = 6
+  printf "name:%s age:%d", fred.name, fred.age
+  #=> "name:fred age:6" を出力します
+
+実装の都合により、クラス名の省略は後づけの機能でした。
+メンバ名に [[c:String]] を指定できるのは後方互換性のためだと考えた方が良いでしょう。
+したがって、メンバ名は [[c:Symbol]] で指定するのが無難です。
+
+@param args 構造体を定義するための可変長引数。[[c:String]] または [[c:Symbol]] を指定します。
+
+==== 第一引数が String の場合
+args[0] が [[c:String]] の場合、クラス名になるので、大文字で始まる必要
+があります。つまり、以下のような指定はエラーになります。
+
+    p Struct.new('foo', 'bar')
+    # => -:1:in `new': identifier foo needs to be constant (NameError)
+
+また args[1..-1] は、[[c:Symbol]] か [[c:String]] で指定します。
+
+    p Struct.new("Foo", :foo, :bar)   # => Struct::Foo
+
+==== 第一引数が Symbol の場合
+args[0] が [[c:Symbol]] の場合、生成した構造体クラスは名前の無い
+クラスになります。名前の無いクラスは最初に名前を求める際に代入され
+ている定数名を検索し、見つかった定数名をクラス名とします。
+
+    Foo = Struct.new(:foo, :bar)
+    p Foo                             # => Foo
+
+@see [[m:Class.new]]
+
+--- new(*args) -> Struct
+--- [](*args) -> Struct
+(このメソッドは Struct の下位クラスにのみ定義されています)
+構造体オブジェクトを生成して返します。
+
+@param args 構造体の初期値を指定します。メンバの初期値は指定されなければ nil です。
+
+@return 構造体クラスのインスタンス。
+
+@raise ArgumentError 構造体のメンバの数よりも多くの引数を指定した場合に発生します。
+
+    Foo = Struct.new(:foo, :bar)
+    foo = Foo.new(1)
+    p foo.values      # => [1, nil]
+

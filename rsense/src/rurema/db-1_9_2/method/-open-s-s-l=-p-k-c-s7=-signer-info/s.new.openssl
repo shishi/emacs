@@ -1,0 +1,13 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(cert, key, digest) -> OpenSSL::PKCS7::SignerInfo
+署名者オブジェクトを証明書、秘密鍵、ダイジェスト方式から生成します。
+
+証明書、秘密鍵、ダイジェスト方式は署名をするために利用します。
+
+@param cert 証明書([[c:OpenSSL::X509::Certificate]] オブジェクト)
+@param key 秘密鍵([[c:OpenSSL::PKey::PKey]] オブジェクト)
+@param digest メッセージダイジェスト方式(文字列もしくは [[c:OpenSSL::Digest]] オブジェクト)
+

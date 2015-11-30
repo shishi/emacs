@@ -1,0 +1,13 @@
+name=rb_check_safe_str
+private=false
+macro=false
+type=void
+filename=eval.c
+params=(VALUE x)
+
+
+マクロ Check_SafeStr の本体です。
+
+この API は obsolete です。
+SafeStringValue() を使ってください。
+

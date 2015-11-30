@@ -1,0 +1,36 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(*threads) -> ThreadsWait
+
+指定されたスレッドの終了をまつための、スレッド同期オブジェクトをつくります。
+
+@param threads 終了を待つスレッドを一つもしくは複数指定します。
+
+使用例
+  require 'thwait'
+
+  threads = []
+  5.times {|i|
+    threads << Thread.new { sleep 1; p Thread.current }
+  }
+  
+  thall = ThreadsWait.new(*threads)
+  thall.all_waits{|th|
+    printf("end %s\n", th.inspect)
+  }
+  
+  # 出力例
+  #=> #<Thread:0x214bc run>
+  #=> #<Thread:0x21548 run>
+  #=> #<Thread:0x215d4 run>
+  #=> #<Thread:0x21660 run>
+  #=> #<Thread:0x21430 run>
+  #=> end #<Thread:0x214bc dead>
+  #=> end #<Thread:0x21548 dead>
+  #=> end #<Thread:0x215d4 dead>
+  #=> end #<Thread:0x21660 dead>
+  #=> end #<Thread:0x21430 dead>
+
+

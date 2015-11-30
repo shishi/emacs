@@ -1,0 +1,17 @@
+kind=defined
+names=concat
+visibility=public
+
+--- concat(other)    -> self
+
+配列 other を自身の末尾に破壊的に連結します。
+
+@param other 自身と連結したい配列を指定します。
+
+    array = [1, 2]
+    a     = [3, 4]
+    array.concat a
+    p array          # => [1, 2, 3, 4]
+    p a              # => [3, 4]       # こちらは変わらない
+
+

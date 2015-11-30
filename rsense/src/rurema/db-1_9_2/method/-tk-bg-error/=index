@@ -1,0 +1,6 @@
+.bgerror	TkBgError.bgerror
+.set_default	TkBgError.set_default
+.set_handler	TkBgError.set_handler
+.show	TkBgError.bgerror
+.tkerror	TkBgError.bgerror
+:TkCommandNames	TkBgError::TkCommandNames

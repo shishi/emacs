@@ -1,0 +1,31 @@
+kind=defined
+names=fileno,to_i
+visibility=public
+
+--- fileno -> Integer
+--- to_i -> Integer
+現在オープンしているファイルのファイル記述子を表す整数を返します。
+
+  # カレントディレクトリから適当にファイルを選ぶ
+  ARGV.replace(
+    Dir.glob("*").reject{|name| FileTest.file?(name) == false}
+  )
+  ARGF.each_line {|line|
+    p [ ARGF.to_i, ARGF.filename ]
+    ARGF.skip
+  }
+  begin
+    p [ ARGF.to_i, ARGF.filename ]
+  rescue ArgumentError
+    print "ArgumentError\n"
+  end
+  #例
+  #=> [3, "sample.yaml"]
+  #=> [3, "test.rb"]
+  #=> [3, "test.rb~"]
+  #=> [3, "third.txt"]
+  #=> [3, "ugo.yaml"]
+  #=> ArgumentError
+
+@raise ArgumentError
+

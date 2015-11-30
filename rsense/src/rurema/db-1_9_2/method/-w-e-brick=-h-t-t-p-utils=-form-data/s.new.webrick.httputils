@@ -1,0 +1,8 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(*args)   -> WEBrick::HTTPUtils::FormData
+
+WEBrick::HTTPUtils の内部で使われます。ユーザがこのメソッドを直接呼ぶことはありません。
+

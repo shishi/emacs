@@ -1,0 +1,10 @@
+kind=defined
+names=PRIO_PROCESS
+visibility=public
+
+--- PRIO_PROCESS
+
+対象とするプライオリティがプロセスプライオリティであることを表す定数です。
+
+[[m:Process.#getpriority]] または [[m:Process.#setpriority]] で使われます。
+

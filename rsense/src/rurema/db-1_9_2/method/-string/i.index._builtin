@@ -1,0 +1,29 @@
+kind=defined
+names=index
+visibility=public
+
+--- index(pattern, pos = 0) -> Integer
+
+インデックス pos から右に向かって pattern を検索し、
+最初に見つかった部分文字列の左端のインデックスを返します。
+見つからなければ nil を返します。
+
+引数 pattern は探索する部分文字列、
+正規表現、文字コードを示す 0 から 255 の整数のいずれかで指定します。
+
+pos が負の場合、文字列の末尾から数えた位置から探索します。
+
+@param pattern    探索する部分文字列、正規表現、文字コードを示す 0 から 255 の整数
+@param pos        探索を開始するインデックス
+  
+例:
+
+  p "astrochemistry".index("str")         # => 1
+  p "regexpindex".index(/e.*x/, 2)        # => 3
+  p "character".index(?c)                 # => 0
+
+  p "foobarfoobar".index("bar", 6)        # => 9
+  p "foobarfoobar".index("bar", -6)       # => 9
+
+@see [[m:String#rindex]]
+

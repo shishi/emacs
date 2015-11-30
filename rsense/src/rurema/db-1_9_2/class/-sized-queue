@@ -1,0 +1,30 @@
+superclass=Queue
+type=class
+library=thread
+extended=
+included=
+
+サイズの最大値を指定できる [[c:Queue]] です。
+
+=== 例
+
+[[ruby-list:283]] より。q をサイズ 1 の SizedQueue オブジェクトに
+することによって、入力される行と出力される行が同じ順序になります。
+q = [] にすると入力と違った順序で行が出力されます。
+
+  require 'thread'
+
+  q = SizedQueue.new(1)
+
+  th = Thread.start {
+    while line = q.pop
+      print line
+    end
+  }
+
+  while l = gets
+    q.push(l)
+  end
+  q.push(l)
+
+  th.join

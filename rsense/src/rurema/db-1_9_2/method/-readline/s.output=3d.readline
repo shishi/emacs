@@ -1,0 +1,11 @@
+kind=defined
+names=output=
+visibility=public
+
+--- output=(output)
+    
+readline メソッドで使用する出力用の [[c:File]] オブジェクト output を指定します。
+戻り値は指定した [[c:File]] オブジェクト output です。
+
+@param output [[c:File]] オブジェクトを指定します。
+

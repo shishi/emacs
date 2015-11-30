@@ -1,0 +1,10 @@
+kind=defined
+names=starttls
+visibility=public
+
+--- starttls -> Net::SMTP::Response
+STARTTLS コマンドを送ります。
+
+通常は [[m:Net::SMTP#start]] で STARTTLS が送られるため
+利用する必要はないはずです。
+

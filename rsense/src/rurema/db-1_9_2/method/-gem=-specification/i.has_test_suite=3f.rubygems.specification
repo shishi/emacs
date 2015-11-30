@@ -1,0 +1,8 @@
+kind=defined
+names=has_test_suite?
+visibility=public
+
+--- has_test_suite? -> bool
+
+このメソッドは非推奨です。 [[m:Gem::Specification#has_unit_tests?]] を使用してください。
+

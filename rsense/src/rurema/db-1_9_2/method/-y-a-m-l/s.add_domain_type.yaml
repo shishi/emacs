@@ -1,0 +1,39 @@
+kind=defined
+names=add_domain_type
+visibility=public
+
+--- add_domain_type(domain, type_re){|type, val| ...}
+
+YAMLドメインに属しているクラスをYAMLに追加し、
+そのクラスを見つけたときの操作を指定します。
+
+@param domain YAMLのドメインを文字列で指定する。
+@param type_re 加えるクラスを指定する。
+@param type YAMLドメインとクラスの文字列
+@param val YAMLデータ構造
+
+  require 'yaml'
+  
+  class Person
+    attr_accessor :name, :age
+  end
+  
+  str=<<EOT
+  --- !Qjitsu.com,2007-05-04/Person
+  name: eiji
+  age: 33
+  EOT
+  
+  YAML.each_document(str){|obj|
+    p obj
+  }
+  #=> #<YAML::DomainType:0x2b07974 @type_id="Person", @domain="Qjitsu.com,2007-05-04", @value={"name"=>"eiji", "age"=>33}> 
+  #
+  YAML.add_domain_type( "Qjitsu.com,2007-05-04", "Person" ) { |type, val|  
+    YAML.object_maker( Person, val )
+  }
+  YAML.each_document(str){|obj|
+    p obj
+  }
+  #=> #<Person:0x2b0762c @age=33, @name="eiji">
+

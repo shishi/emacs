@@ -1,0 +1,7 @@
+superclass=Gem=Command
+type=class
+library=rubygems.commands.sources_command
+extended=
+included=
+
+Gem パッケージの取得元の情報を管理するためのクラスです。

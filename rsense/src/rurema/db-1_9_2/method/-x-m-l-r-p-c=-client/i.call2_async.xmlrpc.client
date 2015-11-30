@@ -1,0 +1,28 @@
+kind=defined
+names=call2_async,call_async,multicall2_async,multicall_async,proxy2_async,proxy_async
+visibility=public
+
+--- call_async(...)
+--- call2_async(...)
+--- multicall_async(...)
+--- multicall2_async(...)
+--- proxy_async(...)
+--- proxy2_async(...)
+
+In contrast to corresponding methods without "_async", these can be
+called concurrently and use for each request a new connection, where the
+non-asynchronous counterparts use connection-alive (one connection for all requests)
+if possible.
+
+Note, that you have to use Threads to call these methods concurrently.
+The following example calls two methods concurrently:
+
+  Thread.new {
+    p client.call_async("michael.add", 4, 5)
+  }
+
+  Thread.new {
+    p client.call_async("michael.div", 7, 9)
+  }
+
+

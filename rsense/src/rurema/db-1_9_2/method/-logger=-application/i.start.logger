@@ -1,0 +1,12 @@
+kind=defined
+names=start
+visibility=public
+
+--- start -> ()
+
+アプリケーションをスタートさせます。
+
+@return run メソッドの返値を返します。
+
+@raise RuntimeError サブクラスで run メソッドを定義していない場合に発生します。
+

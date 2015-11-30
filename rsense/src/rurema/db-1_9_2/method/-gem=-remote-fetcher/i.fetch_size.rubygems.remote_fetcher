@@ -1,0 +1,10 @@
+kind=defined
+names=fetch_size
+visibility=public
+
+--- fetch_size(uri) -> Integer
+
+与えられた URI からダウンロードするデータのサイズを返します。
+
+@param uri データ取得先の URI を指定します。
+

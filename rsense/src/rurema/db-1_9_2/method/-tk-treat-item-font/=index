@@ -1,0 +1,10 @@
+#asciitagfont_configure	TkTreatItemFont#asciitagfont_configure
+#asciitagfont_copy	TkTreatItemFont#asciitagfont_copy
+#kanjifont_copy	TkTreatItemFont#kanjifont_copy
+#kanjitagfont_configure	TkTreatItemFont#kanjitagfont_configure
+#latintagfont_configure	TkTreatItemFont#latintagfont_configure
+#latintagfont_copy	TkTreatItemFont#latintagfont_copy
+#tagfont_configinfo	TkTreatItemFont#tagfont_configinfo
+#tagfont_configure	TkTreatItemFont#tagfont_configure
+#tagfont_copy	TkTreatItemFont#tagfont_copy
+#tagfontobj	TkTreatItemFont#tagfontobj

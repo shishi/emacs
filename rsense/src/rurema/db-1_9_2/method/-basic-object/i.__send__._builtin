@@ -1,0 +1,14 @@
+kind=defined
+names=__send__
+visibility=public
+
+--- __send__(name, *args) -> object
+--- __send__(name, *args) { .... } -> object
+オブジェクトのメソッド name を args を引数にして呼び出し、メソッドの結果を返します。
+
+ブロック付きで呼ばれたときはブロックもそのまま引き渡します。
+
+@param name 呼び出すメソッドの名前。 [[c:Symbol]] または文字列で指定します。
+@param args メソッドに渡す任意個の引数
+@see [[m:Object#__send__]]
+

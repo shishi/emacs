@@ -1,0 +1,9 @@
+kind=defined
+names=time2wtime
+visibility=public
+
+--- time2wtime(time)
+
+Time オブジェクトまたは Integer オブジェクトを受け取り，
+64bit の FILETIME に変換します。
+

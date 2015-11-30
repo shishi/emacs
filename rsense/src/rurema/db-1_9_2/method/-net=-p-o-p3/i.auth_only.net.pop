@@ -1,0 +1,23 @@
+kind=defined
+names=auth_only
+visibility=public
+
+--- auth_only(account, password) -> ()
+POP セッションを開き、認証だけを行って接続を切ります。
+
+主に POP before SMTP のために用意されています。
+
+使用例:
+
+  require 'net/pop'
+
+  pop = Net::POP3.new('pop.example.com')
+  pop.auth_only 'YourAccount', 'YourPassword'
+
+@param account アカウント名文字列
+@param password パスワード文字列
+@raise IOError セッションが既に開始されている場合に発生します
+@raise Net::POPAuthenticationError 認証に失敗した、もしくはAPOPを利用しようとしたがサーバがAPOPを提供していない場合に発生します
+@raise Net::POPError サーバが認証失敗以外のエラーを報告した場合に発生します
+@raise Net::POPBadResponse サーバからの応答がプロトコル上不正であった場合に発生します
+

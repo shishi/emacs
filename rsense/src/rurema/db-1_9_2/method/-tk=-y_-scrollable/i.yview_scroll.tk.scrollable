@@ -1,0 +1,9 @@
+kind=defined
+names=yview_scroll
+visibility=public
+
+--- yview_scroll(*index)
+
+
+
+

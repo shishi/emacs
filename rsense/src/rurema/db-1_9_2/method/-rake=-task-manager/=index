@@ -1,0 +1,15 @@
+#[]	Rake::TaskManager#[]
+#clear	Rake::TaskManager#clear
+#create_rule	Rake::TaskManager#create_rule
+#current_scope	Rake::TaskManager#current_scope
+#define_task	Rake::TaskManager#define_task
+#enhance_with_matching_rule	Rake::TaskManager#enhance_with_matching_rule
+#in_namespace	Rake::TaskManager#in_namespace
+#intern	Rake::TaskManager#intern
+#last_comment	Rake::TaskManager#last_comment
+#last_description	Rake::TaskManager#last_comment
+#last_description=	Rake::TaskManager#last_description=
+#lookup	Rake::TaskManager#lookup
+#resolve_args	Rake::TaskManager#resolve_args
+#synthesize_file_task	Rake::TaskManager#synthesize_file_task
+#tasks	Rake::TaskManager#tasks

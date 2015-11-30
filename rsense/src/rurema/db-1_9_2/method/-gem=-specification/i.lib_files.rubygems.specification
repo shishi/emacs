@@ -1,0 +1,9 @@
+kind=defined
+names=lib_files
+visibility=public
+
+--- lib_files -> [String]
+
+この Gem パッケージに含まれているファイルのうち [[m:Gem::Specification#require_paths]]
+以下にあるファイルのリストを返します。
+

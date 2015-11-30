@@ -1,0 +1,25 @@
+kind=defined
+names=new
+visibility=public
+
+--- new -> OpenSSL::X509::Request
+--- new(obj) -> OpenSSL::X509::Request
+新しい OpenSSL::X509::Request オブジェクトを生成します。
+
+引数なしの場合は空の OpenSSL::X509::Request オブジェクトを生成します。
+
+引数が文字列の場合は、PEM 形式もしくは DER 形式であると
+みなしてオブジェクトを生成します。
+
+引数が [[c:IO]] オブジェクトである場合は、そのファイルの中身から
+オブジェクトを生成します。
+
+引数が OpenSSL::X509::Request である場合には、その内容を
+コピーしたオブジェクトを生成します。
+
+引数が to_der メソッドを持つ場合は、そのメソッドによって
+DER 形式の文字列に変換してからオブジェクトを生成します。
+
+@param obj CSR のデータ
+@raise OpenSSL::X509::RequestError CSR のフォーマットが不正であるなど、読み込みに失敗した場合に発生します
+

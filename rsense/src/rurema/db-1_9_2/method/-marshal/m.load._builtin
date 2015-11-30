@@ -1,0 +1,32 @@
+kind=defined
+names=load,restore
+visibility=public
+
+--- load(port, proc = nil)      -> object
+--- restore(port, proc = nil)   -> object
+
+port からマーシャルデータを読み込んで、元のオブジェクトと同
+じ状態をもつオブジェクトを生成します。
+
+proc として手続きオブジェクトが与えられた場合には読み込んだ
+オブジェクトを引数にその手続きを呼び出します。
+
+  str = Marshal.dump(["a", 1, 10 ** 10, 1.0, :foo])
+  p Marshal.load(str, proc {|obj| p obj})
+
+  => "a"
+     1
+     10000000000
+     1.0
+     :foo
+     ["a", 1, 10000000000, 1.0, :foo]
+     ["a", 1, 10000000000, 1.0, :foo]
+
+@param port [[c:String]] か [[c:IO]] (またはそのサブクラス)の
+            インスタンスを指定します。
+
+@param proc 手続きオブジェクト。[[c:Proc]]
+
+@raise TypeError メジャーバージョンが異なるか、バージョンの大きな
+                 マーシャルデータを読み込んだ場合に発生します。
+

@@ -1,0 +1,6 @@
+kind=defined
+names=match
+visibility=public
+
+--- match(path_stack, nodeset)
+

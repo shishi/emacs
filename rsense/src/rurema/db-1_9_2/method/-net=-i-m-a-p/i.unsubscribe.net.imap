@@ -1,0 +1,9 @@
+kind=defined
+names=unsubscribe
+visibility=public
+
+--- unsubscribe(mailbox)
+
+Sends a UNSUBSCRIBE command to remove the specified mailbox name
+from the server's set of "active" or "subscribed" mailboxes.
+

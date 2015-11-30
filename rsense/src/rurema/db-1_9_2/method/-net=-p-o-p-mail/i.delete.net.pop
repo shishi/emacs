@@ -1,0 +1,18 @@
+kind=defined
+names=delete,delete!
+visibility=public
+
+--- delete -> ()
+--- delete! -> ()
+メールに削除マークを付けます。
+
+削除マークを付けたメールは読み出せなくなります。
+セッション終了時に実際に削除されます。
+[[m:Net::POP3#reset]] を呼ぶと削除マークは取り消されます。
+
+delete! は obsolete です。
+
+@raise TimeoutError 通信がタイムアウトした場合に発生します
+@raise Net::POPError サーバが認証失敗以外のエラーを報告した場合に発生します
+@raise Net::POPBadResponse サーバからの応答がプロトコル上不正であった場合に発生します
+@see [[m:Net::POPMail#deleted?]]

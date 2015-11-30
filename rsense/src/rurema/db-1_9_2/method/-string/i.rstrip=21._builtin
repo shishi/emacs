@@ -1,0 +1,20 @@
+kind=defined
+names=rstrip!
+visibility=public
+
+--- rstrip! -> self | nil
+
+文字列の末尾にある空白文字を全て破壊的に取り除きます。
+空白文字の定義は " \t\r\n\f\v\0" です。
+
+例:
+    str = "  abc\n"
+    p str.rstrip!   # => "  abc"
+    p str           # => "  abc"
+
+    str = "  abc \r\n\t\v\0"
+    p str.rstrip!   # => "  abc"
+    p str           # => "  abc"
+
+@see [[m:String#rstrip]], [[m:String#lstrip]]
+

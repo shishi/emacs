@@ -1,0 +1,6 @@
+kind=defined
+names=menuconfiginfo
+visibility=public
+
+--- menuconfiginfo(key = nil)
+

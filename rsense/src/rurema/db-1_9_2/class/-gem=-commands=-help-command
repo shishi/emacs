@@ -1,0 +1,7 @@
+superclass=Gem=Command
+type=class
+library=rubygems.commands.help_command
+extended=
+included=
+
+Gem コマンドに関するヘルプを提供するためのクラスです。

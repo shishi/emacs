@@ -1,0 +1,9 @@
+kind=defined
+names=[]
+visibility=public
+
+--- [](index)
+
+index番目の値を返します。
+selfはTclの配列でなければなりません。
+

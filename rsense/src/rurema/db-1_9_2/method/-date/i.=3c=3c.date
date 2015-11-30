@@ -1,0 +1,12 @@
+kind=defined
+names=<<
+visibility=public
+
+--- << (n) -> Date
+self より n ヶ月前の日付オブジェクトを返します。
+n は数値でなければなりません。
+
+[[m:Date#prev_month]] も参照してください。
+
+@param n 月数
+

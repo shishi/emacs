@@ -1,0 +1,10 @@
+kind=defined
+names=text
+visibility=public
+
+--- text
+
+Returns the text.
+
+
+

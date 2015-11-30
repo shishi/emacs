@@ -1,0 +1,6 @@
+kind=defined
+names=ensemble_create
+visibility=public
+
+--- ensemble_create(*keys)
+

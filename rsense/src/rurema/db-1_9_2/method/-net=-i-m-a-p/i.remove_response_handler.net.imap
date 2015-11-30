@@ -1,0 +1,8 @@
+kind=defined
+names=remove_response_handler
+visibility=public
+
+--- remove_response_handler(handler)
+
+Removes the response handler.
+

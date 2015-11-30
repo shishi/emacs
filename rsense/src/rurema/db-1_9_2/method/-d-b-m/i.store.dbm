@@ -1,0 +1,19 @@
+kind=defined
+names=store
+visibility=public
+
+--- store(key, value) -> String
+
+key に対して value を格納します。
+
+@param key   キー。
+@param value 値。
+
+@see [[m:DBM#[]=]]
+
+  require 'dbm'
+  
+  db1 = DBM.open('aaa.db', 0666, DBM::NEWDB)
+  p db1.store('c', 'ccc') #=> "ccc"
+
+

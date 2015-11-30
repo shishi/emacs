@@ -1,0 +1,19 @@
+kind=defined
+names=ole_obj_help,ole_type
+visibility=public
+
+--- ole_obj_help -> WIN32OLE_TYPE | nil
+--- ole_type -> WIN32OLE_TYPE | nil
+[[c:WIN32OLE_TYPE]]オブジェクトを返します。
+
+[[c:WIN32OLE_TYPE]]オブジェクトは、WIN32OLEオブジェクトの文書情報と型情
+報を保持するオブジェクトです。
+
+@return オブジェクトに関連する[[c:WIN32OLE_TYPE]]オブジェクトを返します。
+        オブジェクトがドキュメント情報を持たない場合はnilを返します。
+
+   excel = WIN32OLE.new('Excel.Application')
+   tobj = excel.ole_obj_help
+
+@see [[c:WIN32OLE_TYPE]]
+

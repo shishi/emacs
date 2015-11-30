@@ -1,0 +1,10 @@
+kind=defined
+names=ucmp
+visibility=public
+
+--- ucmp(other) -> -1 | 0 | 1
+自身と other の絶対値を比較し、other の絶対値のほうが
+自身の絶対値より小さければ-1、
+大きければ+1、2つの絶対値が等しければ 0 を返します。
+
+@param other 比較する数

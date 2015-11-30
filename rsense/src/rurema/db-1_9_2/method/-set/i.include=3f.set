@@ -1,0 +1,15 @@
+kind=defined
+names=include?,member?
+visibility=public
+
+--- include?(o) -> bool
+--- member?(o) -> bool
+
+オブジェクト o がその集合に属する場合に true を返します。
+
+@param o オブジェクトを指定します。
+
+  set = Set['hello', 'world']
+  p set.include?('world') #=> true
+  p set.include?('bye') #=> false
+

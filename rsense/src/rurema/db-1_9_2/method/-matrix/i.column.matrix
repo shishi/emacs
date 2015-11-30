@@ -1,0 +1,32 @@
+kind=defined
+names=column
+visibility=public
+
+--- column(j) -> Vector
+--- column(j) {|x| ... } -> nil
+
+第j番目の列ベクトルを返します。
+
+selfのj列目を列ベクトルとして返します。
+ブロックが与えられたときは、各列ベクトルの要素についてブロックを繰り返します。
+
+@param j 列ベクトルの位置を指定します。
+
+===== 注意
+
+引数jは0オリジンで指定することに注意してください。
+
+例:
+  a1 = [ 1,  2,   3]
+  a2 = [10, 15,  20]
+  a3 = [-1, -2, 1.5]
+  m = Matrix[a1, a2, a3]
+
+  p m.column(1) #=> Vector[2, 15, -2]
+ 
+  cnt = 0
+  m.column(0) { |x|
+    cnt = cnt + x
+  }
+  p cnt #=> 24.5
+

@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=open=2duri
+extended=
+included=
+
+[[c:URI::HTTP]] と [[c:URI::FTP]] を拡張するために用意されたモジュールです。

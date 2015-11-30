@@ -1,0 +1,10 @@
+kind=defined
+names=basic_auth
+visibility=public
+
+--- basic_auth(account, password) -> ()
+Authorization: ヘッダを BASIC 認証用にセットします。
+
+@param account アカウント名を文字列で与えます。
+@param password パスワードを文字列で与えます。
+

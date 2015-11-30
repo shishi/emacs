@@ -1,0 +1,8 @@
+kind=defined
+names=addtag_overlapping
+visibility=public
+
+--- addtag_overlapping(tagOrId, x1, y1, x2, y2)
+
+
+

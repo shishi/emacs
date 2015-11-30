@@ -1,0 +1,16 @@
+kind=defined
+names=ensure_dependency
+visibility=public 
+
+--- ensure_dependency -> true
+
+インストールしようとしている Gem が依存関係を満たしている事を確認します。
+
+依存関係を満たしていない場合は、例外 [[c:Gem::InstallError]] が発生します。
+
+@param spec [[c:Gem::Specification]] のインスタンスを指定します。
+
+@param dependency [[c:Gem::Dependency]] のインスタンスを指定します。
+
+@raise Gem::InstallError 依存関係を満たしていない場合に発生します。
+

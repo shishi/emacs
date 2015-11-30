@@ -1,0 +1,7 @@
+kind=defined
+names=close
+visibility=public
+
+--- close -> nil
+内部のサーバソケットを閉じます。
+

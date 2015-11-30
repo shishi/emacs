@@ -1,0 +1,8 @@
+kind=defined
+names=query
+visibility=public
+
+--- query(*args)
+
+
+

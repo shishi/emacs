@@ -1,0 +1,12 @@
+kind=defined
+names=_load
+visibility=public
+
+--- _load(s)
+
+Unmarshall a marshalled DRbObject.
+
+If the referenced object is located within the local server,
+then the object itself is returned. Otherwise, a new DRbObject
+is created to act as a stub for the remote referenced object.
+

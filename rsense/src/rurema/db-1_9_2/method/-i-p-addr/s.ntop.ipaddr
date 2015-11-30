@@ -1,0 +1,11 @@
+kind=defined
+names=ntop
+visibility=public
+
+--- ntop(addr)
+
+ネットワークバイトオーダーのバイト列で表現された IP アドレスを人間の読める形式に変換します。
+
+@param addr ネットワークバイトオーダーのバイト列。
+
+

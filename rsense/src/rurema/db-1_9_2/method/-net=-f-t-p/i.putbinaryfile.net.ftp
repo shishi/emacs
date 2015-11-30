@@ -1,0 +1,27 @@
+kind=defined
+names=putbinaryfile
+visibility=public
+
+--- putbinaryfile(localfile, remotefile = File.basename(localfile), blocksize = DEFAULT_BLOCKSIZE) -> nil
+--- putbinaryfile(localfile, remotefile = File.basename(localfile), blocksize = DEFAULT_BLOCKSIZE) {|data| ...} -> nil
+
+サーバにファイルをバイナリモードで転送します。
+
+ローカルの localfile という名前のファイルを読みだし、
+サーバー上の remotefile という名前のファイルに保存します。
+
+データの転送は blocksize バイト毎に行なわれます。
+
+ブロックが指定された場合は
+データを blocksize バイト転送するごとに、そのデータを
+ブロックに渡します。
+
+@param localfile 転送するローカルのファイル名を与えます。
+@param remotefile 転送データを保存するリモートのファイル名を与えます。
+@param blocksize データ転送の単位をバイト単位で与えます。
+
+@raise Net::FTPTempError 応答コードが 4yz のときに発生します。
+@raise Net::FTPPermError 応答コードが 5yz のときに発生します。
+@raise Net::FTPProtoError 応答コードが RFC 的に正しくない場合に発生します。
+@raise Net::FTPReplyError 応答コードが上の場合以外で正しくない場合(1xy, 3xyが来るべきでないときに来た場合など)に発生します。
+

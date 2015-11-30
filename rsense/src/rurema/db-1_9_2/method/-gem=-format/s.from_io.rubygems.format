@@ -1,0 +1,14 @@
+kind=defined
+names=from_io
+visibility=public
+
+--- from_io(io, gem_path = '(io)', security_policy = nil) -> Gem::Format
+
+Gem ファイルからデータを読み込んだ IO を受け取り、自身を初期化して返します。
+
+@param io Gem パッケージの内容を読み込んだ IO オブジェクトを指定します。
+
+@param gem_path Gem ファイルのパスを指定します。
+
+@param security_policy ???
+

@@ -1,0 +1,12 @@
+kind=defined
+names=bkgdset
+visibility=public
+
+--- bkgdset(ch) -> nil
+Manipulate the background of the current window
+with character Integer +ch+
+
+@param ch ...
+
+@see [[m:Curses.bkgdset]]
+

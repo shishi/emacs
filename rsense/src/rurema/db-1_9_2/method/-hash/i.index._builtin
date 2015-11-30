@@ -1,0 +1,28 @@
+kind=defined
+names=index,key
+visibility=public
+
+--- key(val) -> object
+--- index(val) -> object
+
+値 val に対応するキーを返します。対応する要素が存在しない時には
+nil を返します。
+
+該当するキーが複数存在する場合、どのキーを返すかは不定です。
+
+
+
+Hash#index は 現バージョンの1.9では((<obsolete>)) です。
+使用すると警告メッセージが表示されます。
+
+
+@param val 探索に用いる値を指定します。
+
+  h = {:ab => "some" , :cd => "all" , :ef => "all"}
+  
+  p h.key("some") #=> :ab
+  p h.key("all") #=> :cd
+  p h.key("at") #=> nil
+
+@see [[m:Hash#invert]]
+

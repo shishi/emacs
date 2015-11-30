@@ -1,0 +1,19 @@
+kind=defined
+names=upcase
+visibility=public
+
+--- upcase -> String
+
+'a' から 'z' までのアルファベット小文字を大文字に変換した文字列を作成し返します。
+
+このメソッドはマルチバイト文字列を認識しますが、
+それはあくまでも「1 文字を 1 文字として認識する」だけであって、
+いわゆる全角アルファベットの大文字小文字までは変換しません。
+
+
+例:
+    p "stRIng? STring.".upcase   # => "STRING? STRING."
+
+@see [[m:String#upcase!]], [[m:String#downcase]],
+     [[m:String#swapcase]], [[m:String#capitalize]]
+

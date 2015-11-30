@@ -1,0 +1,7 @@
+kind=defined
+names=FNM_SYSCASE
+visibility=public
+
+--- FNM_SYSCASE
+case hold なファイルシステムの場合、FNM_CASEFOLD の値になり、そうでなければゼロの値になります。
+[[m:File.fnmatch]], [[m:Dir.glob]]で使用します。

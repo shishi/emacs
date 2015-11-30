@@ -1,0 +1,12 @@
+kind=defined
+names=parse_line
+visibility=public
+
+--- parse_line(line, options = Hash.new) -> Array
+
+このメソッドは一行の CSV 文字列を配列に変換するためのショートカットです。
+
+@param line 文字列を指定します。複数行の文字列を指定した場相は、一行目以外は無視します。
+
+@param options [[m:CSV.new]] のオプションと同じオプションを指定できます。
+

@@ -1,0 +1,7 @@
+superclass=ThreadError
+type=class
+library=rinda.rinda
+extended=
+included=
+
+Raised when trying to use an expired tuple.

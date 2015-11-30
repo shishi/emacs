@@ -1,0 +1,15 @@
+kind=defined
+names=prime?
+visibility=public
+
+--- prime?(value, generator = Prime::Generator23.new) -> bool
+
+与えられた整数が素数である場合は、真を返します。
+そうでない場合は偽を返します。
+
+@param value 素数かどうかチェックする任意の整数を指定します。
+
+@param generator 素数生成器のインスタンスを指定します。
+
+@see [[c:Prime::EratosthenesGenerator]], [[c:Prime::TrialDivisionGenerator]], [[c:Prime::Generator23]]
+

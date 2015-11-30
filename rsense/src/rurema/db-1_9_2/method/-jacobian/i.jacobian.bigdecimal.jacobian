@@ -1,0 +1,7 @@
+kind=defined
+names=jacobian
+visibility=public
+
+--- jacobian(f, fx, x)
+
+

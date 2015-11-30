@@ -1,0 +1,8 @@
+kind=defined
+names=last_error
+visibility=public
+
+--- last_error -> Exception | nil
+直前に変換器で発生した例外に相当する例外オブジェクトを返します
+直線の変換で例外が発生していない場合は nil を返します。
+

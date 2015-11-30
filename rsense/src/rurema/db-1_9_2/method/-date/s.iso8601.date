@@ -1,0 +1,15 @@
+kind=defined
+names=iso8601
+visibility=public
+
+--- iso8601(str = '-4712-01-01', start = Date::ITALY) -> Date
+いくつかの代表的な [[ISO:8601]] 書式の日付を解析し、
+その情報に基づいて日付オブジェクトを生成します。
+
+@param str 日付をあらわす文字列
+
+[[m:Date._iso8601]] も参照してください。
+
+@param str 日付をあらわす文字列
+@param start グレゴリオ暦をつかい始めた日をあらわすユリウス日
+

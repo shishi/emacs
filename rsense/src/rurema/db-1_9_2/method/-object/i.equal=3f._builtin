@@ -1,0 +1,26 @@
+kind=defined
+names=equal?
+visibility=public
+
+--- equal?(other) -> bool
+
+other が self 自身の時、真を返します。
+
+二つのオブジェクトが同一のものかどうか調べる時に使用します。
+このメソッドを再定義してはいけません。
+
+お互いの[[m:Object#object_id]]が一致する
+かどうかを調べます。
+
+@param other 比較するオブジェクトです。
+
+  p("foo".equal?("bar")) #=> false
+  p("foo".equal?("foo")) #=> false
+
+  p(4.equal?(4)) #=> true
+  p(4.equal?(4.0)) #=> false
+  
+  p(:foo.equal? :foo) #=> true
+
+@see [[m:Object#object_id]],[[m:Object#==]],[[m:Object#eql?]],[[c:Symbol]]
+

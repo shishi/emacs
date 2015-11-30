@@ -1,0 +1,6 @@
+kind=defined
+names=tk_tcl2ruby
+visibility=public
+
+--- tk_tcl2ruby(val, enc_mode = false, listobj = true)
+

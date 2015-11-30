@@ -1,0 +1,14 @@
+kind=defined
+names=keep_if,select!
+visibility=public
+
+--- keep_if {|key, value| ... } -> self
+--- select! {|key, value| ... } -> self | nil
+--- keep_if -> Enumerator
+--- select! -> Enumerator
+
+キーと値を引数としてブロックを評価した結果が真であ
+るような要素を self に残します。
+
+@see [[m:Hash#select]]
+@see [[m:Hash#delete_if]],[[m:Hash#reject!]]

@@ -1,0 +1,17 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(window_bits = Zlib::MAX_WBITS) -> Zlib::Inflate
+
+展開ストリームを作成します。
+
+@param window_bits ウィンドの大きさを整数で指定します。
+                   nil の場合はデフォルトの値を使用します。
+                   詳細は zlib.h を参照してください。
+
+  cstr = "x\234\313\310OOUH+MOTH\315K\001\000!\251\004\276"
+  inz = Zlib::Inflate.new(15)
+  inz << cstr
+  p inz.finish #=> "hoge fuga end"
+

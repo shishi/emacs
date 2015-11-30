@@ -1,0 +1,36 @@
+kind=defined
+names=fetch
+visibility=public
+
+--- fetch(nth)               -> object    
+--- fetch(nth, ifnone)       -> object
+--- fetch(nth) {|nth| ... }  -> object
+
+nth 番目の要素を返します。
+
+[[m:Array#[] ]](nth) とは nth 番目の要素が存在しない場合の振舞いが異
+なります。最初の形式では、例外 [[c:IndexError]] が発生します。
+二番目の形式では、引数 ifnone を返します。
+三番目の形式では、ブロックを評価した結果を返します。
+
+@param nth 取得したい要素のインデックスを整数で指定します。
+
+@param ifnone 要素が存在しなかった場合に返すべき値を指定します。
+
+例:
+
+  a = [1, 2, 3, 4, 5]
+  begin
+    p a.fetch(10)
+  rescue IndexError => err
+    puts err #=> index 10 out of array
+  end
+  
+  p a.fetch(10, 999) #=> 999
+  
+  result = a.fetch(10){|nth|
+    print "#{nth} はありません。\n"
+    999
+  }
+  p result #=> 999
+

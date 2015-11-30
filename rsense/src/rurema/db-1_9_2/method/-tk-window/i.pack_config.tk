@@ -1,0 +1,8 @@
+kind=defined
+names=pack_config,pack_configure
+visibility=public
+
+--- pack_config(slot, value = Tk::None)
+--- pack_configure(slot, value = Tk::None)
+
+

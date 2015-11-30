@@ -1,0 +1,6 @@
+kind=defined
+names=mark_gravity
+visibility=public
+
+--- mark_gravity(mark, direction = nil)
+

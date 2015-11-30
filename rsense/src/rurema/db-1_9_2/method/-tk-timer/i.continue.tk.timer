@@ -1,0 +1,6 @@
+kind=defined
+names=continue
+visibility=public
+
+--- continue(wait = nil)
+

@@ -1,0 +1,6 @@
+kind=defined
+names=set_path
+visibility=public
+
+--- set_path(*namespace_list)
+

@@ -1,0 +1,8 @@
+kind=defined
+names=verify_data
+visibility=public 
+
+--- verify_data -> bool
+
+この値が真である場合は、データを検証します。
+

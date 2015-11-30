@@ -1,0 +1,18 @@
+kind=defined
+names=matched?
+visibility=public
+
+--- matched? -> bool
+前回のマッチが成功していたら true を、
+失敗していたら false を返します。
+
+使用例
+      s = StringScanner.new('test string')
+      s.matched?    # => false
+      s.scan(/\w+/) # => "test"
+      s.matched?    # => true
+      s.scan(/\w+/) # => nil
+      s.matched?    # => false
+      s.scan(/\s+/) # => " "
+      s.matched?    # => true
+

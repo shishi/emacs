@@ -1,0 +1,11 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(cpu, os) -> Resolv::DNS::Resource::HINFO
+Resolv::DNS::Resource::HINFO のインスタンスを生成します。
+
+@param cpu CPU 名
+@param os OS 名
+
+

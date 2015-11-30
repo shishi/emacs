@@ -1,0 +1,10 @@
+methods=
+sublibraries=
+requires=
+classes=Rinda,Rinda=DRbObjectTemplate,Rinda=InvalidHashTupleKey,Rinda=RequestCanceledError,Rinda=RequestExpiredError,Rinda=RindaError,Rinda=SimpleRenewer,Rinda=Tuple,Rinda=Template,Rinda=TupleSpaceProxy
+is_sublibrary=false
+
+Rubyで実装されたタプル空間(Tuple Space)を扱うためのライブラリです。
+
+  * [[url:http://www.druby.org/ilikeruby/rinda.html]]
+  * [[url:http://www2a.biglobe.ne.jp/~seki/ruby/d208.html]]

@@ -1,0 +1,8 @@
+kind=defined
+names=SSAVE
+visibility=public
+
+--- SSAVE -> Integer
+
+Shift + Save キーを表す定数です。
+

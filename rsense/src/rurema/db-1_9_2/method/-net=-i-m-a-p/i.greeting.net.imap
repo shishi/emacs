@@ -1,0 +1,8 @@
+kind=defined
+names=greeting
+visibility=public
+
+--- greeting
+
+Returns an initial greeting response from the server.
+

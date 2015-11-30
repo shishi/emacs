@@ -1,0 +1,10 @@
+kind=defined
+names=args
+visibility=public
+
+--- args -> Array
+
+エラーのあったオプションの一覧を配列で返します。
+
+@return エラーのあったオプションの一覧。
+

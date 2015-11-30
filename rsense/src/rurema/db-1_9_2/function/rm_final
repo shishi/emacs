@@ -1,0 +1,8 @@
+name=rm_final
+private=true
+macro=false
+type=VALUE
+filename=gc.c
+params=(VALUE os, VALUE proc)
+
+

@@ -1,0 +1,10 @@
+kind=defined
+names=create_id
+visibility=public
+
+--- create_id -> String
+
+json_create メソッドで使用するクラスを決定するために使用する値を返します。
+
+デフォルトは "json_class" です。
+

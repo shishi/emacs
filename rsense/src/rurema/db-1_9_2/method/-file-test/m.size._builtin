@@ -1,0 +1,16 @@
+kind=defined
+names=size
+visibility=public
+
+--- size(file)    -> Integer
+
+ファイルのサイズを返します。
+
+@param file ファイル名を表す文字列か IO オブジェクトを指定します。
+
+@raise Errno::EXXX filename が存在しない場合、あるいはシステムコールに失敗した場合に発生します。
+
+@raise IOError 指定された IO オブジェクト file が既に close されていた場合に発生します。
+
+@see [[m:FileTest.#size?]], [[m:FileTest.#zero?]]
+

@@ -1,0 +1,13 @@
+kind=defined
+names=read
+visibility=public
+
+--- read    -> String | nil
+
+ディレクトリストリームから次の要素を読み出して返します。最後の要素
+まで読み出していれば nil を返します。
+
+@raise Errno::EXXX ディレクトリの読み出しに失敗した場合に発生します。
+
+@raise IOError 既に自身が close している場合に発生します。
+

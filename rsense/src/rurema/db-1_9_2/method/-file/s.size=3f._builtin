@@ -1,0 +1,10 @@
+kind=defined
+names=size?
+visibility=public
+
+--- size?(path)    -> bool
+
+[[m:FileTest.#size?]] と同じです。
+
+@param path パスを表す文字列か IO オブジェクトを指定します。
+

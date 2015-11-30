@@ -1,0 +1,7 @@
+superclass=Gem=Exception
+type=class
+library=rubygems.exceptions
+extended=
+included=
+
+YAML データが不正である場合に使用する例外です。

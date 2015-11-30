@@ -1,0 +1,10 @@
+kind=defined
+names=to_a
+visibility=public
+
+--- to_a -> [Array]
+
+配列の配列を返します。
+
+一番目の要素はヘッダで、残りの要素はデータを表わします。
+

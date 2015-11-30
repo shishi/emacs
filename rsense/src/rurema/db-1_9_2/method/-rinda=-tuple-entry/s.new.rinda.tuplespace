@@ -1,0 +1,12 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(ary, sec = nil)
+
+Creates a TupleEntry based on +ary+ with an optional renewer or
+expiry time +sec+.
+
+A renewer must implement the +renew+ method which returns a
+Numeric, nil, or true to indicate when the tuple has expired.
+

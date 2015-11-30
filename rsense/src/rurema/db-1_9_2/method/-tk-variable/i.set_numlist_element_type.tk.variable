@@ -1,0 +1,6 @@
+kind=defined
+names=set_numlist_element_type
+visibility=public
+
+--- set_numlist_element_type(idxs, val)
+

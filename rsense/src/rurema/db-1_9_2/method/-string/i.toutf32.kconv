@@ -1,0 +1,16 @@
+kind=added
+names=toutf32
+visibility=public
+
+--- toutf32 -> String
+
+self のエンコーディングを UTF-32 に変換した文字列を
+返します。変換元のエンコーディングは文字列の内容から推測します。
+
+このメソッドは MIME エンコードされた文字列を展開し、
+いわゆる半角カナを全角に変換します。
+これらを変換したくない場合は、 [[m:NKF.#nkf]]('-w32xm0', str)
+を使ってください。
+
+@see [[m:Kconv.#toutf32]]
+

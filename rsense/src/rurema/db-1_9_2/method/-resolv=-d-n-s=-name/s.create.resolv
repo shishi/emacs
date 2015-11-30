@@ -1,0 +1,9 @@
+kind=defined
+names=create
+visibility=public
+
+--- create(name) -> Resolv::DNS::Name
+文字列 name から Resolv::DNS::Name のインスタンスを生成します。
+
+@param name ドメイン名の文字列。最後に"."を置くと絶対パス形式、そうでなければ相対パス形式とみなされます。
+

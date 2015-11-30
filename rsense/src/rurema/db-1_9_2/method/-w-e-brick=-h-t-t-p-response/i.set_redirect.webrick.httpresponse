@@ -1,0 +1,16 @@
+kind=defined
+names=set_redirect
+visibility=public
+
+--- set_redirect(status, url)    -> ()
+
+指定された url にリダイレクトするためのヘッダと内容(エンティティボディ)を
+設定し例外 status を発生させます。
+
+@param status [[c:WEBrick::HTTPStatus::Redirect]] を指定します。
+
+@param url URL を指定します。
+
+例:
+  res.set_redirect WEBrick::HTTPStatus::TemporaryRedirect
+

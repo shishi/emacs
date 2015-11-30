@@ -1,0 +1,8 @@
+kind=defined
+names=OS_TOPS20
+visibility=public
+
+--- OS_TOPS20 -> Fixnum
+
+OS の種類を表す定数です。
+

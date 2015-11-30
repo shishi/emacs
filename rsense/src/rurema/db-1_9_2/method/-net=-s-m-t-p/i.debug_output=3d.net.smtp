@@ -1,0 +1,12 @@
+kind=defined
+names=debug_output=,set_debug_output
+visibility=public
+
+--- set_debug_output(f) -> ()
+--- debug_output=(f)
+デバッグ出力の出力先を指定します。
+このメソッドは深刻なセキュリティホールの原因となりえます。
+デバッグ用にのみ利用してください。
+
+@param f デバッグ出力先を [[c:IO]] (もしくは << というメソッドを持つクラス)で指定します
+

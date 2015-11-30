@@ -1,0 +1,10 @@
+kind=defined
+names=executables=
+visibility=public
+
+--- executables=(executables)
+
+実行可能ファイル名のリストをセットします。
+
+@param executables 実行可能ファイル名のリストを指定します。
+

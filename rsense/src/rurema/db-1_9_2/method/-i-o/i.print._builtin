@@ -1,0 +1,14 @@
+kind=defined
+names=print
+visibility=public
+
+--- print(*arg)    -> nil
+
+引数を IO ポートに順に出力します。引数を省略した場合は、[[m:$_]] を出力します。
+
+@param arg [[m:Kernel.#print]] と同じです。
+
+@raise IOError 自身が書き込み用にオープンされていなければ発生します。
+
+@raise Errno::EXXX 出力に失敗した場合に発生します。
+

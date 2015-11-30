@@ -1,0 +1,8 @@
+kind=defined
+names=num_waiting
+visibility=public
+
+--- num_waiting -> Fixnum
+
+キューを待っているスレッドの数を返します。
+

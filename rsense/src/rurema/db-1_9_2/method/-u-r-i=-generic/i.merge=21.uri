@@ -1,0 +1,18 @@
+kind=defined
+names=merge!
+visibility=public
+
+--- merge!(rel)    -> self
+
+与えられたパス rel を自身へ連結します。
+
+[[rfc:2396]] の Section 5.2 の仕様に従います。
+rel が文字列の場合は URI.parse(rel) によって、URI に変換してから連結します。
+
+@param rel 連結したいパスを文字列か URI オブジェクトで与えます。
+
+例:
+  u = URI.parse('http://www.ruby-lang.org/')
+  u.merge!('/en/raa.html')
+  p u.to_s                                   #=> http://www.ruby-lang.org/en/raa.html
+

@@ -1,0 +1,6 @@
+kind=defined
+names=tag_ranges
+visibility=public
+
+--- tag_ranges(tag)
+

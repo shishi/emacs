@@ -1,0 +1,53 @@
+kind=defined
+names=_dump
+visibility=public
+
+--- _dump(limit) -> String
+
+[[m:Marshal.#dump]] において出力するオブジェクトがメソッド _dump 
+を定義している場合には、そのメソッドの結果が書き出されます。
+
+バージョン1.8.0以降では[[m:Object#marshal_dump]], [[m:Object#marshal_load]]の使用
+が推奨されます。 Marshal.dump するオブジェクトが _dump と marshal_dump の両方の
+メソッドを持つ場合は marshal_dump が優先されます。
+
+メソッド _dump は引数として再帰を制限するレベル limit を受
+け取り、オブジェクトを文字列化したものを返します。
+
+インスタンスがメソッド _dump を持つクラスは必ず同じフォー
+マットを読み戻すクラスメソッド _load を定義する必要があり
+ます。_load はオブジェクトを表現した文字列を受け取り、それ
+をオブジェクトに戻したものを返す必要があります。
+
+@param limit 再帰の制限レベルを表す整数です。
+@return オブジェクトを文字列化したものを返すように定義すべきです。
+
+  class Foo
+    def initialize(arg)
+      @foo = arg
+    end
+    def _dump(limit)
+      Marshal.dump(@foo, limit)
+    end
+    def self._load(obj)
+      p obj
+      Foo.new(Marshal.load(obj))
+    end
+  end
+  foo = Foo.new(['foo', 'bar'])
+  p foo                      #=> #<Foo:0xbaf234 @foo=["foo", "bar"]>
+  dms = Marshal.dump(foo)
+  p dms                      #=> "\004\bu:\bFoo\023\004\b[\a\"\bfoo\"\bbar"
+  result = Marshal.load(dms) #=> "\004\b[\a\"\bfoo\"\bbar" # self._load の引数
+  p result                   #=> #<Foo:0xbaf07c @foo=["foo", "bar"]>
+
+インスタンス変数の情報は普通マーシャルデータに含まれるので、上例
+のように _dump を定義する必要はありません(ただし _dump を定義すると
+インスタンス変数の情報は dump されなくなります)。
+_dump/_load はより高度な制御を行いたい場合や拡張ライブラリで定義し
+たクラスのインスタンスがインスタンス変数以外に情報を保持する場合に
+利用します。(例えば、クラス [[c:Time]] は、_dump/_load を定義して
+います)
+
+@see [[m:Object#marshal_dump]],[[m:Object#marshal_load]]
+

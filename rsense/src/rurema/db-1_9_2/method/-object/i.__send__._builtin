@@ -1,0 +1,49 @@
+kind=defined
+names=__send__,send
+visibility=public
+
+--- send(name, *args) -> object
+--- send(name, *args) { .... } -> object
+--- __send__(name, *args) -> object
+--- __send__(name, *args) { .... } -> object
+
+オブジェクトのメソッド name を args を引数に
+して呼び出し、メソッドの実行結果を返します。
+
+ブロック付きで呼ばれたときはブロックもそのまま引き渡します。
+
+send が再定義された場合に備えて別名 __send__ も
+用意されており、ライブラリではこちらを使うべきです。また
+__send__ は再定義すべきではありません。
+
+send, __send__ は、メソッドの呼び出し制限
+にかかわらず任意のメソッドを呼び出せます。
+[[ref:d:spec/def#limit]] も参照してください。
+
+@param name 文字列か[[c:Symbol]] で指定するメソッド名です。
+@param args 呼び出すメソッドに渡す引数です。
+
+  p -365.send(:abs) #=> 365
+  p "ruby".send(:sub,/./,"R") #=> "Ruby"
+  
+  
+  class Foo
+    def foo() "foo" end
+    def bar() "bar" end
+    def baz() "baz" end
+  end
+  
+  # 任意のキーとメソッド(の名前)の関係をハッシュに保持しておく
+  # レシーバの情報がここにはないことに注意
+  methods = {1 => :foo,
+    2 => :bar,
+    3 => :baz}
+  
+  # キーを使って関連するメソッドを呼び出す
+  # レシーバは任意(Foo クラスのインスタンスである必要もない)
+  p Foo.new.send(methods[1])      # => "foo"
+  p Foo.new.send(methods[2])      # => "bar"
+  p Foo.new.send(methods[3])      # => "baz"
+
+@see [[m:Object#method]], [[m:Kernel.#eval]], [[c:Proc]], [[c:Method]]
+

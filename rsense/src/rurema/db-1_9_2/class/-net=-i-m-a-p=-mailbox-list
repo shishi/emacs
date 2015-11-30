@@ -1,0 +1,11 @@
+superclass=Struct
+type=class
+library=net.imap
+extended=
+included=
+
+Net::IMAP::MailboxList represents contents of the LIST response.
+
+  mailbox_list    ::= "(" #("\Marked" / "\Noinferiors" /
+                      "\Noselect" / "\Unmarked" / flag_extension) ")"
+                      SPACE (<"> QUOTED_CHAR <"> / nil) SPACE mailbox

@@ -1,0 +1,8 @@
+kind=defined
+names=wrongNumArgsString
+visibility=public
+
+--- wrongNumArgsString(str)
+
+
+

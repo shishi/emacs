@@ -1,0 +1,10 @@
+kind=defined
+names=jisx0301
+visibility=public
+
+--- jisx0301(n = 0) -> String
+[[JIS:X 0301]] 書式の文字列を返します。
+省略可能な引数により、印字する秒の小数点以下の桁数を与えることができます。
+
+@param n 小数点以下の桁数
+

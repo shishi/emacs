@@ -1,0 +1,11 @@
+kind=defined
+names=comment,comment=
+visibility=public
+
+--- comment         -> String
+--- comment=(value)
+
+コメントを文字列で表すアクセサです。
+
+@param value コメントを文字列で指定します。
+

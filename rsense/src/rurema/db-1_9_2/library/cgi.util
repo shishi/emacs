@@ -1,0 +1,7 @@
+methods=CGI/s.escape.cgi.util,CGI/s.unescape.cgi.util,CGI/s.escapeHTML.cgi.util,CGI/s.unescapeHTML.cgi.util,CGI/s.escapeElement.cgi.util,CGI/s.unescapeElement.cgi.util,CGI/s.rfc1123_date.cgi.util,CGI/s.pretty.cgi.util,CGI/c.TABLE_FOR_ESCAPE_HTML__.cgi.util,CGI/c.RFC822_DAYS.cgi.util,CGI/c.RFC822_MONTHS.cgi.util
+sublibraries=
+requires=
+classes=
+is_sublibrary=true
+
+CGI で利用するユーティリティメソッドを定義したライブラリです。

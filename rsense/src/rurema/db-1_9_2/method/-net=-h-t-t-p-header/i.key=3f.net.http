@@ -1,0 +1,10 @@
+kind=defined
+names=key?
+visibility=public
+
+--- key?(key) -> bool
+key というヘッダフィールドがあれば真を返します。
+key は大文字小文字を区別しません。
+
+@param key 探すヘッダフィールド名を文字列で与えます。
+

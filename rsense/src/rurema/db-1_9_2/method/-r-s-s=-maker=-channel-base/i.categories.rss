@@ -1,0 +1,7 @@
+kind=defined
+names=categories
+visibility=public
+
+--- categories
+categoriesを返します．
+

@@ -1,0 +1,13 @@
+kind=defined
+names=helo
+visibility=public
+
+--- helo(domain) -> Net::SMTP::Response
+HELO コマンドを送ります(標準的な SMTP を使います)。
+
+通常は [[m:Net::SMTP.start]], [[m:Net::SMTP#start]] で HELO が
+送られるため利用する必要はないはずです。
+
+
+@param domain HELOで送るドメイン名
+

@@ -1,0 +1,19 @@
+kind=defined
+names=mime_type
+visibility=public
+
+--- mime_type(filename, mime_tab)    -> String
+
+ファイル名 filename の拡張子をもとにその MIME タイプを指定された mime_tab 
+から探して文字列として返します。MIME タイプが見つからない場合は "application/octet-stream"
+を返します。
+
+@param filename ファイル名を文字列で指定します。
+
+@param mime_tab 拡張子をキー、MIME タイプを値とするハッシュを指定します。
+
+  include WEBrick::HTTPUtils
+  p mime_type('index.html', DefaultMimeTypes)     #=> "text/html"
+  p mime_type('index.html.ja', DefaultMimeTypes)  #=> "text/html"
+  p mime_type('index.hoge', DefaultMimeTypes)     #=> "application/octet-stream"
+

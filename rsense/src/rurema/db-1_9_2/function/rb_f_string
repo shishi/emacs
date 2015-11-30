@@ -1,0 +1,8 @@
+name=rb_f_string
+private=true
+macro=false
+type=VALUE
+filename=object.c
+params=(VALUE obj, VALUE arg)
+
+

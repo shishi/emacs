@@ -1,0 +1,20 @@
+name=rb_reserved_word
+private=true
+macro=false
+type=struct kwtable *
+filename=parse.y
+params=(const char *str, unsigned int len)
+
+
+長さ len の文字列 str が予約語であれば
+そのフラグテーブルを返します。str が予約語でなければ
+NULL を返します。
+
+    struct kwtable {
+        char *name;            /* 予約語の名前 */
+        int id[2];             /* 0:  非修飾型シンボル
+                                  1:  修飾型シンボル (kIF_MOD など) があれば
+                                      それを格納する。なければ id[0] と同じ  */
+        enum lex_state state;  /* 遷移すべきlex_state */
+    };
+

@@ -1,0 +1,5 @@
+kind=defined
+names=current_entryconfiginfo
+visibility=public
+
+--- current_entryconfiginfo(tagOrId, slot = nil)

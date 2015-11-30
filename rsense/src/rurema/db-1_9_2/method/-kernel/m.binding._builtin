@@ -1,0 +1,18 @@
+kind=defined
+names=binding
+visibility=public
+
+--- binding -> Binding
+
+変数・メソッドなどの環境情報を含んだ [[c:Binding]] オブジェクトを
+生成して返します。通常、[[m:Kernel.#eval]] の第二引数として使います。
+
+  def foo
+    a = 1
+    binding
+  end
+
+  eval("p a", foo)  #=> 1
+
+@see [[m:Kernel.#eval]],[[m:Kernel::TOPLEVEL_BINDING]]
+

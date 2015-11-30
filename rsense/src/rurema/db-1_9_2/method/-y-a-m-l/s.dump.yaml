@@ -1,0 +1,15 @@
+kind=defined
+names=dump
+visibility=public
+
+--- dump(obj, io = nil)
+
+与えられた obj を YAML フォーマットに変換し、io に書き込みます。
+io が与えられていない場合は、YAML フォーマットの文字列を返します。
+
+@param obj YAMLフォーマットに変換されるオブジェクト
+@param io 出力先のIOオブジェクト
+
+  YAML.dump( ['badger', 'elephant', 'tiger'],
+             File.open('sample.yml', 'w')    )
+

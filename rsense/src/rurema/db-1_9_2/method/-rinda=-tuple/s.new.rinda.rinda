@@ -1,0 +1,11 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(ah)
+
+Tuple オブジェクトを生成します。
+ah には [[c:Array]] オブジェクトか [[c:Hash]] オブジェクトを与えます。
+[[c:Hash]] オブジェクトを与える場合、
+キーはすべて文字列でなければいけません。
+

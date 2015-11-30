@@ -1,0 +1,10 @@
+kind=defined
+names=version=
+visibility=public
+
+--- version=(version)
+
+この Gem パッケージのバージョンをセットします。
+
+@param version バージョンを文字列か [[c:Gem::Version]] のインスタンスで指定します。
+

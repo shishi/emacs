@@ -1,0 +1,7 @@
+kind=defined
+names=MAX_KEY_LENGTH,MAX_VALUE_LENGTH
+visibility=public
+
+--- MAX_KEY_LENGTH
+--- MAX_VALUE_LENGTH
+

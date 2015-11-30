@@ -1,0 +1,18 @@
+kind=defined
+names=delete_at
+visibility=public
+
+--- delete_at(pos)    -> object | nil
+
+指定された位置 pos にある要素を取り除きそれを返します。
+pos が範囲外であったら nil を返します。
+
+[[m:Array#at]] と同様に負のインデックスで末尾から位置を指定するこ
+とができます。
+
+@param pos 削除したい要素のインデックスを整数で指定します。
+
+    array = [0, 1, 2, 3, 4]
+    array.delete_at 2
+    p array             #=> [0, 1, 3, 4]
+

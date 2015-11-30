@@ -1,0 +1,25 @@
+kind=defined
+names=request
+visibility=public
+
+--- request(request, data = nil) -> Net::HTTPResponse
+--- request(request, data = nil) {|response| .... } -> Net::HTTPResponse
+
+[[c:Net::HTTPRequest]] オブジェクト request をサーバに送信します。
+
+POST/PUT の時は data も与えられます 
+(GET/HEAD などで  data を与えると 
+[[c:ArgumentError]] を発生します)。
+
+ブロックとともに呼びだされたときは
+ソケットからボディを読みこまずに [[c:Net::HTTPResponse]]
+オブジェクトをブロックに与えます。
+
+@param request リクエストオブジェクトを与えます。
+@param data リクエストのボディを文字列で与えます。
+
+@raise ArgumentError dataを与えるべきでないリクエストでdataを
+                     与えた場合に発生します。
+@see [[m:Net::HTTP#send_request]]
+
+

@@ -1,0 +1,9 @@
+kind=defined
+names=sync
+visibility=public
+
+--- sync -> bool
+出力が同期モードなら true を返します。
+
+@see [[m:OpenSSL::Buffering#sync=]]
+

@@ -1,0 +1,10 @@
+kind=defined
+names=selection_clear
+visibility=public
+
+--- selection_clear(first, last = Tk::None)
+
+((|first|))、((|last|))で指定した((*位置*))の範囲の要素が((<選択>))さ
+れていれば非選択にします。((|last|))を省略した場合、((|first|))の((*位
+置*))の要素を非選択にします。
+

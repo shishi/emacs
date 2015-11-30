@@ -1,0 +1,32 @@
+kind=defined
+names=sleep
+visibility=public
+
+--- sleep -> Integer
+--- sleep(sec) -> Integer
+
+sec 秒だけプログラムの実行を停止します。
+
+sec が省略された場合、他スレッドからの [[m:Thread#run]]
+などで明示的に起こさない限り永久にスリープします。Thread#runを呼ぶとその時点で
+sleepの実行が中断されます。
+
+@param sec 停止する秒数を非負の数値で指定します。浮動小数点数も指定できます。 
+           省略された場合、永久にスリープします。
+
+@return 実際に停止していた秒数 (整数に丸められた値) です。
+
+  it = Thread.new do
+    sleep
+    puts 'it_end'
+  end
+  
+  re = sleep 2.11
+  puts re
+  it.run
+  re2 = sleep 0.76
+  puts re2
+  #=> 2
+  #   it_end
+  #   1
+

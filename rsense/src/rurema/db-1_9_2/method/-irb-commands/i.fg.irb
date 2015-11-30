@@ -1,0 +1,15 @@
+kind=defined
+names=fg,irb_fg
+visibility=public
+
+--- fg(n)
+--- irb_fg(n)
+
+n で指定したサブ irb に移動します。
+n は以下のいずれかの値で指定します。
+
+  * irb インタプリタ番号
+  * irb オブジェクト
+  * スレッド ID
+  * 各インタプリタの self (「irb(obj)」で起動した時の obj)
+

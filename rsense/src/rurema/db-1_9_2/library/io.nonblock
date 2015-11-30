@@ -1,0 +1,7 @@
+methods=IO/i.nonblock=3f.io.nonblock,IO/i.nonblock=3d.io.nonblock,IO/i.nonblock.io.nonblock
+sublibraries=
+requires=
+classes=
+is_sublibrary=false
+
+IO のノンブロックモードを扱うライブラリです。

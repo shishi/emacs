@@ -1,0 +1,8 @@
+kind=defined
+names=SJIS
+visibility=public
+
+--- SJIS -> Encoding
+
+SJIS コードを表します。
+

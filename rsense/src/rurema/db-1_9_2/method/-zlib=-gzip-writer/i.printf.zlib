@@ -1,0 +1,28 @@
+kind=defined
+names=printf
+visibility=public
+
+--- printf(format, *args) -> nil
+
+C 言語の printf と同じように、format に従い引数
+を文字列に変換して、自身に出力します。
+
+@param format フォーマット文字列を指定します。[[d:print_format]] を参照してください。
+
+@param args フォーマットされるオブジェクトを指定します。
+
+  require 'zlib'
+
+  filename='hoge1.gz'
+  fw = File.open(filename, "w")
+  Zlib::GzipWriter.wrap(fw, Zlib::BEST_COMPRESSION){|gz|
+    gz.printf("\n%9s", "bar")
+  }
+  fr = File.open(filename)
+  Zlib::GzipReader.wrap(fr){|gz|
+    puts gz.read
+  }
+  #=>       bar
+
+@see [[m:IO#printf]], [[m:Kernel.#printf]]
+

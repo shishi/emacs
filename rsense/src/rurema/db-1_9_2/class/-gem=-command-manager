@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rubygems.command_manager
+extended=
+included=Gem=UserInteraction
+
+gem コマンドによってサポートされているサブコマンドを管理するクラスです。

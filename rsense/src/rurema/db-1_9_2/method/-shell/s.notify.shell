@@ -1,0 +1,7 @@
+kind=defined
+names=notify
+visibility=public
+
+--- notify(*opts){|message| ... } -> String
+
+

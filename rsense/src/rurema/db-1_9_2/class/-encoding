@@ -1,0 +1,11 @@
+superclass=Object
+type=class
+library=_builtin
+extended=
+included=
+
+文字エンコーディング(文字符号化方式)のクラスです。Rubyの多言語対応(M17N)機能において利用されます。
+
+例えば文字列オブジェクトは、文字列のバイト表現の他にそのバイト表現がどのエンコーディングによるものであるかも併せて保持しています。この情報は [[m:String#encoding]] により取得できます。 Encoding オブジェクトを返すメソッドにはこの他に [[m:IO#internal_encoding]], [[m:IO#external_encoding]] などがあります。
+
+@see [[d:spec/m17n]]

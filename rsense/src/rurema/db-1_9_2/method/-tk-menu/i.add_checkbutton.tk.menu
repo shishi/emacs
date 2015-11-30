@@ -1,0 +1,6 @@
+kind=defined
+names=add_checkbutton
+visibility=public
+
+--- add_checkbutton(keys = nil)
+

@@ -1,0 +1,8 @@
+kind=defined
+names=NONBLOCK
+visibility=public
+
+--- NONBLOCK
+ファイルが利用可能じゃなくてもブロックしません。
+[[m:File.open]]で使用します。
+

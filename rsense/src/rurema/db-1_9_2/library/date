@@ -1,0 +1,7 @@
+methods=Time/i.to_date.date,Time/i.to_datetime.date,Time/i.to_time.date
+sublibraries=
+requires=
+classes=Date,DateTime
+is_sublibrary=false
+
+日付をあつかうためのライブラリです。

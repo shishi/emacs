@@ -1,0 +1,8 @@
+name=rb_method_boundp
+private=false
+macro=false
+type=int
+filename=eval.c
+params=(VALUE klass, ID id, int ex)
+
+

@@ -1,0 +1,8 @@
+kind=defined
+names=which_to_update
+visibility=public 
+
+--- which_to_update(highest_installed_gems, gem_names) -> Array
+
+更新が必要な Gem のリストを返します。
+

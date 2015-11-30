@@ -1,0 +1,16 @@
+.E	BigMath.#E
+.PI	BigMath.#PI
+.atan	BigMath.#atan
+.cos	BigMath.#cos
+.exp	BigMath.#exp
+.log	BigMath.#log
+.sin	BigMath.#sin
+.sqrt	BigMath.#sqrt
+#E	BigMath.#E
+#PI	BigMath.#PI
+#atan	BigMath.#atan
+#cos	BigMath.#cos
+#exp	BigMath.#exp
+#log	BigMath.#log
+#sin	BigMath.#sin
+#sqrt	BigMath.#sqrt

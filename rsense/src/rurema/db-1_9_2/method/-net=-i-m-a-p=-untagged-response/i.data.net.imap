@@ -1,0 +1,9 @@
+kind=defined
+names=data
+visibility=public
+
+--- data
+
+Returns the data such as an array of flag symbols,
+a [[c:Net::IMAP::MailboxList]] object....
+

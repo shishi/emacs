@@ -1,0 +1,10 @@
+superclass=WEBrick=HTTPServlet=AbstractServlet
+type=class
+library=webrick.httpservlet.prochandler
+extended=
+included=
+
+[[c:Proc]] を扱うためのサーブレット。
+
+[[m:WEBrick::HTTPServer#mount]] に引数として与えることは出来ません。
+[[m:WEBrick::HTTPServer#mount_proc]]を使ってください。

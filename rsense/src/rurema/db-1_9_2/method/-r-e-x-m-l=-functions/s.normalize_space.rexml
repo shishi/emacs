@@ -1,0 +1,6 @@
+kind=defined
+names=normalize_space
+visibility=public
+
+--- normalize_space(string = nil)
+

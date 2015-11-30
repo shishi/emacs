@@ -1,0 +1,8 @@
+kind=defined
+names=NoDelegateMethods
+visibility=public
+
+--- NoDelegateMethods -> [String]
+
+内部で使用する定数です。
+

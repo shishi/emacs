@@ -1,0 +1,13 @@
+kind=defined
+names=guid
+visibility=public
+
+--- guid -> String
+TypeLibのGUIDを取得します。
+
+@return TypeLibのGUIDを文字列で返します。
+@raise WIN32OLERuntimeError TypeLibの属性が読み取れない場合に通知します。
+
+   tlib = WIN32OLE_TYPELIB.new('Microsoft Excel 14.0 Object Library')
+   puts tlib.guid # => '{00020813-0000-0000-C000-000000000046}'
+

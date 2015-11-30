@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=net.imap
+extended=
+included=
+
+Net::IMAP::FetchData represents contents of the FETCH response.

@@ -1,0 +1,6 @@
+kind=defined
+names=kanji_metrics_displayof
+visibility=public
+
+--- kanji_metrics_displayof(win, option = nil)
+

@@ -1,0 +1,25 @@
+kind=defined
+names=const_missing
+visibility=public
+
+--- const_missing(name)
+定義されていない定数を参照したときに Ruby インタプリタが
+このメソッドを呼びます。
+
+@param name 参照した定数名の [[c:Symbol]]
+
+@raise NameError このメソッドを呼び出した場合、デフォルトで発生する例外
+
+
+  class Foo
+    def Foo.const_missing(id)
+      warn "undefined constant #{id.inspect}"
+    end
+
+    Bar
+  end
+  Foo::Bar
+
+  # => undefined constant :Bar
+       undefined constant :Bar
+

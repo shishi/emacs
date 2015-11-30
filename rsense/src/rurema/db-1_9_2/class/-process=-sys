@@ -1,0 +1,11 @@
+superclass=
+type=module
+library=_builtin
+extended=
+included=
+
+ユーザ ID・グループ ID を操作するシステムコールを直接呼ぶためのモジュールです。
+
+ポータブルにユーザ ID・グループ ID を操作するためのモジュール [[c:Process::UID]], [[c:Process::GID]] 
+も提供されています。Process::Sys と [[c:Process::UID]] や [[c:Process::GID]] を同時に使うことは
+非推奨です。

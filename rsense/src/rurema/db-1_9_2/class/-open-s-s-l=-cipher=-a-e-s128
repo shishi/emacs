@@ -1,0 +1,7 @@
+superclass=OpenSSL=Cipher
+type=class
+library=openssl
+extended=
+included=
+
+鍵長 128 ビットの AES 暗号を表すクラス

@@ -1,0 +1,21 @@
+kind=defined
+names=enclosed?
+visibility=public
+
+--- enclosed?    -> bool
+
+自身が enclose されているなら true を返します。そうでないなら false を返します。デフォルトは false です。
+
+freeze された ThreadGroup には Thread の追加/削除ができませんが、enclosed? は false を返します。
+
+    thg = ThreadGroup.new
+    p thg.enclosed?         # => false
+    thg.enclose
+    p thg.enclosed?         # => true
+
+    thg = ThreadGroup.new
+    p thg.enclosed?         # => false
+    thg.freeze
+    p thg.enclosed?         # => false
+
+@see [[m:ThreadGroup#enclose]]

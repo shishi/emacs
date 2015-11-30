@@ -1,0 +1,34 @@
+kind=defined
+names=SCRIPT_LINES__
+visibility=public
+
+--- SCRIPT_LINES__ -> Hash
+
+ソースファイル別にまとめられたソースコードの各行。
+
+この定数は、デフォルトでは定義されていません。
+この定数がハッシュとして定義された後にソースが((*コンパイル*))されると、
+そのソースファイル名をキーに、
+ソースを行毎に分割した配列を値にしたハッシュ要素が設定されます。
+
+この定数はデバッガ ([[lib:debug]]) などで利用されています。
+
+なお、 [[m:$SAFE]] レベルが 0 でなければ有効にはなりません。
+また、 [[m:Kernel.#eval]] によるコンパイルは対象にはなりません。
+
+
+例:
+    require 'pp'
+    SCRIPT_LINES__ = {}
+    require 'English'
+    pp SCRIPT_LINES__
+
+    # => {"/usr/local/lib/ruby/1.6/English.rb"=>
+    #     ["alias $ERROR_INFO              $!\n",
+    #      "alias $ERROR_POSITION          $@\n",
+    #      "alias $LOADED_FEATURES         $\"\n",
+    #               :
+    #               :
+    #      "alias $POSTMATCH               $'\n",
+    #      "alias $LAST_PAREN_MATCH        $+\n"]}
+

@@ -1,0 +1,9 @@
+kind=defined
+names=width
+visibility=public
+
+--- width -> Integer
+
+[[m:Benchmark::Job#list]] のサイズ。
+
+

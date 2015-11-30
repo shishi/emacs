@@ -1,0 +1,11 @@
+superclass=
+type=module
+library=cgi.html
+extended=
+included=
+
+HTML を生成するためのメソッドを提供するモジュールです。
+
+例:
+   cgi.a("http://www.example.com") { "Example" }
+     # => "<A HREF=\"http://www.example.com\">Example</A>"

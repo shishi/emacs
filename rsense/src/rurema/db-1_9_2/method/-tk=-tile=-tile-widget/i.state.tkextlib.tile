@@ -1,0 +1,7 @@
+kind=defined
+names=state
+visibility=public
+
+--- state(state = nil)
+
+

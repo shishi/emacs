@@ -1,0 +1,7 @@
+kind=defined
+names=IPPORT_RESERVED,IPPORT_USERRESERVED
+visibility=public
+
+--- IPPORT_RESERVED
+--- IPPORT_USERRESERVED
+

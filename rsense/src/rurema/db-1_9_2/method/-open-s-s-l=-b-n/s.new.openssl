@@ -1,0 +1,29 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(str, base=10) -> OpenSSL::BN
+
+文字列を多倍長整数オブジェクト([[c:OpenSSL::BN]])を生成します。
+
+base によって変換の基数を決めることができます。
+10, 16 が利用可能です。
+
+2を指定すると文字列を big-endian の符号無し整数のバイナリ列とみなして
+変換します。
+
+また、base に 0 を指定すると、MPIのフォーマットから変換します。
+(最初の4byteはbig-endianでデータ長を表わし、その後にそのデータ長のバイト
+列(big-endian)で数値を表す。最上位ビットが立っていると負数)。
+
+例:
+  OpenSSL::BN.new("-241") # => -241
+  OpenSSL::BN.new("ff00",16) # => 65280
+  OpenSSL::BN.new("\x81",2) # => 129
+  OpenSSL::BN.new("\xff\x81",2) # => 65409
+  OpenSSL::BN.new("\x00\x00\x00\x02\x00\x81", 0) # => 129
+  OpenSSL::BN.new("\x00\x00\x00\x02\x80\x81", 0) # => -129
+@param str 整数を表す文字列
+@param base 文字列から整数に変換するときの基数
+@raise OpenSSL::BNError 変換に失敗した場合に発生します
+

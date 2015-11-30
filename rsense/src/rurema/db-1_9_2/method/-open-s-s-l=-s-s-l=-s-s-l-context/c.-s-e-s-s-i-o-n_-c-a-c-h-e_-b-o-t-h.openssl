@@ -1,0 +1,16 @@
+kind=defined
+names=SESSION_CACHE_BOTH
+visibility=public
+
+--- SESSION_CACHE_BOTH -> Integer
+サーバ側、クライアント側両方でセッションをキャッシュすることを意味します。
+
+[[m:OpenSSL::SSL::SSLContext#session_cache_mode=]] に
+渡すフラグとして用います。
+
+実際には
+[[m:OpenSSL::SSL::SSLContext::SESSION_CACHE_SERVER]] と
+[[m:OpenSSL::SSL::SSLContext::SESSION_CACHE_CLIENT]] のビット論理和
+を取った値です。
+
+

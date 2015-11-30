@@ -1,0 +1,29 @@
+kind=defined
+names=eql?
+visibility=public
+
+--- eql?(other) -> bool
+
+オブジェクトと other が等しければ真を返します。[[c:Hash]] で二つのキー
+が等しいかどうかを判定するのに使われます。
+
+このメソッドは各クラスの性質に合わせて再定義すべきです。
+多くの場合、 == と同様に同値性の判定をするように再定義されていますが、
+適切にキー判定ができるようにより厳しくなっている場合もあります。
+
+デフォルトでは equal? と同じオブジェクト
+の同一性判定になっています。
+
+このメソッドを再定義した時には [[m:Object#hash]] メソッ
+ドも再定義しなければなりません。
+
+@param other 比較するオブジェクトです。
+
+  p("foo".eql?("bar")) #=> false
+  p("foo".eql?("foo")) #=> true
+
+  p(4.eql?(4)) #=> true
+  p(4.eql?(4.0)) #=> false
+  
+@see [[m:Object#hash]],[[m:Object#equal?]],[[m:Object#==]]
+

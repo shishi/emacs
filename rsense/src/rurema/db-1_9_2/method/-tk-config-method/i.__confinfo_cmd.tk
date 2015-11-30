@@ -1,0 +1,8 @@
+kind=defined
+names=__confinfo_cmd
+visibility=public
+
+--- __confinfo_cmd
+
+本来 private のハズ。
+

@@ -1,0 +1,6 @@
+kind=defined
+names=round
+visibility=public
+
+--- round(number)
+

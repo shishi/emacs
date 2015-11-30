@@ -1,0 +1,7 @@
+superclass=Gem=Command
+type=class
+library=rubygems.commands.install_command
+extended=
+included=Gem=VersionOption,Gem=LocalRemoteOptions,Gem=InstallUpdateOptions
+
+Gem パッケージをローカルリポジトリにインストールするためのクラスです。

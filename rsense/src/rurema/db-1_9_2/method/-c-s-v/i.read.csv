@@ -1,0 +1,11 @@
+kind=defined
+names=read,readlines
+visibility=public
+
+--- read -> [Array]
+--- readlines -> [Array]
+
+残りの行を読み込んで配列の配列を返します。
+
+データソースは読み込み用にオープンされている必要があります。
+

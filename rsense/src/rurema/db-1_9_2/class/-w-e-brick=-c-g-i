@@ -1,0 +1,8 @@
+superclass=Object
+type=class
+library=webrick.cgi
+extended=
+included=
+
+一般の CGI 環境で [[c:WEBrick]] のサーブレットと同じように CGI スクリプトを書くための
+クラスです。

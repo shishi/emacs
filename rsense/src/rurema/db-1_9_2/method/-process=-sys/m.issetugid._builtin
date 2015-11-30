@@ -1,0 +1,12 @@
+kind=defined
+names=issetugid
+visibility=public
+
+--- issetugid    -> bool
+
+システムコールの issetugid() を呼びます。
+
+プロセスが setuid もしくは setgid ビットを使って
+起動されている場合に真を返します。
+
+@raise NotImplementedError システムコールが現在のプラットフォームで提供されていない場合に発生します。

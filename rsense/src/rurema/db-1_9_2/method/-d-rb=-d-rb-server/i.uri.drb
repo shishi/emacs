@@ -1,0 +1,7 @@
+kind=defined
+names=uri
+visibility=public
+
+--- uri
+The URI of this DRbServer.
+

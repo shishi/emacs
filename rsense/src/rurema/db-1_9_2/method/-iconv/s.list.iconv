@@ -1,0 +1,13 @@
+kind=defined
+names=list
+visibility=public
+
+--- list                       -> Array
+--- list {|*aliases| ... }     -> Array
+
+各エイリアスセットごとに繰り返すイテレータです。
+ブロックが指定されていなければ、その利用可能な文字コード体系の名前を文字列の配列として返します。
+Iconv 標準の機能ではないのでサポートされるかはプラットフォームに依存します。
+
+@raise NotImplementedError 実行プラットフォームでサポートされていない場合に発生します。
+

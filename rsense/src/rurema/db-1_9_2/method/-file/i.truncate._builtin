@@ -1,0 +1,15 @@
+kind=defined
+names=truncate
+visibility=public
+
+--- truncate(length)    -> 0
+
+ファイルのサイズを最大 length バイトにします。
+
+サイズの変更に成功すれば 0 を返します。失敗した場合は例外
+[[c:Errno::EXXX]] が発生します。
+
+@raise IOError 自身が書き込み用にオープンされていなければ発生します。
+
+@raise Errno::EXXX サイズの変更に失敗した場合に発生します。
+

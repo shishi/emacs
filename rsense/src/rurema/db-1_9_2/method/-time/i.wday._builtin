@@ -1,0 +1,8 @@
+kind=defined
+names=wday
+visibility=public
+
+--- wday    -> Integer  
+
+曜日を0(日曜日)から6(土曜日)の整数で返します。
+

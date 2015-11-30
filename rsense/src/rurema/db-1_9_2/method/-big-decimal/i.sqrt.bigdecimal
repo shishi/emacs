@@ -1,0 +1,10 @@
+kind=defined
+names=sqrt
+visibility=public
+
+--- sqrt(n)
+
+a の有効桁 n 桁の平方根 (n の平方根ではありません) をニュートン法で計算します。
+
+    c = a.sqrt(n)
+

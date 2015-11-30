@@ -1,0 +1,15 @@
+kind=defined
+names=new2,new_from_uri
+visibility=public
+
+--- new2( uri, proxy=nil, timeout=nil)
+--- new_from_uri( uri, proxy=nil, timeout=nil)
+
+:   uri
+  URI specifying protocol (http or https), host, port, path, user and password.
+  Example: https://user:password@host:port/path
+:   proxy
+  Is of the form "host:port".
+:   timeout
+  Defaults to 30.
+

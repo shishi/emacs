@@ -1,0 +1,6 @@
+kind=defined
+names=geometry
+visibility=public
+
+--- geometry(geom = nil)
+

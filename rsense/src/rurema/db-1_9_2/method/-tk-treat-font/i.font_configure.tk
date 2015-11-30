@@ -1,0 +1,7 @@
+kind=defined
+names=font_configure
+visibility=public
+
+--- font_configure(slot)
+
+

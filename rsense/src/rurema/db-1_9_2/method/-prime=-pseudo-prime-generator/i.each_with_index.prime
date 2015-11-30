@@ -1,0 +1,24 @@
+kind=defined
+names=each_with_index,with_index
+visibility=public
+
+--- with_index{|prime, index| ... }      -> self
+--- each_with_index{|prime, index| ... } -> self
+--- with_index      -> Enumerator
+--- each_with_index -> Enumerator
+
+与えられたブロックに対して、素数を0起点の連番を渡して評価します。
+
+@return ブロックを与えられた場合は self を返します。 ブロックを与えられなかった場合は Enumerator を返します。
+
+例:
+  Prime::EratosthenesGenerator.new(10).each_with_index do |prime, index|
+    p [prime, index]
+  end
+  # [2, 0]
+  # [3, 1]
+  # [5, 2]
+  # [7, 3]
+
+@see [[m:Enumerator#with_index]]
+

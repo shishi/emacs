@@ -1,0 +1,15 @@
+kind=defined
+names=collect!,map!
+visibility=public
+
+--- collect! {|o| ...} -> self
+--- map! {|o| ...} -> self
+
+集合の各要素についてブロックを評価し、その結果で元の集合を置き換えます。
+
+  set = Set['hello', 'world']
+  set.map! {|str| str.capitalize}
+  p set  #=> #<Set: {"Hello", "World"}>
+
+@see [[m:Enumerable#collect]]
+

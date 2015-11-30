@@ -1,0 +1,14 @@
+kind=defined
+names=[]
+visibility=public
+
+--- [](name) -> object
+
+ルートnameに対応する値を得る。
+
+@param name 探索するルート。
+
+@raise PStore::Error トランザクション外でこのメソッドが呼び出された場合に発生します。
+
+@see [[m:Hash#[] ]]
+

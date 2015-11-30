@@ -1,0 +1,11 @@
+kind=defined
+names=background_call,background_eval_proc,bg_call,bg_eval_proc,thread_eval_proc
+visibility=public
+
+--- bg_eval_proc(*args)
+--- background_eval_proc(*args)
+--- background_call(*args)
+--- bg_call(*args)
+--- thread_eval_proc(*args)
+
+

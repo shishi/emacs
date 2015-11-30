@@ -1,0 +1,11 @@
+kind=defined
+names=V_OK
+visibility=public
+
+--- V_OK -> Integer
+エラーが発生していないことを意味します。
+
+[[m:OpenSSL::X509::Store#error]] や
+[[m:OpenSSL::X509::StoreContext#error]] のエラーコードとして
+使われます。
+

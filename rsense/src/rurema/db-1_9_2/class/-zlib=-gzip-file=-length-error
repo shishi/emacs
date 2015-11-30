@@ -1,0 +1,8 @@
+superclass=Zlib=GzipFile=Error
+type=class
+library=zlib
+extended=
+included=
+
+フッターに記録されているデータ長と実際に展開したデータの
+長さが異なる時に発生します。

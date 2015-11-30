@@ -1,0 +1,30 @@
+kind=defined
+names=add
+visibility=public
+
+--- add(doc)
+オブジェクトをドキュメントに追加します。
+
+@param doc 適切なオブジェクトを指定します。
+
+  require 'yaml'
+  
+  class Dog
+    attr_accessor :name
+    def initialize(name) 
+      @name = name
+    end
+  end
+  
+  str1=<<EOT
+  --- !ruby/Dog
+  name: pochi
+  EOT
+  
+  ys = YAML.load_stream(str1)
+  p ys.documents
+  #=> [#<YAML::DomainType:0x2b07af0 @value={"name"=>"pochi"}, @type_id="Dog", @domain="ruby.yaml.org,2002">]
+  ys.add(Dog.new("tama"))
+  p ys.documents
+  #=> [#<YAML::DomainType:0x2b07af0 @value={"name"=>"pochi"}, @type_id="Dog", @domain="ruby.yaml.org,2002">, #<Dog:0x2b079b0 @name="tama">]
+

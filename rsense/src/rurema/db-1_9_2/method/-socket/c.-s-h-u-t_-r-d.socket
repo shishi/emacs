@@ -1,0 +1,11 @@
+kind=defined
+names=SHUT_RD,SHUT_RDWR,SHUT_WR
+visibility=public
+
+--- SHUT_RD
+--- SHUT_RDWR
+--- SHUT_WR
+
+shutdown の how:
+[[m:BasicSocket#shutdown]] の how 引数に使用します。
+

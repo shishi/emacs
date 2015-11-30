@@ -1,0 +1,36 @@
+kind=added
+names=rfc2822,rfc822
+visibility=public
+
+--- rfc2822(date) -> Time
+--- rfc822(date) -> Time
+
+[[RFC:2822]]で定義されているdate-timeとしてdateをパースして
+[[c:Time]]オブジェクトに変換します。
+この形式は[[RFC:822]]で定義されて[[RFC:1123]]で更新された形式と
+同じです。
+
+dateが[[RFC:2822]]に準拠していない、または
+[[c:Time]]クラスが指定された日時を表現できないときに[[c:ArgumentError]]が
+発生します。
+
+@param date [[RFC:2822]] で定義されるdate-time として文字列を指定します。
+
+@raise ArgumentError dateが[[RFC:2822]]に準拠していない、または 
+                     [[c:Time]]クラスが指定された日時を表現できないときに
+                     発生します。
+
+使用例
+  require 'time'
+
+  rfc2822_time = 'Sun, 31 Aug 2008 12:08:19 +0900'
+  t = Time.rfc2822(rfc2822_time)
+  p t.kind_of?(Time) #=> true
+  non_rfc2822_time = 'Sun 31 Aug 2008 12:08:19 +0900'
+
+  begin
+    p Time.rfc2822(non_rfc2822_time)
+  rescue ArgumentError => err
+    puts "format err: #{err}"
+  end
+

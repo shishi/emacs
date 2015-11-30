@@ -1,0 +1,30 @@
+kind=defined
+names=atan
+visibility=public
+
+--- atan(x, prec) -> BigDecimal
+
+x の逆正接関数を prec で指定した精度で計算します。単位はラジアンです。
+x に無限大や NaN を指定した場合には NaN を返します。
+
+@param x 計算対象の BigDecimal オブジェクト。単位はラジアン。
+
+@param prec 計算結果の精度。
+
+@raise ArgumentError x の絶対値が1以上の場合に発生します。
+
+@raise ArgumentError prec に 0 以下が指定された場合に発生します。
+
+例:
+
+
+  require "bigdecimal/math"
+
+  puts BigMath::atan(BigDecimal.new('0.5'), 10) #=> 0.463647609000806116214256237466868871528608E0
+
+
+===== 注意
+
+x の絶対値を 0.9999 のような 1 に近すぎる値にすると計算結果が収束しない
+可能性があります。
+

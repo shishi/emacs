@@ -1,0 +1,6 @@
+kind=defined
+names=setPalette
+visibility=public
+
+--- setPalette(*args)
+

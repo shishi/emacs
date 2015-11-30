@@ -1,0 +1,27 @@
+methods=
+sublibraries=
+requires=rubygems.remote_fetcher,rubygems.requirement,rubygems.specification,rubygems.spec_fetcher,rubygems.gem_openssl,rubygems.exceptions,rubygems.builder,rubygems.source_index,rubygems.source_info_cache_entry,rubygems.digest.sha2,rubygems.defaults.operating_system,rubygems.gem_path_searcher,rubygems.platform,rubygems.defaults,rubygems.dependency,rubygems.source_info_cache,rubygems,rubygems.user_interaction,rubygems.command,rubygems.version,rubygems.security
+classes=Gem=Commands=CertCommand
+is_sublibrary=true
+
+Gem パッケージの証明書や署名の設定を管理するためのライブラリです。
+
+  Usage: gem cert [options]
+    Options:
+      -a, --add CERT                   信頼された証明書を追加します
+      -l, --list                       信頼されている証明書の一覧を表示します
+      -r, --remove STRING              STRING を含む証明書を削除します
+      -b, --build EMAIL_ADDR           EMAIL_ADDR に対する自己署名証明書と秘密鍵
+                                       を作成します
+      -C, --certificate CERT           --sign で使用する証明書を指定します
+      -K, --private-key KEY            --sign で使用する秘密鍵を指定します
+      -s, --sign NEWCERT               証明書に秘密鍵で署名します
+    Common Options:
+      -h, --help                       このコマンドのヘルプを表示します
+      -V, --[no-]verbose               表示を詳細にします
+      -q, --quiet                      静かに実行します
+          --config-file FILE           指定された設定ファイルを使用します
+          --backtrace                  バックトレースを表示します
+          --debug                      Ruby 自体のデバッグオプションを有効にします
+    Summary:
+      Manage RubyGems certificates and signing settings

@@ -1,0 +1,21 @@
+kind=defined
+names=+
+visibility=public
+
+--- +(other) -> String
+
+文字列と other を連結した新しい文字列を返します。
+
+@param other    文字列
+@return         self と other を連結した文字列
+
+例:
+
+  p "str" + "ing"   # => "string"
+
+  a = "abc"
+  b = "def"
+  p a + b   # => "abcdef"
+  p a       # => "abc"  (変化なし)
+  p b       # => "def"
+

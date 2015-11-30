@@ -1,0 +1,9 @@
+kind=defined
+names=accept_encoding
+visibility=public
+
+--- accept_encoding    -> [String]
+
+Accept-Encoding  ヘッダの内容をコーディングを表す文字列の配列で返します。
+配列は品質係数(qvalue)でソートされています。
+

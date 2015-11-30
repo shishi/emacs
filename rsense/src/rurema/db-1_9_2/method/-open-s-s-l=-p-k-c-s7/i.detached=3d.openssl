@@ -1,0 +1,13 @@
+kind=defined
+names=detached=
+visibility=public
+
+--- detached=(b)
+平文に署名を付ける形式(multipart/signed)かどうかを設定します。
+
+このメソッドは使わないでください。
+このメソッドは PKCS#7 の低レベル API であり、正しく使うのは
+難しいでしょう。
+
+@param b 設定する真偽値
+

@@ -1,0 +1,12 @@
+kind=defined
+names=numerator
+visibility=public
+
+--- numerator -> Integer
+
+分子(常に自身)を返します。
+
+@return 分子を返します。
+
+@see [[m:Integer#denominator]]
+

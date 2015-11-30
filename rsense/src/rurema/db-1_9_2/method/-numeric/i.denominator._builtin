@@ -1,0 +1,12 @@
+kind=defined
+names=denominator
+visibility=public
+
+--- denominator -> Integer
+
+自身を [[c:Rational]] に変換した時の分母を返します。
+
+@return 分母を返します。
+
+@see [[m:Numeric#numerator]]
+

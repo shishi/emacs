@@ -1,0 +1,7 @@
+kind=defined
+names=ns_tk_call_with_enc,tk_call_with_enc
+visibility=public
+
+--- tk_call_with_enc(*args)
+--- ns_tk_call_with_enc(*args)
+

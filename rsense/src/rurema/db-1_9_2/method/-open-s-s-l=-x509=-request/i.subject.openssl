@@ -1,0 +1,10 @@
+kind=defined
+names=subject
+visibility=public
+
+--- subject -> OpenSSL::X509::Name
+証明書署名要求の申請者名を返します。
+
+@raise OpenSSL::X509::RequestError 名前の取得に失敗した場合に発生します
+@see [[m:OpenSSL::X509::Request#subject=]]
+

@@ -1,0 +1,45 @@
+kind=defined
+names=to_io
+visibility=public
+
+--- to_io -> IO
+ARGFが現在開いているファイルの[[c:File]]、または[[c:IO]]オブジェクトを返します
+
+  # カレントディレクトリから適当にファイルを選ぶ
+  ARGV.replace(
+    Dir.glob("*").select{|name| FileTest.file?(name)}
+  )
+
+  until ARGF.closed?
+    printf("最終更新時刻 %s (%s)\n", ARGF.to_io.stat.mtime, ARGF.filename)
+    ARGF.skip
+  end 
+  #例
+  #=> 最終更新時刻 Thu May 03 14:05:53 +0900 2007 (sample.yaml)
+  #=> 最終更新時刻 Sat Aug 18 16:31:42 +0900 2007 (test.rb)
+  #=> 最終更新時刻 Sat Aug 18 16:31:30 +0900 2007 (test.rb~)
+  #=> 最終更新時刻 Sun Jun 24 13:08:12 +0900 2007 (third.txt)
+  #=> 最終更新時刻 Sun May 20 21:34:25 +0900 2007 (ugo.yaml)
+  #...
+
+$stdinがIOオブジェクトでない場合は$stdin.to_ioを呼び出します。
+
+  class MyIO
+    def to_io
+      DATA
+    end
+  end
+
+  $stdin = MyIO.new
+  ARGV.push("-")
+
+  myio = ARGF.to_io
+  p myio.readline #=> "MyIO Test\n"
+  p ARGF.file     #=> #<MyIO:0x293ea34>
+
+  __END__
+  MyIO Test
+  です。
+
+@see [[m:ARGF.file]]
+

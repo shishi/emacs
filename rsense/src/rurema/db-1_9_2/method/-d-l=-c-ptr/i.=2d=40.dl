@@ -1,0 +1,24 @@
+kind=defined
+names=-@,ref
+visibility=public
+
+--- ref   -> DL::CPtr
+--- -@    -> DL::CPtr
+
+自身を指す CPtr オブジェクトを返します。
+C 言語におけるポインタへのアドレス演算子の適用 &p と同じです。
+
+この返り値には、free 関数がセットされていません。
+
+例:
+
+ require 'dl/import'
+ 
+ s = 'abc'
+ cptr = DL::CPtr[s]
+ cref = cptr.ref
+ p cref.to_s(4).unpack('l*')[0]  #=> 136121648
+ p cptr.to_i                     #=> 136121648
+ p cref.ptr.to_s                 #=> "abc"
+
+

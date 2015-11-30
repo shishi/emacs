@@ -1,0 +1,12 @@
+kind=defined
+names=copy,uid_copy
+visibility=public
+
+--- copy(set, mailbox)
+--- uid_copy(set, mailbox)
+
+Sends a COPY command to copy the specified message(s) to the end
+of the specified destination mailbox. the set parameter is
+a number or an array of numbers or a Range object. the number is
+a message sequence number (copy) or a unique identifier (uid_copy).
+

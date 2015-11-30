@@ -1,0 +1,12 @@
+kind=defined
+names=try_convert
+visibility=public
+
+--- try_convert(obj) -> re | nil
+
+Try to convert obj into a Regexp, using to_regexp method. Returns
+converted regexp or nil if obj cannot be converted for any reason.
+
+   Regexp.try_convert(/re/)      # => /re/
+   Regexp.try_convert("re")      # => nil
+

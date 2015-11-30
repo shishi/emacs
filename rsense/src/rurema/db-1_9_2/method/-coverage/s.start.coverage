@@ -1,0 +1,8 @@
+kind=defined
+names=start
+visibility=public
+
+--- start  -> nil
+
+カバレッジの測定を開始します。既に実行されていた場合には何も起こりません。
+

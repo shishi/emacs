@@ -1,0 +1,8 @@
+superclass=Object
+type=class
+library=rubygems.package.tar_output
+extended=
+included=
+
+gem-format な tar ファイルを書き出す [[c:Gem::Package::TarWriter]] のラッ
+パークラスです。

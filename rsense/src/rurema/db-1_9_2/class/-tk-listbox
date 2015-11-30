@@ -1,0 +1,39 @@
+superclass=TkTextWin
+type=class
+library=tk.listbox
+extended=
+included=TkListItemConfig,Tk=Scrollable
+
+リストボックスウィジェットのクラスです。
+リストボックスウィジェットは項目の一覧を表すウィジェットです。
+
+  require "tk"
+  list = TkListbox.new { setgrid 'yes'; pack }
+  list.insert 'end', "abc"
+  list.insert 'end', "def"
+  list.insert 'end', "123"
+  list.insert 'end', "456"
+  Tk.mainloop
+
+メソッドの説明の中で((*位置*))は、以下のいずれかを指します。
+
+  *数字
+
+   数字で指定した要素位置(上端は0)
+
+  *"@x,y"
+
+   x、y は数字です。
+   数字で指定したピクセル位置(入力欄の左上端は0から始まる)
+
+  *"active"
+
+   アクティブ(カーソル位置のこと)である要素の位置
+
+  *"end"
+
+   最後の要素の位置
+
+  *"anchor"
+
+   ???

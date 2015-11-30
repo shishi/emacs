@@ -1,0 +1,12 @@
+kind=defined
+names=[]
+visibility=public
+
+--- [](name)    -> object | nil
+
+name に対応したスレッドに固有のデータを取り出します。
+name に対応するスレッド固有データがなければ nil を返し
+ます。
+
+@param name スレッド固有データのキーを文字列か [[c:Symbol]] で指定します。
+

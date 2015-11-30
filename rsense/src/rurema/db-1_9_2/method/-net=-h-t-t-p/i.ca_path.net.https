@@ -1,0 +1,9 @@
+kind=added
+names=ca_path
+visibility=public
+
+--- ca_path -> String | nil
+信頼する CA 証明書ファイルが存在するディレクトリを設定します。
+
+@see [[m:Net::HTTP#ca_path=]], [[m:OpenSSL::SSL::SSLContext#ca_path]]
+

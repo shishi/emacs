@@ -1,0 +1,9 @@
+kind=defined
+names=digest
+visibility=public
+
+--- digest(str) -> String
+
+与えられた文字列に対するハッシュ値を文字列で返す。
+new(str).digest と等価。
+

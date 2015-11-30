@@ -1,0 +1,8 @@
+kind=defined
+names=new_cond
+visibility=public
+
+--- new_cond -> MonitorMixin::ConditionVariable
+モニタに関連付けられた、新しい 
+[[c:MonitorMixin::ConditionVariable]] を生成して返します。
+

@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=base64
+extended=
+included=
+
+Base64 エンコード / デコードするためのメソッドを定義したモジュールです。

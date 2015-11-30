@@ -1,0 +1,13 @@
+kind=defined
+names=enable_ssl,enable_tls
+visibility=public
+
+--- enable_ssl(context = Net::SMTP.default_ssl_context) -> ()
+--- enable_tls(context = Net::SMTP.default_ssl_context) -> ()
+その Net::SMTP オブジェクトが SMTPS を利用するよう設定します。
+
+このメソッドは [[m:Net::SMTP#start]] を呼ぶ前に呼ぶ必要があります。
+
+@param context SSL接続で利用する [[c:OpenSSL::SSL::SSLContext]] 
+
+@see [[m:Net::SMTP#tls?]], [[m:Net::SMTP#disable_tls]]

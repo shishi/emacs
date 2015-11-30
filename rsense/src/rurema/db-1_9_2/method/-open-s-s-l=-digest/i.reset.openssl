@@ -1,0 +1,7 @@
+kind=defined
+names=reset
+visibility=public
+
+--- reset -> self
+ダイジェストオブジェクトの内部状態をリセットします。
+

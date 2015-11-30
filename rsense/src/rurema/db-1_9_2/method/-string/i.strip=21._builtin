@@ -1,0 +1,30 @@
+kind=defined
+names=strip!
+visibility=public
+
+--- strip! -> self | nil
+
+先頭と末尾の空白文字を全て破壊的に取り除きます。
+空白文字の定義は " \t\r\n\f\v" です。
+また、文字列右側からは "\0" も取り除きますが、
+左側の "\0" は取り除きません。
+
+strip! は、内容を変更した self を返します。
+ただし取り除く空白がなかったときは nil を返します。
+
+例:
+
+  str = "  abc\r\n"
+  p str.strip!     #=> "abc"
+  p str            #=> "abc"
+
+  str = "abc"
+  p str.strip!     #=> nil
+  p str            #=> "abc"
+
+  str = "  \0  abc  \0"
+  str.strip!
+  p str            # => "\000  abc"   # 右側の "\0" のみ取り除かれる
+
+@see [[m:String#strip]], [[m:String#lstrip]]
+

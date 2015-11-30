@@ -1,0 +1,16 @@
+kind=defined
+names=[]=
+visibility=public
+
+--- []=(name, value)
+
+ルート name に対応する値 value をセットする。
+
+@param name ルート。
+
+@param value 格納する値。
+
+@raise PStore::Error トランザクション外でこのメソッドが呼び出された場合に発生します。
+
+@see [[m:Hash#[]=]]
+

@@ -1,0 +1,9 @@
+superclass=URI=Generic
+type=class
+library=uri
+extended=
+included=
+
+LDAP URI を表すクラスです。[[RFC:2255]] (Obsoleted by [[RFC:4510]], [[RFC:4516]])。
+
+  ldap://<host>/<dn>[?<attrs>[?<scope>[?<filter>[?<extensions>]]]]

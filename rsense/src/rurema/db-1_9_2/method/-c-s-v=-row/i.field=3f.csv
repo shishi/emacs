@@ -1,0 +1,11 @@
+kind=defined
+names=field?
+visibility=public
+
+--- field?(data) -> bool
+
+自身に与えられた値が含まれている場合は真を返します。
+そうでない場合は偽を返します。
+
+@param data この行に含まれているかどうか調べたい値を指定します。
+

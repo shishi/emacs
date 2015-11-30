@@ -1,0 +1,15 @@
+kind=defined
+names=[]=,store
+visibility=public
+
+--- []=(key, value)
+--- store(key, value) -> String
+
+key に対応する環境変数の値を value にします。
+value が nil の時、key に対応する環境変数を取り除きます。 
+
+@param key    環境変数名を指定します。 to_str で文字列化されます。
+@param value  置き換えるべき値を指定します。 to_str で文字列化されます。
+
+@return value を返します。
+

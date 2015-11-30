@@ -1,0 +1,8 @@
+kind=defined
+names=rdoc_dir=
+visibility=public 
+
+--- rdoc_dir=(dir)
+
+作成した HTML ファイルを保存するディレクトリ名をセットします。
+

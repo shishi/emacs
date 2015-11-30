@@ -1,0 +1,9 @@
+kind=defined
+names=verbose,verbose?
+visibility=public
+
+--- verbose -> bool
+--- verbose? -> bool
+
+真ならばトレース出力の開始や終了を知らせます。
+

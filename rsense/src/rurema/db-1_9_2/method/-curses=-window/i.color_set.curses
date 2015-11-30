@@ -1,0 +1,10 @@
+kind=defined
+names=color_set
+visibility=public
+
+--- color_set(color) -> bool
+Sets the current color of the given window to the
+foreground/background combination described by the Fixnum +color+.
+
+@param color ...
+

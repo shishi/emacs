@@ -1,0 +1,16 @@
+kind=defined
+names=column_vectors
+visibility=public
+
+--- column_vectors -> Array
+
+自分自身を列ベクトルの配列として返します。
+
+例:
+  a1 = [ 1,  2,  3]
+  a2 = [10, 15, 20]
+  a3 = [-1, -2, 1.5]
+  m = Matrix[a1, a2, a3]
+
+  p m.row_vectors #=> [Vector[1, 10, -1], Vector[2, 15, -2], Vector[3, 20, 1.5]]
+

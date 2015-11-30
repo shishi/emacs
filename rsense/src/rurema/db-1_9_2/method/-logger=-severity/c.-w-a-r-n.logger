@@ -1,0 +1,7 @@
+kind=defined
+names=WARN
+visibility=public
+
+--- WARN  -> Integer
+ログレベル:警告を表す定数です。
+

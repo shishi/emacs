@@ -1,0 +1,20 @@
+kind=defined
+names=attr_accessor
+visibility=private 
+
+--- attr_accessor(*name) -> nil
+
+インスタンス変数 name に対する読み取りメソッドと書き込みメソッドの両方を
+定義します。
+
+このメソッドで定義されるメソッドの定義は以下の通りです。
+
+  def name
+    @name
+  end
+  def name=(val)
+    @name = val
+  end
+
+@param name [[c:String]] または [[c:Symbol]] を 1 つ以上指定します。
+

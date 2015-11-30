@@ -1,0 +1,18 @@
+superclass=
+type=module
+library=forwardable
+extended=
+included=
+
+オブジェクトに対し、メソッドの委譲機能を定義するモジュールです。
+
+=== 使い方
+
+オブジェクトに対して extend して使います。
+
+例:
+
+  g = Goo.new
+  g.extend SingleForwardable
+  g.def_delegator("@out", :puts)
+  g.puts ...

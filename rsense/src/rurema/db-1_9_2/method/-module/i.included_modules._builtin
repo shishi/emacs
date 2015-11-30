@@ -1,0 +1,10 @@
+kind=defined
+names=included_modules
+visibility=public
+
+--- included_modules -> [Module]
+
+インクルードされているモジュールの配列を返します。
+
+@see [[m:Module#ancestors]]
+

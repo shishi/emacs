@@ -1,0 +1,9 @@
+kind=defined
+names=requirement_list,requirements_list
+visibility=public 
+
+--- requirement_list  -> [String]
+--- requirements_list -> [String]
+
+バージョンの必要条件を文字列の配列として返します。
+

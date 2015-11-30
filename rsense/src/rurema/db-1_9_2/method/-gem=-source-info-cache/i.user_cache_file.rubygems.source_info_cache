@@ -1,0 +1,8 @@
+kind=defined
+names=user_cache_file
+visibility=public 
+
+--- user_cache_file -> String
+
+ユーザーキャッシュのファイル名を返します。
+

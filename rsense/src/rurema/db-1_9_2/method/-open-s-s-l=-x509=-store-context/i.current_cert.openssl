@@ -1,0 +1,18 @@
+kind=defined
+names=current_cert
+visibility=public
+
+--- current_cert -> OpenSSL::X509::Certificate
+直前に検証した証明書のオブジェクトを返します。
+
+[[m:OpenSSL::X509::StoreContext#verify]] で検証が失敗した場合は
+証明書チェイン中で検証に失敗した証明書のオブジェクトを返します。
+
+証明書チェインの各証明書検証後
+コールバック([[m:OpenSSL::X509::Store#verify_callback=]])呼び出しに
+渡される StoreContext オブジェクトにこのメソッドを呼び出すと
+直前に検証した証明書を返します。
+
+[[m:OpenSSL::X509::StoreContext#verify]] を呼ぶ前に
+このメソッドを呼ぶと空の [[c:OpenSSL::X509::Certificate]] を返します。
+

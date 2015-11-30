@@ -1,0 +1,11 @@
+kind=defined
+names=SEPARATOR,Separator
+visibility=public
+
+--- SEPARATOR
+--- Separator
+
+ファイルパスのセパレータです。ファイルを扱うメソッドにパス名を渡す
+場合などスクリプト内のパス名は環境によらずこのセパレータで統一され
+ます。値は "/" です。
+

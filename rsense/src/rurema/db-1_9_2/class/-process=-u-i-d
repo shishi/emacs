@@ -1,0 +1,20 @@
+superclass=
+type=module
+library=_builtin
+extended=
+included=
+
+カレントプロセスのユーザ ID を操作するためのモジュールです。
+
+移植性が考慮されており、プラットフォーム間の違いを吸収するように実装されています。
+プラットフォームのシステムコールを直接使いたい場合には [[c:Process::Sys]]
+が提供されています。[[c:Process::Sys]] と Process::UID を同時に使うことは推奨されません。
+
+実ユーザ ID を変更するメソッドは提供されていません。
+これは [[m:Process::UID.#eid=]] と [[m:Process::UID.#re_exchange]] を以下のように
+組み合わせることによって実現できます。
+
+                             # (r,e,s) == (u1,u2,??)
+  Process::UID.re_exchange   # (u1,u2,??) ==> (u2,u1,??)
+  Process::UID.eid = id      # (u2,u1,??) ==> (u2,id,??)
+  Process::UID.re_exchange   # (u2,id,??) ==> (id,u2,??)

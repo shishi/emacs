@@ -1,0 +1,6 @@
+kind=defined
+names=rsearch_with_length
+visibility=public
+
+--- rsearch_with_length(pat, start, stop = Tk::None)
+

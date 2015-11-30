@@ -1,0 +1,10 @@
+kind=defined
+names=OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION
+visibility=public
+
+--- OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION -> Integer
+セッション再ネゴシエーションをした場合にサーバ側で
+常に新しいセッションを生成するフラグです。
+
+[[m:OpenSSL::SSL::SSLContext#options=]] で利用します。
+

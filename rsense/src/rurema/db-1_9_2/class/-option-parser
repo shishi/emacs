@@ -1,0 +1,43 @@
+superclass=Object
+type=class
+library=optparse
+extended=
+included=
+
+コマンドラインのオプションを取り扱うためのクラスです。
+
+オプションが指定された時に呼ばれるブロックを
+[[m:OptionParser#on]] メソッドで登録していきます。
+つまり、OptionParser を使う場合、基本的には
+
+  (1) OptionParser オブジェクト opt を生成する。
+  (2) オプションを取り扱うブロックを opt に登録する。
+  (3) opt.parse(ARGV) でコマンドラインを実際に parse する。
+
+というような流れになります。
+
+  require "optparse"
+  ProgramConfig = Hash.new
+  opts = OptionParser.new
+  opts.on("-a"){|v| ProgramConfig[:a] = true } # オプション「-a」がコマンドラインで指定されていた場合の動作。
+  opts.parse!(ARGV)                            # 実際にコマンドラインの parse を行う。
+
+=== デフォルトで利用可能なオプション
+
+以下はデフォルトで利用可能なオプションです。オプションサマリには
+出てきません。
+
+: --help
+ オプションサマリを表示してから exit します。
+
+: --version
+
+ [[m:OptionParser#ver]] を表示してから exit します。
+ [[m:OptionParser#ver]] が定義されていない場合は、そのようにエラーメッセージを出力して abort します。
+ オプション「--version」に「,」で区切られたクラス名かモジュール名を引数として与えた場合は、そのクラスおよびモジュールで定義されている定数「Version」および「Release」を表示して、終了します。
+//emlist{
+ $ ruby t.rb --version=OptionParser,URI,OpenSSL
+ t: OptionParser version 12203 (2007-04-20)
+ t: URI version 0.9.11
+ t: OpenSSL version 1.0.0
+//}

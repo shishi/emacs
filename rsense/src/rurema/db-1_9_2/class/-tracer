@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=tracer
+extended=
+included=
+
+実行トレース出力をとる機能を提供するクラスです。

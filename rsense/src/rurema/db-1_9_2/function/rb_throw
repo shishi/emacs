@@ -1,0 +1,13 @@
+name=rb_throw
+private=false
+macro=false
+type=void
+filename=eval.c
+params=(const char *tag, VALUE val)
+
+
+throw の実体。返り値を val として、
+tag を catch したところまでジャンプします。
+
+rb_catch も参照してください。
+

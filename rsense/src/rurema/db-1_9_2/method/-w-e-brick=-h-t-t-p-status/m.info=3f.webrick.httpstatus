@@ -1,0 +1,11 @@
+kind=defined
+names=info?
+visibility=public
+
+--- info?(code)    -> bool
+
+指定された整数が表すステータスコードが 1XX である場合に
+true を返します。そうでない場合に false を返します。
+
+@param code HTTP のステータスコードを表す整数を指定します。
+

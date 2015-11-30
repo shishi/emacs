@@ -1,0 +1,6 @@
+kind=defined
+names=rb_appsend
+visibility=public
+
+--- rb_appsend(interp, async, *args)
+

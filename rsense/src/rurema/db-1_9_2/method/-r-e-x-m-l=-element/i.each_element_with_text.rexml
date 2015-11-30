@@ -1,0 +1,6 @@
+kind=defined
+names=each_element_with_text
+visibility=public
+
+--- each_element_with_text(text = nil, max = 0, name = nil) {|element| ... }
+

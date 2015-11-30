@@ -1,0 +1,12 @@
+kind=defined
+names=mailfrom
+visibility=public
+
+--- mailfrom(from_addr) -> Net::SMTP::Response
+MAILFROM コマンドを送ります。
+
+通常は [[m:Net::SMTP#send_message]], [[m:Net::SMTP#open_message_stream]] で
+MAILFROM が送られるため利用する必要はないはずです。
+
+@param from_addr 送信元メールアドレス
+

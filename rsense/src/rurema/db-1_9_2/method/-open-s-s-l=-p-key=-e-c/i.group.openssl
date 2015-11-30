@@ -1,0 +1,9 @@
+kind=defined
+names=group
+visibility=public
+
+--- group -> OpenSSL::PKey::EC::Group
+鍵パラメータとなる群を表すオブジェクトを返します。
+
+@see [[m:OpenSSL::PKey::EC#group=]]
+

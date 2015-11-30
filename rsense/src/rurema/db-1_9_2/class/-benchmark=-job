@@ -1,0 +1,9 @@
+superclass=Object
+type=class
+library=benchmark
+extended=
+included=
+
+[[m:Benchmark.#bmbm]] メソッドの内部で使用されるクラスです。
+
+このライブラリのユーザーが直接意識する必要はありません。

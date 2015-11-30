@@ -1,0 +1,8 @@
+kind=defined
+names=stop_service
+visibility=public
+
+--- stop_service()
+
+Stop this server. 
+

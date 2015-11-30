@@ -1,0 +1,9 @@
+kind=defined
+names=VERSION
+visibility=public
+
+--- VERSION -> String
+
+libgdbm のバージョン情報の文字列です。
+
+

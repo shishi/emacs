@@ -1,0 +1,6 @@
+kind=defined
+names=input_start
+visibility=public
+
+--- input_start(win, keys = nil)
+

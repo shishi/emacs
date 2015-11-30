@@ -1,0 +1,12 @@
+kind=added
+names=nread
+visibility=public
+
+--- nread -> Integer
+ブロックせずに読み込み可能なバイト数を返します。
+ブロックする場合は0を返します。
+
+判別が不可能な場合は0を返します。
+
+
+

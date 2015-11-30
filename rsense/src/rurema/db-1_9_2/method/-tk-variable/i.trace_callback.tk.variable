@@ -1,0 +1,16 @@
+kind=defined
+names=trace_callback
+visibility=public
+
+--- trace_callback(elem, op)
+
+[[m:TkVariable#trace]]により登録されたProcオブジェクトを引数にself,
+elem, opを指定して実行します。
+
+  require "tk"
+
+  var = TkVariable.new(0)
+
+  var.trace "rwu", proc {|arg| puts "callback called with #{arg.inspect}"}
+  var.trace_callback([], "r")
+

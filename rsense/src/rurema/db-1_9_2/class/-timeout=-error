@@ -1,0 +1,29 @@
+superclass=Interrupt
+type=class
+library=timeout
+extended=
+included=
+
+[[lib:timeout]] で定義される例外クラスです。
+関数 timeout がタイムアウトすると発生します。
+
+[[lib:timeout]] を使うライブラリを作成する場合は、ユーザが指定した
+timeout を捕捉しないようにライブラリ内で [[c:TimeoutError]] のサブクラスを
+定義して使用した方が無難です。
+
+        ==> foo.rb <==
+        require 'timeout.rb'
+        class Foo
+          FooTimeoutError = Class.new(TimeoutError)
+          def longlongtime_method
+            timeout(100, FooTimeoutError) {
+               ...
+            }
+          end
+        end
+
+        ==> main.rb <==
+        require 'foo'
+        timeout(5) {
+          Foo.new.longlongtime_method
+        }

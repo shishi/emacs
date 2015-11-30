@@ -1,0 +1,9 @@
+kind=defined
+names=each,each_pair
+visibility=public
+
+--- each {|key, value|  ...  } -> self
+--- each_pair {|key, value|  ...  } -> self
+
+各要素に対するイテレータです。
+

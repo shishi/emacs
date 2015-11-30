@@ -1,0 +1,15 @@
+kind=defined
+names=day=,hour=,min=,month=,sec=,year=
+visibility=public
+
+--- year=()
+--- month=()
+--- day=()
+--- hour=()
+--- min=()
+--- sec=()
+
+Set value as the new date/time component.
+Raises ArgumentError if value is out of range, or in the case
+of XMLRPC::DateTime#year= if value is not of type Integer.
+

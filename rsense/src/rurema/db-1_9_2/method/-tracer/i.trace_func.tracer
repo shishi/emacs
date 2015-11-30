@@ -1,0 +1,7 @@
+kind=defined
+names=trace_func
+visibility=public
+
+--- trace_func(event, file, line, id, binding, klass, *) -> object | nil
+
+

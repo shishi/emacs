@@ -1,0 +1,16 @@
+kind=defined
+names=inspect
+visibility=public
+
+--- inspect -> String
+
+オブジェクトを人間が読める形式に変換した文字列を返します。
+
+組み込み関数 [[m:Kernel.#p]] は、このメソッドの結果を使用して
+オブジェクトを表示します。
+
+  puts Class.new.inspect #=> #<Class:0xbafd88>
+  puts Time.now.inspect #=> 2007-10-15 21:01:37 +0900
+
+@see [[m:Kernel.#p]]
+

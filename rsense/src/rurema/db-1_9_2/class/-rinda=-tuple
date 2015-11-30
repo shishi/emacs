@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rinda.rinda
+extended=
+included=
+
+Tuple のためのクラスです。

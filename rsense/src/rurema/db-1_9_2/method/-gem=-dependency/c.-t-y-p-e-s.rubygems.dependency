@@ -1,0 +1,9 @@
+kind=defined
+names=TYPES
+visibility=public 
+
+--- TYPES -> Array
+
+有効な依存関係の型を表す配列です。
+
+@see [[m:Gem::Specification::CURRENT_SPECIFICATION_VERSION]]

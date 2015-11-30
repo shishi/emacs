@@ -1,0 +1,7 @@
+kind=defined
+names=place_configinfo
+visibility=public
+
+--- place_configinfo(slot = nil)
+
+

@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=set
+extended=
+included=Enumerable
+
+集合を表すクラスです。要素の間に順序関係はありません。

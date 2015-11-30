@@ -1,0 +1,10 @@
+kind=defined
+names=freeze
+visibility=public
+
+--- freeze -> self
+
+自身を凍結します。
+
+@see [[m:Object#freeze]]
+

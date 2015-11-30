@@ -1,0 +1,12 @@
+kind=defined
+names=unconverted_fields?
+visibility=public
+
+--- unconverted_fields? -> bool
+
+パースした結果が unconverted_fields というメソッドを持つ場合に真を返します。
+そうでない場合は、偽を返します。
+
+
+@see [[m:CSV.new]]
+

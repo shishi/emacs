@@ -1,0 +1,15 @@
+name=rb_class2name
+private=false
+macro=false
+type=char *
+filename=variable.c
+params=(VALUE klass)
+
+
+klass の名前を返します。
+返り値の内容を変更したり free してはいけません。
+
+  RSTRING(rb_class_path(klass))->ptr
+
+と同じです。
+

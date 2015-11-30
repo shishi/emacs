@@ -1,0 +1,21 @@
+kind=defined
+names=virtual_host
+visibility=public
+
+--- virtual_host(server)    -> ()
+
+サーバの保持しているバーチャルホストのリストに HTTP サーバ server を加えます。
+クライアントからのリクエストのうち server へのものは server に委譲されるようになります。
+
+@param server バーチャルホストを表す WEBrick::HTTPServer オブジェクトを指定します。
+
+
+  include WEBrick
+  srv1 = HTTPServer.new( { :Port => 1080, :ServerName => 'hoge.example.com' } )
+  srv2 = HTTPServer.new( { :Port => 1080, :ServerName => 'foo.example.com' } )
+  
+  srv  = HTTPServer.new( { :Port => 1080 } )
+  srv.virtual_host(srv1)
+  srv.virtual_host(srv2)
+  srv.start
+

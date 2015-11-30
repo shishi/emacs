@@ -1,0 +1,25 @@
+kind=defined
+names====
+visibility=public
+
+--- ===(obj) -> bool
+
+指定された obj が自身かそのサブクラスのインスタンスであるとき真を返します。
+また、obj が自身をインクルードしたクラスかそのサブクラスのインスタンスである場合にも
+真を返します。上記のいずれでもない場合に false を返します。
+
+言い替えると obj.kind_of?(self) が true の場合、 true を返します。
+
+このメソッドは主に case 文での比較に用いられます。
+case ではクラス、モジュールの所属関係をチェックすることになります。
+
+  str = String.new
+  case str
+  when String     # String === str を評価する
+    p true        # => true
+  end
+
+@param obj 任意のオブジェクト
+
+@see [[m:Object#kind_of?]], [[m:Object#instance_of?]], [[ref:d:spec/control#case]]
+

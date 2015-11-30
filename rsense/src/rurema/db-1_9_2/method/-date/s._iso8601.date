@@ -1,0 +1,12 @@
+kind=defined
+names=_iso8601
+visibility=public
+
+--- _iso8601(str) -> Hash
+このメソッドは [[m:Date.iso8601]] と似ていますが、日付オブジェクトを生成せずに、
+見いだした要素をハッシュで返します。
+
+[[m:Date.iso8601]] も参照してください。
+
+@param str 日付をあらわす文字列
+

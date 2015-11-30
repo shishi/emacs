@@ -1,0 +1,15 @@
+kind=defined
+names=ln,long_name
+visibility=public
+
+--- ln -> String | nil
+--- long_name -> String | nil
+
+オブジェクト識別子に対応する long name を返します。
+
+例:
+  require "openssl"
+  oid = OpenSSL::ASN1::ObjectId.new("subjectAltName")
+  p oid.ln   #=> "X509v3 Subject Alternative Name"
+
+@see [[m:OpenSSL::ASN1::ObjectId#sn]]

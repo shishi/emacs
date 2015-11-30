@@ -1,0 +1,21 @@
+kind=defined
+names===
+visibility=public
+
+--- ==(set) -> bool
+
+2 つの集合が等しいときに true を返します。
+
+より厳密には、引数 set が Set オブジェクトであり、自身と set が同数の
+要素を持ち、かつそれらの要素がすべて等しい場合に true となります。
+それ以外の場合には、false を返します。
+要素の等しさは [[m:Object#eql?]] により判定されます。
+
+@param set 比較対象のオブジェクトを指定します。
+
+  s1 = Set[10, 20, 30]
+  s2 = Set[10, 30, 40]
+  s3 = Set[30, 10, 30, 20]
+  p s1 == s2 #=> false
+  p s1 == s3 #=> true
+

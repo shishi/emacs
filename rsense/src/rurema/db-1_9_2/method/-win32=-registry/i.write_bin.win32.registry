@@ -1,0 +1,13 @@
+kind=defined
+names=write_bin,write_i,write_s
+visibility=public
+
+--- write_s(name, value)
+--- write_i(name, value)
+--- write_bin(name, value)
+
+レジストリ値 name に value を書き込みます。
+
+レジストリ値の型はそれぞれ REG_SZ(write_s), REG_DWORD(write_i),
+REG_BINARY(write_bin) です。
+

@@ -1,0 +1,8 @@
+kind=defined
+names=cc
+visibility=public
+
+--- cc
+
+Retunns an array of [[c:Net::IMAP::Address]] that represents the cc.
+

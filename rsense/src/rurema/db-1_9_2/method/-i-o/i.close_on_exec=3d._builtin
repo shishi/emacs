@@ -1,0 +1,15 @@
+kind=defined
+names=close_on_exec=
+visibility=public
+
+--- close_on_exec=(bool)
+
+自身に close-on-exec フラグを設定します。
+
+@param bool 自身の close-on-exec フラグを true か false で指定します。
+
+   f = open("/dev/null")
+   f.close_on_exec = true
+   system("cat", "/proc/self/fd/#{f.fileno}") # cat: /proc/self/fd/3: No such file or directory
+   f.closed?                #=> false
+

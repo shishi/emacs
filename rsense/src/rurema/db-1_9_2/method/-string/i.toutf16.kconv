@@ -1,0 +1,17 @@
+kind=added
+names=toutf16
+visibility=public
+
+--- toutf16 -> String
+
+self のエンコーディングを UTF-16BE に変換した文字列を
+返します。変換元のエンコーディングは文字列の内容から推測します。
+
+このメソッドは MIME エンコードされた文字列を展開し、
+いわゆる半角カナを全角に変換します。
+これらを変換したくない場合は、 [[m:NKF.#nkf]]('-w16xm0', str)
+を使ってください。
+
+@see [[m:Kconv.#toutf16]]
+
+

@@ -1,0 +1,9 @@
+kind=defined
+names=each
+visibility=public 
+
+--- each{|entry| ... }
+data.tar.gz の各エントリをブロックに渡してブロックを評価します。
+
+@see [[m:Gem::Package::TarReader#each]]
+

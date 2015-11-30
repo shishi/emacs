@@ -1,0 +1,16 @@
+kind=defined
+names=div
+visibility=public
+
+--- div(b [, n])
+
+以下のように使用します。
+
+    c = a.div(b,n)
+
+c = a / b を最大で n 桁まで計算します。
+a / b の精度が n より大きいときは
+[[m:BigDecimal.mode]] で指定された方法で丸められます。
+n がゼロなら [[m:BigDecimal#/]] と同じです。
+n が省略されたときは [[m:Float#div]] と同様に結果が BigDecimal になります。 
+

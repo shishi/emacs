@@ -1,0 +1,29 @@
+kind=defined
+names=pipeline_w
+visibility=public
+
+--- pipeline_w(*cmds) -> [IO, [Thread]]
+--- pipeline_w(*cmds) {|first_stdin, wait_thrs| ... } -> ()
+
+指定したコマンドのリストをパイプで繋いで順番に実行します。最初の
+コマンドの標準入力に書き込む事ができます。
+
+@param cmds 実行するコマンドのリストを指定します。
+
+@return ブロックを指定した場合はブロックの最後に評価された値を返します。
+        ブロックを指定しなかった場合は最初に実行するコマンドの標準入力、
+        実行したプロセスを待つためのスレッドの配列を配列で返します。
+
+例:
+
+  require "open3"
+  
+  Open3.pipeline_w("bzip2 -c", :out=>"/tmp/hello.bz2") {|w, ts|
+    w.puts "hello"
+  }
+
+[[m:Open3.#popen3]]と同様に引数に環境変数とオプションを指定してコマンド
+を実行する事ができます。
+
+@see [[m:Open3.#popen3]]
+

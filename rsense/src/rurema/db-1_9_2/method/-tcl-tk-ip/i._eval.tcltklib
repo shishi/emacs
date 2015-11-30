@@ -1,0 +1,6 @@
+kind=defined
+names=_eval
+visibility=public
+
+--- _eval(cmd)
+

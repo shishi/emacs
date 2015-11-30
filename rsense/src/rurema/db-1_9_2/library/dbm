@@ -1,0 +1,11 @@
+methods=
+sublibraries=
+requires=
+classes=DBM,DBMError
+is_sublibrary=false
+
+DBM を Ruby スクリプトから扱えるようにするライブラリです。
+
+扱えるキーや値のサイズはリンクしているライブラリに依存します。
+
+@see [[lib:gdbm]], [[lib:sdbm]], [[man:dbm(3)]]

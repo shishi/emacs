@@ -1,0 +1,9 @@
+kind=defined
+names=cookie,cookie=
+visibility=public
+
+--- cookie
+--- cookie=()
+
+Get and set the HTTP Cookie header.
+

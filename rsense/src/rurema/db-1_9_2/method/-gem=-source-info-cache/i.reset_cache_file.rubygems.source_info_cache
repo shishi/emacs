@@ -1,0 +1,10 @@
+kind=defined
+names=reset_cache_file
+visibility=public 
+
+--- reset_cache_file -> nil
+
+強制的にキャッシュファイル名をリセットします。
+
+RubyGems ライブラリの結合テストをするのに便利です。
+

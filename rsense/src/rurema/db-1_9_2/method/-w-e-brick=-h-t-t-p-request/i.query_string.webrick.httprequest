@@ -1,0 +1,9 @@
+kind=defined
+names=query_string
+visibility=public
+
+--- query_string          -> String
+
+リクエスト URI のクエリーを文字列で表すアクセサです。
+デフォルトは request_uri.query です。
+

@@ -1,0 +1,24 @@
+kind=defined
+names=login
+visibility=public
+
+--- login(user = "anonymous", passwd = nil, acct = nil) -> ()
+ホストへのログイン処理を行ないます。
+
+このメソッドはホストへの接続後にしか使えません。
+
+user, passwd が省略された場合、ユーザ名
+"anonymous", パスワード user@host となります。
+
+acct を省略しなかった場合には、 ACCT コマンドを
+acct で指定したパラメータで送ります。
+
+@param user ログインに使うユーザ名を指定します。
+@param passwd ログインに使うパスワードを指定します。
+@param acct ログイン後に送る ACCT コマンドのパラメータを指定します。
+
+@raise Net::FTPTempError 応答コードが 4yz のときに発生します。
+@raise Net::FTPPermError 応答コードが 5yz のときに発生します。
+@raise Net::FTPProtoError 応答コードが RFC 的に正しくない場合に発生します。
+@raise Net::FTPReplyError 応答コードが上の場合以外で正しくない場合(1xy, 3xyが来るべきでないときに来た場合など)に発生します。
+

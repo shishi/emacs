@@ -1,0 +1,10 @@
+superclass=
+type=module
+library=tk.grid
+extended=Tk
+included=Tk
+
+ウィジェットを配置するためのモジュールです。
+このモジュールにより、ウィジェットは格子状に配置されます。
+
+普通、ウィジェットを格子状に配置するには[[m:TkWindow#grid]]が使われます。

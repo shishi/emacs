@@ -1,0 +1,7 @@
+superclass=TkObject
+type=class
+library=tk.textmark
+extended=
+included=TkText=IndexModMethods
+
+

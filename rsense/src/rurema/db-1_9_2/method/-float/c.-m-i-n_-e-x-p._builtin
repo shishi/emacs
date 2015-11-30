@@ -1,0 +1,8 @@
+kind=defined
+names=MIN_EXP
+visibility=public
+
+--- MIN_EXP -> Fixnum
+
+最小の Float::RADIX 進の指数
+

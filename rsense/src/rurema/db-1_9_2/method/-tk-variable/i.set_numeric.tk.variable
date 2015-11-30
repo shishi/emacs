@@ -1,0 +1,6 @@
+kind=defined
+names=set_numeric
+visibility=public
+
+--- set_numeric(val)
+

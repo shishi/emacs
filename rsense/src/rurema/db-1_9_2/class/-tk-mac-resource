@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=tk.macpkg
+extended=Tk,TkMacResource
+included=
+
+

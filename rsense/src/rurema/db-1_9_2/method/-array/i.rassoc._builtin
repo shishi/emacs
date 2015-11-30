@@ -1,0 +1,19 @@
+kind=defined
+names=rassoc
+visibility=public
+
+--- rassoc(obj)    -> Array | nil
+
+自身が配列の配列であると仮定して、要素の配列でインデックス
+1 の要素が obj に等しいものを検索し見つかった最初の要素を返
+します。該当する要素がなければ nil を返します。
+
+比較は == 演算子を使って行われます。
+
+@param obj オブジェクトを指定します。
+
+    a = [[15,1], [25,2], [35,3]]
+    p a.rassoc(2)    # => [25, 2]
+
+@see [[m:Array#assoc]] 
+

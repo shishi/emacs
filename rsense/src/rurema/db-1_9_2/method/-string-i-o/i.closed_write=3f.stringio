@@ -1,0 +1,8 @@
+kind=defined
+names=closed_write?
+visibility=public
+
+--- closed_write?    -> bool
+
+自身に対する書き込みが禁止されているなら true を返します。そうでない場合は、false を返します。
+

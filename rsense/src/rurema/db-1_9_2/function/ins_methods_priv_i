@@ -1,0 +1,11 @@
+name=ins_methods_priv_i
+private=true
+macro=false
+type=int
+filename=class.c
+params=(ID key, NODE *body, VALUE ary)
+
+
+rb_class_instance_methods() のイテレータブロック
+(private メソッド版)。
+

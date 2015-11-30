@@ -1,0 +1,6 @@
+kind=defined
+names=match_segment
+visibility=public
+
+--- match_segment(ypath, depth)
+

@@ -1,0 +1,27 @@
+kind=defined
+names=ftype
+visibility=public
+
+--- ftype -> String
+ファイルのタイプを表す文字列を返します。文字列は以下のうちの
+いずれかです。
+
+  "file"
+  "directory"
+  "characterSpecial"
+  "blockSpecial"
+  "fifo"
+  "link"
+  "socket"
+  
+  "unknown"
+
+
+サンプル
+
+  fs = File::Stat.new($0)
+  p fs.ftype #=> "file"
+  p File::Stat.new($:[0]).ftype #=> "directory"
+
+
+

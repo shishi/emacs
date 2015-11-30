@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=webrick.log
+extended=
+included=
+
+ログを取る機能を提供するクラスです。

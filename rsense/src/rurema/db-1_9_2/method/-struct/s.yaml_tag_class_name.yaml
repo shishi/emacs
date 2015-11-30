@@ -1,0 +1,15 @@
+kind=added
+names=yaml_tag_class_name
+visibility=public
+
+--- yaml_tag_class_name -> String
+Struct::をのぞいたクラス名を返す
+
+@return Struct::をのぞいたクラス名
+
+  require 'yaml'
+  
+  YStruct = Struct.new("YStruct", :name)
+  p YStruct::yaml_tag_class_name
+  #=> "YStruct"
+

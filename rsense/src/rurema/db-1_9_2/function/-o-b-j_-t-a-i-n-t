@@ -1,0 +1,10 @@
+name=OBJ_TAINT
+private=false
+macro=true
+type=void
+filename=ruby.h
+params=(VALUE x)
+
+
+x に汚染マークを付ける。
+

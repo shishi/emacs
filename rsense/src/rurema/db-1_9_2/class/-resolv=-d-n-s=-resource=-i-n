@@ -1,0 +1,10 @@
+superclass=
+type=module
+library=resolv
+extended=
+included=
+
+DNS のインターネットクラスリソースを表すモジュールです。
+
+インターネットクラスリソースを利用する class に
+mixinして利用します。

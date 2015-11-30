@@ -1,0 +1,24 @@
+kind=defined
+names=sqrt!
+visibility=public
+
+--- sqrt!(x) -> Float
+
+実数 x の平方根を返します。[[m:Math.#sqrt]] のエイリアスです。
+
+@param x 正の実数
+
+@raise Math::DomainError x が負の数である場合に発生します。
+
+@raise TypeError x に数値以外を指定した場合に発生します。
+
+@raise RangeError x に実数以外の数値を指定した場合に発生します。
+
+例:
+
+  require "cmath"
+  CMath.sqrt!(4.0) # => 2.0
+  CMath.sqrt!(9.0) # => 3.0
+
+@see [[m:Math.#sqrt]]
+

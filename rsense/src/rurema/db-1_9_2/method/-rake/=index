@@ -1,0 +1,5 @@
+.application	Rake.application
+.application=	Rake.application=
+.original_dir	Rake.original_dir
+:EARLY	Rake::EARLY
+:EMPTY_TASK_ARGS	Rake::EMPTY_TASK_ARGS

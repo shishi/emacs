@@ -1,0 +1,9 @@
+kind=defined
+names=value
+visibility=public
+
+--- value
+
+自身が保持しているハッシュか配列を返します。
+
+

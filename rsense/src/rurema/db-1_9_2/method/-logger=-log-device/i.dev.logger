@@ -1,0 +1,8 @@
+kind=defined
+names=dev
+visibility=public
+
+--- dev -> IO
+
+出力先の IO オブジェクトを取得します。
+

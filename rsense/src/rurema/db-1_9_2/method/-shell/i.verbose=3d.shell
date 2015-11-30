@@ -1,0 +1,6 @@
+kind=defined
+names=verbose=
+visibility=public
+
+--- verbose=(flag)
+

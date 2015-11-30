@@ -1,0 +1,7 @@
+superclass=TkFrame
+type=class
+library=tk.labelframe
+extended=
+included=
+
+

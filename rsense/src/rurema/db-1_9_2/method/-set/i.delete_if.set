@@ -1,0 +1,25 @@
+kind=defined
+names=delete_if,reject!
+visibility=public
+
+--- delete_if {|o| ... } -> self
+--- reject! {|o| ... } -> self | nil
+
+集合の各要素に対してブロックを実行し、その結果が真であるようなすべての
+要素を削除します。
+
+delete_if は常に self を返します。
+
+reject! は、要素が 1 つ以上削除されれば self を、1 つも削除されなければ
+nil を返します。
+
+  s1 = Set['hello.rb', 'test.rb', 'hello.rb.bak']
+  s1.delete_if {|str| str =~ /\.bak$/}
+  p s1 #=> #<Set: {"test.rb", "hello.rb"}>
+  
+  s2 = Set['hello.rb', 'test.rb', 'hello.rb.bak']
+  p s2.reject! {|str| str =~ /\.bak$/} #=> #<Set: {"test.rb", "hello.rb"}>
+  p s2.reject! {|str| str =~ /\.o$/}   #=> nil
+
+@see [[m:Enumerable#reject]]
+

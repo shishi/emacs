@@ -1,0 +1,8 @@
+kind=defined
+names=subtype
+visibility=public
+
+--- subtype
+
+Returns the content subtype name as defined in [MIME-IMB].
+

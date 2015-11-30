@@ -1,0 +1,8 @@
+kind=defined
+names=APPEND
+visibility=public
+
+--- APPEND
+追記モードでファイルを開くときに指定します。
+[[m:File.open]]で使用します。
+

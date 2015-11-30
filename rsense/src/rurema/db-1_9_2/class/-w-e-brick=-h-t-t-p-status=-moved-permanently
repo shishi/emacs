@@ -1,0 +1,7 @@
+superclass=WEBrick=HTTPStatus=Redirect
+type=class
+library=webrick.httpstatus
+extended=
+included=
+
+HTTP のステータスコード 301 Moved Permanently を表すクラスです。

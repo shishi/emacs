@@ -1,0 +1,12 @@
+superclass=IO
+type=class
+library=_builtin
+extended=
+included=
+
+ファイルアクセスのためのクラスです。
+
+通常 [[m:Kernel.#open]] または [[m:File.open]] を使って生成します。
+[[c:IO]] クラスがインクルードしている [[c:File::Constants]] は File クラスに関係する定数を
+格納したモジュールです。
+また [[c:File::Stat]] は stat 構造体( [[man:stat(2)]] 参照)を表すクラスです。

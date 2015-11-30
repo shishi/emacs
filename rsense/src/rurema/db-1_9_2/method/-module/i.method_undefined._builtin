@@ -1,0 +1,36 @@
+kind=defined
+names=method_undefined
+visibility=private 
+
+--- method_undefined(name) -> ()
+
+このモジュールのインスタンスメソッド name が
+[[m:Module#undef_method]] によって削除されるか、
+undef 文により未定義にされると、インタプリタがこのメソッドを呼び出します。
+
+特異メソッドの削除をフックするには
+[[m:Object#singleton_method_undefined]]
+を使います。
+
+@param name 削除/未定義にされたメソッド名が [[c:Symbol]] で渡されます。
+
+  class C
+    def C.method_undefined(name)
+      puts "method C\##{name} was undefined"
+    end
+
+    def foo
+    end
+    def bar
+    end
+
+    undef_method :foo
+    undef bar
+  end
+
+実行結果:
+
+  method C#foo was undefined
+  method C#bar was undefined
+
+

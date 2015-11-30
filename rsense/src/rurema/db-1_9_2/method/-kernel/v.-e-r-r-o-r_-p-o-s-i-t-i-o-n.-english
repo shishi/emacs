@@ -1,0 +1,18 @@
+kind=added
+names=ERROR_POSITION
+visibility=public
+
+--- $ERROR_POSITION -> [String] | nil
+
+[[m:$@]] ¤ÎÊÌÌ¾
+
+  require "English"
+  class SomethingError < StandardError; end
+
+  begin
+    raise SomethingError
+  rescue
+    p $ERROR_POSITION #=> ["sample.rb:5"]
+  end
+
+

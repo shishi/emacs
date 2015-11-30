@@ -1,0 +1,10 @@
+kind=defined
+names=close
+visibility=public
+
+--- close -> nil
+
+DBM ファイルをクローズします。
+
+以後の操作は例外 [[c:RuntimeError]] を発生させます。
+

@@ -1,0 +1,9 @@
+kind=defined
+names=RFC2253
+visibility=public
+
+--- RFC2253 -> Integer
+[[m:OpenSSL::X509::Name#to_s]] のフラグとして使います。
+
+[[RFC:2253]] 互換方式でフォーマットされます。
+

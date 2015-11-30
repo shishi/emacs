@@ -1,0 +1,6 @@
+kind=defined
+names=visualsavailable
+visibility=public
+
+--- visualsavailable(win, includeids = false)
+

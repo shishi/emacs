@@ -1,0 +1,8 @@
+#each_recursive	REXML::Node#each_recursive
+#find_first_recursive	REXML::Node#find_first_recursive
+#indent	REXML::Node#indent
+#index_in_parent	REXML::Node#index_in_parent
+#next_sibling_node	REXML::Node#next_sibling_node
+#parent?	REXML::Node#parent?
+#previous_sibling_node	REXML::Node#previous_sibling_node
+#to_s	REXML::Node#to_s

@@ -1,0 +1,7 @@
+kind=defined
+names=NKF_VERSION
+visibility=public
+
+--- NKF_VERSION -> String
+nkf 自体のバージョンを表す文字列です。
+

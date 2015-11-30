@@ -1,0 +1,26 @@
+kind=defined
+names=cos!
+visibility=public
+
+--- cos!(x) -> Float
+
+実数 x の余弦関数の値をラジアンで返します。[[m:Math.#cos]] のエイリアス
+です。
+
+@param x 実数
+
+@return [-1, 1] の実数
+
+@raise TypeError x に数値以外を指定した場合に発生します。
+
+@raise RangeError x に実数以外の数値を指定した場合に発生します。
+
+例:
+
+  require "cmath"
+  CMath.cos!(0 * Math::PI / 4) # => 1.0
+  CMath.cos!(1 * Math::PI / 4) # => 0.7071067811865476
+  CMath.cos!(4 * Math::PI / 4) # => -1.0
+
+@see [[m:Math.#cos]]
+

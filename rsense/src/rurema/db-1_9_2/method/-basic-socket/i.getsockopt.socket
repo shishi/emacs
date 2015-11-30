@@ -1,0 +1,21 @@
+kind=defined
+names=getsockopt
+visibility=public
+
+--- getsockopt(level, optname) -> String
+
+ソケットのオプションを取得します。[[man:getsockopt(2)]]
+を参照してください。取得したオプションのデータをパックした文字列を
+返します。
+
+@param level    [[man:getsockopt(2)]] の 第二引数のlevel に相当する整数を指定します。
+@param optname  [[man:getsockopt(2)]] の 第三引数のoption_name に相当する整数を指定します。
+
+例:
+
+  serv = TCPServer.open("", 0)
+  c = TCPSocket.open(*Socket.unpack_sockaddr_in(serv.getsockname).reverse)
+  s = serv.accept
+  p c.getsockopt(Socket::IPPROTO_TCP, Socket::TCP_NODELAY)  #=> "\000\000\000\000"
+  p opt.unpack("i")[0]                                      #=> 0   (Nagle アルゴリズム有効)
+

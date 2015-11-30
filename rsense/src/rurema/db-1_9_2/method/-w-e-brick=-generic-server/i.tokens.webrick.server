@@ -1,0 +1,13 @@
+kind=defined
+names=tokens
+visibility=public
+
+--- tokens    -> SizedQueue
+
+MaxClient の設定のために使われる [[c:SizedQueue]] オブジェクトを返しま
+す。[[c:SizedQueue]] オブジェクトのサイズは現在受け付けることのできるク
+ライアントの数です。
+
+MaxClient を知りたい場合は self.tokens.max です。
+self.tokens.max - self.tokens.length が現在のクライアントの接続数です。
+

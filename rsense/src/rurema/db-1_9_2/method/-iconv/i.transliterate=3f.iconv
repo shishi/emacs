@@ -1,0 +1,12 @@
+kind=defined
+names=transliterate?
+visibility=public
+
+--- transliterate? -> bool
+
+文字列の変換時に、表現できない文字を同じ見た目の文字に"翻訳"するかどう
+かを返します。
+
+@raise NotImplementedError 実行プラットフォームでサポートされていない場
+                           合に発生します。
+

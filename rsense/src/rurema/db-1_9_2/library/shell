@@ -1,0 +1,58 @@
+methods=
+sublibraries=shell.error,shell.process=2dcontroller,shell.filter,shell.builtin=2dcommand,shell.system=2dcommand,shell.command=2dprocessor
+requires=shell.error,shell.system=2dcommand,shell.filter,shell.builtin=2dcommand,shell.process=2dcontroller,shell.command=2dprocessor
+classes=Shell
+is_sublibrary=false
+
+Ruby 上で sh/csh のようにコマンドの実行及びフィルタリングを手軽に行うためのライブラリです。
+
+sh/csh の制御文は Ruby の機能を用いて実現します。
+
+=== サンプル
+
+==== Example 1:
+
+  sh = Shell.cd("/tmp")
+  sh.mkdir "shell-test-1" unless sh.exists?("shell-test-1")
+  sh.cd("shell-test-1")
+  for dir in ["dir1", "dir3", "dir5"]
+    unless sh.exists?(dir)
+      sh.mkdir dir
+      sh.cd(dir) do
+        f = sh.open("tmpFile", "w")
+        f.puts "TEST"
+        f.close
+      end
+      print sh.pwd
+    end
+  end
+
+==== Example 2:
+
+  sh = Shell.cd("/tmp")
+  sh.transact do
+    mkdir "shell-test-1" unless exists?("shell-test-1")
+    cd("shell-test-1")
+    for dir in ["dir1", "dir3", "dir5"]
+      if !exists?(dir)
+        mkdir dir
+        cd(dir) do
+          f = open("tmpFile", "w")
+          f.print "TEST\n"
+          f.close
+        end
+        print pwd
+      end
+    end
+  end
+
+==== Example 3: Using Pipe
+
+  sh.cat("/etc/printcap") | sh.tee("tee1") > "tee2"
+  (sh.cat < "/etc/printcap") | sh.tee("tee11") > "tee12"
+  sh.cat("/etc/printcap") | sh.tee("tee1") >> "tee2"
+  (sh.cat < "/etc/printcap") | sh.tee("tee11") >> "tee12"
+
+==== Example 4:
+
+  print sh.cat("/etc/passwd").head.collect {|line| /keiju/ =~ line }

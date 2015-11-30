@@ -1,0 +1,9 @@
+kind=defined
+names=respond_to_missing?
+visibility=public
+
+--- respond_to_missing?(symbol, include_private) -> bool
+
+Hook method to return whether the _obj_ can respond to _id_ method or not.
+
+@see [[m:Object#respond_to?]]

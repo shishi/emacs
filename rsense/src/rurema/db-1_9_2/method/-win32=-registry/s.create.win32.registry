@@ -1,0 +1,17 @@
+kind=defined
+names=create
+visibility=public
+
+--- create(key, subkey, desired = KEY_ALL_ACCESS, opt = REG_OPTION_RESERVED)
+--- create(key, subkey, desired = KEY_ALL_ACCESS, opt = REG_OPTION_RESERVED) {|reg| ... }
+
+レジストリキー key 下にキー subkey を作成し，
+開いたキーを表す Win32::Registry オブジェクトを返します。
+key は親のキーを Win32::Registry オブジェクトで指定します。
+親のキーには定義済キー HKEY_* を使用できます (⇒[[c:Win32::Registry::Constants]])
+
+サブキーが既に存在していればキーはただ開かれ，[[m:Win32::Registry#created?]]
+メソッドが false を返します。
+
+ブロックが与えられると，キーは自動的に閉じられます。
+

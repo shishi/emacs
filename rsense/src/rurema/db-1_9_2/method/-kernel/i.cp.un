@@ -1,0 +1,16 @@
+kind=added
+names=cp
+visibility=private 
+
+--- cp -> ()
+ファイルやディレクトリをコピーします。
+
+
+  ruby -run -e cp -- [OPTION] SOURCE DEST
+
+  -p          可能であればファイルの属性を保持します。
+  -r          再帰的にコピーします。
+  -v          詳細表示
+
+@see [[man:cp(1)]]
+

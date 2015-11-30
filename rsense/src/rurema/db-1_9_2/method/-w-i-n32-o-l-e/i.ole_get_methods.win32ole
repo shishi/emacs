@@ -1,0 +1,28 @@
+kind=defined
+names=ole_get_methods
+visibility=public
+
+--- ole_get_methods -> [WIN32OLE_METHOD]
+オブジェクトの参照可能プロパティ情報を[[c:WIN32OLE_METHOD]]の配列として
+返します。
+
+ole_get_methodsメソッドは、OLEオートメーションサーバのメソッドのうち読
+み取り可能なプロパティを[[c:WIN32OLE_METHOD]]の配列として返します。
+
+@return [[c:WIN32OLE_METHOD]]の配列。
+@raise WIN32OLERuntimeError オートメーションサーバの呼び出しに失敗しました。
+                            型情報ライブラリ(TypeLib)が提供されていない場合などに発生します。
+
+   excel = WIN32OLE.new('Excel.Application')
+   excel.ole_get_methods.each do |prop|
+     begin
+       puts "#{prop.name}=#{excel._getproperty(prop.dispid, [], [])}"
+     rescue WIN32OLERuntimeError
+       puts "can't read #{prop.name} property"
+     end
+   end
+
+@see [[m:WIN32OLE#ole_methods]]
+@see [[m:WIN32OLE#ole_function_methods]]
+@see [[m:WIN32OLE#ole_put_methods]]
+

@@ -1,0 +1,38 @@
+kind=defined
+names=set_get_line_procs
+visibility=public
+
+--- set_get_line_procs(filename, proc)
+--- set_get_line_procs(filename) {|line| .... }
+
+あるファイルについて利用する、行番号からソースのその行の内容を返す
+手続きを指定する。何も指定しなければデフォルトの動作が利用される。
+指定する手続きは行番号を唯一の引数として呼び出される。
+
+@param filename ソースファイルの場所を文字列で指定します。
+@param proc 通常、文字列を返す手続きオブジェクトを指定します。
+
+  # 例 dummy.rb の3行目から6 行目のトレース出力に !! をつける
+  require 'tracer'
+
+  Tracer.set_get_line_procs('./dummy.rb'){|line|
+    str = "\n"
+    str = "!!\n" if line >= 3 and line <= 6
+    str
+  }
+  Tracer.on
+  require 'dummy'
+
+  dm = Dummy.new
+  puts dm.number
+
+  =begin
+  # dummy.rb
+  class Dummy
+    def initialize
+      @number = 135
+    end
+    attr :number
+  end
+  =end
+

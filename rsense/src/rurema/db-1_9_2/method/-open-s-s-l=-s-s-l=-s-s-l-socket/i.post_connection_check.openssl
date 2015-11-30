@@ -1,0 +1,22 @@
+kind=defined
+names=post_connection_check
+visibility=public
+
+--- post_connection_check(hostname) -> true
+接続後検証を行います。
+
+検証に成功した場合は true を返し、失敗した場合は例外 
+[[c:OpenSSL::SSL::SSLError]] を発生させます。
+
+OpenSSL の API では、
+[[m:OpenSSL::SSL::SSLSocket#connect]] や [[m:OpenSSL::SSL::SSLSocket#accept]] 
+での検証は実用的には不完全です。
+CA が証明書に署名してそれが失効していないことしか確認しません。
+実用上は証明書に記載されている事項を見て、接続先が妥当であるかを確認する
+必要があります。通常は接続先ホストの FQDN と証明書に記載されている FQDN が
+一致しているかどうかを調べます。このメソッドはその FQDN のチェックを行ないます。
+
+@param hostname チェックする FQDN の文字列
+@raise OpenSSL::SSL::SSLError チェックに失敗した場合に発生します
+
+

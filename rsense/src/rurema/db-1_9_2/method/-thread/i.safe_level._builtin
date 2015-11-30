@@ -1,0 +1,11 @@
+kind=defined
+names=safe_level
+visibility=public
+
+--- safe_level    -> Integer
+
+self のセーフレベルを返します。カレントスレッドの
+safe_level は、[[m:$SAFE]] と同じです。
+
+セーフレベルについては[[d:spec/safelevel]]を参照してください。
+

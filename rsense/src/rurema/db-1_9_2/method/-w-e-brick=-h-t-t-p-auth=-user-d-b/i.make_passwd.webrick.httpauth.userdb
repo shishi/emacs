@@ -1,0 +1,16 @@
+kind=defined
+names=make_passwd
+visibility=public
+
+--- make_passwd(realm, user, pass) -> String
+
+[[m:WEBrick::HTTPAuth::UserDB#auth_type]] の make_passwd を呼び出します。
+
+@param realm レルムを指定します。
+
+@param user ユーザ名を指定します。
+
+@param pass パスワードを指定します。
+
+@see [[m:WEBrick::HTTPAuth::BasicAuth#make_passwd]], [[m:WEBrick::HTTPAuth::DigestAuth#make_passwd]]
+

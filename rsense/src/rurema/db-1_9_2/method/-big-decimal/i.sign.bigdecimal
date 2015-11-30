@@ -1,0 +1,21 @@
+kind=defined
+names=sign
+visibility=public
+
+--- sign
+
+値が正 (sign > 0)、負 (sign < 0)、その他 (sign == 0) であるかの情報を返します。
+
+    n = a.sign
+
+としたとき n の値は a が以下のときを意味します。
+() の中の数字は、実際の値です (「内部構造」を参照)。
+
+    n = BigDecimal::SIGN_NaN(0)                 # a は NaN
+    n = BigDecimal::SIGN_POSITIVE_ZERO(1)       # a は +0
+    n = BigDecimal::SIGN_NEGATIVE_ZERO(-1)      # a は -0
+    n = BigDecimal::SIGN_POSITIVE_FINITE(2)     # a は正の値
+    n = BigDecimal::SIGN_NEGATIVE_FINITE(-2)    # a は負の値
+    n = BigDecimal::SIGN_POSITIVE_INFINITE(3)   # a は+Infinity
+    n = BigDecimal::SIGN_NEGATIVE_INFINITE(-3)  # a は-Infinity
+

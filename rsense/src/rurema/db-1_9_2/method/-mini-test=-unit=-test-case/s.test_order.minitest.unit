@@ -1,0 +1,10 @@
+kind=defined
+names=test_order
+visibility=public
+
+--- test_order -> Symbol
+
+テストの実行順序を返します。
+
+デフォルトはランダムです。
+

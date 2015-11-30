@@ -1,0 +1,11 @@
+kind=defined
+names=undefine_finalizer
+visibility=public
+
+--- undefine_finalizer(obj)    -> object
+
+obj に対するファイナライザをすべて解除します。
+obj を返します。
+
+@param obj ファイナライザを解除したいオブジェクトを指定します。
+

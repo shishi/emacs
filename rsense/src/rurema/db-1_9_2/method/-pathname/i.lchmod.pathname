@@ -1,0 +1,11 @@
+kind=defined
+names=lchmod
+visibility=public
+
+--- lchmod(mode) -> Integer
+File.lchmod(mode, self.to_s) と同じです。
+
+@param mode ファイルのアクセス権限を整数で指定します。
+
+@see [[m:File.lchmod]]
+

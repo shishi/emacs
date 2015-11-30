@@ -1,0 +1,109 @@
+superclass=SimpleDelegator
+type=class
+library=net.telnet
+extended=
+included=
+
+このクラスは telnet のクライアント機能を提供します。
+
+このクラスは接続に利用している
+ソケットオブジェクト(通常は [[c:TCPSocket]])のメソッドを
+すべて利用することができます([[c:SimpleDelegator]] を用いて
+います)。
+これによって、[[m:IO#close]] で接続を
+閉じたり、[[m:IO#sysread]] で [[m:Net::Telnet#waitfor]] を
+使わずにデータを直接読むことができます。
+
+telnet でリモートホストにログインしてシェル経由で
+コマンドを実行することを考えてみましょう。
+これを Net::Telnet で実現するためには、
+まず [[m:Net::Telnet.new]] に "Host" オプションを
+与えてオブジェクトを作り、 [[m:Net::Telnet#login]] で
+ユーザ名とパスワードを送ってログインし、
+[[m:Net::Telnet#cmd]] でコマンドを
+実行、最後に IO#close で接続を閉じます。
+[[m:Net::Telnet#waitfor]], [[m:Net::Telnet#print]],
+[[m:Net::Telnet#puts]], [[m:Net::Telnet#write]] などと
+いったメソッドはより複雑なことをする場合にのみ使ってください。
+
+Net::Telnet のオブジェクトは SMTP や HTTP のような telnet で
+ないサービスにも利用できます。この場合には 
+[[m:Net::Telnet.new]] に "Port" オプションを与えることで
+ポートを指定する必要があるでしょう。また、
+"Telnetmode" オプションに false を
+渡すことで telnet のコマンド列を解釈しないように
+しなければなりません。[[m:Net::Telnet#login]] は普通
+うまく動かないので、認証をプログラマ自身が実装
+する必要があります。
+
+通信プロトコルによっては、[[m:Net::Telnet.new]] に"Prompt"
+を渡しておいて [[m:Net::Telnet#cmd]] をうまく動作させることが
+できるかもしれません。
+また、[[m:Net::Telnet#cmd]] を呼ぶごとに "Match" を
+指定しても同様のことができます。
+また、[[m:Net::Telnet#puts]] や [[m:Net::Telnet#waitfor]] を
+直接使ってやりとりすることもできます。
+それでうまくいかない場合は、
+[[m:IO#sysread]] を直接呼ぶ必要があるかもしれません。
+
+
+[[m:Net::Telnet.new]] には "Proxy" オプションで指定した
+オブジェクトを通して通信をすることができます。
+"Proxy" オプションに [[c:Net::Telnet]] のオブジェクトを
+渡した場合には、通信路が共用されます。[[c:Socket]]
+のような読み書き可能な [[c:IO]] オブジェクトを渡した場合には、
+そのオブジェクトを通してやり取りが行われます。
+この機能はユニットテストをする場合などに便利でしょう。
+
+=== 使用例
+
+ログインしてコマンドを送る例、リモートホストから返ってきた文字列は
+すべて標準出力に表示する
+  require 'net/telnet'
+
+  # リモートホスト "foobar" に接続
+  # タイムアウトは 10 秒
+  localhost = Net::Telnet.new("Host" => "localhost",
+                              "Timeout" => 10)
+  
+  # ログインし、プロンプトが出るまで待ち合わせる
+  telnet.login("your name", "your password") {|c| print c}
+  
+  # ls コマンドを実行し、実行後、プロンプトが出るまで待ち合わせる
+  telnet.cmd("ls") {|c| print c}
+  
+  # sleep で 5 秒
+  telnet.cmd("sleep 5 && echo foobar &") {|c| print c}
+  
+  STDOUT.flush # <- これがないとここまで処理が来てることがわかりにくい
+  
+  # 前のコマンドの出力を待ち合わせる
+  telnet.waitfor(/foobar\Z/) {|c| print c}
+  
+  # ログインセッションの終了
+  telnet.cmd("exit") {|c| print c}
+  telnet.close
+
+POP サーバにメールが来ているかどうかを見る。リモートホストからきた文字列は
+すべて標準出力に表示
+  require 'net/telnet'
+
+  # リモートホスト(POPサーバ) "foobar" に接続
+  # ポート番号は110(POPのwell-knownポート)、
+  # "Telnetmode" は off (telnet用の特殊なバイト列を解釈しない)、
+  # Prompt (コマンドの区切り) は POP の仕様により /^\+OK/n とする
+  pop = Net::Telnet::new("Host" => "foobar",
+                         "Port" => 110,
+                         "Telnetmode" => false,
+                         "Prompt" => /^\+OK/n)
+  # 認証をする
+  # Net::Telnet#login は使えない(ログインのコマンドが異なる)ので
+  # Net::Telnet#cmd でユーザ名とパスワードを送る
+  pop.cmd("user " + "your_username") { |c| print c }
+  pop.cmd("pass " + "your_password") { |c| print c }
+  
+  # list コマンドで来ているメールを表示する
+  pop.cmd("list") { |c| print c }
+  
+  # 終了する
+  pop.close

@@ -1,0 +1,8 @@
+kind=defined
+names=internal_encoding
+visibility=public
+
+--- internal_encoding   -> Encoding | nil
+
+[[m:IO#internal_encoding]] に委譲します。
+

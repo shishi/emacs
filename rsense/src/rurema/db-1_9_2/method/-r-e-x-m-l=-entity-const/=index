@@ -1,0 +1,5 @@
+:AMP	REXML::EntityConst::AMP
+:APOS	REXML::EntityConst::APOS
+:GT	REXML::EntityConst::GT
+:LT	REXML::EntityConst::LT
+:QUOT	REXML::EntityConst::QUOT

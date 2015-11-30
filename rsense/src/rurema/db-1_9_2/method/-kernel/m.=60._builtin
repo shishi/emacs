@@ -1,0 +1,29 @@
+kind=defined
+names=`
+visibility=public
+
+--- `(command) -> String
+
+command を外部コマンドとして実行し、その標準出力を文字列として
+返します。このメソッドは `command` の形式で呼ばれます。
+
+引数 command に対しダブルクォートで囲まれた文字列と同様の解釈と式展開を行った後、
+コマンドとして実行します。
+コマンドは評価されるたびに実行されます。コマンドの終了ステータスを得るには、[[m:$?]] を参照します。
+
+コマンドの出力を得る必要がなく、単にコマンドを実行したいだけなら
+[[m:Kernel.#system]] を使います。特に端末を制御するコマンドでは
+`command` は失敗するかもしれません。
+
+[[ref:d:spec/literal#command]] も参照。
+
+@param command コマンドとして実行する引数です。そのまま評価されるのではなく、
+       ダブルクォート文字列と同様のバックスラッシュ記法の解釈と式展開が行われます。
+@return コマンドの出力を文字列で返します。
+@raise Errno::EXXX コマンドを実行できないときや失敗した場合に発生します。
+
+  puts `ruby -v` #=> ruby 1.8.6 (2007-03-13 patchlevel 0) [i386-mswin32]
+  puts $?.inspect #=> #<Process::Status: pid=3580,exited(0)>
+
+@see [[m:Kernel.#system]],[[m:Kernel.#exec]],[[m:Kernel.#spawn]]
+

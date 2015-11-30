@@ -1,0 +1,9 @@
+kind=defined
+names=each_capitalized_name
+visibility=public
+
+--- each_capitalized_name {|name| .... } -> ()
+保持しているヘッダ名を正規化
+('x-my-header' -> 'X-My-Header') 
+して、ブロックに渡します。
+

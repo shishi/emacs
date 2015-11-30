@@ -1,0 +1,8 @@
+kind=defined
+names=iso8601,rfc3339
+visibility=public
+
+--- iso8601 -> String
+--- rfc3339 -> String
+[[ISO:8601]] 書式の文字列を返します (拡大表記はつかいません)。
+

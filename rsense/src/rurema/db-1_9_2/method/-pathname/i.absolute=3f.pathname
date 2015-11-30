@@ -1,0 +1,7 @@
+kind=defined
+names=absolute?
+visibility=public
+
+--- absolute? -> bool
+self が絶対パス指定であれば真を返します。
+

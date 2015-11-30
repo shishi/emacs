@@ -1,0 +1,10 @@
+kind=defined
+names=lines
+visibility=public
+
+--- lines
+
+Returns the size of the body in text lines.
+
+And Net::IMAP::BodyTypeText has all methods of [[c:Net::IMAP::BodyTypeBasic]].
+

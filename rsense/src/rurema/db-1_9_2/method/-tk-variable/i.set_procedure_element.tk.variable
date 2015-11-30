@@ -1,0 +1,6 @@
+kind=defined
+names=set_procedure_element
+visibility=public
+
+--- set_procedure_element(idxs, cmd)
+

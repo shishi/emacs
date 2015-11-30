@@ -1,0 +1,10 @@
+kind=defined
+names=frexp
+visibility=public
+
+--- frexp(x) -> [Float, Fixnum]
+
+実数 x の仮数部と指数部の配列を返します。
+
+@param x 実数
+

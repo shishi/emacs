@@ -1,0 +1,25 @@
+kind=defined
+names===
+visibility=public
+
+--- ==(other) -> bool
+
+オブジェクトと other が等しければ真を返します。
+
+このメソッドは各クラスの性質に合わせて再定義すべきです。
+多くの場合、オブジェクトの内容が等しければ真を返すように
+（同値性を判定するように）再定義されることが期待されています。
+
+デフォルトでは equal? と同じオブジェクト
+の同一性判定になっています。
+
+@param other 比較するオブジェクトです。
+
+  p("foo" == "bar") #=> false
+  p("foo" == "foo") #=> true
+  
+  p(4 == 4) #=> true
+  p(4 == 4.0) #=> true
+
+@see [[m:Object#equal?]],[[m:Object#eql?]]
+

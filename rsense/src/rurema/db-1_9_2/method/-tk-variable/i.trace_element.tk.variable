@@ -1,0 +1,6 @@
+kind=defined
+names=trace_element
+visibility=public
+
+--- trace_element(elem, opts, cmd)
+

@@ -1,0 +1,14 @@
+kind=defined
+names=remove_by_name
+visibility=public 
+
+--- remove_by_name(full_name) -> Gem::Specification
+
+与えられた名前を持つ [[c:Gem::Specification]] を自身から削除します。
+
+このメソッドでは削除後の依存関係をチェックしません。
+
+@param full_name バージョンを含むフルネームで Gem の名前を指定します。
+
+@see [[m:Gem::Specification#full_name]], [[m:Array#delete_if]]
+

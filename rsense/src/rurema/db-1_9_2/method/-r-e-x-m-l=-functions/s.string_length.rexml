@@ -1,0 +1,6 @@
+kind=defined
+names=string_length
+visibility=public
+
+--- string_length(string)
+

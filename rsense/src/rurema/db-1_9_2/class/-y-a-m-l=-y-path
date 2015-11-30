@@ -1,0 +1,38 @@
+superclass=Object
+type=class
+library=yaml
+extended=
+included=
+
+YAML ドキュメントから特定のデータを検索する機能を提供するYPathのクラスです。
+
+使用例；"name" を含むセグメントを表示する。
+  require 'yaml'
+
+  YAML.parse_documents(DATA){|doc|
+    doc.search('/*//name').each {|node|
+      YAML::YPath.each_path(node){|u|
+        p u.segments
+      }
+    }
+  }
+
+  __END__
+  cat:
+   - name: taro
+     age: 7
+   - name: jiro
+     age: 23
+  ---
+  dog:
+   shiba:
+    - name: goro
+      age: 3
+    - name: rokuro
+      age: 1
+  # end of sample
+
+=== 参考
+
+* Rubyist Magazine[[url:http://jp.rubyist.net/magazine/]]
+  * プログラマーのための YAML 入門 (探索編)[[url:http://jp.rubyist.net/magazine/?0013-YAML]]

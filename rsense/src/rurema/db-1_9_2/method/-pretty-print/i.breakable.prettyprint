@@ -1,0 +1,15 @@
+kind=defined
+names=breakable
+visibility=public
+
+--- breakable(sep = ' ')     -> ()
+--- breakable(sep, width = sep.length)    -> ()
+
+「必要ならここで改行出来る」ということを自身に通知します。
+もしその位置で改行されなければ、width カラムのテキスト sep が出力の際にそこに挿入されます。
+
+@param sep 改行が起きなかった場合に挿入されるテキストを文字列で指定します。
+
+@param width テキスト sep は width カラムであると仮定されます。指定されなければ、
+             sep.length が利用されます。例えば sep が多バイト文字の際に指定する必要があるかも知れません。
+

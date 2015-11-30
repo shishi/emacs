@@ -1,0 +1,13 @@
+kind=defined
+names=httpdate
+visibility=public
+
+--- httpdate(str = 'Mon, 01 Jan -4712 00:00:00 GMT', start = Date::ITALY) -> Date
+[[RFC:2616]] で定められた書式の日付を解析し、
+その情報に基づいて日付オブジェクトを生成します。
+
+[[m:Date._httpdate]] も参照してください。
+
+@param str 日付をあらわす文字列
+@param start グレゴリオ暦をつかい始めた日をあらわすユリウス日
+

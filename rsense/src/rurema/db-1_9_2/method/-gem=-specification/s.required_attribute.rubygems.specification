@@ -1,0 +1,14 @@
+kind=defined
+names=required_attribute
+visibility=public
+
+--- required_attribute(name, default = nil) -> ()
+
+必須の属性を作成します。
+
+@param name 属性名を指定します。
+
+@param default デフォルト値を指定します。
+
+@see [[m:Gem::Specification.attribute]]
+

@@ -1,0 +1,18 @@
+kind=defined
+names=string=
+visibility=public
+
+--- string=(buf)
+
+自身が表す文字列を指定された buf に変更します。
+
+buf はバッファとして使われ、書き込みメソッドによって書き換えられます。
+自身は読み書き両用になりますが、
+buf がフリーズされている場合には読み取り専用になります。
+pos と lineno は 0 にセットされます。
+
+
+@param buf 自身が新たに表す文字列を指定します。
+
+@raise TypeError buf が nil の場合に発生します。
+

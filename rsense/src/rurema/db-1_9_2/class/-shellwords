@@ -1,0 +1,17 @@
+superclass=
+type=module
+library=shellwords
+extended=
+included=
+
+UNIX Bourne シェルの単語分割規則に従った文字列分割と文字列エスケープ
+を行うモジュールです。
+
+Shellwords モジュールは、空白区切りの単語分割を行う shellsplit、文字列を
+エスケープする shellescape、文字列エスケープを文字列リストに対して適用
+する shelljoin の3つのモジュール関数を提供します。
+
+これらのメソッドの別名として、Shellwords.split, Shellwords.escape,
+Shellwords.join も使用可能です。
+ただし、これらの短縮形式のメソッドはクラスメソッドとしてのみ定義される
+ため、関数形式の呼び出しはできません。

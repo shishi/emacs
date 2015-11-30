@@ -1,0 +1,6 @@
+kind=added
+names=load_tclscript_rsrc
+visibility=public
+
+--- load_tclscript_rsrc(resource_name, file = Tk::None)
+

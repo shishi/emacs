@@ -1,0 +1,6 @@
+kind=defined
+names=title
+visibility=public
+
+--- title(str = Tk::None)
+

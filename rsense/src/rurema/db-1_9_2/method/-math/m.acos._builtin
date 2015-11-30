@@ -1,0 +1,14 @@
+kind=defined
+names=acos
+visibility=public
+
+--- acos(x) -> Float
+
+x の逆余弦関数の値をラジアンで返します。
+
+@param x -1.0 <= x <= 1 の範囲内の実数
+
+@return 返される値の範囲は [0, +π] です。
+
+@raise Errno::EDOM 引数に範囲外の値を指定した場合に発生します
+

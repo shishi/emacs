@@ -1,0 +1,15 @@
+kind=defined
+names=getstr
+visibility=public
+
+--- getstr -> String
+
+標準入力から一行読み込みます。
+戻り値は文字列です。
+
+このメソッドは getnstr() が実装されていない
+プラットホームではバッファオーバーフローをおこす恐れが
+あります。
+
+@see [[m:Curses::Window#getstr]]
+

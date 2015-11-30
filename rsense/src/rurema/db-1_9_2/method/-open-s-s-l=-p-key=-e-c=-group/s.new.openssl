@@ -1,0 +1,40 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(obj) -> OpenSSL::PKey::EC::Group
+--- new(sym, p, a, b) -> OpenSSL::PKey::EC::Group
+
+楕円曲線から定義される群を表すオブジェクトを生成します。
+
+引数の種類と個数によって挙動が異なります。
+
+引数が1つの場合は、シンボル、[[c:OpenSSL::PKey::EC::Group]] オブジェクト、
+文字列のいずれかを渡すことができます。
+
+引数にシンボルを渡した場合は対応する群を返します。以下の4つを
+指定できます。
+  * :GFp_simple
+  * :GFp_mont
+  * :GFp_nist
+  * :GF2m_simple
+この方法で生成された Group オブジェクトは不完全です。
+
+[[c:OpenSSL::PKey::EC::Group]] オブジェクト
+を渡した場合はそれを複製したオブジェクトを返します。
+
+文字列を渡した場合は、PEM もしくは DER 形式のデータとみなして
+データを読み込み、オブジェクトを生成します。
+
+曲線名文字列を渡した場合は、その曲線で定義される
+群を表すオブジェクトを返します。
+
+引数が4つの場合は sym で :GFp_simple もしくは :GF2m_simple を指定し、
+それと p, a, b という 3 つの整数で定義される群を返します。
+
+@param obj Groupオブジェクト生成のためのデータ(シンボル、Group, 文字列のいずれか)
+@param sym Group を定義するためのシンボル
+@param p 整数([[c:OpenSSL::BN]])
+@param a 整数([[c:OpenSSL::BN]])
+@param b 整数([[c:OpenSSL::BN]])
+

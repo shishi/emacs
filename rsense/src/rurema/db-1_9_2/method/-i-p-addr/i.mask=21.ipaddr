@@ -1,0 +1,10 @@
+kind=defined
+names=mask!
+visibility=protected 
+
+--- mask!(mask) -> self
+
+与えられた mask を使用してこのオブジェクトの IP アドレスを破壊的に変更します。
+
+@param mask プレフィックス長を表す文字列か、サブネットマスクを表す文字列。
+

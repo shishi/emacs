@@ -1,0 +1,11 @@
+.<<	Readline::HISTORY.<<
+.[]	Readline::HISTORY.[]
+.[]=	Readline::HISTORY.[]=
+.delete_at	Readline::HISTORY.delete_at
+.each	Readline::HISTORY.each
+.empty?	Readline::HISTORY.empty?
+.length	Readline::HISTORY.length
+.pop	Readline::HISTORY.pop
+.push	Readline::HISTORY.push
+.shift	Readline::HISTORY.shift
+.to_s	Readline::HISTORY.to_s

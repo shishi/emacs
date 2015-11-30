@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=net.ftp
+extended=
+included=
+
+全てのメソッド呼び出しに対して [[c:Net::FTPConnectionError]] を発生させます。

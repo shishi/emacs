@@ -1,0 +1,17 @@
+kind=defined
+names=abs2
+visibility=public
+
+--- abs2 -> Numeric
+
+自身の絶対値の 2 乗を返します。
+
+例:
+
+  2.abs2    # => 4
+  -2.abs2   # => 4
+  2.0.abs2  # => 4
+  -2.0.abs2 # => 4
+
+Numeric のサブクラスは、このメソッドを適切に再定義しなければなりません。
+

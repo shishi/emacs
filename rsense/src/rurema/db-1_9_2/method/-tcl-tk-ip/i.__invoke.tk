@@ -1,0 +1,10 @@
+kind=added
+names=__invoke,_invoke,_invoke_with_enc,_invoke_without_enc
+visibility=public
+
+--- _invoke(*cmds)
+--- __invoke(*cmds)
+--- _invoke_with_enc(*cmds)
+--- _invoke_without_enc(*cmds)
+
+

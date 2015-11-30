@@ -1,0 +1,36 @@
+kind=defined
+names=singleton_method_undefined
+visibility=private 
+
+--- singleton_method_undefined(name) -> object
+
+特異メソッドが [[m:Module#undef_method]] または
+undef により未定義にされた時にインタプリタから呼び出されます。
+
+通常のメソッドの未定義に対するフックには
+[[m:Module#method_undefined]] を使います。
+
+@param name 未定義にされたメソッド名が [[c:Symbol]] で渡されます。
+
+    class Foo
+      def singleton_method_undefined(name)
+        puts "singleton method \"#{name}\" was undefined"
+      end
+    end
+
+    obj = Foo.new
+    def obj.foo
+    end
+    def obj.bar
+    end
+
+    class << obj
+      undef_method :foo
+    end
+    obj.instance_eval {undef bar}
+
+    #=> singleton method "foo" was undefined
+    #   singleton method "bar" was undefined
+
+@see [[m:Module#method_undefined]],[[m:Object#singleton_method_added]],[[m:Object#singleton_method_removed]] , [[ref:d:spec/def#undef]]
+

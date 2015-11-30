@@ -1,0 +1,33 @@
+kind=defined
+names=open
+visibility=public
+
+--- open(dbname, mode = 0666, flags = 0) -> GDBM
+--- open(dbname, mode = 0666, flags = 0) {|db| ... } -> object
+
+dbname で指定したデータベースをモードを mode に設定してオープンします。
+
+ブロックを指定した場合、オープンした GDBM オブジェクトを
+引数にブロックを実行します。実行後 GDBM オブジェクトをクローズ
+し、open メソッドはブロックの結果を返します。
+
+@param dbname データベースの名前を指定します。
+
+@param mode 省略値は 0666 です。mode として nil を指定するとデータベースが
+            存在しない時には新たなデータベースを作らず nil を返します。
+
+@param flags flags には、[[m:GDBM::FAST]], [[m:GDBM::SYNC]], [[m:GDBM::NOLOCK]]
+             の論理和を指定します。デフォルト値は指定なし(つまり0)です。
+             flags に [[m:GDBM::READER]], [[m:GDBM::WRITER]], [[m:GDBM::WRCREAT]], [[m:GDBM::NEWDB]]
+             のいずれかを与えて読み書きのモードを指定できます。
+             これらをどれも指定しなかった場合には、
+             [[m:GDBM::WRCREAT]], [[m:GDBM::WRITER]], [[m:GDBM::READER]] の順で試します。
+
+   require 'gdbm'
+   GDBM.open("fruitstore.db") do |gdbm|
+     gdbm.each_pair do |key, value|
+       print "#{key}: #{value}\n"
+     end
+   end
+
+

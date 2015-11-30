@@ -1,0 +1,6 @@
+kind=defined
+names=transfer_stdin
+visibility=public
+
+--- transfer_stdin(dist, src = '')
+

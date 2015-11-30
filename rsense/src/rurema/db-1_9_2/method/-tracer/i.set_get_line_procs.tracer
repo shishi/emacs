@@ -1,0 +1,6 @@
+kind=defined
+names=set_get_line_procs
+visibility=public
+
+--- set_get_line_procs(file, p = proc)
+

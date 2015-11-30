@@ -1,0 +1,9 @@
+kind=defined
+names=DEFAULT_COMPRESSION
+visibility=public
+
+--- DEFAULT_COMPRESSION -> Fixnum
+
+[[m:Zlib::Deflate.new]] や [[m:Zlib::Deflate#deflate]] 等に渡す、
+圧縮レベルを表す整数です。
+

@@ -1,0 +1,21 @@
+kind=defined
+names=uniq,uniq!
+visibility=public
+
+--- uniq     -> Array
+--- uniq!    -> self | nil
+--- uniq {|item| ... } -> Array
+--- uniq! {|item| ... } -> self | nil
+
+uniq は配列から重複した要素を取り除いた新しい配列を返します。
+取り除かれた要素の部分は前に詰められます。uniq! は削除を破壊
+的に行い、削除が行われた場合は self を、そうでなければ
+nil を返します。
+
+要素の重複判定は、[[m:Object#eql?]] により行われます。
+
+    p [1, 1, 1].uniq         #=> [1]
+    p [1, 4, 1].uniq         #=> [1, 4]
+    p [1, 3, 2, 2, 3].uniq   #=> [1, 3, 2]
+
+

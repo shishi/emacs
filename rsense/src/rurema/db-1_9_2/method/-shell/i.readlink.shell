@@ -1,0 +1,11 @@
+kind=defined
+names=readlink
+visibility=public
+
+--- readlink(path)    -> String
+[[c:File]] クラスにある同名のクラスメソッドと同じです.
+
+@param path シンボリックリンクを表す文字列を指定します。
+
+@see [[m:File.readlink]]
+

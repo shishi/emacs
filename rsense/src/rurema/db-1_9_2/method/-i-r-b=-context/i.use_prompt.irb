@@ -1,0 +1,13 @@
+kind=defined
+names=use_prompt,use_prompt=
+visibility=public
+
+--- use_prompt
+--- use_prompt=(bool)
+
+プロンプトを表示するかどうかを指定します。
+use_prompt の値が true ならプロンプトを表示し、
+false ならプロンプトを表示しません。
+
+デフォルト値は true です。
+

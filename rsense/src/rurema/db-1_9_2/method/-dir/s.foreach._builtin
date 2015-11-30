@@ -1,0 +1,27 @@
+kind=defined
+names=foreach
+visibility=public
+
+--- foreach(path) {|file| ...}    -> nil
+--- foreach                       -> Enumerator
+
+ディレクトリ path の各エントリを表す文字列を引数として、ブロックを評価します。
+
+ブロックが与えられなかった場合、各エントリを文字列として保持する
+[[c:Enumerator]] オブジェクトを返します。
+
+@param path ディレクトリのパスを文字列で指定します。
+
+@raise Errno::EXXX 失敗した場合に発生します。
+
+例:
+
+  Dir.foreach('.'){|f|
+    p f
+  }
+  #=> 
+  "."
+  ".."
+  "bar"
+  "foo"
+

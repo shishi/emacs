@@ -1,0 +1,10 @@
+kind=defined
+names=deflate
+visibility=public
+
+--- deflate(string, level = Zlib::DEFAULT_COMPRESSION ) -> String
+
+string を圧縮します。
+
+@see [[m:Zlib::Deflate.deflate]]
+

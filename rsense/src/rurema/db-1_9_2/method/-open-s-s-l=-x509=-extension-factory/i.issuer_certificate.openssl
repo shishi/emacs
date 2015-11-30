@@ -1,0 +1,10 @@
+kind=defined
+names=issuer_certificate
+visibility=public
+
+--- issuer_certificate -> OpenSSL::X509::Certificate | nil
+自身に設定されている発行者(issuer)の証明書オブジェクトを返します。
+
+証明書が設定されていない場合は nil を返します。
+
+

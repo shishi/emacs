@@ -1,0 +1,14 @@
+kind=defined
+names=eid
+visibility=public
+
+--- eid    -> Integer
+
+現在のプロセスの実効グループ ID を返します。
+
+利用できるかはプラットフォームに依存します。
+
+@raise NotImplementedError メソッドが現在のプラットフォームで実装されていない場合に発生します。
+
+   Process.egid   #=> 500
+

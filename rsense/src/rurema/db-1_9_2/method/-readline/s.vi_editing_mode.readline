@@ -1,0 +1,15 @@
+kind=defined
+names=vi_editing_mode
+visibility=public
+
+--- vi_editing_mode -> nil
+
+編集モードを vi モードにします。
+vi モードの詳細は、GNU Readline のマニュアルを参照してください。
+
+  * [[url:http://www.gnu.org/directory/readline.html]]
+
+@raise NotImplementedError サポートしていない環境で発生します。
+
+@raise SecurityError セーフレベル ($SAFE) が 4 の場合に発生します。
+

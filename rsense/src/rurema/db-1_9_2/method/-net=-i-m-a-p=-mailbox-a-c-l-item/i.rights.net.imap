@@ -1,0 +1,11 @@
+kind=defined
+names=rights
+visibility=public
+
+--- rights
+
+The access rights the indicated user has to the
+mailbox.
+
+
+

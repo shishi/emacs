@@ -1,0 +1,11 @@
+kind=defined
+names=set_backtrace
+visibility=public
+
+--- set_backtrace(errinfo)    -> nil | String | [String]
+
+バックトレース情報に errinfo を設定し、設定されたバックトレース
+情報を返します。
+
+@param errinfo nil、[[c:String]] あるいは [[c:String]] の配列のいずれかを指定します。
+

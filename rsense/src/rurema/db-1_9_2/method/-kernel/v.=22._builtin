@@ -1,0 +1,14 @@
+kind=defined
+names=",LOADED_FEATURES
+visibility=public
+
+--- $"               -> [String]
+--- $LOADED_FEATURES -> [String]
+
+[[m:Kernel.#require]] でロードされたファイル名を含む配列です。
+
+[[m:Kernel.#require]] で同じファイルを
+複数回ロードしないようにするためのロックとして使われます。
+
+この変数はグローバルスコープです。
+

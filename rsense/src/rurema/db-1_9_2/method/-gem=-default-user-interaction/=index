@@ -1,0 +1,6 @@
+.ui	Gem::DefaultUserInteraction.ui
+.ui=	Gem::DefaultUserInteraction.ui=
+.use_ui	Gem::DefaultUserInteraction.use_ui
+#ui	Gem::DefaultUserInteraction#ui
+#ui=	Gem::DefaultUserInteraction#ui=
+#use_ui	Gem::DefaultUserInteraction#use_ui

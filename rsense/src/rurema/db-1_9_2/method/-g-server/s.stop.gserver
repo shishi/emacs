@@ -1,0 +1,12 @@
+kind=defined
+names=stop
+visibility=public
+
+--- stop(port, host = DEFAULT_HOST) -> ()
+
+与えられた host と port に対応する GServer オブジェクトを停止します。
+
+@param port ポート番号を指定します。
+
+@param host ホストを指定します。
+

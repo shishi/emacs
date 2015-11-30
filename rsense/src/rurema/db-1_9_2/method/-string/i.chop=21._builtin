@@ -1,0 +1,11 @@
+kind=defined
+names=chop!
+visibility=public
+
+--- chop! -> self | nil
+
+文字列の最後の文字を取り除きます。
+ただし、終端が "\r\n" であればその 2 文字を取り除きます。
+
+@return chop! は self を変更して返しますが、取り除く文字がなかった場合は nil を返します。
+

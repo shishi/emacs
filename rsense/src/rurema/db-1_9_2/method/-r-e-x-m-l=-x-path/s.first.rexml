@@ -1,0 +1,6 @@
+kind=defined
+names=first
+visibility=public
+
+--- first(element, path = nil, namespaces = {}, variables = {})
+

@@ -1,0 +1,11 @@
+kind=defined
+names=tanh
+visibility=public
+
+--- tanh(z) -> Float | Complex
+
+z の双曲線正接関数の値を返します。
+
+@param z 数値
+
+

@@ -1,0 +1,18 @@
+kind=defined
+names=set_option
+visibility=public
+
+--- set_option(opt, eq) -> self
+
+エラーのあったオプションを指定します。
+
+eq が真の場合、self が管理するエラーのあったオプションの一覧の先頭を
+opt で置き換えます。そうでない場合は先頭に opt を追加します。
+
+@param opt エラーのあったオプションを指定します。
+
+@param eq self が管理するエラーのあったオプションの一覧の先頭を置き換え
+          るかどうかを指定します。
+
+@return self を返します。
+

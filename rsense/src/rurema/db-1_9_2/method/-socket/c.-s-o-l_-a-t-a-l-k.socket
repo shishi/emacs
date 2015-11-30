@@ -1,0 +1,12 @@
+kind=defined
+names=SOL_ATALK,SOL_AX25,SOL_IP,SOL_IPX,SOL_SOCKET,SOL_TCP,SOL_UDP
+visibility=public
+
+--- SOL_ATALK
+--- SOL_AX25
+--- SOL_IP
+--- SOL_IPX
+--- SOL_SOCKET
+--- SOL_TCP
+--- SOL_UDP
+

@@ -1,0 +1,8 @@
+kind=defined
+names=shell
+visibility=public
+
+--- shell -> String
+
+このユーザのログインシェルを返します。
+

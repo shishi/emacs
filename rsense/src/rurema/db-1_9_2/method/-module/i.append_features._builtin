@@ -1,0 +1,20 @@
+kind=defined
+names=append_features
+visibility=private 
+
+--- append_features(module_or_class) -> self
+
+モジュール(あるいはクラス)に self の機能を追加します。
+
+このメソッドは [[m:Module#include]] の実体であり、
+include を Ruby で書くと以下のように定義できます。
+
+  def include(*modules)
+    modules.each {|mod|
+      # append_features はプライベートメソッドなので
+      # 直接 mod.append_features(self) とは書けない
+      mod.__send__(:append_features, self)
+      mod.__send__(:included, self)
+    }
+  end
+

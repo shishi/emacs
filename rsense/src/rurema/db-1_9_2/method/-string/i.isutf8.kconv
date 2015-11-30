@@ -1,0 +1,10 @@
+kind=added
+names=isutf8
+visibility=public
+
+--- isutf8 -> bool
+
+self が UTF-8 なバイト列として正当であるかどうかを判定します。
+
+[[m:Kconv.#isutf8]](self) と同じです。
+

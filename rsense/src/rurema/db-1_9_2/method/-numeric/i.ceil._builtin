@@ -1,0 +1,15 @@
+kind=defined
+names=ceil
+visibility=public
+
+--- ceil   -> Integer
+
+自身と等しいかより大きな整数のうち最小のものを返します。
+
+     1.ceil        #=> 1
+     1.2.ceil      #=> 2
+     (-1.2).ceil   #=> -1
+     (-1.5).ceil   #=> -1
+
+@see [[m:Numeric#floor]], [[m:Numeric#round]], [[m:Numeric#truncate]]
+

@@ -1,0 +1,6 @@
+kind=defined
+names=on_error
+visibility=private 
+
+--- on_error(t, val, vstack)
+

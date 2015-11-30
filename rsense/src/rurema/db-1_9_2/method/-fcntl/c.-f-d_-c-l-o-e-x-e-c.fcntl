@@ -1,0 +1,7 @@
+kind=defined
+names=FD_CLOEXEC
+visibility=public
+
+--- FD_CLOEXEC -> Integer
+close-on-exec フラグの値です。
+

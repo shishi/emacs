@@ -1,0 +1,21 @@
+kind=defined
+names=LowSecurity
+visibility=public
+
+--- LowSecurity -> Gem::Security::Policy
+
+低レベルのセキュリティのポリシーです。
+
+署名されたデータと署名者の検証を行います。
+
+このポリシーは何もしないよりはマシですが、ほとんど役に立たない上、
+簡単に騙すことができるので、使用しないでください。
+
+
+    :verify_data      => true,
+    :verify_signer    => true,
+    :verify_chain     => false,
+    :verify_root      => false,
+    :only_trusted     => false,
+    :only_signed      => false
+

@@ -1,0 +1,7 @@
+superclass=JSON=GeneratorError
+type=class
+library=json
+extended=
+included=
+
+JSON 形式の文字列を生成するときに循環するデータ構造があるときに発生する例外です。

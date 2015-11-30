@@ -1,0 +1,9 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(path) -> WEBrick::HTTPAuth::Htdigest
+Htdigest オブジェクトを生成します。
+
+@param path パスワードを保存するファイルのパスを与える。
+

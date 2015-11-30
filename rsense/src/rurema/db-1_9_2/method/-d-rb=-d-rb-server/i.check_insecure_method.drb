@@ -1,0 +1,10 @@
+kind=defined
+names=check_insecure_method
+visibility=public
+
+--- check_insecure_method(obj, msg_id)
+
+Check that a method is callable via dRuby.
+obj is the object we want to invoke the method on. msg_id is the method name, as a Symbol.
+If the method is an insecure method (see insecure_method?) a SecurityError is thrown. If the method is private or undefined, a [[c:NameError]] is thrown. 
+

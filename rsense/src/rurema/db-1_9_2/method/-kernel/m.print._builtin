@@ -1,0 +1,36 @@
+kind=defined
+names=print
+visibility=public
+
+--- print(*arg) -> nil
+
+引数を順に標準出力 [[m:$stdout]] に出力します。引数が与えられない時には変数
+[[m:$_]] の値を出力します。
+
+文字列以外のオブジェクトが引数として与えられた場合には、
+to_s メソッドにより文字列に変換してから出力します。
+
+変数 [[m:$,]] (出力フィールドセパレータ)に nil で
+ない値がセットされている時には、各引数の間にその文字列を出力します。
+変数 [[m:$\]] (出力レコードセパレータ)に nil でな
+い値がセットされている時には、最後にそれを出力します。
+
+@param arg 出力するオブジェクトを任意個指定します。
+@raise IOError 標準出力が書き込み用にオープンされていなければ発生します。
+@raise Errno::EXXX 出力に失敗した場合に発生します。
+
+  print "Hello, world!"
+  print "Regexp is",/ant/
+  print nil
+  print "\n"
+  #=> Hello, world!Regexp is(?-mix:ant)
+
+  $_ = "input"
+  $, = "<and>"
+  $\ = "<end>\n"
+  print
+  print "AA","BB"
+  #=> input<and><end>
+  #=> AA<and>BB<and><end>
+@see [[m:Kernel.#puts]],[[m:Kernel.#p]]
+

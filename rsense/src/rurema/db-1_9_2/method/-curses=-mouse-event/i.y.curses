@@ -1,0 +1,10 @@
+kind=defined
+names=y
+visibility=public
+
+--- y -> Integer
+
+マウスのイベントが発生した文字の位置の Y 座標を返します。
+
+@see [[m:Curses.#getmouse]]
+

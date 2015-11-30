@@ -1,0 +1,25 @@
+kind=defined
+names=export,to_pem,to_s
+visibility=public
+
+--- export(cipher=nil, pass=nil) -> String
+--- export(cipher=nil, pass=nil){|flag| ... } -> String
+--- to_pem(cipher=nil, pass=nil) -> String
+--- to_pem(cipher=nil, pass=nil){|flag| ... } -> String
+--- to_s(cipher=nil, pass=nil) -> String
+--- to_s(cipher=nil, pass=nil){|flag| ... } -> String
+鍵を PEM 形式で出力します。
+
+cipher と pass が指定された場合、
+秘密鍵を暗号 cipher [[c:OpenSSL::Cipher::Cipher]] 
+とパスワード pass を使って暗号化します。
+
+cipher を指定して pass を省略した場合は
+渡されたブロックを呼びだしてパスフレーズを要求します。ブロックの返り値を
+パスフレーズとみなして暗号化します。
+ブロックの引数は通常は true が渡されますが、
+これはそのパスフレーズが秘密鍵の暗号化に使われることを意味します。
+ブロックが渡されなかった場合にはターミナルに問い合わせをします。
+
+公開鍵を出力する場合は cipher と pass は無視されます。
+

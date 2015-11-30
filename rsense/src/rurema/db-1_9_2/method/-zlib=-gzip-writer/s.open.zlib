@@ -1,0 +1,28 @@
+kind=defined
+names=open
+visibility=public
+
+--- open(filename, level = Zlib::DEFAULT_COMPRESSION, strategy = Zlib::DEFAULT_STRATEGY) -> Zlib::GzipWriter
+--- open(filename, level = Zlib::DEFAULT_COMPRESSION, strategy = Zlib::DEFAULT_STRATEGY) {|gz| ... } -> object
+
+filename で指定されるファイルを gzip 圧縮データの
+書き出し用にオープンします。GzipWriter オブジェクトを返します。
+その他詳細は [[m:Zlib::GzipWriter.new]] や [[m:Zlib::GzipWriter.wrap]] と
+同じです。
+
+@param filename ファイル名を文字列で指定します。
+@param level 0-9の範囲の整数、または [[m:Zlib::NO_COMPRESSION]], [[m:Zlib::BEST_SPEED]], 
+             [[m:Zlib::BEST_COMPRESSION]], [[m:Zlib::DEFAULT_COMPRESSION]] を指定します。
+             詳細はzlib.hを参照してください。 
+@param strategy [[m:Zlib::FILTERED]], [[m:Zlib::HUFFMAN_ONLY]], [[m:Zlib::DEFAULT_STRATEGY]]など指定します。
+                詳細はzlib.h を参照してください。
+
+  require 'zlib'
+
+  filename='hoge1.gz'
+  gz = Zlib::GzipWriter.open(filename)
+  gz.puts "hogehoge" * 100
+  gz.close
+  p gz.closed? #=> true
+  p FileTest.size(filename) #=> 32
+

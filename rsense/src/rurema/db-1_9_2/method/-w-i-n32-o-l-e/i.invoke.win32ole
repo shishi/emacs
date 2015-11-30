@@ -1,0 +1,33 @@
+kind=defined
+names=invoke
+visibility=public
+
+--- invoke(name, *args) -> object | nil
+メソッド名を指定してオブジェクトのメソッドを呼び出します。
+
+OLEオートメーションサーバのメソッドを動的に呼び出したい場合に利用します。
+
+なお、OLEオートメーションの仕様により、メソッド名の大文字、小文字は区別
+されません。
+
+@param name メソッド名を文字列またはシンボルで指定します。
+@param args メソッドの引数を指定します。また、最後の引数に[[c:Hash]]を
+            与えることで、名前付き引数を指定できます。この場合、キーに
+            文字列またはシンボルでパラメータ名、値に引数を指定します。
+@return メソッドの返り値。ただし返り値を持たないメソッドの場合はnil。
+@raise WIN32OLERuntimeError オートメーションサーバの呼び出しに失敗しました。
+                            理由はメッセージのHRESULTを調べてください。
+  excel = WIN32OLE.new('Excel.Application')
+  workbook = excel.workbooks.invoke(:Open, :FileName => 'c:\\users\\public\\test.xml',
+                                           :ReadOnly => true,
+                                           :Password => 'secret')
+  excel.invoke(:Quit)
+
+このリストは、以下の記述と同等です。
+
+  excel = WIN32OLE.new('Excel.Application')
+  workbook = excel.workbooks.Open(:FileName => 'c:\\users\\public\\test.xml',
+                                  :ReadOnly => true,
+                                  :Password => 'secret')
+  excel.Quit
+

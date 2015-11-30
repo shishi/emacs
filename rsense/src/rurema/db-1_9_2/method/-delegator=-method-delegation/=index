@@ -1,0 +1,11 @@
+.new	Delegator::MethodDelegation.new
+#==	Delegator::MethodDelegation#==
+#__getobj__	Delegator::MethodDelegation#__getobj__
+#__setobj__	Delegator::MethodDelegation#__setobj__
+#clone	Delegator::MethodDelegation#clone
+#dup	Delegator::MethodDelegation#clone
+#equal?	Delegator::MethodDelegation#equal?
+#marshal_dump	Delegator::MethodDelegation#marshal_dump
+#marshal_load	Delegator::MethodDelegation#marshal_load
+#method_missing	Delegator::MethodDelegation#method_missing
+#respond_to?	Delegator::MethodDelegation#respond_to?

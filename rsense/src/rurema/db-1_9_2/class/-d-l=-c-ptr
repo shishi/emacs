@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=dl
+extended=
+included=
+
+メモリ領域を表すクラスです。C 言語のポインタに相当します。

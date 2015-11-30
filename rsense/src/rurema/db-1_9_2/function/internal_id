@@ -1,0 +1,11 @@
+name=internal_id
+private=true
+macro=false
+type=ID
+filename=parse.y
+params=(void)
+
+
+インタプリタ内部でだけ使う、
+他のものとは重複しない ID を返します。
+

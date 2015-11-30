@@ -1,0 +1,10 @@
+kind=defined
+names=get_line
+visibility=public
+
+--- get_line(file, line) -> String
+
+@param file
+
+@param line
+

@@ -1,0 +1,21 @@
+kind=defined
+names===
+visibility=public
+
+--- ==(other) -> bool
+
+乱数生成器が等しい状態であるならばtrue を返します。
+
+@param other 比較対象の乱数生成器
+
+
+動作例:
+  r1 = Random.new(1)
+  r2 = Random.new(1)
+
+  p r1 == r2 # => true
+  r2.rand
+  p r1 == r2 # => false
+  r1.rand
+  p r1 == r2 # => true
+

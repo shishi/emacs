@@ -1,0 +1,10 @@
+kind=defined
+names=A_BLINK
+visibility=public
+
+--- A_BLINK -> Integer
+
+文字列の点滅を表す属性のマスク用の定数です。
+
+@see [[m:Curses.attrset]]
+

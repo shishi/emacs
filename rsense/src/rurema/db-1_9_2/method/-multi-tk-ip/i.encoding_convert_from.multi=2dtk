@@ -1,0 +1,7 @@
+kind=defined
+names=encoding_convert_from,encoding_convertfrom
+visibility=public
+
+--- encoding_convertfrom(str, enc = Tk::None)
+--- encoding_convert_from(str, enc = Tk::None)
+

@@ -1,0 +1,8 @@
+kind=defined
+names=DEFAULT_CERT_AREA
+visibility=public
+
+--- DEFAULT_CERT_AREA -> String
+証明書や設定ファイルなど OpenSSL 関連のデータを
+置いてあるディレクトリの名前を返します。
+

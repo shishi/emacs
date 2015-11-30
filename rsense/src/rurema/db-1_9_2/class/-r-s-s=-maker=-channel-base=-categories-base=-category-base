@@ -1,0 +1,11 @@
+superclass=Object
+type=class
+library=rss
+extended=
+included=
+
+categoryは
+maker.channel.categories.new_categoryで作成されたオ
+ブジェクトとします．
+
+contentを指定する必要があります．

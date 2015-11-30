@@ -1,0 +1,52 @@
+kind=defined
+names====
+visibility=public
+
+--- ===(other) -> bool
+
+メソッド [[m:Object#==]] の別名です。
+case 式で使用されます。このメソッドは case 式での振る舞いを考慮して、
+各クラスの性質に合わせて再定義すべきです。
+
+一般的に所属性のチェックを実現するため適宜再定義されます。
+
+when 節の式をレシーバーとして === を呼び出すことに注意してください。
+
+また [[m:Enumerable#grep]] でも使用されます。
+
+@param other 比較するオブジェクトです。
+
+  age = 12
+  result = 
+    case age
+  when 0 .. 2 
+    "baby"
+  when 3 .. 6
+    "little child"
+  when 7 .. 12
+    "child"
+  when 13 .. 18
+    "youth"
+  else
+    "adult"
+  end
+  
+  puts result #=> "child"
+  
+  def check arg
+    case arg
+    when /ruby(?!\s*on\s*rails)/i
+      "hit! #{arg}"
+    when String 
+      "Instance of String class. But don't hit."
+    else
+      "unknown"
+    end
+  end
+  
+  puts check([]) #=> unknown
+  puts check("mash-up in Ruby on Rails") #=> instance of String class. But not hit...
+  puts check("<Ruby's world>") #=> hit! <Ruby's world>
+
+@see [[m:Object#==]], [[m:Range#===]], [[m:Module#===]], [[m:Enumerable#grep]]
+

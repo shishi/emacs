@@ -1,0 +1,9 @@
+kind=defined
+names=next_year
+visibility=public
+
+--- next_year(n = 1) -> Date
+n 年後を返します。
+
+@param n 年数
+

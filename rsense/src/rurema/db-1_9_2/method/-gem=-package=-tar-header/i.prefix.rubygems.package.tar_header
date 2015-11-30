@@ -1,0 +1,8 @@
+kind=defined
+names=prefix
+visibility=public 
+
+--- prefix -> String
+
+tar のヘッダに含まれる prefix を返します。
+

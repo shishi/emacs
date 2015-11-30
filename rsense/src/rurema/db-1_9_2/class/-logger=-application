@@ -1,0 +1,32 @@
+superclass=Object
+type=class
+library=logger
+extended=
+included=Logger=Severity
+
+ユーザ定義のアプリケーションにログ機能を簡単に追加することができます。
+
+=== 使用方法
+
+  (1) このクラスのサブクラスとしてユーザ定義のアプリケーションのクラスを定義します。
+  (2) ユーザ定義のクラスでメイン処理を行う run メソッドを定義します。
+  (3) そのクラスをインスタンス化して start メソッドを呼び出します。
+
+
+例:
+
+  class FooApp < Application
+    def initialize(foo_app, application_specific, arguments)
+      super('FooApp') # Name of the application.
+    end
+  
+    def run
+      ...
+      log(WARN, 'warning', 'my_method1')
+      ...
+      @log.error('my_method2') { 'Error!' }
+      ...
+    end
+  end
+  
+  status = FooApp.new(....).start

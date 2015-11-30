@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=rubygems.require_paths_builder,rubygems.ext.ext_conf_builder,rubygems.requirement,rubygems.remote_fetcher,rubygems.specification,rubygems.spec_fetcher,rubygems.package.tar_writer,rubygems.gem_openssl,rubygems.exceptions,rubygems.builder,rubygems.package,rubygems.package.tar_input,rubygems.source_index,rubygems.package.tar_header,rubygems.package.tar_reader,rubygems.source_info_cache_entry,rubygems.digest.sha2,rubygems.ext.configure_builder,rubygems.ext,rubygems.defaults.operating_system,rubygems.gem_path_searcher,rubygems.platform,rubygems.defaults,rubygems.ext.rake_builder,rubygems.digest.md5,rubygems.package.f_sync_dir,rubygems.package.tar_reader.entry,rubygems.dependency,rubygems.source_info_cache,rubygems.user_interaction,rubygems,rubygems.version,rubygems.ext.builder,rubygems.security,rubygems.package.tar_output,rubygems.format
+classes=Gem=Installer,Gem=Installer=ExtensionBuildError
+is_sublibrary=true
+
+RubyGems の Gem をインストールするためのライブラリです。

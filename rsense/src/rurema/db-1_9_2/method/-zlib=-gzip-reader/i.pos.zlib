@@ -1,0 +1,27 @@
+kind=defined
+names=pos,tell
+visibility=public
+
+--- pos -> Fixnum
+--- tell -> Fixnum
+
+現在までに展開したデータの長さの合計を返します。
+ファイルポインタの位置ではないことに注意して下さい。
+
+  Zlib::GzipWriter.open('hoge.gz') { |gz|
+    gz.puts 'hoge'
+  }
+
+  Zlib::GzipReader.open('hoge.gz'){|gz|
+    while c = gz.getc
+      printf "%c, %d\n", c, gz.pos
+    end
+  }
+  # 実行例
+  #=> h, 1
+  #=> o, 2
+  #=> g, 3
+  #=> e, 4
+  #=>  
+  #=> , 5
+

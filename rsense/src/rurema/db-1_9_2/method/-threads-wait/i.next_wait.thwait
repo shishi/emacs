@@ -1,0 +1,31 @@
+kind=defined
+names=next_wait
+visibility=public
+
+--- next_wait(nonblock = nil) -> Thread
+
+指定したスレッドのどれかが終了するまで待ちます。
+
+@param nonblock true を与えると、キューが空の時、例外 [[c:ThreadsWait::ErrNoFinishedThread]] が発生します。
+
+@raise ErrNoWaitingThread 終了をまつスレッドが存在しない時、発生します。
+
+@raise ErrNoFinishedThread nonblock がtrue でかつ、キューが空の時、発生します。
+
+  #使用例
+  require 'thwait'
+
+  threads = []
+  2.times {|i|
+    threads << Thread.new { sleep i }
+  }
+
+  thall = ThreadsWait.new
+  thall.join_nowait(*threads)
+  until thall.empty?
+    th = thall.next_wait
+    p th
+  end
+
+@see [[m:Queue#pop]]
+

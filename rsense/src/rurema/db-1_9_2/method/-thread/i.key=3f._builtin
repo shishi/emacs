@@ -1,0 +1,11 @@
+kind=defined
+names=key?
+visibility=public
+
+--- key?(name)     -> bool
+
+name に対応したスレッドに固有のデータが定義されていれば
+true を返します。
+
+@param name 文字列か [[c:Symbol]] で指定します。
+

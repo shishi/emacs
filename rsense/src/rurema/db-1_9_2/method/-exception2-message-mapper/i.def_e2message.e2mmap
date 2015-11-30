@@ -1,0 +1,20 @@
+kind=defined
+names=def_e2message
+visibility=public
+
+--- def_e2message(exception_class, message_format) -> Class
+
+すでに存在する例外クラス exception_class に、
+エラーメッセージ用フォーマット message_format を関連づけます。
+
+このフォーマットは [[m:Exception2MessageMapper#Raise]],
+[[m:Exception2MessageMapper#Fail]] で使用します。
+
+@param exception_class メッセージを登録する例外クラスを指定します。
+
+@param message_format メッセージのフォーマットを指定します。
+                    [[m:Kernel.#sprintf]] のフォーマット文字列と同じ形式を使用できます。
+
+@return exception_class を返します。
+
+

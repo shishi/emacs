@@ -1,0 +1,6 @@
+kind=defined
+names=generate
+visibility=public
+
+--- generate(win, modkeys = {})
+

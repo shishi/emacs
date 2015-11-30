@@ -1,0 +1,6 @@
+kind=defined
+names=debug=
+visibility=public
+
+--- debug=(boolean)
+

@@ -1,0 +1,10 @@
+kind=defined
+names=summary_width=
+visibility=public
+
+--- summary_width=(width)
+
+サマリを表示するときの幅を整数で指定します。
+
+@param width サマリを表示するときの幅を整数で指定します。
+

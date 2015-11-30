@@ -1,0 +1,9 @@
+methods=Kernel/i.j.json,Kernel/i.jj.json,Kernel/i.JSON.json,Class/i.json_creatable=3f.json
+sublibraries=json.add.core,json.editor
+requires=
+classes=JSON,JSON=JSONError,JSON=ParserError,JSON=GeneratorError,JSON=CircularDatastructure,JSON=MissingUnicodeSupport,JSON=NestingError,JSON=Generator=GeneratorMethods=Array,JSON=Generator=GeneratorMethods=FalseClass,JSON=Generator=GeneratorMethods=Float,JSON=Generator=GeneratorMethods=Hash,JSON=Generator=GeneratorMethods=Integer,JSON=Generator=GeneratorMethods=NilClass,JSON=Generator=GeneratorMethods=Object,JSON=Generator=GeneratorMethods=String,JSON=Generator=GeneratorMethods=String=Extend,JSON=Generator=GeneratorMethods=TrueClass,JSON=Parser,JSON=State
+is_sublibrary=false
+
+JSON (JavaScript Object Notation)を扱うライブラリです。
+
+JSON の仕様は [[rfc:4627]] を参照してください。

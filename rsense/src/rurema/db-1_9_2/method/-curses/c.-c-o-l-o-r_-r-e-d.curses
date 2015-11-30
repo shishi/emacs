@@ -1,0 +1,8 @@
+kind=defined
+names=COLOR_RED
+visibility=public
+
+--- COLOR_RED -> Integer
+
+赤を表す定数です。
+

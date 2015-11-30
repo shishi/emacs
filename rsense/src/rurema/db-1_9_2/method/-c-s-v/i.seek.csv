@@ -1,0 +1,8 @@
+kind=defined
+names=seek
+visibility=public
+
+--- seek(offset, whence = IO::SEEK_SET)    -> 0
+
+[[m:IO#seek]] に委譲します。
+

@@ -1,0 +1,8 @@
+kind=defined
+names=external_encoding
+visibility=public
+
+--- external_encoding -> Encoding
+
+現在の外部エンコーディングを返します。
+

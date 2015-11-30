@@ -1,0 +1,8 @@
+kind=defined
+names=SEOL
+visibility=public
+
+--- SEOL -> Integer
+
+Shift + 行末までクリアするキーを表す定数です。
+

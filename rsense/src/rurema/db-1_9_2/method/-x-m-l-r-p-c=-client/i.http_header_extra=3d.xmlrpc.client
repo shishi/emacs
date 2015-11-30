@@ -1,0 +1,8 @@
+kind=defined
+names=http_header_extra=
+visibility=public
+
+--- http_header_extra=()
+
+Set extra HTTP headers that are included in the request.
+

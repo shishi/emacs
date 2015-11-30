@@ -1,0 +1,13 @@
+kind=defined
+names=start
+visibility=public
+
+--- start               -> ()
+--- start{|soc| ... }   -> ()
+
+サーバをスタートします。
+
+ブロックが与えられた場合 [[m:WEBrick::GenericServer#run]] メソッドの
+代わりにブロックが実際のクライアントとの応答を担います。
+ブロックは [[c:TCPSocket]] オブジェクトを引数として呼ばれます。
+

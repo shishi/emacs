@@ -1,0 +1,18 @@
+kind=defined
+names=pack_sockaddr_un,sockaddr_un
+visibility=public
+
+--- sockaddr_un(path) -> String
+--- pack_sockaddr_un(path) -> String
+
+指定したアドレスを[[ref:lib:socket#pack_string]]
+で返します。
+
+@param path パスを文字列で指定します。
+
+例:
+
+  require 'socket'
+  p Socket.sockaddr_un("/tmp/.X11-unix/X0")
+  => "\001\000/tmp/.X11-unix/X0\000...."
+

@@ -1,0 +1,7 @@
+superclass=TkWindow
+type=class
+library=tk.txtwin_abst
+extended=
+included=
+
+

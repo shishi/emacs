@@ -1,0 +1,11 @@
+kind=defined
+names=from_source_index
+visibility=public
+
+--- from_source_index(src_index) -> Gem::DependencyList
+
+与えられた [[c:Gem::SourceIndex]] のインスタンスから自身を作成します。
+
+@param src_index [[c:Gem::SourceIndex]] を指定します。
+
+@see [[c:Gem::SourceIndex]]

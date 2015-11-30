@@ -1,0 +1,8 @@
+kind=defined
+names=binread
+visibility=public
+
+--- binread(path, length = nil, offset = 0)     -> String | nil
+
+@see [[m:IO.read]]
+

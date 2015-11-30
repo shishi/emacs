@@ -1,0 +1,25 @@
+kind=defined
+names=|
+visibility=public
+
+--- |(filter) -> object
+
+パイプ結合を filter に対して行います。
+
+@param filter Shell::Filter オブジェクトを指定します。
+
+@return filter を返します。
+
+使用例
+  Shell.def_system_command("tail")
+  Shell.def_system_command("head")
+  Shell.def_system_command("wc")
+  sh = Shell.new
+  sh.transact {
+    i = 1
+    while i <= (cat("/etc/passwd") | wc("-l")).to_s.chomp.to_i
+      puts (cat("/etc/passwd") | head("-n #{i}") | tail("-n 1")).to_s
+      i += 1
+    end
+  }
+

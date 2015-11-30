@@ -1,0 +1,15 @@
+kind=defined
+names=value
+visibility=public
+
+--- value -> nil
+レスポンスが 2xx(成功)でなかった場合に、対応する
+例外を発生させます。
+
+@raise HTTPError レスポンスが 1xx であるか、 net/http が知らない
+                 種類のレスポンスである場合に発生します。
+@raise HTTPRetriableError レスポンスが 3xx である場合に発生します。
+@raise HTTPFatalError レスポンスが 4xx である場合に発生します。
+@raise HTTPServerError レスポンスが 5xx である場合に発生します。
+
+

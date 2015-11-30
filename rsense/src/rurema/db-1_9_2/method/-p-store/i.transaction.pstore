@@ -1,0 +1,33 @@
+kind=defined
+names=transaction
+visibility=public
+
+--- transaction(read_only = false) {|pstore| ... } -> object
+
+トランザクションに入ります。
+このブロックの中でのみデータベースの読み書きができます。
+
+読み込み専用のトランザクションが使用可能です。
+
+@param read_only 真を指定すると、読み込み専用のトランザクションになります。
+
+@return ブロックで最後に評価した値を返します。
+
+@raise PStore::Error read_only を真にしたときに、データベースを変更しようした場合に発生します。
+
+例:
+
+  require 'pstore'
+  db = PStore.new("/tmp/foo")
+  db.transaction do
+    p db.roots       # => []
+    ary = db["root"] = [1,2,3,4]
+    ary[0] = [1,1.5]
+  end
+  
+  db.transaction(true) do |pstore|
+    pstore["root"] = 'aaa' # => ここで例外発生
+  end
+
+
+

@@ -1,0 +1,8 @@
+superclass=Object
+type=class
+library=gserver
+extended=
+included=
+
+サーバを実装するためのクラスです。[[c:GServer]] を継承した新しいクラスを定義して使います。
+fork ではなくスレッドを使っています。

@@ -1,0 +1,10 @@
+kind=defined
+names=replicate
+visibility=public
+
+--- replicate(name) -> Encoding
+
+レシーバのエンコーディングを複製(replicate)します。
+複製されたエンコーディングは元のエンコーディングと同じバイト構造を持たなければなりません。
+name という名前のエンコーディングが既に存在する場合は [[c:ArgumentError]] を発生します。
+

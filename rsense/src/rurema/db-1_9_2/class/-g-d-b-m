@@ -1,0 +1,11 @@
+superclass=Object
+type=class
+library=gdbm
+extended=
+included=Enumerable
+
+GDBM ファイルをアクセスするクラス。
+
+キー、データともに文字列でなければならないという制限と、
+データがファイルに保存されるという点を除いては [[c:Hash]] クラスと
+全く同様に扱うことができます。

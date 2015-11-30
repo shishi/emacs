@@ -1,0 +1,8 @@
+#logger	WEBrick::HTTPAuth::Authenticator#logger
+#realm	WEBrick::HTTPAuth::Authenticator#realm
+#userdb	WEBrick::HTTPAuth::Authenticator#userdb
+:AuthException	WEBrick::HTTPAuth::Authenticator::AuthException
+:AuthScheme	WEBrick::HTTPAuth::Authenticator::AuthScheme
+:RequestField	WEBrick::HTTPAuth::Authenticator::RequestField
+:ResponseField	WEBrick::HTTPAuth::Authenticator::ResponseField
+:ResponseInfoField	WEBrick::HTTPAuth::Authenticator::ResponseInfoField

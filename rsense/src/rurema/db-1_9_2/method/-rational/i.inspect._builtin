@@ -1,0 +1,21 @@
+kind=defined
+names=inspect
+visibility=public 
+
+--- inspect -> String
+
+自身を人間が読みやすい形の文字列表現にして返します。
+
+"(3/5)", "(-17/7)" のように10進数の表記を返します。
+
+@return 有理数の表記にした文字列を返します。
+
+例:
+
+  Rational(5, 8).inspect  # => "(5/8)"
+  Rational(2).inspect     # => "(2/1)"
+  Rational(-8, 6).inspect # => "(-4/3)"
+  Rational(0.5).inspect   # => "(1/2)"
+
+@see [[m:Rational#to_s]]
+

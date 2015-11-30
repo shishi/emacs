@@ -1,0 +1,4 @@
+:Interactive	TkOptionDB::Priority::Interactive
+:StartupFile	TkOptionDB::Priority::StartupFile
+:UserDefault	TkOptionDB::Priority::UserDefault
+:WidgetDefault	TkOptionDB::Priority::WidgetDefault

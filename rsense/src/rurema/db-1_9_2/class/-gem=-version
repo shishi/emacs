@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rubygems.version
+extended=
+included=Comparable
+
+文字列で表現されたバージョンを比較可能 (Comparable) にするためのクラスです。

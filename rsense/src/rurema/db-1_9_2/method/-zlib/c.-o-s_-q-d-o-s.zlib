@@ -1,0 +1,8 @@
+kind=defined
+names=OS_QDOS
+visibility=public
+
+--- OS_QDOS -> Fixnum
+
+OS の種類を表す定数です。
+

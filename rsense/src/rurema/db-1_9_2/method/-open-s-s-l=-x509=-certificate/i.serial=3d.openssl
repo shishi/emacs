@@ -1,0 +1,10 @@
+kind=defined
+names=serial=
+visibility=public
+
+--- serial=(serial)
+証明書の識別番号を設定します。
+
+@param serial 識別番号
+@see [[m:OpenSSL::X509::Certificate#serial]]
+

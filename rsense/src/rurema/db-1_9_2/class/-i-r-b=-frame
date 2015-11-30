@@ -1,0 +1,11 @@
+superclass=Object
+type=class
+library=irb.frame
+extended=
+included=
+
+現在実行中のフレーム情報を取り扱うためのクラスです. 
+
+[注]
+set_trace_func を用いて Ruby の実行をトレースしています.
+マルチスレッドには対応していません.

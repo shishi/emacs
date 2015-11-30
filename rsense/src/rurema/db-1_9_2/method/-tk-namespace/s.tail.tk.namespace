@@ -1,0 +1,6 @@
+kind=defined
+names=tail
+visibility=public
+
+--- tail(str)
+

@@ -1,0 +1,11 @@
+kind=defined
+names=eid
+visibility=public
+
+--- eid -> Integer
+
+マウスを識別するための ID を返します。
+複数のマウスを使用している場合に、それらを識別するために使用します。
+
+@see [[m:Curses.#getmouse]]
+

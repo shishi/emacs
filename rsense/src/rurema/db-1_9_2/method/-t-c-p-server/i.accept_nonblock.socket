@@ -1,0 +1,17 @@
+kind=defined
+names=accept_nonblock
+visibility=public
+
+--- accept_nonblock -> TCPSocket
+
+ソケットをノンブロッキングモードに設定した後、
+[[man:accept(2)]] を呼び出します。
+
+返り値は [[m:TCPServer#accept]] と同じです。
+
+[[man:accept(2)]] がエラーになった場合、
+EAGAIN, EINTR を含め例外 [[c:Errno::EXXX]] が発生します。
+
+@raise Errno::EXXX [[man:accept(2)]] がエラーになった場合に発生します。
+
+

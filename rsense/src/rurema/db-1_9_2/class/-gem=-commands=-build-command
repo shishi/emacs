@@ -1,0 +1,7 @@
+superclass=Gem=Command
+type=class
+library=rubygems.commands.build_command
+extended=
+included=
+
+Gem パッケージをビルドするためのクラスです。

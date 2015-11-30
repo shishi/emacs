@@ -1,0 +1,19 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(mname, rname, serial, refresh, retry_, expire, minimum)
+Resolv::DNS::Resource::SOA のインスタンスを生成して返します。
+
+@param mname 対象のゾーンのマスターゾーンファイルが存在するホスト名
+@param rname 対象のドメイン名の管理者名
+@param serial ゾーンファイルのバージョン
+@param refresh プライマリサーバからの更新をセカンダリサーバが
+               チェックする頻度(秒単位)
+@param retry セカンダリサーバがプライマリサーバからの情報更新
+             に失敗した場合のリトライの頻度(秒単位)
+@param expire プライマリサーバから得たゾーン情報の有効期間(秒単位)
+@param minimum リソースレコードの最小 TTL (秒単位)
+
+
+

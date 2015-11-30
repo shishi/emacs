@@ -1,0 +1,29 @@
+kind=defined
+names=mtime=
+visibility=public
+
+--- mtime=(time)
+
+gzip ファイルのヘッダーに記録する最終更新時間を指定します。
+
+[[m:Zlib::GzipWriter#write]] 等の書き込み系メソッドを
+呼んだ後で指定しようとすると [[c:Zlib::GzipFile::Error]] 例外が
+発生します。
+
+@param time gzip ファイルのヘッダーに記録する最終更新時間を整数で指定します。
+@return time を返します。
+
+  require 'zlib'
+
+  filename='hoge1.gz'
+  fw = File.open(filename, "w")
+  Zlib::GzipWriter.wrap(fw, Zlib::BEST_COMPRESSION){|gz|
+    p gz.mtime = 1 #=> 1
+  }
+  fr = File.open(filename)
+  Zlib::GzipReader.wrap(fr){|gz|
+    puts gz.mtime
+    # 例
+    #=> Thu Jan 01 09:00:01 +0900 1970
+  }
+

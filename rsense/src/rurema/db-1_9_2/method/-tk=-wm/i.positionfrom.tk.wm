@@ -1,0 +1,6 @@
+kind=defined
+names=positionfrom
+visibility=public
+
+--- positionfrom(who = Tk::None)
+

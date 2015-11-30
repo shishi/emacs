@@ -1,0 +1,11 @@
+kind=defined
+names=VERSION
+visibility=public
+
+--- VERSION
+
+WEBrick のバージョンを表す文字列です。
+
+ p WEBrick::VERSION   #=> "1.3.1"
+
+  

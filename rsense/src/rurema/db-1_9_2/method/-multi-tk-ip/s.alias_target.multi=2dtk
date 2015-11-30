@@ -1,0 +1,6 @@
+kind=defined
+names=alias_target
+visibility=public
+
+--- alias_target(aliascmd, slave = '')
+

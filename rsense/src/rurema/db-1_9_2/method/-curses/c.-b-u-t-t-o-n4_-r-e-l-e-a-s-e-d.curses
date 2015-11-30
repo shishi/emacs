@@ -1,0 +1,10 @@
+kind=defined
+names=BUTTON4_RELEASED
+visibility=public
+
+--- BUTTON4_RELEASED -> Integer
+
+マウスボタン 4 を離したことを表すマウスイベント用の定数です。
+
+@see [[m:Curses.getmouse]]
+

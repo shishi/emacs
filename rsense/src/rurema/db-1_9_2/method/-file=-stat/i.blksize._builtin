@@ -1,0 +1,11 @@
+kind=defined
+names=blksize
+visibility=public
+
+--- blksize -> Integer
+望ましいI/Oのブロックサイズを返します。
+
+  fs = File::Stat.new($0)
+  #例
+  p fs.blksize #=> nil
+

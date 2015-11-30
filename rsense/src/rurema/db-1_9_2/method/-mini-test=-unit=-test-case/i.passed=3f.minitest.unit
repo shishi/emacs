@@ -1,0 +1,9 @@
+kind=defined
+names=passed?
+visibility=public 
+
+--- passed? -> bool
+
+自身の実行に成功した場合は真を返します。
+そうでない場合は偽を返します。
+

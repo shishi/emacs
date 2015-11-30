@@ -1,0 +1,10 @@
+kind=defined
+names=get_file_uri_path
+visibility=public
+
+--- get_file_uri_path(uri) -> String
+
+与えられた URI から "file://" を取り除いた文字列を返します。
+
+@param uri URI を表す文字列を指定します。
+

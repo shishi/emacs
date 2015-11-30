@@ -1,0 +1,10 @@
+superclass=Object
+type=class
+library=_builtin
+extended=
+included=
+
+MT19937に基づく疑似乱数生成器を提供するクラスです。
+
+=== 参考
+オリジナル版 [[url:http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/mt.html]]

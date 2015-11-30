@@ -1,0 +1,7 @@
+kind=defined
+names=real?
+visibility=public
+
+--- real? -> bool
+
+Returns +true+ if all entries of the matrix are real.

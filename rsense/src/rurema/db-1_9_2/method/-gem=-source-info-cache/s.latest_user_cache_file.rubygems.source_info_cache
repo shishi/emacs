@@ -1,0 +1,8 @@
+kind=defined
+names=latest_user_cache_file
+visibility=public
+
+--- latest_user_cache_file -> String
+
+最新のユーザーキャッシュのファイル名を返します。
+

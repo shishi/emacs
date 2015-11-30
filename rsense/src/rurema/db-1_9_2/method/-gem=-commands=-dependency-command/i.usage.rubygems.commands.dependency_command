@@ -1,0 +1,8 @@
+kind=defined
+names=usage
+visibility=public 
+
+--- usage -> String
+
+使用方法を表す文字列を返します。
+

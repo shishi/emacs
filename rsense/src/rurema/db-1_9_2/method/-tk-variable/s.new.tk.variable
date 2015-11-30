@@ -1,0 +1,10 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(val="")
+
+値がvalであるTkVariableオブジェクトを生成します。valが
+[[c:Array]] または [[c:Hash]] のオブジェクトである場合、生成されたインス
+タンスは Tclの配列として振る舞います。
+

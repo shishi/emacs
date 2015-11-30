@@ -1,0 +1,15 @@
+kind=defined
+names=hash
+visibility=public
+
+--- hash    -> Integer
+
+自身が保持するメンバのハッシュ値を元にして算出した整数を返します。
+自身が保持するメンバの値が変化すればこのメソッドが返す値も変化します。
+
+  Dog = Struct.new(:name, :age)
+  dog = Dog.new("fred", 5)
+  p dog.hash                    #=> 7917421
+  dog.name = "john"
+  p dog.hash                    #=> -38913223
+

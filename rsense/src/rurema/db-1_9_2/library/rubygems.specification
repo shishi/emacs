@@ -1,0 +1,18 @@
+methods=
+sublibraries=
+requires=rubygems.requirement,rubygems.remote_fetcher,rubygems.specification,rubygems.spec_fetcher,rubygems.exceptions,rubygems.builder,rubygems.source_index,rubygems.source_info_cache_entry,rubygems.digest.sha2,rubygems.gem_path_searcher,rubygems.defaults.operating_system,rubygems.platform,rubygems.defaults,rubygems.dependency,rubygems.source_info_cache,rubygems.user_interaction,rubygems,rubygems.version
+classes=Gem=Specification
+is_sublibrary=true
+
+Gem パッケージのメタデータを扱うためのライブラリです。
+
+通常 gemspec ファイルや Rakefile でメタデータを定義します。
+
+例:
+
+   spec = Gem::Specification.new do |s|
+     s.name = 'rfoo'
+     s.version = '1.0'
+     s.summary = 'Example gem specification'
+     ...
+   end

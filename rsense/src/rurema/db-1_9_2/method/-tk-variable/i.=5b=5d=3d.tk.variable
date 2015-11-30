@@ -1,0 +1,9 @@
+kind=defined
+names=[]=
+visibility=public
+
+--- []=(index, val)
+
+index番目の要素をvalにします。
+selfはTclの配列でなければなりません。
+

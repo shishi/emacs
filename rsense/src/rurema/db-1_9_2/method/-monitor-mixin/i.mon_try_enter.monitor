@@ -1,0 +1,15 @@
+kind=defined
+names=mon_try_enter,try_mon_enter
+visibility=public
+
+--- mon_try_enter -> bool
+--- try_mon_enter -> bool
+
+モニターのロックを取得しようと試みます。
+ロックに成功した(ロックが開放状態だった、もしくは
+ロックを取得していたスレッドが自分自身であった)場合には
+真を返します。
+
+ロックができなかった場合は偽を返し、実行を継続します。この場合には
+スレッドはブロックしません。
+

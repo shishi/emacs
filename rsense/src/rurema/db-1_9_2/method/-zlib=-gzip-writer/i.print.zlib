@@ -1,0 +1,25 @@
+kind=defined
+names=print
+visibility=public
+
+--- print(*str) -> nil
+
+引数を自身に順に出力します。引数を省略した場合は、[[m:$_]] を出力します。
+
+@param str 出力するオブジェクトを指定します。
+
+  require 'zlib'
+
+  filename='hoge1.gz'
+  fw = File.open(filename, "w")
+  Zlib::GzipWriter.wrap(fw, Zlib::BEST_COMPRESSION){|gz|
+    gz.print "ugo"
+  }
+  fr = File.open(filename)
+  Zlib::GzipReader.wrap(fr){|gz|
+    puts gz.read
+  }
+  #=> ugo
+
+@see [[m:IO#print]], [[m:Kernel.#print]]
+

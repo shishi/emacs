@@ -1,0 +1,12 @@
+kind=added
+names=jj
+visibility=private 
+
+--- jj(*objects) -> nil
+
+与えられたオブジェクトを JSON 形式の文字列で標準出力に人間に読みやすく整形して出力します。
+
+@param objects JSON 形式で出力したいオブジェクトを指定します。
+
+@see [[m:Kernel.#pp]]
+

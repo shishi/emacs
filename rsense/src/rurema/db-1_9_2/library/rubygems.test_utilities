@@ -1,0 +1,7 @@
+methods=Gem=RemoteFetcher/s.fetcher=3d.rubygems.test_utilities
+sublibraries=
+requires=rubygems.spec_fetcher,rubygems.specification,rubygems.remote_fetcher,rubygems.requirement,rubygems.builder,rubygems.exceptions,rubygems.source_index,rubygems.source_info_cache_entry,rubygems.digest.sha2,rubygems.defaults.operating_system,rubygems.gem_path_searcher,rubygems.platform,rubygems.defaults,rubygems.user_interaction,rubygems.source_info_cache,rubygems.dependency,rubygems,rubygems.version
+classes=Gem=FakeFetcher,TempIO
+is_sublibrary=true
+
+テストで使用するクラスやメソッドを定義しています。

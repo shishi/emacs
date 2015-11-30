@@ -1,0 +1,10 @@
+kind=defined
+names=replace
+visibility=public
+
+--- replace(hash) -> ENV
+
+環境変数を hash と同じ内容に変更します。 self を返します。
+
+@param hash  キーと値の対応関係を指定します。 to_hash でハッシュに変換されます。
+

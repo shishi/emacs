@@ -1,0 +1,26 @@
+kind=defined
+names=proper_subset?,subset?
+visibility=public
+
+--- subset?(set) -> bool
+--- proper_subset?(set) -> bool
+
+自身が集合 set の部分集合である場合に true を返します。
+
+subset? は、2 つの集合が等しい場合にも true となります。
+
+proper_subset? は、2 つの集合が等しい場合には false を返します。
+
+@param set 比較対象の Set オブジェクトを指定します。
+@raise ArgumentError 引数が Set オブジェクトでない場合に発生します。
+
+  s = Set[1, 2]
+  p s.subset?(Set[1, 2, 3]) #=> true
+  p s.subset?(Set[1, 4]) #=> false
+  p s.subset?(Set[1, 2]) #=> true
+  p s.proper_subset?(Set[1, 2, 3]) #=> true
+  p s.proper_subset?(Set[1, 4]) #=> false
+  p s.proper_subset?(Set[1, 2]) #=> false
+
+@see [[m:Set#superset?]]
+

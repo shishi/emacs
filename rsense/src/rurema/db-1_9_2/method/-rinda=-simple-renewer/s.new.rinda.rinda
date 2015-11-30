@@ -1,0 +1,9 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(sec = 180)
+
+Creates a new SimpleRenewer that keeps an object alive for another
++sec+ seconds.
+

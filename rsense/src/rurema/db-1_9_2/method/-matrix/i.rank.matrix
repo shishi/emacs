@@ -1,0 +1,12 @@
+kind=defined
+names=rank
+visibility=public
+
+--- rank -> Fixnum
+
+階数 (rank) を返します。
+
+selfの行列の階数(rank)を返します。
+行列の成分が[[c:Float]]の場合は正しい値を返さない場合があります。
+その場合は行列成分に[[c:Rational]]を用いるか、[[m:Matrix#rank_e]]を使用してください。
+

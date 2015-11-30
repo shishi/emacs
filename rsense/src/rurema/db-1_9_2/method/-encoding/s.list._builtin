@@ -1,0 +1,21 @@
+kind=defined
+names=list
+visibility=public
+
+--- list -> [Encoding]
+現在ロードされているエンコーディングのリストを返します。
+
+例:
+    Encoding.list
+    => [#<Encoding:ASCII-8BIT>, #<Encoding:EUC-JP>,
+        #<Encoding:Shift_JIS>, #<Encoding:UTF-8>,
+        #<Encoding:ISO-2022-JP (dummy)>]
+    
+    Encoding.find("US-ASCII")
+    => #<Encoding:US-ASCII>
+    
+    Encoding.list
+    => [#<Encoding:ASCII-8BIT>, #<Encoding:EUC-JP>,
+        #<Encoding:Shift_JIS>, #<Encoding:UTF-8>,
+        #<Encoding:US-ASCII>, #<Encoding:ISO-2022-JP (dummy)>]
+

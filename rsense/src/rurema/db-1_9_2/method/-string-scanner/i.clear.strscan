@@ -1,0 +1,25 @@
+kind=defined
+names=clear,terminate
+visibility=public
+
+--- terminate -> self
+--- clear -> self
+スキャンポインタを文字列末尾後まで進め、マッチ記録を捨てます。
+
+@return self を返します。
+
+pos = self.string.size と同じ動作です。
+
+      s = StringScanner.new('test string')
+      s.scan(/\w+/) # => "test"
+      s.matched     # => "test"
+      s.pos         # => 4
+      s[0]          # => "test"
+      s.terminate
+      s.matched     # => nil
+      s[0]          # => nil
+      s.pos         # => 11
+
+[[m:StringScanner#clear]] は将来のバージョンで削除される予定です。
+代わりに [[m:StringScanner#terminate]] を使ってください。
+

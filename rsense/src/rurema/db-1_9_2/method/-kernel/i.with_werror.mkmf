@@ -1,0 +1,15 @@
+kind=added
+names=with_werror
+visibility=private 
+
+--- with_werror(opt, opts = nil){|opt| ... } -> object
+--- with_werror(opt, opts = nil){|opt, opts| ... } -> object
+
+???
+
+@param opt ????
+
+@param opts ????
+
+@return ブロックを評価した結果を返します。
+

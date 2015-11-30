@@ -1,0 +1,17 @@
+kind=defined
+names=fatal
+visibility=public
+
+--- fatal(msg)    -> ()
+
+ログレベル FATAL で文字列 msg をログに記録します。
+
+行頭に level を表す文字列が追加されます。
+msg の終端が "\n" でない場合には "\n" を追加します。
+
+@param msg 記録したい文字列を指定します。文字列でない場合は to_s メソッドで文字列に変換します。
+
+  require 'webrick'
+  loger = WEBrick::BasicLog.new()
+  loger.fatal('out of money')       #=> FATAL out of money   (標準エラー出力に出力)
+

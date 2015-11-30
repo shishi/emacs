@@ -1,0 +1,12 @@
+kind=defined
+names=read_s_expand
+visibility=public
+
+--- read_s_expand(name)
+
+型が REG_SZ または REG_EXPAND_SZ であるレジストリ値 name を読み，
+その値を返します。
+
+型が REG_EXPAND_SZ だった場合，環境変数が置換された値が返ります。
+REG_SZ または REG_EXPAND_SZ 以外だった場合，TypeError が発生します。
+

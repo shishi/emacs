@@ -1,0 +1,7 @@
+:BasicAuth	WEBrick::Config::BasicAuth
+:DigestAuth	WEBrick::Config::DigestAuth
+:FileHandler	WEBrick::Config::FileHandler
+:General	WEBrick::Config::General
+:HTTP	WEBrick::Config::HTTP
+:LIBDIR	WEBrick::Config::LIBDIR
+:SSL	WEBrick::Config::SSL

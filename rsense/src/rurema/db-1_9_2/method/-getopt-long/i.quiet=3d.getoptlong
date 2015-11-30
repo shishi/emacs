@@ -1,0 +1,14 @@
+kind=defined
+names=quiet=
+visibility=public
+
+--- quiet=(flag)
+flag が真なら、静粛 (quiet) モードが有効になります。
+
+静粛モードが有効になっていると、レシーバのオブジェクトは、
+[[m:GetoptLong#get]], [[m:GetoptLong#get_option]],
+[[m:GetoptLong#each]], [[m:GetoptLong#each_option]] メソッドでエラーが
+発生しても、エラーメッセージを出力しません。初期値は、偽になっています。
+
+@param flag 真または偽を指定します。
+

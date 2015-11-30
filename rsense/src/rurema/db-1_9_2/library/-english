@@ -1,0 +1,15 @@
+methods=Kernel/v.ERROR_INFO.English,Kernel/v.ERROR_POSITION.English,Kernel/v.FIELD_SEPARATOR.English,Kernel/v.OFS.English,Kernel/v.INPUT_RECORD_SEPARATOR.English,Kernel/v.ORS.English,Kernel/v.INPUT_LINE_NUMBER.English,Kernel/v.LAST_READ_LINE.English,Kernel/v.DEFAULT_OUTPUT.English,Kernel/v.DEFAULT_INPUT.English,Kernel/v.PID.English,Kernel/v.CHILD_STATUS.English,Kernel/v.LAST_MATCH_INFO.English,Kernel/v.IGNORECASE.English,Kernel/v.PROGRAM_NAME.English,Kernel/v.ARGV.English,Kernel/v.MATCH.English,Kernel/v.PREMATCH.English,Kernel/v.POSTMATCH.English,Kernel/v.LAST_PAREN_MATCH.English
+sublibraries=
+requires=
+classes=
+is_sublibrary=false
+
+特殊変数 $! などに英語名の別名 ($ERROR_INFO など)をつけます。
+
+例:
+
+  p $/  #=> "\n"
+  p $RS #=> nil
+
+  require 'English'
+  p $RS #=> "\n"

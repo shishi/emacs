@@ -1,0 +1,33 @@
+kind=defined
+names=start
+visibility=public
+
+--- start(helo_domain = 'localhost', account = nil, password = nil, authtype = DEFAULT_AUTH_TYPE) -> Net::SMTP
+--- start(helo_domain = 'localhost', account = nil, password = nil, authtype = DEFAULT_AUTH_TYPE) {|smtp| .... } -> object
+サーバにコネクションを張り、同時に SMTP セッションを開始します。
+
+もしすでにセッションが開始していたら IOError が発生します。
+
+account と password の両方が与えられた場合、
+SMTP AUTH コマンドによって認証を行います。
+authtype は使用する認証のタイプで、
+シンボルで :plain, :login, :cram_md5 を指定します。
+
+このメソッドにブロックを与えた場合には、そのオブジェクト
+を引数としてそのブロックを呼び、ブロック終了時に自動的に接続を閉じます。
+ブロックを与えなかった場合には自分自身を返します。
+この場合終了時に [[m:Net::SMTP#finish]] を呼ぶのは利用者の責任と
+なります。
+
+@param helo_domain HELO で名乗るドメイン名です
+@param account 認証で使うアカウント名
+@param password 認証で使うパスワード
+@param authtype 認証の種類(:plain, :login, :cram_md5 のいずれか)
+
+@raise IOError すでにセッションを開始している場合に発生します
+@raise TimeoutError 接続がタイムアウトした場合に発生します
+@raise Net::SMTPUnsupportedCommand STARTTLSをサポートしていないサーバでSTARTTLSを利用しようとした場合に発生します
+@raise Net::SMTPServerBusy SMTPエラーコード420,450の場合に発生します
+@raise Net::SMTPSyntaxError SMTPエラーコード500の場合に発生します
+@raise Net::SMTPFatalError SMTPエラーコード5xxの場合に発生します
+

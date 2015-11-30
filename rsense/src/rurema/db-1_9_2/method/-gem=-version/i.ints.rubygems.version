@@ -1,0 +1,11 @@
+kind=defined
+names=ints
+visibility=public 
+
+--- ints -> [Integer]
+
+バージョンを数値の配列で返します。
+
+@see [[m:Gem::Version#build_array_from_version_string]]
+
+

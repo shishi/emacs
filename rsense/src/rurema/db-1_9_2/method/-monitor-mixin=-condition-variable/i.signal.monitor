@@ -1,0 +1,13 @@
+kind=defined
+names=signal
+visibility=public
+
+--- signal -> ()
+
+その条件変数で待っているスレッドがあれば実行を再開させます。
+
+複数のスレッドが待っている場合には1つのスレッドのみ
+実行を再開します。
+
+@see [[m:MonitorMixin::ConditionVariable#broadcast]]
+

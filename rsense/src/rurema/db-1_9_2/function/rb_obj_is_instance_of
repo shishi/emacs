@@ -1,0 +1,10 @@
+name=rb_obj_is_instance_of
+private=false
+macro=false
+type=VALUE
+filename=object.c
+params=(VALUE obj, VALUE klass)
+
+
+obj がクラス klass のインスタンスならば真。
+

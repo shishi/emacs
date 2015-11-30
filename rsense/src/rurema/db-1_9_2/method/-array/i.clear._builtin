@@ -1,0 +1,12 @@
+kind=defined
+names=clear
+visibility=public
+
+--- clear    -> self
+
+配列の要素をすべて削除して空にします。
+
+    ary = [1, 2]
+    ary.clear
+    p ary     #=> []
+

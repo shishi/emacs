@@ -1,0 +1,9 @@
+kind=defined
+names=default_acl
+visibility=public
+
+--- default_acl(acl)
+
+Set the default value for the :acl option.
+See new(). The initial default value is nil. 
+

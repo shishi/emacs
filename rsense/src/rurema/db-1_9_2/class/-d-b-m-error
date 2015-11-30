@@ -1,0 +1,7 @@
+superclass=StandardError
+type=class
+library=dbm
+extended=
+included=
+
+DBM 内部で使用する例外クラスです。

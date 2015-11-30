@@ -1,0 +1,36 @@
+kind=defined
+names=1,10,11,2,3,4,5,6,7,8,9
+visibility=public
+
+--- $1 -> String | nil
+--- $2 -> String | nil
+--- $3 -> String | nil
+--- $4 -> String | nil
+--- $5 -> String | nil
+--- $6 -> String | nil
+--- $7 -> String | nil
+--- $8 -> String | nil
+--- $9 -> String | nil
+--- $10 -> String | nil
+--- $11 -> String | nil
+
+最後に成功したパターンマッチで n 番目の括弧にマッチした値が格納されます。
+該当する括弧がなければ nil が入っています。(覚え方: \数字 のようなもの)
+
+番号 n はいくらでも大きな正整数を利用できます。
+
+[[m:Regexp.last_match]][1],
+[[m:Regexp.last_match]][2], ... と同じ。
+
+これらの変数はローカルスコープかつスレッドローカル、読み取り専用です。
+
+=== 例
+ str = '<p><a href="http://example.com">example.com</a></p>'
+ if %r[<a href="(.*?)">(.*?)</a>] =~ str
+   print $1
+   print $2
+ end
+ #=> "http://example.com"
+ #=> "example.com"
+
+

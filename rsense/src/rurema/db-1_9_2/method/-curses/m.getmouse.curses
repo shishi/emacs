@@ -1,0 +1,12 @@
+kind=defined
+names=getmouse
+visibility=public
+
+--- getmouse -> Integer | nil
+
+Returns coordinates of the mouse.
+
+This will read and pop the mouse event data off the queue
+
+@see [[m:Curses::ALL_MOUSE_EVENTS]], [[m:Curses::REPORT_MOUSE_POSITION]]
+

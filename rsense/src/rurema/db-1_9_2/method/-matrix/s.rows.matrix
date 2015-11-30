@@ -1,0 +1,21 @@
+kind=defined
+names=rows
+visibility=public
+
+--- rows(rows, copy = true) -> Matrix
+
+引数 rows を要素とする行列を生成します。
+引数 copy が偽(false)ならば、rows の複製を行いません。
+
+例:
+
+  require 'matrix'
+
+  a1 = [1, 2, 3]
+  a2 = [10, 15, 20]
+
+  m = Matrix.rows([a1, a2], false) # 配列を複製せずに行列を生成
+  p m #=> Matrix[[1, 2, 3], [10, 15, 20]]
+  a2[1] = 1000 # 配列のデータを変更
+  p m #=> Matrix[[1, 2, 3], [10, 1000, 20]]
+

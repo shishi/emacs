@@ -1,0 +1,10 @@
+kind=defined
+names=ESCDELAY
+visibility=public
+
+--- ESCDELAY -> Integer
+
+ESC の入力を破棄する時間(ミリ秒単位)を取得します。
+
+@raise  NotImplementedError サポートしていない環境で発生します。
+

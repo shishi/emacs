@@ -1,0 +1,8 @@
+kind=defined
+names=level
+visibility=public
+
+--- level -> Integer
+
+圧縮レベルを返します。
+

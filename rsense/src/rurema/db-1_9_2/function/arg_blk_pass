@@ -1,0 +1,8 @@
+name=arg_blk_pass
+private=true
+macro=false
+type=NODE *
+filename=parse.y
+params=(NODE *node1, NODE *node2)
+
+

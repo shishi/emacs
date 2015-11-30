@@ -1,0 +1,6 @@
+kind=defined
+names=read_type_class
+visibility=public
+
+--- read_type_class(type, obj_class)
+

@@ -1,0 +1,8 @@
+kind=defined
+names=debug_level=
+visibility=public
+
+--- debug_level=(n)
+
+irb のデバッグレベルの設定
+

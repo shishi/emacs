@@ -1,0 +1,8 @@
+kind=defined
+names=mailbox
+visibility=public
+
+--- mailbox
+
+The mailbox with the associated quota.
+

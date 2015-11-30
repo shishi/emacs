@@ -1,0 +1,9 @@
+kind=defined
+names=valid_encoding?
+visibility=public
+
+--- valid_encoding?  -> bool
+
+文字列の内容が、現在のエンコーディングに照らしあわせて妥当であれば
+true を返します。さもなくば false を返します。
+

@@ -1,0 +1,7 @@
+superclass=ScriptError
+type=class
+library=_builtin
+extended=
+included=
+
+実装されていない機能が呼び出されたときに発生します。

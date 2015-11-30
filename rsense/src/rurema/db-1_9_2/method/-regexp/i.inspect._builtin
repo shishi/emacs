@@ -1,0 +1,12 @@
+kind=defined
+names=inspect
+visibility=public
+
+--- inspect -> String
+[[m:Regexp#to_s]] より自然な文字列を返します。
+
+  p /^ugou.*?/i.to_s    #=> "(?i-mx:^ugou.*?)"
+  p /^ugou.*?/i.inspect #=> "/^ugou.*?/i"
+
+@see [[m:Regexp#to_s]]
+

@@ -1,0 +1,7 @@
+kind=defined
+names=sync_ex_count=
+visibility=public
+
+--- sync_ex_count=(count)
+
+

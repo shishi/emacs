@@ -1,0 +1,8 @@
+kind=defined
+names=SEV_LABEL
+visibility=public
+
+--- SEV_LABEL -> Array
+
+ログレベルのラベルを格納した配列。
+

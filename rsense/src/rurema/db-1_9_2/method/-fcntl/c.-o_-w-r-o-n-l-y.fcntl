@@ -1,0 +1,7 @@
+kind=defined
+names=O_WRONLY
+visibility=public
+
+--- O_WRONLY -> Integer
+ファイルを書き込み専用で開きます。
+

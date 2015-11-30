@@ -1,0 +1,19 @@
+kind=defined
+names=decode,unescape
+visibility=public
+
+--- unescape(str)    -> String
+--- decode(str)      -> String
+
+URI 文字列をデコードした文字列を返します。
+
+このメソッドは obsolete です。
+
+例:
+  require 'uri'
+  puts URI.unescape('http://images.google.co.jp/images?q=%A5%E2%A5%CA%A5%EA%A5%B6&ie=EUC-JP')
+
+  #=> "http://images.google.co.jp/images?q=モナリザ&ie=EUC-JP"
+
+@param str URI を文字列として与えます。
+

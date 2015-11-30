@@ -1,0 +1,8 @@
+kind=defined
+names=lower
+visibility=public
+
+--- lower(belowthis = Tk::None)
+
+
+

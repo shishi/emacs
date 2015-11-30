@@ -1,0 +1,9 @@
+kind=defined
+names=logout
+visibility=public
+
+--- logout
+
+Sends a LOGOUT command to inform the server that the client is
+done with the connection.
+

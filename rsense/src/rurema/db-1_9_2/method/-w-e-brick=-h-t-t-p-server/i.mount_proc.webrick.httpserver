@@ -1,0 +1,17 @@
+kind=defined
+names=mount_proc
+visibility=public
+
+--- mount_proc(dir, proc)             -> ()
+--- mount_proc(dir){|req, res| ...}   -> ()
+
+サーバ上のディレクトリ dir にリクエストを処理する [[c:Proc]] オブジェクト proc を対応させます。
+
+@param dir ディレクトリをあらわす文字列を指定します。
+
+@param proc リクエストを処理する [[c:Proc]] オブジェクトを指定します。
+            [[c:WEBrick::HTTPResponse]] オブジェクトと [[c:WEBrick::HTTPRequest]] 
+            オブジェクトを引数として proc.call(request, response) の引数の順で呼び出されます。
+
+@raise WEBrick::HTTPServerError proc も指定されずブロックも与えられない場合に発生します。
+

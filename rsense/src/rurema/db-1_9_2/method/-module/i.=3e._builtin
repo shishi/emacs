@@ -1,0 +1,18 @@
+kind=defined
+names=>
+visibility=public
+
+--- >(other)  -> bool | nil
+
+比較演算子。 self が other の先祖である場合、true を返します。
+self が other の子孫か同一クラスである場合、false を返します。
+
+継承関係にないクラス同士の比較では
+nil を返します。
+
+@param other 比較対象のモジュールやクラス
+
+@raise TypeError other がクラスやモジュールではない場合に発生します。
+
+@see [[m:Module#<]]
+

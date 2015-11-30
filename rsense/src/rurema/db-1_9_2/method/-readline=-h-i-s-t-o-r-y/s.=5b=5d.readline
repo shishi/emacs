@@ -1,0 +1,42 @@
+kind=defined
+names=[]
+visibility=public
+
+--- [](index) -> String
+
+ヒストリから index で指定したインデックスの内容を取得します。
+例えば index に 0 を指定すると最初の入力内容が取得できます。
+また、 -1 は最後の入力内容というように、index に負の値を指定することで、
+最後から入力内容を取得することもできます。
+
+@param index 取得対象のヒストリのインデックスを整数で指定します。
+             インデックスは [[c:Array]] ように 0 から指定します。
+             また、 -1 は最後の入力内容というように、負の数を指定することもできます。
+
+@raise IndexError index で指定したインデックスに該当する入力内容がない場合に発生します。
+
+@raise RangeError index で指定したインデックスが int 型よりも大きな値の場合に発生します。
+
+@raise SecurityError セーフレベル ($SAFE) が 4 の場合に発生します。
+
+例:
+
+  require "readline"
+
+  Readline::HISTORY[0] #=> 最初の入力内容
+  Readline::HISTORY[4] #=> 5番目の入力内容
+  Readline::HISTORY[-1] #=> 最後の入力内容
+  Readline::HISTORY[-5] #=> 最後から5番目の入力内容
+
+例: 1000000 番目の入力内容が存在しない場合、例外 IndexError が発生します。
+
+  Readline::HISTORY[1000000] #=> 例外 IndexError が発生します。
+
+例: 32 bit のシステムの場合、例外 RangeError が発生します。
+
+  Readline::HISTORY[2 ** 32 + 1] #=> 例外 RangeError が発生します。
+
+例: 64 bit のシステムの場合、例外 RangeError が発生します。
+
+  Readline::HISTORY[2 ** 64 + 1] #=> 例外 RangeError が発生します。
+

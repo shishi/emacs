@@ -1,0 +1,11 @@
+kind=defined
+names=Tk_VARIABLE_ID
+visibility=public
+
+--- Tk_VARIABLE_ID
+
+Tclレベルの変数名をインスタンスに割り当てるために内部で利用されています。
+
+Tk_VARIABLE_IDは、配列ですが0番目の要素しか使われていません。
+Rubyにおける定数が値を変更できないためです。
+

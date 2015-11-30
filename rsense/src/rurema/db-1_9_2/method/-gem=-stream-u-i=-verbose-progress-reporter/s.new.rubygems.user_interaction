@@ -1,0 +1,16 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(out_stream, size, initial_message, terminal_message = nil)
+
+このクラスを初期化します。
+
+@param out_stream 出力ストリームを指定します。
+
+@param size 処理する全体の数を指定します。
+
+@param initial_message 初期化がおわったときに表示するメッセージを指定します。
+
+@param terminal_message 終了時に表示するメッセージです。
+

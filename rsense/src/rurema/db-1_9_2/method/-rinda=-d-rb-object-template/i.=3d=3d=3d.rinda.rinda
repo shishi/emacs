@@ -1,0 +1,11 @@
+kind=defined
+names====
+visibility=public
+
+--- ===(ro)
+
+This DRbObjectTemplate matches +ro+ if the remote object's drburi
+and drbref are the same. +nil+ is used as a wildcard.
+
+
+

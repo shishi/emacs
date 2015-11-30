@@ -1,0 +1,6 @@
+kind=defined
+names=filter
+visibility=public
+
+--- filter(elements, path)
+

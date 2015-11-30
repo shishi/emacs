@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rubygems.user_interaction
+extended=
+included=
+
+何もしない進捗報告のクラスです。

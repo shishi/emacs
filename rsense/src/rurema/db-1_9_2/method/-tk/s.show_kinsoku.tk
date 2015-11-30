@@ -1,0 +1,6 @@
+kind=defined
+names=show_kinsoku
+visibility=public
+
+--- show_kinsoku(mode = 'both')
+

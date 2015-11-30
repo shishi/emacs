@@ -1,0 +1,12 @@
+kind=defined
+names=Marshal
+visibility=public
+
+--- Marshal(request, response) -> ()
+
+メソッド名に対応する URI に対するリクエストを処理するメソッドです。
+
+@param request  [[c:WEBrick::HTTPRequest]] オブジェクトが自動的に指定されます。
+
+@param response [[c:WEBrick::HTTPResponse]] オブジェクトが自動的に指定されます。
+

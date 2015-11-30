@@ -1,0 +1,7 @@
+kind=defined
+names=VT_EMPTY
+visibility=public
+
+--- VT_EMPTY -> Integer
+空（初期化状態）のオブジェクトを示します（0）。
+

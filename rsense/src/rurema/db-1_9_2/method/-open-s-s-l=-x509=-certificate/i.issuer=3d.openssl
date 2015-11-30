@@ -1,0 +1,10 @@
+kind=defined
+names=issuer=
+visibility=public
+
+--- issuer=(name)
+証明書の発行者の名前を設定します。
+
+@param name 発行者の名前の [[c:OpenSSL::X509::Name]] オブジェクト
+@raise OpenSSL::X509::CertificateError 設定に失敗した場合に発生します
+

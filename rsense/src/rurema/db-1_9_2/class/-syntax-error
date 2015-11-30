@@ -1,0 +1,7 @@
+superclass=ScriptError
+type=class
+library=_builtin
+extended=
+included=
+
+ソースコードに文法エラーがあったときに発生します。

@@ -1,0 +1,9 @@
+kind=defined
+names=status
+visibility=public
+
+--- status           -> Integer
+
+レスポンスのステータスコードを表す整数を返します。
+デフォルトは [[m:WEBrick::HTTPStatus::RC_OK]] です。
+

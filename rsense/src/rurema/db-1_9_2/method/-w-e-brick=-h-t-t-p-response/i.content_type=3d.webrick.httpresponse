@@ -1,0 +1,14 @@
+kind=defined
+names=content_type=
+visibility=public
+
+--- content_type=(val)
+
+Content-Type ヘッダの値をセットします。
+
+@param val Content-Type ヘッダの値を文字列で指定します。
+
+  res.content_type = "text/html"
+
+@see [[m:WEBrick::HTTPUtils.#mime_type]]
+

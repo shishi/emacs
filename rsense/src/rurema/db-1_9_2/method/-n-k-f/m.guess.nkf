@@ -1,0 +1,24 @@
+kind=defined
+names=guess
+visibility=public
+
+--- guess(str) -> Encoding
+
+文字列 str の漢字コードを推測して返します。
+
+返される値は、NKF モジュールのモジュール定数です。
+
+返される値(すなわち、推測可能なエンコーディング)は以下のいずれかです。
+  * NKF::JIS
+  * NKF::EUC
+  * NKF::SJIS
+  * NKF::UNKNOWN
+  * NKF::UTF8
+  * NKF::UTF16
+  * Encoding::EUCJP_MS
+  * Encoding::CP51932
+  * Encoding::WINDOWS_31J
+
+@param str 推測対象の文字列です。
+
+

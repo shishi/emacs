@@ -1,0 +1,10 @@
+kind=defined
+names=column_vector
+visibility=public
+
+--- column_vector(column) -> Matrix
+
+要素がcolumnの(n,1)型の行列(列ベクトル)を生成します。
+
+@param column (n,1)型の行列として生成する[[c:Vector]] [[c:Array]] オブジェクト
+

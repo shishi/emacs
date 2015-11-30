@@ -1,0 +1,12 @@
+kind=defined
+names=path,to_path
+visibility=public
+
+--- path    -> String
+--- to_path -> String
+
+オープン時に使用したパスを文字列で返します。
+
+   File.new("testfile").path               #=> "testfile"
+   File.new("/tmp/../tmp/xxx", "w").path   #=> "/tmp/../tmp/xxx"
+

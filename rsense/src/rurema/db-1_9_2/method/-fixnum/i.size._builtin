@@ -1,0 +1,16 @@
+kind=defined
+names=size
+visibility=public
+
+--- size -> Fixnum
+
+整数の実装上のサイズをバイト数で返します。
+
+現在の実装では [[c:Fixnum]] は、sizeof(long) 固定(多くの 32
+bit マシンで 4 バイト)、[[c:Bignum]]は、システム依存です。
+
+    p 1.size
+    p 0x1_0000_0000.size
+    # => 4
+         8
+

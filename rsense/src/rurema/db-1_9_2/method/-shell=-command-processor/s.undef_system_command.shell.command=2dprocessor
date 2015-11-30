@@ -1,0 +1,11 @@
+kind=defined
+names=undef_system_command
+visibility=public
+
+--- undef_system_command(command) -> self
+
+与えられたコマンドを削除します。
+
+@param command 削除したいコマンド名を指定します。
+
+

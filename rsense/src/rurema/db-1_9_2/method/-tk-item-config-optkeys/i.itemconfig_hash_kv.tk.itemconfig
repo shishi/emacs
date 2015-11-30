@@ -1,0 +1,8 @@
+kind=defined
+names=itemconfig_hash_kv
+visibility=public
+
+--- itemconfig_hash_kv(id, keys, enc_mode = nil, conf = nil)
+
+
+

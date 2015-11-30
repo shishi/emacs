@@ -1,0 +1,6 @@
+kind=defined
+names=panecget
+visibility=public
+
+--- panecget(win, key)
+

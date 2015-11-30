@@ -1,0 +1,17 @@
+kind=defined
+names=lchmod
+visibility=public
+
+--- lchmod(mode, *filename)    -> Integer
+
+[[m:File.chmod]] と同様ですが、シンボリックリンクに関してリンクそのものの
+モードを変更します。
+
+@param filename ファイル名を表す文字列を指定します。
+
+@param mode [[man:chmod(2)]] と同様に整数で指定します。
+
+@raise NotImplementedError [[man:lchmod(2)]] を実装していないシステムでこのメソッドを呼び出すと発生します。
+
+@raise Errno::EXXX モードの変更に失敗した場合に発生します。
+

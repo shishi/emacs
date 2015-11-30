@@ -1,0 +1,12 @@
+kind=redefined
+names=ARGV
+visibility=public
+
+--- ARGV -> Array
+
+Ruby スクリプトに与えられた引数を表す配列です。
+
+[[lib:optparse]] を require することにより、ARGV は
+OptionParser::Arguable を [[m:Object#extend]] します。
+
+@see [[c:OptionParser::Arguable]]

@@ -1,0 +1,19 @@
+kind=defined
+names=singleton_class
+visibility=private 
+
+--- singleton_class -> Class
+
+レシーバの特異クラスを返します。
+まだ特異クラスがなければ、新しく作成します。
+
+レシーバが nil か true か false なら、それぞれ NilClass, TrueClass,
+FalseClass を返します。
+
+@raise TypeError レシーバが Fixnum か Symbol の場合に発生します。
+
+   Object.new.singleton_class  #=> #<Class:#<Object:0xb7ce1e24>>
+   String.singleton_class      #=> #<Class:String>
+   nil.singleton_class         #=> NilClass
+
+@see [[m:Object#class]]

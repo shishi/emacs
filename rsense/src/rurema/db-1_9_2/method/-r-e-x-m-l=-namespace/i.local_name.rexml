@@ -1,0 +1,7 @@
+kind=defined
+names=local_name,name
+visibility=public
+
+--- name
+--- local_name
+

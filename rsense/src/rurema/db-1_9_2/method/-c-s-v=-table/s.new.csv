@@ -1,0 +1,12 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(array_of_rows) -> CSV::Table
+
+自身を初期化します。
+
+全ての行が同じヘッダを持つことを仮定しています。
+
+@param array_of_rows [[c:CSV::Row]] のインスタンスの配列を指定します。
+

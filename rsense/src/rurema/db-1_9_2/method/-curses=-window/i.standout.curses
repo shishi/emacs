@@ -1,0 +1,8 @@
+kind=defined
+names=standout
+visibility=public
+
+--- standout -> nil
+
+以後書き込む文字を強調表示します。
+

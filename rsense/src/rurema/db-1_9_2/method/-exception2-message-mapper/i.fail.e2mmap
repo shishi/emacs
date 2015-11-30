@@ -1,0 +1,13 @@
+kind=defined
+names=fail
+visibility=public
+
+--- fail(exception_class = nil, *rest) -> ()
+登録されている情報を使用して、例外を発生させます。
+
+@param exception_class 例外クラス。
+
+@param rest メッセージに埋め込む値。
+
+@raise Exception2MessageMapper::ErrNotRegisteredException 指定された例外クラスに対応するメッセージが存在しない場合に発生します。
+

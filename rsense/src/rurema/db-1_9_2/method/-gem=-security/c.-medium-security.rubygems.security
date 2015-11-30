@@ -1,0 +1,21 @@
+kind=defined
+names=MediumSecurity
+visibility=public
+
+--- MediumSecurity -> Gem::Security::Policy
+
+中レベルのセキュリティポリシーです。
+
+ルート証明書のみを信頼して、全ての検証を行います。
+ただし、信頼するように指定された証明書は信頼します。
+
+このポリシーは便利ですが、署名無しのパッケージを許可しているので、
+邪悪な人物がパッケージの署名を単純に削除して検証をパスさせることができます。
+
+    :verify_data      => true,
+    :verify_signer    => true,
+    :verify_chain     => true,
+    :verify_root      => true,
+    :only_trusted     => true,
+    :only_signed      => false
+

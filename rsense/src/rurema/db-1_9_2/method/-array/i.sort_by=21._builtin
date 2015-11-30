@@ -1,0 +1,10 @@
+kind=defined
+names=sort_by!
+visibility=public
+
+--- sort_by!               -> Enumerator
+--- sort_by! {|item| ... } -> self
+sort_by の破壊的バージョンです。
+
+@see [[m:Enumerable#sort_by]]
+

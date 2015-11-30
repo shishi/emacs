@@ -1,0 +1,6 @@
+kind=defined
+names=TCL_MINOR_VERSION
+visibility=public
+
+--- TCL_MINOR_VERSION
+

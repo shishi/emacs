@@ -1,0 +1,8 @@
+kind=defined
+names=total
+visibility=public
+
+--- total -> Float
+
+合計時間。(utime + stime + cutime + cstime)
+

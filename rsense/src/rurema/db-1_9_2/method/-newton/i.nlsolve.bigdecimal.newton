@@ -1,0 +1,7 @@
+kind=defined
+names=nlsolve
+visibility=public
+
+--- nlsolve(f, x)
+
+

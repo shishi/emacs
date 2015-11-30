@@ -1,0 +1,25 @@
+kind=defined
+names=lineno
+visibility=public
+
+--- lineno -> Integer
+
+全引数ファイルを一つのファイルとみなしたときの現在の行番号を返します。
+個々の引数ファイル毎の行番号を得るには ARGF.file.lineno とします。
+
+  # カレントディレクトリから適当にファイルを選ぶ
+  ARGV.replace(
+    Dir.glob("*").reject{|name| FileTest.file?(name) == false}
+  )
+  ARGF.each {|line|
+    if ARGF.lineno < 10
+      ARGF.lineno = 10
+    end
+    p [ ARGF.lineno, line]
+  }
+  #例
+  #=> [10, "cat:\n"]
+  #=> [11, " - name: taro\n"]
+  #=> [12, "   age: 7\n"]
+  #...
+

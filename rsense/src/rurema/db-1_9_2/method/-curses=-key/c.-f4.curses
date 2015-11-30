@@ -1,0 +1,8 @@
+kind=defined
+names=F4
+visibility=public
+
+--- F4 -> Integer
+
+F4 キーを表す定数です。
+

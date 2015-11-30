@@ -1,0 +1,25 @@
+kind=defined
+names=warn
+visibility=public
+
+--- warn(message) -> nil
+
+message を 標準エラー出力 [[m:$stderr]] に出力します。 [[m:$VERBOSE]] 
+フラグ が nil のときは何も出力しません。
+
+文字列以外のオブジェクトが引数として与えられた場合には、
+to_s メソッドにより文字列に変換してから出力します。
+
+このメソッドは以下と同じです。
+  $stderr.print message, "\n" unless $VERBOSE.nil?
+
+@param message 出力するオブジェクトです。
+@raise IOError 標準エラー出力が書き込み用にオープンされていなければ発生します。
+@raise Errno::EXXX 出力に失敗した場合に発生します。
+
+  warn "caution!" #=> caution!
+  $VERBOSE = nil
+  warn "caution!" # 何もしない
+
+@see [[m:$stderr]],[[m:$VERBOSE]]
+

@@ -1,0 +1,8 @@
+kind=defined
+names=generate_ri
+visibility=public 
+
+--- generate_ri
+
+自身にセットされている [[c:Gem::Specification]] の情報をもとに RI 用のデータを生成します。
+

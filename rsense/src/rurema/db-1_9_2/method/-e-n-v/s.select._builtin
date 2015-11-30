@@ -1,0 +1,11 @@
+kind=defined
+names=select
+visibility=public
+
+--- select                      -> Enumerator
+--- select {|key, value| ... }  -> [[String, String]]
+
+環境変数名と値についてブロックを評価し、真を返したものを集めた配列を返
+します。配列の各要素は配列となり、第一要素が変数名、第二要素が値になり
+ます。
+

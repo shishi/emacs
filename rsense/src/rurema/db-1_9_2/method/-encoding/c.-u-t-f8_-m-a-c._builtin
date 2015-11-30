@@ -1,0 +1,10 @@
+kind=defined
+names=UTF8_MAC
+visibility=public
+
+--- UTF8_MAC
+UTF8-MAC、アップルによって修正された Normalization Form D（分解済み）という形式のUTF-8です。
+
+[[url:http://developer.apple.com/jp/technotes/tn1150.html]]
+[[url:http://developer.apple.com/jp/technotes/tn2078.html]]
+

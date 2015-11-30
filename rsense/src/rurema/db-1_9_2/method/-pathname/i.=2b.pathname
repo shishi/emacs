@@ -1,0 +1,19 @@
+kind=defined
+names=+
+visibility=public
+
+--- +(other) -> Pathname
+パス名を連結します。つまり、other を self からの相対パスとした新しい
+Pathname オブジェクトを生成して返します。
+
+other が絶対パスなら単に other と同じ内容の Pathname オブジェクトが返さ
+れます。
+
+ Pathname("foo/bar")+"baz" # => #<Pathname:foo/bar/baz>
+ Pathname("foo/bar/")+"baz" # => #<Pathname:foo/bar/baz>
+ Pathname("foo/bar")+"/baz" # => #<Pathname:/baz>
+ Pathname("foo/bar")+"../baz" # => #<Pathname:foo/baz>
+
+@param other 文字列か Pathname オブジェクトを指定します。
+
+

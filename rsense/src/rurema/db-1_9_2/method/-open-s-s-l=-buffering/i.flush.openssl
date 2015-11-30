@@ -1,0 +1,12 @@
+kind=defined
+names=flush
+visibility=public
+
+--- flush -> ()
+内部バッファに残っているデータをすべて出力し、
+バッファをフラッシュします。
+
+[[m:IO#flush]] と同様です。
+
+バッファがすべて出力されるまでブロックします。
+

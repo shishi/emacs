@@ -1,0 +1,14 @@
+kind=defined
+names=last_modified
+visibility=public
+
+--- last_modified    -> Time | nil
+
+対象となる URI の最終更新時刻を [[c:Time]] オブジェクトで返します。
+Last-Modified ヘッダがない場合は nil を返します。
+
+例:
+  require 'open-uri'
+  p open('http://www.rubyist.net/').last_modified    
+  #=> Thu Feb 26 16:54:58 +0900 2004
+

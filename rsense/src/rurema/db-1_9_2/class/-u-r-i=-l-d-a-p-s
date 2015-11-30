@@ -1,0 +1,7 @@
+superclass=URI=LDAP
+type=class
+library=uri
+extended=
+included=
+
+LDAPS URI を表すクラスです。

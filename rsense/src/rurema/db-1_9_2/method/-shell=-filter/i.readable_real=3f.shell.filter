@@ -1,0 +1,11 @@
+kind=defined
+names=readable_real?
+visibility=public
+
+--- readable_real?(file)    -> bool
+[[c:FileTest]] モジュールにある同名のクラスメソッドと同じです.
+
+@param file ファイル名を表す文字列を指定します。
+
+@see [[m:FileTest.#readable_real?]]
+

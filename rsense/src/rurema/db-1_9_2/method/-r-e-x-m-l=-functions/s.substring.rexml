@@ -1,0 +1,6 @@
+kind=defined
+names=substring
+visibility=public
+
+--- substring(string, start, length = nil)
+

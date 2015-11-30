@@ -1,0 +1,21 @@
+kind=defined
+names=keypad,keypad=
+visibility=public
+
+--- keypad(val) -> bool | nil
+--- keypad=(val) -> bool | nil
+Enables the keypad of the user's terminal.
+
+If enabled (+bool+ is +true+), the user can press a function key
+(such as an arrow key) and wgetch returns a single value representing
+the function key, as in KEY_LEFT.  If disabled (+bool+ is +false+),
+curses does not treat function keys specially and the program has to
+interpret the escape sequences itself.  If the keypad in the terminal
+can be turned on (made to transmit) and off (made to work locally),
+turning on this option causes the terminal keypad to be turned on when
+Curses::Window.getch is called.
+
+The default value for keypad is false.
+
+@param val ...
+

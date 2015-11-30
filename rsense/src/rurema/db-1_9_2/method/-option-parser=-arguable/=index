@@ -1,0 +1,6 @@
+#getopts	OptionParser::Arguable#getopts
+#options	OptionParser::Arguable#options
+#options=	OptionParser::Arguable#options=
+#order!	OptionParser::Arguable#order!
+#parse!	OptionParser::Arguable#parse!
+#permute!	OptionParser::Arguable#permute!

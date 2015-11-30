@@ -1,0 +1,10 @@
+kind=defined
+names=+@
+visibility=public
+
+--- +@    -> self
+
+単項演算子の + です。
+self を返します。
+
+

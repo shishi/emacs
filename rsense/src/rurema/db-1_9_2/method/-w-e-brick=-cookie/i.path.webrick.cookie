@@ -1,0 +1,11 @@
+kind=defined
+names=path,path=
+visibility=public
+
+--- path          -> String
+--- path=(value)
+
+パス名を文字列で表すアクセサです。
+
+@param value パス名を文字列で指定します。
+

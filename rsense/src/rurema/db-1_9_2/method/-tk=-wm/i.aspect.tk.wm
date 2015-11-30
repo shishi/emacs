@@ -1,0 +1,6 @@
+kind=defined
+names=aspect
+visibility=public
+
+--- aspect(*args)
+

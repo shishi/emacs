@@ -1,0 +1,35 @@
+kind=defined
+names=IPPROTO_BIP,IPPROTO_EGP,IPPROTO_EON,IPPROTO_GGP,IPPROTO_HELLO,IPPROTO_ICMP,IPPROTO_IDP,IPPROTO_IGMP,IPPROTO_IP,IPPROTO_MAX,IPPROTO_ND,IPPROTO_PUP,IPPROTO_RAW,IPPROTO_TCP,IPPROTO_TP,IPPROTO_UDP,IPPROTO_XTP
+visibility=public
+
+--- IPPROTO_BIP
+--- IPPROTO_EGP
+--- IPPROTO_EON
+--- IPPROTO_GGP
+--- IPPROTO_HELLO
+--- IPPROTO_ICMP
+--- IPPROTO_IDP
+--- IPPROTO_IGMP
+--- IPPROTO_IP
+--- IPPROTO_MAX
+--- IPPROTO_ND
+--- IPPROTO_PUP
+--- IPPROTO_RAW
+--- IPPROTO_TCP
+--- IPPROTO_TP
+--- IPPROTO_UDP
+--- IPPROTO_XTP
+
+IPプロトコル:
+[[m:BasicSocket#getsockopt]], [[m:BasicSocket#setsockopt]] の level 引数に
+使用します。
+
+また、[[m:Socket.open]] の
+第一引数 domain に AF_INET もしくは AF_INET6,
+第二引数 type に SOCK_RAW を指定した場合の、
+第三引数 protocol にも使用します。
+
+なお、AF_INET で SOCK_STREAM な場合には IPPROTO_TCP を使用できますが、
+その場合は 0 を指定しても同じ結果を得られますので通常は使用されません。
+AF_INET で SOCK_DGRAM の場合の IPPROTO_UDP も同様です。
+

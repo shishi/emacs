@@ -1,0 +1,13 @@
+kind=defined
+names=rank_e
+visibility=public
+
+--- rank_e -> Fixnum
+
+階数 (rank) を返します。
+
+ユークリッドアルゴリズムに基づいて階数(rank)を計算します。
+行列の全成分が整数([[c:Integer]])の場合は正しい値を返します。
+成分に[[c:Float]]があった場合には正しい値を返さないかもしれません。
+
+

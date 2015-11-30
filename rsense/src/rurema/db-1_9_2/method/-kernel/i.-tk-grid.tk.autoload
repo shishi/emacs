@@ -1,0 +1,8 @@
+kind=added
+names=TkGrid
+visibility=private 
+
+--- TkGrid(*args)
+
+[[m:TkGrid.#configure]] ¤ÈÆ±¤¸
+

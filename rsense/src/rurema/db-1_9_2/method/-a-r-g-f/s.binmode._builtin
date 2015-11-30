@@ -1,0 +1,29 @@
+kind=defined
+names=binmode
+visibility=public
+
+--- binmode -> self
+[[m:IO#binmode]]を参照
+
+  require 'md5'
+
+  ARGV.replace(
+    Dir.glob("*").select{|name| FileTest.file?(name)}
+  )
+  files = ARGV.dup
+  bm = ARGF.binmode.readlines(nil)
+  bm.each_with_index {|bl, i|
+    md5 = MD5.new(bl).hexdigest
+    printf("%s\t%s\n", md5, files[i])
+  }
+
+  #例
+  #=> fe413bf114e16b0cd596d869743e9d35        ruby-1.8.5-p35.tar.gz
+  #=> 70ad729e965c9625d2dfb7fa0145b423        sample.yaml
+  #=> d91e81b81673279e908a1c08e8582487        test.rb
+  #=> 158c4a0a097379a08bd88abfca6a51c5        test.rb~
+  #...
+
+
+@see [[m:IO#binmode]]
+

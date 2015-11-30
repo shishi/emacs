@@ -1,0 +1,13 @@
+kind=defined
+names=group_by
+visibility=public
+
+--- group_by               -> Enumerator
+--- group_by {|obj| ... }  -> Hash
+
+ブロックを評価した結果をキー、対応する要素の配列を値とするハッシュを返します。
+
+
+   (1..6).group_by {|i| i%3}   #=> {0=>[3, 6], 1=>[1, 4], 2=>[2, 5]}
+
+

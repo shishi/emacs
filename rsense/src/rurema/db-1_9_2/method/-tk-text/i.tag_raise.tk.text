@@ -1,0 +1,6 @@
+kind=defined
+names=tag_raise
+visibility=public
+
+--- tag_raise(tag, above = Tk::None)
+

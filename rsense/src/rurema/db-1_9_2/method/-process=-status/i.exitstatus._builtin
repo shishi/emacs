@@ -1,0 +1,9 @@
+kind=defined
+names=exitstatus
+visibility=public
+
+--- exitstatus    -> nil | Integer
+
+exited? が真の場合プロセスが返した終了ステータスの整数を、そ
+うでない場合は nil を返します。
+

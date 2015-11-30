@@ -1,0 +1,19 @@
+kind=defined
+names=uid=
+visibility=public
+
+--- uid=(id)
+
+プロセスの実ユーザ ID を id に設定します。
+
+動作の詳細はプラットフォームに依存します。
+実ユーザ ID 以外のユーザ ID も変更されるかも知れません。
+
+@param id 実ユーザ ID を整数で指定します。
+
+@raise Errno::EXXX 権限がない場合に発生します。
+
+@raise NotImplementedError メソッドが現在のプラットフォームで実装されていない場合に発生します。
+
+@see [[c:Process::UID]]
+

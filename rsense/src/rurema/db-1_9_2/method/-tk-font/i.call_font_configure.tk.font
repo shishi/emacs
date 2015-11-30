@@ -1,0 +1,6 @@
+kind=defined
+names=call_font_configure
+visibility=public
+
+--- call_font_configure(path, *args)
+

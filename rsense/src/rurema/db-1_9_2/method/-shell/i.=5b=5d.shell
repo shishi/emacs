@@ -1,0 +1,32 @@
+kind=defined
+names=[],test
+visibility=public
+
+--- test(command, file1, file2 = nil) -> bool | Time | Integer | nil
+--- [](command, file1, file2 = nil) -> bool | Time | Integer | nil
+
+[[m:Kernel.#test]] や [[c:FileTest]] のメソッドに処理を委譲します。
+
+@param command 数値、またはサイズが 1 の文字列の場合は [[m:Kernel.#test]] に処理委譲します。
+               2 文字以上の文字列の場合は [[c:FileTest]] のメソッドとして実行します。
+
+@param file1 文字列でファイルへのパスを指定します。
+
+@param file2 文字列でファイルへのパスを指定します。
+
+  require 'shell'
+  Shell.verbose = false
+  sh = Shell.new
+  begin
+    sh.mkdir("foo")
+  rescue
+  end
+  p sh[?e, "foo"]         # => true
+  p sh[:e, "foo"]         # => true
+  p sh["e", "foo"]        # => true
+  p sh[:exists?, "foo"]   # => true
+  p sh["exists?", "foo"]  # => true
+
+@see [[m:Kernel.#test]], [[c:FileTest]]
+
+

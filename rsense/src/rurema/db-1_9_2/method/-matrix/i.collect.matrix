@@ -1,0 +1,20 @@
+kind=defined
+names=collect,map
+visibility=public
+
+--- collect {|x| ... } -> Matrix
+--- map {|x| ... } -> Matrix
+
+行列の各要素に対してブロックの適用を繰り返した結果を、要素として持つ行列を生成します。
+
+例:
+  a1 = [ 1,  2,   3]
+  a2 = [10, 15,  20]
+  a3 = [-1, -2, 1.5]
+  m = Matrix[a1, a2, a3]
+
+  # 行列mのすべての要素に100を加える。
+  p m.collect { |x|
+    x + 100
+  } #=> Matrix[[101, 102, 103], [110, 115, 120], [99, 98, 101.5]]
+

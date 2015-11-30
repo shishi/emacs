@@ -1,0 +1,7 @@
+superclass=ArgumentError
+type=class
+library=iconv
+extended=
+included=Iconv=Failure
+
+メソッドの引数等で指定された文字コード体系が見つからない (システム上で有効でない) 場合に発生します。

@@ -1,0 +1,14 @@
+kind=defined
+names=find_gems
+visibility=public 
+
+--- find_gems(name, source_index) -> Hash
+
+与えられた Gem の名前をインデックスから検索します。
+
+@param name Gem の名前を指定します。
+
+@param source_index [[c:Gem::SourceIndex]] のインスタンスを指定します。
+
+@see [[m:Gem::SourceIndex#search]]
+

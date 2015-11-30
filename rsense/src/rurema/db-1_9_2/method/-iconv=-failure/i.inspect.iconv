@@ -1,0 +1,11 @@
+kind=defined
+names=inspect
+visibility=public
+
+--- inspect    -> String
+[[c:Iconv]] が起こす例外が起きた場合の情報を
+
+#<"例外の種類": "例外が発生するまでに変換した文字列", "例外が起こった位置から最後までの文字列">
+
+のような形式の文字列として返します。
+

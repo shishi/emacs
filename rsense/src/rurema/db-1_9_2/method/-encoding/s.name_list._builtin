@@ -1,0 +1,16 @@
+kind=defined
+names=name_list
+visibility=public
+
+--- name_list    -> [String]
+利用可能なエンコーディングの名前を文字列の配列で返します。
+
+このリストにはダミーエンコーディングは含みません。
+
+例:
+  p Encoding.name_list
+  #=> ["US-ASCII", "ASCII-8BIT", "UTF-8",
+       "ISO-8859-1", "Shift_JIS", "EUC-JP",
+       "Windows-31J",
+       "BINARY", "CP932", "eucJP"]
+

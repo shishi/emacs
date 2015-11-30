@@ -1,0 +1,9 @@
+kind=defined
+names=readable_real?
+visibility=public
+
+--- readable_real? -> bool
+実ユーザ/実グループによって読み込み可能な時に真を返します。
+
+  p File::Stat.new($0).readable_real? #=> true
+

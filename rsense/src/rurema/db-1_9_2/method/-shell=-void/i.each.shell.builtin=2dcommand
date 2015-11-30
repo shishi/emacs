@@ -1,0 +1,8 @@
+kind=defined
+names=each
+visibility=public
+
+--- each(rs = nil){ ... } -> nil
+
+何もしません。
+

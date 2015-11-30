@@ -1,0 +1,11 @@
+kind=defined
+names=install_update_defaults_str
+visibility=public 
+
+--- install_update_defaults_str -> String
+
+Gem コマンドの install サブコマンドに渡されるデフォルトのオプションを返します。
+
+デフォルトのオプションは以下の通りです。
+  --rdoc --no-force --no-test --wrappers
+

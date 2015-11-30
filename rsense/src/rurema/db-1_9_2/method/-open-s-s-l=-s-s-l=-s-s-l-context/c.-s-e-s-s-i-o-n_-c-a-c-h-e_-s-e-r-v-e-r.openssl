@@ -1,0 +1,16 @@
+kind=defined
+names=SESSION_CACHE_SERVER
+visibility=public
+
+--- SESSION_CACHE_SERVER -> Integer
+サーバ側でセッションをキャッシュすることを意味します。
+
+[[m:OpenSSL::SSL::SSLContext#session_cache_mode=]] に
+渡すフラグとして用います。
+
+このフラグが立っているとサーバ側の [[c:OpenSSL::SSL::SSLContext]] 
+でセッションキャッシュの保持と管理、再利用が
+行われます。
+
+このフラグはデフォルトで有効になっています。
+

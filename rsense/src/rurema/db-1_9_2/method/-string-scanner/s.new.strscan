@@ -1,0 +1,21 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(str, dup = false) -> StringScanner 
+
+新しい StringScanner オブジェクトを生成します。
+
+@param str スキャン対象の文字列を指定します。
+
+@param dup dup は単に無視します。
+           引数の文字列は複製も freeze もされず、そのまま使います。
+
+使用例
+    s = StringScanner.new('This is an example string')
+    s.eos?            #=> false
+
+    p s.scan(/\w+/)   #=> "This"
+    p s.scan(/\w+/)   #=> nil
+    p s.scan(/\s+/)   #=> " "
+

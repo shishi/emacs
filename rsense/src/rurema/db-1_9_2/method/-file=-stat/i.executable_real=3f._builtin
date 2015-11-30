@@ -1,0 +1,11 @@
+kind=defined
+names=executable_real?
+visibility=public
+
+--- executable_real? -> bool
+実ユーザ/グループIDで実行できる時に真を返します。
+
+  p File::Stat.new($0).executable_real? 
+  #例
+  #=> true
+

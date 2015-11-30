@@ -1,0 +1,18 @@
+kind=defined
+names=tojis
+visibility=public
+
+--- tojis(str) -> String
+
+文字列 str のエンコーディングを iso-2022-jp に変換して返します。
+
+Kconv.kconv(str, Kconv::JIS) と同じです。
+
+このメソッドは MIME エンコードされた文字列を展開し、
+いわゆる半角カナを全角に変換します。
+これらを変換したくない場合は、 [[m:NKF.#nkf]]('-jxm0', str)
+を使ってください。
+
+@param str 変換元の文字列
+
+@see [[m:Kconv.#kconv]], [[m:String#tojis]]

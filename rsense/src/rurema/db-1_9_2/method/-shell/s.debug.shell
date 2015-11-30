@@ -1,0 +1,9 @@
+kind=defined
+names=debug,debug?
+visibility=public
+
+--- debug -> bool | Integer
+--- debug? -> bool | Integer
+
+デバッグ用フラグを参照します。
+

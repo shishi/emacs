@@ -1,0 +1,17 @@
+kind=defined
+names=fast_generate,fast_unparse
+visibility=public
+
+--- fast_generate(object) -> String
+--- fast_unparse(object) -> String
+
+与えられたオブジェクトを一行の JSON 形式の文字列に変換して返します。
+
+このメソッドは循環参照のチェックを無効にしています。また、
+[[m:JSON::NaN]], [[m:JSON::Infinity]], [[m:JSON::MinusInfinity]] を生成することがあります。
+このため容易に無限ループを発生させることができるので、気をつけてください。
+
+fast_unparse は将来削除される予定です。
+
+@param object JSON 形式の文字列に変換するオブジェクトを指定します。
+

@@ -1,0 +1,6 @@
+kind=defined
+names=delete_element
+visibility=public
+
+--- delete_element(element)
+

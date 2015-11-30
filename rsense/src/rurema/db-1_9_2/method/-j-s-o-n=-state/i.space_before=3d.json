@@ -1,0 +1,13 @@
+kind=defined
+names=space_before=
+visibility=public 
+
+--- space_before=(string)
+
+JSON 形式の文字列中で JavaScript のオブジェクトを表す部分にある ':' の
+前に挿入する文字列をセットします。
+
+@param string JSON 形式の文字列中で JavaScript のオブジェクトを表す部分にある ':' の
+              前に挿入する文字列をセットします。
+
+

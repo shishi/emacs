@@ -1,0 +1,14 @@
+kind=defined
+names=symlink
+visibility=public
+
+--- symlink(old, new)    -> 0
+[[c:File]] クラスにある同名のクラスメソッドと同じです.
+
+@param old ファイル名を表す文字列を指定します。
+
+@param new シンボリックリンクを表す文字列を指定します。
+
+@see [[m:File.symlink]]
+
+

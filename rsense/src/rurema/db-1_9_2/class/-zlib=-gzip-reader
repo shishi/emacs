@@ -1,0 +1,26 @@
+superclass=Zlib=GzipFile
+type=class
+library=zlib
+extended=
+included=Enumerable
+
+gzip 形式の圧縮ファイルを読み込むラッパークラスです。
+IO クラスのインスタンス (又は IO クラスのインスタンスと同じメソッドを
+持つオブジェクト) と関連付けて使用します。
+
+  require 'zlib'
+  =begin
+  # hoge.gz がない場合は下記で作成できる。
+  Zlib::GzipWriter.open('hoge.gz') { |gz|
+    gz.puts 'hoge'
+  }
+  =end
+
+  Zlib::GzipReader.open('hoge.gz') {|gz|
+    print gz.read
+  }
+  
+  f = File.open('hoge.gz')
+  gz = Zlib::GzipReader.new(f)
+  print gz.read
+  gz.close

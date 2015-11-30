@@ -1,0 +1,8 @@
+kind=defined
+names=http_header_extra
+visibility=public
+
+--- http_header_extra
+
+Access the via [[unknown:XMLRPC::Client#http_header_extra=]] assigned header.
+

@@ -1,0 +1,10 @@
+kind=defined
+names=col_sep
+visibility=public
+
+--- col_sep -> String
+
+カラム区切り文字列として使用する文字列を返します。
+
+@see [[m:CSV.new]]
+

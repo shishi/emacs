@@ -1,0 +1,21 @@
+kind=defined
+names=return_type_detail
+visibility=public
+
+--- return_type_detail -> [String]
+返り値の型と属性を取得します。
+
+@return 返り値の型と属性を文字列配列で返します。
+
+   tobj = WIN32OLE_TYPE.new('Microsoft Excel 14.0 Object Library', 'Application')
+   method = WIN32OLE_METHOD.new(tobj, 'Workbooks')
+   p method.return_type_detail # => ["PTR", "USERDEFINED", "Workbooks"]
+
+属性が付加されていない場合は、[[m:WIN32OLE_METHOD#return_type]]を要素と
+した配列が返ります。
+
+返り値の取り得る属性値はCOMのIDL（インターフェイス定義言語）によって規
+定されています。
+
+@see [[url:http://msdn.microsoft.com/en-us/library/aa367042(VS.85).aspx]]
+

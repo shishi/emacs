@@ -1,0 +1,9 @@
+kind=defined
+names=PRINTABLESTRING
+visibility=public
+
+--- PRINTABLESTRING -> Integer
+
+ASN.1 UNIVERSAL タグの、
+PRINTABLESTRING のタグ番号 19 を表す定数です。
+

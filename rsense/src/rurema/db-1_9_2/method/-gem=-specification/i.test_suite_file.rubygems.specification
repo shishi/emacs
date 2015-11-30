@@ -1,0 +1,8 @@
+kind=defined
+names=test_suite_file
+visibility=public
+
+--- test_suite_file -> String
+
+この属性は非推奨です。 [[m:Gem::Specification#test_files]] を使用してください。
+

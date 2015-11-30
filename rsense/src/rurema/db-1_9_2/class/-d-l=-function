@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=dl.import
+extended=
+included=
+
+[[c:DL::CFunc]] のラッパークラスです。

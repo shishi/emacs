@@ -1,0 +1,9 @@
+name=rb_undef_method
+private=false
+macro=false
+type=void
+filename=class.c
+params=(VALUE klass, const char *name)
+
+
+クラス klass のインスタンスメソッド name を undef します。

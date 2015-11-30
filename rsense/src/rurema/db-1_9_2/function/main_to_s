@@ -1,0 +1,8 @@
+name=main_to_s
+private=true
+macro=false
+type=VALUE
+filename=object.c
+params=(VALUE obj)
+
+

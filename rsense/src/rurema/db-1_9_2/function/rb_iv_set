@@ -1,0 +1,11 @@
+name=rb_iv_set
+private=false
+macro=false
+type=VALUE
+filename=variable.c
+params=(VALUE obj, char *name, VALUE val)
+
+
+オブジェクト obj のインスタンス変数 name に
+val を代入します。
+

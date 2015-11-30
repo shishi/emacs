@@ -1,0 +1,9 @@
+superclass=Object
+type=class
+library=rss
+extended=
+included=
+
+RSSのルート要素を生成するオブジェクトです．
+
+maker.channelを適切に設定しなければRSSは生成されません．

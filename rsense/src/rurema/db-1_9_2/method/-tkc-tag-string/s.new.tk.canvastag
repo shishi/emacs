@@ -1,0 +1,8 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(parent, name, mode = nil, *args)
+
+
+

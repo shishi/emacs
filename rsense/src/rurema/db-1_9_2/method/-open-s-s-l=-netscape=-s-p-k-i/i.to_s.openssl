@@ -1,0 +1,7 @@
+kind=defined
+names=to_s,to_text
+visibility=public
+
+--- to_s
+--- to_text
+

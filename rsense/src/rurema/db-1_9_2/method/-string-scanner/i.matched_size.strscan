@@ -1,0 +1,31 @@
+kind=defined
+names=matched_size
+visibility=public
+
+--- matched_size -> Fixnum | nil
+前回マッチした部分文字列の長さを返します。
+前回マッチに失敗していたら nil を返します。
+
+マッチしたサイズは文字単位でなくバイト単位となります。
+
+  def run(encode)
+    utf8 = "\u{308B 3073 3044}" # るびい
+    s = StringScanner.new(utf8.encode(encode))
+    s.scan(/#{"\u{308B}".encode(encode)}/)
+    s.matched_size
+  end
+
+  p run("UTF-8")     #=> 3
+  p run("EUC-JP")    #=> 2
+  p run("Shift_Jis") #=> 2
+
+
+使用例
+      s = StringScanner.new('test string')
+      s.matched_size # => nil
+      s.scan(/\w+/)  # => "test"
+      s.matched_size # => 4
+      s.scan(/\w+/)  # => nil
+      s.matched_size # => nil
+
+

@@ -1,0 +1,31 @@
+kind=defined
+names=FMTSTR
+visibility=protected 
+
+--- FMTSTR
+
+[[m:Benchmark.#benchmark]] の第三引数のデフォルト値。
+
+: %u
+  user CPU time で置き換えられます。[[m:Benchmark::Tms#utime]]
+: %y
+  system CPU time で置き換えられます(Mnemonic: y of "s*y*stem")。[[m:Benchmark::Tms#stime]]
+: %U
+  子プロセスの user CPU time で置き換えられます。[[m:Benchmark::Tms#cutime]]
+: %Y
+  子プロセスの system CPU time で置き換えられます。[[m:Benchmark::Tms#cstime]]
+: %t
+  total CPU time で置き換えられます。[[m:Benchmark::Tms#total]]
+: %r
+  実経過時間で置き換えられます。[[m:Benchmark::Tms#real]]
+: %n
+  ラベルで置き換えられます(Mnemonic: n of "*n*ame")。[[m:Benchmark::Tms#label]]
+
+上記のフォーマット文字列を使用しています。
+この定数の内容は以下の通りです。
+
+  "%10.6u %10.6y %10.6t %10.6r\n"
+
+@see [[m:Benchmark.#benchmark]], [[m:Benchmark::FMTSTR]]
+
+

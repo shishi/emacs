@@ -1,0 +1,19 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(seed = Random.new_seed) -> Random
+メルセンヌ・ツイスタに基づく疑似乱数発生装置オブジェクトを作ります。
+引数が省略された場合は、[[m:Random.new_seed]]の値を使用します。
+
+
+@param seed 疑似乱数生成器の種を整数で指定します。
+
+動作例： 種が同じなら同じ乱数列を発生することができる。
+
+  prng = Random.new(1234)                                
+  [ prng.rand, prng.rand ]   #=> [0.191519450378892, 0.622108771039832]
+  [ prng.integer(10), prng.integer(1000) ]  #=> [4, 664] 
+  prng = Random.new(1234)                                
+  [ prng.rand, prng.rand ]   #=> [0.191519450378892, 0.622108771039832]
+

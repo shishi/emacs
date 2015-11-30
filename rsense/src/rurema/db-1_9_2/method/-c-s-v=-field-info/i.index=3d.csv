@@ -1,0 +1,10 @@
+kind=defined
+names=index=
+visibility=public
+
+--- index=(val)
+
+インデックスの値をセットします。
+
+@param val インデックスの値を指定します。
+

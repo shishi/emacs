@@ -1,0 +1,18 @@
+kind=defined
+names=shellescape
+visibility=public
+
+--- shellescape(str) -> String
+
+文字列を Bourne シェルのコマンドライン中で安全に使えるようにエスケープします。
+
+@param str エスケープの対象となる文字列を指定します。
+@return エスケープされた文字列を返します。
+
+例:
+    require 'shellwords'
+    
+    pattern = 'Jan 15'
+    puts "grep #{Shellwords.shellescape(pattern)} file"
+    # => grep Jan\ 15 file
+

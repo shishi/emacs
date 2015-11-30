@@ -1,0 +1,15 @@
+kind=defined
+names=pub_key=
+visibility=public
+
+--- pub_key=(public_key)
+DH 公開鍵暗号の公開鍵を設定します。
+
+通常このメソッドで値を変更することはありません。
+よく考えて必要な場合のみ利用してください。
+
+@param public_key 設定する整数値(OpenSSL::BN)
+@see [[m:OpenSSL::PKey::DH#pub_key]],
+     [[m:OpenSSL::PKey::DH#generate_key!]]
+
+

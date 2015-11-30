@@ -1,0 +1,12 @@
+kind=defined
+names=CAPTION
+visibility=public
+
+--- CAPTION
+
+[[m:Benchmark.#bm]] の内部などで使用されます。
+
+実際の定義は [[m:Benchmark::Tms::CAPTION]] でされています。
+
+@see [[m:Benchmark::Tms::CAPTION]]
+

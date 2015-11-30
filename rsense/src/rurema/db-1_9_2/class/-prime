@@ -1,0 +1,19 @@
+superclass=Object
+type=class
+library=prime
+extended=
+included=Enumerable
+
+素数全体を表します。
+
+=== インスタンスを取得する方法
+
+Prime クラスはシングルトンであると考えてください。Prime クラスはデフォルトのインスタンスを持っており、ユーザーはそのインスタンスを利用すべきです。 [[m:Prime.instance]] によってそのインスタンスを取得できます。
+
+過去との互換性のために [[m:Prime.new]] も残っています。このメソッドは非推奨ですので、新しいプログラムでは利用しないでください。
+
+なお、利便性のためにデフォルトインスタンスのメソッドをクラスメソッドとしても利用できます。
+
+例:
+  Prime.instance.prime?(2)  #=> true
+  Prime.prime?(2)           #=> true

@@ -1,0 +1,11 @@
+name=FIX2INT
+private=false
+macro=true
+type=int
+filename=ruby.h
+params=(VALUE x)
+
+
+Fixnum を int に変換します。
+返り値が int の範囲から外れる場合は RangeError が発生します。
+

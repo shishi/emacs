@@ -1,0 +1,11 @@
+kind=defined
+names=host
+visibility=public
+
+--- host
+
+nil indicates [[RFC:822]] group syntax.
+Otherwise, returns [[RFC:822]] domain name.
+
+
+

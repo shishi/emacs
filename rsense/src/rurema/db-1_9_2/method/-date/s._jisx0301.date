@@ -1,0 +1,12 @@
+kind=defined
+names=_jisx0301
+visibility=public
+
+--- _jisx0301(str) -> Hash
+このメソッドは [[m:Date.jisx0301]] と似ていますが、日付オブジェクトを生成せずに、
+見いだした要素をハッシュで返します。
+
+[[m:Date.jisx0301]] も参照してください。
+
+@param str 日付をあらわす文字列
+

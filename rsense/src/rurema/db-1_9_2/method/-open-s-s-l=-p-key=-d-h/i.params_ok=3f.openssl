@@ -1,0 +1,10 @@
+kind=defined
+names=params_ok?
+visibility=public
+
+--- params_ok? -> bool
+パラメータ p と g が安全かどうかを判定します。
+
+@see [[m:OpenSSL::PKey::DH#generate_key!]],
+     [[m:OpenSSL::PKey::DH.generate]]
+

@@ -1,0 +1,12 @@
+superclass=
+type=module
+library=net.http
+extended=
+included=
+
+HTTP ヘッダのためのモジュールです。
+
+このモジュールを mix-in に @header という(ハッシュを代入してある)
+変数への「大文字小文字を無視した」ハッシュ的アクセスメソッドを
+提供します。またよくある HTTP ヘッダへの便利なアクセスメソッドも
+用意します。

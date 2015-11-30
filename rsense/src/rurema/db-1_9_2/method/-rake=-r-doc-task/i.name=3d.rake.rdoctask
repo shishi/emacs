@@ -1,0 +1,10 @@
+kind=defined
+names=name=
+visibility=public 
+
+--- name=(name)
+
+タスクの名前をセットします。
+
+@param name タスクの名前を指定します。
+

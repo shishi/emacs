@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=
+classes=WEBrick=HTTPAuth=UserDB
+is_sublibrary=true
+
+

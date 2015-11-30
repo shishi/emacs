@@ -1,0 +1,6 @@
+kind=defined
+names=_invoke_with_enc
+visibility=public
+
+--- _invoke_with_enc(*args)
+

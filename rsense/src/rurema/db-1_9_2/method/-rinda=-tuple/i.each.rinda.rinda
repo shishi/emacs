@@ -1,0 +1,10 @@
+kind=defined
+names=each
+visibility=public
+
+--- each{|key, value| ... }
+
+各ハッシュキー key と値 value のペアを引数としてブロックを評価します。
+self が [[c:Array]] オブジェクトから生成された場合は、
+インデックスと値のペアを引数としてブロックを評価します。
+

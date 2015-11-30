@@ -1,0 +1,12 @@
+name=rb_obj_singleton_methods
+private=false
+macro=false
+type=VALUE
+filename=class.c
+params=(int argc, VALUE *argv, VALUE obj)
+
+
+Object#singleton_methods の実体。
+オブジェクト obj に定義されている特異メソッド名のリストを
+文字列の配列で返す。
+

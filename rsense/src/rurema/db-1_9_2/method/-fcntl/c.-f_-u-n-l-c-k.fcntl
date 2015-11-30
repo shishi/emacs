@@ -1,0 +1,7 @@
+kind=defined
+names=F_UNLCK
+visibility=public
+
+--- F_UNLCK -> Integer
+そのファイルからリースを削除します。
+

@@ -1,0 +1,7 @@
+kind=defined
+names=BEG
+visibility=public
+
+--- BEG -> Integer
+BEG キーを表す定数です。
+

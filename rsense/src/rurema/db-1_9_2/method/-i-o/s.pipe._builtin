@@ -1,0 +1,34 @@
+kind=defined
+names=pipe
+visibility=public
+
+--- pipe                    -> [IO]
+--- pipe(enc_str)           -> [IO]
+--- pipe(ext_enc)           -> [IO]
+--- pipe(ext_enc, int_enc)  -> [IO]
+
+[[man:pipe(2)]] を実行して、相互につながった2つの
+[[c:IO]] オブジェクトを要素とする配列を返します。
+
+戻り値の配列は最初の要素が読み込み側で、次の要素が書き込み側です。
+
+
+@param enc_str 読み込み側の外部エンコーディングを文字列で指定します。
+               文字列がコロンを挟んだ二つのエンコーディング名 "A:B" である場合
+               最初のものが外部エンコーディング、次が内部エンコーディングを意味します。
+
+@param ext_enc 読み込み側の外部エンコーディングを Encoding オブジェクトで指定します。
+
+@param int_enc 読み込み側の内部エンコーディングを Encoding オブジェクトで指定します。
+
+
+@raise Errno::EXXX IO オブジェクトの作成に失敗した場合に発生します。
+
+  r, w = IO.pipe
+  p [r, w]            # => [#<IO:0x401b90f8>, #<IO:0x401b7718>]
+  Thread.new do
+    w.puts "foo"
+    w.close
+  end
+  p r.gets           # => "foo\n"
+

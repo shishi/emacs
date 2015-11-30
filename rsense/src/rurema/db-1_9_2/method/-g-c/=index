@@ -1,0 +1,6 @@
+.disable	GC.disable
+.enable	GC.enable
+.start	GC.start
+.stress	GC.stress
+.stress=	GC.stress
+#garbage_collect	GC#garbage_collect

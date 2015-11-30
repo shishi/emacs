@@ -1,0 +1,14 @@
+kind=defined
+names=each_pair
+visibility=public
+
+--- each_pair {|member, value| ... } -> self
+--- each_pair -> Enumerator
+(このメソッドは Struct の下位クラスにのみ定義されています)
+構造体のメンバ名([[c:Symbol]])と値の組を引数にブロックを繰り返し実行します。
+
+    Foo = Struct.new(:foo, :bar)
+    Foo.new('FOO', 'BAR').each_pair {|m, v| p [m,v]}
+    # => [:foo, "FOO"]
+         [:bar, "BAR"]
+

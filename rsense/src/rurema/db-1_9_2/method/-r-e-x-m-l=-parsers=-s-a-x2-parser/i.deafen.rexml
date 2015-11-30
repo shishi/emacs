@@ -1,0 +1,7 @@
+kind=defined
+names=deafen
+visibility=public
+
+--- deafen(listener)
+--- deafen { ... }
+

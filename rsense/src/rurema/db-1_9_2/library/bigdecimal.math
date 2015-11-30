@@ -1,0 +1,38 @@
+methods=
+sublibraries=
+requires=
+classes=BigMath
+is_sublibrary=true
+
+BigDecimalを使った数学的な機能を提供します。
+
+以下の計算が行えます。
+
+ * sqrt(x, prec)
+ * sin (x, prec)
+ * cos (x, prec)
+ * atan(x, prec)
+ * exp (x, prec)
+ * log (x, prec)
+ * PI  (prec)
+ * E   (prec)
+
+引数:
+
+: x
+
+  計算対象の BigDecimal オブジェクト。
+
+: prec
+
+  計算結果の精度。
+
+例:
+
+  require "bigdecimal"
+  require "bigdecimal/math"
+
+  include BigMath
+
+  a = BigDecimal((PI(100)/2).to_s)
+  puts sin(a,100) #=> 0.10000000000000000000......E1

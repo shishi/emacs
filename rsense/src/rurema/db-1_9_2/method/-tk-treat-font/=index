@@ -1,0 +1,10 @@
+#asciifont_configure	TkTreatFont#asciifont_configure
+#asciifont_copy	TkTreatFont#asciifont_copy
+#font_configinfo	TkTreatFont#font_configinfo
+#font_configure	TkTreatFont#font_configure
+#font_copy	TkTreatFont#font_copy
+#fontobj	TkTreatFont#font_configinfo
+#kanjifont_configure	TkTreatFont#kanjifont_configure
+#kanjifont_copy	TkTreatFont#kanjifont_copy
+#latinfont_configure	TkTreatFont#asciifont_configure
+#latinfont_copy	TkTreatFont#asciifont_copy

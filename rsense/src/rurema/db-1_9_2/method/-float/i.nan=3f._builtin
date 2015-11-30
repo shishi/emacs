@@ -1,0 +1,17 @@
+kind=defined
+names=nan?
+visibility=public
+
+--- nan? -> bool
+
+数値が NaN(Not a number)のとき真を返します。
+
+例:
+
+  nan = 0.0/0.0
+  p nan
+  p nan.nan?
+  
+  => NaN
+     true
+

@@ -1,0 +1,9 @@
+kind=defined
+names=deltag,dtag
+visibility=public
+
+--- deltag(tag, tag_to_del = Tk::None)
+--- dtag(tag, tag_to_del = Tk::None)
+
+
+

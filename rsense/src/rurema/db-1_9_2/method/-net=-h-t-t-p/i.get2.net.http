@@ -1,0 +1,44 @@
+kind=defined
+names=get2,request_get
+visibility=public
+
+--- request_get(path, header = nil) -> Net::HTTPResponse
+--- request_get(path, header = nil) {|response| .... } -> Net::HTTPResponse
+--- get2(path, header = nil) -> Net::HTTPResponse
+--- get2(path, header = nil) {|response| .... } -> Net::HTTPResponse
+
+サーバ上の path にあるエンティティを取得します。
+[[c:Net::HTTPResponse]] オブジェクトを返します。
+
+header が nil
+でなければ、リクエストを送るときにその内容を HTTP ヘッダとして
+送ります。 header は { 'Accept' = > '*/*', ... } という
+形のハッシュでなければいけません。
+
+ブロックとともに呼び出されたときは、
+エンティティボディをソケットから読み出す前に、
+接続を維持した状態で [[c:Net::HTTPResponse]]
+オブジェクトをブロックに渡します。
+大きなサイズのボディを一度に読みだすとまずく、
+小さなサイズに分けて取りだしたい場合にはこれを利用します。
+
+@param path 取得するエンティティのパスを文字列で指定します。
+@param header リクエストの HTTP ヘッダをハッシュで指定します。
+
+  # example
+  response = http.request_get('/index.html')
+  p response['content-type']
+  puts response.body          # body is already read
+  
+  # using block
+  http.request_get('/index.html') {|response|
+    p response['content-type']
+    response.read_body do |str|   # read body now
+      print str
+    end
+  }
+
+get2 は時代遅れなので使わないでください。
+
+@see [[m:Net::HTTP#get]], [[m:Net::HTTPResponse#read_body]]
+

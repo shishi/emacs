@@ -1,0 +1,15 @@
+kind=defined
+names=addr
+visibility=public
+
+--- addr
+
+ソケットの接続情報を表す配列を返します。配列の各要素は第1要
+素が文字列 "AF_UNIX"、第2要素がパスを表す文字列です。
+
+例:
+
+  UNIXServer.open("/tmp/s") {|serv|
+    p serv.addr     #=> ["AF_UNIX", "/tmp/s"]
+  }
+

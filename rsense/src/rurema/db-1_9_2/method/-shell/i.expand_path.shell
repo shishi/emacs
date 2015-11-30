@@ -1,0 +1,12 @@
+kind=defined
+names=expand_path
+visibility=public
+
+--- expand_path(path) -> String
+
+Fileクラスにある同名のクラスメソッドと同じです.
+
+@param path ファイル名を表す文字列を指定します。
+
+@see [[m:File.expand_path]]
+

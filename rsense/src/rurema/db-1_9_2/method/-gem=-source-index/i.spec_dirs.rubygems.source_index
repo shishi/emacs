@@ -1,0 +1,8 @@
+kind=defined
+names=spec_dirs
+visibility=public
+
+--- spec_dirs -> [String]
+
+[[m:Gem::SourceIndex#refresh!]] で自身を更新する時に使用するディレクトリを取得します。
+

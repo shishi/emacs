@@ -1,0 +1,10 @@
+kind=defined
+names=+
+visibility=public
+
+--- +(m) -> Matrix
+
+行列mを加算した行列を返します。
+
+@param m 加算する行列。加算可能な行列を渡します。
+

@@ -1,0 +1,8 @@
+kind=defined
+names=REQUIRE_ORDER
+visibility=protected 
+
+--- REQUIRE_ORDER -> 0
+非オプション引数の後に来たオプションは、オプションとして認識しません。
+最初に非オプション引数が現れた時点で、オプションの解析処理を中止します。
+

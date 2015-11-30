@@ -1,0 +1,8 @@
+kind=defined
+names=icursor
+visibility=public
+
+--- icursor(tagOrId, index)
+
+
+

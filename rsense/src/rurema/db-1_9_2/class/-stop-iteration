@@ -1,0 +1,7 @@
+superclass=IndexError
+type=class
+library=_builtin
+extended=
+included=
+
+イテレーションを止めるときに発生する例外です。

@@ -1,0 +1,15 @@
+kind=defined
+names=select
+visibility=public
+
+--- select                        -> Enumerator
+--- select {|key, value| ... }   -> Hash
+
+key, value のペアについてブロックを評価し，真となるペアだけを含む
+ハッシュを生成して返します。
+
+   h = { "a" => 100, "b" => 200, "c" => 300 }
+   h.select {|k,v| k > "a"}  #=> {"b" => 200, "c" => 300}
+   h.select {|k,v| v < 200}  #=> {"a" => 100}
+
+

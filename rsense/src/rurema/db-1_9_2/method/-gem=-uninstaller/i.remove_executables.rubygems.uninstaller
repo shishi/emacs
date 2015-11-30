@@ -1,0 +1,10 @@
+kind=defined
+names=remove_executables
+visibility=public 
+
+--- remove_executables(gemspec)
+
+与えられた [[c:Gem::Specification]] に対応する実行ファイルを削除します。
+
+@param gemspec アンインストール指定されている Gem の [[c:Gem::Specification]] を指定します。
+

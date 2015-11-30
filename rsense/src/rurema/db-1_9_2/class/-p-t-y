@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=pty
+extended=
+included=
+
+疑似端末(Pseudo tTY)を扱うモジュールです。

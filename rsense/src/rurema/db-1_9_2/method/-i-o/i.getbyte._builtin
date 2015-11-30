@@ -1,0 +1,13 @@
+kind=defined
+names=getbyte
+visibility=public
+
+--- getbyte   -> Integer | nil
+
+IO から1バイトを読み込み整数として返します。
+既に EOF に達していれば nil を返します。
+
+   f = File.new("testfile")
+   f.getbyte   #=> 84
+   f.getbyte   #=> 104
+

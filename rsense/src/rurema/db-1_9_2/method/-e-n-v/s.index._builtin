@@ -1,0 +1,16 @@
+kind=defined
+names=index,key
+visibility=public
+
+--- key(val)   -> String | nil
+--- index(val) -> String | nil
+
+val に対応するキーを返します。対応する要素が存在しない時には
+nil を返します。
+
+[[m:ENV.index]] は obsolete です。使用すると警告メッセージが表示されます。
+[[m:ENV.key]] を使用してください。
+
+@param val  値を指定します。 to_str で文字列化されます。
+
+

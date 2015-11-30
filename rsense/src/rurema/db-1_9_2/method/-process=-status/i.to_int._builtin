@@ -1,0 +1,12 @@
+kind=defined
+names=to_int
+visibility=public
+
+--- to_int    -> Integer
+
+to_i と同じです。
+
+このメソッドにより $? が [[c:Fixnum]]
+として扱われるようになります(暗黙の型変換)。これは後方互換性のため
+です。
+

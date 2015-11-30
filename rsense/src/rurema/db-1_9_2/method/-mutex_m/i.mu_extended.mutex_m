@@ -1,0 +1,9 @@
+kind=defined
+names=mu_extended
+visibility=public
+
+--- mu_extended -> Mutex
+
+[[m:Mutex_m.extend_object]] から呼び出されます。
+ユーザが直接使うことはありません。
+

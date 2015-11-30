@@ -1,0 +1,7 @@
+superclass=StandardError
+type=class
+library=shell.error
+extended=
+included=
+
+空のディレクトリスタックから要素を取り出そうとしたときに発生する例外です。

@@ -1,0 +1,10 @@
+kind=defined
+names=attributes=
+visibility=public
+
+--- attributes=(s)
+
+自身の Attribute を文字列で設定します。
+
+@param s 自身の Attribute を文字列で設定します。
+

@@ -1,0 +1,12 @@
+kind=defined
+names=exception_details
+visibility=public 
+
+--- exception_details(exception, message) -> String
+
+与えられた例外の詳細を文字列として返します。
+
+@param exception 例外を指定します。
+
+@param message メッセージを指定します。
+

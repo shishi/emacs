@@ -1,0 +1,16 @@
+kind=defined
+names=responses
+visibility=public
+
+--- responses
+
+Returns recorded untagged responses.
+
+ex).
+
+  imap.select("inbox")
+  p imap.responses["EXISTS"][-1]
+  #=> 2
+  p imap.responses["UIDVALIDITY"][-1]
+  #=> 968263756
+

@@ -1,0 +1,11 @@
+kind=defined
+names=write
+visibility=public
+
+--- write(string) -> ()
+ホストに文字列を送ります。
+文字列に変換は一切施しません。
+
+@param string ホストに送る文字列
+@see [[m:Net::Telnet#print]], [[m:Net::Telnet#puts]]
+

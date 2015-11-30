@@ -1,0 +1,11 @@
+superclass=Resolv=DNS=Resource
+type=class
+library=resolv
+extended=
+included=
+
+DNS リソースの SOA (Start Of Authority) レコード
+を表す抽象クラスです。
+
+[[m:Resolv::DNS#getresource]] で SOA レコードを得たい場合は
+[[c:Resolv::DNS::Resource::IN::SOA]] を使うべきです。

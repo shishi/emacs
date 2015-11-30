@@ -1,0 +1,8 @@
+kind=defined
+names=predicates,predicates=
+visibility=public
+
+--- predicates -> String
+--- predicates=(val)
+執筆者募集。 クラス変数にpredicates に対する参照、代入をおこなうためのメソッドです。
+

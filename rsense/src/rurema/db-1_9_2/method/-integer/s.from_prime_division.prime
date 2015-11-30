@@ -1,0 +1,18 @@
+kind=added
+names=from_prime_division
+visibility=public
+
+--- from_prime_division(pd) -> Integer
+
+素因数分解された結果を元の数値に戻します。
+
+@param pd 整数のペアの配列を指定します。含まれているペアの第一要素は素因数を、
+          第二要素はその素因数の指数をあらわします。
+
+@see [[m:Prime#int_from_prime_division]]
+
+例:
+  Prime.int_from_prime_division([[2,2], [3,1]])  #=> 12
+  Prime.int_from_prime_division([[2,2], [3,2]])  #=> 36
+
+

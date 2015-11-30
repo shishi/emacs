@@ -1,0 +1,18 @@
+kind=defined
+names=protected
+visibility=private 
+
+--- protected(*name) -> self
+
+メソッドを protected に設定します。
+
+引数なしのときは今後このクラスまたはモジュール定義内で新規に定義さ
+れるメソッドを protected に設定します。
+
+引数が与えられた時には引数によって指定されたメソッドを protected
+に設定します。
+
+@param name [[c:String]] または [[c:Symbol]] を 0 個以上指定します。
+
+@raise NameError 存在しないメソッド名を指定した場合に発生します。
+

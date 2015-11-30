@@ -1,0 +1,8 @@
+kind=defined
+names=TO_PATH
+visibility=public
+
+--- TO_PATH
+内部的に使っている定数です。利用者が使うことはありません。
+
+

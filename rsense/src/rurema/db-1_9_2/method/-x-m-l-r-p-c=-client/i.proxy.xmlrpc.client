@@ -1,0 +1,11 @@
+kind=defined
+names=proxy
+visibility=public
+
+--- proxy( prefix, *args )
+
+Returns an object of class XMLRPC::Client::Proxy, initialized with
+prefix and args. A proxy object returned by this method behaves
+like [[unknown:XMLRPC::Client#call]], i.e. a call on that object will raise a
+XMLRPC::FaultException when a fault-structure is returned by that call.
+

@@ -1,0 +1,13 @@
+kind=defined
+names=minor_version
+visibility=public
+
+--- minor_version -> Integer
+型のマイナーバージョン番号を取得します。
+
+@return 型のマイナーバージョン番号を整数で返します。
+@raise WIN32OLERuntimeError 型属性の読み取りに失敗すると通知します。
+
+   tobj = WIN32OLE_TYPE.new('Microsoft Word 14.0 Object Library', 'Documents')
+   p tobj.minor_version   # => 5
+

@@ -1,0 +1,20 @@
+superclass=
+type=module
+library=_builtin
+extended=
+included=
+
+カレントプロセスのグループ ID を操作するためのモジュールです。
+
+移植性が考慮されており、プラットフォーム間の違いを吸収するように実装されています。
+プラットフォームのシステムコールを直接使いたい場合には [[c:Process::Sys]]
+が提供されています。[[c:Process::Sys]] と Process::GID を同時に使うことは推奨されません。
+
+実グループ ID を変更するメソッドは提供されていません。
+これは [[m:Process::GID.#eid=]] と [[m:Process::GID.#re_exchange]] を以下のように
+組み合わせることによって実現できます。
+
+                             # (r,e,s) == (g1,g2,??)
+  Process::GID.re_exchange   # (g1,g2,??) ==> (g2,g1,??)
+  Process::GID.eid = id      # (g2,g1,??) ==> (g2,id,??)
+  Process::GID.re_exchange   # (g2,id,??) ==> (id,g2,??)

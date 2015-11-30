@@ -1,0 +1,23 @@
+kind=defined
+names=getch
+visibility=public
+
+--- getch -> String | nil
+一文字スキャンして文字列で返します。
+スキャンポインタをその後ろに進めます。
+スキャンポインタが文字列の末尾を指すならnilを返します。
+
+一文字の定義は、与えた文字列のエンコードに依存します。
+
+使用例
+  require 'strscan'
+
+  utf8 = "\u{308B 3073 3044}"
+  s = StringScanner.new(utf8.encode("UTF-8")) 
+  p s.getch                         # => "る"
+  p s.getch                         # => "び"
+  p s.getch                         # => "い"
+  p s.getch                         # => nil
+
+
+

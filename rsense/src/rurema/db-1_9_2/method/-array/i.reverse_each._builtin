@@ -1,0 +1,12 @@
+kind=defined
+names=reverse_each
+visibility=public
+
+--- reverse_each {|item| ... }    -> self
+--- reverse_each                  -> Enumerator
+
+各要素に対して逆順にブロックを評価します。
+
+ブロックが与えられなかった場合は、自身と reverse_each から生成した
+[[c:Enumerator]] オブジェクトを返します。
+

@@ -1,0 +1,14 @@
+kind=defined
+names=do_GET
+visibility=public
+
+--- do_GET(request, response) -> ()
+
+GET リクエストを処理します。
+
+@param request クライアントからのリクエストを表す [[c:WEBrick::HTTPRequest]] オブジェクトです。
+
+@param response クライアントへのレスポンスを表す [[c:WEBrick::HTTPResponse]] オブジェクトです。
+
+@raise WEBrick::HTTPStatus::NotFound 対象となるパスが見つからなかった場合に発生します。
+

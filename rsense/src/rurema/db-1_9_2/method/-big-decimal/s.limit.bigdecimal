@@ -1,0 +1,18 @@
+kind=defined
+names=limit
+visibility=public
+
+--- limit([n])
+
+生成されるBigDecimalオブジェクトの最大桁数をn桁に制限します。
+戻り値は設定する前の値です。設定値のデフォルト値は0で、桁数無制限という意味です。
+n を指定しない、または n が nil の場合は、現状の最大桁数が返ります。
+計算を続行する間に、数字の桁数が無制限に増えてしまうような場合 limit で
+予め桁数を制限できます。この場合 [[m:BigDecimal.mode]] で指定された丸め処理が
+実行されます。ただし、インスタンスメソッド ([[m:BigDecimal#truncate]] /
+[[m:BigDecimal#round]] / [[m:BigDecimal#ceil]] / [[m:BigDecimal#floor]] /
+[[m:BigDecimal#add]]/ [[m:BigDecimal#sub]] / [[m:BigDecimal#mult]] /
+[[m:BigDecimal#div]]) の桁数制限は limit より優先されます。
+
+    mf = BigDecimal::limit(n)
+

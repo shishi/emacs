@@ -1,0 +1,8 @@
+kind=defined
+names=close_write
+visibility=public
+
+--- close_write -> nil
+
+[[m:IO#close_write]] に委譲します。
+

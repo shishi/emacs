@@ -1,0 +1,16 @@
+kind=defined
+names=partition
+visibility=public
+
+--- partition               -> Enumerator
+--- partition {|item| ... } -> [[object], [object]]
+
+各要素を、ブロックの条件を満たす要素と満たさない要素に分割します。
+各要素に対してブロックを評価して、その値が真であった要素の配列と、
+偽であった要素の配列の 2 つを配列に入れて返します。
+
+例:
+
+  [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0].partition {|i| i % 3 == 0 }
+   #=> [[9, 6, 3, 0], [10, 8, 7, 5, 4, 2, 1]]
+

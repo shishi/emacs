@@ -1,0 +1,9 @@
+superclass=
+type=module
+library=openssl
+extended=
+included=
+
+  * [[c:OpenSSL::SSL::SSLContext]]
+  * [[c:OpenSSL::SSL::SSLServer]]
+  * [[c:OpenSSL::SSL::SSLSocket]]

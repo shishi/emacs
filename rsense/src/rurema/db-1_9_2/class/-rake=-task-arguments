@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rake
+extended=
+included=Enumerable
+
+タスクに渡されるパラメータの管理をするクラスです。

@@ -1,0 +1,19 @@
+kind=defined
+names=recvfrom
+visibility=public
+
+--- recvfrom(maxlen[, flags])
+
+recv と同様にソケットからデータを受け取りますが、
+戻り値は文字列と相手ソケットのパスのペアです。引数につい
+ては recv と同様です。
+
+例:
+
+  UNIXServer.open("/tmp/s") {|serv|
+    c = UNIXSocket.open("/tmp/s")
+    s = serv.accept
+    s.send "a", 0
+    p c.recvfrom(10)[0]     #=> "a"
+  }
+

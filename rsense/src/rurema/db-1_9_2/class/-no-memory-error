@@ -1,0 +1,7 @@
+superclass=Exception
+type=class
+library=_builtin
+extended=
+included=
+
+メモリの確保に失敗すると発生します。

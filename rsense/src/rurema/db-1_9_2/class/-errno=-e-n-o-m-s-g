@@ -1,0 +1,7 @@
+superclass=SystemCallError
+type=class
+library=_builtin
+extended=
+included=
+
+システムコールのエラーコードを表す例外クラスです。詳細は [[c:Errno::EXXX]] を参照してください。

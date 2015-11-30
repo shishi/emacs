@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=find
+extended=
+included=
+
+ディレクトリ配下のファイルを探索するためのモジュールです。

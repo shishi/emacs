@@ -1,0 +1,7 @@
+superclass=Net=ProtocolError
+type=class
+library=net.protocol
+extended=
+included=
+
+認証に問題があった場合に発生する例外です。

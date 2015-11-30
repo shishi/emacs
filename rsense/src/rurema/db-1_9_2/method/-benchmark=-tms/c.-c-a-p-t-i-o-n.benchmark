@@ -1,0 +1,10 @@
+kind=defined
+names=CAPTION
+visibility=protected 
+
+--- CAPTION
+
+[[m:Benchmark.#bm]] の内部などで使用されます。
+
+@see [[m:Benchmark::CAPTION]]
+

@@ -1,0 +1,7 @@
+superclass=GetoptLong=Error
+type=class
+library=getoptlong
+extended=
+included=
+
+知らないオプションが与えられた場合に発生する例外です。

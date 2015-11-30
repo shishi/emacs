@@ -1,0 +1,10 @@
+kind=defined
+names=seed
+visibility=public
+
+--- seed -> Integer
+現在の乱数の種を返します。
+
+動作例:
+  p Random.new(3).seed # => 3
+

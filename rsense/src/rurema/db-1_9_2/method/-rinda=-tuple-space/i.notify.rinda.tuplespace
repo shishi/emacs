@@ -1,0 +1,22 @@
+kind=defined
+names=notify
+visibility=public
+
+--- notify(event, tuple, sec = nil)
+
+Registers for notifications of +event+. Returns a
+NotifyTemplateEntry. See NotifyTemplateEntry for examples of how to
+listen for notifications.
+
++event+ can be:
+
+'write':  A tuple was added
+
+'take':   A tuple was taken or moved
+
+'delete': A tuple was lost after being overwritten or expiring
+
+The TupleSpace will also notify you of the 'close' event when the
+NotifyTemplateEntry has expired.
+
+

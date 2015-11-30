@@ -1,0 +1,10 @@
+kind=defined
+names=force_quotes?
+visibility=public
+
+--- force_quotes? -> bool
+
+出力されるフィールドがクオートされる場合は、真を返します。
+
+@see [[m:CSV.new]]
+

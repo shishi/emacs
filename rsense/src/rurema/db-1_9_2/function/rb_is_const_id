@@ -1,0 +1,10 @@
+name=rb_is_const_id
+private=false
+macro=false
+type=int
+filename=parse.y
+params=(ID id)
+
+
+定数名として有効な ID ならば真。
+

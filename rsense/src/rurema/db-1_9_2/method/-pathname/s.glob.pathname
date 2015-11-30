@@ -1,0 +1,20 @@
+kind=defined
+names=glob
+visibility=public
+
+--- glob(pattern, flags=0) -> [Pathname]
+--- glob(pattern, flags=0) {|pathname| ...} -> nil
+
+ワイルドカードの展開を行なった結果を、
+Pathname オブジェクトの配列として返します。
+
+引数の意味は、[[m:Dir.glob]] と同じです。 flag の初期値である 0 は「何
+も指定しない」ことを意味します。
+
+ブロックが与えられたときは、ワイルドカードにマッチした Pathname オブジェ
+クトを1つずつ引数としてそのブロックに与えて実行させます。この場合、値と
+しては nil を返します。
+
+@param pattern ワイルドカードパターンです
+@param flags   パターンマッチ時のふるまいを変化させるフラグを指定します
+

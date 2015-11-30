@@ -1,0 +1,10 @@
+superclass=
+type=module
+library=prime
+extended=
+included=
+
+Ruby1.8 との互換性のためのモジュールです。 
+[[c:Prime]] オブジェクトにRuby 1.8互換の機能を与えます。
+
+[[m:Prime.new]] が返すインスタンスはこのモジュールで [[m:Object#extend]] されています。一方、 [[m:Prime.instance]] が返すインスタンスは extend されていません。

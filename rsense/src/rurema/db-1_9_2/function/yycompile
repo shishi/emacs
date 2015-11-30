@@ -1,0 +1,12 @@
+name=yycompile
+private=true
+macro=false
+type=NODE *
+filename=parse.y
+params=(char *f, int line)
+
+
+コンパイルを開始します。そのとき、
+ファイル名 f の line 行目からを
+コンパイルするものと仮定します。
+

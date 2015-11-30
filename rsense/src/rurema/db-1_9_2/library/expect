@@ -1,0 +1,13 @@
+methods=IO/i.expect.expect
+sublibraries=
+requires=
+classes=
+is_sublibrary=false
+
+IOオブジェクトから指定したパターンが読み込まれるまで待つ機能を提供します。
+
+
+Expect ライブラリは、tcl の expect パッケージと似たような機能を IO クラスに追加します。
+
+$expect_verbose というグローバル変数に真をセットすると、
+レシーバから文字を読み込む度に読み込んだ文字を標準出力に表示するようになります。

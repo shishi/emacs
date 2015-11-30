@@ -1,0 +1,14 @@
+kind=defined
+names=at
+visibility=public
+
+--- at(pos)    -> object
+
+配列の pos の位置にある要素を返します。
+self[pos] と同じです。
+
+@param pos インデックスを整数で指定します。
+
+  a = [0, 1, 2, 3]
+  p a.at(1)        #=> 1
+

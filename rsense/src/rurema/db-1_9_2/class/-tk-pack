@@ -1,0 +1,10 @@
+superclass=
+type=module
+library=tk.pack
+extended=Tk
+included=Tk
+
+ウィジェットを配置するためのモジュールです。
+このモジュールにより、ウィジェットは空き領域を順次詰めるように配置されます。
+
+普通、ウィジェットの配置には[[m:TkWindow#pack]]が使われます。

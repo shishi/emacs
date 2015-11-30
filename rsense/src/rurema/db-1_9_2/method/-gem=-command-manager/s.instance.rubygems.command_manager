@@ -1,0 +1,9 @@
+kind=defined
+names=instance
+visibility=public
+
+--- instance -> Gem::CommandManager
+
+自身をインスタンス化します。
+
+

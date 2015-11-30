@@ -1,0 +1,10 @@
+kind=defined
+names=terminate_interaction
+visibility=public 
+
+--- terminate_interaction(*args) -> ()
+
+アプリケーションを終了します。
+
+@param args 委譲先のメソッドに与える引数です。
+

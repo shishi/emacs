@@ -1,0 +1,8 @@
+kind=defined
+names=A_VERTICAL
+visibility=public
+
+--- A_VERTICAL -> Integer
+vertical highlight
+@see [[man:curs_attr(3x)]]
+

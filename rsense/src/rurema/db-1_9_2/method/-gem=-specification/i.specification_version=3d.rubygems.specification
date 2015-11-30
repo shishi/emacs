@@ -1,0 +1,12 @@
+kind=defined
+names=specification_version=
+visibility=public
+
+--- specification_version=(version)
+
+この Gem パッケージに用いられている gemspec のバージョンをセットします。
+
+@param version gemspec のバージョンを指定します。
+
+@see [[m:Gem::Specification::SPECIFICATION_VERSION_HISTORY]]
+

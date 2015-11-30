@@ -1,0 +1,9 @@
+superclass=BasicSocket
+type=class
+library=socket
+extended=
+included=
+
+UNIX ドメインのストリーム型ソケットのクラス。通常の
+[[c:IO]] クラスのサブクラスと同様の
+入出力ができます。

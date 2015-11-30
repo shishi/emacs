@@ -1,0 +1,3 @@
+#failed	Iconv::Failure#failed
+#inspect	Iconv::Failure#inspect
+#success	Iconv::Failure#success

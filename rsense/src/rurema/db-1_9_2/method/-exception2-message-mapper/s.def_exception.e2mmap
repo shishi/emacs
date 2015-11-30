@@ -1,0 +1,20 @@
+kind=defined
+names=def_exception
+visibility=public
+
+--- def_exception(klass, exception_name, message_format, superklass = StandardError) -> Class
+
+exception_name という名前の例外クラスを定義します。
+
+@param klass 一階層上となるクラス名を指定します。
+
+@param exception_name 例外クラスの名前をシンボルで指定します。
+
+@param message_format メッセージのフォーマットを指定します。
+                    [[m:Kernel.#sprintf]] のフォーマット文字列と同じ形式を使用できます。
+
+@param superklass 定義する例外クラスのスーパークラスを指定します。
+                  省略すると [[c:StandardError]] を使用します。
+
+@return 定義した例外クラスを返します。
+

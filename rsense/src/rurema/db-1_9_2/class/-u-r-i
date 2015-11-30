@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=uri
+extended=
+included=
+
+URI を扱うためのモジュールです。

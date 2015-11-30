@@ -1,0 +1,7 @@
+superclass=REXML=Parent
+type=class
+library=rexml
+extended=
+included=REXML=XMLTokens
+
+

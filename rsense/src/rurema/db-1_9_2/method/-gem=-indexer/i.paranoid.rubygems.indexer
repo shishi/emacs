@@ -1,0 +1,13 @@
+kind=defined
+names=paranoid
+visibility=public 
+
+--- paranoid(path, extension)
+圧縮されたデータと圧縮されていないデータを比較して一致しなければ例外を発生させます。
+
+@param path 圧縮されていないファイルのパスを指定します。
+
+@param extension 圧縮されたファイルの拡張子を指定します。
+
+@raise RuntimeError 圧縮されたデータと圧縮されていないデータが一致しない場合に発生します。
+

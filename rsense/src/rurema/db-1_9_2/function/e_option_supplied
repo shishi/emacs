@@ -1,0 +1,10 @@
+name=e_option_supplied
+private=true
+macro=false
+type=int
+filename=parse.y
+params=(void)
+
+
+ruby -e で与えたプログラムを実行中なら真。
+

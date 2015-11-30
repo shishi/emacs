@@ -1,0 +1,25 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(output = '', maxwidth = 79, newline = "\n")               -> PrettyPrint
+--- new(output = '', maxwidth = 79, newline = "\n"){|width| ...}  -> PrettyPrint
+
+pretty printing のためのバッファを生成します。
+output は出力先です。output は << メソッドを持っていなければなりません。
+<< メソッドには
+ * [[m:PrettyPrint#text]] の第1引数 obj 
+ * [[m:PrettyPrint#breakable]] の第1引数 sep 
+ * [[m:PrettyPrint.new]] の第3引数 newline 
+ * [[m:PrettyPrint.new]] に与えたブロックを評価した結果
+のどれかひとつが引数として与えられます。
+
+ブロックが指定された場合は、空白を生成するために使われます。ブロックは、生成したい空白の幅を表す整数を引数として呼ばれます。ブロックが指定されない場合は、空白を生成するために {|width| ' ' * width} が使われます。
+
+@param output 出力先を指定します。output は << メソッドを持っていなければなりません。
+
+@param maxwidth 行の最大幅を指定します。ただし、改行できないものが渡された場合は、実際の出力幅は maxwidth を越えることがあります。
+
+@param newline 改行に使われます。
+
+

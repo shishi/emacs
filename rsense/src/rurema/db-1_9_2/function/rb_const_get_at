@@ -1,0 +1,11 @@
+name=rb_const_get_at
+private=false
+macro=false
+type=VALUE
+filename=variable.c
+params=(VALUE klass, ID name)
+
+
+クラス klass で定義された定数 name の値を取得します
+(祖先や外のクラスは調べない)。
+

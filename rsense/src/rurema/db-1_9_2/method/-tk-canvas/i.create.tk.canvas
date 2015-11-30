@@ -1,0 +1,10 @@
+kind=defined
+names=create
+visibility=public
+
+--- create(type, *args)
+
+create a canvas item without creating a TkcItem object
+
+
+

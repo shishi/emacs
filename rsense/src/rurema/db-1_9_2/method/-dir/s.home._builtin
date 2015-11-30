@@ -1,0 +1,15 @@
+kind=defined
+names=home
+visibility=public
+
+--- home          -> String | nil
+--- home(user)    -> String | nil
+
+現在のユーザまたは指定されたユーザのホームディレクトリを返します。
+
+Dir.home や Dir.home("root") は
+File.expand_path("~") や File.expand_path("~root") と
+ほぼ同じです。
+
+@see [[m:File.expand_path]]
+

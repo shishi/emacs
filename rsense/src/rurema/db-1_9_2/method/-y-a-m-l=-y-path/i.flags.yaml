@@ -1,0 +1,8 @@
+kind=defined
+names=flags,flags=
+visibility=public
+
+--- flags -> bool
+--- flags=(val)
+執筆者募集。 クラス変数にflags に対する参照、代入をおこなうためのメソッドです。
+

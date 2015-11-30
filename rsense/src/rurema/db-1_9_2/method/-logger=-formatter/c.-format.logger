@@ -1,0 +1,9 @@
+kind=defined
+names=Format
+visibility=public
+
+--- Format -> String
+
+フォーマット文字列。
+
+

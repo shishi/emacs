@@ -1,0 +1,17 @@
+kind=defined
+names=__callee__,__method__
+visibility=public
+
+--- __method__ -> Symbol | nil
+--- __callee__ -> Symbol | nil
+
+現在のメソッド名を返します。
+メソッドの外で呼ばれると nil を返します。
+
+  def foo
+    p __method__
+  end
+  foo #=> :foo
+  p __method__ #=> nil
+
+

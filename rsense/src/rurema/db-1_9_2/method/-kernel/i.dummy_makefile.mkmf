@@ -1,0 +1,10 @@
+kind=added
+names=dummy_makefile
+visibility=private 
+
+--- dummy_makefile(srcdir) -> String
+
+ダミーの Makefile を作成します。
+
+@param srcdir ソースディレクトリを指定します。
+

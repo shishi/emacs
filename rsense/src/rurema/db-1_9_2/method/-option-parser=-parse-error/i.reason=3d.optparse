@@ -1,0 +1,10 @@
+kind=defined
+names=reason=
+visibility=public
+
+--- reason=(reason)
+
+エラーの内容を指定します。
+
+@param reason 文字列を指定します。
+

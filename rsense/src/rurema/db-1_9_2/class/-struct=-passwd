@@ -1,0 +1,26 @@
+superclass=Struct
+type=class
+library=etc
+extended=
+included=
+
+[[m:Etc.#getpwent]] で得られる構造体。
+
+この構造体の値を変更してもシステムには反映されません。
+
+全てのシステムで提供されているメンバ。
+  * name
+  * passwd
+  * uid
+  * gid
+  * gecos
+  * dir
+  * shell
+
+以降のメンバはシステムによっては提供されません。
+  * change
+  * quota
+  * age
+  * class
+  * comment
+  * expire

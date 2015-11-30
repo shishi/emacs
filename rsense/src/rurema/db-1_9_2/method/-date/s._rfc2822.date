@@ -1,0 +1,13 @@
+kind=defined
+names=_rfc2822,_rfc822
+visibility=public
+
+--- _rfc2822(str) -> Hash
+--- _rfc822(str) -> Hash
+このメソッドは [[m:Date.rfc2822]] と似ていますが、日付オブジェクトを生成せずに、
+見いだした要素をハッシュで返します。
+
+[[m:Date.rfc2822]] も参照してください。
+
+@param str 日付をあらわす文字列
+

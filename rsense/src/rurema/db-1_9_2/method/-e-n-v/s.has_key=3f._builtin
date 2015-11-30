@@ -1,0 +1,13 @@
+kind=defined
+names=has_key?,include?,key?,member?
+visibility=public
+
+--- has_key?(key) -> bool
+--- include?(key) -> bool
+--- key?(key)     -> bool
+--- member?(key)  -> bool
+
+key で指定される環境変数が存在する時、真を返します。
+
+@param key   環境変数の名前を指定します。to_str で文字列化されます。
+

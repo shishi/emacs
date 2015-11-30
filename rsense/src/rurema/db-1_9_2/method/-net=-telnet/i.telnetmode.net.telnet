@@ -1,0 +1,14 @@
+kind=defined
+names=telnetmode
+visibility=public
+
+--- telnetmode(mode=nil) -> bool|()
+引数を指定しない場合には"Telnetmode"の値を返します。
+引数を与えた場合は"Telnetmode"の値を変更します。
+
+これは telnet の特殊なバイト列を解釈するかどうかを
+意味します。
+
+@see [[m:Net::Telnet.new]]
+
+

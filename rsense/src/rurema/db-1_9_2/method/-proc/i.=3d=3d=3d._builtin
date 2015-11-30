@@ -1,0 +1,7 @@
+kind=defined
+names====
+visibility=public
+
+--- ===(obj) -> ()
+
+@see [[m:Proc#call]]

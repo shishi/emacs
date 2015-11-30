@@ -1,0 +1,12 @@
+kind=defined
+names=ask_yes_no
+visibility=public 
+
+--- ask_yes_no(*args) -> bool
+
+イエス、ノーで答える質問をします。
+
+@param args 委譲先のメソッドに与える引数です。
+
+@return ユーザの回答がイエスの場合は真を、ノーの場合は偽を返します。
+

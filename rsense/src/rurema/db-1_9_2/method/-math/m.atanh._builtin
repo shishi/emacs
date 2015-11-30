@@ -1,0 +1,19 @@
+kind=defined
+names=atanh
+visibility=public
+
+--- atanh(x) -> Float
+
+x の逆双曲線正接関数の値を返します。
+
+=== 定義
+
+    atanh(x) = log((1+x)/(1-x)) / 2     [-1 < x < 1]
+
+@param x -1 < x < 1 の実数
+
+@return 実数
+
+@raise Errno::EDOM 範囲外の値を引数に指定した場合に発生します
+
+

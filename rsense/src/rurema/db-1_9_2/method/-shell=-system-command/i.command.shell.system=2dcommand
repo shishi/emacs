@@ -1,0 +1,9 @@
+kind=defined
+names=command,name
+visibility=public
+
+--- command -> String
+--- name    -> String
+
+コマンド名を返します。
+

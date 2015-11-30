@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=tk.package
+extended=TkCore
+included=TkCore
+
+

@@ -1,0 +1,8 @@
+kind=defined
+names=KEY_F33
+visibility=public
+
+--- KEY_F33 -> Integer
+
+F33 キーを表す定数です。
+

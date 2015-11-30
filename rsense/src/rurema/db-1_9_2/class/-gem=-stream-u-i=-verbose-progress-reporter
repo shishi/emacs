@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rubygems.user_interaction
+extended=
+included=
+
+現在の進捗に関するメッセージを表示する進捗報告のクラスです。

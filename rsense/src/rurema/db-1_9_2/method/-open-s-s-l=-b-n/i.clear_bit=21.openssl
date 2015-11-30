@@ -1,0 +1,15 @@
+kind=defined
+names=clear_bit!
+visibility=public
+
+--- clear_bit!(n) -> self
+自身の n ビット目を0にします。
+
+例:
+  a = BN.new("129")
+  a.clear_bit!(0)
+  a # => 128
+
+@param n 0にするビットの位置
+@raise OpenSSL::BNError 計算時エラー
+

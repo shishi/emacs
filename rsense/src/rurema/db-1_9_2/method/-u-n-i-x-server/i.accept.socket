@@ -1,0 +1,20 @@
+kind=defined
+names=accept
+visibility=public
+
+--- accept
+
+クライアントからの接続要求を受け付け、接続した
+[[c:UNIXSocket]] のインスタンスを返します。
+
+例:
+
+  UNIXServer.open("/tmp/s") {|serv|
+    c = UNIXSocket.open("/tmp/s")
+    s = serv.accept
+    s.write "from server"
+    c.write "from client"
+    p c.recv(20)    #=> "from server"
+    p s.recv(20)    #=> "from client"
+  }
+

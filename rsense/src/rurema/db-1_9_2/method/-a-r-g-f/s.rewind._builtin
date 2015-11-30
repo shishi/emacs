@@ -1,0 +1,26 @@
+kind=defined
+names=rewind
+visibility=public
+
+--- rewind -> 0
+ARGFが現在開いているファイルのファイルポインタを先頭に戻します。
+
+  # カレントディレクトリから適当にファイルを選ぶ
+  ARGV.replace(
+    Dir.glob("*").select{|name| FileTest.file?(name)}
+  )
+
+  #各ファイルの先頭から３行を２回表示する
+  until ARGF.closed?
+    1.upto(2){|i|
+      printf("filename:%s at %d\n", ARGF.filename, i)
+      1.upto(3){
+        line = ARGF.readline
+        p line
+        break if ARGF.eof?
+      }
+      ARGF.rewind
+    }
+    ARGF.skip
+  end 
+

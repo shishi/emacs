@@ -1,0 +1,11 @@
+kind=defined
+names=exit,irb_exit,quit
+visibility=public
+
+--- exit
+--- quit
+--- irb_exit        
+
+irb を終了します。
+サブ irb で呼び出した場合は、そのサブ irb だけを終了します。
+

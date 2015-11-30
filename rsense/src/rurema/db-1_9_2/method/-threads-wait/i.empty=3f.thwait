@@ -1,0 +1,21 @@
+kind=defined
+names=empty?
+visibility=public
+
+--- empty? -> bool
+
+同期されるスレッドが存在するならば true をかえします。
+
+使用例
+  require 'thwait'
+
+  threads = []
+  3.times {|i|
+    threads << Thread.new { sleep 1; p Thread.current }
+  }
+
+  thall = ThreadsWait.new
+  p thall.threads.empty? #=> true
+  thall.join(*threads)
+  p thall.threads.empty? #=> false
+

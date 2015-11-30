@@ -1,0 +1,23 @@
+kind=defined
+names=instance_of?
+visibility=public
+
+--- instance_of?(klass) -> bool
+
+オブジェクトがクラス klass の直接のインスタンスである時真を返します。
+
+obj.instance_of?(c) が成立する時には、常に obj.kind_of?(c) も成立します。
+
+@param klass [[c:Class]]かそのサブクラスのインスタンスです。
+
+    class C < Object
+    end
+    class S < C
+    end
+
+    obj = S.new
+    p obj.instance_of?(S)       # true
+    p obj.instance_of?(C)       # false
+
+@see [[m:Object#kind_of?]],[[m:Object#class]]
+

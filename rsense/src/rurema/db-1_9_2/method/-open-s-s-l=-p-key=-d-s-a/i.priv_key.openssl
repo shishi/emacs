@@ -1,0 +1,11 @@
+kind=defined
+names=priv_key
+visibility=public
+
+--- priv_key -> OpenSSL::BN
+DSA 鍵の秘密鍵パラメータを返します。
+
+秘密鍵はこの値と、
+[[m:OpenSSL::PKey::DSA#p]], [[m:OpenSSL::PKey::DSA#q]], [[m:OpenSSL::PKey::DSA#g]]
+から構成されます。
+

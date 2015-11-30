@@ -1,0 +1,32 @@
+kind=added
+names=iso8601,xmlschema
+visibility=public
+
+--- xmlschema(fractional_seconds = 0) -> String
+--- iso8601(fractional_seconds = 0) -> String
+
+XML Schema で定義されている dateTime として
+表現される以下の形式の文字列を返します:
+
+  CCYY-MM-DDThh:mm:ssTZD
+  CCYY-MM-DDThh:mm:ss.sssTZD
+
+ただし TZD は Z または [+-]hh:mm です。
+
+If self is a UTC time, Z is used as TZD.
+[+-]hh:mm is used otherwise.
+
+fractional_seconds は小数点以下の秒を指定します。
+fractional_seconds のデフォルト値は 0 です。
+
+@param fractional_seconds 小数点以下の秒の桁数を整数で指定します。
+                          省略した場合は0 となります。
+
+使用例
+  require 'time'
+
+  iso8601_time = '2008-08-31T12:34:56+09:00'
+  t = Time.iso8601(iso8601_time)
+  p t.xmlschema    #=> "2008-08-31T03:34:56Z"
+  p t.xmlschema(9) #=> "2008-08-31T03:34:56.000000000Z"
+

@@ -1,0 +1,10 @@
+kind=added
+names=ready?
+visibility=public
+
+--- ready? -> bool | nil
+ブロックせずに読み込み可能ならtrueを、
+ブロックしてしまう可能性があるならfalseを返します。
+
+判定不可能な場合は nil を返します。
+

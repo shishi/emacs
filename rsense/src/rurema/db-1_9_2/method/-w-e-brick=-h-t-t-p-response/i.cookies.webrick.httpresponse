@@ -1,0 +1,11 @@
+kind=defined
+names=cookies
+visibility=public
+
+--- cookies    -> [WEBrick::Cookie]
+
+レスポンスの Set-Cookie ヘッダの値を表す [[c:WEBrick::Cookie]] オブジェクトの配列です。
+レスポンスに新たに Cookie を加えたい場合はこの配列に [[c:WEBrick::Cookie]] オブジェクトを加えます。
+
+  res.cookies << WEBrick::Cookie.parse_set_cookie(k)
+

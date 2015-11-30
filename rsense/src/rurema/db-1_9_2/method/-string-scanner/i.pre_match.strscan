@@ -1,0 +1,22 @@
+kind=defined
+names=pre_match
+visibility=public
+
+--- pre_match -> String | nil
+前回マッチを行った文字列のうち、マッチしたところよりも前の
+部分文字列を返します。前回のマッチが失敗していると常に nil を
+返します。
+
+      s = StringScanner.new('test string')
+      s.pre_match   # => nil
+      s.scan(/\w+/) # => "test"
+      s.pre_match   # => ""
+      s.scan(/\w+/) # => nil
+      s.pre_match   # => nil
+      s.scan(/\s+/) # => " "
+      s.pre_match   # => "test"
+      s.scan(/\w+/) # => "string"
+      s.pre_match   # => "test "
+      s.scan(/\w+/) # => nil
+      s.pre_match   # => nil
+

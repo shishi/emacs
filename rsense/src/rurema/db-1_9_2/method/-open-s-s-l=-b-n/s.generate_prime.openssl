@@ -1,0 +1,22 @@
+kind=defined
+names=generate_prime
+visibility=public
+
+--- generate_prime(bits, safe=true, add=nil, rem=nil) -> OpenSSL::BN
+ランダム(疑似乱数的)な bits ビットの素数を返します。
+
+暗号的に意味のある素数は十分大きくないといけないので、
+bits が小さすぎる場合は期待する結果を返しません。
+
+safe が真であれば、「安全な」素数((p-1)/2が素数である素数p)を
+返します。
+
+add に整数を渡すと、 p % add == rem であるような
+素数pのみを返します。rem が nil の場合は rem=1と見なします。
+
+@param bits 生成するランダム素数のビット数
+@param safe true で安全な素数のみを生成する
+@param add 生成する素数の剰余の条件
+@param rem 生成する素数の剰余の条件
+@raise OpenSSL::BNError 素数の生成に失敗した場合に発生します
+

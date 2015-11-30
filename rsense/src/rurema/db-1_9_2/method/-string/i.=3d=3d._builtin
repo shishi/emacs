@@ -1,0 +1,43 @@
+kind=defined
+names===
+visibility=public
+
+--- ==(other) -> bool
+
+文字列の内容が文字列 other の内容と等しいときに true を返します。
+等しくなければ false を返します。
+
+このメソッドは文字列の内容を比較します。
+同一のオブジェクトかどうかを比較するわけではありません。
+つまり、"string" == str という式を実行した場合には、
+str が "string" という内容の文字列でありさえすれば常に true を返します。
+同一のオブジェクトであるかどうかを判定したいときは
+[[m:Object#equal?]] を使ってください。
+
+変数 [[m:$=]] の値が真であるときは
+アルファベットの大文字小文字を無視して比較します。
+ただし [[m:$=]] 変数はいずれ廃止されることが決まっているので
+[[m:$=]] に頼るべきではありません。
+
+アルファベットの大文字小文字を無視して比較したい場合は、[[m:String#upcase]],
+[[m:String#downcase]] で大文字小文字を揃えてから比較するとよいです。
+
+
+@param other    任意のオブジェクト
+@return         true か false
+
+例:
+
+    p "string" == "string"  # => true
+    p "string" == "STRING"  # => false
+    p "string" == ""        # => false
+    p "" == "string"        # => false
+    
+    p "string" == "str" + "ing"   # => true   (内容が同じなら true)
+    p "string" == "stringX".chop  # => true   (内容が同じなら true)
+    
+    p "string".upcase == "String".upcase     # => true
+    p "string".downcase == "String".downcase # => true
+
+@see [[m:String#<=>]], [[m:String#casecmp]]
+

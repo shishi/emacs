@@ -1,0 +1,25 @@
+kind=defined
+names=documents
+visibility=public
+
+--- documents
+現在のドキュメントを配列で返します。
+
+  require 'yaml'
+  
+  str1=<<EOT
+  --- !ruby/Dog
+  name: pochi
+  --- 
+  :age: 17
+  :color: white
+  EOT
+  
+  ys = YAML.load_stream(str1)
+  p ys.documents.pop
+  #=> {:age=>17, :color=>"white"}
+  p ys.documents.pop
+  #=> #<YAML::DomainType:0x2b07e24 @type_id="Dog", @domain="ruby.yaml.org,2002", @value={"name"=>"pochi"}>
+  p ys.documents.pop
+  #=> nil
+

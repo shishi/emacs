@@ -1,0 +1,8 @@
+kind=defined
+names=reset
+visibility=public
+
+--- reset
+
+テストスイートをクリアします。
+

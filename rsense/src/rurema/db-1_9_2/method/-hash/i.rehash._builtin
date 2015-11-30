@@ -1,0 +1,28 @@
+kind=defined
+names=rehash
+visibility=public
+
+--- rehash -> self
+
+キーのハッシュ値を再計算します。
+
+キーになっているオブジェクトの内容が変化した時など、
+ハッシュ値が変わってしまった場合はこのメソッドを使ってハッシュ値を再計算しない
+限り、そのキーに対応する値を取り出すことができなくなります。
+
+@raise RuntimeError [[m:Hash#each]]などのイテレータの評価途中でrehashすると発生します。
+@return selfを返します。
+
+  a = [ "a", "b" ]
+  h = { a => 100 }
+  
+  p h[a]       #=> 100
+  
+  a[0] = "z"
+  p h[a]       #=> nil
+  
+  h.rehash
+  p h[a]       #=> 100
+
+@see [[m:Object#hash]]
+

@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=drb.observer
+extended=
+included=Observable
+
+

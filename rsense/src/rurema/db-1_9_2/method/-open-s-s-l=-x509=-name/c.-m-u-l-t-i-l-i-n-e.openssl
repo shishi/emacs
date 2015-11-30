@@ -1,0 +1,10 @@
+kind=defined
+names=MULTILINE
+visibility=public
+
+--- MULTILINE -> Integer
+[[m:OpenSSL::X509::Name#to_s]] のフラグとして使います。
+
+複数行でフォーマットされます。
+
+

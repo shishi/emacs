@@ -1,0 +1,17 @@
+kind=defined
+names=each
+visibility=public
+
+--- each(rs = nil) -> ()
+
+フィルタの一行ずつをblockに渡します。
+
+@param rs レコードセパレーターを表す文字列を指定します。
+          nil ならば、[[m:Shell.record_separator]]の値が使用されます。
+
+使用例
+  sh = Shell.new
+  sh.cat("/etc/passwd").each { |line|
+    puts line
+  }
+

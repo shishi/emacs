@@ -1,0 +1,101 @@
+kind=defined
+names=[]=
+visibility=public
+
+--- []=(nth, val)
+nth 番目の文字を文字列 val で置き換えます。
+
+@param nth 置き換えたい文字の位置を指定します。
+@param val 置き換える文字列を指定します。
+
+
+@return val を返します。
+
+例:
+
+    buf = "string"
+    buf[1] = "!!"
+    p buf   # => "s!!ring"
+
+--- []=(nth, len, val)
+nth 番目の文字から len 文字の部分文字列を文字列 val で置き換えます。
+
+nth が負の場合は文字列の末尾から数えます。
+
+@param nth    置き換えたい部分文字列の開始インデックス
+@param len    置き換えたい部分文字列の長さ
+@param val    指定範囲の部分文字列と置き換える文字列
+
+@return val を返します。
+
+例:
+
+    buf = "string"
+    buf[1, 4] = "!!"
+    p buf   # => "s!!g"
+
+--- []=(substr, val)
+
+文字列中の substr に一致する最初の部分文字列を文字列 val で置き換えます。
+
+@param substr    置き換えたい部分文字列のパターンを示す文字列
+@param val       指定範囲の部分文字列と置き換える文字列
+
+@return val を返します。
+
+@raise IndexError    self が部分文字列 substr を含まない場合に発生します。
+
+例:
+     buf = "string"
+     buf["trin"] = "!!"
+     p buf   # => "s!!g"
+
+     buf = "string"
+     buf["nosuchstring"] = "!!"   # IndexError
+
+--- []=(regexp, nth, val)
+
+正規表現 regexp の nth 番目の括弧にマッチする
+最初の部分文字列を文字列 val で置き換えます。
+
+nth が 0 の場合は、マッチした部分文字列全体を val で置き換えます。
+
+@param regexp    置き換えたい部分文字列のパターンを示す正規表現
+@param nth       置き換えたい部分文字列のパターンを示す正規表現レジスタの番号
+@param val       指定範囲の部分文字列と置き換えたい文字列
+
+@return val を返します。
+
+@raise IndexError 正規表現がマッチしなかった場合に発生します。
+
+例:
+
+    buf = "def exec(cmd)"
+    buf[/def\s+(\w+)/, 1] = "preprocess"
+    p buf    # => "def preprocess(cmd)"
+
+--- []=(regexp, val)
+
+正規表現 regexp にマッチした部分文字列全体を val で置き換えます。
+
+@param regexp    置き換えたい部分文字列のパターンを示す正規表現
+@param val       置き換えたい文字列
+
+@return val を返します。
+
+@raise IndexError 正規表現がマッチしなかった場合に発生します。
+
+例:
+
+    buf = "string"
+    buf[/tr../] = "!!"
+    p buf   # => "s!!g"
+
+--- []=(range, val)
+
+rangeで指定したインデックスの範囲に含まれる部分文字列を文字列 val で置き換えます。
+
+@param range   置き換えたい範囲を示す [[c:Range]] オブジェクト
+
+@return val を返します。
+

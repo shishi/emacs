@@ -1,0 +1,12 @@
+kind=added
+names=ssl_timeout
+visibility=public
+
+--- ssl_timeout -> Integer | nil
+SSL/TLS のタイムアウト秒数を返します。
+
+設定されていない場合は nil を返します。
+
+@see [[m:Net::HTTP#ssl_timeout=]],
+     [[m:OpenSSL::SSL::SSLContext#ssl_timeout]]
+

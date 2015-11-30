@@ -1,0 +1,11 @@
+kind=defined
+names=+
+visibility=public
+
+--- + (n) -> Date
+self から n 日後の日付オブジェクトを返します。
+n は数値でなければなりません。
+
+@param n 日数
+@raise TypeError n が数値でない場合に発生します。
+

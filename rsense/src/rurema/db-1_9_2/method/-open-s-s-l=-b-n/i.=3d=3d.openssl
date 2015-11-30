@@ -1,0 +1,11 @@
+kind=defined
+names===,===,eql?
+visibility=public
+
+--- ==(other) -> bool
+--- ===(other) -> bool
+--- eql?(other) -> bool
+自身と other が等しい場合に真を返します。
+
+@param other 比較する数
+

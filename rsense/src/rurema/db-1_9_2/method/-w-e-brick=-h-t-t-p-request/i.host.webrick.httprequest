@@ -1,0 +1,8 @@
+kind=defined
+names=host
+visibility=public
+
+--- host    -> String
+
+リクエスト URI の host を文字列で返す。
+

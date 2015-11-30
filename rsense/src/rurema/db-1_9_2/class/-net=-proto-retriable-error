@@ -1,0 +1,8 @@
+superclass=Net=ProtocolError
+type=class
+library=net.protocol
+extended=
+included=
+
+なんらかの再試行をすることで、処理の継続が可能であるような
+エラーが発生した場合に発生する例外です。

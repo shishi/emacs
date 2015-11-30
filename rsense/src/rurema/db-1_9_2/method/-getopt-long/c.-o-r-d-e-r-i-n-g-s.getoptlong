@@ -1,0 +1,11 @@
+kind=defined
+names=ORDERINGS
+visibility=protected 
+
+--- ORDERINGS -> Array
+
+内部で使用する定数です。
+
+[[m:GetoptLong::REQUIRE_ORDER]], [[m:GetoptLong::PERMUTE]],
+[[m:GetoptLong::RETURN_IN_ORDER]] がセットされています。
+

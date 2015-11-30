@@ -1,0 +1,14 @@
+kind=defined
+names=each_child
+visibility=public
+
+--- each_child(with_directory = true)                  -> Enumerator
+--- each_child(with_directory = true) {|pathname| ...} -> [Pathname]
+
+self.children(with_directory).each と同じです。
+
+@param with_directory 偽を指定するとファイル名のみ返します。デフォルトは真です。
+
+@see [[m:Pathname#children]]
+
+

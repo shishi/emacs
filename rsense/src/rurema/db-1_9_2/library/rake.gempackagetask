@@ -1,0 +1,37 @@
+methods=
+sublibraries=
+requires=rake,rake.tasklib,rake.packagetask
+classes=Rake=GemPackageTask
+is_sublibrary=true
+
+Gem Spec ファイルを元にして Gem パッケージを作成するタスクを定義するためのライブラリです。
+
+Gem パッケージだけでなく zip, tgz, tar.gz, tar.bz2 の各ファイルを作成する事もできます。
+
+以下のタスクを定義します。
+
+: PACKAGE_DIR/NAME-VERSION.gem
+  Gem パッケージを作成します。
+
+例:
+   require 'rubygems'
+   
+   spec = Gem::Specification.new do |s|
+     s.platform = Gem::Platform::RUBY
+     s.summary = "Ruby based make-like utility."
+     s.name = 'rake'
+     s.version = PKG_VERSION
+     s.requirements << 'none'
+     s.require_path = 'lib'
+     s.autorequire = 'rake'
+     s.files = PKG_FILES
+     s.description = <<EOF
+   Rake is a Make-like program implemented in Ruby. Tasks
+   and dependencies are specified in standard Ruby syntax. 
+   EOF
+   end
+   
+   Rake::GemPackageTask.new(spec) do |pkg|
+     pkg.need_zip = true
+     pkg.need_tar = true
+   end

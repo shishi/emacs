@@ -1,0 +1,17 @@
+kind=defined
+names=chr
+visibility=public
+
+--- chr -> String
+文字コードに対応する 1 バイトの文字列を返します。
+
+例えば65.chr は "A" を返します。
+
+逆に文字列から文字コードを得るには "A"[0] とします
+
+@return     1バイト文字列
+
+@raise RangeError self が 0 から 255 の範囲外の場合に発生します。
+
+@see [[m:String#[] ]]
+

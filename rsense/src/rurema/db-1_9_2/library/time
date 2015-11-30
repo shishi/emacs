@@ -1,0 +1,15 @@
+methods=Time/s.parse.time,Time/s.rfc2822.time,Time/s.httpdate.time,Time/s.iso8601.time,Time/i.rfc2822.time,Time/i.httpdate.time,Time/i.iso8601.time
+sublibraries=
+requires=
+classes=
+is_sublibrary=false
+
+組み込みの [[c:Time]] クラスを拡張します。
+日時を表す文字列をパースして [[c:Time]] オブジェクトに変換したり、
+逆に [[c:Time]] オブジェクトを RFC などで定められた文字列に
+変換する機能を提供します。
+
+ * date-time は [[RFC:2822]] で定義されています。
+ * HTTP-date は [[RFC:2616]] で定義されています。
+ * dateTime は XML Schema Part 2: Datatypes (ISO 8601) で定義されています。
+ * 文字列から [[c:Time]] オブジェクトへの変換では [[m:Date._parse]] により様々な形式を扱えます。

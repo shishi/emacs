@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rexml
+extended=Forwardable
+included=REXML=XMLTokens
+
+

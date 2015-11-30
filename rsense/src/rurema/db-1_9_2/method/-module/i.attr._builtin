@@ -1,0 +1,26 @@
+kind=defined
+names=attr
+visibility=private 
+
+--- attr(name, assignable = false) -> nil
+
+インスタンス変数読み取りのためのインスタンスメソッド name を定義します。
+
+このメソッドで定義されるアクセスメソッドの定義は次の通りです。
+
+  def name
+    @name
+  end
+
+省略可能な第 2 引数 assignable が指定されその値が真である
+場合には、属性の書き込み用メソッド name= も同時に定義されます。
+その定義は次の通りです。
+
+  def name=(val)
+    @name = val
+  end
+
+@param name [[c:String]] または [[c:Symbol]] で指定します。
+
+@param assignable true を指定するとインスタンス変数書き込み用のインスタンスメソッドも定義します。
+

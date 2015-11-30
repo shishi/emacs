@@ -1,0 +1,15 @@
+kind=defined
+names=random_bytes
+visibility=public
+
+--- random_bytes(n = nil)    -> String
+
+ランダムなバイト列を生成して返します。
+
+@param n 生成される文字列のサイズを整数で指定します。
+         nil を指定した場合 n として 16 が使われます。
+
+@raise NotImplementedError 安全な乱数発生器が使えない場合に発生します。
+
+  p SecureRandom.random_bytes(3)    #=> "\321\020\203"
+

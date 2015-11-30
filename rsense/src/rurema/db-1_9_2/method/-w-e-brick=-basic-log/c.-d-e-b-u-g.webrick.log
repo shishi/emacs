@@ -1,0 +1,7 @@
+kind=defined
+names=DEBUG
+visibility=public
+
+--- DEBUG
+
+ログレベルを表す定数です。重要度は5番です。

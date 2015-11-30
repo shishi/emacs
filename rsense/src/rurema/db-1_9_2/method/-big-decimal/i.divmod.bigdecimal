@@ -1,0 +1,8 @@
+kind=defined
+names=divmod
+visibility=public
+
+--- divmod(n)
+
+詳細は [[m:Float#divmod]] を参照して下さい。 
+

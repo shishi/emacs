@@ -1,0 +1,11 @@
+kind=defined
+names=minor,minor=
+visibility=public
+
+--- minor      -> Integer
+--- minor=(n)
+
+HTTP バージョンのマイナーを整数で表すアクセサです。
+
+@param n HTTP バージョンのマイナーを整数で指定します。
+

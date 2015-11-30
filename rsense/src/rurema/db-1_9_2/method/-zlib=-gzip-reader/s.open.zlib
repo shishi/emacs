@@ -1,0 +1,27 @@
+kind=defined
+names=open
+visibility=public
+
+--- open(filename) -> Zlib::GzipReader
+--- open(filename) {|gz| ... } -> object
+
+filename で指定されるファイルを gzip ファイルとして
+オープンします。GzipReader オブジェクトを返します。
+その他詳細は [[m:Zlib::GzipReader.new]] や [[m:Zlib::GzipReader.wrap]] と
+同じです。
+
+@param filename gzip ファイル名を文字列で指定します。
+
+  require 'zlib'
+
+  =begin
+  # hoge.gz がない場合はこれで作成する。
+  Zlib::GzipWriter.open('hoge.gz') { |gz|
+    gz.puts 'hoge'
+  }
+  =end
+
+  Zlib::GzipReader.open('hoge.gz'){|gz|
+    print gz.read
+  }
+

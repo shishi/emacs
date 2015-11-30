@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rake
+extended=
+included=
+
+タスクの名前空間を表すクラスです。

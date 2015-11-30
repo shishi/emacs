@@ -1,0 +1,7 @@
+kind=defined
+names=update_checksum
+visibility=public 
+
+--- update_checksum
+チェックサムを更新します。
+

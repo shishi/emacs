@@ -1,0 +1,7 @@
+kind=defined
+names=pane_config,paneconfigure
+visibility=public
+
+--- paneconfigure(win, key, value = nil)
+--- pane_config(win, key, value = nil)
+

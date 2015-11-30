@@ -1,0 +1,8 @@
+methods=Time/s.json_create.json.add.core,Time/i.to_json.json.add.core,Date/s.json_create.json.add.core,Date/i.to_json.json.add.core,DateTime/s.json_create.json.add.core,DateTime/i.to_json.json.add.core,Range/s.json_create.json.add.core,Range/i.to_json.json.add.core,Struct/s.json_create.json.add.core,Struct/i.to_json.json.add.core,Exception/s.json_create.json.add.core,Exception/i.to_json.json.add.core,Regexp/s.json_create.json.add.core,Regexp/i.to_json.json.add.core
+sublibraries=
+requires=
+classes=
+is_sublibrary=true
+
+Ruby のコアクラスに JSON 形式の文字列に変換するメソッドや
+JSON 形式の文字列から Ruby のオブジェクトに変換するメソッドを定義します。

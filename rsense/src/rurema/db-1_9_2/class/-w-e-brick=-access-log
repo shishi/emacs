@@ -1,0 +1,59 @@
+superclass=
+type=module
+library=webrick.accesslog
+extended=
+included=
+
+[[c:WEBrick::HTTPServer]] のアクセスログの形式を処理するために内部で使われるモジュールです。
+
+アクセスログの形式は Apache の mod_log_config の形式に準拠しますが、HTTP ステータスコードを
+指定することは出来ません。最後のステータスを表す %>s は %s と同じように解釈されます。
+
+ * [[url:http://httpd.apache.org/docs/mod/mod_log_config.html#formats]]
+
+ "%h %l %u %t \"%r\" %s %b"
+ "%{User-Agent}i"
+
+指定できる形式は以下のとおりです。
+
+: %a
+  リモート IP アドレス
+: %b
+  レスポンスのバイト数。HTTP ヘッダは除く。CLF 書式。
+  すなわち、1 バイトも送られなかったときは 0 ではなく、 '-' になる
+: %{FOOBAR}e
+  環境変数 FOOBAR の内容
+: %f
+  ファイル名
+: %h
+  リモートホスト
+: %{Foobar}i
+  サーバに送られたリクエストの Foobar:  ヘッダの内容
+: %l
+  "-"
+: %m
+  リクエストメソッド
+: %{Foobar}n
+  req.attributes
+: %{Foobar}o
+  応答の Foobar: ヘッダの内容
+: %p
+  リクエストを扱っているサーバの正式なポート
+: %q
+  クエリ文字列
+: %r
+  リクエストの最初の行
+: %s
+  ステータス。"%>s" はサポートしません。
+: %t
+  リクエストを受付けた時刻。 CLF の時刻の書式 (標準の英語の書式)
+: %{format}t
+  format で与えられた書式による時刻。format は [[m:Time#strftime]] の 書式である必要がある。
+: %T
+  リクエストを扱うのにかかった時間、秒単位
+: %u
+  リモートユーザ
+: %U
+  リクエストされた URL パス。クエリ文字列は含まない
+: %v
+  リクエストを扱っているサーバの正式な ServerName

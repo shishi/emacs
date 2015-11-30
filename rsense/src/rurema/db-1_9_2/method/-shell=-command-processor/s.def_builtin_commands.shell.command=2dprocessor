@@ -1,0 +1,13 @@
+kind=defined
+names=def_builtin_commands
+visibility=public
+
+--- def_builtin_commands(delegation_class, commands_specs) -> ()
+
+@param delegation_class 処理を委譲したいクラスかモジュールを指定します。
+
+@param commands_specs コマンドの仕様を文字列の配列で指定します。
+                      [[コマンド名, [引数1, 引数2, ...]], ...]
+
+
+

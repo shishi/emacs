@@ -1,0 +1,6 @@
+kind=defined
+names=require_exact
+visibility=public
+
+--- require_exact(package, version)
+

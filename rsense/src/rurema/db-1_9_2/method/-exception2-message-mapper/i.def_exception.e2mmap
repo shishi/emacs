@@ -1,0 +1,16 @@
+kind=defined
+names=def_exception
+visibility=public
+
+--- def_exception(exception_name, message_format, superclass = StandardError) -> Class
+
+exception_name という名前の例外クラスを定義します。
+
+@param exception_name 定義する例外クラスの名前をシンボルで指定します。
+
+@param message_format メッセージのフォーマット。
+
+@param superclass 定義する例外のスーパークラスを指定します。
+                  省略すると [[c:StandardError]] を使用します。
+
+

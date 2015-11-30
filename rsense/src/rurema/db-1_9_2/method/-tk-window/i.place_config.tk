@@ -1,0 +1,8 @@
+kind=defined
+names=place_config,place_configure
+visibility=public
+
+--- place_config(slot, value = Tk::None)
+--- place_configure(slot, value = Tk::None)
+
+

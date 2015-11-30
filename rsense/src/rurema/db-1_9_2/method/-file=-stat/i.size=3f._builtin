@@ -1,0 +1,17 @@
+kind=defined
+names=size?
+visibility=public
+
+--- size? -> Integer | nil
+サイズが0の時にはnil、それ以外の場合はファイルサイズを返します。
+
+  require 'tempfile'
+
+  fp = Tempfile.new("temp")
+  p fp.size #=> 0
+  p File::Stat.new(fp.path).size? #=> nil
+  fp.print "not 0 "
+  fp.close
+  p FileTest.exist?(fp.path) #=> true
+  p File::Stat.new(fp.path).size? #=> 6
+

@@ -1,0 +1,8 @@
+kind=defined
+names=to_text
+visibility=public
+
+--- to_text -> String
+
+人間が読める形式の文字列を返します。
+

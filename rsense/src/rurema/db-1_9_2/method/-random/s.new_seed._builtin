@@ -1,0 +1,10 @@
+kind=defined
+names=new_seed
+visibility=public
+
+--- new_seed -> Integer
+適切な乱数の種を返します。
+
+使用例:
+ p Random.new_seed # => 184271600931914695177248627591520900872
+

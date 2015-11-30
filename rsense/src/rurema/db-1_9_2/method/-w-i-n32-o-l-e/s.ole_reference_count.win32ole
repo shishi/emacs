@@ -1,0 +1,18 @@
+kind=defined
+names=ole_reference_count
+visibility=public
+
+--- ole_reference_count(aWIN32OLE) -> Integer
+
+引数で指定したオブジェクトの現在の参照カウント値を返します。
+
+このメソッドは主にWIN32OLEのデバッグおよびWIN32OLEを利用するミドルウェ
+アの実装のために用意されています。このため、メソッドの内部動作は不定で
+す。COMの仕様とWIN32OLEの内部処理に熟知していない場合は使用しないでくだ
+さい。
+
+@param aWIN32OLE 参照カウント値を求めるWIN32OLEオブジェクト。
+
+@return AddRef呼び出し後のReleaseの戻り値。COMの仕様上は現在のオブジェ
+        クトの参照カウント値を示します。
+

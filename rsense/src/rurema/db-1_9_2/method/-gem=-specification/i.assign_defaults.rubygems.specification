@@ -1,0 +1,11 @@
+kind=defined
+names=assign_defaults
+visibility=public
+
+--- assign_defaults -> ()
+
+全ての属性にデフォルト値をセットします。
+
+これはアクセサメソッドを使用して行われるので、ブロックを用いた特別な初期化も
+きちんと実行されます。セットされる値はデフォルト値のコピーです。
+

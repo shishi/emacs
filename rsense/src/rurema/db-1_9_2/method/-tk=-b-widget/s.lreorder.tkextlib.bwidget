@@ -1,0 +1,8 @@
+kind=defined
+names=lreorder
+visibility=public
+
+--- lreorder(list, neworder)
+
+
+

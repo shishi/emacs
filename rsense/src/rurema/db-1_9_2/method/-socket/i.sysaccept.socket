@@ -1,0 +1,9 @@
+kind=defined
+names=sysaccept
+visibility=public
+
+--- sysaccept
+
+接続したクライアントのファイル記述子とアドレスのペアを返すことを除
+けば [[m:Socket#accept]] と同じです。
+

@@ -1,0 +1,11 @@
+kind=defined
+names=V_ERR_CRL_HAS_EXPIRED
+visibility=public
+
+--- V_ERR_CRL_HAS_EXPIRED -> Integer
+CRL が期限切れであることを意味します。
+
+[[m:OpenSSL::X509::Store#error]] や
+[[m:OpenSSL::X509::StoreContext#error]] のエラーコードとして
+使われます。
+

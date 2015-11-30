@@ -1,0 +1,8 @@
+kind=defined
+names=read_all_cache_data
+visibility=public 
+
+--- read_all_cache_data -> ()
+
+自身に完全なキャッシュファイルの内容をマージします。
+

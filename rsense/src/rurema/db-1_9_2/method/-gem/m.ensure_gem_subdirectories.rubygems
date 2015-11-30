@@ -1,0 +1,12 @@
+kind=defined
+names=ensure_gem_subdirectories
+visibility=public
+
+--- ensure_gem_subdirectories
+
+Gem をインストールするために必要なサブディレクトリを適切に作成します。
+
+ディレクトリを作成する権限が無い場合もこのメソッドからは例外は発生しません。
+
+@see [[m:Gem::DIRECTORIES]]
+

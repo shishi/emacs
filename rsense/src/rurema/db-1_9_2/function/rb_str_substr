@@ -1,0 +1,9 @@
+name=rb_str_substr
+private=false
+macro=false
+type=VALUE
+filename=string.c
+params=(VALUE str, long beg, long len)
+
+str[beg, len]
+

@@ -1,0 +1,8 @@
+kind=defined
+names=exchange
+visibility=public
+
+--- exchange -> Resolv::DNS::Name
+MXのホスト名を返します。
+
+

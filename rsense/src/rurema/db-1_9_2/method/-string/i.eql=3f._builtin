@@ -1,0 +1,11 @@
+kind=defined
+names=eql?
+visibility=public
+
+--- eql?(other) -> bool
+
+self == other と同じです。
+[[c:Hash]] クラス内での比較に使われます。
+
+@see [[c:Hash]]
+

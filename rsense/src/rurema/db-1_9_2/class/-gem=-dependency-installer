@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rubygems.dependency_installer
+extended=
+included=Gem=UserInteraction
+
+ある Gem が依存している Gem を同時にインストールするためのクラスです。

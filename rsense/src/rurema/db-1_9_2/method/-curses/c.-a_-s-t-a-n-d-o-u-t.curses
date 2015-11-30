@@ -1,0 +1,9 @@
+kind=defined
+names=A_STANDOUT
+visibility=public
+
+--- A_STANDOUT -> Integer
+ターミナルで使用できる最も強調するモードを表す属性マスク用の定数です。
+
+@see [[m:Curses.attrset]]
+

@@ -1,0 +1,16 @@
+kind=defined
+names=add_file
+visibility=public 
+
+--- add_file(name, mode) -> self
+--- add_file(name, mode){|io| ... } -> self
+
+自身に関連付けられた IO にファイルを追加します。
+
+ブロックを与えると、自身に関連付けられた IO をブロックに渡してブロック
+を評価します。
+
+@param name 追加するファイルの名前を指定します。
+
+@param mode 追加するファイルのパーミッションを指定します。
+

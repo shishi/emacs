@@ -1,0 +1,15 @@
+kind=defined
+names=print
+visibility=public
+
+--- print(string) -> ()
+ホストに文字列を送ります。
+
+改行は付加されません。文字列中の改行は変換されます。telnetコマンドはエスケープされます。
+これらの変換は[[m:Net::Telnet#telnetmode]], [[m:Net::Telnet#binmode]], 
+およびホストから設定された telnet オプションによって(変換するしないなどが)
+制御されます。
+
+@param string ホストに送る文字列
+@see [[m:Net::Telnet#write]], [[m:Net::Telnet#puts]]
+

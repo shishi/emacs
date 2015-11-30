@@ -1,0 +1,16 @@
+kind=defined
+names=request
+visibility=public
+
+--- request(uri, request_class, last_modified = nil) -> Net::HTTPResponse
+
+与えられた URI に対してリクエストを実行し、[[c:Net::HTTPResponse]] を返します。
+
+@param uri URI を指定します。
+
+@param request_class [[c:Net::HTTP::Head]] か [[c:Net::HTTP::Get]] を指定します。
+
+@param last_modified 最終更新時刻を指定します。
+
+@see [[c:Net::HTTP]], [[c:Net::HTTP::Head]], [[c:Net::HTTP::Get]]
+

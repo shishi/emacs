@@ -1,0 +1,12 @@
+kind=defined
+names=has_value?,value?
+visibility=public
+
+--- has_value?(value) -> bool
+--- value?(value) -> bool
+
+value を値とする組がデータベース中に存在する時、真を返します。
+
+@param value 検索したい値。
+
+

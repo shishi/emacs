@@ -1,0 +1,14 @@
+kind=added
+names=verify_callback
+visibility=public
+
+--- verify_callback -> Proc
+自身に設定されている検証をフィルタするコールバックを
+返します。
+
+デフォルトのコールバックが設定されている場合には nil を返します。
+
+@see [[m:Net::HTTP#verify_callback=]],
+     [[m:OpenSSL::X509::Store#verify_callback]],
+     [[m:OpenSSL::SSL::SSLContext#verify_callback]]
+

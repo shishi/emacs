@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=tk.validation
+extended=TkComm
+included=
+
+include TkComm

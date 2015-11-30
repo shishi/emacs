@@ -1,0 +1,7 @@
+kind=defined
+names=bind_remove
+visibility=public
+
+--- bind_remove(context)
+
+

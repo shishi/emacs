@@ -1,0 +1,20 @@
+kind=defined
+names=bind
+visibility=public
+
+--- bind{|*args| ... }
+
+自身に指定されたブロックをバインドします。
+自身に対して call メソッドが呼ばれたとき、生成時に与えられた [[c:DL::CFunc]] オブジェクトではなく
+このブロックが呼ばれます。
+
+例:
+
+ require 'dl/import'
+
+ cfunc = DL::CFunc.new(0, DL::TYPE_INT)
+ func  = DL::Function.new(cfunc, [DL::TYPE_INT])
+ func.bind{|i| i + 3  }
+ p func.call(2)             #=> 5
+
+

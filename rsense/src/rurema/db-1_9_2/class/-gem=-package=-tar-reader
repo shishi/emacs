@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rubygems.package.tar_reader
+extended=
+included=Gem=Package
+
+gem-format な tar ファイルを読むためのクラスです。

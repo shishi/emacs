@@ -1,0 +1,19 @@
+kind=added
+names=find_executable
+visibility=private 
+
+--- find_executable(bin, path = nil) -> String | nil
+
+パス path から実行ファイル bin を探します。
+
+実行ファイルが見つかった場合は、そのフルパスを返します。
+実行ファイルが見つからなかった場合は、nilを返します。
+
+このメソッドは Makefile を変更しません。
+
+@param bin 実行ファイルの名前を指定します。
+
+@param path パスを指定します。デフォルトは環境変数 PATH です。
+            環境変数 PATH が定義されていない場合は /usr/local/bin,
+            /usr/ucb, /usr/bin, /bin を使います。
+

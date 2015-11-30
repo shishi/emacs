@@ -1,0 +1,9 @@
+kind=added
+names=ssl_available?
+visibility=public
+
+--- ssl_available? -> bool
+
+現在実行中のプラットフォームで OpenSSL が有効である場合は真を返します。
+そうでない場合は偽を返します。
+

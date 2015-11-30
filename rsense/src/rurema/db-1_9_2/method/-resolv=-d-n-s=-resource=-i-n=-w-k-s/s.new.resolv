@@ -1,0 +1,12 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(address, protocol, bitmap) -> Resolv::DNS::Resource::IN::WKS
+Resolv::DNS::Resource::IN::WKS のインスタンスを生成します。
+
+@param address IPv4アドレス
+@param protocol IPプロトコル番号
+@param bitmap ビットマップ
+
+

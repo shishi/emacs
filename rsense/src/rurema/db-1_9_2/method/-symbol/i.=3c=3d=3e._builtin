@@ -1,0 +1,18 @@
+kind=defined
+names=<=>
+visibility=public
+
+--- <=>(other) -> -1 | 0 | 1
+
+self と other のシンボルに対応する文字列を ASCII コード順で比較して、
+self が大きい時には正の整数、等しい時には 0、小さい時には負の整数を返し
+ます。
+
+@param other 比較対象のシンボルを指定します。
+
+  p :aaa <=> :xxx  # => -1
+  p :aaa <=> :aaa  # => 0
+  p :xxx <=> :aaa  # => 1
+
+@see [[m:String#<=>]]
+

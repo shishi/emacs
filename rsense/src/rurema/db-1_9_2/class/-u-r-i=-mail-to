@@ -1,0 +1,7 @@
+superclass=URI=Generic
+type=class
+library=uri
+extended=
+included=
+
+mailto URI を表すクラスです。[[RFC:2368]]。

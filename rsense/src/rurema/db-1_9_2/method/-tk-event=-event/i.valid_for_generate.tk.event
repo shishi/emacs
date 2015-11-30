@@ -1,0 +1,6 @@
+kind=defined
+names=valid_for_generate
+visibility=public
+
+--- valid_for_generate(group_flag = nil)
+

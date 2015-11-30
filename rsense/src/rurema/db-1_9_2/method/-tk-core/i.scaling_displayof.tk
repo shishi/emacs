@@ -1,0 +1,6 @@
+kind=defined
+names=scaling_displayof
+visibility=public
+
+--- scaling_displayof(win, scale=nil)
+

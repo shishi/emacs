@@ -1,0 +1,12 @@
+kind=defined
+names=issuer,name
+visibility=public
+
+--- issuer -> OpenSSL::X509::Name
+--- name -> OpenSSL::X509::Name
+
+署名者の証明書の発行者の名前(DN)を返します。
+
+これと [[m:OpenSSL::PKCS7::SignerInfo#serial]] で
+署名者を一意に識別します。
+

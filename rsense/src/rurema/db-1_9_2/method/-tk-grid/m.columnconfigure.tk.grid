@@ -1,0 +1,25 @@
+kind=defined
+names=columnconfigure
+visibility=public
+
+--- columnconfigure(master, index, args)
+
+マスタウィジェットmasterの桁位置indexに関する属性を
+argsで指定します。argsは、以下をキーに持つハッシュです。
+
+*"minsize"
+*"weight"
+*"pad"
+
+argsに空のハッシュ{}を指定すると現在の設定を返します。
+((-argsのデフォルト値は、[[c:TkComm::None]]にした方が良い-))
+
+  require "tk"
+  
+  f = TkFrame.new.pack
+  p TkGrid.columnconfigure(f, 0, {})
+  
+  => "-minsize 0 -pad 0 -weight 0"
+
+((-戻り値は、hashにしたい-))
+

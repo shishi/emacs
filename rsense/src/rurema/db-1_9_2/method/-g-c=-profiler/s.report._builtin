@@ -1,0 +1,12 @@
+kind=defined
+names=report
+visibility=public
+
+--- report(out = $stdout) -> nil
+
+[[m:GC::Profiler.result]] の結果を out に出力します。
+
+@param out 結果の出力先を指定します。デフォルトは $stdout です。
+
+@see [[m:GC::Profiler.result]]
+

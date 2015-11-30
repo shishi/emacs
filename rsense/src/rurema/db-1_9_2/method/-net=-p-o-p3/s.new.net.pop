@@ -1,0 +1,18 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(address, port = nil, apop = false) -> Net::POP3
+[[c:Net::POP3]] オブジェクトを生成します。
+
+このメソッドではサーバの接続は行いません。
+apop が真のときは APOP 認証を行うオブジェクトを生成します。
+
+port に nil を渡すと、適当なポート(通常は110、SSL利用時には 995)を
+使います。
+
+@param address POP3サーバのホスト名文字列
+@param port 接続するPOP3サーバのポート番号
+@param apop 真の場合にはAPOPで認証します
+
+@see [[m:Net::POP3#start]]

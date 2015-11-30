@@ -1,0 +1,21 @@
+kind=added
+names=count_tdata_objects
+visibility=public
+
+--- count_tdata_objects(result_hash = nil) -> Hash
+Counts nodes for each node type.
+
+This method is not for ordinary Ruby programmers, but for MRI developers
+who interest on MRI performance.
+
+It returns a hash as:
+{:NODE_METHOD=>2027, :NODE_FBODY=>1927, :NODE_CFUNC=>1798, ...}
+
+If the optional argument, result_hash, is given,
+it is overwritten and returned.
+This is intended to avoid probe effect.
+
+The contents of the returned hash is implementation defined.
+It may be changed in future.
+
+This method is not expected to work except C Ruby.

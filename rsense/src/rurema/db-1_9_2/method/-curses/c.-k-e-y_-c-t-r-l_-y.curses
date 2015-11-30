@@ -1,0 +1,8 @@
+kind=defined
+names=KEY_CTRL_Y
+visibility=public
+
+--- KEY_CTRL_Y -> Integer
+
+Ctrl + Y を表す定数です。
+

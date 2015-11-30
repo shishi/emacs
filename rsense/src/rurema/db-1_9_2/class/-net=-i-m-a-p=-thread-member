@@ -1,0 +1,8 @@
+superclass=Struct
+type=class
+library=net.imap
+extended=
+included=
+
+Net::IMAP::ThreadMember represents a thread-node returned 
+by [[m:Net::IMAP#thread]]

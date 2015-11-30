@@ -1,0 +1,6 @@
+kind=defined
+names=get
+visibility=public
+
+--- get(type = nil)
+

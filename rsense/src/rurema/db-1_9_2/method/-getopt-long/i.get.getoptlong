@@ -1,0 +1,32 @@
+kind=defined
+names=get,get_option
+visibility=public
+
+--- get        -> [String, String]
+--- get_option -> [String, String]
+ARGV から、次のオプションの名前と、もしあればその引数の組を取
+得します。メソッドは 2 つの値を返し、1 つ目の値がオプション名
+(例: --max-size) で、2 つ目がオプションの引数 (例: 20K) です。
+
+get と get_option は常にオプション名を正式名
+で返します。与えられたオプションが引数を取らないときは、
+空の文字列 ('') が optarg にセットされます。オプションが
+ARGV に残っていないときは、optname, optarg ともに nil に
+セットされます。メソッドから戻る際に、取得したオプションと引数
+は自動的に ARGV から取り除かれます。
+
+与えられたコマンド行引数があなたのプログラムのオプションの設定
+に合わない場合は、エラーとなって、以下のいずれかの例外が発生し
+ます。
+
+ * [[c:GetoptLong::AmbiguousOption]]
+ * [[c:GetoptLong::InvalidOption]]
+ * [[c:GetoptLong::MissingArgument]]
+ * [[c:GetoptLong::NeedlessArgument]]
+
+加えて、静粛 (quiet) フラグが有効になっていない限り、エラーメッ
+セージを標準エラー出力に出力します。
+
+例:
+    optname, optarg = option_parser.get
+

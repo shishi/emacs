@@ -1,0 +1,9 @@
+kind=defined
+names=slice_before
+visibility=public
+
+--- slice_before(pattern) -> Enumerator
+--- slice_before {|elt| bool } -> Enumerator
+--- slice_before(initial_state) {|elt, state| bool } -> Enumerator
+
+Creates an enumerator for each chunked elements.

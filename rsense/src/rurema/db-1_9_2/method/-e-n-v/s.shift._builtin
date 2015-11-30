@@ -1,0 +1,9 @@
+kind=defined
+names=shift
+visibility=public
+
+--- shift -> [String, String]
+
+環境変数を一つ取り除いて、それを名前と値の組の配列で返します。
+環境変数が一つも設定されていなければ nil を返します。
+

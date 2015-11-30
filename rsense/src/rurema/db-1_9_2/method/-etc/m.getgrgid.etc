@@ -1,0 +1,15 @@
+kind=defined
+names=getgrgid
+visibility=public
+
+--- getgrgid(gid) -> Struct::Group
+
+group データベースを検索し、グループ ID が gid
+であるグループエントリを返します。
+
+@param gid 検索する gid
+
+@raise ArgumentError エントリが見つからなかった場合に発生します。
+
+@see [[man:getgrgid(3)]], [[c:Struct::Group]]
+

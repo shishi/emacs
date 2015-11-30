@@ -1,0 +1,13 @@
+kind=defined
+names=-@
+visibility=public
+
+--- -@ -> Complex
+
+自身の符号を反転させたものを返します。
+
+例:
+
+  -Complex(1)     # => (-1+0i)
+  -Complex(-1, 1) # => (1-1i)
+

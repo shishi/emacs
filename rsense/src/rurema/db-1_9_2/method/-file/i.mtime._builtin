@@ -1,0 +1,14 @@
+kind=defined
+names=mtime
+visibility=public
+
+--- mtime    -> Time
+
+最終更新時刻を Time オブジェクトとして返します。
+
+@raise IOError 自身が close されている場合に発生します。
+
+@raise Errno::EXXX ファイルの時刻の取得に失敗した場合に発生します。
+
+@see [[m:File#lstat]], [[m:File#atime]], [[m:File#ctime]]
+

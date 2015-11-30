@@ -1,0 +1,10 @@
+kind=defined
+names=real?
+visibility=public
+
+--- real? -> false
+
+常に false を返します。
+
+@see [[m:Numeric#real?]]
+

@@ -1,0 +1,10 @@
+kind=defined
+names=name,to_s
+visibility=public
+
+--- name
+--- to_s
+
+キーのフルパスを 'HKEY_CURRENT_USER\SOFTWARE\foo\bar'
+のような形で返します。
+

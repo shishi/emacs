@@ -1,0 +1,12 @@
+kind=defined
+names=downto
+visibility=public
+
+--- downto(min){|date| ...} -> self
+--- downto(min) -> Enumerator
+このメソッドは、step(min, -1){|date| ...} と等価です。
+
+@param min 日付オブジェクト
+
+@see [[m:Date#step]], [[m:Date#upto]]
+

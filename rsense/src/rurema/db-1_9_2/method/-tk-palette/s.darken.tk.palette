@@ -1,0 +1,6 @@
+kind=defined
+names=darken
+visibility=public
+
+--- darken(color, percent)
+

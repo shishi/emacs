@@ -1,0 +1,7 @@
+kind=defined
+names=ascii_actual,latin_actual
+visibility=public
+
+--- latin_actual(option = nil)
+--- ascii_actual(option = nil)
+

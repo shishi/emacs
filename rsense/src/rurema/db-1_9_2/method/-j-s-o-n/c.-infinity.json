@@ -1,0 +1,10 @@
+kind=defined
+names=Infinity
+visibility=public
+
+--- Infinity -> Float
+
+正の無限大を表します。
+
+@see [[c:Float]]
+

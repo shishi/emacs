@@ -1,0 +1,4 @@
+#def_delegator	SingleForwardable#def_delegator
+#def_delegators	SingleForwardable#def_delegators
+#def_singleton_delegator	SingleForwardable#def_delegator
+#def_singleton_delegators	SingleForwardable#def_delegators

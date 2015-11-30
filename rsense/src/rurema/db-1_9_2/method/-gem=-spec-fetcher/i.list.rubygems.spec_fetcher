@@ -1,0 +1,10 @@
+kind=defined
+names=list
+visibility=public
+
+--- list(all = false) -> Array
+
+[[m:Gem::sources]] に格納されている各ソースから利用可能な Gem のリストを取得して返します。
+
+@param list 真を指定すると全てのバージョンの情報を返します。
+

@@ -1,0 +1,10 @@
+kind=defined
+names=marshal_load
+visibility=public 
+
+--- marshal_load(array) -> String
+
+ダンプされた情報をロードします。
+
+@param array バージョン情報を含む配列を指定します。
+

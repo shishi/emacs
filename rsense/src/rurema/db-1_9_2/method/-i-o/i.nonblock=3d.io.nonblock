@@ -1,0 +1,10 @@
+kind=added
+names=nonblock=
+visibility=public
+
+--- nonblock=(bool)
+bool が真なら self をノンブロックモードに、偽ならブロックモー
+ドにします。
+
+@param bool 真を指定すると自身をノンブロックモードにします。偽を指定するとブロックモードにします。
+

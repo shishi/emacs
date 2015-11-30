@@ -1,0 +1,6 @@
+kind=defined
+names=kanji_configinfo
+visibility=public
+
+--- kanji_configinfo(slot = nil)
+

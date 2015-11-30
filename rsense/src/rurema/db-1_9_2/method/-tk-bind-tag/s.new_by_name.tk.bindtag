@@ -1,0 +1,6 @@
+kind=defined
+names=new_by_name
+visibility=public
+
+--- new_by_name(name, *args, &b)
+

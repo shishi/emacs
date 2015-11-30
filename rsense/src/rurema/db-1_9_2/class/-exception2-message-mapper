@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=e2mmap
+extended=
+included=
+
+例外クラスに特定のエラーメッセージ用フォーマットを関連づけるためのモジュールです。

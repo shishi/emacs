@@ -1,0 +1,9 @@
+kind=defined
+names=zero?
+visibility=public
+
+--- zero? -> bool
+FileTest.zero?(self.to_s) と同じです。
+
+@see [[m:FileTest.#zero?]]
+

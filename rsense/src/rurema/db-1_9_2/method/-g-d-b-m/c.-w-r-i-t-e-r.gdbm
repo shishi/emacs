@@ -1,0 +1,10 @@
+kind=defined
+names=WRITER
+visibility=public
+
+--- WRITER -> Fixnum
+
+[[m:GDBM.open]] の第3引数に指定します。
+
+書き込みモードでオープンします。
+

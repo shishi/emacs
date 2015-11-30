@@ -1,0 +1,10 @@
+kind=defined
+names=start_color
+visibility=public
+
+--- start_color -> bool
+Initializes the color attributes, for terminals that support it.
+
+This must be called, in order to use color attributes.
+It is good practice to call it just after Curses.init_screen
+

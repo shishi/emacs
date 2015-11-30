@@ -1,0 +1,7 @@
+superclass=TkFrame
+type=class
+library=tk.menubar
+extended=
+included=TkComposite,TkMenuSpec
+
+

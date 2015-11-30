@@ -1,0 +1,15 @@
+kind=defined
+names=tainted?
+visibility=public
+
+--- tainted? -> bool
+
+オブジェクトの「汚染マーク」がセットされている時真を返します。
+
+オブジェクトの汚染に関しては[[d:spec/safelevel]]を参照してください。
+
+  p String.new.tainted? #=> false
+  p ENV['OS'].tainted? #=> true
+
+@see [[m:Object#taint]],[[m:Object#untaint]]
+

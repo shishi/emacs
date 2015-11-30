@@ -1,0 +1,27 @@
+kind=defined
+names=delete_at
+visibility=public
+
+--- delete_at(index) -> String | nil
+
+index で指定したインデックスの内容をヒストリから削除し、その内容を返します。
+該当する index の内容がヒストリになければ、 nil を返します。
+index に 0 を指定すると [[m:Readline::HISTORY.shift]] 
+と同様に最初の入力内容を削除します。
+また、 -1 は最後の入力内容というように、index に負の値を指定することで、
+最後から入力内容を取得することもできます。
+index が -1 の場合は [[m:Readline::HISTORY.pop]] と同様に動作します。
+
+@param index 削除対象のヒストリのインデックスを指定します。
+
+@raise NotImplementedError サポートしていない環境で発生します。
+
+@raise SecurityError セーフレベル ($SAFE) が 4 の場合に発生します。
+
+例:
+
+  require "readline"
+  
+  Readline::HISTORY.push("foo", "bar", "baz")
+  Readline::HISTORY.delete_at(1)
+  p Readline::HISTORY.to_a #=> ["foo", "baz"]

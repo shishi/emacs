@@ -1,0 +1,11 @@
+kind=defined
+names=to_a
+visibility=public
+
+--- to_a -> Array
+自身を配列に変換します。要素の順序は不定です。
+
+  set = Set['hello', 'world']
+  p set.to_a
+  #=> ["world", "hello"]
+

@@ -1,0 +1,7 @@
+superclass=StandardError
+type=class
+library=tsort
+extended=
+included=
+
+閉路が存在する時、発生します。

@@ -1,0 +1,18 @@
+kind=defined
+names=[]
+visibility=public
+
+--- [](index_or_header) -> object
+
+ミックスモードでは、このメソッドは引数に行番号を指定すれば行単位で動作
+し、ヘッダの名前を指定すれば列単位で動作します。
+
+このメソッドを呼び出す前に [[m:CSV::Table#by_col!]] を呼び出すとカラム
+モードになります。また [[m:CSV::Table#by_row!]] を呼び出すとロウモード
+になります。
+
+@param index_or_header 行番号かヘッダの名前を指定します。
+
+@return 値の配列を返します。この配列を変更しても元のデータには何の影響
+        もありません。
+

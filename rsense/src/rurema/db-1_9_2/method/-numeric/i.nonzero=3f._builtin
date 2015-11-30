@@ -1,0 +1,15 @@
+kind=defined
+names=nonzero?
+visibility=public
+
+--- nonzero?    -> self | nil
+
+自身がゼロの時 nil を返し、非ゼロの時 self を返します。
+
+  p 10.nonzero?              #=> 10
+  p 0.nonzero?               #=> nil
+  p 0.0.nonzero?             #=> nil
+ 
+  require 'rational'
+  p Rational(0, 2).nonzero?  #=> nil
+

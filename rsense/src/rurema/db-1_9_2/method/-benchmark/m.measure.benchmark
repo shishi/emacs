@@ -1,0 +1,23 @@
+kind=defined
+names=measure
+visibility=public
+
+--- measure(label = "") { ... }  -> Benchmark::Tms
+
+与えられたブロックを実行して、経過した時間を [[m:Process.#times]] で計り、
+[[c:Benchmark::Tms]] オブジェクトを生成して返します。
+
+Benchmark::Tms オブジェクトには to_s が定義されているので、
+基本的には以下のように使います。
+
+  require 'benchmark'
+  
+  puts Benchmark::CAPTION
+  puts Benchmark.measure { "a"*1_000_000 }
+  
+  #=>
+  
+      user     system      total        real
+  1.166667   0.050000   1.216667 (  0.571355)
+
+

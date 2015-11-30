@@ -1,0 +1,15 @@
+kind=defined
+names=spawn
+visibility=public
+
+--- spawn(cmd, *arg)    -> Integer
+
+関数 [[m:Kernel.#spawn]] と同じです。
+
+@param cmd [[m:Kernel.#spawn]] と同じです。
+
+@param arg [[m:Kernel.#spawn]] と同じです。
+
+@raise NotImplementedError メソッドが現在のプラットフォームで実装されていない場合に発生します。
+
+

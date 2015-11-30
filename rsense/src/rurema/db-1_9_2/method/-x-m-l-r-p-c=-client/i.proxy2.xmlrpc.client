@@ -1,0 +1,10 @@
+kind=defined
+names=proxy2
+visibility=public
+
+--- proxy2( prefix, *args )
+
+Almost the same like [[m:XMLRPC::Client#proxy]] only that a call on the returned
+XMLRPC::Client::Proxy object behaves like [[unknown:XMLRPC::Client#call2]], i.e.
+a call on that object will return two parameters.
+

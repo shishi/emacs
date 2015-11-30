@@ -1,0 +1,10 @@
+kind=defined
+names=symlink?
+visibility=public
+
+--- symlink?(path)    -> bool
+
+[[m:FileTest.#symlink?]] と同じです。
+
+@param path パスを表す文字列か IO オブジェクトを指定します。
+

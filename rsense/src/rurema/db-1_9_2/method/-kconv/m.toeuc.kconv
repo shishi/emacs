@@ -1,0 +1,19 @@
+kind=defined
+names=toeuc
+visibility=public
+
+--- toeuc(str) -> String
+
+文字列 str のエンコーディングを EUC-JP に変換して返します。
+
+Kconv.kconv(str, Kconv::EUC)と同じです。
+
+このメソッドは MIME エンコードされた文字列を展開し、
+いわゆる半角カナを全角に変換します。
+これらを変換したくない場合は、 [[m:NKF.#nkf]]('-exm0', str)
+を使ってください。
+
+@param str 変換元の文字列
+
+@see [[m:Kconv.#kconv]], [[m:String#toeuc]]
+

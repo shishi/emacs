@@ -1,0 +1,25 @@
+kind=defined
+names=update
+visibility=public
+
+--- update(other){|key, value| ... } -> self
+
+self と other の内容をマージします。
+
+重複するキーに対応する値はother の内容で上書きされます。
+
+@param other each_pair メソッドを持つオブジェクトでなければなりません。
+
+
+  require 'dbm'
+  
+  db1 = DBM.open('aaa.db', 0666, DBM::NEWDB)
+  db1[:a] = 'aaa'
+  db1[:b] = 'bbbbbb'
+  db2 = DBM.open('bbb.db', 0666, DBM::NEWDB)
+  db2[:bb] = 'bbb'
+  db2[:cc] = 'ccc'
+  
+  db1.update(db2)
+  p db1.keys #=> ["bb", "cc", "b", "a"]
+

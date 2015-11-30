@@ -1,0 +1,25 @@
+kind=defined
+names=glob
+visibility=public
+
+--- glob(patten) -> Shell::Filter
+実行すると, それらを内容とする Filter オブジェクトを返します.
+
+@param patten シェルコマンド glob に与えるパターンを指定します。
+              パターンの書式については、[[m:Dir.[] ]]を参照してください。
+
+動作例
+  require 'shell'
+  Shell.def_system_command("head")
+  sh = Shell.new
+  sh.transact {
+    glob("*.txt").to_a.each { |file|
+      file.chomp!
+      cat(file).each { |l|
+        echo(l) | tee(file + ".tee") >> "all.tee"
+      }
+    }
+  }
+
+@see [[m:Dir.[] ]]
+

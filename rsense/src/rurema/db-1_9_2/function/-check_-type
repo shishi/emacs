@@ -1,0 +1,12 @@
+name=Check_Type
+private=false
+macro=false
+type=void
+filename=ruby.h
+params=(VALUE val, int typeflag)
+
+
+val の構造体型フラグが typeflag でなければ
+例外 TypeError を発生します。val は即値の VALUE であっても
+構いません。
+

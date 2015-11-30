@@ -1,0 +1,28 @@
+kind=defined
+names=join
+visibility=public
+
+--- join(sep = $,)    -> String
+
+配列の要素を文字列 sep を間に挟んで連結した文字列を返します。
+
+文字列でない要素に対しては to_s した結果を連結します。
+要素がまた配列であれば再帰的に (同じ sep を利用して)
+join した文字列を連結します。
+ただし、配列要素が自身を含むような無限にネストした配列に対しては、以下
+のような結果になります。
+
+    ary = [1,2,3]
+    ary.push ary
+    p ary           # => [1, 2, 3, [...]]
+    p ary.join      # => ArgumentError
+
+@param sep 間に挟む文字列を指定します。nil のときは空文字列を使います。
+
+  [1, 2, 3].join('-') #=> "1-2-3"
+
+@raise ArgumentError 配列要素が自身を含むような無限にネストした配列に対
+                     して join を呼んだ場合に発生します。
+
+@see [[m:Array#*]], [[m:$,]]
+

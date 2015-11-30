@@ -1,0 +1,14 @@
+kind=added
+names=ssl_version=
+visibility=public
+
+--- ssl_version=(ver)
+利用するプロトコルの種類を文字列もしくは
+シンボルで指定します。
+
+[[m:OpenSSL::SSL::SSLContext.new]] で指定できるものと同じです。
+
+@param ver 利用するプロトコルの種類
+@see [[m:Net::HTTP#ssl_version]], [[m:OpenSSL::SSL::SSL#ssl_version=]]
+
+

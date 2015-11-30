@@ -1,0 +1,33 @@
+kind=defined
+names=to_i,truncate
+visibility=public 
+
+--- to_i -> Integer
+--- truncate(precision = 0) -> Rational | Integer
+
+0 から 自身までの整数で、自身にもっとも近い整数を返します。
+
+@param precision 計算結果の精度
+
+@raise TypeError precision に整数以外のものを指定すると発生します。
+
+例:
+
+  Rational(2, 3).to_i   # => 0
+  Rational(3).to_i      # => 3
+  Rational(300.6).to_i  # => 300
+  Rational(98, 71).to_i # => 1
+  Rational(-30, 2).to_i # => -15
+
+precision を指定した場合は指定した桁数の数値と、上述の性質に最も近い整
+数か [[c:Rational]] を返します。
+
+例:
+
+  Rational('-123.456').truncate(+1)       # => (-617/5)
+  Rational('-123.456').truncate(+1).to_f  # => -123.4
+  Rational('-123.456').truncate(0)        # => -123
+  Rational('-123.456').truncate(-1)       # => -120
+
+@see [[m:Rational#ceil]], [[m:Rational#floor]]
+

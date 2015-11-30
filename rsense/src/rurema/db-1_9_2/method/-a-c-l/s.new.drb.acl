@@ -1,0 +1,7 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(list=nil, order = DENY_ALLOW)
+
+

@@ -1,0 +1,8 @@
+kind=defined
+names=default_pop3_port,default_port
+visibility=public
+
+--- default_port -> Integer
+--- default_pop3_port -> Integer
+POP3 のデフォルトのポート番号(110)を返します。
+

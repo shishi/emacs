@@ -1,0 +1,16 @@
+kind=defined
+names=attr_reader
+visibility=private 
+
+--- attr_reader(*name) -> nil
+
+インスタンス変数 name の読み取りメソッドを定義します。
+
+このメソッドで定義されるメソッドの定義は以下の通りです。
+
+  def name
+    @name
+  end
+
+@param name [[c:String]] または [[c:Symbol]] を 1 つ以上指定します。
+

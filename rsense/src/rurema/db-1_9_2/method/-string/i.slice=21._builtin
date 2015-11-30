@@ -1,0 +1,17 @@
+kind=defined
+names=slice!
+visibility=public
+
+--- slice!(nth) -> Integer
+--- slice!(pos, len) -> String
+--- slice!(substr) -> String
+--- slice!(regexp, nth = 0) -> String
+--- slice!(first..last) -> String
+--- slice!(first...last) -> String
+--- slice!(regexp, nth = 0) -> String
+
+指定した範囲 ([[m:String#[] ]] 参照) を
+文字列から取り除いたうえで取り除いた部分文字列を返します。
+
+引数が範囲外を指す場合は nil を返します。
+

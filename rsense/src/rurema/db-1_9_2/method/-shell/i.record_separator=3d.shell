@@ -1,0 +1,7 @@
+kind=defined
+names=record_separator=
+visibility=public
+
+--- record_separator=(rs)
+
+

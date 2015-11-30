@@ -1,0 +1,17 @@
+kind=defined
+names=peeraddr
+visibility=public
+
+--- peeraddr
+
+接続相手先ソケットの情報を表す配列を返します。配列の各要素は
+[[m:UNIXSocket#addr]] メソッドが返す配列
+と同じです。
+
+例:
+
+  UNIXServer.open("/tmp/s") {|serv|
+    c = UNIXSocket.open("/tmp/s")
+    p c.peeraddr    #=> ["AF_UNIX", "/tmp/s"]
+  }
+

@@ -1,0 +1,12 @@
+kind=defined
+names=try_convert
+visibility=public
+
+--- try_convert(obj) -> IO | nil
+Try to convert obj into an IO, using to_io method. Returns converted
+IO or nil if obj cannot be converted for any reason.
+
+   IO.try_convert(STDOUT)     # => STDOUT
+   IO.try_convert("STDOUT")   # => nil
+
+

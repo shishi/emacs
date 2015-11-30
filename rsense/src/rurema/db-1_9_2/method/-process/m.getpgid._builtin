@@ -1,0 +1,16 @@
+kind=defined
+names=getpgid
+visibility=public
+
+--- getpgid(pid = 0)   -> Integer
+
+プロセス ID が pid であるプロセスのプロセスグループ ID を整数で返します。
+
+@param pid プロセス ID を整数で指定します。0 の時はカレントプロセス ID を指定したのと同じです。
+
+@raise Errno::EXXX プロセスグループの取得に失敗した場合に発生します。
+
+@raise NotImplementedError メソッドが現在のプラットフォームで実装されていない場合に発生します。
+
+@see [[man:getpgid(2)]]
+

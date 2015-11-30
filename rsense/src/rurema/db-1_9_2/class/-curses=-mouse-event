@@ -1,0 +1,43 @@
+superclass=Object
+type=class
+library=curses
+extended=
+included=
+
+マウスの位置や状態などの情報を取得するためのクラスです。
+ncurses を利用して curses ライブラリをインストールした場合にだけ、
+本クラスが定義されています。
+
+本クラスのインスタンスを直接生成することはできません。
+[[m:Curses.#getmouse]] で生成します。
+
+なお、ncurses でマウスのイベントを取得できるようにするには、
+いくつかの条件が必要なようです。
+詳しくは man ページの curs_mouse(3X) の BUGS を参照ください。
+
+例: クリックした位置などを取得する。
+
+  require "curses"
+  
+  Curses.init_screen
+  begin
+    Curses.cbreak
+    Curses.stdscr.keypad(true)
+    Curses.mousemask(Curses::BUTTON1_CLICKED | Curses::BUTTON2_CLICKED | 
+                     Curses::BUTTON3_CLICKED | Curses::BUTTON4_CLICKED)
+    s = "Click"
+    Curses.setpos(Curses.lines / 2, Curses.cols / 2 - (s.length / 2))
+    Curses.addstr(s)
+    Curses.refresh
+    if Curses.getch == Curses::KEY_MOUSE
+      m = Curses.getmouse
+      if m
+        s = "mouse event = #{'0x%x' % m.bstate}, axis = (#{m.x},#{m.y},#{m.z})"
+        Curses.setpos(Curses.lines / 2 + 1, Curses.cols / 2 - (s.length / 2))
+        Curses.addstr(s)
+        Curses.refresh
+      end
+    end
+  ensure
+    Curses.close_screen
+  end

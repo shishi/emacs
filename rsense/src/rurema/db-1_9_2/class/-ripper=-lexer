@@ -1,0 +1,7 @@
+superclass=Ripper
+type=class
+library=ripper.lexer
+extended=
+included=
+
+Ruby プログラムの字句解析器です。

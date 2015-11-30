@@ -1,0 +1,22 @@
+superclass=Delegator
+type=class
+library=delegate
+extended=
+included=
+
+[[c:Delegator]] クラスを継承し、シンプルなメソッド委譲を実現した具象クラス。
+
+委譲先に指定されたオブジェクトへメソッドの実行を委譲します。
+
+例:
+
+//emlist{
+require 'delegate'
+
+foo = Object.new
+def foo.test
+  p 25
+end
+foo2 = SimpleDelegator.new(foo)
+foo2.test   # => 25
+//}

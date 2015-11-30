@@ -1,0 +1,10 @@
+kind=defined
+names=capable_login_auth?
+visibility=public
+
+--- capable_login_auth? -> bool
+サーバが AUTH LOGIN を広告してきた場合に真を返します。
+
+このメソッドは [[m:Net::SMTP#start]] などでセッションを開始
+した以降にしか正しい値を返しません。
+

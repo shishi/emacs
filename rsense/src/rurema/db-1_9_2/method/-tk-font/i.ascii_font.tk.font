@@ -1,0 +1,9 @@
+kind=defined
+names=ascii_font,asciifont,latin_font,latinfont
+visibility=public
+
+--- latin_font
+--- latinfont
+--- ascii_font
+--- asciifont
+

@@ -1,0 +1,24 @@
+kind=defined
+names=end
+visibility=public
+
+--- end(n) -> Fixnum | nil
+
+n 番目の部分文字列終端のオフセットを返します。
+
+0 はマッチ全体を意味します。
+n 番目の部分文字列がマッチしていなければ nil を返します。
+
+@param n 部分文字列を指定する数値。
+
+@raise IndexError 範囲外の n を指定した場合に発生します。
+
+  /(foo)(bar)(BAZ)?/ =~ "foobarbaz"
+  p $~.end(0)   # => 6
+  p $~.end(1)   # => 3
+  p $~.end(2)   # => 6
+  p $~.end(3)   # => nil
+  p $~.end(4)   # => `end': index 4 out of matches (IndexError)
+
+@see [[m:MatchData#begin]]
+

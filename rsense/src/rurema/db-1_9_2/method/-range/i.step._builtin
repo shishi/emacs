@@ -1,0 +1,18 @@
+kind=defined
+names=step
+visibility=public
+
+--- step(s = 1) {|item| ... } -> self
+--- step(s = 1) -> Enumerator
+
+範囲内の要素を s おきに繰り返します。
+
+@param s 正の整数を指定します。
+
+@raise ArgumentError s に 0 または負の数を指定した場合に発生します
+
+  ("a" .. "f").step(2) {|v| p v}
+  # => "a"
+       "c"
+       "e"
+

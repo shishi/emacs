@@ -1,0 +1,8 @@
+kind=defined
+names=description
+visibility=public
+
+--- description
+
+Returns a string giving the content description as defined in [MIME-IMB].
+

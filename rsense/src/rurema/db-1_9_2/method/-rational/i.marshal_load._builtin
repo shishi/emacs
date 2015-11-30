@@ -1,0 +1,11 @@
+kind=defined
+names=marshal_load
+visibility=public 
+
+--- marshal_load -> Rational
+
+[[m:Rational#marshal_dump]] で得られた配列を基に、[[c:Rational]] オブジェ
+クトを復元します。
+
+@see [[m:Rational#marshal_dump]]
+

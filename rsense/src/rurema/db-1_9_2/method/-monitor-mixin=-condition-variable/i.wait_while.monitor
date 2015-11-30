@@ -1,0 +1,17 @@
+kind=defined
+names=wait_while
+visibility=public
+
+--- wait_while { ... } -> ()
+モニタのロックを開放し、現在のスレッドを
+ブロックで指定した条件を満たしている間停止します。
+
+[[m:MonitorMixin::ConditionVariable#signal]] や
+[[m:MonitorMixin::ConditionVariable#broadcast]] で
+スレッドが起こされると、ロックを取得し、ブロックを評価し
+その結果によってこのメソッドから抜け処理を継続するか
+再びロックを開放しスレッドを停止するかを決めます。
+
+@raise ThreadError ロックを持っていないスレッドがこのメソッドを呼びだした場合に発生します
+@see [[m:MonitorMixin::ConditionVariable#wait]]
+

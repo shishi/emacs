@@ -1,0 +1,11 @@
+kind=defined
+names=rdev
+visibility=public
+
+--- rdev -> Integer
+デバイスタイプ(スペシャルファイルのみ)を返します。
+
+  fs = File::Stat.new($0)
+  #例
+  p fs.rdev     #=> 2
+

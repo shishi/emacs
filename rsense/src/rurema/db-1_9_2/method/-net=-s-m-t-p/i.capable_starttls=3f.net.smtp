@@ -1,0 +1,11 @@
+kind=defined
+names=capable_starttls?
+visibility=public
+
+--- capable_starttls? -> bool
+サーバが STARTTLS を広告してきた場合に真を返します。
+
+このメソッドは [[m:Net::SMTP#start]] などでセッションを開始
+した以降にしか正しい値を返しません。
+
+

@@ -1,0 +1,8 @@
+name=fc_path
+private=true
+macro=false
+type=VALUE
+filename=variable.c
+params=(struct fc_result *fc, ID name)
+
+

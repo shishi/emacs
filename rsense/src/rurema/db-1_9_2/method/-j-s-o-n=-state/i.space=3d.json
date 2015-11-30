@@ -1,0 +1,10 @@
+kind=defined
+names=space=
+visibility=public 
+
+--- space=(string)
+
+JSON 形式の文字列のトークン間に挿入する文字列をセットします。
+
+@param string JSON 形式の文字列のトークン間に挿入する文字列を指定します。
+

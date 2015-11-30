@@ -1,0 +1,18 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(config, default = WEBrick::Config::DigestAuth) -> WEBrick::HTTPAuth::DigestAuth
+
+自身を初期化します。
+
+認証を実行するために、リクエスト間で状態を保存し、複数のリクエストに対
+して同一のインスタンスを使用してください。
+
+@param config 設定を保持しているハッシュを指定します。
+              :Realm と :UserDB は必ず指定しなければなりません。
+
+@param default デフォルトは [[m:WEBrick::Config::DigestAuth]] です。
+
+@see [[m:WEBrick::Config::DigestAuth]]
+

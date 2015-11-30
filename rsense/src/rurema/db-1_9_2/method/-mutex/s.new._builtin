@@ -1,0 +1,7 @@
+kind=defined
+names=new
+visibility=public
+
+--- new -> Mutex
+新しい mutex を生成して返します。
+

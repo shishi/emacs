@@ -1,0 +1,7 @@
+kind=defined
+names=set_symbol_type,symbol_type=
+visibility=public
+
+--- symbol_type=
+--- set_symbol_type(val)
+

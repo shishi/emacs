@@ -1,0 +1,14 @@
+kind=redefined
+names=quo
+visibility=public
+
+--- quo(other) -> Rational
+
+商を計算して計算結果を [[c:Rational]] オブジェクトで返します。
+
+@param other 自身を割る数
+
+例:
+
+  (1<<32).quo(2)              # => Rational(2147483648, 1)
+

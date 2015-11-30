@@ -1,0 +1,22 @@
+kind=defined
+names=mkdir
+visibility=public
+
+--- mkdir(*path) -> Array
+
+Dir.mkdirと同じです。 (複数可)
+
+@param path 作成するディレクトリ名を文字列で指定します。
+
+@return 作成するディレクトリの一覧の配列を返します。
+
+使用例
+  require 'shell'
+  Shell.verbose = false
+  sh = Shell.new
+  begin
+    p sh.mkdir("foo") #=> ["foo"]
+  rescue => err
+    puts err
+  end
+

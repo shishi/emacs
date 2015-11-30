@@ -1,0 +1,15 @@
+kind=defined
+names=casefold?
+visibility=public
+
+--- casefold? -> bool
+
+正規表現が大文字小文字の判定をしないようにコンパイルされている時、
+真を返します。
+
+  reg = Regexp.new("foobar", Regexp::IGNORECASE)
+  p reg.casefold? #=> true
+
+  reg = Regexp.new("hogehoge")
+  p reg.casefold? #=> false
+

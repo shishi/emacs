@@ -1,0 +1,25 @@
+kind=defined
+names=fetch
+visibility=public
+
+--- fetch(key) -> String
+--- fetch(key, default) -> String
+--- fetch(key) {|hash| .... } -> String
+key ヘッダフィールドを返します。
+
+たとえばキー 'content-length' に対しては  '2048'
+のような文字列が得られます。キーが存在しなければ nil を返します。
+
+該当するキーが登録されてい
+ない時には、引数 default が与えられていればその値を、ブロッ
+クが与えられていればそのブロックを評価した値を返します。
+
+一種類のヘッダフィールドが一つのヘッダの中に複数存在する
+場合にはそれを全て ", " で連結した文字列を返します。
+key は大文字小文字を区別しません。
+
+@param key ヘッダフィール名を文字列で与えます。
+@param default 該当するキーが登録されていない時の返り値を指定します。
+@raise IndexError 引数defaultもブロックも与えられてない時、キーの探索に 失敗すると発生します。
+@see [[m:Net::HTTPHeader#[] ]]
+

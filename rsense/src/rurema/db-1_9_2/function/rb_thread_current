@@ -1,0 +1,10 @@
+name=rb_thread_current
+private=false
+macro=false
+type=VALUE
+filename=eval.c
+params=(void)
+
+
+現在実行中のスレッドを返します。
+

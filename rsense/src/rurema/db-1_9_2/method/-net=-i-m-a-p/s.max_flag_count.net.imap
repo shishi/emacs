@@ -1,0 +1,12 @@
+kind=defined
+names=max_flag_count
+visibility=public
+
+--- max_flag_count -> Integer
+サーバからのレスポンスに含まれる flag の上限を返します。
+
+これを越えた flag がレスポンスに含まれている場合は、
+[[c:Net::IMAP::FlagCountError]] 例外が発生します。
+
+@see [[m:Net::IMAP#max_flag_count=]]
+

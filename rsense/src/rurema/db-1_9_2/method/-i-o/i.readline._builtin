@@ -1,0 +1,26 @@
+kind=defined
+names=readline
+visibility=public
+
+--- readline(rs = $/)    -> String
+
+一行読み込んで、読み込みに成功した時にはその文字列を返します。
+EOF に到達した時には EOFError が発生します。
+
+テキスト読み込みメソッドとして動作します。
+読み込んだ文字列を変数 [[m:$_]] にセットします。[[m:IO#gets]] との違いは EOF での振る舞いのみです。
+
+@param rs 行の区切りを文字列で指定します。rs に nil を指定すると行区切りなしとみなします。空文字列 "" を指定すると連続する改行を行の区切りとみなします(パラグラフモード)。
+
+@raise EOFError EOF に到達した時に発生します。
+
+@raise IOError 自身が読み込み用にオープンされていなければ発生します。
+
+   f = File.new("oneline_file")
+   f.readline                      #=> "This is line one\n"
+   $_                              #=> "This is line one\n"
+   f.readline                      #=> EOFError
+   $_                              #=> nil
+
+@see [[m:$/]], [[m:IO#gets]]
+

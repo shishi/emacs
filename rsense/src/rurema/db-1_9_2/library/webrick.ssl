@@ -1,0 +1,11 @@
+methods=WEBrick=GenericServer/s.new.webrick.ssl,WEBrick=GenericServer/i.ssl_context.webrick.ssl,WEBrick=Config/c.SSL.webrick.ssl,WEBrick=Config/c.General.webrick.ssl
+sublibraries=
+requires=
+classes=
+is_sublibrary=true
+
+[[c:WEBrick::GenericServer]] を SSL/TLS に対応させるための実装。
+このファイルを require すると WEBrick::GenericServer が SSL/TLS 対応になる。
+
+ruby 1.8.3 以降では単に require するだけでは SSL/TLS は有効ではなく、
+設定で明示的に有効にする必要がある。

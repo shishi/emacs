@@ -1,0 +1,9 @@
+kind=defined
+names=begin,first
+visibility=public
+
+--- begin -> object
+--- first -> object
+
+最初の要素を返します。
+

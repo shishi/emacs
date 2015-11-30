@@ -1,0 +1,8 @@
+kind=defined
+names=size
+visibility=public
+
+--- size
+
+The size of the tuple.
+

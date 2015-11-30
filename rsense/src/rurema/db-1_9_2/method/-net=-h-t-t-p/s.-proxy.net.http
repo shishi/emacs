@@ -1,0 +1,31 @@
+kind=defined
+names=Proxy
+visibility=public
+
+--- Proxy(address, port = 80) -> Class
+
+Proxy 経由で http サーバに接続するためのクラスを作成し返します。
+
+このクラスは Net::HTTP を継承しているので Net::HTTP と全く
+同じように使えます。指定されたプロクシを常に経由して http サーバ
+に接続します。
+
+address が nil のときは Net::HTTP クラスをそのまま返します。
+
+例1: [[m:Net::HTTP.new]] を使う
+  require 'net/http'
+  proxy_class = Net::HTTP::Proxy('proxy.example.com', 8080)
+  http = proxy_class.new('www.example.org')
+  http.start {|h|
+    h.get('/ja/') # proxy.example.com 経由で接続します。
+  }
+例2: [[m:Net::HTTP.start]] を使う
+  require 'net/http'
+  proxy_class = Net::HTTP::Proxy('proxy.example.com', 8080)
+  proxy_class.start('www.example.org') {|h|
+    h.get('/ja/') # proxy.example.com 経由で接続します。
+  }
+
+@param address プロクシのホスト名を文字列で与えます。
+@param port プロクシのポート番号を与えます。
+

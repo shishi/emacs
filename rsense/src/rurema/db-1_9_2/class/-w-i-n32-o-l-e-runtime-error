@@ -1,0 +1,16 @@
+superclass=RuntimeError
+type=class
+library=win32ole
+extended=
+included=
+
+COMインターフェイスエラー時に発生する例外です。
+
+WIN32OLERuntimeErrorは、OLEオートメーション呼び出しが例外ステータス
+（HRESULTのMSBがオン）で返った場合や、メソッド呼び出し時にオートメーショ
+ン仕様で認められていない値が与えられた場合に発生します。
+
+OLEオートメーション呼び出しが例外ステータスで戻された場合は、メッセージ
+に例外となったHRESULT値と対応するメッセージが表示されます。
+
+HRESULT: [[url:http://msdn.microsoft.com/en-us/library/cc704587(v=PROT.10).aspx]]

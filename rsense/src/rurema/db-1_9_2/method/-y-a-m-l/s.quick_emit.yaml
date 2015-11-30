@@ -1,0 +1,6 @@
+kind=defined
+names=quick_emit
+visibility=public
+
+--- quick_emit(oid, opts={}) {|obj| ...}
+

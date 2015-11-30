@@ -1,0 +1,8 @@
+kind=defined
+names=devminor
+visibility=public 
+
+--- devminor -> Integer
+
+tar のヘッダに含まれる devminor を返します。
+

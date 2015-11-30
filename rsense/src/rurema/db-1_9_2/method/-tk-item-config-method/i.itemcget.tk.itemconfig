@@ -1,0 +1,8 @@
+kind=defined
+names=itemcget
+visibility=public
+
+--- itemcget(tagOrId, option)
+
+
+

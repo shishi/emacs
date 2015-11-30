@@ -1,0 +1,16 @@
+kind=defined
+names=sort,uid_sort
+visibility=public
+
+--- sort(sort_keys, search_keys, charset)
+--- uid_sort(sort_keys, search_keys, charset)
+
+Sends a SORT command to sort messages in the mailbox.
+
+ex).
+
+  p imap.sort(["FROM"], ["ALL"], "US-ASCII")
+  #=> [1, 2, 3, 5, 6, 7, 8, 4, 9]
+  p imap.sort(["DATE"], ["SUBJECT", "hello"], "US-ASCII")
+  #=> [6, 7, 8, 1]
+

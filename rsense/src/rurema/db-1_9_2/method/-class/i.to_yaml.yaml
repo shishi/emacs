@@ -1,0 +1,21 @@
+kind=added
+names=to_yaml
+visibility=public
+
+--- to_yaml(opts = {})
+例外を発生する。
+
+@param opts YAMLドキュメント出力の際のオプションを指定するが使われない。
+
+@raise TypeError
+
+  require 'yaml'
+  
+  begin
+    cc = Class.new 
+    cc.to_yaml
+  rescue
+    p $!
+    #=> #<TypeError: can't dump anonymous class Class>
+  end
+

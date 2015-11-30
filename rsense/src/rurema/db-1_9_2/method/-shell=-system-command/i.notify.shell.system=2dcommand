@@ -1,0 +1,11 @@
+kind=defined
+names=notify
+visibility=public
+
+--- notify(*opts) -> String
+--- notify(*opts){|message| ... } -> String
+
+@param opts
+
+@see [[m:Shell#notify]]
+

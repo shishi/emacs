@@ -1,0 +1,15 @@
+kind=defined
+names=each_name
+visibility=public
+
+--- each_name(address) {|name| ...} -> ()
+IP アドレス address のホスト名をルックアップし、
+各ルックアップ結果のホスト名に対してブロックを評価します。
+
+ルックアップは /etc/hosts, DNS の順で行います。
+
+@param address IPアドレスを文字列で与えます。
+
+
+
+

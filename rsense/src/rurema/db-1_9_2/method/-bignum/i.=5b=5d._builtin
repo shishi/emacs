@@ -1,0 +1,15 @@
+kind=defined
+names=[]
+visibility=public
+
+--- [](nth) -> Fixnum
+
+nth 番目のビット(最下位ビット(LSB)が 0 番目)が立っている時 1
+を、そうでなければ 0 を返します。
+
+@param nth  何ビット目を指すかの数値
+@return     1 か 0
+
+self[nth]=bit (つまりビットの修正) がないのは、Numeric 関連クラスが
+immutable であるためです。
+

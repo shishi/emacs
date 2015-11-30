@@ -1,0 +1,10 @@
+kind=defined
+names=addch
+visibility=public
+
+--- addch(ch) -> nil
+
+ウィンドウのカーソル位置に ch (1 バイト) を上書きします。
+
+@param ch 文字を 1 バイト指定します。
+

@@ -1,0 +1,16 @@
+kind=defined
+names===
+visibility=public
+
+--- ==(other) -> bool
+
+数値として等しいか判定します。
+
+@param other 自身と比較する数値
+
+例:
+
+  Complex(2, 1) == Complex(1) # => false
+  Complex(1, 0) == Complex(1) # => true
+  Complex(1, 0) == 1          # => true
+

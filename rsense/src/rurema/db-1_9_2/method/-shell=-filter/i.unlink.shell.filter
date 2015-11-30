@@ -1,0 +1,12 @@
+kind=defined
+names=unlink
+visibility=public
+
+--- unlink(path) -> self
+
+path がファイルなら [[m:File.unlink]]、path がディレクトリなら [[m:Dir.unlink]] の動作をします。
+
+@param path 削除したいパスを指定します。
+
+@see [[m:File.unlink]], [[m:Dir.unlink]]
+

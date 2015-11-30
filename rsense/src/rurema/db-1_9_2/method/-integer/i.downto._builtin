@@ -1,0 +1,15 @@
+kind=defined
+names=downto
+visibility=public
+
+--- downto(min) {|n| ... } -> self
+--- downto(min) -> Enumerator
+
+self から min まで 1 ずつ減らしながらブロックを繰り返し実行します。
+self < min であれば何もしません。
+
+@param min   数値
+@return      self を返します。
+
+@see [[m:Integer#upto]], [[m:Numeric#step]], [[m:Integer#times]]
+

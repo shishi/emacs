@@ -1,0 +1,19 @@
+kind=added
+names=message
+visibility=private 
+
+--- message(format, *arg) -> nil
+
+[[m:Kernel.#printf]] と同じように標準出力にメッセージを出力します。
+メッセージ出力後すぐに [[m:IO#flush]] します。
+
+$VERBOSE が真のときは何もしません。
+
+@param format フォーマット文字列です。
+
+@param arg フォーマットされる引数です。
+
+@see [[m:Kernel.#printf]]
+
+
+

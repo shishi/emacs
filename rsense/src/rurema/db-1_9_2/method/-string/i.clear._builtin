@@ -1,0 +1,19 @@
+kind=defined
+names=clear
+visibility=public
+
+--- clear -> ()
+
+文字列の内容を削除して空にします。
+self を返します。
+
+例:
+    str = "abc"
+    str.clear
+    p str     # => ""
+
+    str = ""
+    str.clear
+    p str   # => ""
+
+

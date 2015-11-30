@@ -1,0 +1,9 @@
+kind=defined
+names=file?
+visibility=public
+
+--- file? -> bool
+通常ファイルの時に真を返します。
+
+  p File::Stat.new($0).file? #=> true
+

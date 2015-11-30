@@ -1,0 +1,7 @@
+superclass=OpenSSL=OpenSSLError
+type=class
+library=openssl
+extended=
+included=
+
+X509 証明書関連のエラーを表す例外くクラスです。

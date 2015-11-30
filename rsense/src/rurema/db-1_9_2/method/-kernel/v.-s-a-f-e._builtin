@@ -1,0 +1,15 @@
+kind=defined
+names=SAFE
+visibility=public
+
+--- $SAFE -> Fixnum
+
+カレントスレッドのセーフレベルを表す整数です。セーフレベルについては
+[[d:spec/safelevel]] を参照してください。
+
+Thread.current.safe_level と同じです。
+非整数を代入しようとすると [[c:TypeError]] が発生します。
+
+この変数はスレッドローカルです。
+Ruby起動時の初期値は 0 です。
+

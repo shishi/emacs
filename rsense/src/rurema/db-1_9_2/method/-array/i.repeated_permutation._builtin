@@ -1,0 +1,24 @@
+kind=defined
+names=repeated_permutation
+visibility=public
+
+--- repeated_permutation(n) { |p| block } -> Array
+--- repeated_permutation(n)               -> Enumerator
+
+When invoked with a block, yield all repeated permutations of length
+<i>n</i> of the elements of <i>ary</i>, then return the array itself.
+The implementation makes no guarantees about the order in which
+the repeated permutations are yielded.
+
+When invoked without a block, return an enumerator object instead.
+
+Examples:
+
+    a = [1, 2]
+    a.repeated_permutation(1).to_a  #=> [[1], [2]]
+    a.repeated_permutation(2).to_a  #=> [[1,1],[1,2],[2,1],[2,2]]
+    a.repeated_permutation(3).to_a  #=> [[1,1,1],[1,1,2],[1,2,1],[1,2,2],
+                                    #    [2,1,1],[2,1,2],[2,2,1],[2,2,2]]
+    a.repeated_permutation(0).to_a  #=> [[]] # one permutation of length 0
+
+@see [[m:Array#repeated_combination]], [[m:Array#permutation]]

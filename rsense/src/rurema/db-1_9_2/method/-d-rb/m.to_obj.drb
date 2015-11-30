@@ -1,0 +1,11 @@
+kind=defined
+names=to_obj
+visibility=public
+
+--- to_obj(ref)
+
+Convert a reference into an object using the current server.
+
+This raises a DRbServerNotFound error if there is no current
+server. See #current_server.
+

@@ -1,0 +1,10 @@
+kind=defined
+names=stopped?
+visibility=public
+
+--- stopped?    -> bool
+
+プロセスが現在停止(終了ではない)している場合に真を返します。
+[[m:Process.#waitpid]] に [[m:Process::WUNTRACED]] フラグを設定した
+場合にだけ真になりえます。
+

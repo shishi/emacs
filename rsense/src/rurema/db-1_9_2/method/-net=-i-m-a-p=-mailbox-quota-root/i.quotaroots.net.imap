@@ -1,0 +1,11 @@
+kind=defined
+names=quotaroots
+visibility=public
+
+--- quotaroots
+
+Zero or more quotaroots that effect the quota on the
+specified mailbox.
+
+
+

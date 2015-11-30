@@ -1,0 +1,29 @@
+kind=defined
+names=get_byte,getbyte
+visibility=public
+
+--- get_byte -> String | nil
+--- getbyte -> String | nil
+
+1 バイトスキャンして文字列で返します。
+スキャンポインタをその後ろに進めます。
+スキャンポインタが文字列の末尾を指すなら nil を返します。
+
+[[m:StringScanner#getbyte]] は将来のバージョンで削除される予定です。
+代わりに [[m:StringScanner#get_byte]] を使ってください。
+
+使用例
+  require 'strscan'
+
+  utf8 = "\u{308B 3073 3044}"
+  s = StringScanner.new(utf8.encode("EUC-JP"))
+  p s.get_byte       #=> "\xA4"
+  p s.get_byte       #=> "\xEB"
+  p s.get_byte       #=> "\xA4"
+  p s.get_byte       #=> "\xD3"
+  p s.get_byte       #=> "\xA4"
+  p s.get_byte       #=> "\xA4"
+  p s.get_byte       #=> nil   
+
+
+

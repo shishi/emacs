@@ -1,0 +1,17 @@
+kind=defined
+names=skip
+visibility=public 
+
+--- skip(message = nil, backtrace = caller)
+
+このメソッドを呼び出したテストメソッドをスキップします。
+
+@param message メッセージを指定します。
+
+@param backtrace 例外発生時のスタックトレースで、[[m:Kernel.#caller]] の戻り値と同じ
+                 形式で指定しなければいけません。
+
+@raise MiniTest::Skip 必ず発生します。
+
+@see [[m:Kernel.#raise]]
+

@@ -1,0 +1,27 @@
+kind=defined
+names=pop
+visibility=public
+
+--- pop(n = 1)    -> Array | nil
+
+自身の末尾から指定された n 個だけ要素を取り除いてそれを返します。
+自身が空配列の時は nil を返します。
+
+@param n 自身から取り除きたい要素の個数を整数で指定します。
+
+
+例:
+      array = [1, [2, 3], 4]
+      p array.pop      # => 4
+      p array.pop      # => [2, 3]
+      p array          # => [1]
+
+      p array.pop      # => 1
+      p array.pop      # => nil
+      p array          # => []
+      array = [1, 2, 3]
+      p array.pop(2)   #=> [2, 3]
+      p array          #=> [1]
+
+@see [[m:Array#push]], [[m:Array#shift]], [[m:Array#unshift]] 
+

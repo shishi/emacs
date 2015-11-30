@@ -1,0 +1,14 @@
+kind=defined
+names=closed?
+visibility=public
+
+--- closed? -> bool
+
+curses が終了しているかどうかを返します。
+
+詳しくは、 man ページの curs_initscr(3X) の isendwin 関数を参照ください。
+
+サポートしていない環境では、例外 NotImplementedError が発生します。
+
+@see [[m:Curses.#close_screen]]
+

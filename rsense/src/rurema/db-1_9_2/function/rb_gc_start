@@ -1,0 +1,10 @@
+name=rb_gc_start
+private=false
+macro=false
+type=VALUE
+filename=gc.c
+params=(void)
+
+
+GC を起動します。
+

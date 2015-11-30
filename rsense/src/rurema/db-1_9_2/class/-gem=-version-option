@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=rubygems.version_option
+extended=
+included=
+
+[[c:Gem::Command]] の --version, --platform オプションのためのモジュールです。

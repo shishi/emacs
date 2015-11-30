@@ -1,0 +1,22 @@
+kind=defined
+names=session_cache_mode=
+visibility=public
+
+--- session_cache_mode=(mode)
+セッションキャッシュのモードを指定します。
+
+以下の定数のORを引数として渡します。
+  * [[m:OpenSSL::SSL::SSLContext::SESSION_CACHE_OFF]]
+  * [[m:OpenSSL::SSL::SSLContext::SESSION_CACHE_CLIENT]]
+  * [[m:OpenSSL::SSL::SSLContext::SESSION_CACHE_SERVER]]
+  * [[m:OpenSSL::SSL::SSLContext::SESSION_CACHE_BOTH]]
+  * [[m:OpenSSL::SSL::SSLContext::SESSION_CACHE_NO_AUTO_CLEAR]]
+  * [[m:OpenSSL::SSL::SSLContext::SESSION_CACHE_NO_INTERNAL]]
+  * [[m:OpenSSL::SSL::SSLContext::SESSION_CACHE_NO_INTERNAL_LOOKUP]]
+  * [[m:OpenSSL::SSL::SSLContext::SESSION_CACHE_NO_INTERNAL_STORE]]
+
+デフォルト値は OpenSSL::SSL::SSLContext::SESSION_CACHE_SERVER です。
+
+@param mode 設定するモード(整数値)
+@see [[m:OpenSSL::SSL::SSLContext#session_cache_mode]]
+

@@ -1,0 +1,10 @@
+kind=defined
+names=rubyforge_project=
+visibility=public
+
+--- rubyforge_project=(project_name)
+
+この Gem の RubyForge 上でのプロジェクト名をセットします。
+
+@param project_name RubyForge 上のプロジェクト名を指定します。
+

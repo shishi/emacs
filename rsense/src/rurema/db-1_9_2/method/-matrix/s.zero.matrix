@@ -1,0 +1,11 @@
+kind=defined
+names=zero
+visibility=public
+
+--- zero(n) -> Matrix
+
+n次の零行列を生成します。
+零行列とは、要素が全て0の行列です。
+
+@param n 生成する行列の次元
+

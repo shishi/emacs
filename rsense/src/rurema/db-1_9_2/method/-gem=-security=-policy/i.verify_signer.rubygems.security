@@ -1,0 +1,8 @@
+kind=defined
+names=verify_signer
+visibility=public 
+
+--- verify_signer -> bool
+
+この値が真である場合は、署名者を検証します。
+

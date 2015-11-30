@@ -1,0 +1,14 @@
+kind=defined
+names=flags=
+visibility=public
+
+--- flags=(flags)
+CRL に関するフラグを設定します。
+
+以下の定数から必要なものを選んで OR 取り、渡します。
+  * [[m:OpenSSL::X509::V_FLAG_CRL_CHECK]]
+  * [[m:OpenSSL::X509::V_FLAG_CRL_CHECK_ALL]]
+
+@param flags 設定するフラグ(整数値)
+@see [[m:OpenSSL::X509::Store#flags=]]
+

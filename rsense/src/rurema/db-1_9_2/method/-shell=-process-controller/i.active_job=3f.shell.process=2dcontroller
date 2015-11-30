@@ -1,0 +1,11 @@
+kind=defined
+names=active_job?
+visibility=public
+
+--- active_job?(job) -> bool
+
+指定されたジョブが実行中である場合は真を返します。
+そうでない場合は偽を返します。
+
+@param job ジョブを指定します。
+

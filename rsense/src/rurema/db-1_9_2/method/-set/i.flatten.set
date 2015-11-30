@@ -1,0 +1,26 @@
+kind=defined
+names=flatten,flatten!
+visibility=public
+
+--- flatten -> Set
+--- flatten! -> self | nil
+
+集合を再帰的に平滑化します。
+
+flatten は、平滑化した集合を新しく作成し、それを返します。
+
+flatten! は、元の集合を破壊的に平滑化します。集合の要素に変更が
+発生した場合には self を、そうでない場合には nil を返します。
+
+@raise ArgumentError 集合の要素として自身が再帰的に現れた場合に発生
+                     します。
+
+  s = Set[Set[1,2], 3]
+  p s.flatten #=> #<Set: {1, 2, 3}>
+  p s         #=> #<Set: {#<Set: {1, 2}>, 3}>
+  s.flatten!
+  p s         #=> #<Set: {1, 2, 3}>
+
+@see [[m:Array#flatten]]
+
+

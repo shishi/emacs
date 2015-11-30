@@ -1,0 +1,12 @@
+kind=defined
+names=new
+visibility=public
+
+--- new( year, month, day, hour, min, sec )
+
+Creates a new XMLRPC::DateTime instance with the
+parameters year, month, day as date and
+hour, min, sec as time.
+Raises ArgumentError if a parameter is out of range, or year is not
+of type Integer.
+

@@ -1,0 +1,11 @@
+kind=defined
+names=RLIM_INFINITY
+visibility=public
+
+--- RLIM_INFINITY
+
+リソースに制限がないことを意味する定数です。
+
+[[m:Process.#getrlimit]]、[[m:Process.#setrlimit]] で使われます。
+
+

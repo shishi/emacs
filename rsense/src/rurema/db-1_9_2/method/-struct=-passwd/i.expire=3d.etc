@@ -1,0 +1,7 @@
+kind=defined
+names=expire=
+visibility=public
+
+--- expire=(expire)
+
+アカウント有効期限(整数)を設定します。このメンバはシステム依存です。

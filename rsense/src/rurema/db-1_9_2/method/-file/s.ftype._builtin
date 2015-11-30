@@ -1,0 +1,23 @@
+kind=defined
+names=ftype
+visibility=public
+
+--- ftype(filename)    -> String
+
+ファイルのタイプを表す文字列を返します。文字列は以下のうちのいずれ
+かです。File.lstat(filename).ftype と同じで
+す。シンボリックリンクに対して "link" を返します。
+
+ * "file"
+ * "directory"
+ * "characterSpecial"
+ * "blockSpecial"
+ * "fifo"
+ * "link"
+ * "socket"
+ * "unknown"
+
+@param filename ファイル名を表す文字列を指定します。 
+
+@raise Errno::EXXX 情報の取得に失敗した場合に発生します。
+

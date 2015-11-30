@@ -1,0 +1,23 @@
+kind=defined
+names=clone,dup
+visibility=public
+
+--- clone    -> Array
+--- dup      -> Array
+
+レシーバと同じ内容を持つ新しい配列を返します。
+
+clone は frozen tainted singleton-class の情報も含めてコピーしますが、
+dup は内容だけをコピーします。
+またどちらのメソッドも要素それ自体のコピーはしません。
+つまり「浅い(shallow)」コピーを行います。
+
+    ary = ['string']
+    p ary             #=> ["string"]
+    copy = ary.dup
+    p copy            #=> ["string"]
+
+    ary[0][0...3] = ''
+    p ary             #=> ["ing"]
+    p copy            #=> ["ing"]
+

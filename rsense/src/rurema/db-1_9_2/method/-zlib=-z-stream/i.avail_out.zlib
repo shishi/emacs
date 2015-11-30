@@ -1,0 +1,9 @@
+kind=defined
+names=avail_out
+visibility=public
+
+--- avail_out -> Integer
+
+出力バッファの空き用量をバイト数で返します。
+空きは必要な時に動的に確保されるため、通常は 0 です。
+

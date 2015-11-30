@@ -1,0 +1,11 @@
+kind=defined
+names=real?
+visibility=public
+
+--- real?    -> bool
+
+自身が [[c:Complex]] かそのサブクラスのインスタンスでない場合に
+true を返します。そうでない場合に false を返します。
+
+Numeric のサブクラスは、このメソッドを適切に再定義しなければなりません。
+

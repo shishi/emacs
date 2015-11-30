@@ -1,0 +1,12 @@
+kind=defined
+names=write
+visibility=public
+
+--- write(message) -> Integer
+
+出力先の IO オブジェクトにメッセージを書き込みます。
+
+このメソッドは同期されます。
+
+@see [[m:IO#write]]
+

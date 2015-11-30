@@ -1,0 +1,6 @@
+kind=defined
+names=block_output_synchronize
+visibility=public
+
+--- block_output_synchronize{ ... } -> ()
+

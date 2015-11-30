@@ -1,0 +1,39 @@
+kind=defined
+names=Integer
+visibility=public
+
+--- Integer(arg) -> Integer
+
+引数を整数([[c:Fixnum]],[[c:Bignum]])に変換した結果を返します。
+
+引数が数値の場合は直接変換し（小数点以下切り落とし）、
+文字列の場合は、進数を表す接頭辞を含む整数表現とみなせる文字列のみ
+変換します。
+
+数値と文字列以外のオブジェクトに対しては arg.to_int, arg.to_i を
+この順に使用して変換します。
+
+@param arg 変換対象のオブジェクトです。
+@raise ArgumentError 整数と見なせない文字列を引数に指定した場合に発生します。
+@raise TypeError メソッド to_int, to_i を持たないオブジェクトを引数に指定したか、to_int, to_i
+  が整数([[c:Integer]]のサブクラス)を返さなかった場合に発生します。
+
+    p Integer(4)          #=> 4
+    p Integer(4_000)      #=> 4000
+    p Integer(9.88)       #=> 9
+    
+    p Integer(nil)        #=> 0
+    p Integer(Object.new) # cannot convert Object into Integer (TypeError)
+    
+    p Integer("10")       #=> 10
+    p Integer("0d10")     #=> 10
+    p Integer("010")      #=> 8
+    p Integer("0o10")     #=> 8
+    p Integer("0x10")     #=> 16
+    p Integer("0b10")     #=> 2
+    p Integer(" \n10\t ") #=> 10 # 空白類は無視される
+    p Integer("hoge")     # `Integer': invalid value for Integer: "hoge" (ArgumentError)
+    p Integer("")         # `Integer': invalid value for Integer: "" (ArgumentError)
+
+@see [[m:String#hex]],[[m:String#oct]],[[m:String#to_i]],[[c:Integer]]
+

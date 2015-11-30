@@ -1,0 +1,6 @@
+kind=defined
+names=current_image_configinfo
+visibility=public
+
+--- current_image_configinfo(index, slot = nil)
+

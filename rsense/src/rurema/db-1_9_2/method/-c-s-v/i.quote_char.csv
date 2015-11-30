@@ -1,0 +1,10 @@
+kind=defined
+names=quote_char
+visibility=public
+
+--- quote_char -> String
+
+フィールドをクオートするのに使用する文字列を返します。
+
+@see [[m:CSV.new]]
+

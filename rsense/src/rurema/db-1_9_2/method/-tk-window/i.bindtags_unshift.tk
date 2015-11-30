@@ -1,0 +1,6 @@
+kind=defined
+names=bindtags_unshift
+visibility=public
+
+--- bindtags_unshift(tag)
+

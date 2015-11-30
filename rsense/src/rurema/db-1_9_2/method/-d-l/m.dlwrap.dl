@@ -1,0 +1,17 @@
+kind=defined
+names=dlwrap
+visibility=public
+
+--- dlwrap(obj)    -> Integer
+
+指定されたオブジェクト obj のアドレスを表す整数を返します。
+
+@param obj Ruby のオブジェクトを指定します。
+
+例:
+
+  require 'dl'
+  s = 'abc'
+  p addr = DL.dlwrap(s)   #=> 136122440
+  p DL.dlunwrap(addr)     #=> "abc"
+

@@ -1,0 +1,23 @@
+kind=defined
+names=rationalize
+visibility=public
+
+--- rationalize      -> Rational
+--- rationalize(eps) -> Rational
+
+自身から eps で指定した許容誤差の範囲に収まるような [[c:Rational]] を返
+します。
+
+eps を省略した場合は誤差が最も小さくなるような [[c:Rational]] を返しま
+す。
+
+@param eps 許容する誤差
+
+例:
+
+  0.3.rationalize          #=> (3/10)
+  1.333.rationalize        #=> (1333/1000)
+  1.333.rationalize(0.01)  #=> (4/3)
+
+
+

@@ -1,0 +1,13 @@
+kind=defined
+names=setpwent
+visibility=public
+
+--- setpwent -> nil
+
+/etc/passwd の先頭に戻ります。
+
+このメソッドを呼び出した後 [[m:Etc.#getpwent]] を呼び出すと先頭のエントリを返します。
+
+@see [[man:getpwent(3)]]
+
+

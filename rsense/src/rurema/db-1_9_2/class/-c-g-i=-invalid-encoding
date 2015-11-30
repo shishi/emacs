@@ -1,0 +1,7 @@
+superclass=Exception
+type=class
+library=cgi.core
+extended=
+included=
+
+不正な文字エンコーディングが現れたときに発生する例外です。

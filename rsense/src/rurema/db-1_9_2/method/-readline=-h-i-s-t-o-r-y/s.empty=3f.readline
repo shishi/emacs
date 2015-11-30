@@ -1,0 +1,21 @@
+kind=defined
+names=empty?
+visibility=public
+
+--- empty? -> bool
+
+ヒストリに格納された内容の数が 0 の場合は true を、
+そうでない場合は false を返します。
+
+@raise SecurityError セーフレベル ($SAFE) が 4 の場合に発生します。
+
+例:
+
+  require "readline"
+  
+  p Readline::HISTORY.empty? #=> true
+  Readline::HISTORY.push("foo", "bar", "baz")
+  p Readline::HISTORY.empty? #=> false
+
+@see [[m:Readline::HISTORY.length]]
+

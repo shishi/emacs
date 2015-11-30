@@ -1,0 +1,8 @@
+kind=defined
+names=F16
+visibility=public
+
+--- F16 -> Integer
+
+F16 キーを表す定数です。
+

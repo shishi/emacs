@@ -1,0 +1,7 @@
+kind=defined
+names=TRUST_COMPAT
+visibility=public
+
+--- TRUST_COMPAT -> Integer
+ルート CA 証明書が自分自身の秘密鍵で署名されている。
+

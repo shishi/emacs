@@ -1,0 +1,16 @@
+kind=defined
+names=constants
+visibility=public
+
+--- constants -> [Symbol]
+
+このメソッドを呼び出した時点で参照可能な定数名の配列を返します。
+
+  class C
+    FOO = 1
+  end
+  p Module.constants   # => [:RUBY_PLATFORM, :STDIN, ..., :C, ...]
+                       # 出力中に :FOO は現われない
+
+@see [[m:Module#constants]], [[m:Kernel.#local_variables]], [[m:Kernel.#global_variables]], [[m:Object#instance_variables]], [[m:Module#class_variables]]
+

@@ -1,0 +1,8 @@
+kind=defined
+names=GemVersions
+visibility=public
+
+--- GemVersions -> Hash
+
+prelude.c で定義されている内部用の定数です。
+

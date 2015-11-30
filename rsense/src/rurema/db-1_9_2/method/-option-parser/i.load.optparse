@@ -1,0 +1,15 @@
+kind=defined
+names=load
+visibility=public
+
+--- load(filename = nil)     -> bool
+
+指定された filename を読み込んで各行をまとめたものに対して [[m:OptionParser#parse]] を行ないます。
+
+パースが成功した場合に true を返します。
+ファイルが存在しなかった場合に false を返します。
+
+@param filename 各行をパースしたいファイルの名前を文字列で指定します。
+                指定されないか nil である場合、~/.options/ に
+                プログラムのサフィックスを付けた '~/.options/コマンド名' というファイルをパースします。
+

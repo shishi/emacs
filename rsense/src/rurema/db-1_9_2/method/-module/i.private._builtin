@@ -1,0 +1,28 @@
+kind=defined
+names=private
+visibility=private 
+
+--- private(*name) -> self
+
+メソッドを private に設定します。
+
+引数なしのときは今後このクラスまたはモジュール定義内で新規に定義さ
+れるメソッドを関数形式でだけ呼び出せるように(private)設定します。
+
+引数が与えられた時には引数によって指定されたメソッドを private に
+設定します。
+
+@param name [[c:String]] または [[c:Symbol]] を 0 個以上指定します。
+
+@raise NameError 存在しないメソッド名を指定した場合に発生します。
+
+  class Foo
+    def foo1() 1 end      # デフォルトでは public
+    private               # 可視性を private に変更
+    def foo2() 2 end      # foo2 は private メソッド
+  end
+
+  foo = Foo.new
+  p foo.foo1          # => 1
+  p foo.foo2          # => private method `foo2' called for #<Foo:0x401b7628> (NoMethodError)
+

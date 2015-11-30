@@ -1,0 +1,10 @@
+kind=defined
+names=string
+visibility=public
+
+--- string -> String
+
+マッチ対象になった文字列の複製を返します。
+
+返す文字列はフリーズ([[m:Object#freeze]])されています。
+

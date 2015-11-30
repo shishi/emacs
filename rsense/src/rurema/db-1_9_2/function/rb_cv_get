@@ -1,0 +1,11 @@
+name=rb_cv_get
+private=false
+macro=false
+type=VALUE
+filename=variable.c
+params=(VALUE klass, char *name)
+
+
+klass のクラス変数 name の値を
+取得します。
+

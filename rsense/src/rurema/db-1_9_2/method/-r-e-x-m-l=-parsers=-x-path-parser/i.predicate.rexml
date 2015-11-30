@@ -1,0 +1,6 @@
+kind=defined
+names=predicate
+visibility=public
+
+--- predicate(path)
+

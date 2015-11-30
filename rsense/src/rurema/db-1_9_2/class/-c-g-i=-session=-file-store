@@ -1,0 +1,10 @@
+superclass=Object
+type=class
+library=cgi.session
+extended=
+included=
+
+[[c:File]] を用いたセッション保存先を表すクラスです。
+
+値として文字列のみ保存することができます。
+他の型の値を扱うときは、ユーザが責任を持って型変換を行う必要があります。

@@ -1,0 +1,6 @@
+kind=defined
+names=add_element
+visibility=public
+
+--- add_element(element, attrs = nil)
+

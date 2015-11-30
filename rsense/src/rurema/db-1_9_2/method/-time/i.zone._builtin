@@ -1,0 +1,10 @@
+kind=defined
+names=zone
+visibility=public
+
+--- zone    -> String
+
+タイムゾーンを表す文字列を返します。
+
+ p Time.now.zone #=> "JST"
+

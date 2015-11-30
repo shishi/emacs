@@ -1,0 +1,6 @@
+kind=defined
+names=default_safe_level
+visibility=public
+
+--- default_safe_level(level)   
+

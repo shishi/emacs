@@ -1,0 +1,18 @@
+kind=defined
+names=send_request
+visibility=public
+
+--- send_request(name, path, data = nil, header = nil) -> Net::HTTPResponse
+HTTP リクエストをサーバに送り、そのレスポンスを
+[[c:Net::HTTPResponse]] のインスタンスとして返します。
+
+@param name リクエストのメソッド名を文字列で与えます。
+@param path リクエストのパスを文字列で与えます。
+@param data リクエストのボディを文字列で与えます。
+@param header リクエストのヘッダをハッシュで与えます。
+
+  response = http.send_request('GET', '/index.html')
+  puts response.body
+
+@see [[m:Net::HTTP#request]]
+

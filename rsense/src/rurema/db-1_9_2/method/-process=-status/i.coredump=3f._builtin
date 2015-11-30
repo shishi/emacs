@@ -1,0 +1,13 @@
+kind=defined
+names=coredump?
+visibility=public
+
+--- coredump?    -> bool
+
+終了時にコアダンプしていたら真を返します。
+
+このメソッドは signaled? が真のときにしか意味を持ちません。
+
+このメソッドはシステムに依存します。サポートしないプラットフォー
+ムでは常に false を返します。
+

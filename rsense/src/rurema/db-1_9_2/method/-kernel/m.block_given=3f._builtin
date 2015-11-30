@@ -1,0 +1,26 @@
+kind=defined
+names=block_given?,iterator?
+visibility=public
+
+--- block_given? -> bool
+--- iterator? -> bool
+
+メソッドにブロックが与えられていれば真を返します。
+
+このメソッドはカレントコンテキストにブロックが与えられているかを調べるので、
+メソッド内部以外で使っても単に false を返します。
+
+iterator? は （ブロックが必ずイテレートするとはいえないので）推奨されていないの
+で block_given? を使ってください。
+
+  def check
+    if block_given?
+      puts "Block is given."
+    else
+      puts "Block isn't given."
+    end
+  end
+  check{} #=> Block is given.
+  check #=> Block isn't given.
+
+

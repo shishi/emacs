@@ -1,0 +1,10 @@
+kind=defined
+names=zip_command
+visibility=public 
+
+--- zip_command -> String
+
+zip コマンドとして使用するコマンドを返します。
+
+デフォルトは 'zip' です。
+

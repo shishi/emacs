@@ -1,0 +1,32 @@
+kind=defined
+names=update
+visibility=public
+
+--- update(other) -> self
+
+self と other の内容をマージします。
+
+重複するキーに対応する値はother の内容で上書きされます。
+
+@param other each_pair メソッドを持つオブジェクトでなければなりません。
+
+  require 'sdbm'
+  
+  db1 = SDBM.open('aaa.gdbm', 0666)
+  db1.clear
+  db1['a'] = 'aaa'
+  db1['b'] = 'bbb'
+  db1['c'] = 'ccc'
+  db2 = SDBM.open('bbb.gdbm', 0666)
+  db2.clear
+  db2['c'] = 'ccc'
+  db2['d'] = 'ddd'
+  hash = { 'x' => 'xxx', 'y' => 'yyy'}
+  
+  p db1               #=> #<SDBM:0xb7d19554>
+  p db1.to_hash       #=> {"a"=>"aaa", "b"=>"bbb", "c"=>"ccc"}
+  p db1.update(db2)   #=> #<SDBM:0xb7d19554>
+  p db1.to_hash       #=> {"a"=>"aaa", "b"=>"bbb", "c"=>"ccc", "d"=>"ddd"}
+  p db1.update(hash)  #=> #<SDBM:0xb7d19554>
+  p db1.to_hash       #=> {"a"=>"aaa", "x"=>"xxx", "b"=>"bbb", "y"=>"yyy", "c"=>"ccc", "d"=>"ddd"}
+

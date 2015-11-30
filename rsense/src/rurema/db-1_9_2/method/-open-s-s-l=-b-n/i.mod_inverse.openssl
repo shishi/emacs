@@ -1,0 +1,13 @@
+kind=defined
+names=mod_inverse
+visibility=public
+
+--- mod_inverse(m) -> OpenSSL::BN
+自身の mod m における逆元を返します。
+
+(self * r) % m == 1 となる r を返します。
+存在しない場合は例外 [[c:OpenSSL::BNError]] が発生します。
+
+@param m mod を取る数
+@raise OpenSSL::BNError 計算時エラー
+

@@ -1,0 +1,15 @@
+kind=defined
+names=init_elements
+visibility=public
+
+--- init_elements(array, copy) -> Array
+ベクトルの要素を引数 array で初期化します。
+
+@param array ベクトルとして初期化する Array を指定します。
+@param copy  引数array で渡された配列をコピーするかをtrue/falseで指定します。
+             true の場合はコピーします。
+
+===== 注意
+
+本メソッドは[[c:Vector]]クラス内部用です。
+

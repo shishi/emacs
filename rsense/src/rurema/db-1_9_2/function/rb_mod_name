@@ -1,0 +1,11 @@
+name=rb_mod_name
+private=false
+macro=false
+type=VALUE
+filename=variable.c
+params=(VALUE mod)
+
+
+[[m:Module#name]] の実体です。
+無名クラス、無名モジュールに対しては空文字列を返します。
+

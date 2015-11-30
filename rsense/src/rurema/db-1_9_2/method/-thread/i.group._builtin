@@ -1,0 +1,12 @@
+kind=defined
+names=group
+visibility=public
+
+--- group    -> ThreadGroup | nil
+
+スレッドが属している [[c:ThreadGroup]] オブジェクトを返します。
+死んでいるスレッドは nil を返します。
+
+    p Thread.current.group == ThreadGroup::Default
+    # => true
+

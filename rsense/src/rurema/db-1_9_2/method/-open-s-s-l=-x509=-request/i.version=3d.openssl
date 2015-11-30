@@ -1,0 +1,10 @@
+kind=defined
+names=version=
+visibility=public
+
+--- version=(version)
+バージョンを設定します。
+
+@param version 設定するバージョンの整数
+@see [[m:OpenSSL::X509::Request#version]]
+

@@ -1,0 +1,10 @@
+kind=defined
+names=has_unit_tests?
+visibility=public
+
+--- has_unit_tests? -> bool
+
+この Gem パッケージがユニットテストを含むかどうか返します。
+
+真の場合はユニットテストを含みます。そうでない場合は偽を返します。
+

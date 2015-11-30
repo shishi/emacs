@@ -1,0 +1,14 @@
+kind=defined
+names=each
+visibility=public
+
+--- each {|item|  ... } -> self
+--- each -> Enumerator
+
+範囲内の要素に対して繰り返します。
+
+Range#each は各要素の succ メソッドを使用してイテレーションするようになりました。
+
+@raise TypeError succ メソッドを持たないクラスの範囲オブジェクトに対してこのメソッドを呼んだ場合に発生します。
+
+

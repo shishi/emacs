@@ -1,0 +1,10 @@
+superclass=Object
+type=class
+library=rubygems.test_utilities
+extended=
+included=
+
+テスト用に [[c:Tempfile]] をラップします。
+
+[[c:StringIO]] と同じインタフェイスを持っていますが、
+データを書き込む先は [[c:Tempfile]] になっています。

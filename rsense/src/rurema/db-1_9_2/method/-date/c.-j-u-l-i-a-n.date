@@ -1,0 +1,8 @@
+kind=defined
+names=JULIAN
+visibility=public
+
+--- JULIAN
+常にユリウス暦であることを示します。
+改暦日は無限の未来にあると考えられます。
+

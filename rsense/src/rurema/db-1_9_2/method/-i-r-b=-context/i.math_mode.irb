@@ -1,0 +1,8 @@
+kind=defined
+names=math_mode
+visibility=public
+
+--- math_mode
+
+分数と行列の計算ができる bc モードかどうかを表します。
+

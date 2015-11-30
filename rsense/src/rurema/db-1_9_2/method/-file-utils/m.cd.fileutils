@@ -1,0 +1,23 @@
+kind=defined
+names=cd,chdir
+visibility=public
+
+--- cd(dir, options = {})                   -> nil
+--- cd(dir, options = {}) {|dir| .... }     -> nil
+--- chdir(dir, options = {})                -> nil
+--- chdir(dir, options = {}) {|dir| .... }  -> nil
+
+プロセスのカレントディレクトリを dir に変更します。
+
+ブロックとともに呼び出された時はブロック終了後に
+元のディレクトリに戻ります。
+
+@param dir ディレクトリを指定します。
+
+@param options :verbose が指定できます。
+               [[ref:c:FileUtils#options]]
+
+例:
+
+  FileUtils.cd('/', {:verbose => true})   # chdir and report it
+

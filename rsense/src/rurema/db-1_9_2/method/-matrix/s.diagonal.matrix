@@ -1,0 +1,25 @@
+kind=defined
+names=diagonal
+visibility=public
+
+--- diagonal(values) -> Matrix
+
+対角要素がvalues(オブジェクトの並び)で、非対角要素が全て0であるような
+正方行列を生成します。
+
+@param values 行列の対角要素とするオブジェクトを指定します。
+
+===== 注意
+
+valuesに一次元Arrayを1個指定すると、そのArrayを唯一の要素とした1×1の行列が生成されます。
+
+例:
+  require 'matrix'
+
+  m = Matrix.diagonal(1, 2, 3)
+  p m # => Matrix[[1, 0, 0], [0, 2, 0], [0, 0, 3]]
+  a = [1,2,3]
+  m = Matrix.diagonal(a)
+  p m # => Matrix[[[1, 2, 3]]]
+
+

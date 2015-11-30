@@ -1,0 +1,11 @@
+kind=defined
+names=endgrent
+visibility=public
+
+--- endgrent -> nil
+
+[[m:Etc.#getgrent]] によって開始された /etc/group ファイルを読む
+プロセスを終了させファイルを閉じます。
+
+@see [[man:getgrent(3)]]
+

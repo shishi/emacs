@@ -1,0 +1,7 @@
+superclass=IOError
+type=class
+library=_builtin
+extended=
+included=
+
+EOF(End Of File)に達したときに発生します。

@@ -1,0 +1,8 @@
+kind=defined
+names=author
+visibility=public
+
+--- author -> String
+
+作成者の名前を返します。
+

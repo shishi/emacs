@@ -1,0 +1,84 @@
+methods=
+sublibraries=
+requires=
+classes=Iconv,Iconv=Failure,Iconv=BrokenLibrary,Iconv=IllegalSequence,Iconv=InvalidCharacter,Iconv=InvalidEncoding,Iconv=OutOfRange
+is_sublibrary=false
+
+Iconv は UNIX 95 の iconv() 関数のラッパーで、
+さまざまな文字コード体系間で文字列の変換を行ないます。
+
+詳細は [[url:http://www.opengroup.org/]] のオンラインドキュメントを
+参照して下さい。
+
+  * [[man:iconv(3)]]
+  * [[man:iconv_open(3)]]
+  * [[man:iconv_close(3)]]
+  * [[url:http://www.opengroup.org/onlinepubs/009695399/basedefs/iconv.h.html]]
+
+=== 注意
+
+どの文字コード体系が利用できるかはプラットフォーム依存です。さらに文字コード体系をあらわす文字列もプラットフォーム依存です。日本語 EUC をあらわす文字列が EUC-JP, euc-jp, eucJP など異なる場合があります。このプラットフォームによる違いを吸収するために、
+「ext/iconv/charset_alias.rb」 が用意されています。
+GNU ソフトウェア texinfo ([[url:http://www.gnu.org/software/texinfo/]]) に含まれるファイル config.charset を以下のミラーサイトから手に入れて
+
+ * [[url:http://ring.riken.go.jp/archives/text/CTAN/macros/texinfo/texinfo/gnulib/lib/config.charset]]
+
+ext/iconv/ に置き、ext/iconv/ で次のように実行すると
+
+  ruby extconf.rb
+  make
+
+iconv.rb が生成されます。この iconv.rb がプラットフォームによる文字コード体系をあらわす文字列の違いを吸収します。
+
+config.charset のライセンスは LGPL なので、生成された iconv.rb にも LGPL が適用されます。
+
+=== 例
+
+  require 'iconv'
+  euc = ["a4a2a4a4a4a6a4a8a4aa"].pack("H*") # あいうえお
+  sjis = ["82a082a282a482a682a8"].pack("H*")
+  iconv = Iconv.new('SHIFT_JIS', 'EUC-JP')  # EUC-JP から SHIFT_JIS へ変換
+  str = iconv.iconv(euc)
+  str << iconv.iconv(nil)
+  p( str == sjis )
+
+(1) 新しく [[c:Iconv]] のインスタンスを作り, [[m:Iconv#iconv]] メソッドを使う
+      cd = Iconv.new(to, from)
+      begin
+        input.each {|s| output << cd.iconv(s)}
+        output << cd.iconv(nil)      # don't forget this
+      ensure
+        cd.close
+      end
+(2) [[m:Iconv.open]] をブロックつきで呼び出す
+      Iconv.open(to, from) do |cd|
+        input.each {|s| output << cd.iconv(s)}
+        output << cd.iconv(nil)
+      end
+(3) (2) の短縮系
+      Iconv.iconv(to, from, *input.to_a)
+
+===[a:gnu_options] 環境依存の機能
+
+GNU libiconv で iconv ライブラリがビルドしてある場合、
+[[m:Iconv#iconv]]、[[m:Iconv.open]]、[[m:Iconv.iconv]] の第一引数 to に
+は「文字コード//フラグ」という書式で GNU の独自拡張を利用する事もできま
+す。フラグには以下のいずれかを指定できます。
+
+: //TRANSLIT
+
+  文字列の変換時に、表現できない文字を同じ見た目の文字に"翻訳"します。
+  [[m:Iconv#transliterate=]] に真を渡して指定する事もできます。
+
+: //IGNORE
+
+  文字列の変換時に、 [[c:Iconv::IllegalSequence]] が発生するような文字列
+  が途中にあった場合でも無視して変換を継続します。
+  [[m:Iconv#discard_ilseq=]] に真を渡して指定する事もできます。
+
+ただし、上記の拡張は移植性を損ないます。
+そのような機能が必要な場合は [[m:String#encode]] を使用してください。
+
+=== 参考
+
+  * 標準添付ライブラリ紹介【第 3 回】 Kconv/NKF/Iconv ([[url:http://jp.rubyist.net/magazine/?0009-BundledLibraries#l30]])

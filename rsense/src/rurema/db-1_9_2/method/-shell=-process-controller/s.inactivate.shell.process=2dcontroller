@@ -1,0 +1,6 @@
+kind=defined
+names=inactivate
+visibility=public
+
+--- inactivate(pc) -> ()
+

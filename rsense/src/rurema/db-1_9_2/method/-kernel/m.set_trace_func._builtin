@@ -1,0 +1,99 @@
+kind=defined
+names=set_trace_func
+visibility=public
+
+--- set_trace_func(proc)                                         -> object
+--- set_trace_func{|event, file, line, id, binding, klass| ... } -> Proc
+
+Ruby インタプリタのイベントをトレースする [[c:Proc]] オブジェクトとして
+指定された proc を登録します。 proc に nil を指定した場合でトレースをオフにします。
+ブロックを指定された場合はそのブロックをトレースする Proc オブジェクトとして登録します。
+
+引数 proc かブロックを Proc オブジェクトに変換したものを返します。
+
+Ruby インタプリタがプログラムを実行する過程で、メソッドの呼び出しや
+式の評価などのイベントが発生する度に、以下で説明する6個の引数とともに
+登録された [[c:Proc]] オブジェクトを実行します。
+
+標準添付の [[lib:debug]]、[[lib:tracer]]、
+[[lib:profile]] はこの組み込み関数を利用して実現されています。
+
+==== ブロックパラメータの意味
+
+: event
+ 実行のタイプを表す、以下のいずれかの文字列。
+//emlist{
+  "line":      式の評価。
+  "call":      メソッドの呼び出し。
+  "return":    メソッド呼び出しからのリターン。
+  "c-call":    Cで記述されたメソッドの呼び出し。
+  "c-return":  Cで記述されたメソッド呼び出しからのリターン。
+  "class":     クラス定義、特異クラス定義、モジュール定義への突入。
+  "end":       クラス定義、特異クラス定義、モジュール定義の終了。
+  "raise":     例外の発生。
+//}
+: file
+ 実行中のプログラムのソースファイル名 (文字列)。
+
+: line
+ 実行中のプログラムのソースファイル上の行番号 (整数)。
+
+: id
+ event に応じ、以下のものが渡されます。
+ 第六ブロック引数の klass と対応しています。
+//emlist{
+    line
+        最後に呼び出されたメソッドを表す Symbol オブジェクト。
+        トップレベルでは nil。
+    call/return/c-call/c-return
+        呼び出された/リターンするメソッドを表す Symbol オブジェクト。
+    class/end
+        nil。
+    raise
+        最後に呼び出されたメソッドを表す Symbol オブジェクト。
+        トップレベルでは nil。
+//}
+: binding
+ 実行中のプログラムのコンテキストを表す [[c:Binding]] オブジェクト。
+
+: klass
+ event に応じ、以下のものが渡されます。
+ 第四ブロック引数の id と対応しています。
+//emlist{
+    line
+        最後に呼び出されたメソッドが属するクラスを表す
+        Class オブジェクト。トップレベルでは false。
+    call/return/c-call/c-return
+        呼び出された/リターンするメソッドが属するクラス
+        を表す Class オブジェクト。
+    class/end
+        false。
+    raise
+        最後に呼び出されたメソッドが属するクラスを表す
+        Class オブジェクト。トップレベルでは false。
+//}
+@param proc トレース用 [[c:Proc]] オブジェクトを指定します。nil を指定した場合、トレースをオフにします。
+
+@return 引数 proc が指定された場合は proc を、ブロックの場合は Proc オブジェクトに変換したものを返します。
+
+例:
+
+  set_trace_func lambda {|*arg|
+    p arg
+  }
+  class Foo
+  end
+  43.to_s
+  
+  #----結果----
+  #["line", "..", 4, nil, #<Binding:0x2b69584>, false]
+  #  ["c-call", "..", 4, :inherited, #<Binding:0x2b693b8>, Class]
+  #    ["c-return", "..", 4, :inherited, #<Binding:0x2b6937c>, Class]
+  #      ["class", "..", 4, nil, #<Binding:0x2b69098>, false]
+  #        ["end", "..", 4, nil, nil, false]
+  #        ["line", "..", 6, nil, #<Binding:0x2b68d78>, false]
+  #          ["c-call", "..", 6, :to_s, #<Binding:0x2b68c88>, Fixnum]
+  #            ["c-return", "..", 6, :to_s, #<Binding:0x2b68aa8>, Fixnum]
+
+@see [[m:Kernel.#caller]]
+

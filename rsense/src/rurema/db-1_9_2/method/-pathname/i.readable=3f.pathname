@@ -1,0 +1,9 @@
+kind=defined
+names=readable?
+visibility=public
+
+--- readable? -> bool
+FileTest.readable?(self.to_s) と同じです。
+
+@see [[m:FileTest.#readable?]]
+

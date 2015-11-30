@@ -1,0 +1,6 @@
+kind=defined
+names=getobj
+visibility=public
+
+--- getobj(event)
+

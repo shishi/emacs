@@ -1,0 +1,16 @@
+kind=defined
+names=load_random_file
+visibility=public
+
+--- load_random_file(filename) -> true
+ファイルを読み込み、その内容をエントロピー源として
+乱数生成器に渡します。
+
+エントロピーの推定量はファイルのバイト数と同じであると見なします。
+
+OpenSSL::Random.seed(File.read(filename)) と同じです。
+
+@param filename 読み込むファイル名
+@raise OpenSSL::Random::RandomError ファイルの読み込みに失敗した場合に発生します
+@raise OpenSSL::Random::RandomError 
+

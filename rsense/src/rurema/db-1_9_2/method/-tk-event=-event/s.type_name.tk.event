@@ -1,0 +1,6 @@
+kind=defined
+names=type_name
+visibility=public
+
+--- type_name(id)
+

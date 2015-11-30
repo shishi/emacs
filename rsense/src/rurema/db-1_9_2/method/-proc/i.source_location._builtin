@@ -1,0 +1,8 @@
+kind=defined
+names=source_location
+visibility=public
+
+--- source_location -> [String, Fixnum] | nil
+
+returns the ruby source filename and line number containing this proc
+or nil if this proc was not defined in ruby (i.e. native)

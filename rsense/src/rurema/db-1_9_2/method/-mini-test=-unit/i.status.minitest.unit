@@ -1,0 +1,12 @@
+kind=defined
+names=status
+visibility=public 
+
+--- status(io = @@out) -> ()
+
+テスト結果を与えられた IO に書き込みます。
+
+@param io テスト結果の出力先を指定します。
+
+
+

@@ -1,0 +1,6 @@
+kind=added
+names=encode_unile
+visibility=public
+
+--- encode_unile(content)
+

@@ -1,0 +1,17 @@
+kind=added
+names=JSON
+visibility=private 
+
+--- JSON(object, options = {}) -> object
+
+第一引数に与えられたオブジェクトの種類によって Ruby のオブジェクトか JSON 形式の文字列を返します。
+
+第一引数に文字列のようなオブジェクトを指定した場合は、それを [[m:JSON.#parse]] を用いてパースした結果を返します。
+そうでないオブジェクトを指定した場合は、それを [[m:JSON.#generate]] を用いて変換した結果を返します。
+
+@param object 任意のオブジェクトを指定します。
+
+@param options [[m:JSON.#parse]], [[m:JSON.#generate]] に渡すオプションを指定します。
+
+@see [[m:JSON.#parse]], [[m:JSON.#generate]]
+

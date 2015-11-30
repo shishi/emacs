@@ -1,0 +1,10 @@
+kind=defined
+names=finalizers
+visibility=public
+
+--- finalizers     -> [Proc]
+
+このメソッドは obsolete です。
+
+現在登録されているファイナライザの配列を返します。
+

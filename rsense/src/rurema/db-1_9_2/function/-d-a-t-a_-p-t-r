@@ -1,0 +1,11 @@
+name=DATA_PTR
+private=false
+macro=true
+type=void *
+filename=ruby.h
+params=(VALUE dta)
+
+
+実際は struct RData* 型である dta から、
+それがラップしているポインタを取り出します。
+

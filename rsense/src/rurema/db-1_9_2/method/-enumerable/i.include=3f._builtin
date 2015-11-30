@@ -1,0 +1,11 @@
+kind=defined
+names=include?,member?
+visibility=public
+
+--- member?(val)  -> bool
+--- include?(val) -> bool
+
+val と == の関係にある要素を含むとき真を返します。
+
+@arg val   任意のオブジェクト
+

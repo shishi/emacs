@@ -1,0 +1,6 @@
+kind=defined
+names=clear
+visibility=public
+
+--- clear(win = nil)
+

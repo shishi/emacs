@@ -1,0 +1,18 @@
+kind=defined
+names=close
+visibility=public
+
+--- close    -> nil
+
+入出力ポートをクローズします。
+
+以後このポートに対して入出力を行うと例外 [[c:IOError]] が発生しま
+す。ガーベージコレクトの際にはクローズされていない IO ポートはクロー
+ズされます。[[unknown:Traps:closeをGCにまかせる|trap::IO]] 
+self がパイプでプロセスにつながっていれば、そのプロセスの終
+了を待ち合わせます。
+
+@raise Errno::EXXX close に失敗した場合に発生します。
+
+@raise IOError 既に close されていた場合に発生します。
+

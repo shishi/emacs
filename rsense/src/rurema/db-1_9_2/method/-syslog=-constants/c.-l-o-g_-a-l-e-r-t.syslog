@@ -1,0 +1,16 @@
+kind=defined
+names=LOG_ALERT,LOG_CRIT,LOG_DEBUG,LOG_EMERG,LOG_ERR,LOG_INFO,LOG_NOTICE,LOG_WARNING
+visibility=public
+
+--- LOG_EMERG
+--- LOG_ALERT
+--- LOG_CRIT
+--- LOG_ERR
+--- LOG_WARNING
+--- LOG_NOTICE
+--- LOG_INFO
+--- LOG_DEBUG
+
+優先度(priorities)を示す定数。
+定数 の詳細については [[man:syslog(3)]] を参照してください。
+

@@ -1,0 +1,8 @@
+kind=defined
+names=update_without_notify
+visibility=public
+
+--- update_without_notify(hash)
+
+[[m:Hash#update]] と同じ。
+

@@ -1,0 +1,28 @@
+kind=defined
+names=resume
+visibility=public
+
+--- resume -> bool
+現在のリジュームモードの状態を返します。
+
+リジュームモードが有効であるならば、
+いくつかの転送メソッドにおいて
+転送が中断され不完全な転送しかできなかった場合に
+再開が可能になります。
+
+デフォルトは false です。
+
+転送の中断と再開が可能なのは以下のメソッドです。
+  * [[m:Net::FTP#get]]
+  * [[m:Net::FTP#put]]
+  * [[m:Net::FTP#getbinaryfile]]
+  * [[m:Net::FTP#putbinaryfile]]
+
+転送が中断したかどうかは転送先に問題のファイルが存在するか
+どうかで判定され、そのファイルサイズで再開する位置を
+決めます。
+
+@see [[m:Net::FTP#resume=]]
+
+
+

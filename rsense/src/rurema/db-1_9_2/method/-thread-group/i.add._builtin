@@ -1,0 +1,12 @@
+kind=defined
+names=add
+visibility=public
+
+--- add(thread)    -> self
+
+スレッド thread が属するグループを自身に変更します。
+
+@param thread 自身に加えたいスレッドを指定します。
+
+@raise ThreadError 自身が freeze されているか enclose されている場合に、発生します。また引数 thread が属する ThreadGroup が freeze されているか enclose されている場合にも発生します。
+

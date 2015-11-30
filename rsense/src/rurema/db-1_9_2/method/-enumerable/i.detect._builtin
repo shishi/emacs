@@ -1,0 +1,26 @@
+kind=defined
+names=detect,find
+visibility=public
+
+--- find(ifnone = nil)   -> Enumerator
+--- detect(ifnone = nil) -> Enumerator
+--- find(ifnone = nil) {|item| ... }   -> object
+--- detect(ifnone = nil) {|item| ... } -> object
+
+要素に対してブロックを評価した値が真になった最初の要素を返します。
+
+真になる要素が見つからず、ifnone も指定されていないときは nil を返します。
+真になる要素が見つからず、ifnone が指定されているときは ifnone を call した結果を返します。
+
+@arg ifnone  call メソッドを持つオブジェクト (例えば [[c:Proc]]) を指定します。
+
+例:
+    # 最初の 3 の倍数を探す
+    p [1, 2, 3, 4, 5].find {|i| i % 3 == 0 }   # => 3
+    p [2, 2, 2, 2, 2].find {|i| i % 3 == 0 }   # => nil
+
+    # ifnone の使用例
+    ifnone = proc { raise ArgumentError, "item not found" }
+    p [1, 2, 3, 4, 5].find(ifnone) {|i| i % 7 == 0 }
+        # ArgumentError: item not found
+

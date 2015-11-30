@@ -1,0 +1,9 @@
+kind=defined
+names=to_i,tv_sec
+visibility=public
+
+--- to_i      -> Integer
+--- tv_sec    -> Integer
+
+起算時からの経過秒数を整数で返します。
+

@@ -1,0 +1,16 @@
+kind=defined
+names=rewind
+visibility=public
+
+--- rewind    -> self
+
+ディレクトリストリームの読み込み位置を先頭に移動させます。
+
+@raise IOError 既に自身が close している場合に発生します。
+
+例:
+
+   d = Dir.new("testdir")
+   d.read     #=> "."
+   d.rewind   #=> #<Dir:0x401b3fb0>
+   d.read     #=> "."

@@ -1,0 +1,14 @@
+kind=defined
+names=find_matching
+visibility=public
+
+--- find_matching(dependency, all = false, matching_platform = true) -> Array
+
+依存関係を満たす gemspec の名前の配列を返します。
+
+@param dependency 依存関係を指定します。
+@param all 真を指定するとマッチする全てのバージョンの情報を返します。
+@param matching_platform 偽を指定すると全てのプラットフォームの情報を返します。
+
+@see [[c:Gem::Dependency]]
+

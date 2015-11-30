@@ -1,0 +1,17 @@
+kind=defined
+names=chars,each_char
+visibility=public
+
+--- each_char{|c| ... }     -> self
+--- chars{|c| ... }         -> self
+--- each_char               -> Enumerator
+--- chars                   -> Enumerator
+
+レシーバに含まれる文字を一文字つつブロックに渡して評価します。
+
+レシーバは読み込み可能でなければなりません。
+
+
+@see [[m:IO#each_char]], [[m:IO#chars]]
+
+

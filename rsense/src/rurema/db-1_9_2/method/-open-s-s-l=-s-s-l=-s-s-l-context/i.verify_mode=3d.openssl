@@ -1,0 +1,20 @@
+kind=defined
+names=verify_mode=
+visibility=public
+
+--- verify_mode=(mode)
+検証モードを設定します。
+
+以下の定数の OR を取って指定します。
+  * [[m:OpenSSL::SSL::VERIFY_NONE]]
+  * [[m:OpenSSL::SSL::VERIFY_PEER]]
+  * [[m:OpenSSL::SSL::VERIFY_CLIENT_ONCE]]
+  * [[m:OpenSSL::SSL::VERIFY_FAIL_IF_NO_PEER_CERT]]
+これらの定数の意味はクライアントモードとサーバモードでは異なる
+意味を持ちます。
+
+デフォルトは nil で、VERIFY_NONE を意味します。
+
+@param mode 設定するモード(整数値)
+@see [[m:OpenSSL::SSL::SSLContext#verify_mode=]]
+

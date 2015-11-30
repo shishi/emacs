@@ -1,0 +1,22 @@
+kind=defined
+names=pretty_generate,pretty_unparse
+visibility=public
+
+--- pretty_generate(object, options = nil) -> String
+--- pretty_unparse(object, options = nil) -> String
+
+Ruby のオブジェクトを JSON 形式の文字列に変換して返します。
+
+このメソッドは [[m:JSON.#generate]] よりも人間に読みやすい文字列を返します。
+
+pretty_unparse は将来削除される予定です。
+
+@param object JSON 形式の文字列に変換するオブジェクトを指定します。
+
+@param options [[c:JSON::State]] または、to_hash や to_h メソッドでハッシュに変換可能なオブジェクトを指定できます。
+       ハッシュを使用する場合指定可能なオプションは [[m:JSON.#generate]] を参照してください。
+
+@see [[m:JSON.#generate]]
+
+
+

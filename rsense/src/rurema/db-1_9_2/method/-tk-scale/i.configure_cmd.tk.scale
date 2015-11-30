@@ -1,0 +1,6 @@
+kind=defined
+names=configure_cmd
+visibility=public
+
+--- configure_cmd(slot, value)
+

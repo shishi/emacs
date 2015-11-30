@@ -1,0 +1,18 @@
+superclass=StandardError
+type=class
+library=zlib
+extended=
+included=
+
+ライブラリ zlib の発行する全ての例外のスーパークラスです。
+
+以下の例外が Zlib::Error のサブクラスとして定義されています。
+それぞれ zlib ライブラリ関数の返すエラーと対応しています。
+
+* [[c:Zlib::StreamEnd]]
+* [[c:Zlib::NeedDict]]
+* [[c:Zlib::DataError]]
+* [[c:Zlib::StreamError]]
+* [[c:Zlib::MemError]]
+* [[c:Zlib::BufError]]
+* [[c:Zlib::VersionError]]

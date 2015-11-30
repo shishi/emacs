@@ -1,0 +1,6 @@
+kind=defined
+names=rb_appsend_displayof
+visibility=public
+
+--- rb_appsend_displayof(interp, win, async, *args)
+

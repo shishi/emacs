@@ -1,0 +1,18 @@
+kind=defined
+names=fdiv,quo
+visibility=public
+
+--- quo(other)    -> Float
+--- fdiv(other)   -> Float
+
+self を other で割った実数の商を返します。
+
+Numeric のサブクラスは、このメソッドを適切に再定義しなければなりません。
+
+@param other 自身を割る数を指定します。
+
+  p 1.quo(3)      # => 0.3333333333333333
+  
+  require 'rational'
+  p 1.quo(3)      # => Rational(1, 3)
+

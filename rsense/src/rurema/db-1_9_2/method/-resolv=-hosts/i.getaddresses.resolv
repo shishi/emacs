@@ -1,0 +1,12 @@
+kind=defined
+names=getaddresses
+visibility=public
+
+--- getaddresses(name) -> [String]
+ホスト名 name の IP アドレスをルックアップし、
+ルックアップ結果のアドレスリストを返します。
+
+ルックアップに失敗した場合は空の配列が返されます。
+
+@param name ホスト名を文字列で与えます。
+

@@ -1,0 +1,18 @@
+kind=defined
+names=AI_ADDRCONFIG,AI_ALL,AI_CANONNAME,AI_DEFAULT,AI_MASK,AI_NUMERICHOST,AI_PASSIVE,AI_V4MAPPED,AI_V4MAPPED_CFG
+visibility=public
+
+--- AI_ADDRCONFIG
+--- AI_ALL
+--- AI_CANONNAME
+--- AI_DEFAULT
+--- AI_MASK
+--- AI_NUMERICHOST
+--- AI_PASSIVE
+--- AI_V4MAPPED
+--- AI_V4MAPPED_CFG
+
+フラグ:
+[[m:Socket.getaddrinfo]] の flags 引数に使用します。
+[[man:getaddrinfo(3)]]も参照して下さい。
+

@@ -1,0 +1,9 @@
+kind=defined
+names=LOCK_NB
+visibility=public
+
+--- LOCK_NB
+ロックの際にブロックしない。他の指定と or することで指定します。
+[[m:File#flock]] で使用します。
+
+

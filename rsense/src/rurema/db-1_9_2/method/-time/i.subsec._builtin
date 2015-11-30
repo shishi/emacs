@@ -1,0 +1,19 @@
+kind=defined
+names=subsec
+visibility=public
+
+--- subsec -> number
+
+Returns just the fraction for <i>time</i>.
+
+The result is possibly rational.
+
+   t = Time.now        #=> 2009-03-26 22:33:12 +0900
+   "%10.9f" % t.to_f   #=> "1238074392.940563917"
+   t.subsec            #=> (94056401/100000000)
+
+The lowest digit of to_f and subsec is different because
+IEEE 754 double is not accurate enough to represent
+the rational.
+The accurate value is returned by subsec.
+

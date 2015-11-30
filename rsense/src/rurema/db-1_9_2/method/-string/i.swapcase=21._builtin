@@ -1,0 +1,20 @@
+kind=defined
+names=swapcase!
+visibility=public
+
+--- swapcase! -> self | nil
+
+'A' から 'Z' までのアルファベット大文字を小文字に、
+'a' から 'z' までのアルファベット小文字を大文字に、破壊的に変更します。
+
+swapcase! は self を変更して返しますが、
+置換が起こらなかった場合は nil を返します。
+
+このメソッドはマルチバイト文字を認識しません。
+
+例:
+    str = "ABCxyz"
+    str.swapcase!
+    p str   # => "abcXYZ"
+@see [[m:String#upcase]], [[m:String#downcase]], [[m:String#capitalize]]
+

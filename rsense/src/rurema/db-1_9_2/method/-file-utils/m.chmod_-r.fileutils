@@ -1,0 +1,23 @@
+kind=defined
+names=chmod_R
+visibility=public
+
+--- chmod_R(mode, list, options = {}) -> Array
+
+ファイル list のパーミッションを再帰的に mode へ変更します。
+
+@param mode パーミッションを8進数で指定します。
+
+@param list ファイルのリストを指定します。対象のファイルが一つの場合は文字列でも指定可能です。
+           二つ以上指定する場合は配列で指定します。
+
+@param options :noop と :verbose が指定可能です。
+               [[ref:c:FileUtils#options]]
+
+@return list を配列として返します。
+
+例:
+
+  FileUtils.chmod_R(0700, '/tmp/removing')
+
+

@@ -1,0 +1,9 @@
+superclass=Object
+type=class
+library=rubygems.requirement
+extended=
+included=Comparable
+
+Gem の必要条件を扱うクラスです。
+
+このクラスのインスタンスには複数の必要条件を含めることができます。

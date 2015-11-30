@@ -1,0 +1,10 @@
+kind=defined
+names=chain
+visibility=public
+
+--- chain -> [OpenSSL::X509::Certificate] | nil
+検証に利用した証明書チェインを証明書オブジェクト
+([[c:OpenSSL::X509::Certificate]]のインスタンス)の配列で返します。
+
+[[m:OpenSSL::X509::StoreContext#verify]] を呼ぶ前は nil を返します。
+

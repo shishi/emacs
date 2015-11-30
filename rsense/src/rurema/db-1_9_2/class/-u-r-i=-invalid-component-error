@@ -1,0 +1,7 @@
+superclass=URI=Error
+type=class
+library=uri
+extended=
+included=
+
+不正な構成要素を指定したときに発生します。

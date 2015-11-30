@@ -1,0 +1,19 @@
+kind=defined
+names=double_fig
+visibility=public
+
+--- double_fig
+
+Ruby の [[c:Float]] クラスが保持できる有効数字の数を返します。
+
+    p BigDecimal::double_fig  # ==> 20 (depends on the CPU etc.)
+
+double_figは以下の C プログラムの結果と同じです。
+
+    double v = 1.0;
+    int double_fig = 0;
+    while (v + 1.0 > 1.0) {
+       ++double_fig;
+       v /= 10;
+    }
+

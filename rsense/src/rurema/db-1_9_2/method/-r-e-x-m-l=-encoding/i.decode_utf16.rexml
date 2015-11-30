@@ -1,0 +1,7 @@
+kind=added
+names=decode_utf16
+visibility=public
+
+--- decode_utf16(str)
+
+

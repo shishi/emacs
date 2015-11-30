@@ -1,0 +1,11 @@
+kind=defined
+names=dependencies_ok?
+visibility=public 
+
+--- dependencies_ok?(spec) -> bool
+
+アンインストール指定された Gem を削除しても依存関係を満たすことができるか
+どうかチェックします。
+
+@param spec アンインストール指定されている Gem の [[c:Gem::Specification]] を指定します。
+

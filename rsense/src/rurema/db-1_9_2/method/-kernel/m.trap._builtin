@@ -1,0 +1,16 @@
+kind=defined
+names=trap
+visibility=public
+
+--- trap(signal, command) -> object
+--- trap(signal) { ... } -> object
+signal で指定された割り込みにたいするハンドラとして
+command を登録します。[[m:Signal.#trap]]と同じです。
+
+[[m:Signal.#trap]]の使用を推奨します。
+
+@param signal [[m:Signal.#trap]] 参照
+@param command [[m:Signal.#trap]] 参照
+
+@see [[m:Signal.#trap]],[[c:Signal]]
+

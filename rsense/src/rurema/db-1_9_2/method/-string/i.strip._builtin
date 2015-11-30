@@ -1,0 +1,25 @@
+kind=defined
+names=strip
+visibility=public
+
+--- strip -> String
+
+文字列先頭と末尾の空白文字を全て取り除いた文字列を生成して返します。
+空白文字の定義は " \t\r\n\f\v" です。
+また、文字列右側からは "\0" も取り除きますが、
+左側の "\0" は取り除きません。
+
+例:
+    p "  abc  \r\n".strip    #=> "abc"
+    p "abc\n".strip          #=> "abc"
+    p "  abc".strip          #=> "abc"
+    p "abc".strip            #=> "abc"
+    p "  \0  abc  \0".strip  # => "\000  abc"   # 右側のみ "\0" も取り除く
+
+    str = "\tabc\n"
+    p str.strip              #=> "abc"
+    p str                    #=> "\tabc\n" (元の文字列は変化しない)
+
+@see [[m:String#lstrip]], [[m:String#rstrip]]
+
+

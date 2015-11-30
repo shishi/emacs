@@ -1,0 +1,10 @@
+kind=defined
+names=options=
+visibility=public 
+
+--- options=(option_str)
+
+テストスイートに渡すパラメータをセットします。
+
+@param option_str テストスイートに渡すパラメータを指定します。
+

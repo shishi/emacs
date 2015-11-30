@@ -1,0 +1,8 @@
+kind=defined
+names=eid
+visibility=public
+
+--- eid    -> Integer
+
+現在の実効ユーザ ID を返します。
+

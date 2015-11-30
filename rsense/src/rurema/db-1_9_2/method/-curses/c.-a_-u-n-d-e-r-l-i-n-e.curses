@@ -1,0 +1,10 @@
+kind=defined
+names=A_UNDERLINE
+visibility=public
+
+--- A_UNDERLINE -> Integer
+
+文字列に下線を引くことを表す属性マスク用の定数です。
+
+@see [[m:Curses.attrset]]
+

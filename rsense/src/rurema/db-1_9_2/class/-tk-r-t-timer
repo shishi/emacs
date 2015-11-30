@@ -1,0 +1,7 @@
+superclass=TkTimer
+type=class
+library=tk.timer
+extended=
+included=
+
+

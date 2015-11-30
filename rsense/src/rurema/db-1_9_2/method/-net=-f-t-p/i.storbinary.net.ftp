@@ -1,0 +1,36 @@
+kind=defined
+names=storbinary
+visibility=public
+
+--- storbinary(cmd, file, blocksize, rest_offset = nil) -> nil
+--- storbinary(cmd, file, blocksize, rest_offset = nil){|data| ...} -> nil
+サーバーに cmd で指定されたコマンドを送り、バイナリデータを 
+送ります。
+
+送るデータは [[c:IO]] のインスタンスを
+file で指定します。
+(実際には [[c:StringIO]] のような IO とメソッドレベルで
+互換するオブジェクトであればなんでもかまいません)。
+
+blocksize で指定されたバイト単位で file からデータを読みこみ、
+サーバに送ります。
+
+rest_offset が省略されなかった場合は、cmdを送る前に
+REST コマンドを送り、指定したバイト数の位置から
+転送を開始します。
+
+ブロックが指定された場合には、転送するデータを blocksize ごとに
+ブロックにも渡します。
+
+@param cmd コマンドを文字列で与えます。
+@param file 送るデータを与えます。
+@param blocksize 読み込み単位をバイト単位で与えます。
+@param rest_offset REST コマンドに与えるオフセットを与えます。
+
+@raise Net::FTPTempError 応答コードが 4yz のときに発生します。
+@raise Net::FTPPermError 応答コードが 5yz のときに発生します。
+@raise Net::FTPProtoError 応答コードが RFC 的に正しくない場合に発生します。
+@raise Net::FTPReplyError 応答コードが上の場合以外で正しくない場合(1xy, 3xyが来るべきでないときに来た場合など)に発生します。
+
+@see [[m:Net::FTP#putbinaryfile]]
+

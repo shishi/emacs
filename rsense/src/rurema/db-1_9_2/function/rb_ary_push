@@ -1,0 +1,24 @@
+name=rb_ary_push
+private=false
+macro=false
+type=VALUE
+filename=array.c
+params=(VALUE ary, VALUE item)
+
+
+配列 ary の末尾に item を追加します。
+
+対応するRubyコード
+
+  ary.push(item) または
+  ary << item
+
+使用例
+
+  VALUE ary = rb_ary_new();
+  char line[4096];
+  while ((gets(line)) != NULL){
+    item = process_apache_log(line);
+    rb_ary_push(ary, item);
+  }
+

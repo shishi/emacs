@@ -1,0 +1,11 @@
+kind=defined
+names=clear_paths
+visibility=public
+
+--- clear_paths -> nil
+
+[[m:Gem.#dir]], [[m:Gem.#path]] の値をリセットします。
+
+次に [[m:Gem.#dir]], [[m:Gem.#path]] が呼ばれた時は、値を最初から計算します。
+このメソッドは主にユニットテストの独立性を提供するために使用します。
+

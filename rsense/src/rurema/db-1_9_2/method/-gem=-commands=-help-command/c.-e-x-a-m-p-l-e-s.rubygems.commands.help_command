@@ -1,0 +1,8 @@
+kind=defined
+names=EXAMPLES
+visibility=public
+
+--- EXAMPLES -> String
+
+使用例を表す文字列です。
+

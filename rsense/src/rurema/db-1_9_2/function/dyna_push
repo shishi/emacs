@@ -1,0 +1,10 @@
+name=dyna_push
+private=true
+macro=false
+type=struct RVarmap *
+filename=parse.y
+params=(void)
+
+
+ブロックローカル変数テーブルをプッシュします。
+

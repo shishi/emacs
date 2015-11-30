@@ -1,0 +1,22 @@
+kind=defined
+names=yday
+visibility=public
+
+--- yday    -> Integer  
+
+1月1日を1とした通算日(1から366まで)を整数で返します。
+
+  Time.mktime(2000,  1,  1).yday #=> 1
+
+うるう年の場合は、2月29日も含めた通算日を返します。
+
+  # うるう年でない場合
+  Time.mktime(2003,  1,  1).yday #=> 1
+  Time.mktime(2003,  3,  1).yday #=> 60
+  Time.mktime(2003, 12, 31).yday #=> 365
+  
+  # うるう年の場合
+  Time.mktime(2004,  1,  1).yday #=> 1
+  Time.mktime(2004,  2, 29).yday #=> 60
+  Time.mktime(2004, 12, 31).yday #=> 366
+

@@ -1,0 +1,11 @@
+kind=defined
+names=to_hash
+visibility=public
+
+--- to_hash -> Hash
+
+自身をシンプルなハッシュに変換します。
+
+フィールドの順序は無視されます。
+重複したフィールドは削除されます。
+

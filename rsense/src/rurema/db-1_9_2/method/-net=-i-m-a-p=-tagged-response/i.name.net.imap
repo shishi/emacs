@@ -1,0 +1,8 @@
+kind=defined
+names=name
+visibility=public
+
+--- name
+
+Returns the name. the name is one of "OK", "NO", "BAD".
+

@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=json
+extended=
+included=
+
+JSON (JavaScript Object Notation) を扱うためのモジュールです。

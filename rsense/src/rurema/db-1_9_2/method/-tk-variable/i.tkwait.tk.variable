@@ -1,0 +1,6 @@
+kind=defined
+names=tkwait
+visibility=public
+
+--- tkwait(on_thread = true)
+

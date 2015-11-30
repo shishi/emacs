@@ -1,0 +1,9 @@
+kind=defined
+names=binding
+visibility=public
+
+--- binding -> Binding
+
+Proc オブジェクトが保持するコンテキストを 
+[[c:Binding]] オブジェクトで返します。
+

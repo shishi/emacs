@@ -1,0 +1,6 @@
+kind=defined
+names=_use_menubar?
+visibility=private 
+
+--- _use_menubar?(parent)
+

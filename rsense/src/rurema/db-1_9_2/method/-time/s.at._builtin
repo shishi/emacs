@@ -1,0 +1,23 @@
+kind=defined
+names=at
+visibility=public
+
+--- at(time)    -> Time
+
+time で指定した時刻の Time オブジェクトを返します。
+
+生成された Time オブジェクトのタイムゾーンは地方時となります。
+
+@param time Time オブジェクト、もしくは起算時からの経過秒数を表わす数値で指定します。
+
+--- at(time, usec)    -> Time
+
+time + (usec/1000000) の時刻を表す Time オブジェクトを返します。
+浮動小数点の精度では不十分な場合に使用します。
+
+生成された Time オブジェクトのタイムゾーンは地方時となります。
+
+@param time 起算時からの経過秒数を表わす整数を指定します。
+
+@param usec マイクロ秒を整数で指定します。
+

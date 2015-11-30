@@ -1,0 +1,6 @@
+kind=defined
+names=put
+visibility=public
+
+--- put(data, *opts)
+

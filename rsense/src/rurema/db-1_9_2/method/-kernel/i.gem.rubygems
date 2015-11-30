@@ -1,0 +1,37 @@
+kind=added
+names=gem
+visibility=private 
+
+--- gem(gem_name, *version_requirements) -> bool
+[[m:$LOAD_PATH]] に Ruby Gem を追加します。
+
+指定された Gem をロードする前にその Gem が必要とする Gem をロードします。
+バージョン情報を省略した場合は、最も高いバージョンの Gem をロードします。
+指定された Gem やその Gem が必要とする Gem が見つからなかった場合は
+[[c:Gem::LoadError]] が発生します。
+
+バージョンの指定方法に関しては [[c:Gem::Version]] を参照してください。
+
+rubygems ライブラリがライブラリバージョンの衝突を検出しない限り、
+gem メソッドは全ての require メソッドよりも前に実行されます。
+
+==== 環境変数 GEM_SKIP
+
+特定の Gem をロードしないようにするために環境変数 GEM_SKIP を定義することができます。
+特定の Gem がまだインストールされていないという状況を試すために使用できます。
+
+例:
+
+  GEM_SKIP=libA:libB ruby-I../libA -I../libB ./mycode.rb
+
+@param gem Gem の名前の文字列か、Gem の依存関係を [[c:Gem::Dependency]] のインスタンスで指定します。
+
+@param version_requirements 必要とする gem のバージョンを指定します。
+
+@return Gem がロードできた場合は true を返します。ロードできなかった場合は false を返します。
+
+@raise Gem::LoadError 指定された Gem やその Gem が必要とする Gem が見つからなかった場合に発生します。
+                      ただし、環境変数 GEM_SKIP に指定されている Gem に関してはこの例外は発生しません。
+
+@see [[c:Gem::Version]]
+

@@ -1,0 +1,12 @@
+.decode64	Base64.#decode64
+.encode64	Base64.#encode64
+.strict_decode64	Base64.#strict_decode64
+.strict_encode64	Base64.#strict_encode64
+.urlsafe_decode64	Base64.#urlsafe_decode64
+.urlsafe_encode64	Base64.#urlsafe_encode64
+#decode64	Base64.#decode64
+#encode64	Base64.#encode64
+#strict_decode64	Base64.#strict_decode64
+#strict_encode64	Base64.#strict_encode64
+#urlsafe_decode64	Base64.#urlsafe_decode64
+#urlsafe_encode64	Base64.#urlsafe_encode64

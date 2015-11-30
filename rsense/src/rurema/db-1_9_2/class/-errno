@@ -1,0 +1,10 @@
+superclass=
+type=module
+library=_builtin
+extended=
+included=
+
+システムコールのエラーに対応する例外を集めたモジュールです。
+
+@see [[c:SystemCallError]]
+@see [[c:Errno::EXXX]]

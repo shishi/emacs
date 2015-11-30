@@ -1,0 +1,10 @@
+kind=defined
+names=setup
+visibility=public 
+
+--- setup
+
+各テストケースの実行前に実行するメソッドです。
+
+サブクラスで再定義します。
+

@@ -1,0 +1,12 @@
+kind=defined
+names=load_gemspec
+visibility=public 
+
+--- load_gemspec(io) -> Gem::Specification | nil
+
+YAML 形式の gemspec を io から読み込みます。
+
+@param io 文字列か [[c:IO]] オブジェクトを指定します。
+
+@see [[m:Gem::Specification.from_yaml]]
+

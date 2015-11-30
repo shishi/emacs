@@ -1,0 +1,11 @@
+kind=defined
+names=nlink
+visibility=public
+
+--- nlink -> Integer
+ハードリンクの数を返します。
+
+  fs = File::Stat.new($0)
+  #例
+  p fs.nlink    #=> 1
+

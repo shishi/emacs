@@ -1,0 +1,8 @@
+kind=defined
+names=FIXEDENCODING
+visibility=public
+
+--- FIXEDENCODING
+
+@see [[m:Regexp#fixed_encoding?]]
+

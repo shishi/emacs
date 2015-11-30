@@ -1,0 +1,7 @@
+superclass=Digest=Class
+type=class
+library=digest.hmac
+extended=
+included=
+
+キー付きハッシュアルゴリズム HMAC の実装の一つを提供するクラスです。

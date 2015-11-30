@@ -1,0 +1,8 @@
+kind=defined
+names=itemconfigure
+visibility=public
+
+--- itemconfigure(tagOrId, slot, value = Tk::None)
+
+
+

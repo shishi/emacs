@@ -1,0 +1,15 @@
+kind=defined
+names=instance_variables
+visibility=public
+
+--- instance_variables -> [Symbol]
+オブジェクトのインスタンス変数名をシンボルの配列として返します。
+
+    obj = Object.new
+    obj.instance_eval { @foo, @bar = nil }
+    p obj.instance_variables
+
+    #=> [:@foo, :@bar]
+
+@see [[m:Object#instance_variable_get]],[[m:Kernel.#local_variables]],[[m:Kernel.#global_variables]],[[m:Module.constants]],[[m:Module#constants]],[[m:Module#class_variables]]
+

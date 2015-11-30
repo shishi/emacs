@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=minitest.mock
+extended=
+included=
+
+シンプルなモックを実現するためのクラスです。

@@ -1,0 +1,7 @@
+kind=defined
+names=encoding_system=
+visibility=public
+
+--- encoding_system=(enc_name)
+
+

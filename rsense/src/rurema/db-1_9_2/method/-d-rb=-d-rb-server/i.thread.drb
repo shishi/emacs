@@ -1,0 +1,9 @@
+kind=defined
+names=thread
+visibility=public
+
+--- thread
+The main thread of this DRbServer.
+
+This is the thread that listens for and accepts connections from clients, not that handles each client¡Çs request-response session.
+

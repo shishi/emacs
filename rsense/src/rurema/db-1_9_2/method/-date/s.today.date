@@ -1,0 +1,9 @@
+kind=defined
+names=today
+visibility=public
+
+--- today(start = Date::ITALY) -> Date
+現在の日付に相当する日付オブジェクトを生成します。
+
+@param start グレゴリオ暦をつかい始めた日をあらわすユリウス日
+

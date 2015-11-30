@@ -1,0 +1,7 @@
+kind=defined
+names=option_methods
+visibility=public
+
+--- option_methods(*opts)
+
+

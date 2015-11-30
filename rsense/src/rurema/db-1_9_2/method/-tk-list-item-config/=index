@@ -1,0 +1,5 @@
+#current_itemconfiginfo	TkItemConfigMethod#current_itemconfiginfo
+#itemcget	TkItemConfigMethod#itemcget
+#itemconfiginfo	TkItemConfigMethod#itemconfiginfo
+#itemconfigure	TkItemConfigMethod#itemconfigure
+#tagid	TkItemConfigMethod#tagid

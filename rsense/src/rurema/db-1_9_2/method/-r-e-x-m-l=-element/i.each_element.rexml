@@ -1,0 +1,6 @@
+kind=defined
+names=each_element
+visibility=public
+
+--- each_element(xpath = nil) {|element| ... }
+

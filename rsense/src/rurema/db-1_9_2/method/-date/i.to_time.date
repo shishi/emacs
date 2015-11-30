@@ -1,0 +1,7 @@
+kind=defined
+names=to_time
+visibility=public
+
+--- to_time -> Time
+対応する [[c:Time]] オブジェクトを返します。
+

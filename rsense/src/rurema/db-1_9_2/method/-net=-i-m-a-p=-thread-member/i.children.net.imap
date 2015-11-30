@@ -1,0 +1,11 @@
+kind=defined
+names=children
+visibility=public
+
+--- children
+
+an array of [[c:Net::IMAP::ThreadMember]] objects for mail
+items that are children of this in the thread.
+
+
+

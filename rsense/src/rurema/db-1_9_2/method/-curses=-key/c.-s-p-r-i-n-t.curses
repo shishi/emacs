@@ -1,0 +1,8 @@
+kind=defined
+names=SPRINT
+visibility=public
+
+--- SPRINT -> Integer
+
+Shift + Print キーを表す定数です。
+

@@ -1,0 +1,33 @@
+superclass=Object
+type=class
+library=openssl
+extended=
+included=OpenSSL=SSL=SocketForwarder
+
+SSL サーバーのためのクラス。
+
+[[c:TCPServer]] をラップするクラスで、TCPServer で接続した
+ソケットを [[c:OpenSSL::SSL::SSLSocket]] でラップする機能を持ちます。
+おおよそ TCPServer と同様のメソッドを持ちます。
+
+基本的には SSL サーバを簡単に実装するためのクラスであり、
+これを利用せずとも SSL サーバを実装することは可能です。
+
+以下はクライアントからの入力を標準出力に出力するだけのサーバです。
+
+  require 'socket'
+  require 'openssl'
+  
+  include OpenSSL
+  
+  ctx = SSL::SSLContext.new()
+  ctx.cert = X509::Certificate.new(File.read('cert.pem'))
+  ctx.key = PKey::RSA.new(File.read('privkey.pem'))
+  svr = TCPServer.new(2007)
+  serv = SSL::SSLServer.new(svr, ctx)
+  
+  loop do
+    while soc = serv.accept
+      puts soc.read
+    end
+  end

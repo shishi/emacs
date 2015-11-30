@@ -1,0 +1,11 @@
+kind=defined
+names=to_a
+visibility=public
+
+--- to_a -> [[String]]
+
+self の各要素を格納した配列を返します。
+
+返される配列の1つの要素は [key, value] です。
+つまり配列の配列を返します。
+

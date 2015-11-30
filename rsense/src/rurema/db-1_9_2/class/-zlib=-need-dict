@@ -1,0 +1,7 @@
+superclass=Zlib=Error
+type=class
+library=zlib
+extended=
+included=
+
+展開に用いる辞書がしていされていない場合に発生します。

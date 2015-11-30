@@ -1,0 +1,7 @@
+kind=defined
+names=event_arg,event_arg=
+visibility=public
+
+--- event_arg
+--- event_arg=(value)
+

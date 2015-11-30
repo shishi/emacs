@@ -1,0 +1,8 @@
+kind=defined
+names=to_f
+visibility=public
+
+--- to_f -> Float
+
+値を浮動小数点数([[c:Float]])に変換します。
+

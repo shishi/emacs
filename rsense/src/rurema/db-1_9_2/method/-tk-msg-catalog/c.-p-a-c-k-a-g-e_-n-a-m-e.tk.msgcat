@@ -1,0 +1,6 @@
+kind=defined
+names=PACKAGE_NAME
+visibility=public
+
+--- PACKAGE_NAME
+

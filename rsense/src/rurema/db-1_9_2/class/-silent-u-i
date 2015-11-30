@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rubygems.user_interaction
+extended=
+included=
+
+完全に何もしない UI です。

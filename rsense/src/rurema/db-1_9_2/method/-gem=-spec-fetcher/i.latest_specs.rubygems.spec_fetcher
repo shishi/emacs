@@ -1,0 +1,8 @@
+kind=defined
+names=latest_specs
+visibility=public
+
+--- latest_specs -> Hash
+
+キャッシュされている最新の gemspec を返します。
+

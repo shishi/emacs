@@ -1,0 +1,8 @@
+kind=defined
+names=PASSTHROUGH_EXCEPTIONS
+visibility=public
+
+--- PASSTHROUGH_EXCEPTIONS -> [Class]
+
+システム関連の例外のリストです。内部で使用します。
+

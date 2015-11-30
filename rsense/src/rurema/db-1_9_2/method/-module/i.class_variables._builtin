@@ -1,0 +1,12 @@
+kind=defined
+names=class_variables
+visibility=public
+
+--- class_variables -> [Symbol]
+
+クラス／モジュールに定義されているクラス変数の名前の配列を返します。
+
+スーパークラスやインクルードしているモジュールのクラス変数も含みます。
+
+@see [[m:Module.constants]], [[m:Kernel.#local_variables]], [[m:Kernel.#global_variables]], [[m:Object#instance_variables]], [[m:Module#constants]]
+

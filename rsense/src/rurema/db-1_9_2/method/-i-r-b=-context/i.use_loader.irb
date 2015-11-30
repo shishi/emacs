@@ -1,0 +1,13 @@
+kind=defined
+names=use_loader,use_loader=
+visibility=public
+
+--- use_loader
+--- use_loader=(bool)
+
+load または require 時に
+irb のファイル読み込み機能を使うかどうかを示します。
+デフォルト値は false です。
+
+use_loader の値は irb 全体に反映されます。
+

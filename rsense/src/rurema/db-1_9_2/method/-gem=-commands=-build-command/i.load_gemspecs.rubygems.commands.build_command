@@ -1,0 +1,10 @@
+kind=defined
+names=load_gemspecs
+visibility=public 
+
+--- load_gemspecs(filename) -> Array
+
+gemspec ファイルをロードします。
+
+@param filename ファイル名を指定します。
+

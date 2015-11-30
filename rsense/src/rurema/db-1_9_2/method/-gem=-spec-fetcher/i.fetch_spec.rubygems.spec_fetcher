@@ -1,0 +1,9 @@
+kind=defined
+names=fetch_spec
+visibility=public
+
+--- fetch_spec(spec, source_uri) -> object
+
+@param spec 
+@param source_uri
+

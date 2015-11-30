@@ -1,0 +1,11 @@
+kind=defined
+names=chardev?
+visibility=public
+
+--- chardev?(file)    -> bool
+[[c:FileTest]] モジュールにある同名のクラスメソッドと同じです.
+
+@param file ファイル名を表す文字列か IO オブジェクトを指定します。
+
+@see [[m:FileTest.#chardev?]]
+

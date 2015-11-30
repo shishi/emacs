@@ -1,0 +1,8 @@
+kind=defined
+names=modulo
+visibility=public
+
+--- modulo(n)
+
+詳細は [[m:Float#modulo]] を参照して下さい。 
+

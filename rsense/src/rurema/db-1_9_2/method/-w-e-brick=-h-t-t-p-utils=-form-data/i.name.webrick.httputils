@@ -1,0 +1,21 @@
+kind=defined
+names=name,name=
+visibility=public
+
+--- name          -> String | nil
+--- name=(value)
+
+フォームデータの name 属性を文字列で表すアクセサです。
+
+@param value フォームデータの name 属性を文字列で指定します。
+
+例:
+
+ require "webrick/cgi"
+ class MyCGI < WEBrick::CGI
+   def do_GET(req, res)
+     p req.query['q'].name   #=> "q"
+   end
+ end
+ MyCGI.new.start()
+

@@ -1,0 +1,6 @@
+kind=defined
+names=_receiver_mainloop
+visibility=public
+
+--- _receiver_mainloop(check_root)
+

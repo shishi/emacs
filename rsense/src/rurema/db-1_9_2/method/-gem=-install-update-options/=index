@@ -1,0 +1,2 @@
+#add_install_update_options	Gem::InstallUpdateOptions#add_install_update_options
+#install_update_defaults_str	Gem::InstallUpdateOptions#install_update_defaults_str

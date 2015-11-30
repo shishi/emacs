@@ -1,0 +1,12 @@
+kind=defined
+names=exception,new
+visibility=public
+
+--- new(error_message = nil)
+--- exception(error_message = nil)
+
+例外オブジェクトを生成して返します。
+
+@param error_message エラーメッセージを表す文字列を指定します。このメッセージは
+                     属性 [[m:Exception#message]] の値になり、デフォルトの例外ハンドラで表示されます。
+

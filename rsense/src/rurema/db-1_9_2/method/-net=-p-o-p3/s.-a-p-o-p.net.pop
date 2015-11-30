@@ -1,0 +1,18 @@
+kind=defined
+names=APOP
+visibility=public
+
+--- APOP(is_apop) -> Class
+bool が真なら [[c:Net::APOP]] クラス、偽なら [[c:Net::POP3]] クラスを返します。
+
+使用例:
+
+  require 'net/pop'
+
+  pop = Net::POP3::APOP($isapop).new(addr, port)
+  pop.start(account, password) {
+    ....
+  }
+
+@param is_apop 真の場合に Net::APOP を返します。
+

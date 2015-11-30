@@ -1,0 +1,8 @@
+kind=added
+names=user_dir
+visibility=public
+
+--- user_dir -> String
+
+ユーザのホームディレクトリの中の Gem のパスを返します。
+

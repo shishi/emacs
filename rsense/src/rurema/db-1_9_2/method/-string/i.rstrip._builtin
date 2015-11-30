@@ -1,0 +1,22 @@
+kind=defined
+names=rstrip
+visibility=public
+
+--- rstrip -> String
+
+文字列の末尾にある空白文字を全て取り除いた新しい文字列を返します。
+空白文字の定義は " \t\r\n\f\v\0" です。
+
+例:
+    p "  abc\n".rstrip          #=> "  abc"
+    p "  abc \t\r\n\0".rstrip   #=> "  abc"
+    p "  abc".rstrip            #=> "  abc"
+    p "  abc\0 ".rstrip         #=> "  abc"
+
+    str = "abc\n"
+    p str.rstrip    #=> "abc"
+    p str           #=> "abc\n"  (元の文字列は変化しない)
+
+@see [[m:String#lstrip]],[[m:String#strip]]
+ 
+

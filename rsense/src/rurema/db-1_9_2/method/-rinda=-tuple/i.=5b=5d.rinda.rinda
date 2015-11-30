@@ -1,0 +1,10 @@
+kind=defined
+names=[]
+visibility=public
+
+--- [](key)
+
+ハッシュキー key に対応する要素を返します。
+self が [[c:Array]] オブジェクトから生成された場合は、
+整数 key を与えるとそのインデックスに対応する要素を返します。
+

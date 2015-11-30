@@ -1,0 +1,8 @@
+superclass=Object
+type=class
+library=dl
+extended=
+included=
+
+オープンされたダイナミックライブラリを表すクラスです。
+[[man:dlopen(3)]] が返すハンドラーのラッパーです。

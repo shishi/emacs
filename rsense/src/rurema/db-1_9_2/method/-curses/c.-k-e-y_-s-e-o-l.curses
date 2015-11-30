@@ -1,0 +1,8 @@
+kind=defined
+names=KEY_SEOL
+visibility=public
+
+--- KEY_SEOL -> Integer
+
+Shift + 行末までクリアするキーを表す定数です。
+

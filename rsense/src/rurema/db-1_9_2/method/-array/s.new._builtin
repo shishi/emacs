@@ -1,0 +1,61 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(size = 0, val = nil)    -> Array
+
+長さ size の配列を生成し、各要素を val で初期化して返します。
+
+要素毎に val が複製されるわけではないことに注意してください。
+全要素が同じオブジェクト val を参照します[[trap:Array]]。
+後述の例では、配列の各要素は全て同一の文字列を指します。
+
+@param size 配列の長さを数値で指定します。
+
+@param val 配列の要素の値を指定します。
+
+例:
+
+    ary = Array.new(3, "foo")
+    p ary                     #=> ["foo", "foo", "foo"]
+    ary[0].capitalize!
+    p ary                     #=> ["Foo", "Foo", "Foo"]  (各要素は同一のオブジェクトである)
+
+--- new(ary)    -> Array
+
+指定された配列 ary を複製して返します。
+[[m:Array#dup]] 同様 要素を複製しない浅い複製です。
+
+@param ary 複製したい配列を指定します。
+
+例:
+
+    p Array.new([1,2,3]) # => [1,2,3]
+
+    a = ["a", "b", "c"]
+    b = Array.new(a)
+    a.each{|s| s.capitalize! }
+    p a                        #=> ["A", "B", "C"]
+    p b                        #=> ["A", "B", "C"]   (b は a と要素を共有する)
+
+
+--- new(size) {|index| ... }    -> Array
+
+長さ size の配列を生成し、各要素のインデックスを引数としてブロックを実行し、
+各要素の値をブロックの評価結果に設定します。
+
+ブロックは要素毎に実行されるので、全要素をあるオブジェクトの複製にすることができます。
+
+@param size 配列の長さを数値で指定します。
+
+例:
+    ary = Array.new(3){|index| "hoge#{index}"}
+    p ary                      #=> ["hoge0", "hoge1", "hoge2"]
+
+例:
+
+    ary = Array.new(3){ "foo" }
+    p ary                      #=> ["foo", "foo", "foo"]
+    ary[0].capitalize!
+    p ary                      #=> ["Foo", "foo", "foo"]  (各要素は違うオブジェクトである)
+

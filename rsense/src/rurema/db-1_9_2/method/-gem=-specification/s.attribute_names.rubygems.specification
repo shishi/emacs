@@ -1,0 +1,8 @@
+kind=defined
+names=attribute_names
+visibility=public
+
+--- attribute_names -> Array
+
+属性名の配列を返します。
+

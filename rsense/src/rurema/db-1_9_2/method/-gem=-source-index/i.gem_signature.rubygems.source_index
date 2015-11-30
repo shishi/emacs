@@ -1,0 +1,10 @@
+kind=defined
+names=gem_signature
+visibility=public
+
+--- gem_signature(gem_full_name) -> String
+
+与えられた名前を持つ Gem の SHA256 ダイジェストを返します。
+
+@param gem_full_name Gem の名前を指定します。
+

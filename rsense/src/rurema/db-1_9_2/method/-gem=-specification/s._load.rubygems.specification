@@ -1,0 +1,10 @@
+kind=defined
+names=_load
+visibility=public
+
+--- _load(str) -> Gem::Specification
+
+マーシャルされたデータをロードするためのメソッドです。
+
+@param str マーシャルされたデータを指定します。
+

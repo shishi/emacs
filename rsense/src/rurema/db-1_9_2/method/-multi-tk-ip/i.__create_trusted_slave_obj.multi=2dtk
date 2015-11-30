@@ -1,0 +1,6 @@
+kind=defined
+names=__create_trusted_slave_obj
+visibility=public
+
+--- __create_trusted_slave_obj(name, keys)
+

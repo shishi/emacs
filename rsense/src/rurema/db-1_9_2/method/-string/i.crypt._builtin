@@ -1,0 +1,45 @@
+kind=defined
+names=crypt
+visibility=public
+
+--- crypt(salt) -> String
+
+self と salt から暗号化された文字列を生成して返します。
+salt には英数字、ドット (「.」)、スラッシュ (「/」) から構成される、
+2 バイト以上の文字列を指定します。
+
+暗号化された文字列から暗号化前の文字列 (self) を求めることは一般に困難で、
+self を知っている者のみが同じ暗号化された文字列を生成できます。
+このことから self を知っているかどうかの認証に使うことが出来ます。
+
+salt には、以下の様になるべくランダムな文字列を選ぶべきです。
+他にも [[ruby-list:29297]] などがあります。
+
+注意:
+
+  * crypt の処理は [[man:crypt(3)]] の実装に依存しています。
+    従って、crypt で処理される内容の詳細や salt の与え方については、
+    利用環境の [[man:crypt(3)]] 等を見て確認してください。
+  * crypt の結果は利用環境が異なると変わる場合があります。
+    crypt の結果を、異なる利用環境間で使用する場合には注意して下さい。
+  * 典型的な DES を使用した [[man:crypt(3)]] の場合、
+    self の最初の 8 バイト、salt の最初の 2 バイトだけが使用されます。
+
+@param salt    文字列を暗号化するための鍵となる文字列。
+             英数字・「.」・「/」のいずれかで構成される 2 バイト以上の文字列
+
+例:
+    # パスワードの暗号化
+    salt = [rand(64),rand(64)].pack("C*").tr("\x00-\x3f","A-Za-z0-9./")
+    passwd.crypt(salt)
+
+    # UNIX のログイン認証
+    require 'etc'
+
+    def valid_login?(user, password)
+      ent = Etc.getpwnam(user)
+      passwd.crypt(ent.passwd) == ent.passwd
+    end
+
+    p valid_login?("taro", "password")   # => 真偽値が得られる
+

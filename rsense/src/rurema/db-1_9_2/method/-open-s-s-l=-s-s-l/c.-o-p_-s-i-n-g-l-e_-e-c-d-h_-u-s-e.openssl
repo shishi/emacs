@@ -1,0 +1,7 @@
+kind=defined
+names=OP_SINGLE_ECDH_USE
+visibility=public
+
+--- OP_SINGLE_ECDH_USE -> Integer
+[[m:OpenSSL::SSL::SSLContext#options=]] で利用します。
+

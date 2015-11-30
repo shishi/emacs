@@ -1,0 +1,8 @@
+kind=defined
+names=do_sort
+visibility=public
+
+--- do_sort
+現在のdo_sortの値を取得します．デフォルトでは
+falseになっています．
+

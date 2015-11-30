@@ -1,0 +1,7 @@
+kind=added
+names=encode_sjis
+visibility=public
+
+--- encode_sjis(str)
+
+

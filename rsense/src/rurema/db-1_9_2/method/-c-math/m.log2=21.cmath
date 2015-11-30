@@ -1,0 +1,19 @@
+kind=defined
+names=log2!
+visibility=public
+
+--- log2!(x) -> Float
+
+2 を底とする実数 x の対数 (binary logarithm) を返します。
+[[m:Math.#log2]]のエイリアスです。
+
+@param x 真数を正の実数で指定します。
+
+@raise Math::DomainError x が負の数である場合に発生します。
+
+@raise TypeError x に数値以外を指定した場合に発生します。
+
+@raise RangeError x に実数以外の数値を指定した場合に発生します。
+
+@see [[m:Math.#log2]]
+

@@ -1,0 +1,15 @@
+superclass=File
+type=class
+library=tempfile
+extended=
+included=
+
+テンポラリファイルを操作するためのクラスです。
+
+ * テンポラリファイルを作成します。
+   ファイルは "w+" モードで "basename.pid.n" という名前になります。
+ * Tempfile オブジェクトは[[c:File]]オブジェクトと同じように使うことができます。
+ * Tempfile#close(true) により、作成したテンポラリファイルは削除されます。
+ * スクリプトが終了するときにも削除されます。
+ * [[m:Tempfile#open]]により、テンポラリファイルを再オープンすることができます。
+ * テンポラリファイルのモードは 0600 です。

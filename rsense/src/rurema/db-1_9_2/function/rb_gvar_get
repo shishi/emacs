@@ -1,0 +1,10 @@
+name=rb_gvar_get
+private=false
+macro=false
+type=VALUE
+filename=variable.c
+params=(struct global_entry *entry)
+
+
+グローバル変数のエントリ entry から値を取得します。
+

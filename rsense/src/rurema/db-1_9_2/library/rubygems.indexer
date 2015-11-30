@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=rubygems.package.tar_writer,rubygems.remote_fetcher,rubygems.spec_fetcher,rubygems.specification,rubygems.requirement,rubygems.gem_openssl,rubygems.package,rubygems.builder,rubygems.exceptions,rubygems.package.tar_input,rubygems.source_index,rubygems.package.tar_reader,rubygems.package.tar_header,rubygems.source_info_cache_entry,rubygems.digest.sha2,rubygems.defaults.operating_system,rubygems.gem_path_searcher,rubygems.platform,rubygems.defaults,rubygems.package.tar_reader.entry,rubygems.package.f_sync_dir,rubygems.digest.md5,rubygems.source_info_cache,rubygems.user_interaction,rubygems.dependency,rubygems,rubygems.version,rubygems.package.tar_output,rubygems.security,rubygems.format
+classes=Gem=Indexer
+is_sublibrary=true
+
+Gem リポジトリのインデックスを作成するためのクラスを扱うためのライブラリです。

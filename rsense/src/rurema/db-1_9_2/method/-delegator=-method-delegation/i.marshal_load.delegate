@@ -1,0 +1,11 @@
+kind=defined
+names=marshal_load
+visibility=public
+
+--- marshal_load(obj) -> object
+
+シリアライズされたオブジェクトから、[[m:Delegator::MethodDelegation#__getobj__]] が返すオブジェクトを再現します。
+
+@param obj [[m:Delegator::MethodDelegation#marshal_dump]]の戻り値のコピー
+
+

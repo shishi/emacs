@@ -1,0 +1,19 @@
+kind=defined
+names=<<
+visibility=public
+
+--- <<(string) -> self
+
+[[m:Zlib::Inflate#inflate]] と同じように string を
+展開ストリームに入力しますが、Zlib::Inflate オブジェクト
+そのものを返します。展開ストリームからの出力は、
+出力バッファに保存されます。
+
+  cstr = "x\234\313\310OOUH+MOTH\315K\001\000!\251\004\276"
+  inz = Zlib::Inflate.new
+  inz << cstr[0, 10]
+  p inz.flush_next_out #=> "hoge fu"
+
+  inz << cstr[10..-1]
+  p inz.flush_next_out #=> "ga end"
+

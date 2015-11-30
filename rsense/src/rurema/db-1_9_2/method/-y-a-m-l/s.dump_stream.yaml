@@ -1,0 +1,21 @@
+kind=defined
+names=dump_stream
+visibility=public
+
+--- dump_stream(*objs)
+
+与えられた objs を順に YAML フォーマットに変換していき、一つの文字列にまとめたものを返します。
+
+@param objs YAMLフォーマットに変換されるオブジェクト
+
+  require "yaml"
+  puts YAML.dump_stream( "hoge\nfoo", [1,2], {"foo" => "bar"} )
+  --- |-
+  hoge
+  foo
+  ---
+  - 1
+  - 2
+  ---
+  foo: bar
+

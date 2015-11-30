@@ -1,0 +1,7 @@
+superclass=String
+type=class
+library=tk.text
+extended=
+included=TkText=IndexModMethods
+
+

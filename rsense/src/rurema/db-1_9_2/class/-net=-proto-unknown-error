@@ -1,0 +1,8 @@
+superclass=Net=ProtocolError
+type=class
+library=net.protocol
+extended=
+included=
+
+サーバからのレスポンスが解釈できないなど、不明のエラーが
+出た場合に発生する例外です。

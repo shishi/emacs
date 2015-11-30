@@ -1,0 +1,45 @@
+kind=defined
+names=select
+visibility=public
+
+--- select(reads, writes = [], excepts = [], timeout = nil)    -> [[IO]] | nil
+
+[[man:select(2)]] を実行します。
+
+与えられた入力/出力/例外待ちの  IO オブジェクトの中から準備ができたものを
+それぞれ配列にして、配列の配列として返します。
+タイムアウトした時には nil を返します。
+
+[[m:Kernel.#select]] と同じです。
+
+@param reads 入力待ちする [[c:IO]] オブジェクトの配列を渡します。
+
+@param writes 出力待ちする [[c:IO]] オブジェクトの配列を渡します。
+
+@param excepts 例外待ちする [[c:IO]] オブジェクトの配列を渡します。
+
+@param timeout タイムアウトまでの時間を表す数値または nil を指定します。数値で指定したときの単位は秒です。nil を指定した時には IO がどれかひとつレディ状態になるまで待ち続けます。
+
+@raise IOError 与えられた IO オブジェクトが閉じられていた時に発生します。
+
+@raise Errno::EXXX [[man:select(2)]] に失敗した場合に発生します。
+
+ rp, wp = IO.pipe
+ mesg = "ping "
+ 100.times{
+   rs, ws, = IO.select([rp], [wp])
+   if r = rs[0]
+     ret = r.read(5)
+     print ret
+     case ret
+     when /ping/
+       mesg = "pong\n"
+     when /pong/
+       mesg = "ping "
+     end
+   end
+   if w = ws[0]
+     w.write(mesg)
+   end
+ }
+

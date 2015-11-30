@@ -1,0 +1,8 @@
+kind=defined
+names=KEY_CTRL_D
+visibility=public
+
+--- KEY_CTRL_D -> Integer
+
+Ctrl + D を表す定数です。
+

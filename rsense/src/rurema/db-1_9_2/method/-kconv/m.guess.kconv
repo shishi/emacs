@@ -1,0 +1,23 @@
+kind=defined
+names=guess
+visibility=public
+
+--- guess(str) -> Encoding | nil
+
+文字列 str のエンコーディングを判定します。戻り値は
+Kconv の定数です。
+
+このモジュール関数で判定できるのは、
+  * ISO-2022-JP ([[m:Kconv::JIS]])
+  * Shift_JIS ([[m:Kconv::SJIS]])
+  * EUC-JP ([[m:Kconv::EUC]])
+  * ASCII ([[m:Kconv::ASCII]])
+  * UTF-8 ([[m:Kconv::UTF8]])
+  * UTF-16BE ([[m:Kconv::UTF16]])
+  * 不明 ([[m:Kconv::UNKNOWN]])
+  * 以上のどれでもない ([[m:Kconv::BINARY]])
+のいずれかです。
+
+@param str エンコーディング判定対象の文字列
+
+

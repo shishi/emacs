@@ -1,0 +1,25 @@
+kind=defined
+names=read
+visibility=public
+
+--- read(name, *rtype)
+
+レジストリ値 name を読み，[ type, data ]
+の配列で返します。
+name が nil の場合，(標準) レジストリ値が読み込まれます。
+
+type はレジストリ値の型です。(⇒[[c:Win32::Registry::Constants]])
+data はレジストリ値のデータで，クラスは以下の通りです:
+  * REG_SZ, REG_EXPAND_SZ
+    String
+  * REG_MULTI_SZ
+    String の配列
+  * REG_DWORD, REG_DWORD_BIG_ENDIAN, REG_QWORD
+    Integer
+  * REG_BINARY
+    String (バイナリデータを含みます)
+
+オプション引数 rtype が指定されていた場合，レジストリ値の型が
+与えられた rtype の配列に存在するかチェックされ，存在しない場合に
+[[c:TypeError]] が発生します。
+

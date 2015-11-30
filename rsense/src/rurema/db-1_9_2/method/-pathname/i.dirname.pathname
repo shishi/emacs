@@ -1,0 +1,9 @@
+kind=defined
+names=dirname
+visibility=public
+
+--- dirname -> Pathname
+Pathname.new(File.dirname(self.to_s)) と同じです。
+
+@see [[m:File.dirname]]
+

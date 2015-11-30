@@ -1,0 +1,9 @@
+kind=defined
+names=priv_key
+visibility=public
+
+--- priv_key -> OpenSSL::BN
+DH 给倡赴芭规の入泰赴を手します。
+
+@see [[m:OpenSSL::PKey::DH#priv_key=]]
+

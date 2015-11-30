@@ -1,0 +1,65 @@
+kind=defined
+names=[],slice
+visibility=public
+
+--- [](nth) -> String | nil
+--- slice(nth) -> String | nil
+
+nth 番目の文字を返します。
+
+(self.to_s[nth] と同じです。)
+
+@param nth 文字の位置を表す整数を指定します。
+
+  :foo[0] # => "f"
+  :foo[1] # => "o"
+  :foo[2] # => "o"
+
+--- [](nth, len) -> String | nil
+--- slice(nth, len) -> String | nil
+
+nth 番目から長さ len の部分文字列を新しく作って返します。
+
+(self.to_s[nth, len] と同じです。)
+
+@param nth 文字の位置を表す整数を指定します。
+@param len 文字列の長さを指定します。
+
+  :foo[1, 2] # => "oo"
+
+--- [](substr) -> String | nil
+--- slice(substr) -> String | nil
+
+self が substr を含む場合、一致した文字列を新しく作って返します。
+
+(self.to_s[substr] と同じです。)
+
+--- [](regexp, nth = 0) -> String | nil
+--- slice(regexp, nth = 0) -> String | nil
+
+正規表現 regexp の nth 番目の括弧にマッチする最初の部分文字列を返します。
+
+(self.to_s[regexp, nth] と同じです。)
+
+@param regexp 正規表現を指定します。
+
+@param nth 取得したい正規表現レジスタのインデックスを指定します。
+
+  :foobar[/bar/] # => "bar"
+  :foobarbaz[/(ba.)(ba.)/, 0] # => "barbaz"
+  :foobarbaz[/(ba.)(ba.)/, 1] # => "bar"
+  :foobarbaz[/(ba.)(ba.)/, 2] # => "baz"
+
+--- [](range) -> String | nil
+--- slice(range) -> String | nil
+
+rangeで指定したインデックスの範囲に含まれる部分文字列を返します。
+
+(self.to_s[range] と同じです。)
+
+@param range 取得したい文字列の範囲を示す [[c:Range]] オブジェクトを指定します。
+
+  :foo[0..1] # => "fo"
+
+@see [[m:String#[] ]], [[m:String#slice]]
+

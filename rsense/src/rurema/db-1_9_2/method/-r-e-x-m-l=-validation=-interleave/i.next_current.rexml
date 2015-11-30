@@ -1,0 +1,6 @@
+kind=defined
+names=next_current
+visibility=public
+
+--- next_current(event)
+

@@ -1,0 +1,29 @@
+kind=defined
+names=inverse_from
+visibility=public
+
+--- inverse_from(src) -> Matrix
+
+行列1次方程式の解(の行列)を返します。
+
+行列1次方程式の解(の行列)を返します。
+行列の関として src * X = self となるような行列Xを返します。
+srcが正則行列ではないでは場合には、ExceptionForMatrix::ErrNotRegularの例外が発生します。
+
+===== 注意
+
+inverse_fromメソッドは破壊的なメソッドです。
+
+例:
+  a1 = [1, 2]
+  a2 = [3, 4.5]
+  m = Matrix[a1, a2]
+
+  b1 = [1, 0]
+  b2 = [-1, 1]
+  n = Matrix[b1, b2]
+
+  p x = m.inverse_from(n) #=> Matrix[[1, 2.0], [4, 6.5]]
+  p m #=> Matrix[[1, 2.0], [4, 6.5]]
+  p n * x #=> Matrix[[1, 2.0], [3, 4.5]]
+

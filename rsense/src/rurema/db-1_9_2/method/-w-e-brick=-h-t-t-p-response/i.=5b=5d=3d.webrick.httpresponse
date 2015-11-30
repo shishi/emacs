@@ -1,0 +1,18 @@
+kind=defined
+names=[]=
+visibility=public
+
+--- []=(field, val)
+
+レスポンスの該当するヘッダに val を設定する。
+
+@param field ヘッダ名を文字列で指定します。大文字と小文字を区別しません。
+
+@param val ヘッダの値を指定します。to_s メソッドによって文字列に変換されます。
+
+  require 'time'
+  res['last-modified'] = Time.now.httpdate
+
+@see [[m:WEBrick::HTTPResponse#chunked?]], [[m:WEBrick::HTTPResponse#content_length]], 
+     [[m:WEBrick::HTTPResponse#content_type]]
+

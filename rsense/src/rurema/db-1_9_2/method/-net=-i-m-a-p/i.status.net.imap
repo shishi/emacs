@@ -1,0 +1,15 @@
+kind=defined
+names=status
+visibility=public
+
+--- status(mailbox, attr)
+
+Sends a STATUS command, and returns the status of the indicated
+mailbox.
+return value is a hash of attributes.
+
+ex).
+
+  p imap.status("inbox", ["MESSAGES", "RECENT"])
+  #=> {"RECENT"=>0, "MESSAGES"=>44}
+

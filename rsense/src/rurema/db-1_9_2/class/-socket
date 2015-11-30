@@ -1,0 +1,16 @@
+superclass=BasicSocket
+type=class
+library=socket
+extended=
+included=
+
+ソケットそのものに対するシステムコールレベルのアクセスを提供
+するクラス。Perl のソケットに対するアクセスと同レベルの機能を
+提供しています。このクラスではソケットアドレスは [[m:Array#pack]]
+された文字列で指定します
+([[ref:lib:socket#pack_string]]を参照)。
+
+一般的なソケットプログラミングはより高レベルの
+[[c:TCPSocket]] クラスや
+[[c:TCPServer]] クラスを用い
+て行われることが多く、このクラスはあまり用いられません。

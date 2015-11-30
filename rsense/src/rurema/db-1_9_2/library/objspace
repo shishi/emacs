@@ -1,0 +1,12 @@
+methods=ObjectSpace/m.count_objects_size.objspace,ObjectSpace/m.memsize_of.objspace,ObjectSpace/m.count_nodes.objspace,ObjectSpace/m.count_tdata_objects.objspace
+sublibraries=
+requires=
+classes=
+is_sublibrary=false
+
+このライブラリは [[c:ObjectSpace]] を拡張してオブジェクトやメモリ管理についての
+統計情報を取得するメソッドをいくつか追加します。
+
+MRI の実装について詳しくない一般のユーザはこのライブラリを使ってはいけません。
+このライブラリは、メモリプロファイラの開発者や MRI がどのようにメモリを使用するか
+知りたい MRI 開発者が使用します。

@@ -1,0 +1,26 @@
+;;; git-gutter-fringe
+
+(require 'git-gutter-fringe)
+(global-git-gutter-mode t)
+
+;; (setq git-gutter-fr:side 'right-fringe)
+
+;; ;; If you enable global minor mode
+;; (global-git-gutter-mode t)
+
+;; ;; If you enable git-gutter-mode for some modes
+;; (add-hook 'ruby-mode-hook 'git-gutter-mode)
+
+;; (global-set-key (kbd "C-x C-g") 'git-gutter:toggle)
+;; (global-set-key (kbd "C-x v =") 'git-gutter:popup-hunk)
+
+;; Jump to next/previous hunk
+(define-key global-map (kbd "C-x p") 'git-gutter:previous-hunk)
+(define-key global-map (kbd "C-x n") 'git-gutter:next-hunk)
+
+;; Revert current hunk
+(define-key global-map (kbd "C-x r") 'git-gutter:revert-hunk)
+
+;; (set-face-foreground 'git-gutter-fr:modified "yellow")
+;; (set-face-foreground 'git-gutter-fr:added    "blue")
+;; (set-face-foreground 'git-gutter-fr:deleted  "white")

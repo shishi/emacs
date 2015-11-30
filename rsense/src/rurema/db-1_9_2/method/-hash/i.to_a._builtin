@@ -1,0 +1,13 @@
+kind=defined
+names=to_a
+visibility=public
+
+--- to_a -> [Array]
+
+キーと値からなる 2 要素の配列を並べた配列を生成して返します。
+
+   h1 = { "a" => 100, 2 => ["some"], :c => "c" }
+   p h1.to_a           #=> [["a", 100], [2, ["some"]], [:c, "c"]]
+
+@see [[m:Hash#keys]],[[m:Hash#values]]
+

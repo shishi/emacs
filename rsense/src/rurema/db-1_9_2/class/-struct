@@ -1,0 +1,11 @@
+superclass=Object
+type=class
+library=_builtin
+extended=
+included=Enumerable
+
+構造体クラス。Struct.new はこのクラスのサブクラスを新たに生成します。
+
+個々の構造体はサブクラスから [[m:Struct.new]] を使って生成します。個々
+の構造体サブクラスでは構造体のメンバに対するアクセスメソッドが定義され
+ています。

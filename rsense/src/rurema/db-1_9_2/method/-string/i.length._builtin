@@ -1,0 +1,11 @@
+kind=defined
+names=length,size
+visibility=public
+
+--- length -> Integer
+--- size -> Integer
+
+文字列の文字数を返します。バイト数を知りたいときは bytesize メソッドを使ってください。
+
+@see [[m:String#bytesize]]
+

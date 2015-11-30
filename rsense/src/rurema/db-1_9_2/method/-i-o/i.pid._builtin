@@ -1,0 +1,11 @@
+kind=defined
+names=pid
+visibility=public
+
+--- pid    -> Integer | nil
+
+自身が [[m:IO.popen]] で作られたIOポートなら、子プロセスのプロセス ID を
+返します。それ以外は nil を返します。
+
+@raise IOError 既に close されている場合に発生します。
+

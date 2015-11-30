@@ -1,0 +1,16 @@
+superclass=Struct
+type=class
+library=net.imap
+extended=
+included=
+
+Net::IMAP::MailboxQuota represents contents of GETQUOTA response.
+This object can also be a response to GETQUOTAROOT.  In the syntax
+specification below, the delimiter used with the "#" construct is a
+single space (SPACE).
+
+   quota_list      ::= "(" #quota_resource ")"
+   
+   quota_resource  ::= atom SPACE number SPACE number
+   
+   quota_response  ::= "QUOTA" SPACE astring SPACE quota_list

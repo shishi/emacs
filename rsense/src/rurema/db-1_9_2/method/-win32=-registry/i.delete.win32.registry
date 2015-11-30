@@ -1,0 +1,10 @@
+kind=defined
+names=delete,delete_value
+visibility=public
+
+--- delete(name)
+--- delete_value(name)
+
+レジストリ値 name を削除します。
+(標準) レジストリ値を削除することはできません。
+

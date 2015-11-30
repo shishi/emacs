@@ -1,0 +1,14 @@
+kind=added
+names=im
+visibility=public
+
+--- im -> Complex
+
+実数に対し、純虚数化した [[c:Complex]] クラスのオブジェクトを返します。
+
+例:
+
+  require "complex"
+  n = 100
+  n.im   #=> (0+100i)
+

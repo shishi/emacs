@@ -1,0 +1,21 @@
+kind=defined
+names=conv
+visibility=public
+
+--- conv(to, from, str)     -> String
+
+与えられた文字コードにしたがって str を変換し、結果を文字列として返します。
+
+次の省略形です。
+  Iconv.iconv(to, from, str).join
+
+@param to 変換先の文字コード体系を表す文字列を指定します。
+
+@param from 変換前の文字コード体系を表す文字列を指定します。
+
+@param str 変換したい文字列を指定します。
+
+このメソッドは
+[[m:Iconv.new]], [[m:Iconv.open]] および [[m:Iconv#iconv]] の例外
+を起こします。
+

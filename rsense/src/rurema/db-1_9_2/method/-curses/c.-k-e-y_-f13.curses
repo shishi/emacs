@@ -1,0 +1,8 @@
+kind=defined
+names=KEY_F13
+visibility=public
+
+--- KEY_F13 -> Integer
+
+F13 キーを表す定数です。
+

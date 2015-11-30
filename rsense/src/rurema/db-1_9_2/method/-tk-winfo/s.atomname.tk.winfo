@@ -1,0 +1,6 @@
+kind=defined
+names=atomname
+visibility=public
+
+--- atomname(id, win = nil)
+

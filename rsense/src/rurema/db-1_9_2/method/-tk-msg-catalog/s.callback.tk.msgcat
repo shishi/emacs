@@ -1,0 +1,6 @@
+kind=defined
+names=callback
+visibility=public
+
+--- callback(namespace, locale, src_str, *args)
+

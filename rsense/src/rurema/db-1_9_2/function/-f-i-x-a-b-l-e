@@ -1,0 +1,10 @@
+name=FIXABLE
+private=false
+macro=true
+type=int
+filename=ruby.h
+params=(long f)
+
+
+f が Fixnum の範囲に収まっているなら真。
+

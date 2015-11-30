@@ -1,0 +1,6 @@
+kind=defined
+names=bool
+visibility=public
+
+--- bool(value)
+

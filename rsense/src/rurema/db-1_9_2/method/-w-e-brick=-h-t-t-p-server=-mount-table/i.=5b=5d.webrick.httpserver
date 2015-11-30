@@ -1,0 +1,12 @@
+kind=defined
+names=[]
+visibility=public
+
+--- [](dir) -> WEBrick::HTTPServlet::AbstractServlet
+
+与えられたディレクトリに対応するサーブレットを返します。
+
+@param dir ディレクトリを指定します。
+
+@return [[c:WEBrick::HTTPServlet::AbstractServlet]] のサブクラスのインタンスを返します。
+

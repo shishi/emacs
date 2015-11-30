@@ -1,0 +1,8 @@
+superclass=Object
+type=class
+library=net.http
+extended=
+included=Net=HTTPHeader
+
+HTTP レスポンスを表現するクラスです。
+Net::HTTP クラスは実際には HTTPResponse のサブクラスを返します。

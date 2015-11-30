@@ -1,0 +1,39 @@
+kind=defined
+names=message_loop
+visibility=public
+
+--- message_loop -> ()
+
+Windowsのメッセージポンプを実行します。
+
+message_loopメソッドは、Windowsメッセージがキューイングされている限りメッ
+セージの読み出しとディスパッチを実行します。
+
+COMのスレッド間/プロセス間通信はスレッド内で呼び出しをシリアライズする
+ためにWindowsメッセージを利用します。このため、ほとんどのイベント処理は
+Windowsメッセージを読み取ってディスパッチすることで通知されます。
+
+  ie = WIN32OLE.new('InternetExplorer.Application.1')
+  event = WIN32OLE_EVENT.new(ie, 'DWebBrowserEvents2')
+  b = false
+  event.on_event('DocumentComplete') do |disp, uri|
+    disp.document.getElementsByTagName('a').each do |e|
+      puts "#{e.innerHTML}=#{e.href}"   #=> ダウンロード=http://www.ruby-lang.org/ja/downloads/ など
+    end
+    disp.quit
+    b = true
+  end
+  ie.Navigate2 'http://www.ruby-lang.org/ja/'
+  loop do
+    break if b
+    WIN32OLE_EVENT.message_loop
+  end
+
+なお、メソッド名はloopですが、呼び出し時および既にキューイングされたメッ
+セージの処理中にキューされたメッセージの処理が終わると呼び出し元に制御
+が戻ります。このため、イベント通知までに長い時間がかかる場合はすべての
+イベントを受信するまでループを実行する必要があります。このとき他のスレッ
+ドに制御を与える必要があれば、[[m:Kernel.#sleep]]などを呼び出してくださ
+い。message_loopメソッドの呼び出し中はRubyのスレッドの切り替えは行われ
+ません。
+

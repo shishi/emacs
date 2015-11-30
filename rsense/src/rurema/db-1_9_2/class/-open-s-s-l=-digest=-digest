@@ -1,0 +1,9 @@
+superclass=OpenSSL=Digest
+type=class
+library=openssl
+extended=
+included=
+
+このクラスは互換性のために存在します。
+
+[[c:OpenSSL::Digest]] を代わりに利用してください。

@@ -1,0 +1,6 @@
+kind=defined
+names=current_window_configinfo
+visibility=public
+
+--- current_window_configinfo(tagOrId, slot = nil)
+

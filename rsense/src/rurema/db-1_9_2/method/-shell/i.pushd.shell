@@ -1,0 +1,31 @@
+kind=defined
+names=pushd,pushdir
+visibility=public
+
+--- pushd(path = nil, &block) -> object
+--- pushdir(path = nil, &block) -> object
+
+カレントディレクトリをディレクトリスタックにつみ, カレントディレク
+トリをpathにする. pathが省略されたときには, カレントディレクトリと
+ディレクトリスタックのトップを交換する. イテレータとして呼ばれたと
+きには, ブロック実行中のみpushdする.
+
+@param path  カレントディレクトリをpathにする。文字列で指定します。
+
+@param block イテレータとして呼ぶ場合, ブロックを指定します。
+ 
+動作例
+  require 'shell'
+  Shell.verbose = false
+  sh = Shell.new
+  sh.pushd("/tmp")
+  p sh.cwd #=> "/tmp"
+  sh.pushd("/usr")
+  p sh.cwd #=> "/usr"
+  sh.popd
+  p sh.cwd #=> "/tmp"
+  sh.pushd("/usr/local"){
+    p sh.cwd #=> "/usr/local"
+  }
+  p sh.cwd #=> "/tmp"
+

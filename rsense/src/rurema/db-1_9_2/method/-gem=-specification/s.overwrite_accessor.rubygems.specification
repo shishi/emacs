@@ -1,0 +1,13 @@
+kind=defined
+names=overwrite_accessor
+visibility=public
+
+--- overwrite_accessor(name){ ... } -> ()
+
+呼び出し時に特別な動作をする必要のある属性があります。
+このメソッドはそういうことを可能にします。
+
+ブロックパラメータは任意のものを使用することができます。
+
+@param name 属性名を指定します。
+

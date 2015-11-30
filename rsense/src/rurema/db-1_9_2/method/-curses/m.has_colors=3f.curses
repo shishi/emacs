@@ -1,0 +1,9 @@
+kind=defined
+names=has_colors?
+visibility=public
+
+--- has_colors? -> bool
+
+端末がカラー表示に対応している場合は真を返します。
+そうでない場合は偽を返します。
+

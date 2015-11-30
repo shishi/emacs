@@ -1,0 +1,16 @@
+kind=defined
+names=equal?
+visibility=public
+
+--- equal?(other) -> bool
+
+指定された other が self 自身である場合のみ真を返します。
+
+@param other 自身と比較したい Hash オブジェクトを指定します。
+
+ p({}.equal?({}))     #=> false 
+ a = {}
+ p a.equal?(a)        #=> true
+
+@see [[m:Hash#==]]
+

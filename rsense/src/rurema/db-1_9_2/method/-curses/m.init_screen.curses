@@ -1,0 +1,25 @@
+kind=defined
+names=init_screen,stdscr
+visibility=public
+
+--- init_screen -> Curses::Window
+--- stdscr -> Curses::Window
+
+端末の種類や curses に関するデータを初期化し、画面をクリアします。
+stdscr と呼ばれる画面全体を表すウィンドウを返します。
+
+ncurses を利用している場合、
+このメソッドに失敗すると標準エラー出力にエラーメッセージを出力し、終了します。
+そうでない場合、このメソッドに失敗すると例外 RuntimeError を発生します。
+
+詳しくは、 man ページの curs_initscr(3X) の initscr 関数と、
+curs_clear(3X) の clear 関数を参照ください。
+
+[[c:Curses]] のいくつかのメソッドは、内部でこのメソッドを呼び出します。
+これにより、このメソッドを呼び出していない場合でも、
+いくつかの処理をできるようになっています。
+
+セーフレベル ($SAFE) が 4 の場合、例外 SecurityError を発生します。
+
+@see [[m:Curses.#close_screen]]
+

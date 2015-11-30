@@ -1,0 +1,10 @@
+kind=defined
+names=indent=
+visibility=public 
+
+--- indent=(string)
+
+インデントに使用する文字列をセットします。
+
+@param string インデントに使用する文字列を指定します。
+

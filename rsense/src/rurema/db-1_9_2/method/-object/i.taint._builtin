@@ -1,0 +1,29 @@
+kind=defined
+names=taint
+visibility=public
+
+--- taint -> self
+
+オブジェクトの「汚染マーク」をセットします。
+
+環境変数（[[c:ENV]]で得られる文字列）など一部のオブジェクトは最初から汚染されています。
+オブジェクトの汚染に関しては[[d:spec/safelevel]]を参照してください。
+
+  $SAFE = 1
+  
+  some = "puts '@&%&(#!'"
+  p some.tainted? #=> false
+  eval(some) #=> @&%&(#!
+  
+  some.taint
+  p some.tainted? #=> true
+  eval(some) # Insecure operation - eval (SecurityError)
+  
+  some.untaint
+  p some.tainted? #=> false
+  eval(some) #=> @&%&(#!
+  
+  p ENV['OS'].tainted? #=> true
+
+@see [[m:Object#tainted?]],[[m:Object#untaint]],[[m:Object#freeze]]
+

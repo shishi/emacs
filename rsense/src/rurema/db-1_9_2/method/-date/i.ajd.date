@@ -1,0 +1,8 @@
+kind=defined
+names=ajd
+visibility=public
+
+--- ajd -> Rational
+このメソッドは [[m:Date#jd]] と似ていますが、天文学的なユリウス日を返します。
+時刻を含みます。
+

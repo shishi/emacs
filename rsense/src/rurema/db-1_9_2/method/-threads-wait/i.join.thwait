@@ -1,0 +1,23 @@
+kind=defined
+names=join
+visibility=public
+
+--- join(*threads) -> ()
+
+終了を待つスレッドの対象として、threads で指定されたスレッドを指定します。
+
+@param threads 複数スレッドの終了を待つスレッドに指定されたthreadsを加えます。
+
+  require 'thwait'
+
+  threads = []
+  5.times {|i|
+    threads << Thread.new { sleep 1; p Thread.current }
+  }
+
+  thall = ThreadsWait.new
+  p thall.threads #=> []
+  thall.join(*threads)
+  p thall.threads
+  #=> [#<Thread:0x216ec dead>, #<Thread:0x21660 dead>, #<Thread:0x215d4 dead>, #<Thread:0x214bc dead>]
+

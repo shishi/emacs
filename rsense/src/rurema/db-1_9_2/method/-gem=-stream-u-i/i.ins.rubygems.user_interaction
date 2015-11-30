@@ -1,0 +1,8 @@
+kind=defined
+names=ins
+visibility=public 
+
+--- ins -> IO
+
+この UI にセットされている入力ストリームを返します。
+

@@ -1,0 +1,19 @@
+kind=defined
+names=rationalize
+visibility=public
+
+--- rationalize      -> Rational
+--- rationalize(eps) -> Rational
+
+自身を [[c:Rational]] に変換します。
+
+@param eps 許容する誤差
+
+引数 eps は常に無視されます。
+
+例:
+
+  2.rationalize      # => (2/1)
+  2.rationalize(100) # => (2/1)
+  2.rationalize(0.1) # => (2/1)
+

@@ -1,0 +1,9 @@
+kind=defined
+names=each
+visibility=public
+
+--- each {|prime| ... } -> object
+--- each -> self
+
+素数を与えられたブロックに渡して評価します。
+

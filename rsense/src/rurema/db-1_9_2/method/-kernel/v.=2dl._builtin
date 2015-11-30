@@ -1,0 +1,13 @@
+kind=defined
+names=-l
+visibility=public
+
+--- $-l -> bool
+
+コマンドラインオプション -l を指定したとき true に設定されます。
+この変数には代入できません。
+
+この変数はグローバルスコープです。
+
+@see [[d:spec/rubycmd]]
+

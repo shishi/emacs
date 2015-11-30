@@ -1,0 +1,7 @@
+kind=defined
+names=VT_BOOL
+visibility=public
+
+--- VT_BOOL -> Integer
+真偽値を示します（11）。
+

@@ -1,0 +1,17 @@
+kind=defined
+names=fdiv
+visibility=public
+
+--- fdiv(other) -> Complex
+
+自身の実部と虚部をそれぞれ実数として other で割った商を返します。
+
+@param other 自身を割る数
+
+例:
+
+  Complex(11, 22).fdiv(3) # => (3.6666666666666665+7.333333333333333i)
+  Complex(11, 22).quo(3)  # => ((11/3)+(22/3)*i)
+
+@see [[m:Complex#quo]]
+

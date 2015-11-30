@@ -1,0 +1,12 @@
+kind=defined
+names=disconnecting
+visibility=protected 
+
+--- disconnecting(clientPort) -> ()
+
+[[m:GServer#audit]] が真ならば、クライアントとの接続終了時に呼ばれます。
+
+サブクラスでオーバーライドします。
+
+@param clientPort 接続していたクライアントのポートです。
+

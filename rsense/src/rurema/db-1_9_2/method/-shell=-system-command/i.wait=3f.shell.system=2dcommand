@@ -1,0 +1,6 @@
+kind=defined
+names=wait?
+visibility=public
+
+--- wait? -> bool
+

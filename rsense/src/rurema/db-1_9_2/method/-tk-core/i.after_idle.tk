@@ -1,0 +1,6 @@
+kind=defined
+names=after_idle
+visibility=public
+
+--- after_idle(cmd = Proc.new)
+

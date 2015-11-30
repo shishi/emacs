@@ -1,0 +1,27 @@
+kind=defined
+names=+,merge
+visibility=public
+
+--- merge(rel)     -> URI::Generic
+--- +(rel)         -> URI::Generic
+
+自身と与えられたパス rel を連結した新しい URI オブジェクトを生成して返します。
+
+[[RFC:3986]] の Section 5.2 の仕様に従います。
+rel が文字列の場合は URI.parse(rel) によって、URI に変換してから連結します。
+
+
+@param rel 連結したいパスを文字列か URI オブジェクトで与えます。
+
+例:
+  require 'uri'
+  p URI.parse('http://www.ruby-lang.org/') + '/en/raa.html'
+  #=> #<URI::HTTP:0x201001c0 URL:http://www.ruby-lang.org/en/raa.html>
+  URI('http://a/b/c/d;p?q').merge('?y')	           #=> #<URI::HTTP:0xb7ca2e2c URL:http://a/b/c/d;p?y>
+  URI('http://a/b/c/d;p?q').merge('/./g')          #=> #<URI::HTTP:0xb7ca2738 URL:http://a/g>
+  URI('http://a/b/c/d;p?q').merge('/../g')         #=> #<URI::HTTP:0xb7ca2008 URL:http://a/g>
+  URI('http://a/b/c/d;p?q').merge('../../../g')    #=> #<URI::HTTP:0xb7ca1888 URL:http://a/g>
+  URI('http://a/b/c/d;p?q').merge('../../../../g') #=> #<URI::HTTP:0xb7ca10a4 URL:http://a/g>
+
+
+

@@ -1,0 +1,18 @@
+kind=added
+names=httpd
+visibility=private 
+
+--- httpd -> ()
+
+WEBrick HTTP server を起動します。
+
+  ruby -run -e httpd -- [OPTION] DocumentRoot
+
+  --bind-address=ADDR         バインドアドレスを指定します
+  --port=NUM                  ポート番号を指定します
+  --max-clients=MAX           同時接続数の最大値
+  --temp-dir=DIR              一時ディレクトリを指定します
+  --do-not-reverse-lookup     逆引きを無効にします
+  --request-timeout=SECOND    リクエストがタイムアウトする秒数を指定します
+  --http-version=VERSION      HTTP version
+  -v                          詳細表示

@@ -1,0 +1,12 @@
+kind=defined
+names=mask
+visibility=public
+
+--- mask(prefixlen)  -> IPAddr
+
+マスクされた新しい IPAddr オブジェクトを返します。
+引数にはプリフィックス長とマスクの両方を受け付けます
+(e.g. 8, 64, "255.255.255.0")。
+
+@param prefixlen プリフィックス長またはマスクを表す数値か文字列。
+

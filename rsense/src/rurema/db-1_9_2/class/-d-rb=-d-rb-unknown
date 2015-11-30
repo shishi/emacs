@@ -1,0 +1,18 @@
+superclass=Object
+type=class
+library=drb
+extended=
+included=
+
+Class wrapping a marshalled object whose type is unknown locally.
+
+If an object is returned by a method invoked over drb, but the class
+of the object is unknown in the client namespace, or the object is a
+constant unknown in the client namespace, then the still-marshalled
+object is returned wrapped in a DRbUnknown instance.
+
+If this object is passed as an argument to a method invoked over drb,
+then the wrapped object is passed instead.
+
+The class or constant name of the object can be read from the name
+attribute. The marshalled object is held in the buf attribute.

@@ -1,0 +1,6 @@
+kind=defined
+names=set_string_element
+visibility=public
+
+--- set_string_element(idxs, val)
+

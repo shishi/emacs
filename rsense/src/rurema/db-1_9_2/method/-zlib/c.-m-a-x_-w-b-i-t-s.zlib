@@ -1,0 +1,9 @@
+kind=defined
+names=MAX_WBITS
+visibility=public
+
+--- MAX_WBITS
+
+[[m:Zlib::Deflate.new]] や [[m:Zlib::Inflate.new]] での
+windowBits のデフォルト値です。
+

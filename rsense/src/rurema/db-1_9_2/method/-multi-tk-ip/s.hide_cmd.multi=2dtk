@@ -1,0 +1,6 @@
+kind=defined
+names=hide_cmd
+visibility=public
+
+--- hide_cmd(slave, cmd, aliasname = nil)
+

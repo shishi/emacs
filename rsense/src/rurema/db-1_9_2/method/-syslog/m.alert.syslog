@@ -1,0 +1,32 @@
+kind=defined
+names=alert,crit,debug,emerg,err,info,notice,warning
+visibility=public
+
+--- emerg(message, *arg) -> self
+--- alert(message, *arg) -> self
+--- crit(message, *arg) -> self
+--- err(message, *arg) -> self
+--- warning(message, *arg) -> self
+--- notice(message, *arg) -> self
+--- info(message, *arg) -> self
+--- debug(message, *arg) -> self
+
+Syslog#log()のショートカットメソッド。
+システムによっては定義されていないものもあります。
+
+例えば、Syslog.emerg(message, *arg) は、Syslog.log(Syslog::LOG_EMERG, message, *arg)
+と同じです。
+
+@param message フォーマット文字列です。[[m:Kernel.#sprintf]] と同じ形式の引数を指定します。
+
+@param arg フォーマットされる引数です。
+
+@raise ArgumentError 引数が1つ以上でない場合に発生します。
+
+@raise RuntimeError syslog がopen されていない場合発生します。
+
+例:
+  Syslog.open("syslogtest") {|syslog|
+    syslog.crit("the sky is falling in %d seconds!",5)
+  }
+

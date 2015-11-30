@@ -1,0 +1,11 @@
+kind=defined
+names=ctype,ctype=
+visibility=public
+
+--- ctype     -> Integer
+--- ctype=(type)
+
+自身の返り値の型を表すアクセサです。
+
+@param type 自身の返り値の型を DL に定義された定数で指定します。
+

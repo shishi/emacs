@@ -1,0 +1,13 @@
+kind=defined
+names=[]
+visibility=public
+
+--- [](*ary) -> Set
+
+与えられたオブジェクトを要素とする新しい集合を作ります。
+
+@param ary 新しい集合の要素を指定します。
+
+  p Set[1, 2] #=> #<Set: {1, 2}>
+
+

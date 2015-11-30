@@ -1,0 +1,7 @@
+kind=defined
+names=tcl_pkgconfig_list
+visibility=public
+
+--- tcl_pkgconfig_list(key)
+
+

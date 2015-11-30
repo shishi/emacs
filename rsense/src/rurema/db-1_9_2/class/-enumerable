@@ -1,0 +1,9 @@
+superclass=
+type=module
+library=_builtin
+extended=
+included=
+
+繰り返しを行なうクラスのための Mix-in。このモジュールの
+メソッドは全て each を用いて定義されているので、インクルード
+するクラスには each が定義されていなければなりません。

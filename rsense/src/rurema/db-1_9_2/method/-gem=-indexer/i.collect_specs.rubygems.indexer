@@ -1,0 +1,8 @@
+kind=defined
+names=collect_specs
+visibility=public 
+
+--- collect_specs -> Gem::SourceIndex
+
+Gem のキャッシュディレクトリ内の *.gem ファイルから [[c:Gem::Specification]] を集めます。
+

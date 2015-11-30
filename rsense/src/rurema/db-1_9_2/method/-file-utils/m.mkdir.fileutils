@@ -1,0 +1,20 @@
+kind=defined
+names=mkdir
+visibility=public
+
+--- mkdir(dir, options = {}) -> ()
+
+ディレクトリ dir を作成します。
+
+@param dir 作成するディレクトリ。
+
+@param options :mode, :noop, :verbose が指定できます。
+               [[ref:c:FileUtils#options]]
+
+
+例:
+
+  FileUtils.mkdir('test')
+  FileUtils.mkdir(%w( tmp data ))
+  FileUtils.mkdir('notexist', {:noop => true})  # does not create really
+

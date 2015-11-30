@@ -1,0 +1,8 @@
+kind=defined
+names=badOptionString
+visibility=public
+
+--- badOptionString(type, value, list)
+
+
+

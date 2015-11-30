@@ -1,0 +1,10 @@
+kind=defined
+names=singular?
+visibility=public
+
+--- singular? -> bool
+
+特異(singular)なら真(true)を返します。
+
+行列が特異(singular)であるとは、正則でないことです。
+

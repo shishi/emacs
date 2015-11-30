@@ -1,0 +1,8 @@
+kind=defined
+names=CP_SYMBOL
+visibility=public
+
+--- CP_SYMBOL -> Fixnum
+
+文字コードの変換にシンボルを利用することを示します（42）。
+

@@ -1,0 +1,23 @@
+kind=defined
+names=skip
+visibility=public
+
+--- skip -> self
+
+処理対象のファイルをクローズします。
+次回の読み込みは次の引数が処理対象になります。
+self を返します。
+
+  # カレントディレクトリから適当にファイルを選ぶ
+  ARGV.replace(
+    Dir.glob("*").reject{|name| FileTest.file?(name) == false}
+  )
+  while line = ARGF.gets
+    p [ARGF.filename, ARGV, ARGF.skip]
+  end
+  #例
+  #=> ["sample.yaml", ["test.rb", "test.rb~", "third.txt", "ugo.yaml"], ARGF]
+  #=> ["test.rb", ["test.rb~", "third.txt", "ugo.yaml"], ARGF]
+  #...
+
+

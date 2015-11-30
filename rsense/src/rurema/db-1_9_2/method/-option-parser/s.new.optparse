@@ -1,0 +1,27 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(banner = nil, width = 32, indent = ' ' * 4)              -> OptionParser
+--- new(banner = nil, width = 32, indent = ' ' * 4) {|opt| ...}  -> OptionParser
+
+OptionParser オブジェクトを生成して返します。
+
+ブロックが与えられた場合、生成した OptionParser オブジェクトを引数としてブロックを評
+価します。つまり、以下のような書き方が可能です。
+
+  require 'optparse'
+  OptionParser.new do |opt|
+
+    opt.on('-a') {|v| p v }
+    opt.on('-b') {|v| p v }
+
+    opt.parse!(ARGV)
+  end
+
+@param banner ヘルプ(サマリ)の最初の部分に表示される、アプリケーションの説明などを文字列で与えます。
+
+@param width サマリの幅を整数で与えます。
+
+@param indent サマリのインデントを文字列で与えます。
+

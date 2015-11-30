@@ -1,0 +1,11 @@
+kind=defined
+names=stop_service
+visibility=public
+
+--- stop_service
+
+Stop the local dRuby server.
+
+This operates on the primary server. If there is no primary server
+currently running, it is a noop.
+

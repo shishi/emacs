@@ -1,0 +1,13 @@
+kind=defined
+names=*
+visibility=public
+
+--- $* -> [String]
+
+Rubyスクリプトに与えられた引数を表す配列です。
+組み込み定数 [[m:Kernel::ARGV]] の別名です。
+
+Ruby 自身に対する引数は取り除かれています。
+
+この変数はグローバルスコープです。
+

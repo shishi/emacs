@@ -1,0 +1,7 @@
+kind=defined
+names=F_GETFD
+visibility=public
+
+--- F_GETFD -> Integer
+ファイルディスクリプタから close-on-exec フラグの値を読み出します。
+

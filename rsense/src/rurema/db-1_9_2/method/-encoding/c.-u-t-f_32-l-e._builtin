@@ -1,0 +1,9 @@
+kind=defined
+names=UTF_32LE
+visibility=public
+
+--- UTF_32LE
+UTF-32LE (リトルエンディアン) です。
+
+BOM を含みません。
+

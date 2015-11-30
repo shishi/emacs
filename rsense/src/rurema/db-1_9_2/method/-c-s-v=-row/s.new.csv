@@ -1,0 +1,19 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(headers, fields, header_row = false) -> CSV::Row
+
+自身を初期化します。
+
+一方の配列が他方の配列よりも短い場合、不足しているところは nil になります。
+
+@param headers ヘッダの配列を指定します。
+
+@param fields フィールドの配列を指定します。
+
+@param header_row ヘッダ行である場合は真を指定します。そうでない場合は偽を指定します。
+                  デフォルトは偽です。
+
+@see [[m:CSV::Row#header_row?]], [[m:CSV::Row#field_row?]]
+

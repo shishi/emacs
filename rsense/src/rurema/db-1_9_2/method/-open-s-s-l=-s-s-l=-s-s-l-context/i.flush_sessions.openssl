@@ -1,0 +1,17 @@
+kind=defined
+names=flush_sessions
+visibility=public
+
+--- flush_sessions(time=nil) -> self
+自身が保持しているセッションキャッシュを破棄します。
+
+time に nil を渡すと現在時刻で期限切れになっている
+キャッシュを破棄します。
+
+time に [[c:Time]] オブジェクトを渡すと、その
+時刻で時間切れになるキャッシュを破棄します。
+
+@param time キャッシュ破棄の基準時刻
+@see [[c:OpenSSL::SSL::SSLContext#session_cache_mode=]]
+
+

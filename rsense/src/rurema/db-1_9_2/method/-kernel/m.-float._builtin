@@ -1,0 +1,41 @@
+kind=defined
+names=Float
+visibility=public
+
+--- Float(arg) -> Float
+
+引数を浮動小数点数([[c:Float]])に変換した結果を返します。
+
+引数が数値の場合は素直に変換し、文字列の場合
+は整数や浮動小数点数と見なせるもののみ変換します。
+
+メソッド Float は文字列に対し [[m:String#to_f]] よりも厳密な変換を行います。
+
+@param arg 変換対象のオブジェクトです。
+@raise ArgumentError 整数や浮動小数点数と見なせない文字列を引数に指定した場合に発生します。
+@raise TypeError nil またはメソッド to_f を持たないオブジェクトを引数に指定したか、
+                 to_f が浮動小数点数を返さなかった場合に発生します。
+
+    p Float(4)            #=> 4.0
+    p Float(4_000)        #=> 4000.0
+    p Float(9.88)         #=> 9.88
+    
+    p Float(Time.gm(1986)) #=> 504921600.0
+    p Float(Object.new)   # cannot convert Object into Float (TypeError)
+    p Float(nil)          # cannot convert nil into Float (TypeError)
+    
+    p Float("10")         #=> 10.0
+    p Float("10e2")       #=> 1000.0
+    p Float("1e-2")       #=> 0.01
+    p Float(".1")         #=> 0.1
+
+    p Float("nan")        # invalid value (ArgumentError)
+    p Float("INF")        # invalid value (ArgumentError)
+    p Float("-Inf")       # invalid value (ArgumentError)
+    p Float(("10" * 1000)) #=> Infinity
+    p Float("0xa.a")      # invalid value (ArgumentError)
+    p Float(" \n10\s \t") #=> 10.0 # 空白類は無視される
+    p Float("")           # invalid value (ArgumentError)
+
+@see [[m:String#to_f]],[[c:Float]]
+

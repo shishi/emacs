@@ -1,0 +1,17 @@
+#attlistdecl	REXML::SAX2Listener#attlistdecl
+#cdata	REXML::SAX2Listener#cdata
+#characters	REXML::SAX2Listener#characters
+#comment	REXML::SAX2Listener#comment
+#doctype	REXML::SAX2Listener#doctype
+#elementdecl	REXML::SAX2Listener#elementdecl
+#end_document	REXML::SAX2Listener#end_document
+#end_element	REXML::SAX2Listener#end_element
+#end_prefix_mapping	REXML::SAX2Listener#end_prefix_mapping
+#entitydecl	REXML::SAX2Listener#entitydecl
+#notationdecl	REXML::SAX2Listener#notationdecl
+#processing_instruction	REXML::SAX2Listener#processing_instruction
+#progress	REXML::SAX2Listener#progress
+#start_document	REXML::SAX2Listener#start_document
+#start_element	REXML::SAX2Listener#start_element
+#start_prefix_mapping	REXML::SAX2Listener#start_prefix_mapping
+#xmldecl	REXML::SAX2Listener#xmldecl

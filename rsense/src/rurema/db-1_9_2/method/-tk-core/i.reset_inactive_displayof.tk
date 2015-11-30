@@ -1,0 +1,7 @@
+kind=defined
+names=reset_inactive_displayof
+visibility=public
+
+--- reset_inactive_displayof(win)
+
+

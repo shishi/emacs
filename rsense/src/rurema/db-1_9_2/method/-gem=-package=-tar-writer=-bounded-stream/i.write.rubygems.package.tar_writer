@@ -1,0 +1,15 @@
+kind=defined
+names=write
+visibility=public 
+
+--- write(data) -> Integer
+
+与えられたデータを自身に関連付けられた IO に書き込みます。
+
+@param data 書き込むデータを指定します。
+
+@return 書き込んだデータのサイズを返します。
+
+@raise Gem::Package::TarWriter::FileOverflow [[m:Gem::Package::TarWriter::BoundedStream#limit]] を越えて
+       書き込もうとした場合に発生します。
+

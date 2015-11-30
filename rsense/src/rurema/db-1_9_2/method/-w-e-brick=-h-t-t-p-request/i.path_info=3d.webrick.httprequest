@@ -1,0 +1,10 @@
+kind=defined
+names=path_info=
+visibility=public
+
+--- path_info=(value)
+
+リクエスト URI のパスをセットします。
+
+@param value リクエスト URI のパスを指定します。
+

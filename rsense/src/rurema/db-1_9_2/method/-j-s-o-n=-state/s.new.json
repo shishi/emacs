@@ -1,0 +1,34 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(options = {}) -> JSON::State
+
+自身を初期化します。
+
+@param options ハッシュを指定します。
+       指定可能なオプションは以下の通りです。
+
+: :indent
+  インデントに使用する文字列を指定します。デフォルトは空文字列です。
+: :space
+  JSON 形式の文字列のトークン間に挿入する文字列を指定します。デフォルトは空文字列です。
+: :space_before
+  JSON 形式の文字列中で JavaScript のオブジェクトを表す部分にある ':' の
+  前に挿入する文字列をセットします。デフォルトは空文字列です。
+: :object_nl
+  JSON 形式の文字列中に現れる JavaScript のオブジェクトの行末に挿入する文字列を指定します。
+  デフォルトは空文字列です。
+: :array_nl
+  JSON 形式の文字列中に現れる JavaScript の配列の行末に挿入する文字列を指定します。
+  デフォルトは空文字列です。
+: :check_circular
+  真を指定した場合、生成するオブジェクトの循環をチェックします。
+  この動作がデフォルトです。
+: :allow_nan
+  真を指定した場合、[[m:JSON::NaN]], [[m:JSON::Infinity]],
+  [[m:JSON::MinusInfinity]] を生成することを許すようになります。
+  偽を指定した場合、これらの値を生成しようとすると例外が発生します。
+  デフォルトは偽です。
+
+

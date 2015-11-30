@@ -1,0 +1,17 @@
+kind=defined
+names=groups
+visibility=public
+
+--- groups     -> [Integer]
+
+補助グループ ID の配列を返します(実効グループ ID を含むかも知れません)。
+
+返される配列の最大要素数は [[m:Process.#maxgroups]] です。
+
+@raise Errno::EXXX [[m:Process.#maxgroups]] が実際に返される補助グループ ID の
+                   数よりも少ない値を設定していると発生します。
+
+@raise NotImplementedError メソッドが現在のプラットフォームで実装されていない場合に発生します。
+
+@see [[man:getgroups(2)]]
+

@@ -1,0 +1,7 @@
+kind=defined
+names=leap?
+visibility=public
+
+--- leap? -> bool
+閏年なら真を返します。
+

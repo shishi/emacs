@@ -1,0 +1,17 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(session, option = nil) -> CGI::Session::MemoryStore
+
+自身を初期化します。
+
+[[c:CGI::Session]] クラス内部で使用します。
+ユーザが明示的に呼び出す必要はありません。
+
+@param session [[c:CGI::Session]] のインスタンスを指定します。
+
+@param option ハッシュを指定します。
+
+@raise CGI::Session::NoSession セッションが初期化されていない場合に発生します。
+

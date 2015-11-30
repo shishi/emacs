@@ -1,0 +1,13 @@
+kind=defined
+names=absolute,absolute?
+visibility=public
+
+--- absolute     -> bool
+--- absolute?    -> bool
+
+自身に scheme が設定されているなら true を返します。そうでない場合は false を返します。
+
+例:
+  p URI.parse('http://example.com/').absolute?    #=> true
+  p URI.parse('./').absolute?                     #=> false
+

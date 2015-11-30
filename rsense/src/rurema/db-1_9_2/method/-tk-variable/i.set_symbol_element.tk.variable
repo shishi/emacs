@@ -1,0 +1,6 @@
+kind=defined
+names=set_symbol_element
+visibility=public
+
+--- set_symbol_element(idxs, val)
+

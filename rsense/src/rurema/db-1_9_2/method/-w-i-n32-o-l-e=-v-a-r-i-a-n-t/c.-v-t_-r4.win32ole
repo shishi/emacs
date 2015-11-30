@@ -1,0 +1,7 @@
+kind=defined
+names=VT_R4
+visibility=public
+
+--- VT_R4 -> Integer
+単精度浮動小数点数を示します（4）。
+

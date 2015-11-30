@@ -1,0 +1,9 @@
+kind=added
+names=__eval,_eval_with_enc,_eval_without_enc
+visibility=public
+
+--- __eval(cmd)
+--- _eval_with_enc(cmd)
+--- _eval_without_enc(cmd)
+
+

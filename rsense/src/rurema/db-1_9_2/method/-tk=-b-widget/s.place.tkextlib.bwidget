@@ -1,0 +1,8 @@
+kind=defined
+names=place
+visibility=public
+
+--- place(path, w, h, *args)
+
+
+

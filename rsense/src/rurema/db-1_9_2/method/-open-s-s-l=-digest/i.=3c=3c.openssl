@@ -1,0 +1,10 @@
+kind=defined
+names=<<,update
+visibility=public
+
+--- update(data) -> self
+--- <<(data) -> self
+data でダイジェストオブジェクトの内部状態を更新します。
+
+@param data 入力文字列
+

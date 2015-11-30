@@ -1,0 +1,10 @@
+kind=defined
+names=move
+visibility=public
+
+--- move(y, x) -> nil
+
+ウィンドウを座標 (x, y) に移動します。
+
+親ウィンドウからはみだす位置を指定すると無視されます。
+

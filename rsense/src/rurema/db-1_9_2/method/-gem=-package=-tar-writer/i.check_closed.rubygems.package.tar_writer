@@ -1,0 +1,10 @@
+kind=defined
+names=check_closed
+visibility=public 
+
+--- check_closed
+自身に関連付けられた IO が既に close されているかどうかチェックします。
+
+@raise IOError 自身に関連付けられた IO が既に close されている場合に発
+               生します。
+

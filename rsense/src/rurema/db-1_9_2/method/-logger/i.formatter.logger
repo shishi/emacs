@@ -1,0 +1,11 @@
+kind=defined
+names=formatter
+visibility=public
+
+--- formatter -> String
+
+ログを出力する際に使用するフォーマッターを取得します。
+
+このメソッドの返り値が持つ call メソッドは 4 つの引数 (severity, time, program name, message) を受けとります。
+
+

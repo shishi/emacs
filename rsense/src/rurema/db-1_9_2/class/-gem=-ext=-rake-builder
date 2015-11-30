@@ -1,0 +1,7 @@
+superclass=Gem=Ext=Builder
+type=class
+library=rubygems.ext.rake_builder
+extended=
+included=
+
+Rake を使用して拡張ライブラリをビルドするためのクラスです。

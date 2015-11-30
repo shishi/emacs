@@ -1,0 +1,7 @@
+kind=defined
+names=set_window_element_type
+visibility=public
+
+--- set_window_element_type(idxs, win)
+
+

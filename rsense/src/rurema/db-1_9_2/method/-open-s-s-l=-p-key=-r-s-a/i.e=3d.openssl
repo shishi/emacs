@@ -1,0 +1,12 @@
+kind=defined
+names=e=
+visibility=public
+
+--- e=(new_e)
+鍵の public exponent を変更します。
+
+通常このメソッドで値を変更することはありません。
+よく考えて必要な場合のみ利用してください。
+
+@param new_e 設定する public exponent の整数値
+

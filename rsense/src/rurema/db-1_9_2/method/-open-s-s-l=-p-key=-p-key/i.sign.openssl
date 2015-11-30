@@ -1,0 +1,16 @@
+kind=defined
+names=sign
+visibility=public
+
+--- sign(digest, data) -> String
+秘密鍵で data に署名し、署名の文字列を返します。
+
+digest は利用するハッシュ関数の名前を "sha256" や "md5" 
+といった文字列で指定します。
+
+DSA で署名をする場合はハッシュ関数には "dss1" を指定してください。
+
+@param digest 利用するハッシュ関数の名前
+@param data 署名する文字列
+@raise OpenSSL::PKey::PKeyError 署名時にエラーが起きた場合に発生します
+

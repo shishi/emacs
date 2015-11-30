@@ -1,0 +1,2 @@
+#open	OpenURI::OpenRead#open
+#read	OpenURI::OpenRead#read

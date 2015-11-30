@@ -1,0 +1,15 @@
+kind=defined
+names=generate_key!
+visibility=public
+
+--- generate_key! -> self
+鍵パラメータ p と g から鍵対を生成しなおし、
+自身にセットします。
+
+以前の鍵対の値は廃棄されます。
+
+生成した値は [[m:OpenSSL::PKey::DH#params_ok?]] で
+安全かどうかチェックしてから利用してください。
+
+@raise OpenSSL::PKey::DHError 鍵の生成に失敗した場合に発生します
+

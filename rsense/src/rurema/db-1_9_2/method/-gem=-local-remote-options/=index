@@ -1,0 +1,9 @@
+#accept_uri_http	Gem::LocalRemoteOptions#accept_uri_http
+#add_bulk_threshold_option	Gem::LocalRemoteOptions#add_bulk_threshold_option
+#add_local_remote_options	Gem::LocalRemoteOptions#add_local_remote_options
+#add_proxy_option	Gem::LocalRemoteOptions#add_proxy_option
+#add_source_option	Gem::LocalRemoteOptions#add_source_option
+#add_update_sources_option	Gem::LocalRemoteOptions#add_update_sources_option
+#both?	Gem::LocalRemoteOptions#both?
+#local?	Gem::LocalRemoteOptions#local?
+#remote?	Gem::LocalRemoteOptions#remote?

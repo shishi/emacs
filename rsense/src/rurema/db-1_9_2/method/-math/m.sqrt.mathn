@@ -1,0 +1,11 @@
+kind=redefined
+names=sqrt
+visibility=public
+
+--- sqrt(a) -> Numeric
+
+a の正の平方根を返します。
+a が Complex の時は、Complex を返します。
+a が負の時は、a を正にして、その平方根を Complex の虚数部に入れて返します。
+それ以外は、Math.rsqrt の結果を返します。
+

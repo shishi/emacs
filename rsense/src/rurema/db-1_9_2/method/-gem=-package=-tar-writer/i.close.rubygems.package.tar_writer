@@ -1,0 +1,8 @@
+kind=defined
+names=close
+visibility=public 
+
+--- close -> true
+
+自身を close します。
+

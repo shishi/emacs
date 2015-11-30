@@ -1,0 +1,57 @@
+superclass=Object
+type=class
+library=monitor
+extended=
+included=MonitorMixin
+
+スレッドの同期機構としてのモニター機能を提供するクラスです。
+また同じスレッドから何度も lock できる Mutex としての機能も提供します。
+
+[[c:MonitorMixin]] を include し、いくつかの別名を定義したクラスです。
+
+=== 例
+
+  require 'monitor'
+  
+  buf = []
+  mon = Monitor.new
+  empty_cond = mon.new_cond
+  
+  # consumer
+  Thread.start do
+    loop do
+      mon.synchronize do
+        empty_cond.wait_while { buf.empty? }
+        print buf.shift
+      end
+    end
+  end
+  
+  # producer
+  while line = ARGF.gets
+    mon.synchronize do
+      buf.push(line)
+      empty_cond.signal
+    end
+  end
+
+2回ロックしてもデッドロックにならない例です。
+
+   require 'monitor'
+   mon = Monitor.new
+   mon.synchronize {
+     mon.synchronize{
+     
+     }
+   }
+
+[[c:Mutex]] ではデッドロックになります。
+
+   require 'thread'
+   mx = Mutex.new
+   mx.synchronize {
+     mx.synchronize{
+
+     }
+   }
+   # => deadlock; recursive locking (ThreadError)

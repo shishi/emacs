@@ -1,0 +1,6 @@
+kind=defined
+names=process_controller
+visibility=public
+
+--- process_controller -> Shell::ProcessController
+

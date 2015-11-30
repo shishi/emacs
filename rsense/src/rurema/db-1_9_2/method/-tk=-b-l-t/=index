@@ -1,0 +1,15 @@
+.active_legend	Tk::BLT.active_legend
+.beep	Tk::BLT.beep
+.bgexec	Tk::BLT.bgexec
+.bltdebug	Tk::BLT.bltdebug
+.closest_point	Tk::BLT.closest_point
+.crc32_data	Tk::BLT.crc32_data
+.crc32_file	Tk::BLT.crc32_file
+.crosshairs	Tk::BLT.crosshairs
+.detach_bgexec	Tk::BLT.detach_bgexec
+.package_name	Tk::BLT.package_name
+.package_version	Tk::BLT.package_version
+.print_key	Tk::BLT.print_key
+.zoom_stack	Tk::BLT.zoom_stack
+#find_command	Tk::BLT#find_command
+#find_name	Tk::BLT#find_name

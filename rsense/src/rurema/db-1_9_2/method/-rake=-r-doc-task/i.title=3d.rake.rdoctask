@@ -1,0 +1,10 @@
+kind=defined
+names=title=
+visibility=public 
+
+--- title=(title)
+
+RDoc のタイトルをセットします。
+
+@param title タイトルを指定します。
+

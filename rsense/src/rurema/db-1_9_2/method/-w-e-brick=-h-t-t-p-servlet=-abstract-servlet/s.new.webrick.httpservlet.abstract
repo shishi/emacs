@@ -1,0 +1,13 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(server, *options)    -> WEBrick::HTTPServlet::AbstractServlet
+
+サーブレットを生成して返します。
+[[c:WEBrick::HTTPServer]] オブジェクトは server に自身を指定してサーブレットを生成します。
+
+@param server サーブレットを生成する WEBrick::HTTPServer オブジェクトを指定します。
+
+@param options [[m:WEBrick::HTTPServer#mount]] 第3引数以降に指定された値がそのまま与えられます。
+

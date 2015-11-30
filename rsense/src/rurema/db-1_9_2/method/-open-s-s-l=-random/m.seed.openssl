@@ -1,0 +1,14 @@
+kind=defined
+names=seed
+visibility=public
+
+--- seed(str) -> str
+乱数生成器にエントロピーを
+「エントロピー予測値 = str のバイト数」として
+追加します。
+
+OpenSSL::Random.random_add(str, str.size) と同じです。
+
+@param str 予測不可能な内容の文字列
+@see [[m:OpenSSL::Random.#random_add]]
+

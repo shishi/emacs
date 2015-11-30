@@ -1,0 +1,15 @@
+kind=defined
+names=denominator
+visibility=public
+
+--- denominator -> Integer
+
+自身を [[c:Rational]] に変換した時の分母を返します。
+
+@return 分母を返します。
+
+  2.0.denominator         # => 1
+  0.5.denominator         # => 2
+
+@see [[m:Float#numerator]]
+

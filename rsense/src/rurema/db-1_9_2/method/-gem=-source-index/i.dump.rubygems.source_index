@@ -1,0 +1,8 @@
+kind=defined
+names=dump
+visibility=public
+
+--- dump -> ()
+
+自身を [[m:Marshal.#dump]] します。
+

@@ -1,0 +1,14 @@
+name=rb_eval_string_protect
+private=false
+macro=false
+type=VALUE
+filename=eval.c
+params=(const char *str, int *state)
+
+
+str を Ruby プログラムとしてコンパイル・評価し、
+その値を返します。
+
+コンパイル中または評価中に例外を含む大域脱出が発生した場合は、
+state が NULL でなければそれに値が代入され Qnil を返します。
+

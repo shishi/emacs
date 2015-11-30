@@ -1,0 +1,7 @@
+kind=defined
+names=<<,add
+visibility=public
+
+--- add(attribute)
+--- <<(attribute)
+

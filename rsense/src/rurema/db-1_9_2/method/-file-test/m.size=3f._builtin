@@ -1,0 +1,15 @@
+kind=defined
+names=size?
+visibility=public
+
+--- size?(file)    -> Integer | nil
+
+ファイルのサイズを返します。ファイルが存在しない時や
+ファイルのサイズが0の時には nil を返します。
+
+@param file ファイル名を表す文字列か IO オブジェクトを指定します。
+
+@raise IOError 指定された IO オブジェクト file が既に close されていた場合に発生します。
+
+@see [[m:FileTest.#size]], [[m:FileTest.#zero?]] 
+

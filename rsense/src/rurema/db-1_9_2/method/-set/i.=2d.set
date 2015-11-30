@@ -1,0 +1,17 @@
+kind=defined
+names=-,difference
+visibility=public
+
+--- difference(enum) -> Set
+--- -(enum) -> Set
+
+差集合、すなわち、元の集合の要素のうち引数 enum に含まれる要素を取り除いた
+新しい集合を作ります。
+
+@param enum each メソッドが定義されたオブジェクトを指定します。
+@raise NoMethodError 引数 enum に each メソッドが定義されていない場合に
+       発生します。
+
+  p Set[10, 20, 30] - Set[10, 20, 40]
+  #=> #<Set: {30}>
+

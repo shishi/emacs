@@ -1,0 +1,8 @@
+kind=defined
+names=connections
+visibility=public
+
+--- connections() -> Fixnum
+
+現在接続しているクライアントの数を返します。
+

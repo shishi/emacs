@@ -1,0 +1,8 @@
+kind=defined
+names=summary
+visibility=public
+
+--- summary -> String
+
+この Gem パッケージの短い説明を返します。
+

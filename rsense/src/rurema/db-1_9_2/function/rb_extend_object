@@ -1,0 +1,8 @@
+name=rb_extend_object
+private=false
+macro=false
+type=void
+filename=eval.c
+params=(VALUE obj, VALUE module)
+
+

@@ -1,0 +1,13 @@
+kind=defined
+names=matching_files
+visibility=public 
+
+--- matching_files -> [String]
+
+与えられた spec に path が含まれている場合、その path のリストを返します。
+
+@param spec [[c:Gem::Specification]] のインスタンスを指定します。
+
+@param path 探索対象のパスを指定します。
+
+

@@ -1,0 +1,21 @@
+kind=defined
+names=set_service_hook
+visibility=public
+
+--- set_service_hook ( &handler )
+A service-hook is called for each service request (RPC).
+You can use a service-hook for example to wrap existing methods and catch exceptions of them or
+convert values to values recognized by XMLRPC. You can disable it by passing nil as parameter
+handler .
+
+The service-hook is called with a Proc object and with the parameters for this Proc.
+An example:
+
+   server.set_service_hook {|obj, *args|
+     begin
+       ret = obj.call(*args)  # call the original service-method
+       # could convert the return value
+     resuce
+       # rescue exceptions
+     end
+   }

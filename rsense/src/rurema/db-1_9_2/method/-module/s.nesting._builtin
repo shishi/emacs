@@ -1,0 +1,17 @@
+kind=defined
+names=nesting
+visibility=public
+
+--- nesting -> [Class, Module]
+
+このメソッドを呼び出した時点でのクラス/モジュールのネスト情
+報を配列に入れて返します。
+
+  module Foo
+    module Bar
+      module Baz
+        p Module.nesting   # => [Foo::Bar::Baz, Foo::Bar, Foo]
+      end
+    end
+  end
+

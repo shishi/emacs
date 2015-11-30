@@ -1,0 +1,12 @@
+superclass=Object
+type=class
+library=minitest.unit
+extended=
+included=MiniTest=Assertions
+
+テストの基本単位(あるいは「テスト本体」)を表すクラスです。
+
+テストを行うメソッド (テストメソッド) は TestCase のサブクラスの
+インスタンスメソッドとして定義されます。
+テストメソッドの名前は "test" で始まっていなければなりません。
+逆に、"test" で始まっているメソッドは全てテストメソッドと見なされます。

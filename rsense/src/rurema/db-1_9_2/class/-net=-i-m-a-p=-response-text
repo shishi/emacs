@@ -1,0 +1,11 @@
+superclass=Struct
+type=class
+library=net.imap
+extended=
+included=
+
+Net::IMAP::ResponseText represents texts of responses.
+The text may be prefixed by the response code.
+
+  resp_text       ::= ["[" resp_text_code "]" SPACE] (text_mime2 / text)
+                      ;; text SHOULD NOT begin with "[" or "="

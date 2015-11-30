@@ -1,0 +1,183 @@
+kind=defined
+names=on
+visibility=public
+
+--- on(short, desc = "") {|v| ... }        -> self
+--- on(long, desc = "") {|v| ... }         -> self
+--- on(short, long, desc = "") {|v| ... }  -> self
+
+オプションを取り扱うためのブロックを自身に登録します。
+ブロックはコマンドラインのパース時に、オプションが指定されていれば呼ばれます。
+
+ショートオプションとロングオプションを同時に登録することもできます。
+  opts.on("-r", "--require LIBRARY"){|lib| ...}
+これは以下と同値です。
+  opts.on("-r LIBRARY"){|lib| ...}
+  opts.on("--require LIBRARY"){|lib| ...}
+
+複数の異なるオプションに同じブロックを一度に登録することもできます。
+
+  opt.on('-v', '-vv'){|boolean| ...}
+  opt.on('--require X', '--need', '--dependon'){|x| ... }
+
+@param short ショートオプションを表す文字列を指定します。
+             そのオプションが引数をとらない場合は、
+//emlist{
+  on("-x"){|boolean| ...}
+//}
+             となります。コマンドラインにオプションが存在した場合 true を引数と
+             してブロックを評価します。
+             ショートオプションが引数をとる場合は、
+//emlist{
+  on("-x MANDATORY"){|val| ...}
+//}
+             となります。"MANDATORY" の部分は任意の文字列で構いません。
+             オプションの引数が必須でない場合は [ ] をつけて、
+//emlist{
+  on("-x [OPTIONAL]"){|val| ...}
+//}
+             となります。
+
+@param long ロングオプションを表す文字列を指定します。ショートオプションの時と同様に、
+//emlist{
+  on("--long"){|boolean| ...}
+  on("--long MANDATORY"){|val| ...}
+  on("--long [OPTIONAL]"){|val| ...}
+//}
+            と指定できます。
+
+@param desc オプションの説明を文字列で与えます。サマリに表示されます。
+
+--- on(short, pat = /.*/, desc = "") {|v| ...}        -> self
+--- on(long, pat = /.*/, desc = "") {|v| ...}         -> self
+--- on(short, long, pat = /.*/, desc = "") {|v| ...}  -> self
+
+オプションを取り扱うためのブロックを自身に登録します。
+ブロックはコマンドラインのパース時に、オプションが指定されていれば呼ばれます。
+
+pat にはオプションの引数に許すパターンを表す正規表現で与えます。
+コマンドに与えられた引数がパターンにマッチしない場合、
+例外 OptionParser::InvalidArgument が parse 実行時に投げられます。
+
+  opts.on("--username VALUE", /[a-zA-Z0-9_]+/){|name| ...}
+  # ruby command --username=ruby_user
+  # ruby command --username=ruby.user #=> Error
+
+@param short ショートオプションを表す文字列を指定します。
+
+@param long ロングオプションを表す文字列を指定します。
+
+@param pat オプションの引数に許すパターンを表す正規表現で指定します。
+
+@param desc オプションの説明を文字列で与えます。サマリに表示されます。
+
+--- on(short, klass = String, desc = "") {|v| ...}        -> self
+--- on(long, klass = String, desc = "") {|v| ...}         -> self
+--- on(short, long, klass = String, desc = "") {|v| ...}  -> self
+
+オプションを取り扱うためのブロックを自身に登録します。
+ブロックはコマンドラインのパース時に、オプションが指定されていれば呼ばれます。
+
+klass にはクラスを与えます。どのようなクラスを受け付けるかは、
+以下の「デフォルトで利用可能な引数クラス」を参照して下さい。
+OptionParser.accept や OptionParser#accept によって、受け付け
+るクラスを増やすことができます。登録されていないクラスが指定された
+場合、例外 [[c:ArgumentError]] を投げます。
+また、登録されたクラスであっても引数が変換できないものである場合、例外
+[[c:OptionParser::InvalidArgument]] を投げます。
+
+オプションの引数は accept で登録したブロックで klass のインスタンス
+に変換されてから、ブロックに渡されます。
+
+  opts.on("-w", "--width N", Integer){|w|
+    p w.class #=> Integer
+  }
+  # ruby command --width=32
+
+  opts.on("-o", "--overwrite VALUE", TrueClass){|boolean| ...}
+  # ruby command --overwrite yes
+
+@param short ショートオプションを表す文字列を指定します。
+
+@param long ロングオプションを表す文字列を指定します。
+
+@param klass オプションの引数のクラスを指定します。
+
+@param desc オプションの説明を文字列で与えます。サマリに表示されます。
+
+@raise ArgumentError 登録されていないクラスが klass に指定された場合に発生します。
+
+==== デフォルトで利用可能な引数クラス
+
+: Object
+ オプションの引数は変換されません。
+
+: String
+ オプションの引数は変換されません。ただし、空文字列を指定すると
+ [[c:OptionParser::InvalidArgument]] が発生します。
+
+: Integer
+ Integer オブジェクトに変換されます。"0b1"、"07"、"99"、"0xff" といった
+ 2進数、8進数、10進数、16進数の整数のフォーマットを指定できます。
+
+: Float
+ Float オブジェクトに変換されます。"1.0" や "0.5e0" のようなフォーマッ
+ トを指定できます。
+
+: Numeric
+ 整数の場合は Integer オブジェクトに、実数の場合は Float オブジェクトに
+ 変換されます。
+
+: OptionParser::DecimalInteger
+ Integer オブジェクトに変換されます。10進数の整数の整数のフォーマットの
+ みを指定できます。
+
+: OptionParser::OctalInteger
+ Integer オブジェクトに変換されます。"0b1"、"07"、"0xff" といった 2進数、
+ 8進数、16進数の整数のフォーマットを指定できます。
+
+: OptionParser::DecimalNumeric
+ 整数の場合は Integer オブジェクトに、実数の場合は Float オブジェクトに
+ 変換されます。10進数のフォーマットを指定できます。
+
+: TrueClass
+ true か false に変換されます。"yes" や "no"、"true" や "false"、"+"
+ や "-" を指定できます。オプションの引数を省略した場合は true になります。
+ また、"no-" をオプションの先頭に付けた場合は値が反転します。
+
+: FalseClass
+ true か false に変換されます。TrueClass との違いはオプションの引数を省
+ 略した場合に false になります。
+
+: Array
+ 文字列の配列に変換されます。"," ごとに 1つの要素になります。
+
+--- on(short, *rest) {|v| ...}        -> self
+--- on(long, *rest) {|v| ...}         -> self
+--- on(short, long, *rest) {|v| ...}  -> self
+
+オプションを取り扱うためのブロックを自身に登録します。
+ブロックはコマンドラインのパース時に、オプションが指定されていれば呼ばれます。
+
+コマンドに与えられた引数が配列やハッシュに含まれない場合、例外
+[[c:OptionParser::InvalidArgument]] が [[m:OptionParser#parse]] 実行時
+に発生します。
+
+@param short ショートオプションを表す文字列を指定します。
+
+@param long ロングオプションを表す文字列を指定します。
+
+@param rest 可能な引数を列挙した配列やハッシュを与えます。文字列を与えた場合は、
+            サマリに表示されるオプションの説明と見なします。
+
+例:
+  opts.on("--protocol VALUE", [:http, :ftp, :https]){|w|
+    p w
+  }
+  # ruby command --protocol=http #=> :http
+
+  opts.on("-c", "--charset VALUE", {"jis" => "iso-2022-jp", "sjis" => "shift_jis"}){|w|
+    p w
+  }
+  # ruby command --charset=jis #=> "iso-2022-jp"
+

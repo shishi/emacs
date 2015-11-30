@@ -1,0 +1,24 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(ole_method,  index) -> WIN32OLE_PARAM
+
+メソッドとパラメータ位置を指定してWIN32OLE_PARAMのインスタンスを作成します。
+
+アプリケーションプログラムでは、WIN32OLE_PARAMオブジェクトをnewメソッド
+で生成するよりも、[[m:WIN32OLE_METHOD#params]]を参照するほうが簡単です。
+
+@param ole_method パラメータを取得する[[c:WIN32OLE_METHOD]]のインスタンス。
+@param index パラメータの位置。最左端を1とします。
+@return メソッドの指定位置のパラメータの情報を持つオブジェクトを返します。
+@raise TypeError ole_methodパラメータが[[c:WIN32OLE_METHOD]]のインスタンスではありません。
+@raise IndexError indexパラメータが1からパラメータの数の範囲にありません。
+@raise RuntimeError 該当メソッドのメタデータが取得できません。
+
+
+   excel = WIN32OLE.new('Excel.Application')
+   method = excel.ole_method('Run')
+   param1 = WIN32OLE_PARAM.new(method, 1)
+   puts "#{param1.ole_type} #{param1.name}"
+

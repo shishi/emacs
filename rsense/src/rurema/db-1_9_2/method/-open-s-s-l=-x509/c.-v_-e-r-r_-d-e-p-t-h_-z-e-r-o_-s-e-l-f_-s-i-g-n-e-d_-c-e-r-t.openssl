@@ -1,0 +1,19 @@
+kind=defined
+names=V_ERR_DEPTH_ZERO_SELF_SIGNED_CERT
+visibility=public
+
+--- V_ERR_DEPTH_ZERO_SELF_SIGNED_CERT -> Integer
+検証している証明書がルート CA (自己署名証明書)であり、
+それが信頼されている証明書でないことを意味します。
+
+[[m:OpenSSL::X509::Store#error]] や
+[[m:OpenSSL::X509::StoreContext#error]] のエラーコードとして
+使われます。
+
+@see [[m:OpenSSL::X509::Store#add_file]],
+     [[m:OpenSSL::X509::Store#add_path]],
+     [[m:OpenSSL::X509::Store#add_cert]],
+     [[m:OpenSSL::X509::Store#set_default_paths]]
+
+
+

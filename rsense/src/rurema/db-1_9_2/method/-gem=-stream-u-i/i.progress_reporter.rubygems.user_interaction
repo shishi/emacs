@@ -1,0 +1,14 @@
+kind=defined
+names=progress_reporter
+visibility=public 
+
+--- progress_reporter(*args) -> SilentProgressReporter | SimpleProgressReporter | VerboseProgressReporter
+
+処理の進捗を報告するためのオブジェクトを返します。
+
+返されるオブジェクトの種類は現在の設定によります。
+
+@param args 返値となるオブジェクトを初期化するための引数です。
+
+@see [[c:Gem::StreamUI::SilentProgressReporter]], [[c:Gem::StreamUI::SimpleProgressReporter]], [[c:Gem::StreamUI::VerboseProgressReporter]]
+

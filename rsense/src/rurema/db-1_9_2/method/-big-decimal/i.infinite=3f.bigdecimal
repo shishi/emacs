@@ -1,0 +1,9 @@
+kind=defined
+names=infinite?
+visibility=public
+
+--- infinite?
+
+a.infinite? は a が+∞のとき 1 、-∞のときは -1、
+それ以外のときは nil を返します。 
+

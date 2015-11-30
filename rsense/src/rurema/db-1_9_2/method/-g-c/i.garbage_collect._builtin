@@ -1,0 +1,12 @@
+kind=defined
+names=garbage_collect
+visibility=public
+
+--- garbage_collect -> nil
+
+ガーベージコレクトを開始します。
+
+[[m:GC.start]] や [[m:ObjectSpace.#garbage_collect]] と同じ働きをします。
+[[m:GC.disable]] により GC が禁止されている場合は何もしません。
+
+nil を返します。

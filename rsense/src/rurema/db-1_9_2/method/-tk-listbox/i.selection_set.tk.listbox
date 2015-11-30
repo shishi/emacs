@@ -1,0 +1,10 @@
+kind=defined
+names=selection_set
+visibility=public
+
+--- selection_set(first, last = Tk::None)
+
+((|first|))、((|last|))で指定した((*位置*))の範囲の要素を((<選択>))し
+ます。((|last|))を省略した場合、((|first|))の((*位置*))の要素を選択し
+ます。
+

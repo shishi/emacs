@@ -1,0 +1,9 @@
+kind=defined
+names=world_readable?
+visibility=public
+
+--- world_readable? -> bool
+FileTest.world_readable?(self.to_s) と同じです。
+
+@see [[m:FileTest.#world_readable?]]
+

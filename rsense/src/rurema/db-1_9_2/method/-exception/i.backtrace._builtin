@@ -1,0 +1,29 @@
+kind=defined
+names=backtrace
+visibility=public
+
+--- backtrace    -> [String]
+
+バックトレース情報を返します。
+
+デフォルトでは
+
+  * "#{sourcefile}:#{sourceline}:in `#{method}'"
+    (メソッド内の場合)
+  * "#{sourcefile}:#{sourceline}"
+    (トップレベルの場合)
+
+という形式の [[c:String]] の配列です。
+
+ def methd
+   raise
+ end
+ 
+ begin
+   methd
+ rescue => e
+   p e.backtrace
+ end
+ 
+ #=> ["filename.rb:2:in `methd'", "filename.rb:6"]
+

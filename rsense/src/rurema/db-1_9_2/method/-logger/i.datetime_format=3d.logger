@@ -1,0 +1,10 @@
+kind=defined
+names=datetime_format=
+visibility=public
+
+--- datetime_format=(format)
+
+ログに記録する時の日付のフォーマットをセットします。
+
+@see [[m:Time#strftime]], [[m:Logger#datetime_format]]
+

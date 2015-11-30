@@ -1,0 +1,11 @@
+kind=defined
+names=servername_cb
+visibility=public
+
+--- servername_cb -> Proc | nil
+TLS の Server Name Indication(SNI) 拡張で
+クライアント側からホスト名が伝えられてきた場合に
+呼びだされるコールバックを返します。
+
+詳しくは [[m:OpenSSL::SSL::SSLContext#servername_cb=]] を見てください。
+

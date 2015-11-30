@@ -1,0 +1,10 @@
+kind=defined
+names=list
+visibility=public
+
+--- list -> [String, Proc]
+
+登録されているジョブのリストを返します。
+
+それぞれの要素は、ラベルとブロックからなる二要素の配列です。
+

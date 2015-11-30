@@ -1,0 +1,9 @@
+kind=defined
+names=uid_thread
+visibility=public
+
+--- uid_thread(algorithm, search_keys, charset)
+
+As for #thread(), but returns unique identifiers instead of 
+message sequence numbers.
+

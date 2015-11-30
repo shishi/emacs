@@ -1,0 +1,17 @@
+kind=defined
+names=delete,unlink
+visibility=public
+
+--- delete(*filename)    -> Integer
+--- unlink(*filename)    -> Integer
+
+ファイルを削除します。削除したファイルの数を返します。
+削除に失敗した場合は例外 [[c:Errno::EXXX]] が発生します。
+
+このメソッドは通常ファイルの削除用で、ディレクトリの削除には
+[[m:Dir.rmdir]] を使います。
+
+@param filename ファイル名を表す文字列を指定します。
+
+@raise Errno::EXXX 失敗した場合に発生します。
+

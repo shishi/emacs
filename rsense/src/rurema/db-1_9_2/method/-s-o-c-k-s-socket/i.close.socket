@@ -1,0 +1,7 @@
+kind=defined
+names=close
+visibility=public
+
+--- close -> nil
+
+ソケットを閉じます。

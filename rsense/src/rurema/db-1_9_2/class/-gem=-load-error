@@ -1,0 +1,7 @@
+superclass=LoadError
+type=class
+library=rubygems
+extended=
+included=
+
+Gem をロードできなかった場合に発生するエラーです。

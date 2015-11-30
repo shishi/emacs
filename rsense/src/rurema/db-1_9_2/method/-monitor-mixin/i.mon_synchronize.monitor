@@ -1,0 +1,13 @@
+kind=defined
+names=mon_synchronize,synchronize
+visibility=public
+
+--- mon_synchronize { ... } -> object
+--- synchronize     { ... } -> object
+
+モニターをロックし、ブロックを実行します。実行後に必ずモニターのロックを解放します。
+
+ブロックの評価値を返り値として返します。
+
+@see [[m:MonitorMixin#mon_enter]]
+

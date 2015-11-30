@@ -1,0 +1,14 @@
+kind=defined
+names=sub_ext
+visibility=public
+
+--- sub_ext(replace) -> Pathname
+
+拡張子を与えられた文字列で置き換えた [[c:Pathname]] オブジェクト返します。
+
+自身が拡張子を持たない場合は、与えられた文字列を拡張子として付加します。
+
+@param replace 拡張子を文字列で指定します。
+
+
+

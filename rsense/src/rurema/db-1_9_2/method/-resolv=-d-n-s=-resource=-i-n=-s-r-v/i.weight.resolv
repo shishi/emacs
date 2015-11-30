@@ -1,0 +1,18 @@
+kind=defined
+names=weight
+visibility=public
+
+--- weight -> Integer
+サーバを選択するための「重み」です。
+
+[[m:Resolv::DNS::Resource::IN::SRV#priority]] が同じ場合に
+この項目が利用されます。
+重みに比例した確率でホストを選択すべきです。
+返り値の範囲は 0 から 65535 までの整数です。
+選択肢が一つしかない、つまり選択する必要がない場合には
+この値は人間が読みやすいよう 0 にすべきです。
+
+
+
+
+

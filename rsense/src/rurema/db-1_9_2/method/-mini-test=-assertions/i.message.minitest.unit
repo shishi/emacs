@@ -1,0 +1,10 @@
+kind=defined
+names=message
+visibility=public 
+
+--- message(message){ ... } -> Proc
+
+与えられたブロックを評価した結果と与えられたメッセージを連結して返します。
+
+@param message メッセージを指定します。
+

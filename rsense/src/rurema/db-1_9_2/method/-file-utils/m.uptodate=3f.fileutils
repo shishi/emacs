@@ -1,0 +1,21 @@
+kind=defined
+names=uptodate?
+visibility=public
+
+--- uptodate?(newer, older_list, options = nil) -> bool
+
+newer が、older_list に含まれるすべてのファイルより新しいとき真。
+存在しないファイルは無限に古いとみなされます。
+
+@param newer ファイルを一つ指定します。
+
+@param older_list ファイル名の配列を指定します。
+
+@param options どのようなオプションも指定することはできません。
+
+@raise ArgumentError options にオプションを指定した場合に発生します。
+
+例:
+
+  FileUtils.uptodate?('hello.o', ['hello.c', 'hello.h']) or system('make')
+

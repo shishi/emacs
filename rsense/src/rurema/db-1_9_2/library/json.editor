@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=json
+classes=JSON=Editor
+is_sublibrary=true
+
+Gtk2 を用いて書かれた JSON エディターです。

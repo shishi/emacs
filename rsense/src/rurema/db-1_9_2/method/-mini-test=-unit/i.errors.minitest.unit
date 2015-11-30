@@ -1,0 +1,8 @@
+kind=defined
+names=errors
+visibility=public 
+
+--- errors -> Fixnum
+
+エラー数を返します。
+

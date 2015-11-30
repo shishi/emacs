@@ -1,0 +1,6 @@
+kind=defined
+names=add_text
+visibility=public
+
+--- add_text(text)
+

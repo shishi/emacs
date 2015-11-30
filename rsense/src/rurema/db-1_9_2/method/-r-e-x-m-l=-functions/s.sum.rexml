@@ -1,0 +1,6 @@
+kind=defined
+names=sum
+visibility=public
+
+--- sum(nodes)
+

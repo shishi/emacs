@@ -1,0 +1,15 @@
+kind=defined
+names=avail_out=
+visibility=public
+
+--- avail_out=(size)
+
+出力側のバッファに size バイトの空きを確保します。
+すでに size バイト以上の空きがある場合、バッファは
+縮められます。空きは必要な時に動的に確保されるため、通常
+このメソッドを使う必要はありません。
+
+@param size 出力バッファのサイズを整数で指定します。
+
+@return size を返します。
+

@@ -1,0 +1,22 @@
+kind=defined
+names=popd,popdir
+visibility=public
+
+--- popd -> ()
+--- popdir -> ()
+
+ディレクトリスタックからポップし, それをカレントディレクトリにする.
+
+動作例
+  require 'shell'
+  Shell.verbose = false
+  sh = Shell.new
+  sh.pushd("/tmp")
+  p sh.cwd #=> "/tmp"
+  sh.pushd("/usr")
+  p sh.cwd #=> "/usr"
+  sh.popd
+  p sh.cwd #=> "/tmp"
+
+
+

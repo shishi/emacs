@@ -1,0 +1,6 @@
+kind=defined
+names=tag_start
+visibility=public
+
+--- tag_start(name, attrs)
+

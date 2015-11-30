@@ -1,0 +1,19 @@
+kind=defined
+names=gets
+visibility=public
+
+--- gets -> String | nil
+ARGFの現在位置から一行ずつ文字列として読み込みます。EOF に到達した時には nil を返します。
+
+  # カレントディレクトリから適当にファイルを選ぶ
+  ARGV.replace(
+    Dir.glob("*").reject{|name| FileTest.file?(name) == false}
+  )
+
+  while line = gets
+    line.chomp!
+    printf("%s\n", line)
+  end
+
+@see [[m:Kernel.#gets]]
+

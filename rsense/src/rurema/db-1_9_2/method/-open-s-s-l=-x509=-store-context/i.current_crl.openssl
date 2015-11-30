@@ -1,0 +1,13 @@
+kind=defined
+names=current_crl
+visibility=public
+
+--- current_crl -> OpenSSL::X509::CRL | nil
+直前に検証に利用した CRL のオブジェクトを返します。
+
+証明書チェインの各証明書検証後
+コールバック([[m:OpenSSL::X509::Store#verify_callback=]])呼び出しに
+渡される StoreContext オブジェクトにこのメソッドを呼び出すと
+直前に検証に利用した CRL オブジェクトを返します。
+
+

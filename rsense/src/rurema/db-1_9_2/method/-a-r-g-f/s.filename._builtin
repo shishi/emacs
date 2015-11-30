@@ -1,0 +1,24 @@
+kind=defined
+names=filename,path
+visibility=public
+
+--- filename -> String
+--- path -> String
+
+処理対象のファイル名を返します。
+標準入力に対しては - を返します。
+組み込み変数 [[m:$FILENAME]] と同じです。
+
+  # カレントディレクトリから適当にファイルを選ぶ
+  ARGV.replace(
+    Dir.glob("*").reject{|name| FileTest.file?(name) == false}
+  )
+  ARGF.each {|line|
+    p [ARGF.filename, ARGF.path, ARGV]
+    ARGF.skip
+  }
+  #例
+  #=> ["test.rb", "test.rb", ["test.rb~", "third.txt", "ugo.yaml"]]
+  #=> ["test.rb~", "test.rb~", ["third.txt", "ugo.yaml"]]
+  #...
+

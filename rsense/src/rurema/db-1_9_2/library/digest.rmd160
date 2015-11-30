@@ -1,0 +1,8 @@
+methods=
+sublibraries=
+requires=digest.rmd160,digest,digest.sha1,digest.sha2,digest.md5
+classes=Digest=RMD160
+is_sublibrary=true
+
+Hans Dobbertin, Antoon Bosselaers, Bart Preneel によって設計された
+RIPEMD-160 ハッシュ関数を実装するクラスを提供するライブラリです。

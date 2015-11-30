@@ -1,0 +1,14 @@
+kind=added
+names=verify_mode=
+visibility=public
+
+--- verify_mode=(mode)
+検証モードを設定します。
+
+詳しくは [[m:OpenSSL::SSL::SSLContext#verify_mode]] を見てください。
+クライアント側なので、
+[[m:OpenSSL::SSL::VERIFY_NONE]] か [[m:OpenSSL::SSL::VERIFY_PEER]]
+のいずれかを用います。
+
+デフォルトは nil で、VERIFY_NONE を意味します。
+

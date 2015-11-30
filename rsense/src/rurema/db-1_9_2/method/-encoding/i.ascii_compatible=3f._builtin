@@ -1,0 +1,14 @@
+kind=defined
+names=ascii_compatible?
+visibility=public
+
+--- ascii_compatible? -> bool
+
+自身が ASCII 互換のエンコーディングである場合真返します。
+そうでない場合は偽を返します。
+
+
+例:
+  Encoding::UTF_8.ascii_compatible?     #=> true
+  Encoding::UTF_16BE.ascii_compatible?  #=> false
+

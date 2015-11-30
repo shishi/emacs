@@ -1,0 +1,20 @@
+superclass=Object
+type=class
+library=prettyprint
+extended=
+included=
+
+pretty printing アルゴリズムのためのクラスです。
+改行の位置を探し、きれいなインデントを施します。
+
+デフォルトでは、このクラスは文字列を扱います。
+また、文字1バイトが出力幅の中で1カラムを占めると仮定しています。
+しかし、以下のメソッドに対して適切な引数を与えることで、
+そうでない場合にも利用できます。
+ * [[m:PrettyPrint.new]]: 出力バッファ、空白の生成をするブロックや改行オブジェクトを設定できます。
+ * [[m:PrettyPrint#text]]: 幅を設定できます。
+ * [[m:PrettyPrint#breakable]] 
+ですので、このクラスは以下のようなことにも応用が可能です。
+ * proportional font を使ったテキストの整形
+ * 出力幅とバイト数が異なるような多バイト文字
+ * 文字以外の整形

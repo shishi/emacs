@@ -1,0 +1,19 @@
+kind=defined
+names=numerator
+visibility=public 
+
+--- numerator -> Integer
+
+分子を返します。
+
+@return 分子を返します。
+
+例:
+
+  Rational(7).numerator       # => 7
+  Rational(7, 1).numerator    # => 7
+  Rational(9, -4).numerator   # => -9
+  Rational(-2, -10).numerator # => 1
+
+@see [[m:Rational#denominator]]
+

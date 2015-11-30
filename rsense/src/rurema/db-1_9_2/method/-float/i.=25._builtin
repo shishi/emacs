@@ -1,0 +1,14 @@
+kind=defined
+names=%,modulo
+visibility=public
+
+--- %(other) -> Float
+--- modulo(other) -> Float
+»»½Ñ±é»»»Ò¡£¾êÍ¾¤ò·×»»¤·¤Þ¤¹¡£
+
+@param other Æó¹à±é»»¤Î±¦Â¦¤Î°ú¿ô(ÂÐ¾Ý)
+
+  # ¾êÍ¾
+  p 3 % 1.2   #=> 0.6
+  p 3.0 % 0   #=> NaN
+

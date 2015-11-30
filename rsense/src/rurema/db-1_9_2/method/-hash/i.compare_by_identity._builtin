@@ -1,0 +1,27 @@
+kind=defined
+names=compare_by_identity
+visibility=public
+
+--- compare_by_identity -> self
+
+ハッシュのキーの一致判定をオブジェクトの同一性で判定するように変更します。
+
+デフォルトでは、キーのオブジェクトによっては内容が同じならキーが一致しているとみなされますが、より厳密に
+[[m:Object#object_id]]が一致しているかどうかを条件とするようにselfを変更します。
+
+selfが変化する破壊的メソッドです。
+
+@return selfを返します。
+
+   h1 = { "a" => 100, "b" => 200, :c => "c" }
+   p h1.compare_by_identity? #=> false
+   p h1["a"]        #=> 100
+   
+   h1.compare_by_identity
+   
+   p h1.compare_by_identity? #=> true
+   p h1["a"]        #=> nil  # この"a"と最初の"a"とは違うオブジェクト
+   p h1[:c]         #=> "c"  # 同じ内容のシンボルはすべて同一
+
+@see [[m:Hash#compare_by_identity?]]
+

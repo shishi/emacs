@@ -1,0 +1,6 @@
+kind=defined
+names=event_generate
+visibility=public
+
+--- event_generate(win, context, keys = nil)
+

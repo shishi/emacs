@@ -1,0 +1,6 @@
+kind=defined
+names=columnconfiginfo
+visibility=public
+
+--- columnconfiginfo(master, index, slot=nil)
+

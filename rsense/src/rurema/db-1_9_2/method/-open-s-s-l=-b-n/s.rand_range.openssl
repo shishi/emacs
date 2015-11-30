@@ -1,0 +1,11 @@
+kind=defined
+names=rand_range
+visibility=public
+
+--- rand_range(range) -> OpenSSL::BN
+暗号論的に強い疑似乱数を 0 から range-1 までの間で生成し、返します。
+
+@param range 生成する乱数の範囲
+@raise OpenSSL::BNError 乱数の生成に失敗した場合に発生します
+@see [[m:OpenSSL::BN.rand]], [[m:OpenSSL::BN.pseudo_rand_range]]
+

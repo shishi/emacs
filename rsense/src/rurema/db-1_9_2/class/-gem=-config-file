@@ -1,0 +1,10 @@
+superclass=Object
+type=class
+library=rubygems.config_file
+extended=
+included=
+
+設定ファイルに書かれている gem コマンドのオプションを
+オブジェクトに保存するためのクラスです。
+
+このクラスのインスタンスはハッシュのように振る舞います。

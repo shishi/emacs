@@ -1,0 +1,11 @@
+kind=defined
+names==~
+visibility=public 
+
+--- =~(other) -> bool
+
+self と other を比較して真偽値を返します。
+
+self の [[m:Gem::Dependency#name]] が正規表現として other とマッチしない場合は偽を返します。
+self が other との依存関係を満たしていれば真を返します。満たしていなければ偽を返します。
+

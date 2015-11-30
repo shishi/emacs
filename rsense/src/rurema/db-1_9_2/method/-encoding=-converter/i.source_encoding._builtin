@@ -1,0 +1,9 @@
+kind=defined
+names=source_encoding
+visibility=public
+
+--- source_encoding -> Encoding
+変換元のエンコーディングを返します。
+
+@return 変換元のエンコーディング
+

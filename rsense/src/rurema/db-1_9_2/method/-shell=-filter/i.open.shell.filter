@@ -1,0 +1,14 @@
+kind=defined
+names=open
+visibility=public
+
+--- open(path, mode) -> File | Dir
+
+path がファイルなら、 [[m:File.open]] path がディレクトリなら、 [[m:Dir.open]] の動作をします。
+
+@param path 開きたいパスを指定します。
+
+@param mode アクセスモードを指定します。path がディレクトリの場合は無視されます。
+
+@see [[m:File.open]], [[m:Dir.open]]
+

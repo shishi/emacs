@@ -1,0 +1,14 @@
+superclass=Resolv=DNS=Resource
+type=class
+library=resolv
+extended=
+included=
+
+DNS リソースの HINFO レコード
+を表す抽象クラスです。
+
+このレコードはホストのハードウェアとソフトウェアの情報を
+保持しています。
+
+[[m:Resolv::DNS#getresource]] で HINFO レコードを得たい場合は
+[[c:Resolv::DNS::Resource::IN::HINFO]] を使うべきです。

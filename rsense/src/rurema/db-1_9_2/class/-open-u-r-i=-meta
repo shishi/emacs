@@ -1,0 +1,8 @@
+superclass=
+type=module
+library=open=2duri
+extended=
+included=
+
+サーバから取得したデータの属性を扱うために使われるモジュールです。
+データを表す文字列や [[c:StringIO]] が extend します。

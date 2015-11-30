@@ -1,0 +1,15 @@
+kind=defined
+names=[]
+visibility=public
+
+--- [](object, options) -> object
+
+文字列のように扱えるデータを受け取った場合は Ruby のオブジェクトに変換して返します。
+そうでない場合は JSON に変換して返します。
+
+@param object 任意のオブジェクト指定可能です。
+
+@param options [[m:JSON.#parse]], [[m:JSON.#generate]] の説明を参照してください。
+
+@see [[m:JSON.#parse]], [[m:JSON.#generate]]
+

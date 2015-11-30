@@ -1,0 +1,12 @@
+kind=defined
+names=priv_key=
+visibility=public
+
+--- priv_key=(private_key)
+DSA 鍵の秘密鍵パラメータを設定します。
+
+通常このメソッドで値を変更することはありません。
+よく考えて必要な場合のみ利用してください。
+
+@param private_key 設定する整数値
+

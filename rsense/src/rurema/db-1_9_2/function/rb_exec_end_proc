@@ -1,0 +1,11 @@
+name=rb_exec_end_proc
+private=false
+macro=false
+type=void
+filename=eval.c
+params=(void)
+
+
+END ブロックおよび Kernel#at_exit で登録した Proc オブジェクトを
+実行します。
+

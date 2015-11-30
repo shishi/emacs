@@ -1,0 +1,48 @@
+kind=defined
+names=!
+visibility=public
+
+--- ! -> bool
+オブジェクトを真偽値として評価し、その論理否定を返します。
+
+このメソッドは self が nil または false であれば真を、さもなくば偽を返します。
+主に論理式の評価に伴って副作用を引き起こすことを目的に
+再定義するものと想定されています。
+
+このメソッドを再定義しても Ruby の制御式において nil や false 以外が偽として
+扱われることはありません。
+
+@return オブジェクトが偽であれば真、さもなくば偽
+
+例
+ class NegationRecorder < BasicObject
+   def initialize
+     @count = 0
+   end
+   attr_reader :count
+
+   def !
+     @count += 1
+     super
+   end
+ end
+
+ recorder = NegationRecorder.new
+ !recorder
+ !!!!!!!recorder
+ puts 'hoge' if !recorder
+
+ puts recorder.count #=> 3
+
+例
+ class AnotherFalse < BasicObject
+   def !
+     true
+   end
+ end
+ another_false = AnotherFalse.new
+
+ # another_falseは*真*
+ puts "another false is a truth" if another_false
+   #=> "another false is a truth"
+

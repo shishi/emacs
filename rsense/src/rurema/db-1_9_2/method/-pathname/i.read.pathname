@@ -1,0 +1,9 @@
+kind=defined
+names=read
+visibility=public
+
+--- read(*args) -> String | nil
+IO.read(self.to_s, *args)と同じです。
+
+@see [[m:IO.read]]
+

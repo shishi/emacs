@@ -1,0 +1,15 @@
+kind=defined
+names=stat
+visibility=public
+
+--- stat(filename)    -> File::Stat
+
+filename の情報を含む [[c:File::Stat]] オブジェクトを生成し
+て返します。
+
+@param filename ファイル名を表す文字列を指定します。 
+
+@raise Errno::EXXX 情報の取得に失敗した場合に発生します。
+
+@see [[m:IO#stat]], [[m:File#lstat]]
+

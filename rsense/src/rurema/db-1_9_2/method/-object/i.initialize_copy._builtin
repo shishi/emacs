@@ -1,0 +1,75 @@
+kind=defined
+names=initialize_copy
+visibility=private 
+
+--- initialize_copy(obj) -> object
+
+(拡張ライブラリによる) ユーザ定義クラスのオブジェクトコピーの初期化メソッド。
+
+このメソッドは self を obj の内容で置き換えます。ただ
+し、self のインスタンス変数や特異メソッドは変化しません。
+[[m:Object#clone]], [[m:Object#dup]]の内部で使われています。
+
+initialize_copy は、Ruby インタプリタが知り得ない情報をコピーするた
+めに使用(定義)されます。例えば C 言語でクラスを実装する場合、情報
+をインスタンス変数に保持させない場合がありますが、そういった内部情
+報を initialize_copy でコピーするよう定義しておくことで、dup や clone
+を再定義する必要がなくなります。
+
+デフォルトの Object#initialize_copy は、 freeze チェックおよび型のチェックを行い self 
+を返すだけのメソッドです。
+
+initialize_copy という名前のメソッドは
+自動的に private に設定されます。
+
+@raise TypeError レシーバが freeze されているか、obj のクラスがレシーバ
+  のクラスと異なる場合に発生します。
+@see [[m:Object#clone]],[[m:Object#dup]]
+
+以下に例として、dup や clone がこのメソッドをどのように利用しているかを示します。
+
+obj.dup は、新たに生成したオブジェクトに対して
+initialize_copy を呼び
+
+    obj2 = obj.class.allocate
+    obj2.initialize_copy(obj)
+
+obj2 に対してさらに obj の汚染状態、インスタンス変数、ファイナライ
+ザをコピーすることで複製を作ります。 obj.clone は、さらに
+特異メソッドのコピーも行います。
+
+    obj = Object.new
+    class <<obj
+      attr_accessor :foo
+      def bar
+        :bar
+      end
+    end
+
+    def check(obj)
+      puts "instance variables: #{obj.inspect}"
+      puts "tainted?: #{obj.tainted?}"
+      print "singleton methods: "
+      begin
+        p obj.bar
+      rescue NameError
+        p $!
+      end
+    end
+
+    obj.foo = 1
+    obj.taint
+
+    check Object.new.send(:initialize_copy, obj)
+            #=> instance variables: #<Object:0x4019c9d4>
+            #   tainted?: false
+            #   singleton methods: #<NoMethodError: ...>
+    check obj.dup
+            #=> instance variables: #<Object:0x4019c9c0 @foo=1>
+            #   tainted?: true
+            #   singleton methods: #<NoMethodError: ...>
+    check obj.clone
+            #=> instance variables: #<Object:0x4019c880 @foo=1>
+            #   tainted?: true
+            #   singleton methods: :bar
+

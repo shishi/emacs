@@ -1,0 +1,7 @@
+kind=added
+names=__toUTF8
+visibility=public
+
+--- __toUTF8(str, encoding = nil)
+
+

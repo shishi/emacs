@@ -1,0 +1,12 @@
+kind=defined
+names=encoding
+visibility=public
+
+--- encoding   -> Encoding
+
+シンボルに対応する文字列のエンコーディング情報を表現した [[c:Encoding]] オブ
+ジェクトを返します。
+
+@see [[m:String#encoding]]
+
+

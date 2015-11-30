@@ -1,0 +1,6 @@
+kind=defined
+names=new_hash
+visibility=public
+
+--- new_hash(name, *args)
+

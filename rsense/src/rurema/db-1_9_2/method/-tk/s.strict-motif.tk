@@ -1,0 +1,6 @@
+kind=defined
+names=strictMotif
+visibility=public
+
+--- strictMotif(mode = Tk::None)
+

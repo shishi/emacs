@@ -1,0 +1,10 @@
+kind=defined
+names=get
+visibility=public
+
+--- get(index)
+--- get(first, last)
+
+引数が1つの場合、指定した((*位置*))の要素を文字列で返します。
+引数が2つの場合、指定した範囲の要素を文字列の配列で返します。
+

@@ -1,0 +1,26 @@
+kind=defined
+names=delete
+visibility=public
+
+--- delete(key) -> object | nil
+--- delete(key) {|key| ... } -> object
+
+key に対応する要素を取り除きます。
+
+@param key 取り除くキーを指定します。
+
+@return 取り除かれた要素の値を返します。
+        key に対応する要素が存在しない時には nil を返します。
+        
+        与えられたブロックは key にマッチする要素がなかった時に評価され、その結果を返します。
+
+  h = {:ab => "some" , :cd => "all"}
+  
+  p h.delete(:ab) #=> "some"
+  p h.delete(:ef) #=> nil
+  p h.delete(:ef){|key|"#{key} Nothing"} #=> "ef Nothing"
+  
+  p h #=> {:cd=>"all"}
+
+@see [[m:Hash#delete_if]]
+

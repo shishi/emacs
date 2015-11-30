@@ -1,0 +1,8 @@
+kind=defined
+names=internal_encoding
+visibility=public
+
+--- internal_encoding -> Encoding
+
+現在の内部エンコーディングを返します。
+

@@ -1,0 +1,38 @@
+kind=defined
+names=__id__,object_id
+visibility=public
+
+--- __id__ -> Integer
+--- object_id -> Integer
+
+各オブジェクトに対して一意な整数を返します。あるオブジェクトに対し
+てどのような整数が割り当てられるかは不定です。
+
+Rubyでは、(Garbage Collectされていない)アクティブなオブジェクト間で
+重複しない整数(object_id)が各オブジェクトにひとつずつ割り当てられています。この
+メソッドはその値を返します。
+
+[[c:TrueClass]], [[c:FalseClass]], [[c:NilClass]], [[c:Symbol]], [[c:Fixnum]] クラス
+のインスタンスなど Immutable（変更不可）なオブジェクトの一部は同じ内容ならば必ず同じ object_id になります。
+
+これは、Immutable ならば複数の場所から参照されても`破壊的操作'による問題が発生しないので、
+同じ内容のインスタンスを複数生成しないという内部実装が理由です。
+
+
+  p "ruby".object_id #=> 22759500
+  p "ruby".object_id #=> 22759400
+  
+  p [].object_id #=> 22759360
+  p [].object_id #=> 22759340
+  
+  p :ruby.object_id #=> 103538
+  p :ruby.object_id #=> 103538
+  
+  p 11.object_id #=> 23
+  p 11.object_id #=> 23
+
+  p true.object_id #=> 2
+  p true.object_id #=> 2
+
+@see [[m:Object#equal?]],[[c:Symbol]]
+

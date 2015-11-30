@@ -1,0 +1,7 @@
+superclass=WEBrick=HTTPStatus=Redirect
+type=class
+library=webrick.httpstatus
+extended=
+included=
+
+HTTP のステータスコード 302 Found を表すクラスです。

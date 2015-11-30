@@ -1,0 +1,15 @@
+kind=defined
+names=noecho
+visibility=public
+
+--- noecho
+
+ユーザの入力内容を画面に表示しないようにします。
+つまり、入力のエコーを止めます。
+
+詳しくは、 man ページの curs_inopts(3X) の noecho 関数を参照ください。
+
+このメソッドの中で [[m:Curses.#init_screen]] を呼び出します。
+
+セーフレベル ($SAFE) が 4 の場合、例外 SecurityError を発生します。
+

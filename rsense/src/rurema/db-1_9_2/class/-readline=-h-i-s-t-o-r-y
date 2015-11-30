@@ -1,0 +1,10 @@
+superclass=
+type=object
+library=readline
+extended=Enumerable
+included=
+
+Readline::HISTORY を使用してヒストリにアクセスできます。
+[[c:Enumerable]] モジュールを extend しており、
+[[c:Array]] クラスのように振る舞うことができます。
+例えば、HISTORY[4] により 5 番目に入力した内容を取り出すことができます。

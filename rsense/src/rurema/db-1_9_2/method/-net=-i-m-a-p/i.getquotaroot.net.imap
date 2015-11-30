@@ -1,0 +1,11 @@
+kind=defined
+names=getquotaroot
+visibility=public
+
+--- getquotaroot(mailbox)
+
+Sends the GETQUOTAROOT command along with specified mailbox.
+This command is generally available to both admin and user.
+If mailbox exists, returns an array containing objects of
+[[c:Net::IMAP::MailboxQuotaRoot]] and [[c:Net::IMAP::MailboxQuota]].
+

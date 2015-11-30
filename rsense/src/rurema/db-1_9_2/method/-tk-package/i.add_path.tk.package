@@ -1,0 +1,6 @@
+kind=defined
+names=add_path
+visibility=public
+
+--- add_path(path)
+

@@ -1,0 +1,9 @@
+kind=defined
+names=language
+visibility=public
+
+--- language
+
+Returns a string or an array of strings giving the body
+language value as defined in [LANGUAGE-TAGS].
+

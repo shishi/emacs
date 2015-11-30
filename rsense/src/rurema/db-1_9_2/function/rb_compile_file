@@ -1,0 +1,15 @@
+name=rb_compile_file
+private=false
+macro=false
+type=NODE *
+filename=parse.y
+params=(const char *f, VALUE file, int start)
+
+
+Ruby の IO オブジェクト file から文字列を読み込み、
+それを Ruby プログラムとして構文木にコンパイルします。
+作成した構文木は ruby_eval_tree と ruby_eval_tree_begin に
+格納し、同時に ruby_eval_tree を返します。
+またコンパイルするときにファイル f の line 行目からをコンパイル
+していると仮定します。
+

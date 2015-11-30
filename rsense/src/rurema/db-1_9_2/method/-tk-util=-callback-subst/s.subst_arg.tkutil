@@ -1,0 +1,6 @@
+kind=defined
+names=subst_arg
+visibility=public
+
+--- subst_arg(*args)
+

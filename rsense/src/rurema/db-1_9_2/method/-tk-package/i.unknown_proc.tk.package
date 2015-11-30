@@ -1,0 +1,6 @@
+kind=defined
+names=unknown_proc
+visibility=public
+
+--- unknown_proc(*arg) { .... }
+

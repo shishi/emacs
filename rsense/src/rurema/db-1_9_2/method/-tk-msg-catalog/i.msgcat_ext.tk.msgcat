@@ -1,0 +1,7 @@
+kind=defined
+names=msgcat_ext,msgcat_ext=
+visibility=public
+
+--- msgcat_ext
+--- msgcat_ext=(value)
+

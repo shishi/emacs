@@ -1,0 +1,16 @@
+kind=defined
+names=setsockopt
+visibility=public
+
+--- setsockopt(level, optname, optval) -> 0
+
+ソケットのオプションを設定します。[[man:setsockopt(2)]]
+を参照してください。
+
+@param level    [[man:setsockopt(2)]] の level を参照してください。
+@param optname  [[man:setsockopt(2)]] の option_name を参照してください。
+@param optval  設定される値を文字列で指定します。
+
+@raise Errno::EXXX  オプションの設定に失敗した場合発生します。
+
+

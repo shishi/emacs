@@ -1,0 +1,13 @@
+kind=defined
+names=opaque
+visibility=public
+
+--- opaque     -> String | nil
+
+自身の opaque を文字列で返します。設定されていない場合は nil を返します。
+
+例:
+ p URI.parse('http://example.com/').opaque       #=> nil
+ p URI.parse('mailto:nospam@localhost').opaque   #=> "nospam@localhost"
+ p URI.parse('urn:ietf:rfc:1149').opaque         #=> "ietf:rfc:1149"
+

@@ -1,0 +1,23 @@
+kind=defined
+names=V_ERR_UNABLE_TO_GET_ISSUER_CERT
+visibility=public
+
+--- V_ERR_UNABLE_TO_GET_ISSUER_CERT -> Integer
+issuer(発行者)の証明書が
+信頼している証明書群の中から見付からない
+ような証明書を、信頼している証明書群に含んでいることを意味します。
+
+つまり、信頼している証明書群に issuer を親とする木構造を考えた場合、
+その root(根) となるノードが自己署名されていないことを意味します。
+
+これは、通常信頼している証明書のリストが不完全であることを意味します。
+
+[[m:OpenSSL::X509::Store#error]] や
+[[m:OpenSSL::X509::StoreContext#error]] のエラーコードとして
+使われます。
+
+@see [[m:OpenSSL::X509::Store#add_file]],
+     [[m:OpenSSL::X509::Store#add_path]],
+     [[m:OpenSSL::X509::Store#add_cert]],
+     [[m:OpenSSL::X509::Store#set_default_paths]]
+

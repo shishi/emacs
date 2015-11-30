@@ -1,0 +1,10 @@
+kind=defined
+names=upper_bound=
+visibility=public
+
+--- upper_bound=(upper_bound)
+
+新しい列挙上界をセットします。
+
+@param upper_bound 新しい上界を整数または nil で指定します。 nil は上界がなく無限に素数を列挙すべきであることを意味します。
+

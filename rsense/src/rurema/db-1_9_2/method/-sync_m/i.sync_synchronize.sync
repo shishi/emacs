@@ -1,0 +1,12 @@
+kind=defined
+names=sync_synchronize,synchronize
+visibility=public
+
+--- sync_synchronize(mode = EX) {...} -> object
+--- synchronize(mode = EX) {...} -> object
+ロック状態を変更してブロックを実行します。
+ブロックの実行結果を返します。
+
+@param mode 変更後の状態を指定します。
+            通常、 [[m:Sync_m::UN]], [[m:Sync_m::EX]], [[m:Sync_m::SH]] のどれかを指定します。
+

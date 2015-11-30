@@ -1,0 +1,14 @@
+kind=defined
+names=chws,cws,irb_change_workspace,irb_chws,irb_cws
+visibility=public
+
+--- cws([obj])
+--- chws([obj])
+--- irb_cws([obj])
+--- irb_chws([obj])
+--- irb_change_workspace([obj])
+
+irb の self を obj に変更します。
+obj が省略されたときは、
+irb を起動したときの main オブジェクトを self にします。
+

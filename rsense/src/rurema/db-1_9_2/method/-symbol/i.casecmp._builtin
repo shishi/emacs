@@ -1,0 +1,16 @@
+kind=defined
+names=casecmp
+visibility=public
+
+--- casecmp(other) -> -1 | 0 | 1
+
+[[m:Symbol#<=>]] と同様にシンボルに対応する文字列の順序を比較しますが、
+アルファベットの大文字小文字の違いを無視します。
+
+@param other 比較対象のシンボルを指定します。
+
+  p :a <=> :A      # => 1
+  p :a.casecmp(:A) # => 0
+
+@see [[m:String#casecmp]]
+

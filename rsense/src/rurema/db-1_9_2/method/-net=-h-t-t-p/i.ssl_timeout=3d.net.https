@@ -1,0 +1,20 @@
+kind=added
+names=ssl_timeout=
+visibility=public
+
+--- ssl_timeout=(sec)
+
+SSL/TLS のタイムアウト秒数を設定します。
+
+HTTP セッション開始時([[m:Net::HTTP#start]] など)に
+[[m:OpenSSL::SSL::SSLContext#ssl_timeout=]] で
+タイムアウトを設定します。
+
+デフォルト値は [[m:OpenSSL::SSL::SSLContext#ssl_timeout=]] と
+同じで、OpenSSL のデフォルト値(300秒)を用います。
+
+
+@param sec タイムアウト秒数
+@see [[m:Net::HTTP#ssl_timeout]],
+     [[m:OpenSSL::SSL::SSLContext#ssl_timeout=]]
+

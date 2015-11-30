@@ -1,0 +1,14 @@
+kind=defined
+names=I,identity,unit
+visibility=public
+
+--- identity(n) -> Matrix
+--- unit(n) -> Matrix
+--- I(n) -> Matrix
+
+n次の単位行列を生成します。
+
+@param n 単位行列の次元
+
+単位行列とは、対角要素が全て1で非対角要素が全て0であるような行列のことです。
+

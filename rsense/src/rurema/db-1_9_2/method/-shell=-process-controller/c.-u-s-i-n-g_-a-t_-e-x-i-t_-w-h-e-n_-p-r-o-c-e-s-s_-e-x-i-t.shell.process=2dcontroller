@@ -1,0 +1,6 @@
+kind=defined
+names=USING_AT_EXIT_WHEN_PROCESS_EXIT
+visibility=public
+
+--- USING_AT_EXIT_WHEN_PROCESS_EXIT -> true
+

@@ -1,0 +1,19 @@
+kind=defined
+names=gid=
+visibility=public
+
+--- gid=(gid)
+
+カレントプロセスの実グループ ID を gid に設定します。
+
+動作の詳細はプラットフォームに依存します。
+実グループ ID 以外のグループ ID も変更されるかも知れません。
+
+@param gid 実グループ ID を整数で指定します。
+
+@raise Errno::EXXX 権限がない場合に発生します。
+
+@raise NotImplementedError メソッドが現在のプラットフォームで実装されていない場合に発生します。
+
+@see [[c:Process::GID]]
+

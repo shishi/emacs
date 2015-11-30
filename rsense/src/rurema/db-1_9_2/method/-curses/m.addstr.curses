@@ -1,0 +1,10 @@
+kind=defined
+names=addstr
+visibility=public
+
+--- addstr(str) -> nil
+
+stdscr のカーソルの位置に文字列 str を挿入します。
+
+@param str 文字列を指定します。
+

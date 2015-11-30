@@ -1,0 +1,12 @@
+kind=defined
+names=USERNAME_COMPLETION_PROC
+visibility=public
+
+--- USERNAME_COMPLETION_PROC -> Proc
+
+GNU Readline で定義されている関数を使用してユーザ名の補完を行うための
+[[c:Proc]] オブジェクトです。
+[[m:Readline.completion_proc=]] で使用します。
+
+@see [[m:Readline.completion_proc=]]
+

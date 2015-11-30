@@ -1,0 +1,12 @@
+kind=defined
+names=add_entry
+visibility=public
+
+--- add_entry(oid, value, type = nil)
+新しい属性を追加します。
+
+@param oid 属性型文字列
+@param value 属性値文字列
+@param type 属性値の(ASN.1の)型、省略時は [[c:OpenSSL::X509::Name::OBJECT_TYPE_TEMPLATE]] と oid から型が決まる
+@raise OpenSSL::X509::NameError 属性の追加に失敗した場合に発生します
+

@@ -1,0 +1,10 @@
+kind=defined
+names=each
+visibility=public
+
+--- each{|header, field| ... } -> self
+
+与えられたブロックにヘッダとフィールドの組を渡して評価します。
+
+@return メソッドチェーンのために自身を返します。
+

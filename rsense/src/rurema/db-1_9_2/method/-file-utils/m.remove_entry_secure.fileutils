@@ -1,0 +1,35 @@
+kind=defined
+names=remove_entry_secure
+visibility=public
+
+--- remove_entry_secure(path, force = false) -> ()
+
+ファイル path を削除します。path がディレクトリなら再帰的に削除します。
+
+[[m:FileUtils.#rm_r]] および [[m:FileUtils.#remove_entry]] には
+TOCTTOU (time-of-check to time-of-use)脆弱性が存在します。
+このメソッドはそれを防ぐために新設されました。
+[[m:FileUtils.#rm_r]] および [[m:FileUtils.#remove_entry]] は以下の条件が
+満たされるときにはセキュリティホールになりえます。
+
+  * 親ディレクトリが全ユーザから書き込み可能 (/tmp を含む)
+  * path 以下のいずれかのディレクトリが全ユーザから書き込み可能
+  * システムがシンボリックリンクを持つ
+
+この脆弱性を防ぐため、remove_entry_secure は削除前に path 以下の
+ディレクトリのオーナーとパーミッションを変更し、上記の条件を回避します。
+ただし remove_entry_secure は親ディレクトリが以下の条件を満たすことを
+仮定しています。
+
+  * UNIX システムおよびそれに類する環境では、sticky ビットが立っていること。
+  * 全ユーザが書き込み可能であるのは、直接の親ディレクトリのみであること。
+    例えば、/var/tmp のパーミッションが 1777 であるのは問題ありませんが、
+    その場合 / や /var が全ユーザから書き込み可能であってはなりません。
+
+この条件が満たされない場合 remove_entry_secure は安全ではありません。
+
+@param path 削除するパス。
+
+@param force 真のときは削除中に発生した [[c:StandardError]] を無視します。
+
+

@@ -1,0 +1,18 @@
+kind=defined
+names=name
+visibility=public
+
+--- name  -> String
+
+自身が表す関数の名前を文字列で返します。
+
+ require 'dl/import'
+
+ h = DL::Handle.new
+ addr = h.sym('strncmp')
+ cfunc = DL::CFunc.new(addr, DL::TYPE_INT, 'strncmp')
+ func = DL::Function.new(cfunc, [DL::TYPE_VOIDP, DL::TYPE_VOIDP, DL::TYPE_INT])
+ 
+ p func.name    #=> "strncmp"
+
+

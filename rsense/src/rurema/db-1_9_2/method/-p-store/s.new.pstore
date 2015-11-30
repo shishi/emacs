@@ -1,0 +1,16 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(file, thread_safe = false) -> PStore
+
+ファイル名 file に対してデータベースを読み書きする。
+
+データベースを更新するときにバックアップファイルが作成されるため、
+file のあるディレクトリは書き込み可能である必要があります。
+データベースの更新が成功すると、バックアップファイルは削除される。バックアップファイル名は
+ファイル名に ".tmp" および ".new" を付けたもの。
+
+@param file データベースファイル名。
+
+@param thread_safe 真を指定すると [[c:Mutex]] を用いてスレッドセーフになります。デフォルトは偽です。

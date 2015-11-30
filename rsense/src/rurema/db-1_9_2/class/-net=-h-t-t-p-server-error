@@ -1,0 +1,10 @@
+superclass=Net=HTTPResponse
+type=class
+library=net.http
+extended=
+included=
+
+HTTP レスポンス 2xx (Server Error) を表現するクラスです。
+
+サーバがエラーを起こしているなど、サーバ側で処理
+を完了することができないことを表しています。

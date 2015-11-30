@@ -1,0 +1,6 @@
+kind=defined
+names=insert
+visibility=public
+
+--- insert(index, type, keys = nil)
+

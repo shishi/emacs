@@ -1,0 +1,11 @@
+kind=defined
+names=pub_key
+visibility=public
+
+--- pub_key -> OpenSSL::BN
+DSA 鍵の公開鍵パラメータを返します。
+
+公開鍵はこの値と、
+[[m:OpenSSL::PKey::DSA#p]], [[m:OpenSSL::PKey::DSA#q]], [[m:OpenSSL::PKey::DSA#g]]
+から構成されます。
+

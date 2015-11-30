@@ -1,0 +1,11 @@
+kind=defined
+names=EXTENDED
+visibility=public
+
+--- EXTENDED -> Fixnum
+
+バックスラッシュでエスケープされていない空白と # から改行までを無
+視します。正規表現リテラルの //x オプションと同じ
+です。(空白を入れる場合は\でエスケープして\ (<-空白)と
+指定します)
+

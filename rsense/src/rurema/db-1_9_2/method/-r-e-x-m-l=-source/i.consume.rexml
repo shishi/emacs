@@ -1,0 +1,6 @@
+kind=defined
+names=consume
+visibility=public
+
+--- consume(pattern)
+

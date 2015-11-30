@@ -1,0 +1,8 @@
+superclass=Object
+type=class
+library=rinda.tuplespace
+extended=
+included=MonitorMixin,DRb=DRbUndumped
+
+Tuple Space のためのクラスです。
+普通は [[c:Rinda::TupleSpaceProxy]] を介して使います。

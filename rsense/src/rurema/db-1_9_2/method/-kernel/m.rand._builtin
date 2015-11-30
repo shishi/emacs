@@ -1,0 +1,27 @@
+kind=defined
+names=rand
+visibility=public
+
+--- rand(max = 0) -> Integer|Float
+
+擬似乱数を得るメソッドです。
+
+max.to_i.abs（引数の整数表現の絶対値）が 0以外 の場合、
+0 以上 max.to_i.abs 未満の範囲の整数をランダムに返します。
+また 0 の場合、0.0 以上 1.0 未満の範囲の浮動小数点数をランダムに返します。
+
+まだ [[m:Kernel.#srand]] が呼ばれていなければ自動的に呼び出します。
+
+@param max 数値オブジェクトです。
+
+  p rand(63) #=> 20
+  p rand(63) #=> 56
+  p rand(0) #=> 0.341033520223401
+  p rand(0) #=> 0.31341550089985
+  
+  p rand(-5) #=> 2
+  p rand(0.9) #=> 0.195303845149051
+  p rand(1.5) #=> 0
+
+@see [[m:Kernel.#srand]], [[m:Object#to_int]], [[m:Numeric#abs]]
+

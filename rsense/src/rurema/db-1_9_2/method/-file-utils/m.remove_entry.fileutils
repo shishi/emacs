@@ -1,0 +1,22 @@
+kind=defined
+names=remove_entry
+visibility=public
+
+--- remove_entry(path, force = false)
+
+ファイル path を削除します。path がディレクトリなら再帰的に削除します。
+
+このメソッドにはローカル脆弱性が存在します。
+詳しくは [[m:FileUtils.#remove_entry_secure]] の項を参照してください。
+
+@param path 削除するパス。
+
+@param force 真のときは削除中に発生した [[c:StandardError]] を無視します。
+
+例:
+
+  FileUtils.remove_entry '/tmp/ruby.tmp.08883'
+
+@see [[m:FileUtils.#remove_entry_secure]]
+
+

@@ -1,0 +1,33 @@
+superclass=Object
+type=class
+library=win32ole
+extended=
+included=
+
+OLEオートメーションサーバが持つメソッドの情報を提供します。
+
+WIN32OLE_METHODは、[[m:WIN32OLE#ole_methods]]などの呼び出しによって返さ
+れるオブジェクトで、OLEオートメーションサーバのメソッドの情報（メタデー
+タ）を保持します。
+
+=== サンプルコード
+
+   excel = WIN32OLE.new('Excel.Application')
+   excel.ole_methods.each do |method|
+     if method.visible?
+       puts <<SIGNATURE
+ #{method.return_type} #{method.name}(#{
+     method.params.map {|p| "#{p.ole_type} #{p.name}"}.join(', ')
+ }) : #{method.helpstring}
+ SIGNATURE
+     end
+   end
+
+
+@see [[m:WIN32OLE#ole_methods]]
+@see [[m:WIN32OLE#ole_function_methods]]
+@see [[m:WIN32OLE#ole_get_methods]]
+@see [[m:WIN32OLE#ole_put_methods]]
+@see [[m:WIN32OLE#ole_method]]
+@see [[m:WIN32OLE#ole_method_help]]
+@see [[c:WIN32OLE_PARAM]]

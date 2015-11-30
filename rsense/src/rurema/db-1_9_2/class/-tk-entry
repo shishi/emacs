@@ -1,0 +1,7 @@
+superclass=TkLabel
+type=class
+library=tk.entry
+extended=
+included=Tk=X_Scrollable,TkValidation
+
+

@@ -1,0 +1,10 @@
+kind=defined
+names=setgid?
+visibility=public
+
+--- setgid?(path)    -> bool
+
+[[m:FileTest.#setgid?]] と同じです。
+
+@param path パスを表す文字列か IO オブジェクトを指定します。
+

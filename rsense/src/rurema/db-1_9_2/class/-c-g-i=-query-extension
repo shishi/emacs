@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=cgi.core
+extended=
+included=
+
+クエリ文字列を扱うためのメソッドを定義しているモジュールです。

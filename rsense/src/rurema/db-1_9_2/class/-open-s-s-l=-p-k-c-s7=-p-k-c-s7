@@ -1,0 +1,7 @@
+superclass=OpenSSL=PKCS7
+type=class
+library=openssl
+extended=
+included=
+
+このクラスは 1.8.6 以前との互換性のために存在します。

@@ -1,0 +1,7 @@
+superclass=Gem=Package=Error
+type=class
+library=rubygems.package
+extended=
+included=
+
+チェックサムが一致しない場合に発生する例外です。

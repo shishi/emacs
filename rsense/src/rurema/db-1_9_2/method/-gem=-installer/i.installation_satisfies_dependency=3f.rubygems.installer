@@ -1,0 +1,11 @@
+kind=defined
+names=installation_satisfies_dependency?
+visibility=public 
+
+--- installation_satisfies_dependency?(dependency) -> bool
+
+登録されているソースインデックスが与えられた依存関係を
+満たすことができる場合は、真を返します。そうでない場合は偽を返します。
+
+@param dependency [[c:Gem::Dependency]] のインスタンスを指定します。
+

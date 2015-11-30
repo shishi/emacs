@@ -1,0 +1,8 @@
+kind=defined
+names=inherited
+visibility=public
+
+--- inherited(klass)
+
+テストクラス名をテストスイート登録します。
+

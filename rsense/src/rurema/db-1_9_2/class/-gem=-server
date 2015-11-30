@@ -1,0 +1,8 @@
+superclass=Object
+type=class
+library=rubygems.server
+extended=
+included=Gem=UserInteraction
+
+Gem パッケージを配布したり Gem パッケージに同梱されているドキュメントを参照するための
+簡易ウェブサーバを動かすためのクラスです。

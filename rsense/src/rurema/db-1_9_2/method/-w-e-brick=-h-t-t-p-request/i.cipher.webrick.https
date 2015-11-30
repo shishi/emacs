@@ -1,0 +1,10 @@
+kind=added
+names=cipher
+visibility=public
+
+--- cipher -> Array
+
+現在実際に使われている暗号の情報を配列で返します。 
+
+@see [[m:OpenSSL::SSL::SSLSocket#cipher]]
+

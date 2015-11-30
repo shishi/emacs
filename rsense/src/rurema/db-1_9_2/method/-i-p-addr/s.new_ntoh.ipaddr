@@ -1,0 +1,15 @@
+kind=defined
+names=new_ntoh
+visibility=public
+
+--- new_ntoh(addr) -> IPAddr
+
+ネットワークバイトオーダーのバイト列から IPAddr オブジェクトを生成します。
+
+@param addr ネットワークバイトオーダーのバイト列。
+
+例:
+
+  require 'ipaddr'
+  p IPAddr.new_ntoh("\300\250\001\001")   # => <IPAddr: IPv4:192.168.1.1/255.255.255.255>
+

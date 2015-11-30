@@ -1,0 +1,19 @@
+kind=defined
+names=gcdlcm
+visibility=public
+
+--- gcdlcm(n) -> [Integer]
+
+自身と整数 n の最大公約数と最小公倍数の配列 [self.gcd(n), self.lcm(n)]
+を返します。
+
+@raise ArgumentError n に整数以外のものを指定すると発生します。
+
+例:
+
+  2.gcdlcm(2)                    # => [2, 2]
+  3.gcdlcm(-7)                   # => [1, 21]
+  ((1<<31)-1).gcdlcm((1<<61)-1)  # => [1, 4951760154835678088235319297]
+
+@see [[m:Integer#gcd]], [[m:Integer#lcm]]
+

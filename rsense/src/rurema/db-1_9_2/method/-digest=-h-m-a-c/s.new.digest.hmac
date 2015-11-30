@@ -1,0 +1,12 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(key, digester) -> Digest::HMAC
+
+与えられて鍵とアルゴリズムをもとにして自身を初期化します。
+
+@param key 秘密鍵を指定します。
+
+@param digester ダイジェストを生成するためのクラスを指定します。
+

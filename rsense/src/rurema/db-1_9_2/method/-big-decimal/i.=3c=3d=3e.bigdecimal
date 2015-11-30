@@ -1,0 +1,10 @@
+kind=defined
+names=<=>
+visibility=public
+
+--- <=>(other)
+
+a == b なら 0、a > b なら 1、a < b なら -1 になります。
+
+    c = a <=> b 
+

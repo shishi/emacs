@@ -1,0 +1,24 @@
+kind=defined
+names=each_entry
+visibility=public
+
+--- each_entry -> Enumerator
+--- each_entry {|obj| block} -> self
+
+Calls <i>block</i> once for each element in <i>self</i>, passing that
+element as a parameter, converting multiple values from yield to an
+array.
+
+   class Foo
+     include Enumerable
+     def each
+       yield 1
+       yield 1,2
+     end
+   end
+   Foo.new.each_entry{|o| print o, " -- "}
+
+produces:
+
+   1 -- [1, 2] --
+

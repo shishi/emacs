@@ -1,0 +1,12 @@
+kind=defined
+names=real
+visibility=public
+
+--- real     -> Numeric
+
+自身を返します。
+
+Numeric のサブクラスは、このメソッドを適切に再定義しなければなりません。
+
+@see [[m:Numeric#imag]]、[[m:Complex#real]]
+

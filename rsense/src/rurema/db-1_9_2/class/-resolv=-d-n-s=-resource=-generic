@@ -1,0 +1,7 @@
+superclass=Resolv=DNS=Resource
+type=class
+library=resolv
+extended=
+included=
+
+汎用DNSリソース抽象クラスです。

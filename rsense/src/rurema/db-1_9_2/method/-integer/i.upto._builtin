@@ -1,0 +1,15 @@
+kind=defined
+names=upto
+visibility=public
+
+--- upto(max) {|n| ... } -> Fixnum | Bignum
+--- upto(max) -> Enumerator
+
+self から max まで 1 ずつ増やしながら繰り返します。
+self > max であれば何もしません。
+
+@param max   数値
+@return      self を返します。
+
+@see [[m:Integer#downto]], [[m:Numeric#step]], [[m:Integer#times]]
+

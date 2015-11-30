@@ -1,0 +1,8 @@
+kind=defined
+names=reply_to
+visibility=public
+
+--- reply_to
+
+Retunns an array of [[c:Net::IMAP::Address]] that represents the reply-to.
+

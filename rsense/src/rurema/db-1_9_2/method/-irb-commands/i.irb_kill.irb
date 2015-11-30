@@ -1,0 +1,15 @@
+kind=defined
+names=irb_kill,kill
+visibility=public
+
+--- kill(n)
+--- irb_kill(n)
+
+n で指定したサブ irb を停止します。
+n は以下のいずれかの値で指定します。
+
+  * irb インタプリタ番号
+  * irb オブジェクト
+  * スレッド ID
+  * 各インタプリタの self (「irb(obj)」で起動した時の obj)
+

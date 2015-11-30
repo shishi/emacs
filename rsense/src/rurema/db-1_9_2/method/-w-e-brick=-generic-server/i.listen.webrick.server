@@ -1,0 +1,15 @@
+kind=defined
+names=listen
+visibility=public
+
+--- listen(address, port) -> [TCPServer]
+
+与えられたアドレスとポートで [[c:TCPServer]] オブジェクトを生成し
+listener として管理します。
+
+@param address アドレスを文字列で指定します。
+
+@param port listen するポートを整数で指定します。
+
+@see [[m:WEBrick::GenericServer#listeners]], [[m:TCPServer#listen]]
+

@@ -1,0 +1,8 @@
+kind=defined
+names=cstime
+visibility=public
+
+--- cstime -> Float
+
+子プロセスの System CPU time
+

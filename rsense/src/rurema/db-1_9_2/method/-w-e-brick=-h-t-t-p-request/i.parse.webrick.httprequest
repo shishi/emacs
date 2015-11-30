@@ -1,0 +1,11 @@
+kind=defined
+names=parse
+visibility=public
+
+--- parse(socket = nil)    -> ()
+
+指定された socket からクライアントのリクエストを読み込み、
+自身のアクセサなどを適切に設定します。
+
+@param socket クライアントに接続された IO オブジェクトを指定します。
+

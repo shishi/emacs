@@ -1,0 +1,17 @@
+kind=defined
+names=top
+visibility=public
+
+--- top(lines, dest='') -> String
+メールヘッダと本文 lines 行を受信し、文字列として返します。
+
+destを渡すとそのオブジェクトにデータを書き込みますが、これは
+obsolete なので使わないでください。
+
+@param lines 本文を読みだす行数
+@param dest データを書き込む先(obsoleteなので使わないでください)
+@raise TimeoutError 通信がタイムアウトした場合に発生します
+@raise Net::POPError サーバが認証失敗以外のエラーを報告した場合に発生します
+@raise Net::POPBadResponse サーバからの応答がプロトコル上不正であった場合に発生します
+
+

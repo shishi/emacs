@@ -1,0 +1,12 @@
+superclass=Object
+type=class
+library=zlib
+extended=
+included=
+
+gzip 形式の圧縮ファイルを扱う抽象クラス。
+具体的な読み込み/書き込み操作は、それぞれサブクラスの
+[[c:Zlib::GzipReader]], [[c:Zlib::GzipWriter]] で定義されています。
+
+IO クラスのインスタンス (又は IO クラスのインスタンスと同じメソッドを
+持つオブジェクト) と関連付けて使用します。

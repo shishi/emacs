@@ -1,0 +1,26 @@
+superclass=Object
+type=class
+library=pstore
+extended=
+included=
+
+Rubyのオブジェクトを外部ファイルに格納するためのクラスです。
+内部で [[c:Marshal]] を使っています。
+
+=== 使い方
+
+データベースにアクセスするためには、
+transaction のブロック内である必要があります。
+インターフェースは [[c:Hash]] に似ています。
+
+  require 'pstore'
+  db = PStore.new("/tmp/foo")
+  db.transaction do
+    p db.roots       # => []
+    ary = db["root"] = [1,2,3,4]
+    ary[0] = [1,1.5]
+  end
+  
+  db.transaction do
+    p db["root"]     # => [[1, 1.5], 2, 3, 4]
+  end

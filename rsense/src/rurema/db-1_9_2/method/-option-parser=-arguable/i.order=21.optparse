@@ -1,0 +1,23 @@
+kind=defined
+names=order!
+visibility=public
+
+--- order!               -> [String]
+--- order!{|s| ... }     -> [String]
+
+自身を破壊的にパースし、パースされずに残った引数を文字列の配列として返します。
+[[m:OptionParser#order!]] を参照して下さい。
+
+@raise OptionParser::ParseError 自身のパースに失敗した場合、発生します。
+                                実際は OptionParser::ParseError のサブク
+                                ラスの例外になります。
+
+例:
+
+  require 'optparse'
+  
+  o = nil
+  ARGV.options.on('-a'){ o = true }
+  ARGV.order!
+  p o                                #=> true
+

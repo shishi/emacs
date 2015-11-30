@@ -1,0 +1,8 @@
+kind=defined
+names=KEY_SREPLACE
+visibility=public
+
+--- KEY_SREPLACE -> Integer
+
+Shift + Replace キーを表す定数です。
+

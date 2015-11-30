@@ -1,0 +1,14 @@
+#attlistdecl	REXML::StreamListener#attlistdecl
+#cdata	REXML::StreamListener#cdata
+#comment	REXML::StreamListener#comment
+#doctype	REXML::StreamListener#doctype
+#doctype_end	REXML::StreamListener#doctype_end
+#elementdecl	REXML::StreamListener#elementdecl
+#entity	REXML::StreamListener#entity
+#entitydecl	REXML::StreamListener#entitydecl
+#instruction	REXML::StreamListener#instruction
+#notationdecl	REXML::StreamListener#notationdecl
+#tag_end	REXML::StreamListener#tag_end
+#tag_start	REXML::StreamListener#tag_start
+#text	REXML::StreamListener#text
+#xmldecl	REXML::StreamListener#xmldecl

@@ -1,0 +1,6 @@
+.expand	RbConfig.expand
+.ruby	RbConfig.ruby
+:CONFIG	RbConfig::CONFIG
+:DESTDIR	RbConfig::DESTDIR
+:MAKEFILE_CONFIG	RbConfig::MAKEFILE_CONFIG
+:TOPDIR	RbConfig::TOPDIR

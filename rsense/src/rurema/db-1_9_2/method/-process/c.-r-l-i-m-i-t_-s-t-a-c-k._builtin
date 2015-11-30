@@ -1,0 +1,11 @@
+kind=defined
+names=RLIMIT_STACK
+visibility=public
+
+--- RLIMIT_STACK
+
+リソースの種類がプロセスのスタック領域のサイズであることを示す定数です。
+
+[[m:Process.#getrlimit]]、[[m:Process.#setrlimit]] で使われます。
+システムによっては定義されていません。
+

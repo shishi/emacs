@@ -1,0 +1,20 @@
+kind=defined
+names=each
+visibility=public
+
+--- each {|item| .... }    -> self
+--- each                   -> Enumerator
+
+各要素に対してブロックを評価します。
+
+ブロックが与えられなかった場合は、自身と each から生成した
+[[c:Enumerator]] オブジェクトを返します。
+
+    [1, 2, 3].each do |i|
+      puts i
+    end
+    #=> 1
+        2
+        3
+
+

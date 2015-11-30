@@ -1,0 +1,20 @@
+kind=defined
+names=check_until
+visibility=public
+
+--- check_until(regexp) -> String | nil
+regexp が一致するまで文字列をスキャンします。
+マッチに成功したらスキャン開始位置からマッチ部分の末尾までの部分文字列を返します。
+マッチに失敗したら nil を返します。
+
+このメソッドはマッチが成功してもスキャンポインタを進めません。
+
+@param regexp マッチに用いる正規表現を指定します。
+
+使用例
+      s = StringScanner.new('test string')
+      s.check_until(/str/) # => "test str"
+      s.matched            # => "str"
+      s.pos                # => 0
+      s.pre_match          # => "test "
+

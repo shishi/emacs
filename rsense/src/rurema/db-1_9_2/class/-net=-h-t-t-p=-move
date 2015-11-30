@@ -1,0 +1,7 @@
+superclass=Net=HTTPRequest
+type=class
+library=net.http
+extended=
+included=
+
+HTTP の MOVE リクエストを表すクラスです。

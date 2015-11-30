@@ -1,0 +1,12 @@
+kind=defined
+names=capture_io
+visibility=public 
+
+--- capture_io{ ... } -> Array
+
+与えられたブロックを評価中の標準出力と標準エラー出力を [[c:StringIO]] に
+変更します。
+
+@return ブロック評価中に出力された文字列を標準出力を第一要素、標準エラー出力を第二要素とした
+        配列にして返します。
+

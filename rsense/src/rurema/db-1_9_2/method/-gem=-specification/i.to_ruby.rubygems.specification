@@ -1,0 +1,10 @@
+kind=defined
+names=to_ruby
+visibility=public
+
+--- to_ruby -> String
+
+自身を再現するための Ruby スクリプトを文字列で返します。
+
+省略されている値はデフォルト値が使用されます。
+

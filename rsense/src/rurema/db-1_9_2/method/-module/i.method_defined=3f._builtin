@@ -1,0 +1,13 @@
+kind=defined
+names=method_defined?
+visibility=public
+
+--- method_defined?(name) -> bool
+
+モジュールにインスタンスメソッド name が定義されているとき
+true を返します。
+
+@param name [[c:Symbol]] か [[c:String]] を指定します。
+
+@see [[m:Module#public_method_defined?]], [[m:Module#private_method_defined?]], [[m:Module#protected_method_defined?]]
+

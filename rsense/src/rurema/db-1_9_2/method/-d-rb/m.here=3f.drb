@@ -1,0 +1,8 @@
+kind=defined
+names=here?
+visibility=public
+
+--- here?(uri)
+
+Is uri the URI for the current local server?
+

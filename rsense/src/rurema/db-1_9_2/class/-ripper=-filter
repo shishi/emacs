@@ -1,0 +1,41 @@
+superclass=Object
+type=class
+library=ripper.filter
+extended=
+included=
+
+イベントドリブンスタイルで Ruby プログラムを加工するためのクラスです。
+
+このクラスを継承して、必要なイベントに対応するメソッドを定義して使用し
+ます。
+
+=== 使用例
+
+  require 'ripper'
+  require 'cgi'
+  
+  class Ruby2HTML < Ripper::Filter
+    def on_default(event, tok, f)
+      f << CGI.escapeHTML(tok)
+    end
+  
+    def on_comment(tok, f)
+      f << %Q[<span class="comment">#{CGI.escapeHTML(tok)}</span>]
+    end
+  
+    def on_tstring_beg(tok, f)
+      f << %Q[<span class="string">#{CGI.escapeHTML(tok)}]
+    end
+  
+    def on_tstring_end(tok, f)
+      f << %Q[#{CGI.escapeHTML(tok)}</span>]
+    end
+  end
+  
+  Ruby2HTML.new(ARGF).parse('')
+
+Ruby プログラムを解析して、[[m:Ripper::SCANNER_EVENTS]] にあるスキャナ
+イベントを実行します。イベントはプログラムに書いた順番で実行されます。
+
+上記の例では、parse メソッドに渡した空文字列を初期値として、イベントハ
+ンドラが ARGF で渡された Ruby プログラムを HTML にして返します。

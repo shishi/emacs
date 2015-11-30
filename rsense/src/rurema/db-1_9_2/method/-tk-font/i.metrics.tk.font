@@ -1,0 +1,6 @@
+kind=defined
+names=metrics
+visibility=public
+
+--- metrics(option = nil)
+

@@ -1,0 +1,11 @@
+kind=defined
+names===
+visibility=public
+
+--- ==(other) -> bool
+
+自身の全ての行が比較対象と同じである場合は真を返します。
+そうでない場合は偽を返します。
+
+@param other [[c:CSV::Table]] を指定します。
+

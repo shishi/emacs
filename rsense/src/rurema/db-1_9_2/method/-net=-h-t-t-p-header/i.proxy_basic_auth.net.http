@@ -1,0 +1,11 @@
+kind=defined
+names=proxy_basic_auth
+visibility=public
+
+--- proxy_basic_auth(account, password) -> ()
+
+Proxy 認証のために Proxy-Authorization: ヘッダをセットします。
+
+@param account アカウント名を文字列で与えます。
+@param password パスワードを文字列で与えます。
+

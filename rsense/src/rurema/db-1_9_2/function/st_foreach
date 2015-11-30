@@ -1,0 +1,12 @@
+name=st_foreach
+private=false
+macro=false
+type=void
+filename=st.c
+params=(st_table *table, enum st_retval (*func)(), char *arg)
+
+
+[[m:Hash#each]], delete_if などの実体。ハッシュ内の全てのキーと値、arg を
+引数にして、func を実行する。func の返り値 enum st_retval は ST_CONTINUE
+ST_STOP ST_DELETE のどれか。どれも見ためどおりの働きをする。
+

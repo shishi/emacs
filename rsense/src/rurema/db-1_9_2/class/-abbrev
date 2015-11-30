@@ -1,0 +1,19 @@
+superclass=
+type=module
+library=abbrev
+extended=
+included=
+
+与えられた文字列の短縮形を生成するモジュールです。
+
+=== 例
+
+  require 'abbrev'
+  require 'pp'
+
+  pp Abbrev.abbrev(%w[ruby rules]).sort
+      # => [["rub", "ruby"],
+      #    ["ruby", "ruby"],
+      #    ["rul", "rules"],
+      #    ["rule", "rules"],
+      #    ["rules", "rules"]]

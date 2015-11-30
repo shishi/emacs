@@ -1,0 +1,9 @@
+kind=defined
+names=length,size
+visibility=public
+
+--- size   -> Integer
+--- length -> Integer
+
+自身に含まれる Gem の個数を返します。
+

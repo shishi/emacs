@@ -1,0 +1,7 @@
+kind=defined
+names=kanjifont_configure
+visibility=public
+
+--- kanjifont_configure(knj, keys = nil)
+
+

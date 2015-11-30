@@ -1,0 +1,6 @@
+kind=defined
+names=ret_val
+visibility=public
+
+--- ret_val(val)
+

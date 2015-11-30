@@ -1,0 +1,6 @@
+kind=defined
+names=add_command
+visibility=public
+
+--- add_command(keys = nil)
+

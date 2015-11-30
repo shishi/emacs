@@ -1,0 +1,6 @@
+kind=defined
+names=set_safe_level
+visibility=public
+
+--- set_safe_level(safe)
+

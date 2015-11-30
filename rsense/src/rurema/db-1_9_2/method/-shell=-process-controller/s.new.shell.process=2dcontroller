@@ -1,0 +1,10 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(shell)
+
+自身を初期化します。
+
+@param shell [[c:Shell]] のインスタンスを指定します。
+

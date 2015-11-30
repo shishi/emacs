@@ -1,0 +1,10 @@
+name=rb_obj_taint
+private=false
+macro=false
+type=VALUE
+filename=object.c
+params=(VALUE obj)
+
+
+[[m:Object#taint]]
+

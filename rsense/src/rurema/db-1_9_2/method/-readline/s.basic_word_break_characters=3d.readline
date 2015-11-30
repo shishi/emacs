@@ -1,0 +1,20 @@
+kind=defined
+names=basic_word_break_characters=
+visibility=public
+
+--- basic_word_break_characters=(string)
+
+ユーザの入力の補完を行う際、
+単語の区切りを示す複数の文字で構成される文字列 string を指定します。
+
+GNU Readline のデフォルト値は、Bash の補完処理で使用している文字列
+" \t\n\"\\'`@$><=;|&{(" (スペースを含む) になっています。
+
+@param string 文字列を指定します。
+
+@raise NotImplementedError サポートしていない環境で発生します。
+
+@raise SecurityError セーフレベル ($SAFE) が 4 の場合に発生します。
+
+@see [[m:Readline.basic_word_break_characters]]
+

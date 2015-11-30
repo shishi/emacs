@@ -1,0 +1,10 @@
+kind=defined
+names=only_trusted=
+visibility=public 
+
+--- only_trusted=(flag)
+
+検証済みの Gem のみインストールするかどうかを設定します。
+
+@param flag 真、または偽を指定します。
+

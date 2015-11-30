@@ -1,0 +1,7 @@
+kind=defined
+names=textinput
+visibility=public
+
+--- textinput
+textinput要素を生成するオブジェクトを返します．
+

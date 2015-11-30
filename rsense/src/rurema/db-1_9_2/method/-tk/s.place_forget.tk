@@ -1,0 +1,7 @@
+kind=defined
+names=place_forget
+visibility=public
+
+--- place_forget(*args)
+
+

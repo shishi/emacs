@@ -1,0 +1,6 @@
+kind=defined
+names=namespace_context=
+visibility=public
+
+--- namespace_context=(x)
+

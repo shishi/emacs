@@ -1,0 +1,10 @@
+kind=added
+names=have_devel?
+visibility=private 
+
+--- have_devel? -> bool
+
+開発環境がインストールされているかどうか検査するために何もしない実行ファ
+イルを作成しようと試みます。成功した場合は、真を返します。失敗した場合
+は、偽を返します。
+

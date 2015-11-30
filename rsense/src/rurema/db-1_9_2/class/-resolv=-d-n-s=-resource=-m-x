@@ -1,0 +1,11 @@
+superclass=Resolv=DNS=Resource
+type=class
+library=resolv
+extended=
+included=
+
+DNS リソースの MX レコード
+を表す抽象クラスです。
+
+[[m:Resolv::DNS#getresource]] で MX レコードを得たい場合は
+[[c:Resolv::DNS::Resource::IN::MX]] を使うべきです。

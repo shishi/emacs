@@ -1,0 +1,16 @@
+kind=defined
+names=verify_trust_dir
+visibility=public
+
+--- verify_trust_dir(path, perms)
+信頼するディレクトリが存在することを確認します。
+
+与えられたパスが存在する場合、ディレクトリであることを確認します。
+そうでない場合は、ディレクトリを作成してパーミッションを変更します。
+
+@param path 確認するパスを指定します。
+
+@param perms ディレクトリを作成する場合のパーミッションを指定します。
+
+@raise Gem::Security::Exception path がディレクトリでない場合に発生します。
+

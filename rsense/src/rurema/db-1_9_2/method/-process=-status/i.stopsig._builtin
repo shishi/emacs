@@ -1,0 +1,9 @@
+kind=defined
+names=stopsig
+visibility=public
+
+--- stopsig    -> nil | Integer
+
+stopped? が真の場合そのシグナルの番号を、そうでない場合は
+nil を返します。
+

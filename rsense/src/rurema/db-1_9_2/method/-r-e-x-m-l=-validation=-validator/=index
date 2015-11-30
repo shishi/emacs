@@ -1,0 +1,4 @@
+#dump	REXML::Validation::Validator#dump
+#reset	REXML::Validation::Validator#reset
+#validate	REXML::Validation::Validator#validate
+:NILEVENT	REXML::Validation::Validator::NILEVENT

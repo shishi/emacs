@@ -1,0 +1,27 @@
+kind=defined
+names=yield
+visibility=public
+
+--- yield(*arg) -> ()
+
+[[m:Proc#call]] と同じですが、引数の数のチェックを行いません。
+
+  pr = Proc.new {|a,b,c| p [a,b,c]}
+  pr.yield(1)        #=> [1, nil, nil]
+  pr.yield(1,2,3,4)  #=> [1, 2, 3]
+  pr.call(1)         #=> wrong # of arguments (4 for 3) (ArgumentError)
+
+これは yield と同じ動作です。
+
+  def foo
+    yield(1)
+  end
+  foo {|a,b,c| p [a,b,c]}
+
+@param arg 手続きオブジェクトに与える引数を指定します。
+
+@raise LocalJumpError Procを生成したメソッドからリターンしてしまった場合に発生します。
+
+@see [[ref:d:spec/call#yield]]
+
+

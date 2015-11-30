@@ -1,0 +1,16 @@
+kind=defined
+names=fetch
+visibility=public
+
+--- fetch(key) -> String
+--- fetch(key, default) -> String
+--- fetch(key) {|key| ... } -> String
+
+key に関連づけられた値を返します。該当するキーが登録されてい
+ない時には、引数 default が与えられていればその値を、ブロッ
+クが与えられていればそのブロックを評価した値を返します。そのいずれ
+でもなければ例外 [[c:IndexError]] が発生します。
+
+@param key       環境変数の名前を指定します。 to_str で文字列化されます。
+@param default   keyに対応する環境変数の値がないときにこの値を返します。 
+

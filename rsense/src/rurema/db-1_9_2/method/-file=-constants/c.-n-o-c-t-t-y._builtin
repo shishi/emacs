@@ -1,0 +1,8 @@
+kind=defined
+names=NOCTTY
+visibility=public
+
+--- NOCTTY
+自身がTTY制御しないようにTTYを開きます。
+[[m:File.open]]で使用します。
+

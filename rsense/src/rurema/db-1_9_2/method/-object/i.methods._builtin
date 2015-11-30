@@ -1,0 +1,67 @@
+kind=defined
+names=methods
+visibility=public
+
+--- methods(include_inherited = true) -> [Symbol]
+そのオブジェクトに対して呼び出せるメソッド名の一覧を返します。
+このメソッドは public メソッドおよび protected メソッドの名前を返します。
+
+ただし特別に、引数が偽の時は [[m:Object#singleton_methods]](false) と同じになっています。
+
+
+@param include_inherited 引数が偽の時は [[m:Object#singleton_methods]](false) と同じになります。
+
+  #例1:
+  
+  class Parent
+    private;   def private_parent()   end
+    protected; def protected_parent() end
+    public;    def public_parent()    end
+  end
+  
+  class Foo < Parent
+    private;   def private_foo()   end
+    protected; def protected_foo() end
+    public;    def public_foo()    end
+  end
+  
+  obj = Foo.new
+  class <<obj
+      private;   def private_singleton()   end
+      protected; def protected_singleton() end
+      public;    def public_singleton()    end
+  end
+  
+  # あるオブジェクトの応答できるメソッドの一覧を得る。
+  p obj.methods(false)
+  p obj.public_methods(false)
+  p obj.private_methods(false)
+  p obj.protected_methods(false)
+  
+  #実行結果
+  
+  [:protected_singleton, :public_singleton]
+  [:public_singleton, :public_foo]
+  [:private_singleton, :private_foo]
+  [:protected_singleton, :protected_foo]
+  
+  #例2:
+    
+  # あるオブジェクトの応答できるメソッドの一覧を得る。
+  # 自身のクラスの親クラスのインスタンスメソッドも含めるために true を指定して
+  # いるが、Object のインスタンスメソッドは一覧から排除している。
+  p obj.methods(true)           - Object.instance_methods(true)
+  p obj.public_methods(true)    - Object.public_instance_methods(true)
+  p obj.private_methods(true)   - Object.private_instance_methods(true)
+  p obj.protected_methods(true) - Object.protected_instance_methods(true)
+  
+  #実行結果
+  
+  [:protected_singleton, :public_singleton, :protected_foo, :public_foo, :protected_parent, :public_parent]
+  [:public_singleton, :public_foo, :public_parent]
+  [:private_singleton, :private_foo, :private_parent]
+  [:protected_singleton, :protected_foo, :protected_parent]
+
+
+@see [[m:Module#instance_methods]],[[m:Object#singleton_methods]]
+

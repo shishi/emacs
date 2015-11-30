@@ -1,0 +1,9 @@
+kind=defined
+names=rdoc_files
+visibility=public 
+
+--- rdoc_files -> Rake::FileList
+
+RDoc の生成に使用するファイルリストを返します。
+デフォルトは空です。
+

@@ -1,0 +1,11 @@
+kind=defined
+names=truncate
+visibility=public
+
+--- truncate(length) -> 0
+File.truncate(self.to_s, length) と同じです。
+
+@param length 変更したいサイズを整数で与えます。
+
+@see [[m:File.truncate]]
+

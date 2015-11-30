@@ -1,0 +1,6 @@
+kind=defined
+names=overrideredirect
+visibility=public
+
+--- overrideredirect(mode = Tk::None)
+

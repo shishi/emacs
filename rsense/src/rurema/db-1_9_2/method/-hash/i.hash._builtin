@@ -1,0 +1,16 @@
+kind=defined
+names=hash
+visibility=public
+
+--- hash    -> Integer
+
+自身が保持するキーと値のハッシュ値を元にして算出した整数を返します。
+自身が保持するキーや値が変化すればこのメソッドが返す値も変化します。
+
+  a = {}
+  p a.hash     #=> 0
+  a[1] = :x
+  p a.hash     #=> 329543
+
+
+

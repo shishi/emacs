@@ -1,0 +1,15 @@
+kind=defined
+names=completer_quote_characters
+visibility=public
+
+--- completer_quote_characters -> String
+
+ユーザの入力の補完を行う際、スペースなどの単語の区切りを
+クオートするための複数の文字で構成される文字列を取得します。
+
+@raise NotImplementedError サポートしていない環境で発生します。
+
+@raise SecurityError セーフレベル ($SAFE) が 4 の場合に発生します。
+
+@see [[m:Readline.completer_quote_characters=]]
+

@@ -1,0 +1,8 @@
+name=rb_uint_new
+private=false
+macro=false
+type=VALUE
+filename=ruby.h
+params=(unsigned int v)
+
+

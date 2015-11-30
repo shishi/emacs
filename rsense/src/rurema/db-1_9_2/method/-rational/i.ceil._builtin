@@ -1,0 +1,30 @@
+kind=defined
+names=ceil
+visibility=public 
+
+--- ceil(precision = 0) -> Integer | Rational
+
+自身と等しいかより大きな整数のうち最小のものを返します。
+
+@param precision 計算結果の精度
+
+@raise TypeError precision に整数以外のものを指定すると発生します。
+
+例:
+
+  Rational(3).ceil      # => 3
+  Rational(2, 3).ceil   # => 1
+  Rational(-3, 2).ceil  # => -1
+
+precision を指定した場合は指定した桁数の数値と、上述の性質に最も近い整
+数か [[c:Rational]] を返します。
+
+例:
+
+  Rational('-123.456').ceil(+1)       # => (-617/5)
+  Rational('-123.456').ceil(+1).to_f  # => -123.4
+  Rational('-123.456').ceil(0)        # => -123
+  Rational('-123.456').ceil(-1)       # => -120
+
+@see [[m:Rational#floor]], [[m:Rational#round]], [[m:Rational#truncate]]
+

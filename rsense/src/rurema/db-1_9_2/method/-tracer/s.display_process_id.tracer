@@ -1,0 +1,10 @@
+kind=defined
+names=display_process_id,display_process_id?
+visibility=public
+
+--- display_process_id -> bool
+--- display_process_id? -> bool
+
+真ならば、プロセス ID を表示します。
+デフォルトは、偽です。
+

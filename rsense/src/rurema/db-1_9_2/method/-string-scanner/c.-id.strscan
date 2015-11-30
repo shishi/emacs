@@ -1,0 +1,10 @@
+kind=defined
+names=Id
+visibility=public
+
+--- Id -> String
+
+[[c:StringScanner]] クラスの詳しいバージョンを文字列で返します。
+この文字列は [[m:Object#freeze]] されています。
+
+

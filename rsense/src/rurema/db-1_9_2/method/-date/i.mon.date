@@ -1,0 +1,8 @@
+kind=defined
+names=mon,month
+visibility=public
+
+--- mon -> Integer
+--- month -> Integer
+月を返します (1-12)。
+

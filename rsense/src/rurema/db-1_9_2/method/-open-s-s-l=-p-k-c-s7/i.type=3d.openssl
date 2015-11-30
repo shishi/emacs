@@ -1,0 +1,13 @@
+kind=defined
+names=type=
+visibility=public
+
+--- type=(type)
+PKCS7 オブジェクトのタイプを [[c:Symbol]] オブジェクトで設定します。
+
+このメソッドは使わないでください。
+このメソッドは PKCS#7 の低レベル API であり、正しく使うのは
+難しいでしょう。
+
+@param type 設定するタイプ(シンボル)
+

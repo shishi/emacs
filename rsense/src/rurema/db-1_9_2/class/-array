@@ -1,0 +1,14 @@
+superclass=Object
+type=class
+library=_builtin
+extended=
+included=Enumerable
+
+配列クラスです。
+配列は任意の Ruby オブジェクトを要素として持つことができます。
+
+一般的には配列は配列式を使って
+
+  [1, 2, 3]
+
+のように生成します。

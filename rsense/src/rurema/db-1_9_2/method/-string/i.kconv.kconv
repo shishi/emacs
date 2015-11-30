@@ -1,0 +1,19 @@
+kind=added
+names=kconv
+visibility=public
+
+--- kconv(out_code, in_code = Kconv::AUTO) -> String
+
+self のエンコーディングを out_code に変換した文字列を
+返します。
+out_code in_code は [[c:Kconv]] の定数で指定します。
+
+このメソッドは MIME エンコードされた文字列を展開し、
+いわゆる半角カナを全角に変換します。
+これらを変換したくない場合は、 [[m:NKF.#nkf]] を使ってください。
+
+@param out_code 変換後のエンコーディングを [[c:Kconv]] の定数で指定します。
+@param in_code 変換する文字列のエンコーディングを [[c:Kconv]] の定数で指定します。
+
+@see [[m:Kconv.#kconv]]
+

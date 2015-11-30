@@ -1,0 +1,17 @@
+kind=defined
+names=default_port
+visibility=public
+
+--- default_port    -> Integer | nil
+
+スキームに対応するデフォルトのポート番号を整数で返します。
+
+  require 'uri'
+  URI::Generic.default_port     # => nil
+  URI::FTP.default_port         # => 21
+  URI::HTTP.default_port        # => 80
+  URI::HTTPS.default_port       # => 443
+  URI::LDAP.default_port        # => 389
+  URI::LDAPS.default_port       # => 636
+  URI::MailTo.default_port      # => nil
+

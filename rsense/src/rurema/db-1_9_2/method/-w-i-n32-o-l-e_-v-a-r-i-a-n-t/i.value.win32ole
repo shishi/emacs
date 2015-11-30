@@ -1,0 +1,12 @@
+kind=defined
+names=value
+visibility=public
+
+--- value -> object
+値に対応するRubyオブジェクトを取得します。
+
+@return 値に対応するRubyのオブジェクトを返します。
+
+   obj = WIN32OLE_VARIANT.new(1, WIN32OLE::VARIANT::VT_BSTR)
+   obj.value # => "1" (VT_BSTRを指定して生成したので、Stringオブジェクトとなる)
+

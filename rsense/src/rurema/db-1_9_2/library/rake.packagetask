@@ -1,0 +1,30 @@
+methods=
+sublibraries=
+requires=rake,rake.tasklib
+classes=Rake=PackageTask
+is_sublibrary=true
+
+配布するパッケージ (zip, tar, etc...) を作成するためのタスクを定義します。
+
+このライブラリをロードすると以下のタスクが使用可能になります。
+
+: package
+  パッケージを作成します。
+: clobber_package
+  作成したパッケージを削除します。このタスクは clobber タスクにも追加されます。
+: repackage
+  パッケージが古くない場合でもパッケージを再作成します。
+: PACKAGE_DIR/NAME-VERSION.tgz
+  [[m:Rake::PackageTask#need_tar]] が真の場合 gzip された tar パッケージを作成します。
+: PACKAGE_DIR/NAME-VERSION.tar.gz
+  [[m:Rake::PackageTask#need_tar_gz]] が真の場合 gzip された tar パッケージを作成します。
+: PACKAGE_DIR/NAME-VERSION.tar.bz2
+  [[m:Rake::PackageTask#need_tar_bz2]] が真の場合 bzip2 された tar パッケージを作成します。
+: PACKAGE_DIR/NAME-VERSION.zip
+  [[m:Rake::PackageTask#need_zip]] が真の場合 zip されたパッケージを作成します。
+
+例:
+   Rake::PackageTask.new("rake", "1.2.3") do |t|
+     t.need_tar = true
+     t.package_files.include("lib/**/*.rb")
+   end

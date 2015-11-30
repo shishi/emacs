@@ -1,0 +1,13 @@
+kind=defined
+names=Errno
+visibility=public
+
+--- Errno
+
+Errno::EXXX の各クラスに対応するシステム依存のエラーコード値(整数)です。
+
+例:
+
+    p Errno::EAGAIN::Errno            # => 11
+    p Errno::EWOULDBLOCK::Errno       # => 11
+

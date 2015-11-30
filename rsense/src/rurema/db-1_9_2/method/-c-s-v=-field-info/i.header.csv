@@ -1,0 +1,9 @@
+kind=defined
+names=header
+visibility=public
+
+--- header -> Array
+
+利用可能な場合はヘッダを表す配列を返します。
+
+

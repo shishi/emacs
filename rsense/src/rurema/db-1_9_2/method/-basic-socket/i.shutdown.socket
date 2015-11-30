@@ -1,0 +1,22 @@
+kind=defined
+names=shutdown
+visibility=public
+
+--- shutdown(how = Socket::SHUT_RDWR) -> 0
+
+ソケットの以降の接続を終了させます。
+how の値によって以下のように接続が終了します。
+
+  * Socket::SHUT_RD: それ以降の受信が拒否されます
+  * Socket::SHUT_WR: それ以降の送信が拒否されます
+  * Socket::SHUT_RDWR: それ以降の送信、受信ともに拒否されます
+
+how を省略すると Socket::SHUT_RDWR を指定したことになります。
+[[man:shutdown(2)]] を参照してください。
+
+@param how 接続の終了の仕方を Socket::SHUT_RD, Socket::SHUT_WR, Socket::SHUT_RDWR などで指定します。
+
+@raise Errno::EXXX ソケットの以降の接続を終了操作が失敗した場合に発生します。
+@raise ArgumentError how に範囲外の整数を入力した場合に発生します。
+@raise SecurityError セーフレベルが 4 以上で、ソケットに汚染マークがついていない場合発生します。
+

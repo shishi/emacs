@@ -1,0 +1,5 @@
+kind=defined
+names=DIGEST_SHA1
+visibility=public
+
+--- DIGEST_SHA1 -> Symbol | Class

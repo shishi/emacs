@@ -1,0 +1,10 @@
+kind=defined
+names=row_vector
+visibility=public
+
+--- row_vector(row) -> Matrix
+
+要素がrowの(1,n)型の行列(行ベクトル)を生成します。
+
+@param row (1,n)型の行列として生成する[[c:Vector]] [[c:Array]] オブジェクト
+

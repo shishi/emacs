@@ -1,0 +1,14 @@
+kind=defined
+names=LOG_MASK
+visibility=public
+
+--- LOG_MASK(priority) -> Fixnum
+
+1つの優先度に対するマスクを作成する。
+
+@param priority priority は優先度を示す定数を指定します。
+                詳しくは、[[c:Syslog::Constants]]を参照してください。
+
+例:
+         Syslog.mask = Syslog::LOG_MASK(Syslog::LOG_ERR)
+

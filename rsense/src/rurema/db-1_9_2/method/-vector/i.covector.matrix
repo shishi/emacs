@@ -1,0 +1,19 @@
+kind=defined
+names=covector
+visibility=public
+
+--- covector -> Matrix
+[[c:Matrix]] オブジェクトへ変換します。
+
+列ベクトル (行列)、すなわち、(n, 1) 型の行列に変換します。
+実際には [[m:Matrix.row_vector]](self) を適用します。
+
+例:
+
+  require 'matrix'
+
+  v = Vector[2, 3, 5]
+  p v #=> Vector[2, 3, 5]
+  m = v.covector
+  p m #=> Matrix[[2, 3, 5]]
+

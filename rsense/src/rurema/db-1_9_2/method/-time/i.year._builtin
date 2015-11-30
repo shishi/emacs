@@ -1,0 +1,10 @@
+kind=defined
+names=year
+visibility=public
+
+--- year    -> Integer  
+
+年を整数で返します。
+
+  p Time.local(2000, 1, 1).year #=> 2000
+

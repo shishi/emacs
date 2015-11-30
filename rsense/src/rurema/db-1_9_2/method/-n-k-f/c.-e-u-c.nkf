@@ -1,0 +1,8 @@
+kind=defined
+names=EUC
+visibility=public
+
+--- EUC -> Encoding
+
+EUC コードを表します。
+

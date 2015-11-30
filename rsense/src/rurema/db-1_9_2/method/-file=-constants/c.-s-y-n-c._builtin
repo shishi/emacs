@@ -1,0 +1,10 @@
+kind=defined
+names=SYNC
+visibility=public
+
+--- SYNC
+ファイルを同期モードで開きます。
+open(2) で O_SYNCが指定できる場合に使えます。
+[[m:File.open]]で使用します。
+
+

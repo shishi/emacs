@@ -1,0 +1,11 @@
+kind=defined
+names=input=
+visibility=public
+
+--- input=(input)
+
+readline メソッドで使用する入力用の [[c:File]] オブジェクト input を指定します。
+戻り値は指定した [[c:File]] オブジェクト input です。
+
+@param input [[c:File]] オブジェクトを指定します。
+

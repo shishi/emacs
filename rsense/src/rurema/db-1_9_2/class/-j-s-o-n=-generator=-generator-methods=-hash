@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=json
+extended=
+included=
+
+[[c:Hash]] に JSON で使用するインスタンスメソッドを追加するためのモジュールです。

@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=json
+extended=
+included=
+
+[[c:String]] に JSON で使用する特異メソッドを追加するためのモジュールです。

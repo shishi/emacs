@@ -1,0 +1,20 @@
+kind=defined
+names=AlmostNoSecurity
+visibility=public
+
+--- AlmostNoSecurity -> Gem::Security::Policy
+
+ほとんどの検証を行わないポリシーです。
+
+署名されたデータの検証のみ行います。
+
+このポリシーは何もしないよりはマシですが、ほとんど役に立たない上、
+簡単に騙すことができるので、使用しないでください。
+
+    :verify_data      => true,
+    :verify_signer    => false,
+    :verify_chain     => false,
+    :verify_root      => false,
+    :only_trusted     => false,
+    :only_signed      => false
+

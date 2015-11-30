@@ -1,0 +1,6 @@
+kind=defined
+names=_destroy_slaves_of_slaveIP
+visibility=public
+
+--- _destroy_slaves_of_slaveIP(ip)
+

@@ -1,0 +1,94 @@
+kind=defined
+names=gsub!
+visibility=public
+
+--- gsub!(pattern, replace) -> self | nil
+
+文字列中で pattern にマッチする部分全てを文字列 replace に破壊的に置き換えます。
+
+Ruby 1.6 以前では pattern が文字列の場合、
+その文字列を正規表現にコンパイルしていました。
+しかし Ruby 1.8 以降では、その文字列そのものがパターンになります。
+
+置換文字列 replace 中の \& と \0 はマッチした部分文字列に、
+\1 ... \9 は n 番目の括弧の内容に置き換えられます。
+置換文字列内では \`、\'、\+ も使えます。
+これらは [[m:$`]]、[[m:$']]、[[m:$+]] に対応します。
+
+gsub! は通常 self を変更して返しますが、
+置換が起こらなかった場合は nil を返します。
+
+@param pattern    置き換える文字列のパターン
+@param replace    pattern で指定した文字列と置き換える文字列
+@return 置換した場合は self、置換しなかった場合は nil
+
+例:
+
+    buf = "String-String"
+    buf.gsub!(/in./, "!!")
+    p buf   # => "Str!!-Str!!"
+
+    buf = "String.String"
+    buf.gsub!(/in./, '<<\&>>')
+    p buf   # => "Str<<ing>>-Str<<ing>>"
+
+注意:
+
+引数 replace の中で [[m:$1]] を使うことはできません。
+replace は gsub メソッドの呼び出しより先に評価されるので、
+まだ gsub の正規表現マッチが行われておらず、
+$1 がセットされていないからです。
+
+また、gsub では「\」が部分文字列との置き換えという特別な意味を持つため、
+replace に「\」自身を入れたいときは
+「\」を二重にエスケープしなければなりません。
+
+例:
+    # ひとつめの括弧にマッチした部分に置き換えるときによくやる間違い
+    'abbbcd'.gsub!(/a(b+)/, "#{$1}")       # NG
+    'abbbcd'.gsub!(/a(b+)/, "\1")          # NG
+    'abbbcd'.gsub!(/a(b+)/, "\\1")         # OK
+    'abbbcd'.gsub!(/a(b+)/, '\\1')         # OK
+    'abbbcd'.gsub!(/a(b+)/, '\1')          # OK
+    'abbbcd'.gsub!(/a(b+)/) { $1 }         # OK   これがもっとも安全
+
+@see [[m:String#sub]]
+
+--- gsub!(pattern) {|matched| .... } -> self | nil
+--- gsub!(pattern) -> Enumerator
+
+文字列中で pattern にマッチする部分全てを順番にブロックに渡し、
+その評価結果に置き換えます。
+
+Ruby 1.6 以前では pattern が文字列の場合、
+その文字列を正規表現にコンパイルしていました。
+しかし Ruby 1.8 以降では、その文字列そのものがパターンになります。
+
+また、ブロックなしの場合と違い、ブロックの中からは
+組み込み変数 [[m:$1]], $2, $3, ... を問題なく参照できます。
+
+@param pattern    置き換える文字列のパターン
+@return 置換した場合は self、置換しなかった場合は nil
+
+例:
+    str = 'abcabc'
+    str.gsub!(/b/) {|s| s.upcase }
+    p str    #=> "aBcaBc"
+
+    str = 'abcabc'
+    str.gsub!(/b/) { $&.upcase }
+    p str    #=> "aBcaBc"
+
+@see [[m:String#sub]]
+
+--- gsub!(pattern, hash) -> self | nil
+
+文字列中の pattern にマッチした部分をキーにして hash を引いた値で置き換えます。
+
+@param pattern    置き換える文字列のパターン
+@param hash       置き換える文字列を与えるハッシュ
+
+  hash = {'b'=>'B', 'c'=>'C'}
+  p "abcabc".gsub(/[bc]/){hash[$&]} #=> "aBCaBC"
+  p "abcabc".gsub(/[bc]/, hash)     #=> "aBCaBC"
+

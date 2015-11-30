@@ -1,0 +1,7 @@
+superclass=OpenSSL=OpenSSLError
+type=class
+library=openssl
+extended=
+included=
+
+OpenSSL::X509::Name固有のエラーの場合に発生する例外です。

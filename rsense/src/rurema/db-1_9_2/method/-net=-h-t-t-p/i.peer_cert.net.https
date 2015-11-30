@@ -1,0 +1,12 @@
+kind=added
+names=peer_cert
+visibility=public
+
+--- peer_cert -> OpenSSL::X509::Certificate | nil
+サーバの証明書を返します。
+
+SSL/TLS が有効でなかったり、接続前である場合には nil
+を返します。
+
+@see [[m:OpenSSL::SSL::SSLSocket#peer_cert]]
+

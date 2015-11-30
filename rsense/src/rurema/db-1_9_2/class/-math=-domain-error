@@ -1,0 +1,8 @@
+superclass=StandardError
+type=class
+library=_builtin
+extended=
+included=
+
+数学関数(module Math のモジュール関数)で与えた引数が定義域
+に含まれていない場合に発生します。

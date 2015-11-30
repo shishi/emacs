@@ -1,0 +1,8 @@
+kind=defined
+names=serial
+visibility=public
+
+--- serial -> Integer
+発行者 (CA) が証明書に付ける識別番号を返します。
+
+@see [[m:OpenSSL::X509::Certificate#serial=]]

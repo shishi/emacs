@@ -1,0 +1,31 @@
+methods=String/i.kconv.kconv,String/i.tojis.kconv,String/i.toeuc.kconv,String/i.tosjis.kconv,String/i.toutf8.kconv,String/i.toutf16.kconv,String/i.toutf32.kconv,String/i.tolocale.kconv,String/i.iseuc.kconv,String/i.issjis.kconv,String/i.isutf8.kconv,String/i.isjis.kconv
+sublibraries=
+requires=
+classes=Kconv
+is_sublibrary=false
+
+日本語文字コードの変換を手軽に行うためのライブラリです。
+
+kconv を require すると [[c:String]] クラスに変換用のメソッドが定義されます。
+[[c:Kconv]] にも同等のメソッドが定義されます。 [[c:Kconv]] には
+エンコーディングを表す定数も定義されています。
+
+1.9.1 以降では、Ruby の m17n 機能を用いてエンコーディングの変換を
+行うことができます。1.8 との互換性が問題でないのならば、
+m17n 機能を使うほうがよいでしょう。MIMEのデコード等面倒な問題を
+避けることができます。
+
+=== 使用例
+
+  newstring = Kconv.kconv(string, Kconv::JIS, Kconv::AUTO)
+  newstring = Kconv.tojis(string)
+  newstring = Kconv.toeuc(string)
+  newstring = Kconv.tosjis(string)
+  guessed_code = Kconv.guess(string)
+
+または
+
+  newstring = string.kconv(Kconv::JIS, Kconv::AUTO)
+  newstring = string.tojis
+  newstring = string.toeuc
+  newstring = string.tosjis

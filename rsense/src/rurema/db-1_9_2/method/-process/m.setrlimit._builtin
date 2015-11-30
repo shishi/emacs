@@ -1,0 +1,61 @@
+kind=defined
+names=setrlimit
+visibility=public
+
+--- setrlimit(resource, cur_limit, max_limit)    -> nil
+--- setrlimit(resource, limit)                   -> nil
+
+カレントプロセスでのリソースの制限値を設定します。
+
+@param resource リソースの種類を示す定数を指定します。指定できる定数はシステムに依存します。
+
+@param limit resource によって意味が決まる制限値を表す整数もしくは定数を指定します。
+             soft limit と hard limit 両方にこの値が使われます。
+
+@param cur_limit 現在の制限値(soft limit)を表す整数もしくは定数を指定します。
+
+@param max_limit soft limit として設定可能な最大値(hard limit)を表す整数もしくは定数を指定します。
+
+@raise Errno::EXXX リソースの制限値の設定に失敗した場合に発生します。
+
+@raise NotImplementedError メソッドが現在のプラットフォームで実装されていない場合に発生します。
+
+引数 resource で有効な定数は以下のとおりです。
+
+: [[m:Process::RLIMIT_CORE]]
+ core ファイルのサイズ (バイト) (SUSv3)
+: [[m:Process::RLIMIT_CPU]]
+ プロセスの CPU 時間 (秒) (SUSv3)
+: [[m:Process::RLIMIT_DATA]]
+ プロセスのデータ領域のサイズ (バイト) (SUSv3)
+: [[m:Process::RLIMIT_FSIZE]]
+ プロセスが生成するファイルのサイズ (バイト) (SUSv3)
+: [[m:Process::RLIMIT_NOFILE]]
+ プロセスがオープンできるファイルの数 (SUSv3)
+: [[m:Process::RLIMIT_STACK]]
+ プロセスのスタック領域のサイズ (バイト) (SUSv3)
+: [[m:Process::RLIMIT_AS]]
+ プロセスの仮想メモリサイズ (バイト) (SUSv3, NetBSD, FreeBSD, OpenBSD but 4.4BSD-Lite))
+: [[m:Process::RLIMIT_MEMLOCK]]
+ [[man:mlock(2)]] でロックできるトータルのサイズ (バイト) (4.4BSD, GNU/Linux)
+: [[m:Process::RLIMIT_NPROC]]
+ そのユーザのプロセスの最大数 (4.4BSD, GNU/Linux)
+: [[m:Process::RLIMIT_RSS]]
+ 使用できる実メモリの最大サイズ (バイト) (4.2BSD, GNU/Linux)
+: [[m:Process::RLIMIT_SBSIZE]]
+ ソケットバッファのサイズ (バイト) (NetBSD, FreeBSD)
+
+引数 limit, cur_limit, max_limit で有効な定数は以下のとおりです。
+
+ * [[m:Process::RLIM_INFINITY]] リソースに制限を設けないことを意味します。
+ * [[m:Process::RLIM_SAVED_CUR]]
+ * [[m:Process::RLIM_SAVED_MAX]]
+
+以下の例は RLIMIT_CORE の制限を hard limit (max limit) まで引き上げ、可能なら core を残すようにします。
+
+  Process.setrlimit(Process::RLIMIT_CORE, 
+                    Process.getrlimit(Process::RLIMIT_CORE)[1])
+
+@see [[man:setrlimit(2)]]
+
+

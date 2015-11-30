@@ -1,0 +1,12 @@
+kind=defined
+names=malloc
+visibility=public
+
+--- malloc(size, free = nil)   -> DL::CPtr
+
+与えられた長さ size のメモリ領域を確保し、それを表す CPtr オブジェクトを生成して返します。
+
+@param size 確保したいメモリ領域のサイズを整数で指定します。
+
+@param free GC 時に呼べれる CPtr オブジェクトの free 関数を [[c:DL::CFunc]] オブジェクトか整数で指定します。
+

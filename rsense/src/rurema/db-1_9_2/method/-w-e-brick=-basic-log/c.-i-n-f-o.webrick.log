@@ -1,0 +1,8 @@
+kind=defined
+names=INFO
+visibility=public
+
+--- INFO
+
+ログレベルを表す定数です。重要度は4番です。
+

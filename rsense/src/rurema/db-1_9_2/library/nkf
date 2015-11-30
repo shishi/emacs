@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=
+classes=NKF
+is_sublibrary=false
+
+nkf を Ruby から使うためのライブラリです。

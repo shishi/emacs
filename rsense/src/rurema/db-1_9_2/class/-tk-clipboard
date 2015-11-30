@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=tk.clipboard
+extended=Tk
+included=Tk
+
+

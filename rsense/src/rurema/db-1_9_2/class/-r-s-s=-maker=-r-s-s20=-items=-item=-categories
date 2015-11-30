@@ -1,0 +1,7 @@
+superclass=RSS=Maker=RSS09=Items=Item=Categories
+type=class
+library=rss
+extended=
+included=Enumerable
+
+RSS 2.0を生成するときだけ利用されます．

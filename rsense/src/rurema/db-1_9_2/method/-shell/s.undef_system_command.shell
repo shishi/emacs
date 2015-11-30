@@ -1,0 +1,27 @@
+kind=defined
+names=undef_system_command
+visibility=public
+
+--- undef_system_command(command) -> Shell::CommandProcessor
+
+commandを削除します.
+
+@param command 削除するコマンドの文字列を指定します。
+
+動作例：
+  Shell.def_system_command("ls")
+  # ls を定義
+  Shell.undef_system_command("ls")
+  # ls を 削除
+
+  sh = Shell.new
+  begin
+    sh.transact {
+      ls("-l").each {|l|
+        puts l
+      }
+    }
+  rescue NameError => err
+    puts err
+  end
+

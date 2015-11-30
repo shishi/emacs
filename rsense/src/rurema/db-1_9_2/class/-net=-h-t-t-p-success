@@ -1,0 +1,9 @@
+superclass=Net=HTTPResponse
+type=class
+library=net.http
+extended=
+included=
+
+HTTP レスポンス 2xx (Success) を表現するクラスです。
+
+リクエストが正常に受信、処理されたことを表しています。

@@ -1,0 +1,19 @@
+kind=defined
+names=cmp,compare_file,identical?
+visibility=public
+
+--- cmp(file_a, file_b)          -> bool
+--- compare_file(file_a, file_b) -> bool
+--- identical?(file_a, file_b)   -> bool
+
+ファイル a と b の内容が同じなら真を返します。
+
+@param file_a ファイル名。
+
+@param file_b ファイル名。
+
+例:
+
+  FileUtils.cmp('somefile', 'somefile')  #=> true
+  FileUtils.cmp('/bin/cp', '/bin/mv')    #=> maybe false.
+

@@ -1,0 +1,9 @@
+kind=defined
+names=size
+visibility=public
+
+--- size() -> Fixnum
+
+ベクトルの要素数(次元)を返します。
+
+

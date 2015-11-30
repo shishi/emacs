@@ -1,0 +1,6 @@
+kind=defined
+names=next
+visibility=public
+
+--- next(index = nil)
+

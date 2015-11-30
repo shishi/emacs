@@ -1,0 +1,6 @@
+kind=defined
+names=share_stdout
+visibility=public
+
+--- share_stdout(dist, src = '')
+

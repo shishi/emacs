@@ -1,0 +1,14 @@
+kind=defined
+names=to_s
+visibility=public
+
+--- to_s     -> String
+
+時刻を [[man:date(1)]] のような形式の文字列に変換します。
+
+  self.strftime("%a %b %d %H:%M:%S %Z %Y")
+
+と同じです。
+
+  p Time.now.to_s # => "Mon Oct 20 06:02:10 JST 2003"
+

@@ -1,0 +1,12 @@
+kind=defined
+names=iso8601,rfc3339,xmlschema
+visibility=public
+
+--- iso8601(n = 0) -> String
+--- rfc3339(n = 0) -> String
+--- xmlschema(n = 0) -> String
+[[ISO:8601]] 書式の文字列を返します (XML Schema の dateTime 相当)。
+省略可能な引数により、印字する秒の小数点以下の桁数を与えることができます。
+
+@param n 小数点以下の桁数
+

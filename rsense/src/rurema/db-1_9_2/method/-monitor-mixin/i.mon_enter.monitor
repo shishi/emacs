@@ -1,0 +1,34 @@
+kind=defined
+names=mon_enter
+visibility=public
+
+--- mon_enter -> ()
+
+モニターをロックします。
+
+一度に一つのスレッドだけがモニターをロックできます。
+既にモニターがロックされている場合は、ロックが開放されるまで
+そのスレッドは待ちます。
+
+[[m:Mutex#lock]] に相当します。
+Mutex#lock と違うのは現在のモニターの所有者が現在実行されているスレッドである場合、
+何度でもロックできる点です。ロックした回数だけ mon_exit を呼ばなければモニターは
+解放されません。
+
+例:
+
+  require 'monitor'
+  buf = []
+  buf.extend(MonitorMixin)
+  buf.mon_enter
+  buf.mon_enter
+
+Mutex#lock ではデッドロックが起きます。
+
+例:
+
+  require 'thread'
+  m = Mutex.new
+  m.lock
+  m.lock # => deadlock; recursive locking (ThreadError)
+

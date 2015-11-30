@@ -1,0 +1,15 @@
+kind=defined
+names=to_r
+visibility=public
+
+--- to_r -> Rational
+
+Returns the value of <i>time</i> as a rational number of seconds
+since the Epoch.
+
+   t = Time.now
+   p t.to_r            #=> (8807170717088293/8388608)
+
+This methods is intended to be used to get an accurate value
+representing nanoseconds from the Epoch.  You can use this
+to convert time to another Epoch.

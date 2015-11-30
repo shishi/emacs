@@ -1,0 +1,19 @@
+kind=defined
+names=read
+visibility=public
+
+--- read(options = {})     -> String
+
+自身が表す内容を読み込んで文字列として返します。
+self.open(options={}).read と同じです。
+このメソッドによって返される文字列は [[c:OpenURI::Meta]]
+によって extend されています。
+
+@param options ハッシュを与えます。
+
+  require 'open-uri'
+  uri = URI.parse('http://www.example.com/')
+  str = uri.read
+  p str.is_a?(OpenURI::Meta) # => true
+  p str.content_type
+

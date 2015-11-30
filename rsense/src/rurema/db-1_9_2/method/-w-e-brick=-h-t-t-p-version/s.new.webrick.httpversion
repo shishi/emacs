@@ -1,0 +1,10 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(version)    -> WEBrick::HTTPVersion
+
+HTTPVersion オブジェクトを生成する。version は文字列か HTTPVersion オブジェクト。
+
+@param version HTTP のバージョンを WEBrick::HTTPVersion オブジェクトか文字列で指定します。
+

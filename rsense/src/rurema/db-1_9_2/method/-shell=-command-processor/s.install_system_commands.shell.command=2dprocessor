@@ -1,0 +1,15 @@
+kind=defined
+names=install_system_commands
+visibility=public
+
+--- install_system_commands(prefix = "sys_") -> ()
+
+全てのシステムコマンドをメソッドとして定義します。
+
+既に定義されているコマンドを再定義することはありません。
+デフォルトでは全てのコマンドに "sys_" というプレフィクスが付きます。
+また、メソッド名として使用できない文字は全て "_" に置換してメソッドを定義します。
+このメソッドの実行中に発生した例外は単に無視されます。
+
+@param prefix プレフィクスを指定します。
+

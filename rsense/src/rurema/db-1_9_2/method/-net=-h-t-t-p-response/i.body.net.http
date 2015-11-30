@@ -1,0 +1,17 @@
+kind=defined
+names=body,entity
+visibility=public
+
+--- body -> String | () | nil
+--- entity -> String | () | nil
+
+エンティティボディを返します。
+
+レスポンスにボディがない場合には nil を返します。
+
+[[m:Net::HTTPResponse#read_body]] をブロック付きで呼んだ場合には
+このメソッドはNet::ReadAdapter のインスタンスを返しますが、
+これは使わないでください。
+
+entity は obsolete です。
+

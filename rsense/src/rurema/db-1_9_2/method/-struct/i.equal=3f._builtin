@@ -1,0 +1,12 @@
+kind=defined
+names=equal?
+visibility=public
+
+--- equal?(other)   -> bool
+
+指定された other が self 自身である場合のみ真を返します。
+これは [[c:Object]] クラスで定義されたデフォルトの動作で
+す。
+
+@see [[m:Struct#eql?]], [[m:Struct#==]]
+

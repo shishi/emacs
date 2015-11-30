@@ -1,0 +1,22 @@
+kind=defined
+names=EVENT_SYMBOL
+visibility=public
+
+--- EVENT_SYMBOL
+  
+トレース出力のシンボルのハッシュです。
+下記のような文字列があります。
+
+  EVENT_SYMBOL = {
+    "line" => "-",
+    "call" => ">",
+    "return" => "<",
+    "class" => "C",
+    "end" => "E",
+    "c-call" => ">",
+    "c-return" => "<",
+  }
+
+@see [[m:Tracer.add_filter]]
+
+

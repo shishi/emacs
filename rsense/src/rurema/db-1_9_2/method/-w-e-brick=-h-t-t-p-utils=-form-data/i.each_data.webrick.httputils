@@ -1,0 +1,23 @@
+kind=defined
+names=each_data
+visibility=public
+
+--- each_data{|s| ... }
+
+自身が表す各フォームデータを引数として、与えられたブロックを実行します。
+
+例:
+
+ require "webrick/cgi"
+ class MyCGI < WEBrick::CGI
+   def do_GET(req, res)
+     req.query['q'].each_data{|s|
+       p s
+     }
+     #=> "val1"
+         "val2"
+         "val3"
+   end
+ end
+ MyCGI.new.start()
+  

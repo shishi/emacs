@@ -1,0 +1,16 @@
+kind=defined
+names=write_nonblock
+visibility=public
+
+--- write_nonblock(string)    -> Integer
+
+IO をノンブロッキングモードに設定し、string を [[man:write(2)]] システムコールで書き出します。
+write(2) が成功した場合、書き込んだ長さを返します。
+EAGAIN, EINTR などは例外 [[c:Errno::EXXX]] として呼出元に報告されます。
+
+@param string 自身に書き込みたい文字列を指定します。
+
+@raise IOError 自身が書き込み用にオープンされていなければ発生します。
+
+@raise Errno::EXXX [[man:write(2)]] が失敗した場合に発生します。
+

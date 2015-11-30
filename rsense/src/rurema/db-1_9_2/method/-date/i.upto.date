@@ -1,0 +1,12 @@
+kind=defined
+names=upto
+visibility=public
+
+--- upto(max){|date| ...} -> self
+--- upto(max) -> Enumerator
+このメソッドは、step(max, 1){|date| ...} と等価です。
+
+@param max 日付オブジェクト
+
+@see [[m:Date#step]], [[m:Date#downto]]
+

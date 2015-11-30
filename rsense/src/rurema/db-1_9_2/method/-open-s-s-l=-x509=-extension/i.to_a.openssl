@@ -1,0 +1,9 @@
+kind=defined
+names=to_a
+visibility=public
+
+--- to_a -> [String, String, bool]
+
+拡張領域の内容を、[識別子(extnID), 値(extnValue), 重要度(critical)] という
+形で返します。
+

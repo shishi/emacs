@@ -1,0 +1,19 @@
+superclass=Numeric
+type=class
+library=_builtin
+extended=
+included=
+
+浮動小数点数のクラス。Float の実装は C 言語の double で、その精度は環
+境に依存します。
+
+一般にはせいぜい15桁です。詳しくは多くのシステムで採用されている
+浮動小数点標準規格、IEEE (Institute of Electrical and
+Electronics Engineers: 米国電気電子技術者協会) 754 を参照してください。
+
+  # あるシステムでの 1/3(=0.333...) の結果
+  printf("%.50f\n", 1.0/3)
+  => 0.33333333333333331482961625624739099293947219848633
+
+[[m:Math::PI]] など、浮動小数点演算に関する定数については [[c:Math]] を
+参照のこと。

@@ -1,0 +1,8 @@
+kind=defined
+names=rubyforge_project
+visibility=public
+
+--- rubyforge_project -> String
+
+この Gem の RubyForge 上でのプロジェクト名を返します。
+

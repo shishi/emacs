@@ -1,0 +1,15 @@
+kind=defined
+names=**
+visibility=public
+
+--- **(other) -> Fixnum | Bignum | Float
+
+»»½Ñ±é»»»Ò¡£ÑÑ(¤Ù¤­¾è)¤ò·×»»¤·¤Þ¤¹¡£
+
+@param other Æó¹à±é»»¤Î±¦Â¦¤Î°ú¿ô(ÂÐ¾Ý)
+@return ·×»»·ë²Ì
+
+  p 2 ** 3 # => 8
+  p 2 ** 0 # => 1
+  p 0 ** 0 # => 1
+

@@ -1,0 +1,20 @@
+kind=defined
+names=threads
+visibility=public
+
+--- threads -> Array
+
+同期されるスレッドの一覧を配列で返します。
+
+使用例
+  require 'thwait'
+
+  threads = []
+  3.times {|i|
+    threads << Thread.new { sleep 1; p Thread.current }
+  }
+
+  thall = ThreadsWait.new(*threads)
+  p thall.threads
+  #=> [#<Thread:0x21750 sleep>, #<Thread:0x216c4 sleep>, #<Thread:0x21638 sleep>]
+

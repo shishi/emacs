@@ -1,0 +1,29 @@
+kind=defined
+names=read_nonblock
+visibility=public
+
+--- read_nonblock(maxlen, outbuf = "")    -> String
+
+IO をノンブロッキングモードに設定し、
+その後で [[man:read(2)]] システムコールにより
+長さ maxlen を上限として読み込み、文字列として返します。
+EAGAIN, EINTR などは [[c:Errno::EXXX]] 例外として呼出元に報告されます。
+
+なお、バッファが空でない場合は、read_nonblock はバッファから読み込みます。この場合、read(2) システムコールは呼ばれません。
+
+バイナリ読み込みメソッドとして動作します。
+既に EOF に達していれば EOFError が発生します。ただし、maxlen に 0 が指定されている場合は、空文字列 "" を返します。
+
+@param maxlen 読み込む長さの上限を整数で指定します。
+
+@param outbuf 文字列で指定します。IO#read_nonblock は読み込んだデータを outbuf に破壊的に格納し、
+              返り値は outbuf となります。outbuf は一旦 maxlen 長に拡張(あるいは縮小)されたあと、
+              実際に読み込んだデータのサイズになります。read(2) システムコールが 0 を返した場合は、空文字列になります。
+
+@raise IOError 自身が読み込み用にオープンされていなければ発生します。
+
+@raise Errno::EXXX read(2) システムコールの結果としてエラーが起きた場合に発生します。
+
+@raise EOFError read(2) システムコールが 0 を返した場合に発生します。これは、IO が既に EOF に達していることを意味します。
+
+

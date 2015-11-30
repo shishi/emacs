@@ -1,0 +1,8 @@
+kind=defined
+names=METHODS
+visibility=public
+
+--- METHODS -> Array
+
+このモジュールで定義されている公開メソッドの配列を返します。
+

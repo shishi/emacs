@@ -1,0 +1,8 @@
+kind=defined
+names=SEXIT
+visibility=public
+
+--- SEXIT -> Integer
+
+Shift + Exit キーを表す定数です。
+

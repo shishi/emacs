@@ -1,0 +1,10 @@
+kind=defined
+names=IN6FORMAT
+visibility=protected 
+
+--- IN6FORMAT
+
+IPv6 アドレスをわかりやすく表示するためのフォーマット文字列。
+
+  "%.4x:%.4x:%.4x:%.4x:%.4x:%.4x:%.4x:%.4x"
+

@@ -1,0 +1,22 @@
+kind=defined
+names=to_s
+visibility=public
+
+--- to_s    -> String
+
+実際にクライアントに送られるデータを文字列として返します。
+
+  require 'webrick'
+  include WEBrick
+  res = HTTPResponse.new( { :HTTPVersion => "1.1" } )
+  res.body = 'hoge'
+  print res.to_s
+
+  #=> 出力結果
+  HTTP/1.1 200 OK
+  Connection: Keep-Alive
+  Date: Sat, 27 Oct 2007 08:58:49 GMT
+  Server:
+  Content-Length: 4
+  
+  hoge

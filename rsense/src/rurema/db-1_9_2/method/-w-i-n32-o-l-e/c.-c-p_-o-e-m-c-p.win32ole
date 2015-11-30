@@ -1,0 +1,8 @@
+kind=defined
+names=CP_OEMCP
+visibility=public
+
+--- CP_OEMCP -> Fixnum
+
+OEMコードページ（1）を示します。
+

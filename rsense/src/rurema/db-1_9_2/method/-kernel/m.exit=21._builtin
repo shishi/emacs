@@ -1,0 +1,35 @@
+kind=defined
+names=exit!
+visibility=public
+
+--- exit!(status = false) -> ()
+
+Rubyプログラムの実行を即座に終了します。
+status として整数が与えられた場合、その値を Ruby コマンドの終了ステータスとします。
+デフォルトの終了ステータスは 1 です。
+
+status が true の場合 0、 false の場合 1 を引数に指定したとみなされます。この値はCレベルの定数
+EXIT_SUCCESS、EXIT_FAILURE の値なので、正確には環境依存です。
+
+exit! は exit とは違って、例外処理などは一切行ないませ
+ん。 [[m:Kernel.#fork]] の後、子プロセスを終了させる時などに用
+いられます。
+
+@param status 終了ステータスを整数か true または false で与えます。
+
+  STDOUT.sync = true #表示前に終了しないようにする
+  puts 'start'
+  begin
+    puts 'start1...'
+    exit!
+  ensure
+    puts 'end1...' #実行されない
+  end
+  puts 'end' #実行されない
+  
+  #=> start
+  #   start1...
+  #終了ステータス:1
+
+@see [[m:Kernel.#exit]],[[m:Kernel.#abort]]
+

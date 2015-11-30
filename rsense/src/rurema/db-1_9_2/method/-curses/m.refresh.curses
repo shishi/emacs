@@ -1,0 +1,14 @@
+kind=defined
+names=refresh
+visibility=public
+
+--- refresh -> nil
+
+画面全体を表すウィンドウ stdscr の表示を更新します。
+
+詳しくは、 man ページの curs_refresh(3X) の refresh 関数を参照ください。
+
+このメソッドの中で [[m:Curses.#init_screen]] を呼び出します。
+
+セーフレベル ($SAFE) が 4 の場合、例外 SecurityError を発生します。
+

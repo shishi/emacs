@@ -1,0 +1,48 @@
+<% @title = @entry.title %>
+<div id="main">
+<p>
+<% if @entry.name == 'index' %>
+<%= _('Ruby %s Reference Manual', ruby_version()) %>
+<% else %>
+<%= manual_home_link() %>
+&gt; <%=h @entry.name %>
+<% end %>
+</p>
+<% headline_init %>
+<%= headline(@entry.title) %>
+<% headline_push %>
+<%= compile_rd(@entry.source) %>
+</div>
+
+<div id="leftbox">
+
+
+<div class="leftlist" id="leftlist-up">
+<h2>Libraries</h2>
+<form>
+<input type="text" name="pattern" onkeyup="isearch('index-libraries-list', this.value)">
+</form>
+<ul id="index-libraries-list">
+<%
+    @entry.libraries.sort.each do |lib| 
+%> 
+<li><%= library_link(lib.name) %></li>
+<%  end  %>    
+</ul>
+</div>
+
+<div class="leftlist" id="leftlist-bottom">
+<h2>Classes</h2>
+<form>
+<input type="text" name="pattern" onkeyup="isearch('index-classes-list', this.value)">
+</form>
+<ul id="index-classes-list">
+<%
+    ((@entry.classes - @entry.error_classes).sort + @entry.error_classes.sort).each do |c| 
+%> 
+<li><%= class_link(c.name, "#{c.name}") %></li>
+<%  end  %>    
+</ul>
+</div>
+
+</div>

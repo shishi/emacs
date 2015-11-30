@@ -1,0 +1,9 @@
+kind=defined
+names=instance
+visibility=public
+
+--- instance -> Prime
+
+[[c:Prime]] のデフォルトのインスタンスを返します。
+
+

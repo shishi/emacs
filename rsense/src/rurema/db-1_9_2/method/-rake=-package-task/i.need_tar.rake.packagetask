@@ -1,0 +1,9 @@
+kind=defined
+names=need_tar
+visibility=public 
+
+--- need_tar -> bool
+
+この値が真である場合は gzip した tar ファイル (tgz) を作成します。
+デフォルトは偽です。
+

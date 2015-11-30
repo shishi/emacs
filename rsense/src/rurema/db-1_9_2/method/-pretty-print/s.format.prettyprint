@@ -1,0 +1,27 @@
+kind=defined
+names=format
+visibility=public
+
+--- format(output = '', maxwidth = 79, newline = "\n", genspace = lambda{|n| ' ' * n}) {|pp| ...}    -> object
+PrettyPrint オブジェクトを生成し、それを引数としてブロックを実行します。
+与えられた output を返します。
+
+以下と同じ働きをするもので簡便のために用意されています。
+
+  begin
+    pp = PrettyPrint.new(output, maxwidth, newline, &genspace)
+    ...
+    pp.flush
+    output
+  end
+
+@param output 出力先を指定します。output は << メソッドを持っていなければなりません。
+
+@param maxwidth 行の最大幅を指定します。ただし、改行できないものが渡された場合は、
+                実際の出力幅は maxwidth を越えることがあります。
+
+@param newline 改行に使われます。
+
+@param genspace 空白の生成に使われる [[c:Proc]] オブジェクトを指定します。
+                生成したい空白の幅を表す整数を引数として呼ばれます。
+

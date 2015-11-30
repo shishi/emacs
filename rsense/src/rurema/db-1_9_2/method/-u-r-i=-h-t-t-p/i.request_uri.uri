@@ -1,0 +1,16 @@
+kind=defined
+names=request_uri
+visibility=public
+
+--- request_uri     -> String
+
+自身の「path + '?' + query」を文字列で返します。
+query が nil である場合は、自身の path を返します。
+
+path が空である場合には、path は「'/'」であるとします。
+
+例:
+  require 'uri'
+  u = URI.parse("http://example.com/search?q=xxx")
+  p u.request_uri                                  #=> "/search?q=xxx"
+

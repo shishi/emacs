@@ -1,0 +1,9 @@
+kind=defined
+names=VT_USERDEFINED
+visibility=public
+
+--- VT_USERDEFINED -> Integer
+ユーザ定義型を示します（29）。
+
+OLEオートメーションでは利用できません。代わりにVT_I4を利用してください。
+

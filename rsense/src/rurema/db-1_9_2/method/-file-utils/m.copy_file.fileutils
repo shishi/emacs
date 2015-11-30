@@ -1,0 +1,19 @@
+kind=defined
+names=copy_file
+visibility=public
+
+--- copy_file(src, dest, preserve = false, dereference_root = true) -> ()
+
+ファイル src の内容を dest にコピーします。
+
+@param src コピー元。
+
+@param dest コピー先。
+
+@param preserve preserve が真のときは更新時刻と、
+                可能なら所有ユーザ・所有グループもコピーします。
+
+@param dereference_root dereference_root が真のときは src についてだけシンボリックリンクの指す
+                        内容をコピーします。偽の場合はシンボリックリンク自体をコピーします。
+
+

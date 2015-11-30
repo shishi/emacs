@@ -1,0 +1,8 @@
+kind=defined
+names=files
+visibility=public
+
+--- files -> Hash
+
+アップロードされたファイルの名前とその内容を表すオブジェクトをペアとする要素を持つハッシュを返します。
+

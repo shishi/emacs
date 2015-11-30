@@ -1,0 +1,16 @@
+kind=defined
+names=nsec,tv_nsec
+visibility=public
+
+--- nsec    -> Integer
+--- tv_nsec -> Integer
+
+時刻のナノ秒の部分を整数で返します。
+
+   t = Time.now        #=> 2007-11-17 15:18:03 +0900
+   "%10.9f" % t.to_f   #=> "1195280283.536151409"
+   t.nsec              #=> 536151406
+
+IEEE 754 浮動小数点数で表現できる精度が違うため、[[m:Time#to_f]]の最小
+の桁とnsecの最小の桁は異なります。nsecで表される値の方が正確です。
+

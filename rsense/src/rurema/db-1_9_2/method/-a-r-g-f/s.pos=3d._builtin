@@ -1,0 +1,25 @@
+kind=defined
+names=pos=
+visibility=public
+
+--- pos=(n)
+ARGFが開いているファイルのファイルポインタを指定位置に移動します。
+
+@param n 先頭からのオフセットを整数で指定します。
+
+  # カレントディレクトリから適当にファイルを選ぶ
+  ARGV.replace(
+    Dir.glob("*").select{|name| FileTest.file?(name)}
+  )
+  print ARGF.readline
+  #例
+  #=> #!/usr/bin/env ruby
+  ARGF.pos = 2
+  print ARGF.readline
+  #=> /usr/bin/env ruby
+  ARGF.pos = 4
+  print ARGF.readline
+  #=> sr/bin/env ruby
+
+@see [[m:IO#pos=]]
+

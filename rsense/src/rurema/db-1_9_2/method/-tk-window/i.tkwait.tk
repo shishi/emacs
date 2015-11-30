@@ -1,0 +1,12 @@
+kind=defined
+names=tkwait,wait,wait_visibility
+visibility=public
+
+--- wait_visibility(on_thread = true)
+--- wait(on_thread = true)
+--- tkwait(on_thread = true)
+
+
+
+
+

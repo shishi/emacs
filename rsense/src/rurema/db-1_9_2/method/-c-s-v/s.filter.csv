@@ -1,0 +1,28 @@
+kind=defined
+names=filter
+visibility=public
+
+--- filter(options = Hash.new){|row| ... }
+--- filter(input, options = Hash.new){|row| ... }
+--- filter(input, output, options = Hash.new){|row| ... }
+
+このメソッドは CSV データに対して Unix のツール群のようなフィルタを構築
+するのに便利です。
+
+与えられたブロックに一行ずつ渡されます。ブロックに渡された行は必要であ
+れば変更することができます。ブロックの評価後に行を全て output に書き込
+みます。
+
+@param input [[c:String]] か [[c:IO]] のインスタンスを指定します。
+             デフォルトは [[c:ARGF]] です。
+
+@param output [[c:String]] か [[c:IO]] のインスタンスを指定します。
+              デフォルトは [[m:$stdout]] です。
+
+@param options ":in_", ":input_" で始まるキーは input にだけ適用されます。
+               ":out_", ":output_" で始まるキーは output にだけ適用されます。
+               それ以外のキーは両方に適用されます。
+               ":output_row_sep" のデフォルト値は [[m:$/]] です。
+
+@see [[m:CSV.new]]
+

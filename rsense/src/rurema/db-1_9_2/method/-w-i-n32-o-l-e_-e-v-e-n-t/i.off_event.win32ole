@@ -1,0 +1,16 @@
+kind=defined
+names=off_event
+visibility=public
+
+--- off_event(event = nil) -> ()
+[[m:WIN32OLE_EVENT#on_event]]で登録したブロックを解除します。
+
+@param event 文字列またはシンボルで登録時に指定したイベント名を指定しま
+す。nilの場合、[[m:WIN32OLE_EVENT#on_event]]に対してnilを指定したブロッ
+クを解除します。
+
+  ev = WIN32OLE_EVENT.new(ie, 'DWebBrowserEvents')
+  ev.on_event(:NavigateComplete) {|url| puts url }
+  ...
+  ev.off_event(:NavigateComplete)
+

@@ -1,0 +1,16 @@
+kind=defined
+names=V_ERR_UNABLE_TO_GET_CRL
+visibility=public
+
+--- V_ERR_UNABLE_TO_GET_CRL -> Integer
+CRL が見付からないことを意味します。
+
+[[m:OpenSSL::X509::Store#flags=]] で CRL をチェックすることを
+指定したにもかかわらず、適切な CRL を
+[[m:OpenSSL::X509::Store#add_crl]] で追加しなかった場合に
+このエラーが生じます。
+
+[[m:OpenSSL::X509::Store#error]] や
+[[m:OpenSSL::X509::StoreContext#error]] のエラーコードとして
+使われます。
+

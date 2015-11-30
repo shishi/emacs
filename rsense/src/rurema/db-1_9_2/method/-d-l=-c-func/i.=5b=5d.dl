@@ -1,0 +1,17 @@
+kind=defined
+names=[],call
+visibility=public
+
+--- [](arry)      -> Integer | Float | nil
+--- call(arry)    -> Integer | Float | nil
+
+自身が表すライブラリ関数を呼び出します。
+
+自身の返り値の型([[m:DL::CFunc#ctype]])が double か float である場合は、返り値を
+Ruby の [[c:Float]] オブジェクトに変換して返します。
+返り値の型が void の場合は nil を返します。それ以外の場合は整数として返します。
+
+@param arry 関数の引数を整数の配列で指定します。
+
+@see [[m:Array#pack]], [[m:String#unpack]]
+

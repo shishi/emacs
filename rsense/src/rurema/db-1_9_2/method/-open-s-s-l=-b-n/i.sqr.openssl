@@ -1,0 +1,9 @@
+kind=defined
+names=sqr
+visibility=public
+
+--- sqr -> OpenSSL::BN
+自身の2乗を計算します。
+
+@raise OpenSSL::BNError 計算時エラー
+

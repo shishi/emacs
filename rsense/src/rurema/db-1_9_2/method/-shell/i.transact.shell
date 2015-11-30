@@ -1,0 +1,19 @@
+kind=defined
+names=transact
+visibility=public
+
+--- transact { ... } -> object
+
+ブロック中で shell を self として実行します。
+
+例:
+
+  require 'shell'
+  Shell.def_system_command("head")
+  sh = Shell.new
+  sh.transact{
+    system("ls", "-l") | head > STDOUT
+    # transact の中では、
+    # sh.system("ls", "-l") | sh.head > STDOUT と同じとなる。
+  }
+

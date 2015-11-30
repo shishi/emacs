@@ -1,0 +1,17 @@
+kind=defined
+names=enable
+visibility=public
+
+--- enable -> nil
+
+GC のプロファイラを起動します。
+
+このメソッドを呼び出してから GC が発生すると、
+GC についてプロファイル情報を取得します。
+
+例:
+  GC::Profiler.enable
+  GC::Profiler.enabled? #=> true
+
+@see [[m:GC::Profiler.disable]], [[m:GC::Profiler.enabled?]]
+

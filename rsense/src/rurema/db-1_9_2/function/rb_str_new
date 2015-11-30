@@ -1,0 +1,15 @@
+name=rb_str_new
+private=false
+macro=false
+type=VALUE
+filename=string.c
+params=(const char *ptr, long len)
+
+
+ptr から len バイト分をコピーして
+Ruby の文字列を作成し返します。
+
+  rb_str_new(0,0)
+
+では空文字列を生成して返します。
+

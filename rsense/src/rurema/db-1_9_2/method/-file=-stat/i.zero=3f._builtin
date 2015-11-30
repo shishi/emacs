@@ -1,0 +1,9 @@
+kind=defined
+names=zero?
+visibility=public
+
+--- zero? -> bool
+サイズが0である時に真を返します。
+
+  p File::Stat.new($0).zero? #=> false
+

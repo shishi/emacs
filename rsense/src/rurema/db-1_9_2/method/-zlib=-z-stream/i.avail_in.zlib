@@ -1,0 +1,8 @@
+kind=defined
+names=avail_in
+visibility=public
+
+--- avail_in -> Integer
+
+入力バッファに溜っているデータのバイト数を返します。通常は 0 です。
+

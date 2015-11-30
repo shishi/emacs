@@ -1,0 +1,11 @@
+kind=defined
+names=to_a
+visibility=public
+
+--- to_a -> [String]
+実行結果を文字列の配列で返します。
+
+  Shell.def_system_command("wc")
+  sh = Shell.new
+  puts sh.cat("/etc/passwd").to_a
+

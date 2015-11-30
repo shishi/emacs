@@ -1,0 +1,11 @@
+name=ev_const_get
+private=true
+macro=false
+type=VALUE
+filename=eval.c
+params=(NODE *cref, ID id, VALUE self)
+
+
+外のクラスが cref で self が self として
+定数 id を参照します。
+

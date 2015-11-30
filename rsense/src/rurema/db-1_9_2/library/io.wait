@@ -1,0 +1,10 @@
+methods=IO/i.nread.io.wait,IO/i.ready=3f.io.wait,IO/i.wait.io.wait
+sublibraries=
+requires=
+classes=
+is_sublibrary=false
+
+IOが読み込み可能になるまで待つ機能を提供するライブラリです。
+
+Windowsではこのライブラリで定義されているメソッドは
+Socketに対してしか利用できません。

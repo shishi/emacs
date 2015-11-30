@@ -1,0 +1,9 @@
+kind=defined
+names=subject_certificate
+visibility=public
+
+--- subject_certificate -> OpenSSL::X509::Certificate | nil
+自身に設定されている所有者(subject)の証明書オブジェクトを返します。
+
+証明書が設定されていない場合は nil を返します。
+

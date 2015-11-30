@@ -1,0 +1,8 @@
+kind=defined
+names=package_files
+visibility=public 
+
+--- package_files -> Rake::FileList
+
+パッケージに含むファイルリストを返します。
+

@@ -1,0 +1,6 @@
+kind=defined
+names=invoke_hidden_on_namespace
+visibility=public
+
+--- invoke_hidden_on_namespace(slave, ns, cmd, *args)
+

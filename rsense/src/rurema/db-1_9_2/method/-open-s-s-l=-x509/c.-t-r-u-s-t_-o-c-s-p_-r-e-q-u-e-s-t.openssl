@@ -1,0 +1,6 @@
+kind=defined
+names=TRUST_OCSP_REQUEST
+visibility=public
+
+--- TRUST_OCSP_REQUEST -> Integer
+

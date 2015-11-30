@@ -1,0 +1,12 @@
+name=rb_data_object_alloc
+private=false
+macro=false
+type=VALUE
+filename=gc.c
+params=(VALUE klass, void *datap, RUBY_DATA_FUNC dmark, RUBY_DATA_FUNC dfree)
+
+
+datap をラップするオブジェクトを生成し、返します。
+そのクラスは klass となり、datap をマークするときは
+dmark、解放するときは dfree を使うようになります。
+

@@ -1,0 +1,12 @@
+kind=defined
+names=config=
+visibility=public
+
+--- config=(config) 
+自身にコンフィグファイルオブジェクトを設定します。
+
+例
+  factory.config = OpenSSL::Config.load(OpenSSL::Config::DEFAULT_CONFIG_FILE)
+
+@param config 設定ファイル([[c:OpenSSL::Config]] オブジェクト)
+

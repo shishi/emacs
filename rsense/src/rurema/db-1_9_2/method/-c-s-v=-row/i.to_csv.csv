@@ -1,0 +1,9 @@
+kind=defined
+names=to_csv,to_s
+visibility=public
+
+--- to_csv -> String
+--- to_s -> String
+
+自身を CSV な文字列として返します。ヘッダは使用しません。
+

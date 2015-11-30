@@ -1,0 +1,18 @@
+superclass=
+type=module
+library=drb
+extended=
+included=
+
+Module managing the underlying network protocol(s) used by drb.
+
+By default, drb uses the [[c:DRbTCPSocket protocol]]. Other protocols can be defined. 
+
+A new protocol is registered with the DRbProtocol module using the add_protocol method.
+
+For examples of other protocols, see [[c:DRb::DRbUNIXSocket]] in [[lib:drb/unix]], and HTTP0 in sample/http0.rb and sample/http0serv.rb in the full drb distribution.
+
+All of these methods should raise a [[c:DRb::DRbBadScheme]] error if
+the URI does not identify the protocol they support (e.g. "druby:" for
+the standard Ruby protocol). This is how the [[c:DRb::DRbProtocol]] module, given
+a URI, determines which protocol implementation serves that protocol.

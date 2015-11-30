@@ -1,0 +1,13 @@
+kind=defined
+names=new_category
+visibility=public
+
+--- new_category
+新しくcategoryを作成し，返します．作成された
+categoryはcategoryリストの最後
+に追加されています．
+
+item.categories.new_categoryが作成する
+categoryは
+maker.channel.categories.new_categoryが作成する
+categoryと同じAPIを持ちます．

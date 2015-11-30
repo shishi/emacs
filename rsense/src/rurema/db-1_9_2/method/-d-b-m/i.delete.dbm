@@ -1,0 +1,12 @@
+kind=defined
+names=delete
+visibility=public
+
+--- delete(key) -> String
+
+key をキーとする要素を削除します。
+
+@return 削除した要素の値を返します。
+
+@raise DBMError 要素の削除に失敗した場合に発生します。
+

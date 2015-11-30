@@ -1,0 +1,17 @@
+kind=defined
+names=getgm,getutc
+visibility=public
+
+--- getgm     -> Time
+--- getutc    -> Time
+
+タイムゾーンを協定世界時に設定した Time オブジェクトを新しく
+生成して返します。
+
+  t = Time.local(2000,1,1,20,15,1)   #=> Sat Jan 01 20:15:01 CST 2000
+  t.gmt?                             #=> false
+  y = t.getgm                        #=> Sun Jan 02 02:15:01 UTC 2000
+  y.gmt?                             #=> true
+  t == y                             #=> true
+
+

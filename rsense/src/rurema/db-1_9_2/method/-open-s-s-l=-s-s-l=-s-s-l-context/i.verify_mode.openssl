@@ -1,0 +1,10 @@
+kind=defined
+names=verify_mode
+visibility=public
+
+--- verify_mode -> Integer | nil
+検証モードを返します。
+
+デフォルトは nil です。
+
+@see [[m:OpenSSL::SSL::SSLContext#verify_mode=]]

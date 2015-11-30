@@ -1,0 +1,38 @@
+kind=defined
+names=class_exec,module_exec
+visibility=private 
+
+--- module_exec(*args) {|*vars| ... }       -> object
+--- class_exec(*args) {|*vars| ... }        -> object
+
+与えられたブロックを指定された args を引数としてモジュールのコンテキストで評価します。
+
+モジュールのコンテキストで評価するとは、実行中そのモジュールが self になるということです。
+つまり、そのモジュールの定義式の中にあるかのように実行されます。
+
+ただし、ローカル変数だけは外側のスコープと共有します。
+定数とクラス変数のスコープは、自身のモジュール定義式内と同じスコープになります。
+
+@param args ブロックに渡す引数を指定します。
+
+
+   class Thing
+   end
+   c = 1
+
+   Thing.class_exec{
+     def hello() 
+       "Hello there!" 
+     end
+
+     define_method(:foo) do   # ローカル変数がブロックの外側を参照している
+       c
+     end
+   }
+
+   t = Thing.new
+   p t.hello()            #=> "Hello there!"
+   p t.foo()              #=> 1
+
+@see [[m:Module#module_eval]], [[m:Module#class_eval]]
+

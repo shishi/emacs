@@ -1,0 +1,14 @@
+kind=defined
+names=configure
+visibility=public 
+
+--- configure(options = {}) -> self
+
+与えられたハッシュで自身を設定します。
+
+オプションで使用するハッシュのキーについては [[m:JSON::State.new]] を参照してください。
+
+@param options このオブジェクトの設定をするためのハッシュを指定します。
+
+@see [[m:JSON::State.new]]
+

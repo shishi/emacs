@@ -1,0 +1,21 @@
+kind=defined
+names=preprocess
+visibility=public
+
+--- preprocess(string) -> String
+
+ホストから受け取った文字列の前処理をします。
+
+受け取った文字列に改行の変換とtelnetコマンドの検出をします。
+通常は [[m:Net::Telnet#waitfor]] から呼びだされます。
+"Telnetmode" を利用している場合、
+[[m:IO#sysread]] などで直接ホストからのデータを読みこんだ場合にのみ
+このメソッドを呼ぶ必要があるでしょう。
+
+前処理の内容は [[m:Net::Telnet#telnetmode]] や
+[[m:Net::Telnet#binmode]] によって変わります。
+
+@param string 前処理対象の文字列
+@return 変換後の文字列
+@see [[m:Net::Telnet.new]], [[m:Net::Telnet#telnetmode]], [[m:Net::Telnet#binmode]]
+

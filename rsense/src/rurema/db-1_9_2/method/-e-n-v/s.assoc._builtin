@@ -1,0 +1,13 @@
+kind=defined
+names=assoc
+visibility=public
+
+--- assoc(key) -> Array | nil
+
+自身が与えられたキーに対応する要素を持つとき、見つかった要素のキーと値のペアを
+配列として返します。
+
+@param key 検索するキーを指定します。
+
+@see [[m:Hash#assoc]]
+

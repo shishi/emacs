@@ -1,0 +1,26 @@
+kind=defined
+names=new
+visibility=public
+
+--- new( host=nil, path=nil, port=nil, proxy_host=nil, proxy_port=nil, user=nil, password=nil, use_ssl=false, timeout =nil)
+Creates an object which represents the remote XML-RPC server on the
+given host host. If the server is CGI-based, path is the
+path to the CGI-script, which will be called, otherwise (in the
+case of a standalone server) path should be "/RPC2".
+port is the port on which the XML-RPC server listens.
+If proxy_host is given, then a proxy server listening at
+proxy_host is used. proxy_port is the port of the
+proxy server.
+
+Default values for host, path and port are 'localhost', '/RPC2' and
+'80' respectively using SSL '443'.
+
+If user and password are given, each time a request is send,
+a Authorization header is send. Currently only Basic Authentification is
+implemented no Digest.
+
+If use_ssl is set to true, comunication over SSL is enabled.
+Note, that you need the SSL package from RAA installed.
+
+Parameter timeout is the time to wait for a XML-RPC response, defaults to 30.
+

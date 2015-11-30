@@ -1,0 +1,18 @@
+kind=defined
+names=merge
+visibility=public
+
+--- merge(enum) -> self
+
+元の集合に enum で与えられた要素を追加します。
+
+引数 enum には each メソッドが定義されている必要があります。
+
+@param enum 追加対象の要素を格納したオブジェクトを指定します。
+@raise NoMethodError 引数 enum に each メソッドが定義されていない場合に
+       発生します。
+
+  set = Set[10, 20]
+  set.merge([10, 30])
+  p set #=> #<Set: {30, 20, 10}>
+

@@ -1,0 +1,29 @@
+kind=defined
+names=replace
+visibility=public
+
+--- replace(other) -> self
+
+self の内容を other の内容で置き換えます。
+
+@param other each_pair メソッドを持つオブジェクトでなければなりません。
+
+  require 'sdbm'
+  
+  db1 = SDBM.open('aaa.gdbm', 0666)
+  db1['a'] = 'aaa'
+  db1['b'] = 'bbb'
+  db1['c'] = 'ccc'
+  db2 = SDBM.open('bbb.gdbm', 0666)
+  db2['c'] = 'ccc'
+  db2['d'] = 'ddd'
+  hash = { 'x' => 'xxx', 'y' => 'yyy'}
+  
+  p db1               #=> #<SDBM:0xb7c304d0>
+  p db1.to_hash       #=> {"a"=>"aaa", "b"=>"bbb", "c"=>"ccc"}
+  p db1.replace(db2)  #=> #<SDBM:0xb7c304d0>
+  p db1.to_hash       #=> {"c"=>"ccc", "d"=>"ddd"}
+  p db1.replace(hash) #=> #<SDBM:0xb7c304d0>
+  p db1.to_hash       #=> {"x"=>"xxx", "y"=>"yyy"}
+
+

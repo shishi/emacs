@@ -1,0 +1,10 @@
+kind=defined
+names=abs
+visibility=public
+
+--- abs
+
+a ¤ÎÀäÂĞÃÍ
+
+    c = a.abs
+

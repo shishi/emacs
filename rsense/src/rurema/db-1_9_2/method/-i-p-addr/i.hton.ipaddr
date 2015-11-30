@@ -1,0 +1,8 @@
+kind=defined
+names=hton
+visibility=public
+
+--- hton -> String
+
+ネットワークオーダーのバイト列に変換します。
+

@@ -1,0 +1,10 @@
+kind=defined
+names=/
+visibility=public
+
+--- /(other)
+
+除算 (c = a / b)。
+
+c の精度については「計算精度について」を参照してください。 
+

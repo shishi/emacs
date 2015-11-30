@@ -1,0 +1,21 @@
+kind=defined
+names=split
+visibility=public
+
+--- split
+
+BigDecimal 値を 0.xxxxxxx*10**n と表現したときに、
+符号 (NaNのときは 0、それ以外は+1か-1になります)、
+仮数部分の文字列("xxxxxxx")と、基数(10)、更に指数 n を配列で返します。
+
+    a = BigDecimal::new("3.14159265")
+    f, x, y, z = a.split
+
+とすると、f =+ 1、x = "314159265"、y = 10、z = 1 になります。
+従って、
+
+    s = "0."+x
+    b = f*(s.to_f)*(y**z)
+
+で [[c:Float]] に変換することができます。 
+

@@ -1,0 +1,6 @@
+kind=defined
+names=get_text
+visibility=public
+
+--- get_text(path = nil)
+

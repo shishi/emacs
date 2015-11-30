@@ -1,0 +1,11 @@
+kind=defined
+names=rdev_major
+visibility=public
+
+--- rdev_major -> Integer
+rdev の major 番号部を返します。
+
+  fs = File::Stat.new($0)
+  #例
+  p fs.rdev_major #=> nil
+

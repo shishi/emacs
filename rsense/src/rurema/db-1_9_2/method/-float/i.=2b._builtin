@@ -1,0 +1,12 @@
+kind=defined
+names=+
+visibility=public
+
+--- +(other) -> Float
+»»½Ñ±é»»»Ò¡£ÏÂ¤ò·×»»¤·¤Þ¤¹¡£
+
+@param other Æó¹à±é»»¤Î±¦Â¦¤Î°ú¿ô(ÂÐ¾Ý)
+
+  # ÏÂ
+  p 3.0 + 4.5 #=> 7.5
+

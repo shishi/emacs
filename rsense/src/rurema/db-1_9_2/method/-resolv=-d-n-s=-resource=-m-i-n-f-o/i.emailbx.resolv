@@ -1,0 +1,10 @@
+kind=defined
+names=emailbx
+visibility=public
+
+--- emailbx -> String
+メーリングリストもしくはメールボックスの
+エラーを受け取るメールボックスのドメイン名を
+返します。
+
+

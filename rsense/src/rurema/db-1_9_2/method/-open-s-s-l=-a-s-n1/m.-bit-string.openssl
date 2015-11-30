@@ -1,0 +1,16 @@
+kind=defined
+names=BitString
+visibility=public
+
+--- BitString(value) -> OpenSSL::ASN1::BitString -> OpenSSL::ASN1::BitString
+--- BitString(value, tag, tagging, tag_class) -> OpenSSL::ASN1::BitString
+ASN.1 の BitString 型の値を表現する Ruby のオブジェクトを
+生成します。
+
+[[m:OpenSSL::ASN1::BitString.new]] と同じです。
+
+@param value ASN.1 値を表す Ruby のオブジェクト(文字列)
+@param tag タグ番号
+@param tagging タグ付けの方法(:IMPLICIT もしくは :EXPLICIT)
+@param tag_class タグクラス(:UNIVERSAL, :CONTEXT_SPECIFIC, :APPLICATION, :PRIVATE のいずれか)
+

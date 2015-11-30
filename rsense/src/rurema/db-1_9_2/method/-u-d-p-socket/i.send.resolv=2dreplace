@@ -1,0 +1,16 @@
+kind=redefined
+names=send
+visibility=public
+
+--- send(mesg, flags , dest_sockaddr=nil) -> Integer
+--- send(mesg, flags, host, port) -> Integer
+4 引数の形式で [[m:UDPSocket#send]] 実行したとき、
+パラメータ host の名前解決に
+[[lib:resolv]] ライブラリを使います。
+
+@param mesg 送るデータを文字列で与えます。
+@param flags フラグを指定します。
+@param host データを送る先のホストを指定します。
+@param port データを送る先のポートを指定します。
+@raise SocketError 名前解決に失敗した場合に発生します。
+

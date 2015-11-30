@@ -1,0 +1,6 @@
+kind=defined
+names=include?
+visibility=public
+
+--- include?(key)
+

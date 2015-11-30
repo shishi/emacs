@@ -1,0 +1,16 @@
+kind=added
+names=tosjis
+visibility=public
+
+--- tosjis -> String
+
+self のエンコーディングを shift_jis に変換した文字列を
+返します。変換元のエンコーディングは文字列の内容から推測します。
+
+このメソッドは MIME エンコードされた文字列を展開し、
+いわゆる半角カナを全角に変換します。
+これらを変換したくない場合は、 [[m:NKF.#nkf]]('-sxm0', str)
+を使ってください。
+
+@see [[m:Kconv.#tosjis]]
+

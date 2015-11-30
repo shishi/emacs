@@ -1,0 +1,21 @@
+superclass=Object
+type=class
+library=webrick.httpauth.basicauth
+extended=
+included=WEBrick=HTTPAuth=Authenticator
+
+HTTP の Basic 認証のためのクラスです。
+
+例
+
+    realm = "WEBrick's realm"
+    srv = HTTPServer.new({ :BindAddress => '127.0.0.1', :Port => 10080})
+
+    htpd = HTTPAuth::Htpasswd.new('dot.htpasswd')
+    htpd.set_passwd(nil, 'username', 'supersecretpass')
+
+    authenticator = HTTPAuth::BasicAuth.new(:UserDB => htpd, :Realm => realm)
+    srv.mount_proc('/basic_auth') {|req, res|
+      authenticator.authenticate(req, res)
+      res.body = "hoge"
+    }

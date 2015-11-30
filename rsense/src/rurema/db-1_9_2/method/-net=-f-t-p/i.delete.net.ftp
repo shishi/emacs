@@ -1,0 +1,16 @@
+kind=defined
+names=delete
+visibility=public
+
+--- delete(filename) -> nil
+ファイルを削除します。
+
+リモートサーバ上の fromname という名前のファイルを削除します。
+
+削除に失敗した場合には 例外が発生します。
+
+@param filename 削除するファイルの名前を与えます。
+
+@raise Net::FTPPermError 応答コードが 5yz であった場合に発生します。
+@raise Net::FTPReplyError 応答コードが 5yz 以外で正しくない場合に発生します。
+

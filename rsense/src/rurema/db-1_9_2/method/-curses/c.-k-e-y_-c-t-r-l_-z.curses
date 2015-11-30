@@ -1,0 +1,8 @@
+kind=defined
+names=KEY_CTRL_Z
+visibility=public
+
+--- KEY_CTRL_Z -> Integer
+
+Ctrl + Z を表す定数です。
+

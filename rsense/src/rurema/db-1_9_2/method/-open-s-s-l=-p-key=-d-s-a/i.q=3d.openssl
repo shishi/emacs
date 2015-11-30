@@ -1,0 +1,12 @@
+kind=defined
+names=q=
+visibility=public
+
+--- q=(q)
+DSA 鍵のパラメータ q を設定します。
+
+通常このメソッドで値を変更することはありません。
+よく考えて必要な場合のみ利用してください。
+
+@param q 設定する整数値
+

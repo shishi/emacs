@@ -1,0 +1,9 @@
+kind=defined
+names=BINARY
+visibility=public
+
+--- BINARY
+ファイルをバイナリとして開きます。
+open(2) で O_BINARYが指定できる場合に使えます。
+[[m:File.open]]で使用します。
+

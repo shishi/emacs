@@ -1,0 +1,12 @@
+kind=defined
+names=headers
+visibility=public
+
+--- headers        -> [[String]]
+
+自身のヘッダーを文字列の配列の配列として設定します。
+
+例: 
+ m = URI.parse("mailto:ruby-list@ruby-lang.org?subject=subscribe&cc=myaddr")
+ p m.headers #=> [["subject", "subscribe"], ["cc", "myaddr"]]
+

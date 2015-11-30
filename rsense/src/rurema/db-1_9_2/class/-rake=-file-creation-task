@@ -1,0 +1,9 @@
+superclass=Rake=FileTask
+type=class
+library=rake
+extended=
+included=
+
+このタスクはファイルが存在しない場合にファイルを作成するタスクです。
+
+対象のファイルが存在する場合は実行されません。

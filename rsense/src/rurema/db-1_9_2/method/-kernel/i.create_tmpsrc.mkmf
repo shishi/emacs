@@ -1,0 +1,11 @@
+kind=added
+names=create_tmpsrc
+visibility=private 
+
+--- create_tmpsrc(src) -> String
+
+与えられた C プログラムのソースコードを一時ファイルに出力して与えられたソースコードを返します。
+
+@param src C プログラムのソースコードを指定します。
+
+

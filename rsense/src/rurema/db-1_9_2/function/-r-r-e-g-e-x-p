@@ -1,0 +1,8 @@
+name=RREGEXP
+private=false
+macro=true
+type=struct RRegexp *
+filename=ruby.h
+params=(VALUE obj)
+
+

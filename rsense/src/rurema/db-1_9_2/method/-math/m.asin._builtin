@@ -1,0 +1,14 @@
+kind=defined
+names=asin
+visibility=public
+
+--- asin(x) -> Float
+
+x の逆正弦関数の値をラジアンで返します。
+
+@param x -1.0 <= x <= 1 の範囲内の実数
+
+@return 返される値の範囲は[-π/2, +π/2] です。
+
+@raise Errno::EDOM 引数に範囲外の値を指定した場合に発生します
+

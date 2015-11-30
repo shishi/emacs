@@ -1,0 +1,10 @@
+kind=defined
+names=content_type
+visibility=public
+
+--- content_type -> String|nil
+"text/html" のような Content-Type を表す
+文字列を返します。
+
+Content-Type: ヘッダフィールドが存在しない場合には nil を返します。
+

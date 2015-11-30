@@ -1,0 +1,15 @@
+#__conv_item_keyonly_opts	TkItemConfigOptkeys#__conv_item_keyonly_opts
+#_conv_args	TkUtil#_conv_args
+#_fromUTF8	TkUtil#_fromUTF8
+#_get_eval_enc_str	TkUtil#_get_eval_enc_str
+#_get_eval_string	TkUtil#_get_eval_string
+#_symbolkey2str	TkUtil#_symbolkey2str
+#_toUTF8	TkUtil#_toUTF8
+#bool	TkUtil#bool
+#hash_kv	TkUtil#hash_kv
+#itemconfig_hash_kv	TkItemConfigOptkeys#itemconfig_hash_kv
+#num_or_str	TkUtil#num_or_str
+#number	TkUtil#number
+#string	TkUtil#string
+:None	TkUtil::None
+:RELEASE_DATE	TkUtil::RELEASE_DATE

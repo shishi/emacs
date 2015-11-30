@@ -1,0 +1,13 @@
+kind=defined
+names=rfc3339
+visibility=public
+
+--- rfc3339(str = '-4712-01-01T00:00:00+00:00', start = Date::ITALY) -> Date
+[[RFC:3339]] 書式の日付を解析し、
+その情報に基づいて日付オブジェクトを生成します。
+
+[[m:Date._rfc3339]] も参照してください。
+
+@param str 日付をあらわす文字列
+@param start グレゴリオ暦をつかい始めた日をあらわすユリウス日
+

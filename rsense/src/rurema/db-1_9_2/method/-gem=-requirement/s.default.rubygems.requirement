@@ -1,0 +1,9 @@
+kind=defined
+names=default
+visibility=public
+
+--- default -> Gem::Requirement
+
+ゼロ以上 ( '>= 0' ) を指定して作成された [[c:Gem::Requirement]] のインスタンスを返します。
+
+

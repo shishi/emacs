@@ -1,0 +1,118 @@
+kind=defined
+names=readline
+visibility=public
+
+--- readline(prompt = "", add_hist = false) -> String | nil
+
+prompt を出力し、ユーザからのキー入力を待ちます。
+エンターキーの押下などでユーザが文字列を入力し終えると、
+入力した文字列を返します。
+このとき、add_hist が true であれば、入力した文字列を入力履歴に追加します。
+何も入力していない状態で EOF(UNIX では ^D) を入力するなどで、
+ユーザからの入力がない場合は nil を返します。
+
+本メソッドはスレッドに対応しています。
+入力待ち状態のときはスレッドコンテキストの切替えが発生します。
+
+入力時には行内編集が可能で、vi モードと Emacs モードが用意されています。
+デフォルトは Emacs モードです。
+
+@param prompt カーソルの前に表示する文字列を指定します。デフォルトは""です。
+@param add_hist 真ならば、入力した文字列をヒストリに記録します。デフォルトは偽です。
+
+@raise SecurityError セーフレベル ($SAFE) が 4 の場合に発生します。
+
+@raise IOError 標準入力が tty でない、かつ、標準入力をクローズしている
+               ([[man:isatty(2)]] の errno が EBADF である。) 場合に発生します。
+
+例: 
+
+  require "readline"
+
+  input = Readline.readline
+  (プロンプトなどは表示せずに、入力待ちの状態になります。
+   ここでは「abc」を入力後、エンターキーを押したと想定します。)
+  abc
+
+  p input # => "abc"
+
+  input = Readline.readline("> ")
+  (">"を表示し、入力待ちの状態になります。
+   ここでは「ls」を入力後、エンターキーを押したと想定します。)
+  > ls
+
+  p input # => "ls"
+
+  input = Readline.readline("> ", true)
+  (">"を表示し、入力待ちの状態になります。
+   ここでは「cd」を入力後、エンターキーを押したと想定します。)
+  > cd
+
+  p input # => "cd"
+
+  input = Readline.readline("> ", true)
+  (">"を表示し、入力待ちの状態になります。
+   ここで、カーソルの上キー、または ^P を押すと、
+   先ほど入力した「cd」が表示されます。
+   そして、エンターキーを押したと想定します。)
+  > cd
+
+  p input # => "cd"
+
+本メソッドには注意事項があります。
+入力待ちの状態で ^C すると ruby インタプリタが終了し、端末状態を復帰しません。
+これを回避するための例を2つ挙げます。
+
+例: ^CによるInterrupt例外を補足して、端末状態を復帰する。
+
+  stty_save = `stty -g`.chomp
+  begin
+    while buf = Readline.readline
+        p buf
+        end
+      rescue Interrupt
+        system("stty", stty_save)
+        exit
+      end
+    end
+  end
+
+例: INTシグナルを補足して、端末状態を復帰する。
+
+  stty_save = `stty -g`.chomp
+  trap("INT") { system "stty", stty_save; exit }
+
+  while buf = Readline.readline
+    p buf
+  end
+
+また、単に ^C を無視する方法もあります。
+
+  trap("INT", "SIG_IGN")
+
+  while buf = Readline.readline
+    p buf
+  end
+
+入力履歴 Readline::HISTORY を使用して、次のようなこともできます。
+
+例: 空行や直前の入力と同じ内容は入力履歴に残さない。
+
+  while buf = Readline.readline("> ", true)
+    # p Readline::HISTORY.to_a
+    Readline::HISTORY.pop if /^\s*$/ =~ buf
+ 
+    begin
+      if Readline::HISTORY[Readline::HISTORY.length-2] == buf
+        Readline::HISTORY.pop 
+      end
+    rescue IndexError
+    end
+ 
+    # p Readline::HISTORY.to_a
+    print "-> ", buf, "\n"
+  end
+
+@see [[m:Readline.vi_editing_mode]]、[[m:Readline.emacs_editing_mode]]、
+     [[c:Readline::HISTORY]]
+

@@ -1,0 +1,14 @@
+kind=defined
+names=setruid
+visibility=public
+
+--- setruid(id)    -> nil
+
+システムコールの setruid を呼びます。
+
+@param id システムコールの引数を整数で指定します。
+
+@raise NotImplementedError システムコールが現在のプラットフォームで提供されていない場合に発生します。
+
+@raise Errno::EXXX システムコールに失敗した場合に発生します。
+

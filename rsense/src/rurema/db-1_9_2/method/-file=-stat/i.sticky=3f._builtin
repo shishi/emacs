@@ -1,0 +1,20 @@
+kind=defined
+names=sticky?
+visibility=public
+
+--- sticky? -> bool
+stickyビットが立っている時に真を返します。
+
+  Dir.glob("/usr/bin/*") {|bd|
+    begin
+      if File::Stat.new(bd).sticky?
+        puts bd
+      end
+    rescue
+    end
+  }
+  #例
+  #...
+  #=> /usr/bin/emacs-21.4
+  #...
+

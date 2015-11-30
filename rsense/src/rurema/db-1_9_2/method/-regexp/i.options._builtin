@@ -1,0 +1,27 @@
+kind=defined
+names=options
+visibility=public
+
+--- options -> Integer
+
+正規表現の生成時に指定されたオプションを返します。戻り値は、
+[[m:Regexp::EXTENDED]], [[m:Regexp::IGNORECASE]],
+[[m:Regexp::MULTILINE]], [[m:Regexp::FIXEDENCODING]] の論理和です。
+
+
+Note that additional bits
+may be set in the returned options: these are used internally by the regular
+expression code. These extra bits are ignored if the options are passed to
+Regexp::new.
+
+  p Regexp::IGNORECASE # => 1
+  p //i.options        # => 1
+
+  p Regexp.new("foo", Regexp::IGNORECASE ).options #=> 1
+  p Regexp.new("foo", Regexp::EXTENDED).options    #=> 2
+  p Regexp.new("foo", Regexp::IGNORECASE | Regexp::EXTENDED).options #=> 3
+  p Regexp.new("foo", Regexp::MULTILINE).options #=> 4
+  p Regexp.new("foo", Regexp::IGNORECASE | Regexp::MULTILINE ).options #=> 5
+  p Regexp.new("foo", Regexp::MULTILINE | Regexp::EXTENDED).options #=>6
+  p Regexp.new("foo", Regexp::IGNORECASE | Regexp::MULTILINE | Regexp::EXTENDED).options #=> 7
+

@@ -1,0 +1,9 @@
+kind=defined
+names=new
+visibility=public
+
+--- new -> Prime
+過去との互換性のためのメソッドです。新しいプログラムでは [[m:Prime.instance]] やクラスメソッドを利用してください。
+
+このメソッドが返すインスタンスは、デフォルトのインスタンスとは違って[[c:Prime::OldCompatibility]] で拡張されています。
+

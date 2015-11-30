@@ -1,0 +1,15 @@
+kind=defined
+names=codepoints,each_codepoint
+visibility=public
+
+--- each_codepoint {|codepoint| block } -> self
+--- codepoints {|codepoint| block }     -> self
+--- each_codepoint -> Enumerator
+--- codepoints     -> Enumerator
+
+文字列の各コードポイントに対して繰り返します。
+
+   #coding:UTF-8
+   "hello わーるど".codepoints.to_a
+   # => [104, 101, 108, 108, 111, 32, 12431, 12540, 12427, 12393]
+

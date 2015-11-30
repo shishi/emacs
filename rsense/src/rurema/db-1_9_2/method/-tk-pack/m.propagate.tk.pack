@@ -1,0 +1,52 @@
+kind=defined
+names=propagate
+visibility=public
+
+--- propagate(master, bool=None)
+
+スレーブのpackが完了した後マスターのウィジェット(master)
+の大きさが自動的に変更されるかどうかを真偽値boolで指定します。
+
+boolを省略した場合、現在の設定を返します。
+
+デフォルトはtrueで、この場合マスターウィジェットは、ウィジェット
+が配置されていない空き区画が見えなくなるよう縮んだり、すべてのスレーブ
+(の割り当てられた区画)のサイズにあわせて大きくなったりします。
+
+((-このメソッドの用途がわからない。マスターのサイズを固定にしたいのな
+ら、geometry でサイズを指定すればいいんじゃないの？-))
+
+  require "tk"
+
+  p TkPack.propagate(Tk.root)
+  TkButton.new { text "foo" }.pack
+
+  top = TkToplevel.new
+  p TkPack.propagate(top)
+
+  TkPack.propagate(top, false)
+  p TkPack.propagate(top)
+  TkButton.new(top) { text "bar" }.pack
+
+  Tk.mainloop
+
+  => true
+     true
+     false
+
+以下の例では、barが表示されない((-なんで？いつかちゃんと調べること-))
+
+  require "tk"
+
+  TkFrame.new {
+    TkPack.propagate(self, true)
+    TkLabel.new(self) { text "foo" }.pack
+  }.pack
+
+  TkFrame.new {
+    TkPack.propagate(self, false)
+    TkLabel.new(self) { text "bar" }.pack
+  }.pack
+
+  Tk.mainloop
+

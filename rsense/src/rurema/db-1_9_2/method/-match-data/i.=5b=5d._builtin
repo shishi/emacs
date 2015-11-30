@@ -1,0 +1,41 @@
+kind=defined
+names=[]
+visibility=public
+
+--- [](n) -> String | nil
+
+n 番目の部分文字列を返します。
+
+0 はマッチ全体を意味します。
+n の値が負の時には末尾からのインデックスと見倣します(末尾の
+要素が -1 番目)。n 番目の要素が存在しない時には nil を返します。
+
+@param n 返す部分文字列のインデックスを指定します。
+
+  /(foo)(bar)(BAZ)?/ =~ "foobarbaz"
+  p $~.to_a       # => ["foobar", "foo", "bar", nil]
+  p $~[0]         # => "foobar"
+  p $~[1]         # => "foo"
+  p $~[2]         # => "bar"
+  p $~[3]         # => nil        (マッチしていない)
+  p $~[4]         # => nil        (範囲外)
+  p $~[-2]        # => "bar"
+
+--- [](range) -> [String]
+
+[[c:Range]] オブジェクト range の範囲にある要素からなる部分配列を返します。
+
+@param range start..end 範囲式。
+
+  /(foo)(bar)/ =~ "foobarbaz"
+  p $~[0..2]      # => ["foobar", "foo", "bar"]
+
+--- [](start, length) -> [String]
+
+start 番目から length 個の要素を含む部分配列を返します。
+
+  /(foo)(bar)/ =~ "foobarbaz"
+  p $~[0, 3]      # => ["foobar", "foo", "bar"]
+
+@see [[m:Array#[] ]]
+

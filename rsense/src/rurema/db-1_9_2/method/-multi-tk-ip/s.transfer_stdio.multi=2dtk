@@ -1,0 +1,6 @@
+kind=defined
+names=transfer_stdio
+visibility=public
+
+--- transfer_stdio(dist, src = '')
+

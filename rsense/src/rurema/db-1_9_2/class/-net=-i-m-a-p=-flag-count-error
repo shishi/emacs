@@ -1,0 +1,9 @@
+superclass=Net=IMAP=Error
+type=class
+library=net.imap
+extended=
+included=
+
+サーバからのレスポンスに含まれるフラグが多すぎるときに発生する例外です。
+
+この上限は [[m:Net::IMAP#max_flag_count=]] で設定します。

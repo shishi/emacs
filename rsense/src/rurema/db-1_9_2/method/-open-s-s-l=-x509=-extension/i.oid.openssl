@@ -1,0 +1,9 @@
+kind=defined
+names=oid
+visibility=public
+
+---oid -> String
+拡張領域の識別子(extnID)をOIDの文字列で返します。
+
+@see [[c:OpenSSL::X509::Extension#oid=]]
+

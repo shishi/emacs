@@ -1,0 +1,12 @@
+kind=defined
+names=content_length
+visibility=public
+
+--- content_length -> Integer|nil
+Content-Length: ヘッダフィールドの表している値を整数で返します。
+
+ヘッダが設定されていない場合には nil を返します。
+
+@raise Net::HTTPHeaderSyntaxError フィールドの値が不正である場合に
+                                  発生します。
+

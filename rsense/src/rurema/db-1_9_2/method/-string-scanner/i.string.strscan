@@ -1,0 +1,35 @@
+kind=defined
+names=string
+visibility=public
+
+--- string -> String
+スキャン対象にしている文字列を返します。
+
+使用例
+      s = StringScanner.new('test string')
+      s.string # => "test string"
+
+返り値は freeze されていません。
+
+      s = StringScanner.new('test string')
+      s.string.frozen? # => false
+
+なお、このメソッドは StringScanner.new に渡した
+文字列をそのまま返しますが、この仕様が将来に渡って保証されるわけではありません。
+この仕様に依存したコードを書かないようにしましょう。
+
+      str = 'test string'
+      s = StringScanner.new(str)
+      s.string == str    # => true
+      s.string.eql?(str) # => true (将来は false になる可能性がある)
+
+また、返り値の文字列に対して破壊的な変更もできますが、
+この操作がスキャン対象の文字列を変更することも保証されません。
+この仕様に依存したコードを書かないでください。
+
+      str = 'test string'
+      s = StringScanner.new(str)
+      s.string.replace("0123")
+      s.scan(/\w+/)     # => "0123" (将来は "test" が返る可能性あり)
+      str               # => "0123" (将来は "test string" が返る可能性あり)
+

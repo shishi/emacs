@@ -1,0 +1,11 @@
+kind=defined
+names=seen?
+visibility=public 
+
+--- seen?(object) -> bool
+
+与えられたオブジェクトが既に生成済みである場合は真を返します。
+そうでない場合は偽を返します。
+
+このメソッドはデータ構造の循環をチェックするために使用します。
+

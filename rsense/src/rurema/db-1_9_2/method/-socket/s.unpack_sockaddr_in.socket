@@ -1,0 +1,18 @@
+kind=defined
+names=unpack_sockaddr_in
+visibility=public
+
+--- unpack_sockaddr_in(sockaddr)
+
+[[ref:lib:socket#pack_string]]を
+unpack したアドレスを返します。返される値は [port, ipaddr]
+の配列です。
+
+例:
+
+  require 'socket'
+  p Socket.unpack_sockaddr_in(Socket.sockaddr_in("echo", "localhost"))
+  => [7, "127.0.0.1"]
+  p Socket.unpack_sockaddr_in(Socket.sockaddr_in("echo", "::1"))
+  => [7, "::1"]
+

@@ -1,0 +1,9 @@
+kind=defined
+names=GENERALIZEDTIME
+visibility=public
+
+--- GENERALIZEDTIME -> Integer
+
+ASN.1 UNIVERSAL タグの、
+GENERALIZEDTIME のタグ番号 24 を表す定数です。
+

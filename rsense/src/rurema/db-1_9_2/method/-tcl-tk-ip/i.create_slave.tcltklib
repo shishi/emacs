@@ -1,0 +1,6 @@
+kind=defined
+names=create_slave
+visibility=public
+
+--- create_slave
+

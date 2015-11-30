@@ -1,0 +1,18 @@
+kind=defined
+names=method
+visibility=public
+
+--- method(name) -> Method
+
+オブジェクトのメソッド name をオブジェクト化した
+[[c:Method]] オブジェクトを返します。
+
+@param name メソッド名を[[c:Symbol]] または[[c:String]]で指定します。
+@raise NameError 定義されていないメソッド名を引数として与えると発生します。
+
+  me = -365.method(:abs)
+  p me #=> #<Method: Fixnum#abs>
+  p me.call #=> 365
+
+@see [[m:Module#instance_method]],[[c:Method]],[[m:Object#__send__]],[[m:Kernel.#eval]]
+

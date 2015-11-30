@@ -1,0 +1,19 @@
+kind=defined
+names=box
+visibility=public
+
+--- box(vertical_char, horizontal_char) -> nil
+
+縦の線に vertical_char、横の線に horizontal_char を使いウィンドウに沿っ
+て箱を書きます。
+
+線は普通にウィンドウ内に書かれるだけなので上書きしないよう注意してくだ
+さい。
+
+@param vertical_char 縦の線に使用する文字を指定します。
+@param horizontal_char 横の線に使用する文字を指定します。
+
+例:
+  win = Curses::Window.new(5,5,5,5)
+  win.box(?|, ?-)
+

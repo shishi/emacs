@@ -1,0 +1,22 @@
+kind=defined
+names=warn
+visibility=public
+
+--- warn(progname = nil){ ... } -> true
+--- warn(progname = nil) -> true
+
+WARN 情報を出力します。
+
+ブロックを与えなかった場合は、progname をメッセージとしてログを出力します。
+
+ブロックを与えた場合は、ブロックを評価した結果をメッセージとして
+ログを出力します。
+
+引数とブロックを同時に与えた場合は、progname をプログラム名、ブロックを評価した
+結果をメッセージとしてログを出力します。
+
+@param progname ブロックを与えない場合は、メッセージとして文字列または例外オブジェクトを指定します。
+                ブロックを与えた場合は、プログラム名を文字列として与えます。
+
+@see [[m:Logger#debug]]
+

@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=tk.optionobj,tk.canvas,tk.tagfont,tk.button,tk.macpkg,tk.textwindow,tk.mngfocus,tk.optiondb,tk.clipboard,tk.event,tk.menu,tk.canvastag,tk.itemconfig,tk.scrollable,tk.virtevent,tk.spinbox,tk.msgcat,tk.root,tk.autoload,tcltklib,tk.txtwin_abst,tk.radiobutton,tkutil,tk.itemfont,tk.text,tk.textmark,tk.place,tk.bgerror,tk.menuspec,tk.font,tk,tk.texttag,tk.encodedstr,tk.menubar,tk.timer,tk.winfo,tk.listbox,tk.entry,tk.console,tk.label,tk.toplevel,tk.winpkg,tk.frame,tk.package,tk.composite,tk.grid,tk.clock,tk.textimage,tk.selection,tk.namespace,tk.palette,tk.scale,tk.bindtag,tk.xim,tk.labelframe,tk.wm,tk.message,tk.variable,tk.scrollbox,tk.image,tk.kinput,tk.panedwindow,tk.pack,tk.dialog,tk.validation,tk.scrollbar,tk.checkbutton
+classes=Tk=BLT,Tk=BLT=GraphCommand
+is_sublibrary=true
+
+BLT support

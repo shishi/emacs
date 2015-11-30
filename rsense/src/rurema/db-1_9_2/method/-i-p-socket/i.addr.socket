@@ -1,0 +1,20 @@
+kind=defined
+names=addr
+visibility=public
+
+--- addr -> Array
+
+ソケットの接続情報を表す配列を返します。配列の各要素は第1要
+素が文字列 "AF_INET", "AF_INET6" など、第2要素が port 番号、第3要素がホストを表
+す文字列、第4要素がホストの IP アドレスを表す文字列 (octet
+decimal や hexadecimal) です。
+
+@raise Errno::EXXX [[man:getsockname(2)]] が 0 未満の値を返した場合に発生します。
+
+例:
+
+  serv = TCPServer.new("localhost", 0)
+  p serv.addr         #=> ["AF_INET", 46102, "localhost.localdomain", "127.0.0.1"]
+  c = TCPSocket.new(*serv.addr.values_at(3,1))
+  s = serv.accept
+

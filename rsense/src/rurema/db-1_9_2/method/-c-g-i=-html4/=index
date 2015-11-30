@@ -1,0 +1,2 @@
+#doctype	CGI::Html4#doctype
+#element_init	CGI::Html4#element_init

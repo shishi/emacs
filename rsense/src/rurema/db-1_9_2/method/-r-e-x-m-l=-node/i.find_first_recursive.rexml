@@ -1,0 +1,6 @@
+kind=defined
+names=find_first_recursive
+visibility=public
+
+--- find_first_recursive {|node| ... }
+

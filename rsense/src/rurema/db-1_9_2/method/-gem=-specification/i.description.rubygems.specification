@@ -1,0 +1,8 @@
+kind=defined
+names=description
+visibility=public
+
+--- description -> String
+
+Gem パッケージの説明を返します。
+

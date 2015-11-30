@@ -1,0 +1,155 @@
+superclass=Object
+type=class
+library=_builtin
+extended=
+included=Comparable
+
+数値を表す抽象クラスです。[[c:Fixnum]] や [[c:Float]] などの数値クラスは Numeric のサブクラスとして
+実装されています。
+
+演算や比較を行うメソッド(+, -, *, /, <=>)は Numeric のサブクラスで定義されま
+す。Numeric で定義されているメソッドは、サブクラスで提供されているメソッド
+(+, -, *, /, %) を利用して定義されるものがほとんどです。
+つまり Numeric で定義されているメソッドは、Numeric のサブクラスとして新たに数値クラスを定義した時に、
+演算メソッド(+, -, *, /, %, <=>, coerce)だけを定義すれば、数値クラスのそのほかのメソッドが
+適切に定義されることを意図して提供されています。
+
++@, -@ は単項演算子 +, - を表しメソッド定義などではこの記法を利用します。
+
+効率のため Numeric のメソッドと同じメソッドがサブクラスで再定義されている場合があります。
+
+[[m:Numeric#coerce]] メソッドを使うことによって異なる数値クラス間で演算を行うこともできます。
+
+=== 数値関連のメソッドを実際に定義しているクラス一覧
+
+ほとんどの数値関連のメソッドはサブクラスで再定義されています。これは、
+効率のためであったり上位抽象クラスで実装を定義することができなかったり
+するためです。実際にどのメソッドがどのクラスに定義されているかは以下の
+表を参照してください。
+
+
+ => ruby 1.8.6 (2007-06-18 patchlevel 5000) [i686-linux]
+                           Numeric    Integer     Fixnum     Bignum     Float
+           ---------------------------------------------------------------------
+                      % |     -          -          o          o          o
+                      & |     -          -          o          o          -
+                      * |     -          -          o          o          o
+                     ** |     -          -          o          o          o
+                      + |     -          -          o          o          o
+                     +@ |     o          -          -          -          -
+                      - |     -          -          o          o          o
+                     -@ |     o          -          o          o          o
+                      / |     -          -          o          o          o
+                      < |     -          -          o          -          o
+                           Numeric    Integer     Fixnum     Bignum     Float
+           ---------------------------------------------------------------------
+                     << |     -          -          o          o          -
+                     <= |     -          -          o          -          o
+                    <=> |     o          -          o          o          o
+                     == |     -          -          o          o          o
+                      > |     -          -          o          -          o
+                     >= |     -          -          o          -          o
+                     >> |     -          -          o          o          -
+                     [] |     -          -          o          o          -
+                      ^ |     -          -          o          o          -
+                    abs |     o          -          o          o          o
+                           Numeric    Integer     Fixnum     Bignum     Float
+           ---------------------------------------------------------------------
+                   ceil |     o          o          -          -          o
+                    chr |     -          o          -          -          -
+                 coerce |     o          -          -          o          o
+                    div |     o          -          o          o          -
+                 divmod |     o          -          o          o          o
+                 downto |     -          o          -          -          -
+                   eql? |     o          -          -          o          o
+                   fdiv |     o          -          o          o          -
+                finite? |     -          -          -          -          o
+                  floor |     o          o          -          -          o
+                           Numeric    Integer     Fixnum     Bignum     Float
+           ---------------------------------------------------------------------
+                   hash |     -          -          -          o          o
+                id2name |     -          -          o          -          -
+              infinite? |     -          -          -          -          o
+               integer? |     o          o          -          -          -
+                 modulo |     o          -          o          o          o
+                   nan? |     -          -          -          -          o
+                   next |     -          o          -          -          -
+               nonzero? |     o          -          -          -          -
+                    quo |     o          -          o          o          -
+              remainder |     o          -          -          o          -
+                           Numeric    Integer     Fixnum     Bignum     Float
+           ---------------------------------------------------------------------
+                  round |     o          o          -          -          o
+ singleton_method_added |     o          -          -          -          -
+                   size |     -          -          o          o          -
+                   step |     o          -          -          -          -
+                   succ |     -          o          -          -          -
+                  times |     -          o          -          -          -
+                   to_f |     -          -          o          o          o
+                   to_i |     -          o          -          -          o
+                 to_int |     o          o          -          -          o
+                   to_s |     -          -          o          o          o
+                           Numeric    Integer     Fixnum     Bignum     Float
+           ---------------------------------------------------------------------
+                 to_sym |     -          -          o          -          -
+               truncate |     o          o          -          -          o
+                   upto |     -          o          -          -          -
+                  zero? |     o          -          o          -          o
+                      | |     -          -          o          o          -
+                      ~ |     -          -          o          o          -       
+
+=== 丸めメソッドの動作一覧
+
+
+[[m:Numeric#ceil]], [[m:Numeric#floor]], [[m:Numeric#round]], [[m:Numeric#truncate]]
+のふるまいの違いの表です。左の実数に対して各メソッドを呼ぶと表のような数を
+返します。
+
+              |       ceil      floor      round   truncate
+        ----------------------------------------------------
+          1.9 |          2          1          2          1
+          1.1 |          2          1          1          1
+         -1.1 |         -1         -2         -1         -1
+         -1.9 |         -1         -2         -2         -1
+
+=== 丸めメソッドの拡張例
+
+切上げはceil, floor を使用して以下のように定義できます。
+
+  if n > 0 then
+    n.ceil
+  else
+    n.floor
+  end
+
+また、任意桁の切上げ、切捨て、四捨五入を行うメソッドは以下のように
+定義できます。
+
+  class Numeric
+    def roundup(d=0)
+      x = 10**d
+      if self > 0
+        (self * x).ceil.quo(x)
+      else
+        (self * x).floor.quo(x)
+      end
+    end
+
+    def rounddown(d=0)
+      x = 10**d
+      if self < 0
+        (self * x).ceil.quo(x)
+      else
+        (self * x).floor.quo(x)
+      end
+    end
+
+    def roundoff(d=0)
+      x = 10**d
+      if self < 0
+        (self * x - 0.5).ceil.quo(x)
+      else
+        (self * x + 0.5).floor.quo(x)
+      end
+    end
+  end

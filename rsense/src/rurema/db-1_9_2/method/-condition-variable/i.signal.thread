@@ -1,0 +1,13 @@
+kind=defined
+names=signal
+visibility=public
+
+--- signal -> Thread | nil
+
+状態変数を待っているスレッドを1つ再開します。再開された
+スレッドは [[m:ConditionVariable#wait]]
+で指定した mutex のロックを試みます。
+
+@return 状態を待っているスレッドがあった場合は、そのスレッドを返します。
+        そうでなければ nil を返します。
+

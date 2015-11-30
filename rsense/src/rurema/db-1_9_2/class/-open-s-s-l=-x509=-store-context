@@ -1,0 +1,16 @@
+superclass=Object
+type=class
+library=openssl
+extended=
+included=
+
+証明書ストアコンテキストクラス。
+
+証明書ストア([[c:OpenSSL::X509::Store]])を利用して
+実際の検証を行う機能を持ちます。
+
+また、検証の途中の状態を保持するためにも使われます。
+検証フィルター([[m:OpenSSL::X509::Store#verify_proc]])の
+引数として渡されます。
+
+検証結果の詳細情報を保持するためにも使われます。

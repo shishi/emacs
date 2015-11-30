@@ -1,0 +1,9 @@
+kind=defined
+names=to_h
+visibility=public 
+
+--- to_h -> Hash
+
+自身をハッシュに変換します。
+
+

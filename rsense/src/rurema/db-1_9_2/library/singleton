@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=
+classes=Singleton
+is_sublibrary=false
+
+Singleton パターンを扱うためのライブラリです。

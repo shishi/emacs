@@ -1,0 +1,16 @@
+kind=defined
+names=proxy_address,proxyaddr
+visibility=public
+
+--- proxy_address -> String|nil
+--- proxyaddr -> String|nil
+
+プロクシ経由で接続する HTTP オブジェクトならプロクシのアドレス
+を返します。
+
+そうでないなら nil を返します。
+
+proxyaddr は時代遅れのメソッドです。
+
+@see [[m:Net::HTTP.Proxy]]
+

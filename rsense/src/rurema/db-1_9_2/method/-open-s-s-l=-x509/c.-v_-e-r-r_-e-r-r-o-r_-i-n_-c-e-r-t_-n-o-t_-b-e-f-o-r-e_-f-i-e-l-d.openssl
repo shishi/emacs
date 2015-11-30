@@ -1,0 +1,17 @@
+kind=defined
+names=V_ERR_ERROR_IN_CERT_NOT_BEFORE_FIELD
+visibility=public
+
+--- V_ERR_ERROR_IN_CERT_NOT_BEFORE_FIELD -> Integer
+証明書の notBefore フィールドの値が不正である
+ことを意味します。
+
+これは notBefore フィールド(証明書の開始時刻を表すデータ)
+が不正なフォーマットであることを意味し
+(そもそも時刻を表現していない場合や、1月32日であるなど)、
+証明書の開始時刻にまだ到達していないことを意味しません。
+
+[[m:OpenSSL::X509::Store#error]] や
+[[m:OpenSSL::X509::StoreContext#error]] のエラーコードとして
+使われます。
+

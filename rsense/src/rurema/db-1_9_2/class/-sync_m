@@ -1,0 +1,9 @@
+superclass=
+type=module
+library=sync
+extended=
+included=
+
+スレッド同期機構である再入可能な reader/writer ロック機能を Mix-in により提供する。
+
+includeしたクラスではinitializeでsuperを呼び出しておく必要がある。

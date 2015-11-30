@@ -1,0 +1,6 @@
+kind=defined
+names=tag_configure
+visibility=public
+
+--- tag_configure(tagOrId, slot, value = Tk::None)
+

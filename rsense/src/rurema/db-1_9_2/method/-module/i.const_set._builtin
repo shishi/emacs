@@ -1,0 +1,15 @@
+kind=defined
+names=const_set
+visibility=public
+
+--- const_set(name, value) -> object
+
+モジュールに name で指定された名前の定数を value とい
+う値として定義し、value を返します。
+
+そのモジュールにおいてすでにその名前の定数が定義されている場合、警
+告メッセージが出力されます。
+
+@param name  [[c:Symbol]],[[c:String]] で定数の名前を指定します。
+@param value セットしたい値を指定します。
+

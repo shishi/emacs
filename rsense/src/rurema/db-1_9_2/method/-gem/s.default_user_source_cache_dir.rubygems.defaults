@@ -1,0 +1,8 @@
+kind=added
+names=default_user_source_cache_dir
+visibility=public
+
+--- default_user_source_cache_dir -> String
+
+デフォルトのユーザ専用のソースキャッシュファイルのパスを返します。
+

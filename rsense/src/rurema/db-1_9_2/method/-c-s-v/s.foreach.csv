@@ -1,0 +1,23 @@
+kind=defined
+names=foreach
+visibility=public
+
+--- foreach(path, options = Hash.new){|row| ... } -> nil
+
+このメソッドは CSV ファイルを読むための主要なインターフェイスです。
+各行が与えられたブロックに渡されます。
+
+例:
+
+  # UTF-32BE な CSV ファイルを読み込んで UTF-8 な row をブロックに渡します
+  CSV.foreach("a.csv", encoding: "UTF-32BE:UTF-8"){|row| p row }
+
+@param path CSV ファイルのパスを指定します。
+
+@param options [[m:CSV.new]] のオプションと同じオプションを指定できます。
+               :encoding というキーを使用すると入出力のエンコーディングを指定することができます。
+               [[m:Encoding.default_external]] と異なるエンコーディングを持つ入力を使用する場合は、
+               必ずエンコーディングを指定してください。
+
+@see [[m:CSV.new]], [[m:File.open]]
+

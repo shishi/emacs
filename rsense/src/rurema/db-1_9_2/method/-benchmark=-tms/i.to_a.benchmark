@@ -1,0 +1,16 @@
+kind=defined
+names=to_a
+visibility=public
+
+--- to_a -> Array
+
+6 要素の配列を返します。
+
+要素は以下の順番で配列に格納されています。
+  * ラベル
+  * user CPU time
+  * system CPU time,
+  * 子プロセスの user CPU time
+  * 子プロセスの system CPU time,
+  * 実経過時間
+

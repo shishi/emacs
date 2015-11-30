@@ -1,0 +1,21 @@
+kind=defined
+names=CloseKey,CreateKey,DeleteKey,DeleteValue,EnumKey,EnumValue,FlushKey,OpenKey,QueryInfoKey,QueryValue,SetValue,check,packdw,packqw,unpackdw,unpackqw
+visibility=public
+
+--- CloseKey(hkey)
+--- CreateKey(hkey, name, opt, desired)
+--- DeleteKey(hkey, name)
+--- DeleteValue(hkey, name)
+--- EnumKey(hkey, index)
+--- EnumValue(hkey, index)
+--- FlushKey(hkey)
+--- OpenKey(hkey, name, opt, desired)
+--- QueryInfoKey(hkey)
+--- QueryValue(hkey, name)
+--- SetValue(hkey, name, type, data, size)
+--- check(result)
+--- packdw(dw)
+--- packqw(qw)
+--- unpackdw(dw)
+--- unpackqw(qw)
+

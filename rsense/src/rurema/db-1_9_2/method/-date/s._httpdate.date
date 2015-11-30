@@ -1,0 +1,12 @@
+kind=defined
+names=_httpdate
+visibility=public
+
+--- _httpdate(str) -> Hash
+このメソッドは [[m:Date.httpdate]] と似ていますが、日付オブジェクトを生成せずに、
+見いだした要素をハッシュで返します。
+
+[[m:Date.httpdate]] も参照してください。
+
+@param str 日付をあらわす文字列
+

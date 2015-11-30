@@ -1,0 +1,17 @@
+kind=defined
+names=escape,quote
+visibility=public
+
+--- escape(string) -> String
+--- quote(string) -> String
+
+string の中で正規表現において特別な意味を持つ文字の直前にエ
+スケープ文字(バックスラッシュ)を挿入した文字列を返します。
+
+
+@param string 正規表現において特別な意味をもつ文字をもつ文字列を指定します。
+
+
+  rp = Regexp.escape("$bc^")
+  puts rp #=> \$bc\^
+

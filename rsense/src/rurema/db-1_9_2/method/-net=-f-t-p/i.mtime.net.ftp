@@ -1,0 +1,19 @@
+kind=defined
+names=mtime
+visibility=public
+
+--- mtime(filename, local = false) -> Time
+
+filename の更新時刻を Time オブジェクトで返します。
+
+local を真とすると、得られた更新時刻を地方時とみなします。
+偽の場合は更新時刻を協定世界時とみなします。
+
+@param filename 更新時刻を得たいファイルの名前を文字列で与えます。
+@param local 返り値の時刻を地方時とみなすかどうかを真偽値で与えます。
+
+@raise Net::FTPTempError 応答コードが 4yz のときに発生します。
+@raise Net::FTPPermError 応答コードが 5yz のときに発生します。
+@raise Net::FTPProtoError 応答コードが RFC 的に正しくない場合に発生します。
+@raise Net::FTPReplyError 応答コードが上の場合以外で正しくない場合に発生します。
+

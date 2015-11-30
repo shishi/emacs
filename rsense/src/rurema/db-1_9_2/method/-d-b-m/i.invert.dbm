@@ -1,0 +1,16 @@
+kind=defined
+names=invert
+visibility=public
+
+--- invert -> Hash
+
+値からキーへのハッシュを返します。
+
+  require 'dbm'
+  
+  db1 = DBM.open('aaa.db', 0666, DBM::NEWDB)
+  db1[:a] = 'aaa'
+  db1[:b] = 'bbbbbb'
+  p db1.invert  #=> {"bbbbbb" => "b", "aaa" => "a"}
+
+

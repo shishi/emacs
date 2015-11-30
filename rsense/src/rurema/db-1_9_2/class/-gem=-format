@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rubygems.format
+extended=Gem=UserInteraction
+included=
+
+RubyGems の Gem ファイルの内部構造を表すクラスです。

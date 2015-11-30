@@ -1,0 +1,18 @@
+kind=added
+names=LAST_MATCH_INFO
+visibility=public
+
+--- $LAST_MATCH_INFO -> MatchData
+
+[[m:$~]] ¤ÎÊÌÌ¾
+
+  require "English"
+
+  str = "<a href=http://www2.ruby-lang.org/ja/LICENSE.txt>license</a>"
+
+  if /<a href=(.+?)>/ =~ str
+    p $LAST_MATCH_INFO[0] #=> "<a href=http://www2.ruby-lang.org/ja/LICENSE.txt>"
+    p $LAST_MATCH_INFO[1] #=> "http://www2.ruby-lang.org/ja/LICENSE.txt"
+    p $LAST_MATCH_INFO[2] #=> nil
+  end
+

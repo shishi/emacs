@@ -1,0 +1,12 @@
+kind=defined
+names=sunday?
+visibility=public
+
+--- sunday? -> bool
+
+自身の表す時刻が日曜日である場合に true を返します。
+そうでない場合に false を返します。
+
+   t = Time.now   #=> Sun Oct 23 00:14:54 UTC 2005
+   t.sunday?      #=> true
+

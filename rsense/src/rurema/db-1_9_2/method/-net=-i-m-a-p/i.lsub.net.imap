@@ -1,0 +1,11 @@
+kind=defined
+names=lsub
+visibility=public
+
+--- lsub(refname, mailbox)
+
+Sends a LSUB command, and returns a subset of names from the set
+of names that the user has declared as being "active" or
+"subscribed".
+The return value is an array of [[c:Net::IMAP::MailboxList]].
+

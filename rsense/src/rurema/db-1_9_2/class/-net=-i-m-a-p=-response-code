@@ -1,0 +1,14 @@
+superclass=Struct
+type=class
+library=net.imap
+extended=
+included=
+
+Net::IMAP::ResponseCode represents response codes.
+
+  resp_text_code  ::= "ALERT" / "PARSE" /
+                      "PERMANENTFLAGS" SPACE "(" #(flag / "\*") ")" /
+                      "READ-ONLY" / "READ-WRITE" / "TRYCREATE" /
+                      "UIDVALIDITY" SPACE nz_number /
+                      "UNSEEN" SPACE nz_number /
+                      atom [SPACE 1*<any TEXT_CHAR except "]">]

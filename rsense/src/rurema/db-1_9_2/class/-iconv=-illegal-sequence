@@ -1,0 +1,8 @@
+superclass=ArgumentError
+type=class
+library=iconv
+extended=
+included=Iconv=Failure
+
+入力か出力の文字が指示された文字集合に含まれないために変換が停止したこと
+を表します。

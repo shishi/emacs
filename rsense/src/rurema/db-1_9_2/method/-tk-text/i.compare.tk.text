@@ -1,0 +1,6 @@
+kind=defined
+names=compare
+visibility=public
+
+--- compare(idx1, op, idx2)
+

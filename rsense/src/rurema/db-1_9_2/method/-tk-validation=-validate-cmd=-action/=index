@@ -1,0 +1,7 @@
+:Delete	TkValidation::ValidateCmd::Action::Delete
+:Focus	TkValidation::ValidateCmd::Action::Focus
+:Forced	TkValidation::ValidateCmd::Action::Forced
+:Insert	TkValidation::ValidateCmd::Action::Insert
+:Others	TkValidation::ValidateCmd::Action::Others
+:TextVariable	TkValidation::ValidateCmd::Action::TextVariable
+:Textvariable	TkValidation::ValidateCmd::Action::Textvariable

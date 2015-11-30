@@ -1,0 +1,9 @@
+kind=defined
+names=empty?
+visibility=public
+
+--- empty? -> bool
+
+内部で保持している @row へ委譲します。
+
+

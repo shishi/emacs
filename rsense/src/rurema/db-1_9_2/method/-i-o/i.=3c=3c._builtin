@@ -1,0 +1,17 @@
+kind=defined
+names=<<
+visibility=public
+
+--- <<(object)    -> self
+
+object を出力します。object が文字列でない時にはメソッ
+ド to_s を用いて文字列に変換します。
+
+以下のような << の連鎖を使うことができます。
+
+  STDOUT << 1 << " is a " << Fixnum << "\n"
+
+@param object 出力したいオブジェクトを与えます。
+
+@raise Errno::EXXX 出力に失敗した場合に発生します。
+

@@ -1,0 +1,15 @@
+kind=defined
+names=open
+visibility=public
+
+--- open(io, mode = 'r', signer = nil){|tar_io| ... }
+
+io を開いて与えられたブロックに渡してブロックを評価します。
+
+@param io IO オブジェクトを指定します。普通は Gem パッケージを開いたファイルオブジェクトを指定します。
+
+@param mode モードを文字列で指定します。指定できるモードは読み込み (r) と書き込み (w) です。
+
+@param signer ???
+
+

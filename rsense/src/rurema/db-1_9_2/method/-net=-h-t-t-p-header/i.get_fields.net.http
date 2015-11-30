@@ -1,0 +1,17 @@
+kind=defined
+names=get_fields
+visibility=public
+
+--- get_fields(key) -> [String]
+key ヘッダフィールドの値 (文字列) を配列で返します。
+
+たとえばキー 'content-length' に対しては ['2048'] のような
+文字列が得られます。一種類のヘッダフィールドが一つのヘッダの中
+に複数存在することがありえます。
+key は大文字小文字を区別しません。
+
+@param key ヘッダフィール名を文字列で与えます。
+@see [[m:Net::HTTPHeader#[] ]], [[m:Net::HTTPHeader#[]=]],
+     [[m:Net::HTTPHeader#add_field]],
+
+

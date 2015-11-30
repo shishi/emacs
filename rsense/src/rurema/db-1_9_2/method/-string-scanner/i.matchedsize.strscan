@@ -1,0 +1,13 @@
+kind=defined
+names=matchedsize
+visibility=public
+
+--- matchedsize -> Fixnum | nil
+
+[[m:StringScanner#matched_size]] と同じです。
+
+このメソッドは は将来のバージョンで削除される予定です。
+代わりに [[m:StringScanner#matched_size]] を使ってください。
+
+@see [[m:StringScanner#matched_size]] 
+

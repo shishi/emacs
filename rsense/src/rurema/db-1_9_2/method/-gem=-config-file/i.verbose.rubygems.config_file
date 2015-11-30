@@ -1,0 +1,10 @@
+kind=defined
+names=verbose
+visibility=public 
+
+--- verbose -> bool | Symbol
+
+ログの出力レベルを返します。
+
+@see [[m:Gem::ConfigFile#verbose=]]
+

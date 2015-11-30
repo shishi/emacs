@@ -1,0 +1,10 @@
+kind=defined
+names=display_thread_id,display_thread_id?
+visibility=public
+
+--- display_thread_id -> bool
+--- display_thread_id? -> bool
+
+真ならば、スレッド ID を表示します。
+デフォルトは、真です。
+

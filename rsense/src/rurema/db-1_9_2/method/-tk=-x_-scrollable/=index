@@ -1,0 +1,5 @@
+#xscrollbar	Tk::X_Scrollable#xscrollbar
+#xscrollcommand	Tk::X_Scrollable#xscrollcommand
+#xview	Tk::X_Scrollable#xview
+#xview_moveto	Tk::X_Scrollable#xview_moveto
+#xview_scroll	Tk::X_Scrollable#xview_scroll

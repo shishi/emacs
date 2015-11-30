@@ -1,0 +1,8 @@
+kind=defined
+names=path
+visibility=public
+
+--- path -> Array
+
+Gem を検索するパスの配列を返します。
+

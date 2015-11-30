@@ -1,0 +1,6 @@
+kind=defined
+names=package_name
+visibility=public
+
+--- package_name
+

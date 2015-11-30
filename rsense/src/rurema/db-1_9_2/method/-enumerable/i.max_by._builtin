@@ -1,0 +1,20 @@
+kind=defined
+names=max_by
+visibility=public
+
+--- max_by              -> Enumerator
+--- max_by{|item| ... } -> object
+
+各要素を順番にブロックに渡して実行し、
+その評価結果を <=> で比較して、
+最大であった値に対応する元の要素を返します。
+
+要素が存在しないときは nil を返します。
+該当する要素が複数存在する場合、どの要素を返すかは不定です。
+
+[[m:Enumerable#max]] と [[m:Enumerable#max_by]] の
+違いは [[m:Enumerable#sort]] と [[m:Enumerable#sort_by]] の違いと同じです。
+
+@see [[m:Enumerable#sort_by]]
+
+

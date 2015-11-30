@@ -1,0 +1,11 @@
+kind=defined
+names=<<
+visibility=public
+
+--- <<(s) -> self
+文字列 s を書き込みます。
+
+[[m:IO#<<]] と同様です。
+
+@param s 出力する文字列
+

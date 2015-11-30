@@ -1,0 +1,91 @@
+kind=defined
+names=gsub
+visibility=public
+
+--- gsub(pattern, replace) -> String
+
+文字列中で pattern にマッチする部分全てを
+文字列 replace で置き換えた文字列を生成し返します。
+
+Ruby 1.6 以前では pattern が文字列の場合、
+その文字列を正規表現にコンパイルしていました。
+しかし Ruby 1.8 以降では、その文字列そのものがパターンになります。
+
+置換文字列 replace 中の \& と \0 はマッチした部分文字列に、
+\1 ... \9 は n 番目の括弧の内容に置き換えられます。
+置換文字列内では \`、\'、\+ も使えます。
+これらは [[m:$`]]、[[m:$']]、[[m:$+]] に対応します。
+
+@param pattern    置き換える文字列のパターン
+@param replace    pattern で指定した文字列と置き換える文字列
+
+例:
+    p 'abcdefg'.gsub(/def/, '!!')          # => "abc!!g"
+    p 'abcabc'.gsub(/b/, '<<\&>>')         # => "a<<b>>ca<<b>>c"
+    p 'xxbbxbb'.gsub(/x+(b+)/, 'X<<\1>>')  # => "X<<bb>>X<<bb>>"
+
+注意:
+
+第 2 引数 replace に [[m:$1]] を埋め込んでも意図した結果にはなりません。
+この文字列が評価される時点ではまだ正規表現マッチが行われておらず、
+$1 がセットされていないからです。
+
+また、gsub では「\」が部分文字列との置き換えという特別な意味を持つため、
+replace に「\」自身を入れたいときは
+「\」を二重にエスケープしなければなりません。
+
+    # ひとつめの括弧の内容に置き換えるときによくある間違い
+    p 'xbbb-xbbb'.gsub(/x(b+)/, "#{$1}")   # => "-"        # NG
+    p 'xbbb-xbbb'.gsub(/x(b+)/, "\1")      # => "1-1"      # NG
+    p 'xbbb-xbbb'.gsub(/x(b+)/, "\\1")     # => "bbb-bbb"  # OK
+    p 'xbbb-xbbb'.gsub(/x(b+)/, '\1')      # => "bbb-bbb"  # OK
+    p 'xbbb-xbbb'.gsub(/x(b+)/, '\\1')     # => "bbb-bbb"  # OK
+
+    # バックスラッシュを倍にするときによくある間違い
+    puts '\n'.gsub(/\\/, "\\\\")      # => \n   # NG
+    puts '\n'.gsub(/\\/, '\\\\')      # => \n   # NG
+    puts '\n'.gsub(/\\/, "\\\\\\\\")  # => \\n  # OK
+    puts '\n'.gsub(/\\/, '\\\\\\\\')  # => \\n  # OK
+
+このような間違いを確実に防止し、コードの可読性を上げるには、
+\& や \1 よりも下記のようにブロック付き形式の gsub を使うべきです。
+
+    p 'xbbb-xbbb'.gsub(/x(b+)/) { $1 }   # => "bbb-bbb"  # OK
+
+    puts '\n'.gsub(/\\/) { '\\\\' }      # => \\n        # OK
+
+@see [[m:String#sub]]
+
+--- gsub(pattern) {|matched| .... } -> String
+--- gsub(pattern) -> Enumerator
+
+文字列中で pattern にマッチした部分を順番にブロックに渡し、
+その実行結果で置き換えます。
+ブロックなしの場合と違い、ブロックの中からは
+組み込み変数 [[m:$1]], $2, $3, ... を問題なく参照できます。
+
+Ruby 1.6 以前では pattern が文字列の場合、
+その文字列を正規表現にコンパイルしていました。
+しかし Ruby 1.8 以降では、その文字列そのものがパターンになります。
+
+@param pattern    置き換える文字列のパターン
+@return 置換した場合は self、置換しなかった場合は nil
+
+例:
+
+    p 'abcabc'.gsub(/[bc]/) {|s| s.upcase }  #=> "aBCaBC"
+    p 'abcabc'.gsub(/[bc]/) { $&.upcase }    #=> "aBCaBC"
+
+@see [[m:String#sub]]
+
+--- gsub(pattern, hash) -> String
+
+文字列中の pattern にマッチした部分をキーにして hash を引いた値で置き換えます。
+
+@param pattern    置き換える文字列のパターン
+@param hash       置き換える文字列を与えるハッシュ
+
+  hash = {'b'=>'B', 'c'=>'C'}
+  p "abcabc".gsub(/[bc]/){hash[$&]} #=> "aBCaBC"
+  p "abcabc".gsub(/[bc]/, hash)     #=> "aBCaBC"
+

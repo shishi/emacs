@@ -1,0 +1,53 @@
+superclass=Object
+type=class
+library=matrix
+extended=
+included=Enumerable
+
+数[[c:Numeric]]を要素とする行列を扱うクラスです。
+
+行列
+
+m * n 個の数a(i,j)を
+
+  [ a(0,0) a(0,1) a(0,2)  a(0,3) ... a(0,n-1)   ]
+  [ a(1,0) a(1,1) a(1,2)  a(1,3) ... a(1,n-1)   ]
+  [ a(2,0) a(2,1) a(2,2)  a(2,3) ... a(2,n-1)   ]
+  [                                             ]
+  [ a(m-1,0)                         a(m-1,n-1) ]
+
+のように、縦横の表にあらわしたものを(m,n)型の行列という。
+m=nの行列をm次の正方行列(square matrix)という。
+
+上からi番目の横の数の並びを第i行(the i-th row)、
+左からj番目の縦の数の並びを第j列(the j-th column)という。
+
+(m,n)型行列は、
+大きさnの行(横)ベクトルをm個縦に並べたものとみなすこともできるし、
+大きさmの列(縦)ベクトルをn個横に並べたものとみなすこともできる。
+
+第i行、第j列にある数a(i,j)を(i,j)要素(the (i,j)-th element)という。
+
+i=jの要素a(i,j)を対角要素(diagonal element)、
+それ以外の要素を非対角要素(nondiagonal element)という。
+
+
+
+
+
+=== Complex クラスとの併用
+
+require 'complex'することによって、
+Matrixオブジェクトの要素は[[c:Complex]]クラスに拡張される。
+多くのメソッドは、この拡張されたMatrixクラスでも、期待通りに動作する。
+
+次の例は、各要素を共役複素数に置換するメソッド Matrix#conjugate である。
+
+  require 'matrix'
+  require 'complex'
+  
+  class Matrix
+    def conjugate
+      collect{|e| e.conjugate }
+    end
+  end

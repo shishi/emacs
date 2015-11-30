@@ -1,0 +1,9 @@
+kind=defined
+names=return_code
+visibility=public
+
+--- return_code -> String
+このメソッドは obsolete です。使わないでください。
+
+"\n" を返します。
+

@@ -1,0 +1,7 @@
+kind=defined
+names=bindinfo_all
+visibility=public
+
+--- bindinfo_all(context = nil)
+
+

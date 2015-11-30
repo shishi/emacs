@@ -1,0 +1,10 @@
+kind=defined
+names=join
+visibility=public
+
+--- join
+
+サーバのサービスを実行しているスレッドを [[m:Thread#join]] します。
+
+@see [[m:Thread#join]]
+

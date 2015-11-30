@@ -1,0 +1,7 @@
+kind=defined
+names=cwday
+visibility=public
+
+--- cwday -> Integer
+暦週の日 (曜日) を返します (1-7、月曜は1)。
+

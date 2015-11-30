@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=webrick
+extended=
+included=
+
+ライブラリ webrick の各クラスを提供するモジュールです。

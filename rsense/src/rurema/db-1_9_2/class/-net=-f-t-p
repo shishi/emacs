@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=net.ftp
+extended=
+included=
+
+FTP を実装したクラスです。

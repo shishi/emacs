@@ -1,0 +1,8 @@
+kind=defined
+names=param
+visibility=public
+
+--- param
+
+Returns a hash that represents parameters as defined in [MIME-IMB].
+

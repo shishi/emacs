@@ -1,0 +1,6 @@
+kind=defined
+names=parent
+visibility=public
+
+--- parent(namespace = Tk::None)
+

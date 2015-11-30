@@ -1,0 +1,20 @@
+kind=defined
+names=each_with_index
+visibility=public
+
+--- each_with_index                      -> Enumerator
+--- each_with_index {|item, index| ... } -> self
+
+要素とそのインデックスをブロックに渡して繰り返します。
+
+self を返します。
+
+例:
+    [5, 10, 15].each_with_index do |n, idx|
+      p [n, idx]
+    end
+        # => [5, 0]
+        #    [10, 1]
+        #    [15, 2]
+
+

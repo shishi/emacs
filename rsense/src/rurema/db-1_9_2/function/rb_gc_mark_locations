@@ -1,0 +1,8 @@
+name=rb_gc_mark_locations
+private=false
+macro=false
+type=void
+filename=gc.c
+params=(VALUE *start, VALUE *end)
+
+

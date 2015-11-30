@@ -1,0 +1,10 @@
+kind=defined
+names=installed_spec_directories
+visibility=public
+
+--- installed_spec_directories -> [String]
+
+gemspec ファイルがインストールされているディレクトリのリストを返します。
+
+@see [[m:Gem.#path]]
+

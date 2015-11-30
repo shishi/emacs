@@ -1,0 +1,6 @@
+kind=defined
+names=_eval_with_enc
+visibility=public
+
+--- _eval_with_enc(str)
+

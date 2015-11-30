@@ -1,0 +1,10 @@
+kind=defined
+names=proxy_class?
+visibility=public
+
+--- proxy_class? -> bool
+
+自身が ([[m:Net::HTTP.Proxy]] によって作成された) プロクシ用のクラスならば真を返し、そうでなければ偽を返します。
+
+@see [[m:Net::HTTP.Proxy]]
+

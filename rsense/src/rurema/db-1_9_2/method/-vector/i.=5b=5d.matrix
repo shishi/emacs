@@ -1,0 +1,13 @@
+kind=defined
+names=[],component,element
+visibility=public
+
+--- [](i) -> object | nil
+--- element(i) -> object | nil
+--- component(i) -> object | nil
+i 番目の要素を返します。インデックスは 0 から開始します。
+要素が存在しないインデックスを指定した時には nil を返します。
+
+@param i 取得する要素のインデックスを整数値で指定します。
+         インデックスは 0 から始めます。
+

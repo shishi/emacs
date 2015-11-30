@@ -1,0 +1,39 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(libname, mjv = nil, miv = nil) -> WIN32OLE_TYPELIB
+WIN32OLE_TYPELIBオブジェクトを生成します。
+
+@param libname 生成するTypeLibのレジストリ上のドキュメント文字列
+              （[[m:WIN32OLE_TYPELIB#name]]）または
+               GUID（[[m:WIN32OLE_TYPELIB#guid]]）またはTLBファイル名を
+               文字列で指定します。
+@param mjv 作成するTypeLibのメジャーバージョン番号をIntegerで指定します。
+           または整数部にメジャーバージョン、小数点数部にマイナーバージョ
+           ンを指定したFloatで指定します。libnameに名前を指定した場合は
+           無視します。
+@param miv 作成するTypeLibのマイナーバージョン番号を整数で指定します。
+           mjvにFloatを与えた場合およびlibnameに名前を指定した場合は無
+           視します。
+@return libnameで指定したWIN32OLE_TYPELIBオブジェクトを返します。
+@raise WIN32OLERuntimeError 引数で指定したTypeLibが見つかりません。
+
+    tlib1 = WIN32OLE_TYPELIB.new('Microsoft Excel 14.0 Object Library')
+    tlib2 = WIN32OLE_TYPELIB.new('{00020813-0000-0000-C000-000000000046}')
+    tlib3 = WIN32OLE_TYPELIB.new('{00020813-0000-0000-C000-000000000046}', 1.7)
+    tlib4 = WIN32OLE_TYPELIB.new('{00020813-0000-0000-C000-000000000046}', 1, 7)
+    tlib5 = WIN32OLE_TYPELIB.new("C:\\WINDOWS\\SYSTEM32\\SHELL32.DLL")
+    puts tlib1.name  # => 'Microsoft Excel 14.0 Object Library'
+    puts tlib2.name  # => 'Microsoft Excel 14.0 Object Library'
+    puts tlib3.name  # => 'Microsoft Excel 14.0 Object Library'
+    puts tlib4.name  # => 'Microsoft Excel 14.0 Object Library'
+    puts tlib5.name  # => 'Microsoft Shell Controls And Automation'
+
+TypeLibは、レジストリのHKEY_CLASS_ROOT\TypeLibキーの下にGUIDをキーとし
+て格納されています。GUIDキーの下にバージョン番号キーが並び、ドキュメン
+ト文字列はバージョン番号キーの既定値に設定されています。
+
+ドキュメント文字列は、コンテキストヘルプなどに利用可能なTypeLibの簡単な
+説明文で、通常バージョン番号を含みます。
+

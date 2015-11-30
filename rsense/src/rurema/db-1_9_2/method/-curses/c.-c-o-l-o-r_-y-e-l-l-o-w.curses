@@ -1,0 +1,8 @@
+kind=defined
+names=COLOR_YELLOW
+visibility=public
+
+--- COLOR_YELLOW -> Integer
+
+黄色を表す定数です。
+

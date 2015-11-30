@@ -1,0 +1,16 @@
+superclass=
+type=module
+library=cmath
+extended=
+included=Math
+
+複素数演算をサポートするモジュールです。
+
+[[c:Math]] モジュールの複素数版です。同名のメソッドを複素数対応します。
+従来の計算結果が必要な場合は、「メソッド名!」の形式で呼び出します。
+
+例:
+
+  require "cmath"
+  CMath.sqrt(-9)  # => (0+3.0i)
+  CMath.sqrt!(4)  # => 2.0

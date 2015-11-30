@@ -1,0 +1,26 @@
+name=Data_Get_Struct
+private=false
+macro=true
+type=void
+filename=ruby.h
+params=(VALUE obj, type, type *svar)
+
+
+Ruby のオブジェクト obj から type 型へのポインタを
+とりだし svar に代入します。
+
+使用例
+
+    struct mytype {
+        int i;
+        char *s;
+    };
+
+    VALUE
+    my_i(VALUE self)
+    {
+        struct mytype *m;
+        Data_Get_Struct(self, struct mytype, m);
+        return INT2NUM(m->i);
+    }
+

@@ -1,0 +1,7 @@
+kind=added
+names=encode_eucjp
+visibility=public
+
+--- encode_eucjp(content)
+
+

@@ -1,0 +1,10 @@
+name=find_class_path
+private=true
+macro=false
+type=VALUE
+filename=variable.c
+params=(VALUE klass)
+
+
+クラス klass のクラスパスを探索し、Ruby の文字列で返します。
+

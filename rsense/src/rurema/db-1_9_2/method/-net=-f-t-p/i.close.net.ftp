@@ -1,0 +1,10 @@
+kind=defined
+names=close
+visibility=public
+
+--- close -> ()
+サーバとの接続を切ります。
+
+再び [[m:Net::FTP#connect]] で接続しない限り
+一切の操作が不可能になります。
+

@@ -1,0 +1,40 @@
+kind=defined
+names=attr
+visibility=public
+
+--- attr
+
+Returns a hash. Each key is a data item name, and each value is
+its value.
+
+The current data items are:
+
+: BODY
+      A form of BODYSTRUCTURE without extension data.
+: BODY[<section>]<<origin_octet>>
+      A string expressing the body contents of the specified section.
+: BODYSTRUCTURE
+      An object that describes the [MIME-IMB] body structure of a message.
+      See [[c:Net::IMAP::BodyTypeBasic]], [[c:Net::IMAP::BodyTypeText]],
+      [[c:Net::IMAP::BodyTypeMessage]], [[c:Net::IMAP::BodyTypeMultipart]].
+: ENVELOPE
+      A [[c:Net::IMAP::Envelope]] object that describes the envelope
+      structure of a message.
+: FLAGS
+      A array of flag symbols that are set for this message. flag symbols
+      are capitalized by String#capitalize.
+: INTERNALDATE
+      A string representing the internal date of the message.
+: RFC822
+      Equivalent to BODY[].
+: RFC822.HEADER
+      Equivalent to BODY.PEEK[HEADER].
+: RFC822.SIZE
+      A number expressing the [[RFC:822]] size of the message.
+: RFC822.TEXT
+      Equivalent to BODY[TEXT].
+: UID
+      A number expressing the unique identifier of the message.
+
+
+

@@ -1,0 +1,10 @@
+kind=defined
+names=array_attributes
+visibility=public
+
+--- array_attributes -> Array
+
+@@array_attributes の複製を返します。
+
+@see [[m:Object#dup]]
+

@@ -1,0 +1,41 @@
+kind=defined
+names=accept
+visibility=public
+
+--- accept(klass, pat = /.*/){|str| ...}    -> ()
+
+オプションの引数を文字列から Ruby のオブジェクトに変換するための
+ブロックを登録します。すべての OptionParser インスタンスに共通です。
+
+ブロックには、文字列として与えられるオプションの引数から klass のインスタンスを生成して返すものを指定します。
+
+[[m:OptionParser#on]] で klass を指定した場合、
+コマンドラインのオプションに与えられた引数は、この accept で登録したブロックで
+klass のインスタンスに変換されてから、OptionParser#on メソッドで登録したブロックに渡されます。
+
+  require "optparse"
+  require "time"
+  
+  OptionParser.accept(Time) do |s,|
+    begin
+      Time.parse(s) if s
+    rescue
+      raise OptionParser::InvalidArgument, s
+    end
+  end
+
+  opts = OptionParser.new
+
+  opts.on("-t", "--time [TIME]", Time) do |time|
+    p time.class #=> Time
+  end
+
+  opts.parse!(ARGV)
+
+いくつかのクラスに対しては変換用のブロックがデフォルトで登録されて
+います。[[m:OptionParser#on]] を参照して下さい。
+
+@param klass クラスオブジェクトを与えます。
+
+@param pat match メソッドを持ったオブジェクト([[c:Regexp]] オブジェクトなど)を与えます。
+

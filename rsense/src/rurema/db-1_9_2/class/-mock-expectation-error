@@ -1,0 +1,7 @@
+superclass=StandardError
+type=class
+library=minitest.mock
+extended=
+included=
+
+モックの検証に失敗した場合に発生する例外です。

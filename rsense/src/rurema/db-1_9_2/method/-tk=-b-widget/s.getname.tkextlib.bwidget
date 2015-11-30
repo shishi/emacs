@@ -1,0 +1,8 @@
+kind=defined
+names=getname
+visibility=public
+
+--- getname(name)
+
+
+

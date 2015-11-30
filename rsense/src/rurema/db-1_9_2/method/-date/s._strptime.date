@@ -1,0 +1,11 @@
+kind=defined
+names=_strptime
+visibility=public
+
+--- _strptime(str, format = '%F') -> Hash
+このメソッドは [[m:Date.strptime]] と似ていますが、日付オブジェクトを生成せずに、
+見いだした要素をハッシュで返します。
+
+@param str 日付をあらわす文字列
+@param format 書式
+

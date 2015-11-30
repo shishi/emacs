@@ -1,0 +1,14 @@
+kind=defined
+names=downcase
+visibility=public
+
+--- downcase -> Symbol
+
+大文字を小文字に変換したシンボルを返します。
+
+(self.to_s.downcase.intern と同じです。)
+
+  :FOO.downcase #=> :foo
+
+@see [[m:String#downcase]]
+

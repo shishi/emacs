@@ -1,0 +1,7 @@
+kind=defined
+names=mark_unset,unset_mark
+visibility=public
+
+--- mark_unset(*marks)
+--- unset_mark(*marks)
+

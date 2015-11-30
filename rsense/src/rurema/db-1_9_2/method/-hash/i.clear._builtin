@@ -1,0 +1,20 @@
+kind=defined
+names=clear
+visibility=public
+
+--- clear -> self
+
+ハッシュの中身を空にします。
+
+空にした後のselfを返します。
+デフォルト値の設定はクリアされません。
+
+  h = Hash.new("default value")
+  h[:some] = "some"
+  p h #=> {:some=>"some"}
+  
+  h.clear
+  
+  p h #=> {}
+  p h.default #=> "default value"
+

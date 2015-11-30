@@ -1,0 +1,10 @@
+kind=defined
+names=path
+visibility=public
+
+--- path    -> String
+
+オープンしているディレクトリのパス名を文字列で返します。
+
+@raise IOError 既に自身が close している場合に発生します。
+

@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=win32.registry
+extended=
+included=Enumerable,Win32=Registry=Constants
+
+

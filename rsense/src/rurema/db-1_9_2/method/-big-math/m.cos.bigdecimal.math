@@ -1,0 +1,23 @@
+kind=defined
+names=cos
+visibility=public
+
+--- cos(x, prec) -> BigDecimal
+
+x の余弦関数を prec で指定した精度で計算します。単位はラジアンです。x
+に無限大や NaN を指定した場合には NaN を返します。
+
+@param x 計算対象の BigDecimal オブジェクト。単位はラジアン。
+
+@param prec 計算結果の精度。
+
+@raise ArgumentError prec に 0 以下が指定された場合に発生します。
+
+例:
+
+
+  require "bigdecimal/math"
+
+  puts BigMath::cos(BigDecimal.new('0.5'), 10) #=> 0.8775825618903727161162815826327690580439923E0
+
+

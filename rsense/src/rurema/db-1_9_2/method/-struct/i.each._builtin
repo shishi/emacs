@@ -1,0 +1,9 @@
+kind=defined
+names=each
+visibility=public
+
+--- each {|value| ... } -> self
+--- each -> Enumerator
+(このメソッドは Struct の下位クラスにのみ定義されています)
+構造体の各メンバに対して繰り返します。
+

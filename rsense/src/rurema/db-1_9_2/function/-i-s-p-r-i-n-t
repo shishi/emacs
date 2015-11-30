@@ -1,0 +1,8 @@
+name=ISPRINT
+private=false
+macro=true
+type=int
+filename=ruby.h
+params=(char c)
+
+

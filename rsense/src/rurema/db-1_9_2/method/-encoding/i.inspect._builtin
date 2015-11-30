@@ -1,0 +1,11 @@
+kind=defined
+names=inspect
+visibility=public
+
+--- inspect -> String
+プログラマにわかりやすい表現の文字列を返します。
+
+例:
+    Encoding::UTF_8.inspect       #=> "#<Encoding:UTF-8>"
+    Encoding::ISO_2022_JP.inspect #=> "#<Encoding:ISO-2022-JP (dummy)>"
+

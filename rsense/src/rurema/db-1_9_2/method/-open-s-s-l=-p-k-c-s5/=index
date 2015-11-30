@@ -1,0 +1,4 @@
+.pbkdf2_hmac	OpenSSL::PKCS5.#pbkdf2_hmac
+.pbkdf2_hmac_sha1	OpenSSL::PKCS5.#pbkdf2_hmac_sha1
+#pbkdf2_hmac	OpenSSL::PKCS5.#pbkdf2_hmac
+#pbkdf2_hmac_sha1	OpenSSL::PKCS5.#pbkdf2_hmac_sha1

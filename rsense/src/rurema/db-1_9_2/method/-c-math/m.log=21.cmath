@@ -1,0 +1,30 @@
+kind=defined
+names=log!
+visibility=public
+
+--- log!(x) -> Float
+--- log!(x, b) -> Float
+
+実数 x の対数を返します。[[m:Math.#log]] のエイリアスです。
+
+@param x 真数を正の実数で指定します。
+
+@param b 底を指定します。省略した場合は自然対数を計算します。
+
+@raise Math::DomainError x が負の数である場合に発生します。
+
+@raise TypeError 引数のどちらかに数値以外を指定した場合に発生します。
+
+@raise RangeError 引数のどちらかに実数以外の数値を指定した場合に発生します。
+
+例:
+
+  require "cmath"
+  CMath.log!(Math::E) # => 1.0
+  CMath.log!(1)       # => 0.0
+  CMath.log!(100, 10) # => 2.0
+  CMath.log!(-1.0)     # => Math::DomainError
+
+@see [[m:Math.#log]]
+
+

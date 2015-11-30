@@ -1,0 +1,44 @@
+kind=defined
+names=oct
+visibility=public
+
+--- oct -> Integer
+
+文字列を 8 進文字列であると解釈して、整数に変換します。
+
+例:
+
+  p "10".oct  # => 8
+  p "010".oct # => 8
+  p "8".oct   # => 0
+
+oct は文字列の接頭辞 ("0", "0b", "0B", "0x", "0X") に応じて
+8 進以外の変換も行います。
+
+例:
+
+  p "0b10".oct  # => 2
+  p "10".oct    # => 8
+  p "010".oct   # => 8
+  p "0x10".oct  # => 16
+
+整数とみなせない文字があればそこまでを変換対象とします。
+変換対象が空文字列であれば 0 を返します。
+
+Ruby 1.6 では、8 進だけが符号を許す。
+Ruby 1.8 以降はいずれも符号を許す
+
+例:
+
+  p "-010".oct     # => -8
+  p "-0x10".oct    # => 0
+  p "-0b10".oct    # => 0
+
+  p "1_0_1x".oct   # => 65
+
+@see [[m:String#hex]], [[m:String#to_i]], [[m:String#to_f]],
+     [[m:Kernel.#Integer]], [[m:Kernel.#Float]]
+
+逆に、数値を文字列に変換するには[[m:Kernel.#sprintf]],
+[[m:String#%]], [[m:Integer#to_s]] を使用します。
+

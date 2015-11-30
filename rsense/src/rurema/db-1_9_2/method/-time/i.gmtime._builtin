@@ -1,0 +1,23 @@
+kind=defined
+names=gmtime,utc
+visibility=public
+
+--- gmtime    -> self
+--- utc       -> self
+
+タイムゾーンを協定世界時に設定します。
+
+このメソッドを呼び出した後は時刻変換を協定世界時として行ないます。
+
+[[m:Time#localtime]], [[m:Time#gmtime]] の挙動はシステムの
+[[man:localtime(3)]] の挙動に依存します。Time クラ
+スでは時刻を起算時からの経過秒数として保持していますが、ある特定の
+時刻までの経過秒は、システムがうるう秒を勘定するかどうかによって異
+なる場合があります。システムを越えて Time オブジェクトを受け
+渡す場合には注意する必要があります。
+
+  t = Time.now   #=> Wed Apr 09 08:56:03 CDT 2003
+  t.gmt?         #=> false
+  t.gmtime       #=> Wed Apr 09 13:56:03 UTC 2003
+  t.gmt?         #=> true
+

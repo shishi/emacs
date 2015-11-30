@@ -1,0 +1,15 @@
+kind=added
+names=toeuc
+visibility=public
+
+--- toeuc -> String
+
+self のエンコーディングを EUC-JP に変換した文字列を
+返します。変換元のエンコーディングは文字列の内容から推測します。
+
+このメソッドは MIME エンコードされた文字列を展開し、
+いわゆる半角カナを全角に変換します。
+これらを変換したくない場合は、 [[m:NKF.#nkf]]('-exm0', str)
+を使ってください。
+
+@see [[m:Kconv.#toeuc]]

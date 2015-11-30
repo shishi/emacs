@@ -1,0 +1,11 @@
+kind=redefined
+names=getaddress
+visibility=public
+
+--- getaddress(host) -> String
+[[m:IPSocket.getaddress]] を置きかえ、
+[[lib:resolv]] ライブラリを使い名前解決します。
+
+@param host ホスト名を指定します。
+@raise SocketError 名前解決に失敗した場合に発生します。
+

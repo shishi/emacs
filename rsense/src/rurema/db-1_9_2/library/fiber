@@ -1,0 +1,9 @@
+methods=Fiber/s.current.fiber,Fiber/i.transfer.fiber,Fiber/i.alive=3f.fiber
+sublibraries=
+requires=
+classes=
+is_sublibrary=false
+
+軽量スレッド Fiber をコルーチン的に扱うためのライブラリです。
+
+@see [[c:Fiber]]

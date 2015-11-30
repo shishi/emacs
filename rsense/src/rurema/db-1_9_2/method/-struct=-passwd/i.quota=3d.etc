@@ -1,0 +1,8 @@
+kind=defined
+names=quota=
+visibility=public
+
+--- quota=(quota)
+
+クォータ(整数)を設定します。このメンバはシステム依存です。
+

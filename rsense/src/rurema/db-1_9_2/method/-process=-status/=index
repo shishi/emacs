@@ -1,0 +1,16 @@
+#&	Process::Status#&
+#==	Process::Status#==
+#>>	Process::Status#>>
+#coredump?	Process::Status#coredump?
+#exited?	Process::Status#exited?
+#exitstatus	Process::Status#exitstatus
+#inspect	Process::Status#inspect
+#pid	Process::Status#pid
+#signaled?	Process::Status#signaled?
+#stopped?	Process::Status#stopped?
+#stopsig	Process::Status#stopsig
+#success?	Process::Status#success?
+#termsig	Process::Status#termsig
+#to_i	Process::Status#to_i
+#to_int	Process::Status#to_int
+#to_s	Process::Status#to_s

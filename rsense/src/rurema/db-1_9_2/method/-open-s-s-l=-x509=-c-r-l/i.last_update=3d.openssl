@@ -1,0 +1,11 @@
+kind=defined
+names=last_update=
+visibility=public
+
+--- last_update=(time)
+CRL が最後に更新された日時を Time オブジェクトで設定します。
+
+@param time 最終更新日時
+@raise OpenSSL::X509::CRLError 設定に失敗した場合に発生します
+@see [[m:OpenSSL::X509::CRL#last_update]]
+

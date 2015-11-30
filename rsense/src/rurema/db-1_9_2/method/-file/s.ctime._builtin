@@ -1,0 +1,13 @@
+kind=defined
+names=ctime
+visibility=public
+
+--- ctime(filename)    -> Time
+
+状態が最後に変更された時刻を返します。
+状態の変更とは chmod などによるものです。
+
+@param filename ファイル名を表す文字列か IO オブジェクトを指定します。
+
+@raise Errno::EXXX ファイルの時刻の取得に失敗した場合に発生します。
+

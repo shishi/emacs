@@ -1,0 +1,6 @@
+kind=defined
+names=sync_waiting=
+visibility=public
+
+--- sync_waiting=(arr)
+

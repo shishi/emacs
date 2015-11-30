@@ -1,0 +1,24 @@
+kind=defined
+names=each,each_line
+visibility=public
+
+--- each(rs = $/) {|line| ... }         -> self
+--- each_line(rs = $/) {|line| ... }    -> self
+--- each(rs = $/)                       -> Enumerator
+--- each_line(rs = $/)                  -> Enumerator
+
+IO の現在位置から 1 行ずつ文字列として読み込み、それを引数として
+与えられたブロックを実行します。
+
+ブロックが与えられなかった場合は、自身から生成した
+[[c:Enumerator]] オブジェクトを返します。
+
+テキスト読み込みメソッドとして動作します。
+
+@param rs 行の区切りを文字列で指定します。rs に nil を指定すると行区切りなしとみなします。
+          空文字列 "" を指定すると連続する改行を行の区切りとみなします(パラグラフモード)。
+
+@raise IOError 自身が読み込み用にオープンされていなければ発生します。
+
+@see [[m:$/]]
+

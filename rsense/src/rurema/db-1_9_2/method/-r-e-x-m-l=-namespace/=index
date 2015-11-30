@@ -1,0 +1,9 @@
+#expanded_name	REXML::Namespace#expanded_name
+#fully_expanded_name	REXML::Namespace#fully_expanded_name
+#has_name?	REXML::Namespace#has_name?
+#local_name	REXML::Namespace#local_name
+#name	REXML::Namespace#local_name
+#name=	REXML::Namespace#name=
+#prefix	REXML::Namespace#prefix
+#prefix=	REXML::Namespace#prefix
+:NAMESPLIT	REXML::Namespace::NAMESPLIT

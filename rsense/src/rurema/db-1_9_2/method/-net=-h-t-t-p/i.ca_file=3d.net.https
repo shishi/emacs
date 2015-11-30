@@ -1,0 +1,15 @@
+kind=added
+names=ca_file=
+visibility=public
+
+--- ca_file=(path)
+信頼する CA 証明書ファイルのパスを文字列で設定します。
+
+ファイルには複数の証明書を含んでいても構いません。
+詳しくは [[m:OpenSSL::SSL::SSLContext#ca_file=]] を見てください。
+
+デフォルトは nil (指定なし)です。
+
+@param path ファイルパス文字列
+@see [[m:Net::HTTP#ca_file]], [[m:OpenSSL::SSL::SSLContext#ca_file=]]
+

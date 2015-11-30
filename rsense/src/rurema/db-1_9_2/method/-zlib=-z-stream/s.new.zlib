@@ -1,0 +1,12 @@
+kind=defined
+names=new
+visibility=public
+
+--- new -> ()
+
+直接使用しません。
+通常、具体的な圧縮/展開を行う場合は、
+[[m:Zlib::Deflate.new]] もしくは、[[m:Zlib::Inflate.new]] を使用します。
+
+@see [[m:Zlib::Deflate.new]], [[m:Zlib::Inflate.new]] 
+

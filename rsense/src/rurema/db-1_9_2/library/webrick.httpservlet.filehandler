@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=webrick.httpstatus,webrick.htmlutils,webrick.httputils
+classes=WEBrick=HTTPServlet=DefaultFileHandler,WEBrick=HTTPServlet=FileHandler
+is_sublibrary=true
+
+通常のファイルサーバとしての機能を提供するためのサーブレットを提供するライブラリです。

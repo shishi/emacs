@@ -1,0 +1,10 @@
+kind=defined
+names=define
+visibility=public 
+
+--- define
+
+タスクを定義します。
+
+[[m:GemPackageTask.new]] にブロックが与えられている場合に、自動的に呼び出されます。
+

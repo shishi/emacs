@@ -1,0 +1,6 @@
+kind=defined
+names=scan
+visibility=public
+
+--- scan(str, base = nil)
+

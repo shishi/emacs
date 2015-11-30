@@ -1,0 +1,15 @@
+kind=defined
+names=form_data=,set_form_data
+visibility=public
+
+--- form_data=(params)
+--- set_form_data(params, sep = '&') -> ()
+HTMLのフォームのデータ params から
+ヘッダフィールドとボディを設定します。
+
+ヘッダフィールド Content-Type: には
+'application/x-www-form-urlencoded' が設定されます。
+
+@param params HTML のフォームデータの [[c:Hash]] を与えます。
+@param sep データのセパレータを文字列で与えます。
+

@@ -1,0 +1,20 @@
+superclass=Object
+type=class
+library=xmlrpc.server
+extended=
+included=
+
+Is the base class for all XML-RPC server-types (CGI, standalone).
+You can add handler and set a default handler.
+Do not use this server, as this is/should be an abstract class.
+
+=== How the method to call is found
+
+The arity (number of accepted arguments) of a handler (method or Proc object) is
+compared to the given arguments submitted by the client for a RPC ((-Remote Procedure Call-)).
+A handler is only called if it accepts the number of arguments, otherwise the search
+for another handler will go on. When at the end no handler was found,
+the [[m:XMLRPC::BasicServer#set_default_handler]] will be called.
+With this technique it is possible to do overloading by number of parameters, but
+only for Proc handler, because you cannot define two methods of the same name in
+the same class.

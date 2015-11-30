@@ -1,0 +1,75 @@
+kind=defined
+names=inspect
+visibility=public
+
+--- inspect -> String
+
+self を読みやすい文字列として返します。
+
+以下の形式の文字列を返します。
+
+  #<Method: klass1(klass2)#method>                (形式1)
+
+klass1 は、[[m:Method#inspect]] では、レシーバのクラス名、
+[[m:UnboundMethod#inspect]] では、[[c:UnboundMethod]] オブジェクトの生成
+元となったクラス／モジュール名です。
+
+klass2 は、実際にそのメソッドを定義しているクラス／モジュール名、
+method は、メソッド名を表します。
+
+  module Foo
+    def foo
+      "foo"
+    end
+  end
+  class Bar
+    include Foo
+    def bar
+    end
+  end
+
+  p Bar.new.method(:foo)        # => #<Method: Bar(Foo)#foo>
+  p Bar.new.method(:bar)        # => #<Method: Bar(Bar)#bar>
+
+klass1 と klass2 が同じ場合は以下の形式になります。
+  #<Method: klass1#method>                        (形式2)
+
+特異メソッドに対しては、
+  #<Method: obj.method>                           (形式3)
+  #<Method: klass1(klass2).method>                (形式4)
+という形式の文字列を返します。二番目の形式では klass1 はレシーバ、
+klass2 は実際にそのメソッドを定義しているオブジェクトになります。
+
+  # オブジェクトの特異メソッド
+  obj = ""
+  class <<obj
+    def foo
+    end
+  end
+  p obj.method(:foo)      # => #<Method: "".foo>
+
+  # クラスメソッド(クラスの特異メソッド)
+  class Foo
+    def Foo.foo
+    end
+  end
+  p Foo.method(:foo)      # => #<Method: Foo.foo>
+
+  # スーパークラスのクラスメソッド
+  class Bar < Foo
+  end
+  p Bar.method(:foo)      # => #<Method: Bar(Foo).foo>
+
+  # 以下は(形式1)の出力になる
+  module Baz
+    def baz
+    end
+  end
+
+  class <<obj
+    include Baz
+  end
+  p obj.method(:baz)      # => #<Method: Object(Baz)#baz>
+
+@see [[m:Object#inspect]]
+

@@ -1,0 +1,10 @@
+name=rb_define_module_under
+private=false
+macro=false
+type=VALUE
+filename=class.c
+params=(VALUE outer, const char *name)
+
+
+モジュール outer::name を作成し返します。
+

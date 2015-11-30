@@ -1,0 +1,20 @@
+kind=defined
+names=seek
+visibility=public
+
+--- seek(offset, whence = IO::SEEK_SET)
+
+自身の pos を whence の位置から offset バイトだけ移動させます。 
+
+@param offset 移動させたいバイト数を整数で指定します。
+
+@param whence 以下のいずれかの定数を指定します。
+
+ * IO::SEEK_SET: ファイルの先頭から (デフォルト)
+ * IO::SEEK_CUR: 現在のファイルポインタから
+ * IO::SEEK_END: ファイルの末尾から
+
+@raise Errno::EINVAL offset + whence がマイナスである場合に発生します。
+
+@raise ArgumentError whence が上の SEEK_SET, SEEK_CUR, SEEK_END 以外だった場合に発生します。
+

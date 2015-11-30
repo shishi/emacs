@@ -1,0 +1,8 @@
+kind=defined
+names=bindir
+visibility=public
+
+--- bindir -> String
+
+実行ファイルを格納するディレクトリを返します。
+

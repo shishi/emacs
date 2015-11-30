@@ -1,0 +1,21 @@
+kind=defined
+names=extended
+visibility=private 
+
+--- extended(class_or_module) -> ()
+
+self が他のオブジェクト に [[m:Object#extend]] されたときに
+呼ばれます。引数には extend を行ったオブジェクトが渡されます。
+
+@param class_or_module [[m:Object#extend]] を行ったオブジェクト
+
+  module Foo
+    def self.extended(mod)
+      p "#{mod} extend #{self}"
+    end
+  end
+
+  Object.new.extend Foo
+
+  # => "#<Object:0x401cbc3c> extend Foo"
+

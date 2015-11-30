@@ -1,0 +1,14 @@
+name=rb_get_method_body
+private=true
+macro=false
+type=NODE *
+filename=eval.c
+params=(VALUE *klassp, ID *idp, int *noexp)
+
+
+クラス klass から id という名前のメソッドエントリを検索する。
+見付かったらその本体である構文木を返す。見付からなければ
+NULL を返す。
+
+検索結果をキャッシュする。
+

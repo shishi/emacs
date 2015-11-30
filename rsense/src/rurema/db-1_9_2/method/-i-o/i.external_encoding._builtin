@@ -1,0 +1,9 @@
+kind=defined
+names=external_encoding
+visibility=public
+
+--- external_encoding   -> Encoding | nil
+
+IO の外部エンコーディングを返します。
+外部エンコーディングが指定されていない場合は nil を返します。
+

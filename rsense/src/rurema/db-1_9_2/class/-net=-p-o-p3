@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=net.pop
+extended=
+included=
+
+POP3 のセッションを表すクラスです。

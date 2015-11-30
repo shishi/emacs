@@ -1,0 +1,10 @@
+kind=defined
+names=set_encoding
+visibility=public
+
+--- set_encoding(encoding) -> self
+
+自身のエンコーディングを指定されたエンコーディングに設定します。
+
+@param encoding エンコーディングを指定します。
+

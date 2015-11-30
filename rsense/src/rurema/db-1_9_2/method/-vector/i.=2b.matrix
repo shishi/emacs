@@ -1,0 +1,15 @@
+kind=defined
+names=+
+visibility=public
+
+--- +(v) -> Vector
+
+ベクトル v を加えたベクトルを返します。
+
+自分自身と引数 v の要素をそれぞれ加算し、その結果を[[c:Vector]]クラスのオブジェクトとして返します。
+
+@param v 加算をするベクトル
+
+@raise ExceptionForMatrix::ErrDimensionMismatch 自分自身と引数のベクト
+       ルの要素の数(次元)が異なっていたときに発生します。
+

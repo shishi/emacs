@@ -1,0 +1,10 @@
+kind=defined
+names=<<,enq,push
+visibility=public
+
+--- push(value) -> ()
+--- <<(value)   -> ()
+--- enq(value)  -> ()
+
+キューの値を追加します。待っているスレッドがいれば実行を再開
+させます。返り値は不定です。

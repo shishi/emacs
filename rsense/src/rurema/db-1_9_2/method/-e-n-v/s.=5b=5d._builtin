@@ -1,0 +1,11 @@
+kind=defined
+names=[]
+visibility=public
+
+--- [](key) -> String
+
+key に対応する環境変数の値を返します。該当する環境変数が存在
+しない時には nil を返します。
+
+@param key  環境変数名を指定します。 to_str で文字列化されます。
+

@@ -1,0 +1,7 @@
+kind=defined
+names=ascii_metrics,latin_metrics
+visibility=public
+
+--- latin_metrics(option = nil)
+--- ascii_metrics(option = nil)
+

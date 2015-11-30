@@ -1,0 +1,13 @@
+kind=defined
+names=sync,sync=
+visibility=public
+
+--- sync -> bool
+--- sync=(flag) 
+
+IO クラスと同じ。flag が真の時、関連付けられている
+IO オブジェクトが flush メソッドを持っていなければなりません。
+また、true にすると圧縮率が著しく低下します。
+
+@see [[m:IO#sync]], [[m:IO#sync]]
+

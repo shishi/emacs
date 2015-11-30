@@ -1,0 +1,12 @@
+kind=defined
+names=public_methods
+visibility=public
+
+--- public_methods(all = true) -> [Symbol]
+
+そのオブジェクトが理解できる public メソッド名の一覧を返します。
+
+@param all 偽を指定すると __getobj__ のスーパークラスで定義されたメソッドを除きます。
+
+@see [[m:Object#public_methods]]
+

@@ -1,0 +1,13 @@
+kind=added
+names=memsize_of
+visibility=public
+
+--- memsize_of(obj) -> Integer
+Return consuming memory size of obj.
+
+Note that this information is incomplete.  You need to deal with
+this information as only a *HINT*.  Especaially, the size of
+T_DATA may not right size.
+
+This method is not expected to work except C Ruby.
+

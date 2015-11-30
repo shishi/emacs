@@ -1,0 +1,11 @@
+kind=defined
+names=close
+visibility=public
+
+--- close      -> nil
+
+自身を close します。以後、自身に対する読み書きが禁止されます。
+close された StringIO に読み書き等が行われると IOError が発生します。
+
+@raise IOError 自身がすでに close されていた時に発生します。
+

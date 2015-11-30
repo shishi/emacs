@@ -1,0 +1,9 @@
+superclass=Net=HTTPSuccess
+type=class
+library=net.http
+extended=
+included=
+
+HTTP レスポンス 205 (Reset Content) を表現するクラスです。
+
+詳しくは [[RFC:2616]] を見てください。

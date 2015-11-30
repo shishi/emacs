@@ -1,0 +1,15 @@
+kind=defined
+names=make_expires
+visibility=public
+
+--- make_expires(sec = nil)
+
+Returns an expiry Time based on +sec+ which can be one of:
+
+Numeric: +sec+ seconds into the future
+
++true+:  the expiry time is the start of 1970 (i.e. expired)
+
++nil+:   it is Tue Jan 19 03:14:07 GMT Standard Time 2038 (i.e.
+         when UNIX clocks will die)
+

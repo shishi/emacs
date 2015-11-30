@@ -1,0 +1,10 @@
+kind=defined
+names=chunk
+visibility=public
+
+--- chunk {|elt| ... } -> Enumerator
+--- chunk(initial_state) {|elt, state| ... } -> Enumerator
+
+Creates an enumerator for each chunked elements.
+The consecutive elements which have same block value are chunked.
+

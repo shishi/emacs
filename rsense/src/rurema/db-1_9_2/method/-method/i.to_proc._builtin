@@ -1,0 +1,8 @@
+kind=defined
+names=to_proc
+visibility=public
+
+--- to_proc -> Proc
+
+self を call する [[c:Proc]] オブジェクトを生成して返します。
+

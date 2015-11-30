@@ -1,0 +1,23 @@
+kind=defined
+names=each
+visibility=public
+
+--- each {...} -> object
+
+生成時のパラメータに従ってブロックを繰り返します。
+生成時に指定したイテレータの戻り値をそのまま返します。
+
+例:
+  str = "Yet Another Ruby Hacker"
+  
+  enum = Enumerator.new(str, :scan, /\w+/)
+  enum.each {|word| p word }              # => "Yet"
+                                          #    "Another"
+                                          #    "Ruby"
+                                          #    "Hacker"
+
+  str.scan(/\w+/) {|word| p word }        # => "Yet"
+                                          #    "Another"
+                                          #    "Ruby"
+                                          #    "Hacker"
+

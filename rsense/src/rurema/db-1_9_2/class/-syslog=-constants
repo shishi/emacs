@@ -1,0 +1,11 @@
+superclass=
+type=module
+library=syslog
+extended=
+included=
+
+このモジュールにはシステムで使用可能なLOG_*定数が定義されている。
+
+  例:
+    require 'syslog'
+    include Syslog::Constants

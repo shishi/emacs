@@ -1,0 +1,48 @@
+kind=defined
+names=post
+visibility=public
+
+--- post(path, data, header = nil, dest = nil) -> Net::HTTPResponse
+--- post(path, data, header = nil, dest = nil) {|body_segment| .... } -> Net::HTTPResponse
+
+サーバ上の path にあるエンティティに対し文字列 data を
+POST で送ります。
+
+返り値は [[c:Net::HTTPResponse]] のインスタンスです。
+
+ブロックと一緒に呼びだされたときはエンティティボディを少しずつ文字列として
+ブロックに与えます。このとき戻り値の HTTPResponse オブジェクトは有効な body を
+持ちません。
+
+POST する場合にはヘッダに Content-Type: を指定する必要があります。
+もし header に指定しなかったならば、 Content-Type として
+"application/x-www-form-urlencoded" を用います。
+
+dest は時代遅れの引数です。利用しないでください。
+dest を指定した場合には
+ボディを少しずつ取得して順次
+「dest << ボディの断片」を実行します。
+
+@param path POST先のパスを文字列で指定します。
+@param header リクエストの HTTP ヘッダをハッシュで指定します。
+@param dest 利用しないでください。
+
+1.1 互換モードの場合は、レスポンスに応じて例外が発生します。
+また、返り値が [レスポンスオブジェクト, そのボディ] となります。
+
+例:
+  # net/http version 1.1 (Ruby 1.6.x)
+  response, body = http.post('/cgi-bin/search.rb', 'query=subject&target=ruby')
+  
+  # version 1.2 (Ruby 1.8.x or later)
+  response = http.post('/cgi-bin/search.rb', 'query=subject&target=ruby')
+  
+  # using block
+  File.open('save.html', 'w') {|f|
+    http.post('/cgi-bin/search.rb', 'query=subject&target=ruby') do |str|
+      f.write str
+    end
+  }
+
+@see [[m:Net::HTTP#request_post]]
+

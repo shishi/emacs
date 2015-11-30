@@ -1,0 +1,9 @@
+kind=defined
+names=readlink
+visibility=public
+
+--- readlink -> Pathname
+Pathname.new(File.readlink(self.to_s)) と同じです。
+
+@see [[m:File.readlink]]
+

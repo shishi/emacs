@@ -1,0 +1,29 @@
+kind=defined
+names=readline
+visibility=public
+
+--- readline -> String
+ARGFの現在位置から一行ずつ文字列として読み込みます。EOF に到達した時にはEOFErrorを発生します。
+
+@raise EOFError EOFに達したら発生する
+
+  # カレントディレクトリから適当にファイルを選ぶ
+  ARGV.replace(
+    Dir.glob("*").select{|name| FileTest.file?(name)}
+  )
+
+  begin
+    line = ARGF.readline
+    p line
+  rescue EOFError
+    p $!
+    break
+  end while true
+
+  #例
+  #...
+  #=> "- Saitama\n"
+  #=> <EOFError: end of file reached>
+
+@see [[m:Kernel.#readline]] [[m:ARGF.gets]]
+

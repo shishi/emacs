@@ -1,0 +1,8 @@
+name=rb_mod_constants
+private=false
+macro=false
+type=VALUE
+filename=variable.c
+params=(VALUE mod)
+
+

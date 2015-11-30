@@ -1,0 +1,15 @@
+kind=added
+names=POSTMATCH
+visibility=public
+
+--- $POSTMATCH -> String | nil
+
+[[m:$']] ¤ÎÊÌÌ¾
+
+  require "English"
+
+  str = 'hoge,foo,bar,hee,hoo'
+
+  /foo/ =~ str
+  p $POSTMATCH #=> ",bar,hee,hoo"
+

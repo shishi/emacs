@@ -1,0 +1,14 @@
+kind=defined
+names=getgrnam
+visibility=public
+
+--- getgrnam(name) -> Struct::Group
+
+name という名前のグループエントリを返します。
+
+@param name 検索するグループ名。
+
+@raise ArgumentError エントリが見つからなかった場合に発生します。
+
+@see [[man:getgrnam(3)]], [[c:Struct::Group]]
+

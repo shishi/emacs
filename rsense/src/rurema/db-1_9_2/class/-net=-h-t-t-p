@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=net.http
+extended=
+included=
+
+HTTP のクライアントのためのクラスです。

@@ -1,0 +1,8 @@
+kind=defined
+names=response_handlers
+visibility=public
+
+--- response_handlers
+
+Returns all response handlers.
+

@@ -1,0 +1,17 @@
+kind=defined
+names=nocbreak,nocrmode
+visibility=public
+
+--- nocbreak -> nil
+--- nocrmode -> nil
+
+通常の端末のように、キーボード入力のバッファリングを有効にします。
+ユーザの入力はエンターキーなどを押すまで処理できません。
+この状態のことを「cooked」モードといいます。
+
+このメソッドの中で [[m:Curses.#init_screen]] を呼び出します。
+
+セーフレベル ($SAFE) が 4 の場合、例外 SecurityError を発生します。
+
+@see [[m:Curses.#cbreak]]、[[m:Curses.#crmode]]
+

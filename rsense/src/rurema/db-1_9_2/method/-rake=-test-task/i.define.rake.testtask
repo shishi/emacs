@@ -1,0 +1,8 @@
+kind=defined
+names=define
+visibility=public 
+
+--- define -> self
+
+タスクを定義します。
+

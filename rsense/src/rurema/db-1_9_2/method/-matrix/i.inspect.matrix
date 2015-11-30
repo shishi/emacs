@@ -1,0 +1,15 @@
+kind=defined
+names=inspect
+visibility=public
+
+--- inspect -> String
+自分自身を見やすい形式に文字列化し、その文字列を返します。
+
+例:
+  a1 = [1, 2]
+  a2 = [3, 4.5]
+  m = Matrix[a1, a2]
+
+  p m.to_s #=> "Matrix[[1, 2], [3, 4.5]]"
+
+

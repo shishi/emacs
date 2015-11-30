@@ -1,0 +1,7 @@
+superclass=Rinda=RindaError
+type=class
+library=rinda.rinda
+extended=
+included=
+
+Raised when a hash-based tuple has an invalid key.

@@ -1,0 +1,28 @@
+kind=defined
+names=collect!,map!
+visibility=public
+
+--- collect! {|item| ..}    -> self
+--- map! {|item| ..}        -> self
+--- collect!                -> Enumerator
+--- map!                    -> Enumerator
+
+各要素を順番にブロックに渡して評価し、その結果で要素を
+置き換えます。
+
+ブロックが与えられなかった場合は、自身と map! から生成した
+[[c:Enumerator]] オブジェクトを返します。
+
+例:
+
+    ary = [1, 2, 3]
+    ary.map! {|i| i * 3 }
+    p ary   #=> [3, 6, 9]
+
+    ary = [1, 2, 3]
+    e = ary.map!
+    e.each{ 1 }
+    p ary           #=> [1, 1, 1]
+
+@see [[m:Enumerable#collect]], [[c:Enumerator]]
+

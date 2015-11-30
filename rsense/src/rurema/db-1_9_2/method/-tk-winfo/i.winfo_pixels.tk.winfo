@@ -1,0 +1,6 @@
+kind=defined
+names=winfo_pixels
+visibility=public
+
+--- winfo_pixels(dist)
+

@@ -1,0 +1,23 @@
+kind=defined
+names=log
+visibility=public
+
+--- log(x, prec) -> BigDecimal
+
+x の自然対数を prec で指定した精度で計算します。x に無限大や NaN を指定
+した場合には x を返します。
+
+@param x 計算対象の BigDecimal オブジェクト。
+
+@param prec 計算結果の精度。
+
+@raise ArgumentError prec に 0 以下が指定された場合に発生します。
+
+例:
+
+
+  require "bigdecimal/math"
+
+  puts BigMath::log(BigDecimal.new('2'), 10) #=> 0.693147180559945309417232112588603776354688E0
+
+

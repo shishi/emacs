@@ -1,0 +1,8 @@
+superclass=Object
+type=class
+library=rubygems.ext.builder
+extended=
+included=
+
+拡張ライブラリをビルドするためのクラスです。
+他のビルダークラスはこのクラスを継承しています。

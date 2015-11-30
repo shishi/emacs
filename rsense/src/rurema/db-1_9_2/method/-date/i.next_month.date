@@ -1,0 +1,11 @@
+kind=defined
+names=next_month
+visibility=public
+
+--- next_month(n = 1) -> Date
+n ヶ月後を返します。
+
+[[m:Date#>>]] も参照してください。
+
+@param n 月数
+

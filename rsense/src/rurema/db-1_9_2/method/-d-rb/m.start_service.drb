@@ -1,0 +1,21 @@
+kind=defined
+names=start_service
+visibility=public
+
+--- start_service(uri=nil, front=nil, config=nil)
+
+Start a dRuby server locally.
+
+The new dRuby server will become the primary server, even if
+another server is currently the primary server.
+
+uri is the URI for the server to bind to. If nil, the server
+will bind to random port on the default local host name and use
+the default dRuby protocol.
+
+front is the server's front object. This may be nil.
+
+config is the configuration for the new server. This may be nil.
+
+See DRbServer::new.
+

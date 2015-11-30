@@ -1,0 +1,10 @@
+kind=defined
+names=dependencies
+visibility=public
+
+--- dependencies -> Array
+
+依存している Gem のリストを返します。
+
+@see [[c:Gem::Dependency]]
+

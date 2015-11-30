@@ -1,0 +1,59 @@
+kind=defined
+names=read
+visibility=public
+
+--- read(path, opt = {})     -> String | nil
+--- read(path, length = nil, opt = {})     -> String | nil
+--- read(path, length = nil, offset = 0, opt = {})     -> String | nil
+
+path で指定されたファイルを offset 位置から
+length バイト分読み込んで返します。
+
+既に EOF に達している場合は nil を返します。ただし、length に nil か 0 が指定されている場合は、空文字列 "" を返します。例えば、IO.read(空ファイル) は "" を返します。
+
+引数 length が指定された場合はバイナリ読み込みメソッド、そうでない場合はテキスト読み込みメソッドとして
+動作します。
+
+[[m:Kernel.#open]] と同様 path の先頭が "|" ならば、"|" に続くコマンドの出力を読み取ります。
+
+@param path ファイル名を表す文字列か "|コマンド名" を指定します。
+
+@param length 読み込む長さを整数で指定します。nil であるか省略した場合には、EOF まで読み込みます。
+
+@param offset 読み込みを始めるオフセットを整数で指定します。
+
+@param opt ファイル path を open する時に使われるオプションを Hash で指定します。
+
+@raise Errno::EXXX path のオープン、offset 位置への設定、ファイルの読み込みに失敗した場合に発生します。
+
+@raise ArgumentError length が負の場合に発生します。
+
+引数 opt で有効なキーと値は以下のとおりです。
+キーはいずれも Symbol オブジェクトです。
+
+: :encoding
+
+  specifies encoding of the read string.  encoding will be ignored
+  if length is specified.
+
+: :mode
+
+  specifies mode argument for open().  it should start with "r"
+  otherwise it would cause error.
+
+: :open_args
+
+  specifies arguments for open() as an array.
+
+@see [[m:IO.binread]]
+
+
+例:
+
+  IO.read(empty_file)             #=> ""
+  IO.read(empty_file, 1)          #=> nil
+  IO.read(one_byte_file, 0, 10)   #=> ""
+  IO.read(one_byte_file, nil, 10) #=> "" 
+  IO.read(one_byte_file, 1, 10)   #=> nil
+
+

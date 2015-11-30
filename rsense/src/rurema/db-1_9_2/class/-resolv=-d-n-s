@@ -1,0 +1,16 @@
+superclass=Object
+type=class
+library=resolv
+extended=
+included=
+
+このクラスは DNS を利用した名前解決をするリゾルバを
+表します。
+
+このクラスは実際には下位のクラスに処理を依頼します。
+
+DNSについては以下を参照してください。
+  * STD0013
+  * [[RFC:1035]]
+  * [[url:ftp://ftp.isi.edu/in-notes/iana/assignments/dns-parameters]]
+  * etc.

@@ -1,0 +1,9 @@
+kind=defined
+names=capability
+visibility=public
+
+--- capability
+
+Sends a CAPABILITY command, and returns a listing of
+capabilities that the server supports.
+

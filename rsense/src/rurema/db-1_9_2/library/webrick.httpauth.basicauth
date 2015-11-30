@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=webrick.httpstatus,webrick.httputils,webrick.httpauth.authenticator,webrick.httpversion,webrick.utils,webrick.log,webrick.config
+classes=WEBrick=HTTPAuth=BasicAuth,WEBrick=HTTPAuth=ProxyBasicAuth
+is_sublibrary=true
+
+HTTP の Basic 認証のためのライブラリです。

@@ -1,0 +1,9 @@
+kind=defined
+names=title
+visibility=public 
+
+--- title -> String
+
+RDoc のタイトルを返します。
+デフォルト値はありません。
+

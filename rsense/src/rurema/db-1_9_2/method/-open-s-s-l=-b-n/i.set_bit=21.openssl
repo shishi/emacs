@@ -1,0 +1,15 @@
+kind=defined
+names=set_bit!
+visibility=public
+
+--- set_bit!(n) -> self
+自身の n ビット目を1にします。
+
+例:
+  a = BN.new("128")
+  a.set_bit!(0)
+  a # => 129
+
+@param n 1にするビットの位置
+@raise OpenSSL::BNError 計算時エラー
+

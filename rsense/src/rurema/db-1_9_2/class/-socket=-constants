@@ -1,0 +1,10 @@
+superclass=
+type=module
+library=socket
+extended=
+included=
+
+ソケット操作の指定のための定数を定義したモジュール。このモジュー
+ルをインクルードすれば、定数 (AF_INETなど) を直接参照できます。
+
+これらの定数は [[c:Socket]] の定数としても定義されています。

@@ -1,0 +1,16 @@
+kind=defined
+names=fetch_path
+visibility=public
+
+--- fetch_path(uri, mtime = nil, head = false) -> String | Hash
+
+与えられた URI からダウンロードしたデータを文字列として返します。
+
+ヘッダ情報のみ取得した場合はハッシュを返します。
+
+@param uri データ取得先の URI を指定します。
+
+@param mtime 更新時刻を指定します。
+
+@param head 真を指定するとヘッダ情報のみ取得します。
+

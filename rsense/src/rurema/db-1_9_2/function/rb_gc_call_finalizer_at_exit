@@ -1,0 +1,8 @@
+name=rb_gc_call_finalizer_at_exit
+private=false
+macro=false
+type=void
+filename=gc.c
+params=(void)
+
+

@@ -1,0 +1,7 @@
+kind=defined
+names=current,current=
+visibility=public
+
+--- current
+--- current=(value)
+

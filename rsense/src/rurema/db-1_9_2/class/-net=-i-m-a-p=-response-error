@@ -1,0 +1,14 @@
+superclass=Net=IMAP=Error
+type=class
+library=net.imap
+extended=
+included=
+
+サーバからのレスポンスがエラーを示している場合に発生する例外
+のクラスです。
+
+実際にはこれを継承した
+  * [[c:Net::IMAP::NoResponseError]]
+  * [[c:Net::IMAP::BadResponseError]]
+  * [[c:Net::IMAP::ByeResponseError]]
+これらのクラスの例外が発生します。

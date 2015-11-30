@@ -1,0 +1,32 @@
+kind=defined
+names=pipeline_start
+visibility=public
+
+--- pipeline_start(*cmds) -> [Thread]
+--- pipeline_start(*cmds) {|wait_thrs| ... } -> ()
+
+指定したコマンドのリストをパイプで繋いで順番に実行します。
+
+@param cmds 実行するコマンドのリストを指定します。
+
+@return ブロックを指定した場合はブロックの最後に評価された値を返します。
+        ブロックを指定しなかった場合は実行したプロセスを待つためのスレッ
+        ドの配列を返します。
+
+例:
+
+  require "open3"
+  
+  # xeyesを10秒だけ実行する。
+  Open3.pipeline_start("xeyes") {|ts|
+    sleep 10
+    t = ts[0]
+    Process.kill("TERM", t.pid)
+    p t.value #=> #<Process::Status: pid 911 SIGTERM (signal 15)>
+  }
+
+[[m:Open3.#popen3]]と同様に引数に環境変数とオプションを指定してコマンド
+を実行する事ができます。
+
+@see [[m:Open3.#popen3]]
+

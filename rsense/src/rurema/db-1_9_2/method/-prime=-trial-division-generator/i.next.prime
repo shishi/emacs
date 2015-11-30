@@ -1,0 +1,11 @@
+kind=defined
+names=next,succ
+visibility=public
+
+--- next -> Integer
+--- succ -> Integer
+
+次の(疑似)素数を返します。なお、この実装においては疑似素数は真に素数です。
+
+また内部的な列挙位置を進めます。
+

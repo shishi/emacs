@@ -1,0 +1,10 @@
+kind=defined
+names=PLATFORM_DEFAULTS
+visibility=protected 
+
+--- PLATFORM_DEFAULTS -> {}
+
+Ruby の実装者がデフォルトの設定値をセットするために使用します。
+
+使用するファイルは rubygems/defaults/#{RUBY_ENGINE}.rb です。
+

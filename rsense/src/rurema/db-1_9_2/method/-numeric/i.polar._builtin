@@ -1,0 +1,18 @@
+kind=defined
+names=polar
+visibility=public
+
+--- polar -> [Numeric, Numeric]
+
+自身の絶対値と偏角を配列にして返します。正の数なら [self, 0]、負の数な
+ら [-self, [[m:Math::PI]]] を返します。
+
+例:
+
+  1.0.polar  # => [1.0, 0]
+  2.0.polar  # => [2.0, 0]
+  -1.0.polar # => [1.0, 3.141592653589793]
+  -2.0.polar # => [2.0, 3.141592653589793]
+
+Numeric のサブクラスは、このメソッドを適切に再定義しなければなりません。
+

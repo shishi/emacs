@@ -1,0 +1,9 @@
+kind=defined
+names=default_load_limit
+visibility=public
+
+--- default_load_limit(sz)
+
+Set the default value for the :load_limit option.
+See new(). The initial default value is 25 MB. 
+

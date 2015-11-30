@@ -1,0 +1,10 @@
+kind=defined
+names=version_requirements=
+visibility=public 
+
+--- version_requirements=(version_requirements)
+
+依存しているバージョンを設定します。
+
+@param version_requirements [[c:Gem::Requirement]] のインスタンスを指定します。
+

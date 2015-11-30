@@ -1,0 +1,10 @@
+kind=defined
+names=start_immediately
+visibility=public
+
+--- start_immediately -> bool
+[[m:OpenSSL::SSL::SSLServer#accept]] で
+accept したらすぐに TLS/SSL ハンドシェイクを実行するかどうかを返します。
+
+@see [[m:OpenSSL::SSL::SSLServer#start_immediately=]]
+

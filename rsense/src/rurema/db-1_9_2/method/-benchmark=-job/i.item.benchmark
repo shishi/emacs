@@ -1,0 +1,11 @@
+kind=defined
+names=item,report
+visibility=public
+
+--- item(label = ""){ ... } -> self
+--- report(label = ""){ ... } -> self
+
+与えられたラベルとブロックをジョブリストに登録します。
+
+@param label ラベル
+

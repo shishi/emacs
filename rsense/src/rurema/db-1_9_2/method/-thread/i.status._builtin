@@ -1,0 +1,12 @@
+kind=defined
+names=status
+visibility=public
+
+--- status    -> String | false | nil
+
+生きているスレッドの状態を文字列 "run"、"sleep", "aborting" のいず
+れかで返します。正常終了したスレッドに対して false、例外によ
+り終了したスレッドに対して nil を返します。
+
+[[m:Thread#alive?]] が真を返すなら、このメソッドも真です。
+

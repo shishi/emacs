@@ -1,0 +1,6 @@
+kind=defined
+names=callback
+visibility=public
+
+--- callback(obj_id)
+

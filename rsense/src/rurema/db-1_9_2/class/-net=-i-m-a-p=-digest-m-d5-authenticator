@@ -1,0 +1,8 @@
+superclass=Object
+type=class
+library=net.imap
+extended=
+included=
+
+Authenticator for the "DIGEST-MD5" authentication type.
+See [[m:Net::IMAP#authenticate]].

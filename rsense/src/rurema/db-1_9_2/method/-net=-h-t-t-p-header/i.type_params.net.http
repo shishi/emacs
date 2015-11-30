@@ -1,0 +1,11 @@
+kind=defined
+names=type_params
+visibility=public
+
+--- type_params -> Hash
+Content-Type のパラメータを {"charset" => "iso-2022-jp"}
+という形の [[c:Hash]] で返します。
+
+Content-Type: ヘッダフィールドが存在しない場合には
+空のハッシュを返します。
+

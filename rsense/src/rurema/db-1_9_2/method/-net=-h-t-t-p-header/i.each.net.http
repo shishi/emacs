@@ -1,0 +1,13 @@
+kind=defined
+names=each,each_header
+visibility=public
+
+--- each {|name, val| .... } -> ()
+--- each_header {|name, val| .... } -> ()
+
+保持しているヘッダ名とその値をそれぞれ
+ブロックに渡して呼びだします。
+
+ヘッダ名は小文字で統一されます。
+val は ", " で連結した文字列がブロックに渡されます。
+

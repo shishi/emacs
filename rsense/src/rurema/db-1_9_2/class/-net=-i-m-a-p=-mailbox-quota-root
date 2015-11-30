@@ -1,0 +1,11 @@
+superclass=Struct
+type=class
+library=net.imap
+extended=
+included=
+
+Net::IMAP::MailboxQuotaRoot represents part of the GETQUOTAROOT
+response. (GETQUOTAROOT can also return Net::IMAP::MailboxQuota.)
+
+  quotaroot_response
+                  ::= "QUOTAROOT" SPACE astring *(SPACE astring)

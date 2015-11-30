@@ -1,0 +1,29 @@
+kind=defined
+names=on_head,on_tail
+visibility=public
+
+--- on_head(*arg, &block)
+--- on_tail(*arg, &block)
+
+[[m:OptionParser#on]]と同様、オプションを取り扱うためのブロックを自身に登録します。
+on メソッドと違う点は、OptionParser オブジェクトが保持している
+リストの最初かあるいは最後にブロックを登録する点です。
+
+--version や --help の説明をサマリの最後に表示したい時に便利です。
+
+@param arg [[m:OptionParser#on]] と同様です。
+
+@param block [[m:OptionParser#on]] と同様です。
+
+例:
+
+  opts.on_tail("-h", "--help", "Show this message") do
+    puts opts
+    exit
+  end
+
+  opts.on_tail("--version", "Show version") do
+    puts OptionParser::Version.join('.')
+    exit
+  end
+

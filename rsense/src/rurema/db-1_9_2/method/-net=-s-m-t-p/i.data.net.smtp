@@ -1,0 +1,17 @@
+kind=defined
+names=data
+visibility=public
+
+--- data(message) -> Net::SMTP::Response
+--- data {|f| .... } -> Net::SMTP::Response
+DATA コマンドを送ります。
+
+文字列を引数に与えた場合はそれを本文として送ります。
+ブロックを与えた場合にはそのブロックにストリームオブジェクトが渡されます
+([[m:Net::SMTP#open_message_stream]]参考)。
+
+通常は [[m:Net::SMTP#send_message]], [[m:Net::SMTP#open_message_stream]] で
+DATA が送られるため利用する必要はないはずです。
+
+@param message メールの本文
+

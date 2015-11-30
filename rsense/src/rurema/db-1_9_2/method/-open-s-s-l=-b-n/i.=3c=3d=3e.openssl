@@ -1,0 +1,11 @@
+kind=defined
+names=<=>,cmp
+visibility=public
+
+--- <=>(other) -> -1 | 0 | 1
+--- cmp(other) -> -1 | 0 | 1
+自身と other を比較し、otherのほうが小さければ-1、
+大きければ+1、等しければ 0 を返します。
+
+@param other 比較する数
+

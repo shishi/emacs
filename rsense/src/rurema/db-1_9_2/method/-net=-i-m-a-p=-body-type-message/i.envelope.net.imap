@@ -1,0 +1,8 @@
+kind=defined
+names=envelope
+visibility=public
+
+--- envelope
+
+Returns a [[c:Net::IMAP::Envelope]] giving the envelope structure.
+

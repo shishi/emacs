@@ -1,0 +1,20 @@
+kind=defined
+names=none?
+visibility=public
+
+--- none?               -> bool
+--- none?{|obj| ... }   -> bool
+
+ブロックを指定しない場合は、 Enumerable オブジェクトのすべての
+要素が偽であれば真を返します。そうでなければ偽を返します。
+
+ブロックを指定した場合は、Enumerable オブジェクトのすべての要素を
+ブロックで評価した結果が、すべて偽であれば真を返します。
+そうでなければ偽を返します。
+
+   %w{ant bear cat}.none? {|word| word.length == 5}  #=> true
+   %w{ant bear cat}.none? {|word| word.length >= 4}  #=> false
+   [].none?                                          #=> true
+   [nil].none?                                       #=> true
+   [nil,false].none?                                 #=> true
+

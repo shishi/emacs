@@ -1,0 +1,10 @@
+kind=defined
+names=skips=
+visibility=public 
+
+--- skips=(count)
+
+実行しなかったテストケース数をセットします。
+
+@param count 件数を指定します。
+

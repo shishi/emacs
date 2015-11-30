@@ -1,0 +1,8 @@
+kind=defined
+names=to_a
+visibility=public
+
+--- to_a    -> [String]
+
+サマリの各行を要素とした配列を返します。
+

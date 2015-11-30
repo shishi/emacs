@@ -1,0 +1,13 @@
+kind=defined
+names=su
+visibility=public
+
+--- su(user) -> ()
+
+指定されたユーザに [[m:Process::Sys.#setuid]],
+[[m:Process::Sys.#setgid]] します。
+
+setuid できないプラットフォームでは警告を表示し、何もしません。
+
+@param user ユーザを指定します。
+

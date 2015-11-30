@@ -1,0 +1,8 @@
+kind=defined
+names=eval_str,eval_string
+visibility=public
+
+--- eval_string(cmd, *eval_args)
+--- eval_str(cmd, *eval_args)
+
+

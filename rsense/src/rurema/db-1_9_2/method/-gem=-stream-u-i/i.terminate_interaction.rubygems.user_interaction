@@ -1,0 +1,12 @@
+kind=defined
+names=terminate_interaction
+visibility=public 
+
+--- terminate_interaction(status = 0) -> ()
+
+アプリケーションを終了します。
+
+@param status 終了ステータスを指定します。デフォルトは 0 (成功) です。
+
+@raise Gem::SystemExitException このメソッドを呼び出すと必ず発生する例外です。
+

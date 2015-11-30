@@ -1,0 +1,16 @@
+kind=defined
+names=OP_TLS_ROLLBACK_BUG
+visibility=public
+
+--- OP_TLS_ROLLBACK_BUG -> Integer
+バージョンロールバック攻撃の検出を無効にします。
+
+[[m:OpenSSL::SSL::SSLContext#options=]] で利用します。
+
+通常は使わないでください。
+
+鍵交換時に、クライアントとサーバで利用可能なプロトコルのバージョンを
+やりとりします。クライアントによってはサーバが送った
+バージョンを無視します。そのようなクライアントと通信する必要が
+ある場合このオプションを有効にします。
+

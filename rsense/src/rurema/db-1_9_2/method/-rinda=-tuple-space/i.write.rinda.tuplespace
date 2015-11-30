@@ -1,0 +1,9 @@
+kind=defined
+names=write
+visibility=public
+
+--- write(tuple, sec = nil)
+
+[[c:Rinda::Tuple]] オブジェクト tuple をタプルスペースに加えます。
+tuple を管理するための [[c:Rinda::TupleEntry]] オブジェクトを返します。
+

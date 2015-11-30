@@ -1,0 +1,10 @@
+kind=defined
+names=ASCII_8BIT,BINARY
+visibility=public
+
+--- ASCII_8BIT
+--- BINARY
+ASCII-8BIT、ASCII互換オクテット列用のエンコーディングです。
+
+もっぱら文字エンコーディングを持たないデータ、文字を符号化したのではない単なるバイトの列を表現するために用いますが、このエンコーディングは ASCII 互換であることがポイントです。
+

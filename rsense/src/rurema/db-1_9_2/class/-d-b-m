@@ -1,0 +1,10 @@
+superclass=Object
+type=class
+library=dbm
+extended=
+included=Enumerable
+
+NDBM ファイルをアクセスするクラス。
+
+キー、データともに文字列でなければならないという制限と、データがファイルに
+保存されるという点を除いては [[c:Hash]] クラスと全く同様に扱うことができます。

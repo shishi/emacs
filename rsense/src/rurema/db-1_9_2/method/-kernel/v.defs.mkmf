@@ -1,0 +1,20 @@
+kind=added
+names=defs
+visibility=private 
+
+--- $defs -> [String]
+
+拡張ライブラリをコンパイルするときのマクロ定義を指定する配列です。
+
+この変数の値は、例えば
+
+  ["-DHAVE_FUNC", "-DHAVE_HEADER_H"]
+
+のような形式の配列です。
+
+[[m:Kernel.#have_func]] または [[m:Kernel.#have_header]]
+を呼び出すと、その検査結果が $defs に追加されます。
+
+[[m:Kernel.#create_header]]
+はこの変数の値を参照してヘッダファイルを生成します。
+

@@ -1,0 +1,17 @@
+kind=defined
+names=nlst
+visibility=public
+
+--- nlst(dir = nil) -> [String]
+
+dir で指定したディレクトリのファイルの配列を返します。
+
+dir を省略した場合カレントディレクトリが指定されます。
+
+@param dir ディレクトリを文字列で指定します。
+
+@raise Net::FTPTempError 応答コードが 4yz のときに発生します。
+@raise Net::FTPPermError 応答コードが 5yz のときに発生します。
+@raise Net::FTPProtoError 応答コードが RFC 的に正しくない場合に発生します。
+@raise Net::FTPReplyError 応答コードが上の場合以外で正しくない場合(1xy, 3xyが来るべきでないときに来た場合など)に発生します。
+

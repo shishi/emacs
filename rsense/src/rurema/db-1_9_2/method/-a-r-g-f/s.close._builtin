@@ -1,0 +1,35 @@
+kind=defined
+names=close
+visibility=public
+
+--- close -> self
+処理対象のファイルをクローズします。開くファイルが残っている場合は次のファイルをオープンします。
+
+  # カレントディレクトリから適当にファイルを選ぶ
+  ARGV.replace(
+    Dir.glob("*").reject{|name| FileTest.file?(name) == false}
+  )
+  ARGF.each {|line|
+    p [ line.chomp, ARGF.filename ]
+    ARGF.close
+    if ARGF.closed?
+      p "ARGF is closed."
+    else
+      p "ARGF is not closed"
+    end
+  }
+  if ARGF.closed?
+    p "ARGF had been closed."
+  else
+    p "ARGF is not closed"
+  end
+  
+  #例
+  #=> ["cat:", "sample.yaml"]
+  #=> "ARGF is not closed"
+  #=> ["", "test.rb"]
+  #=> "ARGF is not closed"
+  #=> ["--- !ruby/object:Dog ", "ugo.yaml"]
+  #=> "ARGF is closed."
+  #=> "ARGF had been closed."
+

@@ -1,0 +1,57 @@
+<p>
+<%= manual_home_link() %>
+&gt; <%=h _('Search Results') %>
+</p>
+<%
+    headline_init
+%>
+<%= headline(_('Search Results')) %>
+<form method="get" action="" name="f">
+<input value="<%=h @query %>" name="q" size="41">
+<input value="<%= _('Search') %>" type="submit">
+</form>
+<p>
+
+<table class="entries">
+<tr>
+    <td></td>
+    <td style="text-align:right" nowrap="nowrap">
+        <%=h _('%d Results', @entries.size) %> <%=h '(%.3f sec)' % @elapsed_time %>
+    </td>
+</tr>
+<% unless @entries.empty? %>
+<tr>
+    <th><%=h _('Entry') %></th>
+    <th colspan="2"><%=h _('Description') %></th>
+</tr>
+<% end %>
+<%
+        headline_push
+        @entries.each do |e|
+          foreach_method_chunk(e.source) do |sigs, src| %>
+<tr>
+<%          case e.type_id
+            when :method  %>
+<td class="signature"><%=
+              case e.type
+              when :special_variable
+                e.names.map {|name| method_link(e.spec_string, '$' + name) }
+              else
+                sigs.map {|sig|
+                  method_link(e.spec_string,
+                              e.klass.name + e.typemark + sig.to_s)
+                }
+              end.join("<br>\n") %></td>
+<td class="description"><%= compile_rd(src) %></td>
+<%          when :class   %>
+<td class="signature"><%= class_link e.name %></td>
+<td class="description"><%= compile_rd(src) %></td>
+<%          end           %>
+</tr>
+<%
+          end
+        end
+        headline_pop
+%>
+</table>
+

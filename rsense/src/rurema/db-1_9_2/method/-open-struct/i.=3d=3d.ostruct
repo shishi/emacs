@@ -1,0 +1,12 @@
+kind=defined
+names===
+visibility=public
+
+--- ==(other) -> bool
+
+自身と比較対象のオブジェクトが等しい場合に真を返します。
+そうでない場合は、偽を返します。
+
+@param other 比較対象のオブジェクトを指定します。
+
+

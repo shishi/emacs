@@ -1,0 +1,7 @@
+kind=defined
+names=port
+visibility=public
+
+--- port -> Integer
+接続するポート番号です。
+

@@ -1,0 +1,10 @@
+name=rb_class_allocate_instance
+private=true
+macro=false
+type=VALUE
+filename=object.c
+params=(VALUE klass)
+
+
+[[m:Class#allocate]] の実体。
+

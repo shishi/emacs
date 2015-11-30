@@ -1,0 +1,22 @@
+kind=defined
+names=display
+visibility=public
+
+--- display(out = $stdout) -> nil
+
+オブジェクトを out に出力します。以下のように定義されています。
+
+  class Object
+    def display(out = $stdout)
+      out.print self.to_s
+      nil
+    end
+  end
+
+@param out 出力先のIOオブジェクトです。指定しない場合は標準出力に出力されます。
+@return nil を返します。
+
+  Object.new.display #=> #<Object:0xbb0210>
+
+@see [[m:$stdout]]
+

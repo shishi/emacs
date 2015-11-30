@@ -1,0 +1,11 @@
+kind=defined
+names=create_id=
+visibility=public
+
+--- create_id=(identifier)
+
+json_create メソッドで使用するクラスを決定するために使用する値をセットします。
+
+@param identifier 識別子を指定します。
+
+

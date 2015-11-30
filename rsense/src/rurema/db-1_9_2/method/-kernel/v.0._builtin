@@ -1,0 +1,14 @@
+kind=defined
+names=0,PROGRAM_NAME
+visibility=public
+
+--- $0 -> String
+--- $PROGRAM_NAME -> String
+
+現在実行中の Ruby スクリプトの名前を表す文字列です。
+
+OS と Ruby のバージョンによっては、この変数に代入すると [[man:ps(1)]] の出力が変化します。
+この機能はプログラムの現在の状態を表示するのに便利です。
+
+この変数はグローバルスコープです。
+

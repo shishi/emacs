@@ -1,0 +1,10 @@
+name=strhash
+private=true
+macro=false
+type=int
+filename=st.c
+params=(register char *string)
+
+
+文字列用のハッシュ関数。
+string に対するハッシュ値を計算する。

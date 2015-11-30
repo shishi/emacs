@@ -1,0 +1,7 @@
+kind=defined
+names=must_C_version
+visibility=public
+
+---  must_C_version -> self
+このメソッドは後方互換性のために定義されています。
+

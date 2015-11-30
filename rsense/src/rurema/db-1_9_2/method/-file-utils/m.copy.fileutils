@@ -1,0 +1,35 @@
+kind=defined
+names=copy,cp
+visibility=public
+
+--- cp(src, dest, options = {})   -> ()
+--- copy(src, dest, options = {}) -> ()
+
+ファイル src を dest にコピーします。
+
+src にファイルが一つだけ与えられた場合、
+dest がディレクトリならdest/src にコピーします。
+dest が既に存在ししかもディレクトリでないときは上書きします。
+
+src にファイルが複数与えられた場合、
+file1 を dest/file1 にコピー、file2 を dest/file2 にコピー、
+というように、ディレクトリ dest の中にファイル file1、file2 …を
+同じ名前でコピーします。dest がディレクトリでない場合は例外
+[[c:Errno::ENOTDIR]] が発生します。
+
+@param src コピー元。一つの場合は文字列でも指定可能です。
+           二つ以上指定する場合は配列で指定します。
+
+@param dest コピー先のファイルかディレクトリです。
+
+@param options :preserve, :noop, :verbose が指定できます。
+               [[ref:c:FileUtils#options]]
+
+@raise Errno::ENOTDIR src が複数のファイルかつ、dest がディレクトリでない場合に発生します。
+
+例:
+
+  FileUtils.cp 'eval.c', 'eval.c.org'
+  FileUtils.cp(['cgi.rb', 'complex.rb', 'date.rb'], '/usr/lib/ruby/1.8')
+  FileUtils.cp(%w(cgi.rb complex.rb date.rb), '/usr/lib/ruby/1.8', {:verbose => true})
+

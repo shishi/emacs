@@ -1,0 +1,13 @@
+kind=defined
+names=verify_gem_file
+visibility=public 
+
+--- verify_gem_file(gem_path) -> ()
+
+与えられた Gem ファイルのパスを使用して MD5 チェックサムを検証します。
+
+@param gem_path Gem ファイルのパスを指定します。
+
+@raise Gem::VerificationError Gem ファイルが見つからなかった場合に発生します。
+
+

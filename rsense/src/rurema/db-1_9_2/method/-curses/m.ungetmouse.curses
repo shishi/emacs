@@ -1,0 +1,12 @@
+kind=defined
+names=ungetmouse
+visibility=public
+
+--- ungetmouse(mevent) -> bool
+It pushes a KEY_MOUSE event onto the input queue, and associates with that
+event the given state data and screen-relative character-cell coordinates.
+
+The Curses.ungetmouse function behaves analogously to Curses.ungetch.
+
+@param mevent 入力キューに戻すマウスイベントを指定します。
+

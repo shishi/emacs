@@ -1,0 +1,20 @@
+kind=added
+names=prime_division
+visibility=public
+
+--- prime_division(generator = Prime::Generator23.new) -> [[Integer, Integer]]
+
+自身を素因数分解した結果を返します。
+
+@param generator 素数生成器のインスタンスを指定します。
+
+@return 素因数とその指数から成るペアを要素とする配列です。つまり、戻り値の各要素は2要素の配列 [n,e] であり、それぞれの内部配列の第1要素 n は self の素因数、第2要素は n**e が self を割り切る最大の自然数 e です。
+
+@raise ZeroDivisionError self がゼロである場合に発生します。
+
+@see [[m:Prime#prime_division]]
+
+例:
+    12.prime_division #=> [[2,2], [3,1]]
+    10.prime_division #=> [[2,1], [5,1]]
+

@@ -1,0 +1,25 @@
+kind=defined
+names=hostname=
+visibility=public
+
+--- hostname=(hostname)
+TLS の Server Name Indication(SNI) 拡張で利用するサーバのホスト名を設定します。
+
+Server Name Indication については [[RFC:3546]] を参照してください。
+
+このメソッドはハンドシェイク時にクライアント側がサーバ側に
+サーバのホスト名を伝えるために用います。そのため、
+クライアント側が [[m:OpenSSL::SSL::SSLSocket#connect]] を呼ぶ前に
+このメソッドでホスト名を指定する必要があります。
+
+hostname に nil を渡すと SNI 拡張を利用しません。
+
+サーバ側については [[m:OpenSSL::SSL::SSLContext#servername_cb=]] を
+参照してください。
+
+@param hostname ホスト名文字列
+@see [[m:OpenSSL::SSL::SSLSocket#hostname]],
+     [[m:OpenSSL::SSL::SSLContext#servername_cb]],
+     [[m:OpenSSL::SSL::SSLContext#servername_cb=]],
+
+

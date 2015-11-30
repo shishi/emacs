@@ -1,0 +1,9 @@
+kind=defined
+names=login
+visibility=public
+
+--- login(user, password)
+
+Sends a LOGIN command to identify the client and carries
+the plaintext password authenticating this user.
+

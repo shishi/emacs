@@ -1,0 +1,14 @@
+kind=defined
+names=size
+visibility=public
+
+--- size(filename) -> Integer
+リモートサーバ上のファイルのサイズを返します。
+
+@param filename サイズを調べたいファイル名を与えます。
+
+@raise Net::FTPTempError 応答コードが 4yz のときに発生します。
+@raise Net::FTPPermError 応答コードが 5yz のときに発生します。
+@raise Net::FTPProtoError 応答コードが RFC 的に正しくない場合に発生します。
+@raise Net::FTPReplyError 応答コードが上の場合以外で正しくない場合に発生します。
+

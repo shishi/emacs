@@ -1,0 +1,10 @@
+kind=defined
+names=tkwait_destroy,tkwait_window,wait_destroy,wait_window
+visibility=public
+
+--- wait_destroy(on_thread = true)
+--- tkwait_destroy(on_thread = true)
+--- wait_window(on_thread = true)
+--- tkwait_window(on_thread = true)
+
+

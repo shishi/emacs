@@ -1,0 +1,15 @@
+methods=
+sublibraries=
+requires=
+classes=Zlib,Zlib=Error,Zlib=StreamEnd,Zlib=NeedDict,Zlib=DataError,Zlib=StreamError,Zlib=MemError,Zlib=BufError,Zlib=VersionError,Zlib=ZStream,Zlib=Deflate,Zlib=Inflate,Zlib=GzipFile,Zlib=GzipFile=Error,Zlib=GzipFile=NoFooter,Zlib=GzipFile=CRCError,Zlib=GzipFile=LengthError,Zlib=GzipWriter,Zlib=GzipReader
+is_sublibrary=false
+
+zlib を Ruby から使うための拡張ライブラリです。
+gzip ファイルの読み書きもサポートします。
+
+=== 参考
+
+: 標準添付ライブラリ紹介 【第 11 回】zlib 
+  [[url:http://jp.rubyist.net/magazine/?0018-BundledLibraries]]
+
+@see [[man:zlib(3)]]

@@ -1,0 +1,15 @@
+kind=defined
+names=extract_entry
+visibility=public 
+
+--- extract_entry(destdir, entry, expected_md5sum = nil)
+指定された destdir に entry を展開します。
+
+@param destdir 展開先のディレクトリを指定します。
+
+@param entry エントリを指定します。
+
+@param expected_md5sum 期待する MD5 チェックサムを指定します。
+
+@raise Gem::Package::BadCheckSum チェックサムが一致しなかった場合に発生します。
+

@@ -1,0 +1,13 @@
+methods=
+sublibraries=
+requires=
+classes=Net=Telnet
+is_sublibrary=false
+
+Telnet プロトコルをクライアント側で扱うライブラリです。
+
+=== 参考文献
+Telnet に関する RFC は数多く存在します。
+[[RFC:854]], [[RFC:855]], [[RFC:856]], [[RFC:857]], [[RFC:858]], 
+[[RFC:859]], [[RFC:860]], [[RFC:861]], でプロトコルの
+基本が定義されています。

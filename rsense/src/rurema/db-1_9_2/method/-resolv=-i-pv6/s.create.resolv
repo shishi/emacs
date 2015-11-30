@@ -1,0 +1,15 @@
+kind=defined
+names=create
+visibility=public
+
+--- create(address)
+以下のいずれかの形式の文字列 address から Resolv::IPv6 のインスタンスを生成します。
+
+
+  * 8Hex
+  * CompressedHex
+  * 6Hex4Dec
+  * CompressedHex4Dec
+
+@param address human readable な IPv6 アドレスの文字列表現
+

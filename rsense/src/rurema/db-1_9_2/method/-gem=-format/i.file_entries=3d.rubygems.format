@@ -1,0 +1,10 @@
+kind=defined
+names=file_entries=
+visibility=public 
+
+--- file_entries=(file_entries)
+
+Gem パッケージに含まれるファイルの配列をセットします。
+
+@param file_entries
+

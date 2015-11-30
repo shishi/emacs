@@ -1,0 +1,8 @@
+kind=defined
+names=add_install_update_options
+visibility=public 
+
+--- add_install_update_options
+
+インストールとアップデートに関するオプションを追加します。
+

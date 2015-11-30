@@ -1,0 +1,37 @@
+kind=defined
+names=eof,eof?
+visibility=public
+
+--- eof -> bool
+--- eof? -> bool
+現在開いているファイルがeofに達したらtrueを返します。そうでない場合はfalseを返します。
+
+@raise IOError ファイルがopenされていない場合
+
+  # カレントディレクトリから適当にファイルを選ぶ
+  ARGV.replace(
+    Dir.glob("*").reject{|name| FileTest.file?(name) == false}
+  )
+  ARGF.each_line {|line|
+    if ARGF.eof
+      printf("eof. %s has %d(%d) line\n", ARGF.filename, ARGF.file.lineno, ARGF.lineno)
+    end
+  }
+  begin
+    if ARGF.eof?
+      printf("%s is eof\n", ARGF.filename)
+    end
+  rescue IOError
+    print "IOError !!\n"
+  end
+
+  #=> 例
+  #=> eof. sample.yaml has 13(13) line
+  #=> eof. test.rb has 159(172) line
+  #=> eof. test.rb~ has 159(331) line
+  #=> eof. third.txt has 1(332) line
+  #=> eof. ugo.yaml has 8(340) line
+  #=> IOError !!
+
+@see [[m:IO#eof]], [[m:IO#eof?]]
+

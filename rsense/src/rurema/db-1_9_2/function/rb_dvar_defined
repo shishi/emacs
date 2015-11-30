@@ -1,0 +1,8 @@
+name=rb_dvar_defined
+private=false
+macro=false
+type=VALUE
+filename=eval.c
+params=(ID id)
+
+

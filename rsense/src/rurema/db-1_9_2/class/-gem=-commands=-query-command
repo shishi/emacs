@@ -1,0 +1,7 @@
+superclass=Gem=Command
+type=class
+library=rubygems.commands.query_command
+extended=
+included=
+
+Gem パッケージの情報を検索するためのクラスです。

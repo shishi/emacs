@@ -1,0 +1,18 @@
+kind=defined
+names=setresuid
+visibility=public
+
+--- setresuid(rid, eid, sid)    -> nil
+
+システムコールの setresuid を呼びます。
+
+@param rid システムコールの引数を整数で指定します。
+
+@param eid システムコールの引数を整数で指定します。
+
+@param sid システムコールの引数を整数で指定します。
+
+@raise NotImplementedError システムコールが現在のプラットフォームで提供されていない場合に発生します。
+
+@raise Errno::EXXX システムコールに失敗した場合に発生します。
+

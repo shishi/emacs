@@ -1,0 +1,29 @@
+kind=defined
+names=fetch,uid_fetch
+visibility=public
+
+--- fetch(set, attr)
+--- uid_fetch(set, attr)
+
+Sends a FETCH command to retrieve data associated with a message
+in the mailbox. the set parameter is a number or an array of
+numbers or a Range object. the number is a message sequence
+number (fetch) or a unique identifier (uid_fetch).
+The return value is an array of [[c:Net::IMAP::FetchData]].
+
+ex).
+
+  p imap.fetch(6..8, "UID")
+  #=> [#<Net::IMAP::FetchData seqno=6, attr={"UID"=>98}>, #<Net::IMAP::FetchData seqno=7, attr={"UID"=>99}>, #<Net::IMAP::FetchData seqno=8, attr={"UID"=>100}>]
+  p imap.fetch(6, "BODY[HEADER.FIELDS (SUBJECT)]")
+  #=> [#<Net::IMAP::FetchData seqno=6, attr={"BODY[HEADER.FIELDS (SUBJECT)]"=>"Subject: test\r\n\r\n"}>]
+  data = imap.uid_fetch(98, ["RFC822.SIZE", "INTERNALDATE"])[0]
+  p data.seqno
+  #=> 6
+  p data.attr["RFC822.SIZE"]
+  #=> 611
+  p data.attr["INTERNALDATE"]
+  #=> "12-Oct-2000 22:40:59 +0900"
+  p data.attr["UID"]
+  #=> 98
+

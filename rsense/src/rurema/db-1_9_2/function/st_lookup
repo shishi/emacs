@@ -1,0 +1,15 @@
+name=st_lookup
+private=false
+macro=false
+type=int
+filename=st.c
+params=(st_table *table, register char *key, char **value)
+
+
+key に対応する値をみつけて value にポインタを書きこむ。
+返り値は見つかったかどうかの真偽値。
+
+任意の型ポインタにvoid*でなくchar*を使っているのは
+古いライブラリだからだ。ANSI C以前はvoid*の意味に
+char*を使っていた。
+

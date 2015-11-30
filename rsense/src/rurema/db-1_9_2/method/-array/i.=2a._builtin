@@ -1,0 +1,24 @@
+kind=defined
+names=*
+visibility=public
+
+--- *(times)    -> Array
+
+配列の内容を times 回 繰り返した新しい配列を作成し返します。
+値はコピーされないことに注意してください[[trap:Array]]。
+
+@param times 繰り返したい回数を整数で指定します。
+
+    p [1, 2, 3] * 3  #=> [1, 2, 3, 1, 2, 3, 1, 2, 3]
+
+--- *(sep)    -> String
+
+指定された sep を間にはさんで連結した文字列を生成して返します。[[m:Array#join]](sep) と同じ動作をします。
+
+@param sep 文字列を指定します。
+
+    p [1,2,3] * ","
+    # => "1,2,3"
+
+@see [[m:Array#join]]
+

@@ -1,0 +1,20 @@
+kind=defined
+names=thread
+visibility=public
+
+--- thread(algorithm, search_keys, charset)
+
+As for #search(), but returns message sequence numbers in threaded
+format, as a Net::IMAP::ThreadMember tree.  The supported algorithms
+are:
+
+ORDEREDSUBJECT:: split into single-level threads according to subject,
+                 ordered by date.
+REFERENCES:: split into threads by parent/child relationships determined
+              by which message is a reply to which.
+
+Unlike #search(), +charset+ is a required argument.  US-ASCII
+and UTF-8 are sample values.
+
+See [SORT-THREAD-EXT] for more details.
+

@@ -1,0 +1,17 @@
+kind=defined
+names=sid_available?
+visibility=public
+
+--- sid_available?    -> bool
+
+現在のプラットフォームが保存グループ ID を持つなら true を返します。
+そうでない場合に false を返します。
+
+ただし、このメソッドの値には保証がありません。
+現在は次の条件のいずれかが満足される場合には
+保存グループ ID を持つものと判定しています。
+
+  * setresgid() を持つ
+  * setegid() を持つ
+  * _POSIX_SAVED_IDS が真として定義されている
+

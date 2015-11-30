@@ -1,0 +1,42 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(error_message) -> SystemCallError
+SystemCallError オブジェクトを生成して返します。
+
+@param error_message エラーメッセージを表す文字列
+
+例:
+
+  p SystemCallError.new("message")
+      # => #<SystemCallError: unknown error - message>
+
+--- new(error_message, errno) -> SystemCallError
+--- new(errno) -> SystemCallError
+整数 errno に対応する [[c:Errno::EXXX]] オブジェクトを生成して返します。
+
+整数 errno をシステムコールで発生したエラーの原因を示すコードであると解釈し、
+対応する例外クラスのインスタンスを生成して返します。
+
+生成されるオブジェクトは SystemCallError の直接のインスタンスではなく、サブクラスのインスタンスです。
+それらのサブクラスは [[c:Errno]] モジュール内に定義されています。
+対応するサブクラスが存在しないコードを与えた場合には、 SystemCallError の直接のインスタンスが生成されます。
+
+エラーコードの取り得る値および意味はシステムに依存します。詳しくは [[c:Errno::EXXX]] を参照してください。
+
+@param error_message エラーメッセージを表す文字列
+@param errno システム依存のエラーコード
+@raise TypeError errno を整数に変換できないときに発生します。
+@raise RangeError errno が [[c:Fixnum]] で表せる範囲を超えるときに発生します。
+
+例:
+
+  p SystemCallError.new("message", 2)
+      # => #<Errno::ENOENT: No such file or directory - message>
+  p SystemCallError.new(2)
+      # => #<Errno::ENOENT: No such file or directory>
+  p SystemCallError.new(256)
+      # => #<SystemCallError: Unknown error 256>
+
+

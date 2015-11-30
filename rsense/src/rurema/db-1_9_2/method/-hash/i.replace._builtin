@@ -1,0 +1,38 @@
+kind=defined
+names=replace
+visibility=public
+
+--- replace(other) -> self
+
+ハッシュの内容を other の内容で置き換えます。
+
+デフォルト値の設定もotherの内容になります。
+otherがハッシュではない場合、otherのメソッドto_hashを使って暗黙の変換を試みます。
+
+self = other.to_hash.dup と同じです。
+
+@param other ハッシュまたはメソッド to_hash でハッシュに変換できるオブジェクトです。
+@return self を返します。
+
+  foo = {1 => 'a', 2 => 'b'}
+  bar = {2 => 'B', 3 => 'C'}
+  
+  foo.replace(bar)
+  p foo  #=> {2=>"B", 3=>"C"}
+  
+  zoo = {}
+  zoo = bar.dup
+  p zoo  #=> {2=>"B", 3=>"C"}
+  
+  class Foo
+    def to_hash
+      {:japan => 'kyoto'}
+    end
+  end
+  
+  h = Hash.new
+  h.replace(Foo.new) #暗黙の変換
+  p h #=> {:japan=>"kyoto"}
+  
+@see [[m:Hash#dup]],[[m:Hash#merge]],[[m:Object#to_hash]]
+  

@@ -1,0 +1,32 @@
+kind=defined
+names=autoload?
+visibility=public
+
+--- autoload?(const_name) -> String | nil
+
+const_name が [[m:Kernel.#autoload]] 設定されているか調べます。
+
+autoload 設定されていて、autoload 定数がまだ定義されてない(ロードされていない)
+ときにそのパス名を返します。
+
+autoload 設定されていないか、ロード済みなら nil を返します。
+
+@param const_name 定数をString または Symbol で指定します。
+
+    ------- /tmp/foo.rb ---------
+    class Foo
+      class Bar
+      end
+    end
+    ----- end of /tmp/foo.rb ----
+
+    class Foo
+    end
+    p Foo.autoload?(:Bar)         #=> nil
+    Foo.autoload :Bar, '/tmp/foo'
+    p Foo.autoload?(:Bar)         #=> "/tmp/foo"
+    p Foo::Bar                    #=> Foo::Bar
+    p Foo.autoload?(:Bar)         #=> nil
+
+@see [[m:Kernel.#autoload]]
+

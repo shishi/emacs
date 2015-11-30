@@ -1,0 +1,12 @@
+kind=defined
+names=deq,pop,shift
+visibility=public
+
+--- pop(non_block = false) -> object
+--- shift(non_block = false) -> object
+--- deq(non_block = false) -> object
+
+キューからひとつ値を取り出します。キューが空の時、呼出元のスレッドは停止します。
+
+@param non_block true を与えると、キューが空の時に例外 [[c:ThreadError]] が発生します。
+

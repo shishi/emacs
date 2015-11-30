@@ -1,0 +1,15 @@
+kind=defined
+names=clone,dup
+visibility=public
+
+--- clone
+--- dup
+
+このメソッドを呼び出すことはできません。呼び出すと例外が発生します。
+
+数値などの immutable なオブジェクトは clone や dup が禁止されています。
+  1.dup   # => in `clone': can't clone Fixnum (TypeError)
+
+@raise TypeError このメソッドを呼び出した場合に発生します
+
+

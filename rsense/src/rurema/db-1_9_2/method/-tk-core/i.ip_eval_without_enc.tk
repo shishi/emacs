@@ -1,0 +1,7 @@
+kind=defined
+names=ip_eval_without_enc
+visibility=public
+
+--- ip_eval_without_enc(cmd_string)
+
+

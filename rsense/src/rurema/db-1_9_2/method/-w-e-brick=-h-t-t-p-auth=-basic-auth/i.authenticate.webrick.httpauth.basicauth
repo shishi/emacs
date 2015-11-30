@@ -1,0 +1,14 @@
+kind=defined
+names=authenticate
+visibility=public
+
+--- authenticate(request, response) -> bool
+クライアントから送られてきたユーザ名とパスワードを認証します。
+認証に失敗した場合は challenge を呼びます。
+
+@param request [[c:WEBrick::HTTPRequest]] のインスタンスを指定します。
+
+@param response [[c:WEBrick::HTTPResponse]] のインスタンスを指定します。
+
+@raise WEBrick::HTTPStatus::Unauthorized 認証に失敗した場合に発生します。
+

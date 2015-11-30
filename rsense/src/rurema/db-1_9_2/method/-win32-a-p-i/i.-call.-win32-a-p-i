@@ -1,0 +1,23 @@
+kind=defined
+names=Call,call
+visibility=public
+
+--- call(*args)
+--- Call(*args)
+
+API を呼び出します。
+指定する引数と戻り値は [[m:Win32API.new]] の引数の指定に従います。
+特にポインタを渡してそのポインタの指す領域に値が設定される場合は
+その領域をあらかじめ確保しておく必要があります。
+
+例えば、引数のバッファに書き込む関数を呼び出すには以下のようにします。
+
+  api = Win32API.new('foo.dll', 'foo', 'p', 'v')
+  buf = "\0" * 256
+  api.call(buf)
+
+ポインタの配列を渡す場合は以下のようにします。
+
+  api = Win32API.new('foo.dll', 'foo', 'p', 'v')
+  args = ["\0" * 256, "\0" * 256, "\0" * 256]
+  api.call(args.pack("p3"))

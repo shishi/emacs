@@ -1,0 +1,11 @@
+kind=defined
+names=each_key,each_name
+visibility=public
+
+--- each_name {|name| ... } -> ()
+--- each_key {|name| ... } -> ()
+
+保持しているヘッダ名をブロックに渡して呼びだします。
+
+ヘッダ名は小文字で統一されます。
+

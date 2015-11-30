@@ -1,0 +1,7 @@
+kind=defined
+names=get_valid_ip
+visibility=public
+
+--- get_valid_ip
+Return the via method [[m:XMLRPC::Server#set_valid_ip]] specified
+valid IP addresses.

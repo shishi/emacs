@@ -1,0 +1,17 @@
+kind=defined
+names=puke
+visibility=public 
+
+--- puke(klass, method_name, exception) -> String
+
+テストメソッドの実行結果が成功以外の場合に、その種類と理由を記録します。
+
+@param klass テストクラスを指定します。
+
+@param method_name テストメソッドの名前を指定します。
+
+@param exception 例外クラスを指定します。
+
+@return 与えられた例外クラスによって "Skip", "Failure", "Error" の
+        いずれかの頭文字を返します。
+

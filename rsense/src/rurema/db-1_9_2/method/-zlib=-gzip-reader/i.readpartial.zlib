@@ -1,0 +1,17 @@
+kind=defined
+names=readpartial
+visibility=public
+
+--- readpartial(maxlen, outbuf = nil) -> String
+IO クラスの同名メソッド [[m:IO#readpartial]] と同じです。
+
+@param maxlen 読み込む長さの上限を整数で指定します。
+
+@param outbuf 文字列で指定します。読み込んだデータを outbuf に破壊的に格納し、
+              返り値は outbuf となります。outbuf は一旦 maxlen 長に拡張(あるいは縮小)されたあと、
+              実際に読み込んだデータのサイズになります。
+
+@raise ArgumentError maxlen に負の値が入力された場合発生します。
+
+@see [[m:IO#readpartial]]
+

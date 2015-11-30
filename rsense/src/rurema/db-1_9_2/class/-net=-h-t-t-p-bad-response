@@ -1,0 +1,7 @@
+superclass=StandardError
+type=class
+library=net.http
+extended=
+included=
+
+HTTP のレスポンスが不正であった場合に発生する例外です。

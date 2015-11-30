@@ -1,0 +1,15 @@
+kind=defined
+names=>>
+visibility=public
+
+--- >>(num)    -> Integer
+
+self.to_i >> num と同じです。
+
+@param num 整数を指定します。
+
+   fork { exit 99 }   #=> 26563
+   Process.wait       #=> 26563
+   $?.to_i            #=> 25344
+   $? >> 8            #=> 99
+

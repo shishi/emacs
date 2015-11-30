@@ -1,0 +1,8 @@
+kind=defined
+names=insert
+visibility=public
+
+--- insert(beforethis, string)
+
+
+

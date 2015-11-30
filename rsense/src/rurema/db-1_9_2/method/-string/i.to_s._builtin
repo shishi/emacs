@@ -1,0 +1,22 @@
+kind=defined
+names=to_s,to_str
+visibility=public
+
+--- to_s -> String
+--- to_str -> String
+
+self を返します。
+
+例:
+
+    p "str".to_s     # => "str"
+    p "str".to_str   # => "str"
+
+このメソッドは、文字列を他のクラスのインスタンスと混ぜて処理したいときに有効です。
+例えば返り値が文字列か nil であるメソッド some_method があるとき、
+to_s メソッドを使うと以下のように統一的に処理できます。
+
+    # some_method(5).downcase だと返り値が nil のときに
+    # エラーになるので to_s をはさむ
+    p some_method(5).to_s.downcase
+

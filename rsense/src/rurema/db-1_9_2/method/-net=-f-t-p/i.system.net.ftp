@@ -1,0 +1,12 @@
+kind=defined
+names=system
+visibility=public
+
+--- system -> String
+サーバーの OS のタイプを返します。
+
+@raise Net::FTPTempError 応答コードが 4yz のときに発生します。
+@raise Net::FTPPermError 応答コードが 5yz のときに発生します。
+@raise Net::FTPProtoError 応答コードが RFC 的に正しくない場合に発生します。
+@raise Net::FTPReplyError 応答コードが上の場合以外でエラーである場合に発生します。
+

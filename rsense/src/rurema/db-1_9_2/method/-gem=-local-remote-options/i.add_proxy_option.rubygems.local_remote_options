@@ -1,0 +1,7 @@
+kind=defined
+names=add_proxy_option
+visibility=public 
+
+--- add_proxy_option
+オプション --http-proxy を追加します。
+

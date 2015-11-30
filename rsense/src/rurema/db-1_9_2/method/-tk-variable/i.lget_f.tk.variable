@@ -1,0 +1,6 @@
+kind=defined
+names=lget_f
+visibility=public
+
+--- lget_f(idx)
+

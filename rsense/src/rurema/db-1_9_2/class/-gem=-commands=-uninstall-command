@@ -1,0 +1,7 @@
+superclass=Gem=Command
+type=class
+library=rubygems.commands.uninstall_command
+extended=
+included=Gem=VersionOption
+
+Gem パッケージをアンインストールするためのクラスです。

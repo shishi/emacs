@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=win32.resolv
+extended=
+included=
+
+名前解決に関する情報を取得するためのクラスです。

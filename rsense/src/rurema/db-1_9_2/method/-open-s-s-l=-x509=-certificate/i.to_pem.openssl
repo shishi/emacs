@@ -1,0 +1,9 @@
+kind=defined
+names=to_pem,to_s
+visibility=public
+
+--- to_pem -> String
+--- to_s -> String
+
+PEM 形式の文字列を返します。
+

@@ -1,0 +1,8 @@
+name=rb_Float
+private=false
+macro=false
+type=VALUE
+filename=object.c
+params=(VALUE val)
+
+

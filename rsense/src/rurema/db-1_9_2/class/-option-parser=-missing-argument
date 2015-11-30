@@ -1,0 +1,7 @@
+superclass=OptionParser=ParseError
+type=class
+library=optparse
+extended=
+included=
+
+引数が必要なオプションに引数が与えられなかった場合に投げられます。

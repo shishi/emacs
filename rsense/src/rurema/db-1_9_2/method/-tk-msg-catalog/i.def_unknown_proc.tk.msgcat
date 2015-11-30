@@ -1,0 +1,6 @@
+kind=defined
+names=def_unknown_proc
+visibility=public
+
+--- def_unknown_proc(cmd = Proc.new)
+

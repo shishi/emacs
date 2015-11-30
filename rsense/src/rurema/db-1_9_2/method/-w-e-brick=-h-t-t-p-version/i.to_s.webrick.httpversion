@@ -1,0 +1,12 @@
+kind=defined
+names=to_s
+visibility=public
+
+--- to_s    -> String
+
+自身を文字列に変換して返します。
+
+  require 'webrick'
+  v = WEBrick::HTTPVersion.new('1.1')
+  p v.to_s                            #=> "1.1"
+

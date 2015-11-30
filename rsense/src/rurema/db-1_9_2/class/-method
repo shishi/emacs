@@ -1,0 +1,85 @@
+superclass=Object
+type=class
+library=_builtin
+extended=
+included=
+
+[[m:Object#method]] によりオブジェクト化され
+たメソッドオブジェクトのクラスです。
+
+メソッドの実体（名前でなく）とレシーバの組を封入します。
+[[c:Proc]] オブジェクトと違ってコンテキストを保持しません。
+
+=== Proc との差
+
+[[c:Method]] は取り出しの対象であるメソッドが
+なければ作れませんが、[[c:Proc]] は準備なしに作れます。その点から
+[[c:Proc]] は使い捨てに向き、[[c:Method]] は何度も繰り返し生成する
+場合に向くと言えます。また内包するコードの大きさという点では
+[[c:Proc]] は小規模、[[c:Method]] は大規模コードに向くと言えます。
+
+
+既存のメソッドを [[c:Method]] オブジェクト化する。
+
+  class Foo
+    def foo(arg)
+      "foo called with arg #{arg}"
+    end
+  end
+
+  m = Foo.new.method(:foo)
+
+  p m             # => #<Method: Foo#foo>
+  p m.call(1)     # => "foo called with arg 1"
+
+名前のないメソッド(の代わり)が必要なら [[c:Proc]] を使うと良い。
+
+  pr = Proc.new {|arg|
+    "proc called with arg #{arg}"
+  }
+
+  p pr            # => #<Proc:0x401b1fcc>
+  p pr.call(1)    # => "proc called with arg 1"
+
+[[c:Method]] オブジェクトが有用なのは以下のような場合。
+
+  class Foo
+    def foo() "foo" end
+    def bar() "bar" end
+    def baz() "baz" end
+  end
+
+  obj = Foo.new
+
+  # 任意のキーとメソッドの関係をハッシュに保持しておく
+  methods = {1 => obj.method(:foo),
+             2 => obj.method(:bar),
+             3 => obj.method(:baz)}
+
+  # キーを使って関連するメソッドを呼び出す
+  p methods[1].call       # => "foo"
+  p methods[2].call       # => "bar"
+  p methods[3].call       # => "baz"
+
+しかし、レシーバを固定させる(Method オブジェクトはレシーバを保持する)必
+要がないなら [[m:Object#send]]を使う方法も有用。
+
+  class Foo
+    def foo() "foo" end
+    def bar() "bar" end
+    def baz() "baz" end
+  end
+
+  # 任意のキーとメソッド(の名前)の関係をハッシュに保持しておく
+  # レシーバの情報がここにはないことに注意
+  methods = {1 => :foo,
+             2 => :bar,
+             3 => :baz}
+
+  # キーを使って関連するメソッドを呼び出す
+  # レシーバは任意(Foo クラスのインスタンスである必要もない)
+  p Foo.new.send(methods[1])      # => "foo"
+  p Foo.new.send(methods[2])      # => "bar"
+  p Foo.new.send(methods[3])      # => "baz"
+
+@see [[m:Object#method]]

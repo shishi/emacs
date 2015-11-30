@@ -1,0 +1,11 @@
+kind=defined
+names=prepare_range
+visibility=public
+
+--- prepare_range(range, filesize) -> [Integer, Integer]
+
+[[m:WEBrick::HTTPServlet::DefaultFileHandler#make_partial_content]] で利用する範囲情報を生成して返します。
+
+@param range 2 要素の配列を指定します。
+
+@param filesize ファイルサイズを指定します。

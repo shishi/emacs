@@ -1,0 +1,17 @@
+kind=defined
+names=rotate
+visibility=public
+
+--- rotate(cnt=1) -> Array
+
+Returns new array by rotating _self_, whose first element is the
+element at +cnt+ in _self_.  If +cnt+ is negative then it rotates
+in counter direction.
+
+   a = [ "a", "b", "c", "d" ]
+   a.rotate         #=> ["b", "c", "d", "a"]
+   a                #=> ["a", "b", "c", "d"]
+   a.rotate(2)      #=> ["c", "d", "a", "b"]
+   a.rotate(-3)     #=> ["b", "c", "d", "a"]
+
+@see [[m:Array#rotate!]]

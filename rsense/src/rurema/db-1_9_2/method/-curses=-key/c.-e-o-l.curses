@@ -1,0 +1,8 @@
+kind=defined
+names=EOL
+visibility=public
+
+--- EOL -> Integer
+
+行末までクリアするキーを表す定数です。
+

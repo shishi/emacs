@@ -1,0 +1,14 @@
+kind=defined
+names=[]
+visibility=public
+
+--- [](code)    -> Class
+
+指定された整数が表すステータスコードに対応する WEBrick::HTTPStatus::Status
+のサブクラスを返します。
+
+@param code HTTP のステータスコードを表す整数を指定します。
+
+  require 'webrick'
+  p WEBrick::HTTPStatus[200]   #=> WEBrick::HTTPStatus::OK
+

@@ -1,0 +1,18 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(first, last, exclude_end = false) -> Range
+
+first から last までの範囲オブジェクトを生成して返しま
+す。
+
+exclude_end が真ならば終端を含まない範囲オブジェクトを生
+成します。exclude_end 省略時には終端を含みます。
+
+@param first 最初のオブジェクト
+@param last 最後のオブジェクト
+@param exclude_end 真をセットした場合終端を含まない範囲オブジェクトを生成します
+
+@raise ArgumentError first <=> last が nil の場合に発生します
+

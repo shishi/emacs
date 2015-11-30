@@ -1,0 +1,13 @@
+kind=defined
+names=session_remove
+visibility=public
+
+--- session_remove(sess) -> bool
+セッションを [[c:OpenSSL::SSL::SSLContext]] 内部のキャッシュ領域から
+取り除きます。
+
+成功時には真を返します。キャッシュ領域に存在しないセッションを
+削除しようとした場合は偽を返します。
+
+@param sess 削除するセッション([[c:OpenSSL::SSL::Session]])
+

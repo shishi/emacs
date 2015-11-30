@@ -1,0 +1,8 @@
+kind=defined
+names=change=
+visibility=public
+
+--- change=(change)
+
+パスワード変更時間(整数)を設定します。このメンバはシステム依存です。
+

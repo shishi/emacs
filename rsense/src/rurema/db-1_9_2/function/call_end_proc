@@ -1,0 +1,11 @@
+name=call_end_proc
+private=true
+macro=false
+type=void
+filename=eval.c
+params=(VALUE data)
+
+
+評価器プロセスが終了するとき、
+END 文で登録された Proc オブジェクト data を起動します。
+

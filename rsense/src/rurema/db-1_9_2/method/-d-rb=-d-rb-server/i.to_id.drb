@@ -1,0 +1,8 @@
+kind=defined
+names=to_id
+visibility=public
+
+--- to_id(obj)
+
+Convert a local object to a dRuby reference. 
+

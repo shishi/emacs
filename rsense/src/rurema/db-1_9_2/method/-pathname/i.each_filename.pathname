@@ -1,0 +1,15 @@
+kind=defined
+names=each_filename
+visibility=public
+
+--- each_filename {|v| ... } -> nil
+self のパス名要素毎にブロックを実行します。
+
+    require 'pathname'
+
+    Pathname.new("/foo/../bar").each_filename {|v| p v}
+
+    # => "foo"
+         ".."
+         "bar"
+

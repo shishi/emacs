@@ -1,0 +1,7 @@
+kind=defined
+names=raise
+visibility=public
+
+--- raise(tag, above = nil)
+
+

@@ -1,0 +1,13 @@
+kind=defined
+names=_parse
+visibility=public
+
+--- _parse(str, complete = true) -> Hash
+このメソッドは [[m:Date.parse]] と似ていますが、日付オブジェクトを生成せずに、
+見いだした要素をハッシュで返します。
+
+[[m:Date.parse]] も参照してください。
+
+@param str 日付をあらわす文字列
+@param complete 年を補完するか
+

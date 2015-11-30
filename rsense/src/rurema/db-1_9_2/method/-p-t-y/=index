@@ -1,0 +1,6 @@
+.check	PTY.check
+.getpty	PTY.#getpty
+.open	PTY.open
+.spawn	PTY.#getpty
+#getpty	PTY.#getpty
+#spawn	PTY.#getpty

@@ -1,0 +1,18 @@
+kind=defined
+names=chown
+visibility=public
+
+--- chown(owner, group, *filename)    -> Integer
+
+ファイルのオーナーとグループを変更します。スーパーユーザだけがファ
+イルのオーナーとグループを変更できます。変更を行ったファイルの数を
+返します。
+
+@param filename ファイル名を表す文字列を指定します。
+
+@param owner [[man:chown(2)]] と同様に数値で指定します。nil または -1 を指定することで、オーナーを現在のままにすることができます。
+
+@param group [[man:chown(2)]] と同様に数値で指定します。nil または -1 を指定することで、グループを現在のままにすることができます。
+
+@raise Errno::EXXX 変更に失敗した場合に発生します。
+

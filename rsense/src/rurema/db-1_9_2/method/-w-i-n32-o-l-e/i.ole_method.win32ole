@@ -1,0 +1,22 @@
+kind=defined
+names=ole_method,ole_method_help
+visibility=public
+
+--- ole_method(method) -> WIN32OLE_METHOD
+--- ole_method_help(method) -> WIN32OLE_METHOD
+
+メソッド名を指定して対応する[[c:WIN32OLE_METHOD]]オブジェクトを取得しま
+す。
+
+OLEオートメーションの仕様により、メソッド名の大文字、小文字は区別されま
+せん。
+
+@param method メソッド情報を取り出す対象のメソッド名を文字列で指定します。
+@return [[c:WIN32OLE_METHOD]]オブジェクト。
+@raise WIN32OLERuntimeError 指定したメソッド名が未定義あるいは型情報ラ
+                            イブラリ(TypeLib)が提供されていない場合など
+                            に発生します。
+
+   excel = WIN32OLE.new('Excel.Application')
+   method = excel.ole_method_help('Quit')
+

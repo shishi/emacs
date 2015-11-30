@@ -1,0 +1,14 @@
+kind=defined
+names=default_external
+visibility=public
+
+--- default_external -> Encoding
+規定の外部エンコーディングを返します。
+
+入出力において、外部エンコーディングが指定されていない場合の規定値として利用されます。Rubyはロケールまたは -E オプションに従って default_external を決定します。ロケールの確認・設定方法については各システムのマニュアルを参照してください。
+
+default_external は必ず設定されます。[[m:Encoding.locale_charmap]] が nil を返す場合には US-ASCII が、
+ロケールにRubyが扱えないエンコーディングが指定されている場合には ASCII-8BIT が、default_external に設定されます。
+
+@see [[man:locale(1)]], [[m:Encoding.locale_charmap]]
+

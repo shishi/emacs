@@ -1,0 +1,6 @@
+kind=defined
+names=_unset_global_var
+visibility=public
+
+--- _unset_global_var(var_name)
+

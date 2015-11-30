@@ -1,0 +1,6 @@
+kind=defined
+names=files
+visibility=public
+
+--- files(rsrcRef = nil)
+

@@ -1,0 +1,12 @@
+kind=defined
+names=proxy_pass
+visibility=public
+
+--- proxy_pass -> String|nil
+自身が ([[m:Net::HTTP.Proxy]] によって作成された) 
+プロクシ用のクラスならばプロクシ認証のパスワードを返します。
+
+そうでなければ nil を返します。
+
+@see [[m:Net::HTTP.Proxy]]
+

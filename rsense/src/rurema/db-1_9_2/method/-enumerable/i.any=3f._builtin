@@ -1,0 +1,18 @@
+kind=defined
+names=any?
+visibility=public
+
+--- any?               -> bool
+--- any? {|item| ... } -> bool
+
+すべての要素が偽である場合に false を返します。
+真である要素があれば、ただちに true を返します。
+
+ブロックを伴う場合は、各要素に対してブロックを評価し、すべての結果
+が偽である場合に false を返します。ブロックが真を返した時点
+で、ただちに true を返します。
+
+例:
+    p [1, 2, 3].any? {|v| v > 3 }   # => false
+    p [1, 2, 3].any? {|v| v > 1 }   # => true
+

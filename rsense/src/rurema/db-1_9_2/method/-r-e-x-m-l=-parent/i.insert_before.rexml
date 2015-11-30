@@ -1,0 +1,6 @@
+kind=defined
+names=insert_before
+visibility=public
+
+--- insert_before(child1, child2)
+

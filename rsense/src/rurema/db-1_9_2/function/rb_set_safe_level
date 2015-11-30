@@ -1,0 +1,12 @@
+name=rb_set_safe_level
+private=false
+macro=false
+type=void
+filename=eval.c
+params=(int level)
+
+
+セーフレベルを level に上げます。
+level が現在のセーフレベルより低い場合は
+例外 SecurityError が発生します。
+

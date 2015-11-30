@@ -1,0 +1,9 @@
+kind=defined
+names=windows_stub_script
+visibility=public 
+
+--- windows_stub_script -> String
+
+コマンドを起動するために使用する Windows 用のバッチファイルの内容を
+文字列として返します。
+

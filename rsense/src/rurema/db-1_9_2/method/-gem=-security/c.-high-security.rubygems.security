@@ -1,0 +1,22 @@
+kind=defined
+names=HighSecurity
+visibility=public
+
+--- HighSecurity -> Gem::Security::Policy
+
+高レベルのセキュリティポリシーです。
+
+署名された Gem のみインストール可能です。
+
+ルート証明書のみを信頼して、全ての検証を行います。
+ただし、信頼するように指定された証明書は信頼します。
+
+このセキュリティポリシーはバイパスするのがものすごく困難です。
+
+    :verify_data      => true,
+    :verify_signer    => true,
+    :verify_chain     => true,
+    :verify_root      => true,
+    :only_trusted     => true,
+    :only_signed      => true
+

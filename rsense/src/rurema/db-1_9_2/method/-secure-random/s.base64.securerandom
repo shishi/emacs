@@ -1,0 +1,18 @@
+kind=defined
+names=base64
+visibility=public
+
+--- base64(n = nil)    -> String
+
+ランダムな base64 文字列を生成して返します。
+
+@param n 文字列の生成に使われるランダムネスのサイズを整数で指定します。
+         生成される文字列のサイズではないことに注意して下さい。生成される文字列のサイズは
+         n の約 4/3 倍になります。nil を指定した場合 n として 16 が使われます。
+
+@raise NotImplementedError 安全な乱数発生器が使えない場合に発生します。
+
+  p SecureRandom.base64(3)    #=> "4pYO"  (文字列のサイズは 3 でない)
+
+@see [[rfc:3548]]
+

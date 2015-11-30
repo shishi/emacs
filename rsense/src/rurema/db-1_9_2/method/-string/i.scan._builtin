@@ -1,0 +1,47 @@
+kind=defined
+names=scan
+visibility=public
+
+--- scan(re) -> [String] | [[String]]
+
+self に対して正規表現 re を繰り返しマッチし、
+マッチした部分文字列の配列を返します。
+
+正規表現が括弧を含む場合は、
+括弧で括られたパターンにマッチした部分文字列の配列の配列を返します。
+
+例:
+    p "foobar".scan(/../)               # => ["fo", "ob", "ar"]
+    p "foobarbazfoobarbaz".scan(/ba./)  # => ["bar", "baz", "bar", "baz"]
+
+    p "foobar".scan(/(.)/)
+        # => [["f"], ["o"], ["o"], ["b"], ["a"], ["r"]]
+
+    p "foobarbazfoobarbaz".scan(/(ba)(.)/)
+        # => [["ba", "r"], ["ba", "z"], ["ba", "r"], ["ba", "z"]]
+
+--- scan(re) {|s| ... } -> ()
+
+正規表現 re がマッチした部分文字列をブロックに渡して実行します。
+正規表現 re が括弧を含む場合は、
+括弧で括られたパターンにマッチした文字列の配列を渡します。
+
+Ruby 1.6 以前は re が文字列の場合、
+その文字列を正規表現にコンパイルしていました。
+Ruby 1.8 以降は、その文字列そのものがパターンになります。
+
+@param re パターン
+
+例:
+    "foobarbazfoobarbaz".scan(/ba./) {|s| p s }
+        # => "bar"
+        #    "baz"
+        #    "baz"
+        #    "baz"
+
+    "foobarbazfoobarbaz".scan(/(ba)(.)/) {|s| p s }
+        # => ["ba", "r"]
+        #    ["ba", "z"]
+        #    ["ba", "r"]
+        #    ["ba", "z"]
+

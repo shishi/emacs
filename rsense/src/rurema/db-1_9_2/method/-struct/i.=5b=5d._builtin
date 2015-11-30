@@ -1,0 +1,25 @@
+kind=defined
+names=[]
+visibility=public
+
+--- [](member) -> object
+(このメソッドは Struct の下位クラスにのみ定義されています)
+構造体のメンバの値を返します。
+
+@param member [[c:Fixnum]] でメンバのインデックスを指定します。
+              [[c:Symbol]], [[c:String]] でメンバの名前を指定します。
+
+@raise IndexError member が整数で存在しないメンバを指定した場合に発生します。
+
+@raise NameError member が [[c:String]], [[c:Symbol]] で存在しないメンバを指定した場合に発生します。
+
+    Foo = Struct.new(:foo, :bar)
+    obj = Foo.new('FOO', 'BAR')
+    p obj[:foo]     # => "FOO"
+    p obj['bar']    # => "BAR"
+    # p obj[:baz]     # => in `[]': no member 'baz' in struct (NameError)
+    p obj[0]        # => "FOO"
+    p obj[1]        # => "BAR"
+    p obj[-1]       # => "BAR"    # Array のように負のインデックスも指定できます。
+    p obj[2]        # => in `[]': offset 2 too large for struct(size:2) (IndexError)
+

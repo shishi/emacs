@@ -1,0 +1,24 @@
+kind=defined
+names=shelljoin
+visibility=public
+
+--- shelljoin(array) -> String
+
+配列の各要素である文字列に対して、Bourne シェルのコマンドライン中で安全に
+使えるためのエスケープを適用し、空白文字を介してそれらを連結したコマンド
+ライン文字列を生成します。
+
+個々の配列要素に対するエスケープには、[[m:Shellwords.#shellescape]] と
+同じ規則が適用されます。
+
+@param array エスケープ対象の文字列を要素とする配列を指定します。
+@return エスケープ結果を連結した文字列を返します。
+
+例:
+    require 'shellwords'
+    
+    pattern = 'Jan 15'
+    file = 'file name with spaces'
+    puts Shellwords.shelljoin(['grep', pattern, file])
+    # => grep Jan\ 15 file\ name\ with\ spaces
+

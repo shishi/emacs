@@ -1,0 +1,10 @@
+kind=defined
+names=need_tar_bz2=
+visibility=public 
+
+--- need_tar_bz2=(flag)
+
+bzip2 した tar ファイル (tar.bz2) を作成するかどうかを設定します。
+
+@param flag 真または偽を指定します。
+

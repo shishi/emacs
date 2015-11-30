@@ -1,0 +1,16 @@
+kind=defined
+names=verify
+visibility=public
+
+--- verify -> bool
+証明書を検証します。
+
+[[m:OpenSSL::X509::StoreContext.new]] で設定した証明書を検証します。
+検証に成功した場合は true を、失敗した場合は false を返します。
+
+検証の詳細な情報は
+  * [[m:OpenSSL::X509::StoreContext#error]]
+  * [[m:OpenSSL::X509::StoreContext#error_string]]
+  * [[m:OpenSSL::X509::StoreContext#chain]]
+  * [[m:OpenSSL::X509::StoreContext#current_crl]]
+

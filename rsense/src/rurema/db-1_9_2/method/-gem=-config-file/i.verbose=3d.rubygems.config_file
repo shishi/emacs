@@ -1,0 +1,19 @@
+kind=defined
+names=verbose=
+visibility=public 
+
+--- verbose=(verbose_level)
+
+ログの出力レベルをセットします。
+
+以下の出力レベルを設定することができます。
+
+: false
+  何も出力しません。
+: true
+  通常のログを出力します。
+: :loud
+  より多くのログを出力します。
+
+@param verbose_level 真偽値またはシンボルを指定します。
+

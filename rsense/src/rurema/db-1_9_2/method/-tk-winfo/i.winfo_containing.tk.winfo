@@ -1,0 +1,6 @@
+kind=defined
+names=winfo_containing
+visibility=public
+
+--- winfo_containing(x, y)
+

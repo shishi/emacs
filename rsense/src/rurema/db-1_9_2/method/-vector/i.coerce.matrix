@@ -1,0 +1,7 @@
+kind=defined
+names=coerce
+visibility=public
+
+--- coerce(other) -> Array
+self と other が同じクラスになるよう、自分自身か other を変換し [other, self] という配列にして返します。
+

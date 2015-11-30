@@ -1,0 +1,10 @@
+kind=defined
+names=exist?
+visibility=public
+
+--- exist?(path)    -> bool
+
+[[m:FileTest.#exist?]] と同じです。
+
+@param path パスを表す文字列か IO オブジェクトを指定します。
+

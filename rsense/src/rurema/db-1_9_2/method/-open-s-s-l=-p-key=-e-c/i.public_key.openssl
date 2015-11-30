@@ -1,0 +1,11 @@
+kind=defined
+names=public_key
+visibility=public
+
+--- public_key -> OpenSSL::PKey::EC::Point|nil
+公開鍵となる楕円曲線上の点を表すオブジェクトを返します。
+
+鍵が設定されていない場合は nil を返します。
+
+@see [[m:OpenSSL::PKey::EC#public_key=]]
+

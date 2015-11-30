@@ -1,0 +1,16 @@
+kind=defined
+names=equal?
+visibility=public
+
+--- equal?(other)    -> bool
+
+指定された other が self 自身である場合のみ真を返します。
+これは [[c:Object]] クラスで定義されたデフォルトの動作で
+す。
+
+@param other 自身と比較したいオブジェクトを指定します。
+
+  r = (1..2)
+  p r.equal?(1..2)      #=> false
+  p r.equal?(r)         #=> true
+

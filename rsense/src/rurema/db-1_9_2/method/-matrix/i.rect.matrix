@@ -1,0 +1,12 @@
+kind=defined
+names=rect,rectangular
+visibility=public
+
+--- rectangular -> [Matrix, Matrix]
+--- rect -> [Matrix, Matrix]
+
+Returns an array containing matrices corresponding to the real and imaginary
+parts of the matrix
+
+  m.rect == [m.real, m.imag]  # ==> true for all matrices m
+

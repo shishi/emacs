@@ -1,0 +1,29 @@
+kind=defined
+names=verbose=
+visibility=public
+
+--- verbose=(flag)
+
+トレース出力の開始や終了を知らせる文字列("Trace on"または"Trace off")が必要なら真を設定します。
+
+@param flag トレース出力の開始や終了を知らせる文字列が必要ならtrueを設定します。
+
+  require 'tracer'
+
+  Tracer.verbose = true
+  Tracer.on {
+    puts "Hello"
+  }
+
+  # 出力例
+  Trace on
+  #0:t5.rb:7::-:   puts "Hello"
+  #0:t5.rb:7:Kernel:>:   puts "Hello"
+  #0:t5.rb:7:IO:>:   puts "Hello"
+  Hello#0:t5.rb:7:IO:<:   puts "Hello"
+  #0:t5.rb:7:IO:>:   puts "Hello"
+
+  #0:t5.rb:7:IO:<:   puts "Hello"
+  #0:t5.rb:7:Kernel:<:   puts "Hello"
+  Trace off
+

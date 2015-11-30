@@ -1,0 +1,9 @@
+kind=defined
+names=check_circular?
+visibility=public 
+
+--- check_circular? -> bool
+
+循環参照のチェックを行う場合は、真を返します。
+そうでない場合は偽を返します。
+

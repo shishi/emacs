@@ -1,0 +1,25 @@
+kind=defined
+names=~
+visibility=public
+
+--- $~ -> MatchData | nil
+
+現在のスコープで最後に成功したマッチに関する [[c:MatchData]]オブジェクトです。
+[[m:Regexp.last_match]] の別名です。
+
+このデータから n 番目のマッチ ($n) を取り出すためには $~[n] を使います。
+
+この値に代入すると Regexp.last_match や、 [[m:$&]], [[m:$1]], [[m:$2]], ... などの関連する組み込み変数の値が変化します。
+MatchData オブジェクトでも nil でもない値を代入しようとすると [[c:TypeError]] が発生します。
+
+この変数はローカルスコープかつスレッドローカルです。
+Ruby起動時の初期値は nil です。
+
+=== 例
+ str = '<p><a href="http://example.com">example.com</a></p>'
+ if %r[<a href="(.*?)">(.*?)</a>] =~ str
+   p $~[1]
+ end
+ #=> "http://example.com"
+
+

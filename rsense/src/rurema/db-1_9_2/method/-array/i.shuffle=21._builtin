@@ -1,0 +1,14 @@
+kind=defined
+names=shuffle!
+visibility=public
+
+--- shuffle!        -> self
+
+配列を破壊的にシャッフルします。
+
+例:
+
+   a = [ 1, 2, 3 ]           #=> [1, 2, 3]
+   a.shuffle!                #=> [2, 3, 1]
+   a                         #=> [2, 3, 1]
+

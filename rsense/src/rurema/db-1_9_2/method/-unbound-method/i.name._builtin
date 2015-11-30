@@ -1,0 +1,9 @@
+kind=defined
+names=name
+visibility=public
+
+--- name    -> String
+--- name    -> Symbol
+
+このメソッドの名前を返します。
+

@@ -1,0 +1,8 @@
+kind=defined
+names=define_aliases
+visibility=public
+
+--- define_aliases(klass) -> Class
+
+ユーザが直接、使うことはありません。
+

@@ -1,0 +1,7 @@
+kind=defined
+names=grid_columnconfig,grid_columnconfigure
+visibility=public
+
+--- grid_columnconfig(index, keys)
+--- grid_columnconfigure(index, keys)
+

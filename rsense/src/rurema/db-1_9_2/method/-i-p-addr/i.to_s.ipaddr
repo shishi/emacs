@@ -1,0 +1,14 @@
+kind=defined
+names=to_s
+visibility=public
+
+--- to_s -> String
+
+文字列に変換します。
+
+  addr6 = IPAddr.new('::1')
+  addr6.to_s       #=> "::1"
+  addr6.to_string  #=> "0000:0000:0000:0000:0000:0000:0000:0001"
+
+@see [[m:IPAddr#to_string]]
+

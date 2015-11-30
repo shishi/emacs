@@ -1,0 +1,6 @@
+.create	OpenSSL::PKCS12.create
+.new	OpenSSL::PKCS12.new
+#ca_certs	OpenSSL::PKCS12#ca_certs
+#certificate	OpenSSL::PKCS12#certificate
+#key	OpenSSL::PKCS12#key
+#to_der	OpenSSL::PKCS12#to_der

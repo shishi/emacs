@@ -1,0 +1,9 @@
+kind=defined
+names=NOSMIMECAP
+visibility=public
+
+--- NOSMIMECAP -> Integer
+署名者が使用可能な暗号アルゴリズムの情報など(SMIMECapabilities)を省略します。
+
+[[m:OpenSSL::PKCS7.sign]] で利用可能なフラグです。
+

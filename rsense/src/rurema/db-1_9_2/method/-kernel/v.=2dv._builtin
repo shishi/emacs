@@ -1,0 +1,34 @@
+kind=defined
+names=-v,-w,VERBOSE
+visibility=public
+
+--- $VERBOSE -> bool | nil
+--- $-v      -> bool | nil
+--- $-w      -> bool | nil
+冗長メッセージフラグです。Rubyインタプリタへの
+コマンドラインオプション -v でセットされます。
+
+警告レベルは三段階あり、それぞれ以下の通りです。
+
+: nil
+    警告を出力しない
+: false
+    重要な警告のみ出力 (デフォルト)
+: true
+    すべての警告を出力する
+
+$VERBOSE に nil, false 以外を代入すると値は true になります。
+
+$VERBOSE の値はコマンドラインオプション
+-W でも設定できます。
+-W0 オプションで nil、
+-W1 オプションで false、
+-W2, -W オプションで true が設定されます。
+-v オプションや
+-w オプションを指定した場合は
+true が設定されます。
+
+$VERBOSE はグローバルスコープです。
+
+@see [[d:spec/rubycmd]]
+

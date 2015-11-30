@@ -1,0 +1,12 @@
+kind=defined
+names=clear
+visibility=public
+
+--- clear -> self
+
+集合の要素をすべて削除し、空にした後の self を返します。
+
+  p s = Set[10, 20, 30] #=> #<Set: {30, 20, 10}>
+  s.clear
+  p s #=> #<Set: {}>
+

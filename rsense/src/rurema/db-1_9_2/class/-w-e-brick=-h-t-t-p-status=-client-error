@@ -1,0 +1,7 @@
+superclass=WEBrick=HTTPStatus=Error
+type=class
+library=webrick.httpstatus
+extended=
+included=
+
+HTTP のステータスコードクライアントエラー 4XX の親クラスです。

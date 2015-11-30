@@ -1,0 +1,16 @@
+kind=defined
+names=chop
+visibility=public
+
+--- chop -> String
+
+文字列の最後の文字を取り除いた新しい文字列を生成して返します。
+ただし、文字列の終端が "\r\n" であればその 2 文字を取り除きます。
+
+例:
+    p "string\n".chop    # => "string"
+    p "string\r\n".chop  # => "string"
+    p "string".chop      # => "strin"
+    p "strin".chop       # => "stri"
+    p "".chop            # => ""
+

@@ -1,0 +1,13 @@
+kind=defined
+names=equal?
+visibility=public
+
+--- equal?(obj)
+
+二つのオブジェクトが同一であれば真を返します。
+
+@param obj 比較を行うオブジェクト
+
+@see [[m:Object#equal?]]
+
+

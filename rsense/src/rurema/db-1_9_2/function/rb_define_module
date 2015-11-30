@@ -1,0 +1,10 @@
+name=rb_define_module
+private=false
+macro=false
+type=VALUE
+filename=class.c
+params=(const char *name)
+
+
+モジュール name を作成し返します。
+

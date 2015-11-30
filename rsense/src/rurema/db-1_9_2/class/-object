@@ -1,0 +1,10 @@
+superclass=BasicObject
+type=class
+library=_builtin
+extended=
+included=Kernel
+
+全てのクラスのスーパークラス。
+オブジェクトの一般的な振舞いを定義します。
+
+このクラスのメソッドは上書きしたり未定義にしない限り、すべてのオブジェクトで使用することができます。

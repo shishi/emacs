@@ -1,0 +1,8 @@
+superclass=GetoptLong=Error
+type=class
+library=getoptlong
+extended=
+included=
+
+与えられたオプションは引数を伴っているが、そのオプションが
+引数をとらない場合に発生する例外です。

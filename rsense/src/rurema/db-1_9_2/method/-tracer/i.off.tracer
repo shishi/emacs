@@ -1,0 +1,8 @@
+kind=defined
+names=off
+visibility=public
+
+--- off -> ()
+
+トレース出力を中断します。
+

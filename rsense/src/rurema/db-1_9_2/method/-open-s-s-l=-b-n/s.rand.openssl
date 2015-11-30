@@ -1,0 +1,23 @@
+kind=defined
+names=rand
+visibility=public
+
+--- rand(bits, fill=0, odd=false) -> OpenSSL::BN
+暗号論的に強い疑似乱数を生成し、返します。
+
+bits ビットの長さの正の整数を生成します。
+
+fill が -1 なら、生成させる数の最上位ビットが
+0である場合を許容します。fill が 0 なら、
+生成させる数の最上位ビットは1にセットされます、
+つまり必ず bits ビットの整数となります。
+fill が1の場合は、上位2ビットが1にセットされます。
+
+odd が真なら、生成される整数は奇数のみとなります。
+
+@param bits 発生させる数のビット数
+@param fill 上位ビットの性質を決める整数
+@param odd 真なら発生させる数は奇数のみとなる
+@raise OpenSSL::BNError 乱数の生成に失敗した場合に発生します
+@see [[m:OpenSSL::BN.pseudo_rand]], [[m:OpenSSL::BN.rand_range]]
+

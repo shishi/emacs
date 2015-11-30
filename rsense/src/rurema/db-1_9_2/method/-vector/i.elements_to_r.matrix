@@ -1,0 +1,16 @@
+kind=defined
+names=elements_to_r
+visibility=public
+
+--- elements_to_r -> Vector
+ベクトルの各成分を[[c:Rational]]に変換したベクトルを返します。
+
+例:
+
+  require 'matrix'
+
+  v = Vector.elements([2.5, 3.0, 5.75, 7])
+  vr = v.elements_to_r
+  p vr #=> "Vector[Rational(5, 2), Rational(3, 1), Rational(23, 4), Rational(7, 1)]"
+
+

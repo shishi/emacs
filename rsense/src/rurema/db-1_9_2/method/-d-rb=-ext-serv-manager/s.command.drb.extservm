@@ -1,0 +1,7 @@
+kind=defined
+names=command,command=
+visibility=public
+
+--- command
+--- command=(cmd)
+

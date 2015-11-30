@@ -1,0 +1,8 @@
+kind=defined
+names=prompt_i
+visibility=public
+
+--- prompt_i
+
+通常のプロンプトを表現するフォーマット文字列を返します。
+

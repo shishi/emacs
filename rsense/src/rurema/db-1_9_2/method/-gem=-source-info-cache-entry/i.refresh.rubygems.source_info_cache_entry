@@ -1,0 +1,12 @@
+kind=defined
+names=refresh
+visibility=public 
+
+--- refresh(source_uri, all) -> Gem::SourceIndex
+
+ソースインデックスを更新します。
+
+@param source_uri データを取得する URI を指定します。
+
+@param all 全てのインデックスを更新するかどうかを指定します。
+

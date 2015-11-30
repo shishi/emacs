@@ -1,0 +1,10 @@
+kind=defined
+names=find_reverse_dependencies
+visibility=public 
+
+--- find_reverse_dependencies(spec) -> Array
+
+与えられた Gem スペックに依存する Gem のリストを返します。
+
+@param spec [[c:Gem::Specification]] のインスタンスを指定します。
+

@@ -1,0 +1,11 @@
+kind=defined
+names=empty?
+visibility=public
+
+--- empty?    -> bool
+
+自身の要素の数が 0 の時に真を返します。そうでない場合に false を返します。
+
+  p [].empty?         #=> true
+  p [1, 2, 3].empty?  #=> false
+

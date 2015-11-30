@@ -1,0 +1,65 @@
+kind=defined
+names=primitive_errinfo
+visibility=public
+
+--- primitive_errinfo -> Array
+直前の [[m:Encoding::Converter#primitive_convert]] による変換の結果を保持する五要素の配列を返します。
+
+@return [result, enc1, enc2, error_bytes, readagain_bytes] という五要素の配列
+
+result は直前の primitive_convert の戻り値です。
+それ以外の四要素は :invalid_byte_sequence か :incomplete_input か :undefined_conversion だった場合に意味を持ちます。
+enc1 はエラーの発生した原始変換の変換元のエンコーディング、enc2 は変換先のエンコーディングです。
+error_bytes はエラーの発生原因となったバイト列、readagain_bytes は先読みによって変換器内部に保持されているバイト列です。
+
+primitive_errinfo はもっぱら [[m:Encoding::Converter#primitive_convert]] と組み合わせて使います。[[m:Encoding::Converter#convert]] を用いている場合にも取得することはできますが、有用な使い方は難しいでしょう。
+
+  # \xff is invalid as EUC-JP.
+  ec = Encoding::Converter.new("EUC-JP", "Shift_JIS")
+  ec.primitive_convert(src="\xff", dst="", nil, 10)
+  p ec.primitive_errinfo
+  #=> [:invalid_byte_sequence, "EUC-JP", "UTF-8", "\xFF", ""]
+  
+  # HIRAGANA LETTER A (\xa4\xa2 in EUC-JP) is not representable in ISO-8859-1.
+  # Since this error is occur in UTF-8 to ISO-8859-1 conversion,
+  # error_bytes is HIRAGANA LETTER A in UTF-8 (\xE3\x81\x82).
+  ec = Encoding::Converter.new("EUC-JP", "ISO-8859-1")
+  ec.primitive_convert(src="\xa4\xa2", dst="", nil, 10)
+  p ec.primitive_errinfo
+  #=> [:undefined_conversion, "UTF-8", "ISO-8859-1", "\xE3\x81\x82", ""]
+  
+  # partial character is invalid
+  ec = Encoding::Converter.new("EUC-JP", "ISO-8859-1")
+  ec.primitive_convert(src="\xa4", dst="", nil, 10)
+  p ec.primitive_errinfo
+  #=> [:incomplete_input, "EUC-JP", "UTF-8", "\xA4", ""]
+  
+  # Encoding::Converter::PARTIAL_INPUT prevents invalid errors by
+  # partial characters.
+  ec = Encoding::Converter.new("EUC-JP", "ISO-8859-1")
+  ec.primitive_convert(src="\xa4", dst="", nil, 10, Encoding::Converter::PARTIAL_INPUT)
+  p ec.primitive_errinfo
+  #=> [:source_buffer_empty, nil, nil, nil, nil]
+  
+  # \xd8\x00\x00@ is invalid as UTF-16BE because
+  # no low surrogate after high surrogate (\xd8\x00).
+  # It is detected by 3rd byte (\00) which is part of next character.
+  # So the high surrogate (\xd8\x00) is discarded and
+  # the 3rd byte is read again later.
+  # Since the byte is buffered in ec, it is dropped from src.
+  ec = Encoding::Converter.new("UTF-16BE", "UTF-8")
+  ec.primitive_convert(src="\xd8\x00\x00@", dst="", nil, 10)
+  p ec.primitive_errinfo
+  #=> [:invalid_byte_sequence, "UTF-16BE", "UTF-8", "\xD8\x00", "\x00"]
+  p src
+  #=> "@"
+  
+  # Similar to UTF-16BE, \x00\xd8@\x00 is invalid as UTF-16LE.
+  # The problem is detected by 4th byte.
+  ec = Encoding::Converter.new("UTF-16LE", "UTF-8")
+  ec.primitive_convert(src="\x00\xd8@\x00", dst="", nil, 10)
+  p ec.primitive_errinfo
+  #=> [:invalid_byte_sequence, "UTF-16LE", "UTF-8", "\x00\xD8", "@\x00"]
+  p src
+  #=> ""
+

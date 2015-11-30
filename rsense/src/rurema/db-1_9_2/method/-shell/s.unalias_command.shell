@@ -1,0 +1,29 @@
+kind=defined
+names=unalias_command
+visibility=public
+
+--- unalias_command(alias) -> ()
+
+commandのaliasを削除します.
+
+@param alias 削除したいエイリアスの名前を文字列で指定します。
+
+@raise NameError alias で指定したコマンドが無い場合に発生します。
+
+使用例: ls -la | sort -k 5 のような例。
+  Shell.def_system_command("ls")
+  Shell.alias_command("lsla", "ls", "-a", "-l")
+  Shell.def_system_command("sort")
+  sh = Shell.new
+  sh.transact {
+    (lsla | sort("-k 5")).each {|l|
+      puts l
+    }
+  }
+  Shell.unalias_command("lsla")
+  begin
+    Shell.unalias_command("lsla")
+  rescue NameError => err
+    puts err
+  end
+

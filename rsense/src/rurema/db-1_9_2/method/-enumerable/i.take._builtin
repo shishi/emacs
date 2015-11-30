@@ -1,0 +1,13 @@
+kind=defined
+names=take
+visibility=public
+
+--- take(n)               -> Array
+
+Enumerable オブジェクトの先頭から n 要素を配列として返します。
+
+@param n 要素数を指定します。
+
+   a = [1, 2, 3, 4, 5, 0]
+   a.take(3)             # => [1, 2, 3]
+

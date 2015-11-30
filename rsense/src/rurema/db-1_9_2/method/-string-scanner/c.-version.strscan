@@ -1,0 +1,11 @@
+kind=defined
+names=Version
+visibility=public
+
+--- Version -> String
+[[c:StringScanner]] クラスのバージョンを文字列で返します。
+この文字列は [[m:Object#freeze]] されています。
+
+      StringScanner::Version           # => "0.7.0"
+      StringScanner::Version.frozen?   # => true
+

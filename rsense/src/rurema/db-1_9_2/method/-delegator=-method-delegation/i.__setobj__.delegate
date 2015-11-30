@@ -1,0 +1,14 @@
+kind=defined
+names=__setobj__
+visibility=public
+
+--- __setobj__(obj) -> object
+
+委譲先のオブジェクトを設定します。
+
+本メソッドは、サブクラスで再定義する必要があり、
+デフォルトでは [[c:NotImplementedError]] が発生します。
+
+@raise NotImplementedError サブクラスにて本メソッドが再定義されていない場合に発生します。
+
+

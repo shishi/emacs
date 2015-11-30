@@ -1,0 +1,23 @@
+# BitClust config sample file.
+# Edit this file and rename "config".
+
+@bc_urlroot = 'http://doc.loveruby.net'
+@bc_cgidir = File.dirname(File.expand_path(__FILE__))
+@bc_vardir = @bc_cgidir
+@bc_srcdir = @bc_cgidir
+
+def setup_environment
+  $KCODE = 'EUC' unless Object.const_defined?(:Encoding)
+  $LOAD_PATH.unshift "#{@bc_srcdir}/lib"
+  require 'bitclust'
+end
+
+def bitclust_context
+  db = BitClust::MethodDatabase.new("#{@bc_vardir}/db")
+  manager = BitClust::ScreenManager.new(
+    :baseurl => "#{@bc_urlroot}/refm/api/view",
+    :datadir => "#{@bc_srcdir}/data/bitclust",
+    :encoding => 'euc-jp'
+  )
+  BitClust::RequestHandler.new(db, manager)
+end

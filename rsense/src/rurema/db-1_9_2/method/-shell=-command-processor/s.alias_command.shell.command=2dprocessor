@@ -1,0 +1,15 @@
+kind=defined
+names=alias_command
+visibility=public
+
+--- alias_command(alias, command, *opts) -> self
+--- alias_command(alias, command, *opts){ ... } -> self
+
+@param alias エイリアスの名前を指定します。
+
+@param command コマンド名を指定します。
+
+@param opts コマンドに与えるオプションを指定します。
+
+@raise SyntaxError コマンドのエイリアス作成に失敗した時に発生します。
+

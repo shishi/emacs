@@ -1,0 +1,8 @@
+kind=defined
+names=debug_output_try_lock
+visibility=public
+
+--- debug_output_try_lock -> bool
+
+@see [[m:Mutex#try_lock]]
+

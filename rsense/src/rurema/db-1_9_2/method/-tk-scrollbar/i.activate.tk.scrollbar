@@ -1,0 +1,6 @@
+kind=defined
+names=activate
+visibility=public
+
+--- activate(element = Tk::None)
+

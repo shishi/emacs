@@ -1,0 +1,10 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(specifications = {}) -> Gem::SourceIndex
+
+与えられたハッシュを元に自身を初期化します。
+
+@param specifications キーを Gem の名前、値を [[c:Gem::Specification]] のインスタンスとするハッシュを指定します。
+

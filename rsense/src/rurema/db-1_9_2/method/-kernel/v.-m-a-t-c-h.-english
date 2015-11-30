@@ -1,0 +1,15 @@
+kind=added
+names=MATCH
+visibility=public
+
+--- $MATCH -> String | nil
+
+[[m:$&]] ¤ÎÊÌÌ¾
+
+  require "English"
+
+  str = 'hoge,foo,bar,hee,hoo'
+
+  /(foo|bar)/ =~ str
+  p $MATCH     #=> "foo"
+

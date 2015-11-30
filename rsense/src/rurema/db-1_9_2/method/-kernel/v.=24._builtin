@@ -1,0 +1,10 @@
+kind=defined
+names=$
+visibility=public
+
+--- $$ -> Fixnum
+現在実行中の Ruby プロセスのプロセス ID です。
+[[m:Process.#pid]] と同じです。
+
+この変数はグローバルスコープです。
+

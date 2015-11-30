@@ -1,0 +1,28 @@
+kind=defined
+names=chomp
+visibility=public
+
+--- chomp(rs = $/) -> String
+
+self の末尾から rs で指定する改行コードを取り除いた文字列を生成し返します。
+ただし、rs が "\n" ($/ のデフォルト値) のときは、
+実行環境によらず "\r", "\r\n", "\n" のすべてを改行コードとみなして取り除きます。
+
+rs に nil を指定した場合、このメソッドは何もしません。
+
+rs に空文字列 ("") を指定した場合は「パラグラフモード」になり、
+末尾の連続する改行コードをすべて取り除きます。
+
+
+例:
+
+  p "foo\n".chomp             # => "foo"
+  p "foo\n".chomp("\n")       # => "foo"
+  p "foo\r\n".chomp("\r\n")   # => "foo"
+
+  $/ = "\n"   # デフォルト値と同じ
+  p "foo\r".chomp    # => "foo"
+  p "foo\r\n".chomp  # => "foo"
+  p "foo\n".chomp    # => "foo"
+  p "foo\n\r".chomp  # => "foo\n"
+

@@ -1,0 +1,7 @@
+superclass=Net=ProtocolError
+type=class
+library=net.protocol
+extended=
+included=
+
+Rubyの現在の標準添付ライブラリ内では使われていません。

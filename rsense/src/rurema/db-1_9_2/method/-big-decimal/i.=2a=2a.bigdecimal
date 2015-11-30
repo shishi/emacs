@@ -1,0 +1,12 @@
+kind=defined
+names=**
+visibility=public
+
+--- **(n)
+
+a の n 乗を計算します。n は整数。
+
+      c = a ** n
+
+結果として c の有効桁は a の n 倍以上になるので注意。 
+

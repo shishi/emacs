@@ -1,0 +1,16 @@
+kind=defined
+names=tanh
+visibility=public
+
+--- tanh(x) -> Float
+
+x の双曲線正接関数の値を返します。
+
+=== 定義
+
+    tanh(x) = sinh(x) / cosh(x)
+
+@param x 実数
+
+@return [-1, 1] の範囲の実数
+

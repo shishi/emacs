@@ -1,0 +1,8 @@
+kind=defined
+names=ResponseField
+visibility=public
+
+--- ResponseField -> String
+
+レスポンスフィールドのキーの名前です。
+

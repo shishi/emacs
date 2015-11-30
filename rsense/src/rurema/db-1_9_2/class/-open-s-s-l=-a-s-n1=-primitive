@@ -1,0 +1,9 @@
+superclass=OpenSSL=ASN1=ASN1Data
+type=class
+library=openssl
+extended=
+included=
+
+ASN.1 の単純型を表すクラスです。
+
+通常はこのクラス自身は用いず、各サブクラスを利用します。

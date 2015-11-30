@@ -1,0 +1,23 @@
+kind=defined
+names=decode64
+visibility=public
+
+--- decode64(str) -> String
+与えられた文字列を Base64 デコードしたデータを返します。
+
+このメソッドは [[RFC:2045]] に対応しています。
+
+@param str Base64 デコードする文字列を指定します。
+
+   require 'base64'
+   str = 'VGhpcyBpcyBsaW5lIG9uZQpUaGlzIG' +
+         'lzIGxpbmUgdHdvClRoaXMgaXMgbGlu' +
+         'ZSB0aHJlZQpBbmQgc28gb24uLi4K'
+   puts Base64.decode64(str)
+
+   # This is line one
+   # This is line two
+   # This is line three
+   # And so on...
+
+

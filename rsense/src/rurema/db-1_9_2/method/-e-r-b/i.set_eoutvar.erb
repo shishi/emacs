@@ -1,0 +1,17 @@
+kind=defined
+names=set_eoutvar
+visibility=public
+
+--- set_eoutvar(compiler, eoutvar = '_erbout') -> Array
+
+ERBの中でeRubyスクリプトの出力をためていく変数を設定します。
+
+ERBでeRubyスクリプトの出力をためていく変数を設定するために使用します。
+この設定は ERB#new でも行えるため、通常はそちらを使用した方がより容易です。
+本メソッドを使用するためには、引数にて指定する eRuby コンパイラを事前に生成しておく必要があります。
+
+@param compiler eRubyコンパイラ
+
+@param eoutvar eRubyスクリプトの中で出力をためていく変数
+
+

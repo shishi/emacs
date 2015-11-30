@@ -1,0 +1,16 @@
+kind=defined
+names=chars,each_char
+visibility=public
+
+--- each_char {|cstr| block } -> self
+--- chars {|cstr| block }     -> self
+--- each_char -> Enumerator
+--- chars     -> Enumerator
+
+文字列の各文字に対して繰り返します。
+
+たとえば、
+  "hello世界".each_char {|c| print c, ' ' }
+は次のように出力されます。
+  h e l l o 世 界
+

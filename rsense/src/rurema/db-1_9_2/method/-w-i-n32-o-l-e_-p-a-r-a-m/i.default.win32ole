@@ -1,0 +1,22 @@
+kind=defined
+names=default
+visibility=public
+
+--- default -> object | nil
+パラメータを指定しなかった場合の既定値を取得します。
+
+当パラメータが必須パラメータの場合はnilを返します。
+
+@return パラメータを指定しなかった場合の既定値。必須パラメータならばnilを返します。
+
+   tobj = WIN32OLE_TYPE.new('Microsoft Excel 9.0 Object Library', 'Workbook')
+   method = WIN32OLE_METHOD.new(tobj, 'SaveAs')
+   method.params.each do |param|
+     if param.default
+       puts "#{param.name} (= #{param.default})"
+     else
+       puts "#{param}"
+     end
+   end
+
+

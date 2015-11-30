@@ -1,0 +1,8 @@
+kind=defined
+names=bgerror,show,tkerror
+visibility=public
+
+--- bgerror(message)
+--- show
+--- tkerror
+

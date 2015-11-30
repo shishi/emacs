@@ -1,0 +1,16 @@
+kind=defined
+names=to_a
+visibility=public
+
+--- to_a -> Array
+
+ベクトル([[c:Vector]])から配列 ([[c:Array]]) に変換します。
+
+例:
+
+  require 'matrix'
+
+  v = Vector[2, 3, 5, 7, 9]
+  a = v.to_a
+  p a #=> [2, 3, 5, 7, 9]
+

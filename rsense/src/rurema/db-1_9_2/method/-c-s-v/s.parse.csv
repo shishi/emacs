@@ -1,0 +1,15 @@
+kind=defined
+names=parse
+visibility=public
+
+--- parse(str, options = Hash.new){|row| ... } -> nil
+--- parse(str, options = Hash.new) -> Array
+
+このメソッドは文字列を簡単にパースすることができます。
+ブロックを与えた場合は、ブロックにそれぞれの行を渡します。
+ブロックを省略した場合は、配列の配列を返します。
+
+@param str 文字列を指定します。
+
+@param options [[m:CSV.new]] のオプションと同じオプションを指定できます。
+

@@ -1,0 +1,8 @@
+.load_full_rubygems_library	Gem::QuickLoader.load_full_rubygems_library
+#calculate_integers_for_gem_version	Gem::QuickLoader#calculate_integers_for_gem_version
+#const_missing	Gem::QuickLoader#const_missing
+#method_missing	Gem::QuickLoader#method_missing
+#push_all_highest_version_gems_on_load_path	Gem::QuickLoader#push_all_highest_version_gems_on_load_path
+#push_gem_version_on_load_path	Gem::QuickLoader#push_gem_version_on_load_path
+:GemPaths	Gem::QuickLoader::GemPaths
+:GemVersions	Gem::QuickLoader::GemVersions

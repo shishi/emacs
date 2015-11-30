@@ -1,0 +1,6 @@
+kind=defined
+names=match
+visibility=public
+
+--- match(pattern, cons = false)
+

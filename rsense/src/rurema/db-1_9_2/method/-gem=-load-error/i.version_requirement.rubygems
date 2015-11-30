@@ -1,0 +1,10 @@
+kind=defined
+names=version_requirement
+visibility=public 
+
+--- version_requirement -> Get::Requirement
+
+ロードに失敗した Gem の必要条件を返します。
+
+@see [[c:Gem::Requirement]], [[m:Gem::Dependency#version_requirements]]
+

@@ -1,0 +1,16 @@
+kind=defined
+names=choose_from_list
+visibility=public 
+
+--- choose_from_list(question, list) -> Array
+
+リストから回答を選択する質問をします。
+
+リストは質問の上に表示されます。
+
+@param question 質問を指定します。
+
+@param list 回答の選択肢を文字列の配列で指定します。
+
+@return 選択肢の名称と選択肢のインデックスを要素とする配列を返します。
+

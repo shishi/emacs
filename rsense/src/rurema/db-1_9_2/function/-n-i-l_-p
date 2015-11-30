@@ -1,0 +1,10 @@
+name=NIL_P
+private=false
+macro=true
+type=int
+filename=ruby.h
+params=(VALUE obj)
+
+
+obj が Qnil のとき真。
+

@@ -1,0 +1,17 @@
+kind=defined
+names=ioctl
+visibility=public
+
+--- ioctl(cmd, arg = 0)    -> Integer
+
+IO に対してシステムコール ioctl を実行し、その結果を返します。
+機能の詳細は [[man:ioctl(2)]] を参照してください。
+
+@param cmd IO に対するコマンドを整数で指定します。どのようなコマンドが使えるかはプラットフォームに依存します。
+
+@param arg cmd に対する引数を指定します。整数の時にはその値を ioctl に渡します。
+           文字列の場合には [[m:Array#pack]] した構造体だとみなして渡します。
+           arg が nil か false の場合には 0を、true の場合には 1 を渡します。
+
+@raise IOError 既に close されている場合に発生します。
+

@@ -1,0 +1,10 @@
+kind=defined
+names=thread_tkwait,thread_tkwait_visibility,thread_wait,thread_wait_visibility
+visibility=public
+
+--- thread_wait_visibility
+--- thread_wait
+--- thread_tkwait
+--- thread_tkwait_visibility
+
+

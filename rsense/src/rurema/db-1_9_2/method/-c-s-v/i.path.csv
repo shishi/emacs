@@ -1,0 +1,8 @@
+kind=defined
+names=path
+visibility=public
+
+--- path    -> String
+
+[[m:IO#path]] に委譲します。
+

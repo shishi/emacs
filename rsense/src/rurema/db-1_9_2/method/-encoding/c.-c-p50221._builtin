@@ -1,0 +1,10 @@
+kind=defined
+names=CP50221
+visibility=public
+
+--- CP50221
+Windows で用いられる、ISO-2022-JP 亜種です。
+
+ISO-2022-JP に加え、ESC ( I でいわゆる半角カナを許し、Windows の機種依存文字を扱うことができます。
+[[url:http://legacy-encoding.sourceforge.jp/wiki/index.php?cp50221]]
+

@@ -1,0 +1,23 @@
+kind=added
+names=rfc2822,rfc822
+visibility=public
+
+--- rfc2822 -> String
+--- rfc822 -> String
+
+[[RFC:2822]] で定義されている date-time として表現される
+以下の形式の文字列を返します:
+
+ day-of-week, DD month-name CCYY hh:mm:ss zone
+
+ただし zone は [+-]hhmm です。
+
+self が UTC time の場合、zone は +0000 になります。
+
+使用例
+  require 'time'
+
+  iso8601_time = '2008-08-31T12:34:56+09:00'
+  t = Time.iso8601(iso8601_time)
+  p t.rfc2822      #=> "Sun, 31 Aug 2008 03:34:56 -0000"
+

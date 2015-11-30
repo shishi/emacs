@@ -1,0 +1,8 @@
+kind=defined
+names=installation_path
+visibility=public
+
+--- installation_path -> String
+
+この Gem パッケージのインストール先のパスを返します。
+

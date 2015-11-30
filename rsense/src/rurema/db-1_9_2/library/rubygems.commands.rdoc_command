@@ -1,0 +1,29 @@
+methods=
+sublibraries=
+requires=rubygems.specification,rubygems.spec_fetcher,rubygems.remote_fetcher,rubygems.requirement,rubygems.doc_manager,rubygems.builder,rubygems.exceptions,rubygems.source_index,rubygems.source_info_cache_entry,rubygems.digest.sha2,rubygems.version_option,rubygems.gem_path_searcher,rubygems.defaults.operating_system,rubygems.platform,rubygems.defaults,rubygems.dependency,rubygems.source_info_cache,rubygems,rubygems.user_interaction,rubygems.command,rubygems.version
+classes=Gem=Commands=RdocCommand
+is_sublibrary=true
+
+RDoc と ri のライブラリを生成するためのライブラリです。
+
+  Usage: gem rdoc [args] [options]
+    Options:
+          --all                        インストールされている全ての Gem パッケージの
+                                       RDoc/RI ドキュメントを生成します。
+          --[no-]rdoc                  RDoc を含めます
+          --[no-]ri                    RI を含めます
+      -v, --version VERSION            指定したバージョンのドキュメントを生成します
+    Common Options:
+      -h, --help                       このコマンドのヘルプを表示します
+      -V, --[no-]verbose               表示を詳細にします
+      -q, --quiet                      静かに実行します
+          --config-file FILE           指定された設定ファイルを使用します
+          --backtrace                  バックトレースを表示します
+          --debug                      Ruby 自体のデバッグオプションを有効にします
+    Arguments:
+      GEMNAME       ドキュメントを生成する Gem パッケージを指定します。省略すると全ての
+                    Gem パッケージのドキュメントを生成します。
+    Summary:
+      RDoc/RI ドキュメントを生成します
+    Defaults:
+      --version '>= 0' --rdoc --ri

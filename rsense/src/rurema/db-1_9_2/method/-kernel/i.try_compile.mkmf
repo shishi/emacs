@@ -1,0 +1,18 @@
+kind=added
+names=try_compile
+visibility=private 
+
+--- try_compile(src, opt = "", *opts) -> bool
+--- try_compile(src, opt = "", *opts){ ... } -> bool
+
+与えられた C のソースコードがコンパイルできた場合は真を返します。
+コンパイルできなかった場合は偽を返します。
+
+ブロックを与えた場合、そのブロックはコンパイル前に評価されます。
+ブロック内でソースコードを変更することができます。
+
+@param src C のソースコードを指定します。
+
+@param opt コンパイラに渡すオプションを指定します。
+           $CFLAGS もコンパイラには渡されます。
+

@@ -1,0 +1,12 @@
+kind=defined
+names=addch
+visibility=public
+
+--- addch(ch) -> nil
+
+stdscr のカーソルの位置に ch (1 バイト) を上書きします。
+
+@param ch 文字を指定します。
+
+@see [[man:curs_addch(3)]]
+

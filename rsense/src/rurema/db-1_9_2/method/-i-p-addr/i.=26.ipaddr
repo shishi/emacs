@@ -1,0 +1,12 @@
+kind=defined
+names=&
+visibility=public
+
+--- &(ipaddr) -> IPAddr
+
+他の IPAddr オブジェクトとのビットごとの論理積により、
+新しい IPAddr オブジェクトを生成します。
+
+@param ipaddr 他の IPAddr オブジェクト。
+              また、数値や文字列も受け付けます。
+

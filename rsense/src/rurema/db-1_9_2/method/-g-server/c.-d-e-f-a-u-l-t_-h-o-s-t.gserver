@@ -1,0 +1,8 @@
+kind=defined
+names=DEFAULT_HOST
+visibility=public
+
+--- DEFAULT_HOST -> String
+
+"127.0.0.1" ¤Ç¤¹¡£
+

@@ -1,0 +1,9 @@
+superclass=OpenSSL=ASN1=Primitive
+type=class
+library=openssl
+extended=
+included=
+
+ASN.1 のオブジェクト識別子を表すクラス。
+
+* ITU-T X.660 [[url:http://www.itu.int/rec/T-REC-X.660/en]]

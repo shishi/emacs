@@ -1,0 +1,6 @@
+kind=defined
+names=mark_trusted
+visibility=public
+
+--- mark_trusted(slave = '')
+

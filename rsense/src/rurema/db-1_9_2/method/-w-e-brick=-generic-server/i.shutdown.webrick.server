@@ -1,0 +1,8 @@
+kind=defined
+names=shutdown
+visibility=public
+
+--- shutdown     -> ()
+
+[[m:WEBrick::GenericServer#stop]] を呼び、全ての listeners を close します。
+

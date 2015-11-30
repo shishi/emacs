@@ -1,0 +1,12 @@
+kind=defined
+names=cos
+visibility=public
+
+--- cos(x) -> Float
+
+x の余弦関数の値をラジアンで返します。
+
+@param x 実数
+
+@return [-1, 1] の実数
+

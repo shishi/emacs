@@ -1,0 +1,7 @@
+methods=TkCore/c.INTERP.multi=2dtk,Object/i.method_missing.multi=2dtk
+sublibraries=
+requires=tcltklib,tkutil
+classes=MultiTkIp,MultiTkIp_PseudoToplevel_Evaluable,MultiTkIp_OK
+is_sublibrary=true
+
+

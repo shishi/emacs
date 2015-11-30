@@ -1,0 +1,14 @@
+name=rb_mod_remove_method
+private=true
+macro=false
+type=VALUE
+filename=eval.c
+params=(VALUE mod, VALUE name)
+
+
+Module#remove_method の実体。
+
+モジュール mod から name という名前のメソッドを
+検索し、エントリを削除します。見付からなかったときは
+例外 [[c:NameError]] が発生します。
+

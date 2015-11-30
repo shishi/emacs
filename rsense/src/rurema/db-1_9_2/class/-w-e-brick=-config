@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=webrick.config
+extended=
+included=
+
+色々なクラスの設定のデフォルト値を提供するモジュールです。

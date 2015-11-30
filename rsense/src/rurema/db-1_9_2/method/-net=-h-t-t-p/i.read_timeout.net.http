@@ -1,0 +1,14 @@
+kind=defined
+names=read_timeout
+visibility=public
+
+--- read_timeout -> Integer
+読みこみ([[man:read(2)]]) 一回でブロックしてよい最大秒数
+を返します。
+
+この秒数たっても読みこめなければ例外 [[c:TimeoutError]]
+を発生します。
+デフォルトは 60 (秒)です。
+
+@see [[m:Net::HTTP#open_timeout]], [[m:Net::HTTP#read_timeout=]]
+

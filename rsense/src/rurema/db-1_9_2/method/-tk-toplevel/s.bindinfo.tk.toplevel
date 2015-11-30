@@ -1,0 +1,6 @@
+kind=defined
+names=bindinfo
+visibility=public
+
+--- bindinfo(*args)
+

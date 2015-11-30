@@ -1,0 +1,15 @@
+kind=defined
+names=stat
+visibility=public
+
+--- stat    -> File::Stat
+
+ファイルのステータスを含む [[c:File::Stat]] オブジェクトを生成して
+返します。
+
+@raise Errno::EXXX ステータスの読み込みに失敗した場合に発生します。
+
+@raise IOError 既に close されていた場合に発生します。 
+
+@see [[m:File#lstat]], [[m:File.stat]], [[m:File.lstat]] 
+

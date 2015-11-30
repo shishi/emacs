@@ -1,0 +1,24 @@
+kind=defined
+names=det,determinant
+visibility=public
+
+--- determinant -> Rational | Float
+--- det -> Rational | Float
+
+行列式 (determinant) を返します。
+
+行列式 (determinant) の値を返します。
+self が正方行列ではない場合は0を返します。
+
+===== 注意
+
+全ての要素が整数である場合、正しい答を返さないかも知れません。
+その場合は [[lib:mathn]] を require して下さい。
+
+ p Matrix[[2, 1], [-1, 2]].det #=> 6
+ 
+ p Matrix[[2.0, 1.0], [-1.0, 2.0]].det #=> 5.0
+
+ require 'mathn'
+ p Matrix[[2, 1], [-1, 2]].det #=> 5
+

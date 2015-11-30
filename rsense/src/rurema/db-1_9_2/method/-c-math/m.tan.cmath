@@ -1,0 +1,11 @@
+kind=defined
+names=tan
+visibility=public
+
+--- tan(z) -> Float | Complex
+
+z の正接関数の値をラジアンで返します。
+
+@param z 数値
+
+

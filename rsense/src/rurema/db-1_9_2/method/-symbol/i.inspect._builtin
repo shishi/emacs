@@ -1,0 +1,9 @@
+kind=defined
+names=inspect
+visibility=public
+
+--- inspect    -> String
+
+自身を人間に読みやすい文字列にして返します。
+
+  :fred.inspect   #=> ":fred"

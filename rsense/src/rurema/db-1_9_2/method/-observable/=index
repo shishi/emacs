@@ -1,0 +1,7 @@
+#add_observer	Observable#add_observer
+#changed	Observable#changed
+#changed?	Observable#changed?
+#count_observers	Observable#count_observers
+#delete_observer	Observable#delete_observer
+#delete_observers	Observable#delete_observers
+#notify_observers	Observable#notify_observers

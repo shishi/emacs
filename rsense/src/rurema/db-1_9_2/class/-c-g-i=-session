@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=cgi.session
+extended=
+included=
+
+

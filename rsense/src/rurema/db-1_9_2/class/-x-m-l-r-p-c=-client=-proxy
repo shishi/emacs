@@ -1,0 +1,28 @@
+superclass=XMLRPC=Client
+type=class
+library=xmlrpc.client
+extended=
+included=
+
+Class XMLRPC::Client::Proxy makes XML-RPC calls look nicer!
+
+You can call any method onto objects of that class - the object handles
+method_missing and will forward the method call to a XML-RPC server.
+Don't use this class directly, but use instead method [[unknown:XMLRPC::Client#proxy]] or
+[[m:XMLRPC::Client#proxy2]].
+
+Every method call is forwarded to the XML-RPC server defined in [[m:XMLRPC::Client::Proxy.new]].
+
+Note: Inherited methods from class Object cannot be used as XML-RPC names, because they get around
+method_missing.
+
+    require "xmlrpc/client"
+
+    server = XMLRPC::Client.new("www.ruby-lang.org", "/RPC2", 80)
+
+    michael  = server.proxy("michael")
+    michael2 = server.proxy("michael", 4)
+
+    # both calls should return the same value '9'.
+    p michael.add(4,5)
+    p michael2.add(5)

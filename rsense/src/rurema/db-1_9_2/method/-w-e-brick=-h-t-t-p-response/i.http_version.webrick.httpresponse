@@ -1,0 +1,13 @@
+kind=defined
+names=http_version
+visibility=public
+
+--- http_version    -> WEBrick::HTTPVersion
+
+レスポンスの HTTP のバージョンを表す [[c:WEBrick::HTTPVersion]] オブジェクトを返します。
+
+  require 'webrick'
+  res = WEBrick::HTTPResponse.new( { :HTTPVersion => "1.1" } )
+  p res.http_version.class                                        #=> WEBrick::HTTPVersion
+  p res.http_version.to_s                                         #=> "1.1"
+

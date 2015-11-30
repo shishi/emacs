@@ -1,0 +1,23 @@
+kind=defined
+names=upcase!
+visibility=public
+
+--- upcase! -> self | nil
+
+ASCII 文字列の範囲内で 'a' から 'z' までの
+アルファベット小文字を全て大文字にします。
+このメソッドは self を破壊的に変更して返しますが、
+置換が起こらなかった場合は nil を返します。
+
+このメソッドはマルチバイト文字列を認識しますが、
+それはあくまでも「1 文字を 1 文字として認識する」だけであって、
+いわゆる全角アルファベットの大文字小文字までは変換しません。
+
+例:
+    buf = "stRIng? STring."
+    buf.upcase!
+    p buf   # => "STRING? STRING."
+
+@see [[m:String#upcase]], [[m:String#downcase!]],
+     [[m:String#swapcase!]], [[m:String#capitalize!]]
+

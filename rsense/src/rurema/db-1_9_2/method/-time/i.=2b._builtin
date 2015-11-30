@@ -1,0 +1,13 @@
+kind=defined
+names=+
+visibility=public
+
+--- +(other)    -> Time
+
+self より other 秒だけ後の時刻を返します。
+
+@param other 自身からの秒数を数値で指定します。
+
+  t = Time.now         #=> Wed Apr 09 08:56:03 CDT 2003
+  t + (60 * 60 * 24)   #=> Thu Apr 10 08:56:03 CDT 2003
+

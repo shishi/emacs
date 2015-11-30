@@ -1,0 +1,8 @@
+name=os_obj_of
+private=true
+macro=false
+type=VALUE
+filename=gc.c
+params=(VALUE of)
+
+

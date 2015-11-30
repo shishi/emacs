@@ -1,0 +1,7 @@
+superclass=REXML=Child
+type=class
+library=rexml
+extended=
+included=Comparable
+
+

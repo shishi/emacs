@@ -1,0 +1,16 @@
+kind=defined
+names=<=>
+visibility=public
+
+--- <=>(other) -> nil | Integer
+
+self と other を比較します。
+
+@param other 比較対象の IPAddr オブジェクト。
+
+@return self と other のアドレスファミリが一致しない場合は nil を返します。
+        アドレスファミリが一致する場合は、両方の数値表現を [[m:Integer#<=>]]
+        で比較した結果を返します。
+
+@see [[m:Integer#<=>]]
+

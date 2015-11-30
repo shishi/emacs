@@ -1,0 +1,8 @@
+kind=defined
+names=tagfont_copy
+visibility=public
+
+--- tagfont_copy(tagOrId, win, wintag = nil, winkey = nil, targetkey = nil)
+
+
+

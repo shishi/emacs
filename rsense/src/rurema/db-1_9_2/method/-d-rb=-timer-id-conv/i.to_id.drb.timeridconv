@@ -1,0 +1,6 @@
+kind=defined
+names=to_id
+visibility=public
+
+--- to_id(obj)
+

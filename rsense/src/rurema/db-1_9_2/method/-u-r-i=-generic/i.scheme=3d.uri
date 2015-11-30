@@ -1,0 +1,12 @@
+kind=defined
+names=scheme=
+visibility=public
+
+--- scheme=(s)
+
+自身の scheme を設定します。
+
+@param s 自身の scheme を表す文字列を指定します。
+
+@raise URI::InvalidComponentError 不正な引数 s に対して発生します。
+

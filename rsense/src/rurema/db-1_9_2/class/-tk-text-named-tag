@@ -1,0 +1,7 @@
+superclass=TkTextTag
+type=class
+library=tk.texttag
+extended=
+included=
+
+

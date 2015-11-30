@@ -1,0 +1,15 @@
+kind=defined
+names=remove_finalizer
+visibility=public
+
+--- remove_finalizer(proc)    -> Proc
+
+このメソッドは obsolete です。代わりに
+[[m:ObjectSpace.#undefine_finalizer]] を使用してくださ
+い。
+
+指定した proc をファイナライザから取り除きます。
+proc を返します。
+
+@param proc 取り除きたいファイナライザである Proc オブジェクトを指定します。
+

@@ -1,0 +1,7 @@
+superclass=StandardError
+type=class
+library=open=2duri
+extended=
+included=
+
+リソースの取得に失敗した時に投げられます。

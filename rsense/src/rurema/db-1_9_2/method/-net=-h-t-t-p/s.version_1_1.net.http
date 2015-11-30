@@ -1,0 +1,10 @@
+kind=defined
+names=version_1_1
+visibility=public
+
+--- version_1_1 -> ()
+ライブラリの動作をバージョン1.1互換にします。
+
+@see [[m:Net::HTTP.version_1_2]], [[m:Net::HTTP.version_1_1?]]
+     [[m:Net::HTTP.version_1_2?]]
+

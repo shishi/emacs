@@ -1,0 +1,13 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(width = 0, fmtstr = nil) -> Benchmark::Report
+
+[[c:Benchmark::Report]] のインスタンスを初期化して返します。
+
+通常このメソッドがユーザーによって直接呼び出されることはありません。
+
+@param width  ラベルの幅
+@param fmtstr フォーマット文字列
+

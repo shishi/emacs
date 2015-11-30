@@ -1,0 +1,15 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(name = nil, version = nil){|t| ... } -> Rake::PackageTask
+
+自身を初期化してタスクを定義します。
+
+ブロックが与えられた場合は、自身をブロックパラメータとして
+ブロックを評価します。
+
+@param name パッケージ名を指定します。
+
+@param version パッケージのバージョンを指定します。
+               ':noversion' というシンボルを指定するとバージョン情報をセットしません。

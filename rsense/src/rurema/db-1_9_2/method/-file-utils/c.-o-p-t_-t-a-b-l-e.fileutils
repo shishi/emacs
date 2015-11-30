@@ -1,0 +1,8 @@
+kind=defined
+names=OPT_TABLE
+visibility=public
+
+--- OPT_TABLE -> Hash
+
+内部で使用します。
+

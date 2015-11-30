@@ -1,0 +1,8 @@
+kind=defined
+names=parts
+visibility=public
+
+--- parts
+
+Returns multiple parts.
+

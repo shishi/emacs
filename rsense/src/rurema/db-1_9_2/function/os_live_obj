@@ -1,0 +1,8 @@
+name=os_live_obj
+private=true
+macro=false
+type=VALUE
+filename=gc.c
+params=(void)
+
+

@@ -1,0 +1,6 @@
+kind=defined
+names=window_element
+visibility=public
+
+--- window_element(*idxs)
+

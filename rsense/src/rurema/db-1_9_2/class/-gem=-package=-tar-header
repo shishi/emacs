@@ -1,0 +1,9 @@
+superclass=Object
+type=class
+library=rubygems.package.tar_header
+extended=
+included=
+
+tar アーカイブの各エントリのヘッダを表すクラスです。
+
+  * [[man:tar(5)]]

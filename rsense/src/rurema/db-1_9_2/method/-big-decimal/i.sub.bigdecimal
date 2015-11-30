@@ -1,0 +1,15 @@
+kind=defined
+names=sub
+visibility=public
+
+--- sub(b, n)
+
+のように使用します。
+
+    c = a.sub(b,n)
+
+c = a - b を最大で n 桁まで計算します。
+a - b の精度が n より大きいときは
+[[m:BigDecimal.mode]] で指定された方法で丸められます。
+n がゼロなら - と同じです。 
+

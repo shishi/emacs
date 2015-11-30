@@ -1,0 +1,18 @@
+kind=defined
+names=classify
+visibility=public
+
+--- classify {|o| ... } -> Hash
+
+集合をブロックの値によって分類し、結果をハッシュとして返します。
+
+ブロックは集合の各要素について実行され、引数 o にはその要素が
+渡されます。
+
+生成されるハッシュのキーはブロックの実行結果、値は分類された集合と
+なります。
+
+  numbers = Set[10, 4.5, 20, 30, 31.2]
+  p numbers.classify {|o| o.class}
+  #=> {Float=>#<Set: {4.5, 31.2}>, Fixnum=>#<Set: {30, 20, 10}>}
+

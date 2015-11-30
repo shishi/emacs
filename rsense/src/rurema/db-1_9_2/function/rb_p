@@ -1,0 +1,10 @@
+name=rb_p
+private=false
+macro=false
+type=void
+filename=io.c
+params=(VALUE obj)
+
+
+p の実体。obj を見やすく出力します。
+

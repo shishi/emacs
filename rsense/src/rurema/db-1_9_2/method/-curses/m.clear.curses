@@ -1,0 +1,16 @@
+kind=defined
+names=clear
+visibility=public
+
+--- clear -> nil
+
+画面全体を表すウィンドウ stdscr の文字を消去し、画面をクリアします。
+画面のクリアを反映させるために、
+本メソッドのあとに [[m:Curses.#refresh]] を呼び出す必要はありません。
+
+詳しくは、 man ページの curs_clear(3X) の clear 関数を参照ください。
+
+このメソッドの中で [[m:Curses.#init_screen]] を呼び出します。
+
+セーフレベル ($SAFE) が 4 の場合、例外 SecurityError を発生します。
+

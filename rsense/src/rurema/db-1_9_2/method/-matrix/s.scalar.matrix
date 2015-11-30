@@ -1,0 +1,17 @@
+kind=defined
+names=scalar
+visibility=public
+
+--- scalar(n, value) -> Matrix
+
+対角要素が全てvalue(数)で、非対角要素が全て0であるようなn次の正方行列を生成します。
+
+@param n     生成する行列の次元
+@param value 生成する行列の対角要素の値
+
+例:
+  require 'matrix'
+
+  m = Matrix.scalar(3, 2.5)
+  p m # => Matrix[[2.5, 0, 0], [0, 2.5, 0], [0, 0, 2.5]]
+ 

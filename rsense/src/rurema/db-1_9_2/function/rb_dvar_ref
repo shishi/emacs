@@ -1,0 +1,10 @@
+name=rb_dvar_ref
+private=false
+macro=false
+type=VALUE
+filename=eval.c
+params=(ID id)
+
+
+現在のローカル変数スコープで id を参照します。
+

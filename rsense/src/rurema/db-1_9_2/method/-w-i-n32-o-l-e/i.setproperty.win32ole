@@ -1,0 +1,47 @@
+kind=defined
+names=setproperty
+visibility=public
+
+--- setproperty(name, val) -> ()
+--- setproperty(name, args..., val) -> ()
+
+オブジェクトのプロパティを設定します。
+
+プロパティ名を指定してOLEオートメーションオブジェクトのプロパティ
+（Rubyの属性に相当）を設定します。
+
+なお、OLEオートメーションの仕様により、プロパティ名の大文字、小文字は区
+別されません。
+
+@param name プロパティ名を文字列またはシンボルで指定します。
+@param val プロパティに設定する値を指定します。
+@param args 集合的なプロパティに対する設定項目を特定するための引数を指
+            定します。
+@raise WIN32OLERuntimeError オートメーションサーバの呼び出しに失敗しました。
+                            理由はメッセージのHRESULTを調べてください。
+
+OLEオートメーションのプロパティはRubyの属性と異なり、パラメータを取るこ
+とができます。
+
+たとえばExcelのWorksheetオブジェクトのCellsプロパティは桁位置と行番号の
+2つのパラメータを取ります。
+
+これはVBでは次のように記述できます。
+
+  sheet.Cells(1, 1) = sheet.Cells(1, 2) ' セルB1の内容をセルA1へ
+
+Rubyでは上記のコードの右辺をVBと同じく「sheet.Cells(1, 2)」のように記述
+できますが、左辺の記述はできません。
+
+そのため、次の例のようにsetpropertyメソッドを利用して、パラメータ付きプ
+ロパティを設定します。
+
+
+   excel = WIN32OLE.new('Excel.Application')
+   excel.visible = true
+   sheet = excel.Workbooks.Add.Worksheets[1]
+   sheet.setproperty(:Cells, 1, 2, 32)
+   sheet.setproperty(:Cells, 1, 1, sheet.Cells(1, 2))
+
+
+

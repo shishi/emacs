@@ -1,0 +1,23 @@
+kind=defined
+names=get_print
+visibility=public
+
+--- get_print(uri) -> ()
+--- get_print(host, path, port = 80) -> ()
+指定した対象から HTTP でエンティティボディを取得し、
+[[m:$stdout]] に出力します。
+
+対象の指定方法は [[c:URI]] で指定するか、
+(host, port, path) で指定するかのいずれかです。
+
+@param uri データの取得対象を [[c:URI]] で指定します。
+@param host 接続先のホストを文字列で指定します。
+@param path データの存在するパスを文字列で指定します。
+@param port 接続するポートを整数で指定します。
+@see [[m:Net::HTTP.get]]
+
+=== 例
+  Net::HTTP.get_print URI.parse('http://www.example.com/index.html')
+もしくは
+  Net::HTTP.get_print 'www.example.com', '/index.html'
+

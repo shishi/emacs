@@ -1,0 +1,38 @@
+kind=defined
+names=load_file
+visibility=public
+
+--- load_file(file)
+
+与えられた名前のファイルから YAML フォーマットの文書を読み込み
+Ruby のオブジェクトを生成して返します。
+ファイルが複数の YAML ドキュメントを含んでいても、
+最初のものしか Ruby のオブジェクトに変換しません。
+
+@param file YAMLフォーマットのファイル
+
+  ---
+  - Monday
+  -
+   - 国語 
+   - 算数
+   - 理科
+   - 社会
+   - 体育
+  ---
+  - Friday
+  -
+   - 体育
+   - 算数
+   - 理科
+   - 国語 
+   - 社会
+  #end of jikanwari.yaml
+
+  require 'yaml'
+  
+  puts YAML.load_file('jikanwari.yaml').join(",")
+  
+  #=> Monday,国語,算数,理科,社会,体育
+
+

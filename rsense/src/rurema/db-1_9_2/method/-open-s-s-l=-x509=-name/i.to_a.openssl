@@ -1,0 +1,15 @@
+kind=defined
+names=to_a
+visibility=public
+
+--- to_a -> [[String, String, Integer]]
+
+内容を配列にして返します。
+
+配列の各要素は、[属性型文字列、属性値文字列、属性値の型を表す整数([[c:OpenSSL::ASN1]]以下の各定数で定義されているASN1の型)] という3要素の配列です。
+
+例:
+  n = OpenSSL::X509::Name.parse('/C=JP/ST=Kanagawa/L=Yokohama/O=Example Company/OU=Lab3/CN=foobar/emailAddress=foobar@lab3.example.co.jp')
+  n.to_a
+  # => [["C", "JP", 19], ["ST", "Kanagawa", 12], ["L", "Yokohama", 12], ["O", "Example Company", 12], ["OU", "Lab3", 12], ["CN", "foobar", 12], ["emailAddress", "foobar@lab3.example.co.jp", 22]]
+

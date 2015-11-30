@@ -1,0 +1,8 @@
+kind=defined
+names=flush_next_in
+visibility=public
+
+--- flush_next_in -> String
+
+入力バッファに残っているデータを強制的に取り出します。
+

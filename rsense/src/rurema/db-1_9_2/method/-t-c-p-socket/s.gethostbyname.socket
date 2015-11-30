@@ -1,0 +1,20 @@
+kind=defined
+names=gethostbyname
+visibility=public
+
+--- gethostbyname(host) -> Array
+
+ホスト名または IP アドレス (整数または"127.0.0.1"
+のような文字列)からホストの情報を返します。ホスト情報は、ホ
+スト名、ホストの別名の配列、ホストのアドレスタイプ、ホストの
+アドレスを各要素とする配列です。ホストのアドレスは octet
+decimal の文字列 ("127.0.0.1"のような文字列) です。
+
+@param host ホスト名または IP アドレス (整数または"127.0.0.1" のような文字列)を指定します。
+
+@return ホスト名、ホストの別名の配列、ホストのアドレスタイプ、ホストのアドレスを各要素とする配列を返します。
+
+例:
+
+  p TCPSocket.gethostbyname("www.ruby-lang.org")
+  #=> ["beryllium.ruby-lang.org", [], 2, "210.163.138.100"]

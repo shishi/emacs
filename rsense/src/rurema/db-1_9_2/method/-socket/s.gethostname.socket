@@ -1,0 +1,16 @@
+kind=defined
+names=gethostname
+visibility=public
+
+--- gethostname -> String
+
+システムの標準のホスト名を取得します。
+
+ホストの別名やアドレスなど他の情報を得るには
+[[m:Socket.getaddrinfo]] を使ってください。
+ただし、これは不可能な場合もあります。
+
+例:
+
+  p Socket.gethostname   #=> "helium.ruby-lang.org"
+

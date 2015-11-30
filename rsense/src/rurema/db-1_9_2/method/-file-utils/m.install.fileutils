@@ -1,0 +1,21 @@
+kind=defined
+names=install
+visibility=public
+
+--- install(src, dest, options = {}) -> ()
+
+src と dest の内容が違うときだけ src を dest にコピーします。
+
+@param src コピー元。一つの場合は文字列でも指定可能です。
+           二つ以上指定する場合は配列で指定します。
+
+@param dest コピー先のファイルかディレクトリです。
+
+@param options :preserve, :noop, :verbose, :mode が指定できます。
+               [[ref:c:FileUtils#options]]
+
+例:
+
+  FileUtils.install('ruby', '/usr/local/bin/ruby', {:mode => 0755, :verbose => true})
+  FileUtils.install('lib.rb', '/usr/local/lib/ruby/site_ruby', {:verbose => true})
+

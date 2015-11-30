@@ -1,0 +1,14 @@
+kind=defined
+names=update
+visibility=public
+
+--- update(idle = nil)
+
+only for backward compatibility (This never be recommended to use)
+
+
+
+
+
+
+

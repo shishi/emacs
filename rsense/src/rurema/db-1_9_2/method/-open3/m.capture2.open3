@@ -1,0 +1,32 @@
+kind=defined
+names=capture2
+visibility=public
+
+--- capture2(*cmd) -> [String, Process::Status]
+
+cmdで指定されたコマンドを実行し、そのプロセスの標準出力とプロセスの終了
+ステータスを表すオブジェクトを返します。
+
+@param cmd 実行するコマンドを指定します。
+
+@return 実行したコマンドの標準出力と終了ステータスを表すオブジェクトを
+        配列で返します。
+
+指定された引数はopts[:stdin_data]とopts[:binmode]以外は全て
+[[m:Open3.#popen3]]に渡されます。opts[:stdin_data]は実行するコマンドの
+標準出力に渡されます。opts[:binmode]を真に指定されると内部で使用される
+パイプをバイナリモードに指定します。
+
+例:
+
+  require "open3"
+  
+  # factorコマンドで与えられた数値(42)を素因数分解する。
+  o, s = Open3.capture2("factor", :stdin_data=>"42")
+  p o #=> "42: 2 3 7\n"
+
+[[m:Open3.#popen3]]と同様に引数に環境変数とオプションを指定してコマンド
+を実行する事ができます。
+
+@see [[m:Open3.#popen3]]
+

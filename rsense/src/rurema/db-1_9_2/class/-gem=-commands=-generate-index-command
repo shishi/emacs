@@ -1,0 +1,7 @@
+superclass=Gem=Command
+type=class
+library=rubygems.commands.generate_index_command
+extended=
+included=
+
+ある Gem サーバに対するインデックスを作成するためのクラスです。

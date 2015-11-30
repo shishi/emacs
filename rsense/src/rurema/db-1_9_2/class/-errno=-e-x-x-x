@@ -1,0 +1,153 @@
+superclass=SystemCallError
+type=class
+library=_builtin
+extended=
+included=
+
+システム依存のエラーコードのそれぞれに対応する一連の例外クラスです。
+Rubyのライブラリ内部でシステムコールや一部のC言語関数が失敗したときに発生します。
+
+実際には「EXXX」というクラスが定義されているわけではありません。「XXX」の部分は下記に列挙したような各種のエラー名が入ります。
+例えば、[[m:File.open]] の内部でシステムコール [[man:open(2)]] がエラーコード ENOENT を返すと、Rubyは例外 Errno::ENOENT を発生させます。
+
+Ruby は処理系がコンパイルされるときに、デフォルトで下記リストのような Errno::EXXX クラスを定義しようとします。
+動作環境に EXXX というエラーコードが存在しない場合、Rubyはその Errno::EXXX を Errno::NOERROR の別名として定義します。
+
+
+また、以下の一覧にはないシステムエラーが発生した場合は、
+[[c:Errno::EXXX]] (XXX はエラー番号を表す 3 桁の数字)
+という名前の例外クラスが自動的に作成され、発生します。
+(これは Ruby 内部でのみ行われ、 Ruby プログラム上で [[m:SystemCallError.new]] に一覧にないコードを渡してもクラスは作成されません)
+
+それぞれの例外が発生し得るケースについては、この項では記述しません。
+例外を発生する各メソッドのマニュアルおよびオペレーティングシステムのマニュアルを参照してください。
+
+=== エラー名リスト
+
+個々の例外の意味はシステム依存です。
+システムのマニュアル [[man:errno(3)]] を参照してください。
+Microsoft Windows システムにおいては [[url:http://msdn2.microsoft.com/ja-jp/library/5814770t.aspx]] を参照してください。
+
+  * ERROR
+  * EPERM
+  * ENOENT
+  * ESRCH
+  * EINTR
+  * EIO
+  * ENXIO
+  * E2BIG
+  * ENOEXEC
+  * EBADF
+  * ECHILD
+  * EAGAIN
+  * ENOMEM
+  * EACCES
+  * EFAULT
+  * ENOTBLK
+  * EBUSY
+  * EEXIST
+  * EXDEV
+  * ENODEV
+  * ENOTDIR
+  * EISDIR
+  * EINVAL
+  * ENFILE
+  * EMFILE
+  * ENOTTY
+  * ETXTBSY
+  * EFBIG
+  * ENOSPC
+  * ESPIPE
+  * EROFS
+  * EMLINK
+  * EPIPE
+  * EDOM
+  * ERANGE
+  * EDEADLK
+  * ENAMETOOLONG
+  * ENOLCK
+  * ENOSYS
+  * ENOTEMPTY
+  * ELOOP
+  * EWOULDBLOCK
+  * ENOMSG
+  * EIDRM
+  * ECHRNG
+  * EL2NSYNC
+  * EL3HLT
+  * EL3RST
+  * ELNRNG
+  * EUNATCH
+  * ENOCSI
+  * EL2HLT
+  * EBADE
+  * EBADR
+  * EXFULL
+  * ENOANO
+  * EBADRQC
+  * EBADSLT
+  * EDEADLOCK
+  * EBFONT
+  * ENOSTR
+  * ENODATA
+  * ETIME
+  * ENOSR
+  * ENONET
+  * ENOPKG
+  * EREMOTE
+  * ENOLINK
+  * EADV
+  * ESRMNT
+  * ECOMM
+  * EPROTO
+  * EMULTIHOP
+  * EDOTDOT
+  * EBADMSG
+  * EOVERFLOW
+  * ENOTUNIQ
+  * EBADFD
+  * EREMCHG
+  * ELIBACC
+  * ELIBBAD
+  * ELIBSCN
+  * ELIBMAX
+  * ELIBEXEC
+  * EILSEQ
+  * ERESTART
+  * ESTRPIPE
+  * EUSERS
+  * ENOTSOCK
+  * EDESTADDRREQ
+  * EMSGSIZE
+  * EPROTOTYPE
+  * ENOPROTOOPT
+  * EPROTONOSUPPORT
+  * ESOCKTNOSUPPORT
+  * EOPNOTSUPP
+  * EPFNOSUPPORT
+  * EAFNOSUPPORT
+  * EADDRINUSE
+  * EADDRNOTAVAIL
+  * ENETDOWN
+  * ENETUNREACH
+  * ENETRESET
+  * ECONNABORTED
+  * ECONNRESET
+  * ENOBUFS
+  * EISCONN
+  * ENOTCONN
+  * ESHUTDOWN
+  * ETOOMANYREFS
+  * ETIMEDOUT
+  * ECONNREFUSED
+  * EHOSTDOWN
+  * EHOSTUNREACH
+  * EALREADY
+  * EINPROGRESS
+  * ESTALE
+  * EUCLEAN
+  * ENOTNAM
+  * ENAVAIL
+  * EISNAM
+  * EREMOTEIO
+  * EDQUOT

@@ -1,0 +1,23 @@
+kind=defined
+names=[],to_ptr
+visibility=public
+
+--- [](val)       -> DL::CPtr
+--- to_ptr(val)   -> DL::CPtr
+
+与えられた val を指す CPtr オブジェクトを生成して返します。
+
+val が文字列の場合は文字列が格納されているメモリ領域を指す CPtr オブジェクトを返します。
+IO オブジェクトの場合は FILE ポインタを表す CPtr オブジェクトを返します。
+val に to_ptr メソッドが定義されている場合は、val.to_ptr を呼びます。
+上以外の場合は、整数に変換しそれをアドレスとする CPtr オブジェクトを返します。
+
+@param val Ruby オブジェクトを指定します。
+
+例:
+
+ require 'dl'
+ s = "abc"
+ p DL::CPtr[s].to_i                 #=> 136186388
+ p [s].pack('p*').unpack('l!*')[0]  #=> 136186388
+

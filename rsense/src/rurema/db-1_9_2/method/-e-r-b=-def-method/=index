@@ -1,0 +1,2 @@
+.def_erb_method	ERB::DefMethod.#def_erb_method
+#def_erb_method	ERB::DefMethod.#def_erb_method

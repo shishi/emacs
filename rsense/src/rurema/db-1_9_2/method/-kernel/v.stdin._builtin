@@ -1,0 +1,48 @@
+kind=defined
+names=stdin
+visibility=public
+
+--- $stdin -> object
+標準入力です。
+
+自プロセスの標準入力をリダイレクトしたいときは
+$stdin に代入すれば十分です。
+
+    # 標準入力の入力元 /tmp/foo に変更
+    $stdin = File.open("/tmp/foo", "w")
+    gets               # 入力する
+    $stdin = STDIN     # 元に戻す
+
+ただし、[[m:Kernel.#gets]] など、特定の組み込みメソッドは
+$stdin オブジェクトにメソッドを転送して実装されています。
+従って、[[m:Kernel.#gets]] などが正しく動作するには、
+$stdin オブジェクトに代入したオブジェクトが以下のメソッドを
+正しく実装していなければいけません。
+
+    gets, readline, readlines, getc, readchar, tell, seek,
+    pos=, rewind, fileno, to_io, eof, each_line, each_byte,
+    binmode, closed?
+
+例:
+
+    $stdin = Object.new
+    def $stdin.gets
+      "foo"
+    end
+    p gets()  # => "foo"
+
+自プロセスだけでなく、子プロセスの標準入力もリダイレクトしたいときは
+以下のように [[m:IO#reopen]] を使います。
+
+    $stdin.reopen("/tmp/foo")
+
+また、リダイレクトしたあと
+出力先をまた元に戻したい場合は以下のようにします。
+
+    stdin_old = $stdin.dup       # 元の $stdin を保存する
+    $stdout.reopen("/tmp/foo")   # $stdin を /tmp/foo にリダイレクトする
+    gets                         # /tmp/foo から入力
+    $stdin.reopen stdin_old      # 元に戻す
+
+$stdin はグローバルスコープです。
+

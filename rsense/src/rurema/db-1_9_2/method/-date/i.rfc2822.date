@@ -1,0 +1,8 @@
+kind=defined
+names=rfc2822,rfc822
+visibility=public
+
+--- rfc2822 -> String
+--- rfc822 -> String
+[[RFC:2822]] で定められた書式の文字列を返します。
+

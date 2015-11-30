@@ -1,0 +1,34 @@
+kind=defined
+names=<=>
+visibility=public
+
+--- <=>(other) -> Integer | nil
+
+self と other を ASCII コード順で比較して、
+self が大きい時には正の整数、等しい時には 0、小さい時には負の整数を返します。
+このメソッドは Comparable モジュールのメソッドを実装するために使われます。
+
+変数 [[m:$=]] の値が真であるときは
+アルファベットの大文字小文字を無視して比較します。
+ただし $= 変数はいずれ廃止されることが決まっているので
+$= に頼るべきではありません。
+代わりに [[m:String#casecmp]] を使ってください。
+
+other が文字列でない場合、
+other.to_str と other.<=> が定義されていれば
+0 - (other <=> self) の結果を返します。
+そうでなければ nil を返します。
+
+@param other    文字列
+@return         比較結果の整数か nil
+
+例:
+
+    p "aaa" <=> "xxx"   # => -1
+    p "aaa" <=> "aaa"   # => 0
+    p "xxx" <=> "aaa"   # => 1
+
+    p "string" <=> "stringAA"  # => -1
+    p "string" <=> "string"    # => 0
+    p "stringAA" <=> "string"  # => 1
+

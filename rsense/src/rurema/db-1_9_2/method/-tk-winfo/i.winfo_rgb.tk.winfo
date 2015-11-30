@@ -1,0 +1,6 @@
+kind=defined
+names=winfo_rgb
+visibility=public
+
+--- winfo_rgb(color)
+

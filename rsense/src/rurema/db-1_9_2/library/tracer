@@ -1,0 +1,57 @@
+methods=
+sublibraries=
+requires=
+classes=Tracer
+is_sublibrary=false
+
+実行トレース出力をとる機能を提供する。
+
+使い方は大きく分けて2通り。
+
+ひとつは以下のようにコマンドラインから [[m:Kernel.#require]] する方法です。
+hoge.rb の実行をすべてトレース出力します。
+
+  ruby -rtracer hoge.rb
+
+もうひとつはソースからrequireする方法です。
+
+  require 'tracer'
+
+とした後
+
+  Tracer.on
+
+によりトレース出力を有効にする。
+
+  Tracer.off
+
+によりトレース出力を無効にする。
+
+また、ブロック付きで Tracer.on を呼び出すと、そのブロック内のみ
+トレースを出力する。
+
+=== サンプルコード
+
+  # 例: 式の評価の中でHogeクラスのメソッドが呼び出される時、トレースする。
+
+  # ruby 1.8 では警告がでますが、動作します。
+  require 'tracer'
+
+  class Hoge
+    def Hoge.fuga(i)
+      "fuga #{i}"
+    end
+  end
+
+  Tracer.add_filter {|event, file, line, id, binding, klass|
+    event =~ /line/ and klass.to_s =~ /hoge/i
+  }
+  Tracer.on
+  for i in 0..3
+    puts Hoge.fuga(i) if i % 3 == 0
+  end 
+  Tracer.off
+
+=== SEE ALSO
+
+[[m:Kernel.#set_trace_func]]

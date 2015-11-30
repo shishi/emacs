@@ -1,0 +1,21 @@
+kind=defined
+names=eql?,equal?
+visibility=public
+
+--- eql?(other)     -> bool
+--- equal?(other)   -> bool
+
+指定された other が self 自身である場合のみ真を返します。
+これは [[c:Object]] クラスで定義されたデフォルトの動作で
+す。
+
+@param other 自身と比較したいオブジェクトを指定します。
+
+  s = "bar"
+  a = s.method(:size)
+  b = s.method(:size)
+  p a.eql?(b)          #=> false
+  p a.eql?(a)          #=> true
+
+@see [[m:Method#==]]
+

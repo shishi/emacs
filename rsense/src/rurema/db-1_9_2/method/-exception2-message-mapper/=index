@@ -1,0 +1,13 @@
+.Fail	Exception2MessageMapper.Fail
+.Raise	Exception2MessageMapper.Fail
+.def_e2message	Exception2MessageMapper.def_e2message
+.def_exception	Exception2MessageMapper.def_exception
+.e2mm_message	Exception2MessageMapper.e2mm_message
+.extend_object	Exception2MessageMapper.extend_object
+.message	Exception2MessageMapper.e2mm_message
+#Fail	Exception2MessageMapper#Fail
+#Raise	Exception2MessageMapper#Fail
+#bind	Exception2MessageMapper#bind
+#def_e2message	Exception2MessageMapper#def_e2message
+#def_exception	Exception2MessageMapper#def_exception
+#fail	Exception2MessageMapper#fail

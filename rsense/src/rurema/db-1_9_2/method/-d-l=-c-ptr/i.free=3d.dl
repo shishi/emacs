@@ -1,0 +1,10 @@
+kind=defined
+names=free=
+visibility=public
+
+--- free=(cfunc)
+
+GC が自身を解放するのに使う関数を [[c:DL::CFunc]] で指定します。
+
+@param cfunc 自身を解放するのに使われる関数を [[c:DL::CFunc]] か整数で指定します。
+

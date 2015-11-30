@@ -1,0 +1,6 @@
+kind=defined
+names=parse_args
+visibility=public
+
+--- parse_args(element, string)
+

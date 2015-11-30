@@ -1,0 +1,6 @@
+kind=defined
+names=scan_dragto
+visibility=public
+
+--- scan_dragto(x, y)
+

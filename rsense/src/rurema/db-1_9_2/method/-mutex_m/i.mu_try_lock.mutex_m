@@ -1,0 +1,10 @@
+kind=defined
+names=mu_try_lock,try_lock
+visibility=public
+
+--- mu_try_lock -> bool
+--- try_lock -> bool
+self をロックしようとして、成功した場合、真を返し、ロックを得ます。
+
+ロックできなかった場合にはブロックせず偽を返します。
+

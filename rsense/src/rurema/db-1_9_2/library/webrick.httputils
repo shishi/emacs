@@ -1,0 +1,7 @@
+methods=WEBrick/c.CR.webrick.httputils,WEBrick/c.CRLF.webrick.httputils,WEBrick/c.LF.webrick.httputils
+sublibraries=
+requires=
+classes=WEBrick=HTTPUtils,WEBrick=HTTPUtils=FormData
+is_sublibrary=true
+
+

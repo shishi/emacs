@@ -1,0 +1,6 @@
+kind=defined
+names=do_one_event
+visibility=public
+
+--- do_one_event(flag = TclTkLib::EventFlag::ALL)
+

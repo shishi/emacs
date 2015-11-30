@@ -1,0 +1,16 @@
+kind=defined
+names=check
+visibility=public
+
+--- check(pid, raise = false) -> Process::Status | nil
+
+pid で指定された子プロセスの状態をチェックし、実行中であれば nil を返します。
+
+終了しているか停止している場合、第二引数が偽であれば、
+対応する [[c:Process::Status]] オブジェクトを返します。
+
+@param pid チェックしたい子プロセスの PID を指定します。
+
+@param raise 真を指定すると、子プロセスが終了または停止している場合、
+             例外 [[c:PTY::ChildExited]] が発生します。デフォルトは偽です。
+

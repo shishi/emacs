@@ -1,0 +1,10 @@
+kind=defined
+names=parse_header
+visibility=public
+
+--- parse_header(raw) -> Hash
+
+HTTP ヘッダをパースして結果をハッシュに格納して返します。
+
+@param raw 生のヘッダを表す文字列を指定します。
+

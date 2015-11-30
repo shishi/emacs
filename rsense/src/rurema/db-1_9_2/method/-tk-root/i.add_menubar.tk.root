@@ -1,0 +1,6 @@
+kind=defined
+names=add_menubar
+visibility=public
+
+--- add_menubar(menu_spec, tearoff = false, opts = nil)
+

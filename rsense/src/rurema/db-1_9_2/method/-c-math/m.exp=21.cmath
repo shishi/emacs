@@ -1,0 +1,25 @@
+kind=defined
+names=exp!
+visibility=public
+
+--- exp!(x) -> Float
+
+実数 x の指数関数([[m:Math::E]] の x 乗)の値を返します。
+[[m:Math.#exp]] のエイリアスです。
+
+@param x [[m:Math::E]] を x 乗する数を実数で指定します。
+
+@raise TypeError x に数値以外を指定した場合に発生します。
+
+@raise RangeError x に実数以外の数値を指定した場合に発生します。
+
+例:
+
+  require "cmath"
+  CMath.exp!(0)   # => 1
+  CMath.exp!(0.5) # => Math.sqrt(Math::E)
+  CMath.exp!(1)   # => Math::E
+  CMath.exp!(2)   # => Math::E ** 2
+
+@see [[m:Math.#exp]]
+

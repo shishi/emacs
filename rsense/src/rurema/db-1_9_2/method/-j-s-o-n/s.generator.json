@@ -1,0 +1,9 @@
+kind=defined
+names=generator
+visibility=public
+
+--- generator -> JSON::Ext::Generator
+
+JSON ライブラリがジェネレータとして使用するモジュールを返します。
+
+

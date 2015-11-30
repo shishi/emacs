@@ -1,0 +1,6 @@
+kind=defined
+names=get_thread_no
+visibility=public
+
+--- get_thread_no -> Integer
+

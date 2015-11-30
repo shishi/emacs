@@ -1,0 +1,22 @@
+kind=defined
+names=strptime
+visibility=public
+
+--- strptime(str = '-4712-01-01T00:00:00+00:00', format = '%FT%T%z', start = Date::ITALY) -> DateTime
+
+与えられた雛型で日時表現を解析し、
+その情報に基づいて DateTime オブジェクトを生成します。
+
+@param str 日時をあらわす文字列
+@param format 書式
+@param start グレゴリオ暦をつかい始めた日をあらわすユリウス日
+@raise ArgumentError 正しくない日時になる組み合わせである場合に発生します。
+
+例:
+
+  DateTime.strptime('2001-02-03T12:13:14Z').to_s
+  # => "2001-02-03T12:13:14+00:00"
+
+@see [[m:Date.strptime]], [[m:DateTime._strptime]], [[man:strptime(3)]], [[m:Date#strftime]]
+
+

@@ -1,0 +1,14 @@
+kind=defined
+names=proxy_user
+visibility=public
+
+--- proxy_user -> String|nil
+自身が ([[m:Net::HTTP.Proxy]] によって作成された) 
+プロクシ用のクラスで、かつプロクシの認証を利用する場合は
+プロクシ認証のユーザ名を返します。
+
+そうでなければ nil を返します。
+
+@see [[m:Net::HTTP.Proxy]]
+
+

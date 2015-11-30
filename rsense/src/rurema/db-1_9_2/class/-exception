@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=_builtin
+extended=
+included=
+
+全ての例外の祖先のクラスです。

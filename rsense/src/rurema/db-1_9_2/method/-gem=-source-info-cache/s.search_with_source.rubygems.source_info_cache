@@ -1,0 +1,12 @@
+kind=defined
+names=search_with_source
+visibility=public
+
+--- search_with_source(*args) -> Array
+
+与えられた条件を満たす [[c:Gem::Specification]] と URL のリストを返します。
+
+@param args 検索条件を指定します。[[m:Gem::SourceInfoCache#search_with_source]] と引数を合わせてください。
+
+@see [[m:Gem::SourceInfoCache#search_with_source]]
+

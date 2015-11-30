@@ -1,0 +1,16 @@
+kind=defined
+names=<=>
+visibility=public
+
+--- <=>(other) -> Fixnum
+
+self と other を比較して、self が大きい時に正、
+等しい時に 0、小さい時に負の整数を返します。
+
+@param other 比較対象の数値
+@return      -1 か 0 か 1 のいずれか
+
+  1 <=> 2 #=> -1
+  1 <=> 1 #=> 0
+  2 <=> 1 #=> 1
+

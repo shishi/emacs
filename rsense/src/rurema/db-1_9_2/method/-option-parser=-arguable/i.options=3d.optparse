@@ -1,0 +1,12 @@
+kind=defined
+names=options=
+visibility=public
+
+--- options=(opt)
+
+自身をパースするための [[c:OptionParser]] オブジェクトをセットします。
+
+@param opt 自身をパースする [[c:OptionParser]] 、あるいは nil か false を指定します。
+           nil か false である場合、自身の options= メソッドと options メソッドを
+           undef します。
+

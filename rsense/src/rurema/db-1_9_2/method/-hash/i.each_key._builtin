@@ -1,0 +1,21 @@
+kind=defined
+names=each_key
+visibility=public
+
+--- each_key {|key| ... } -> self
+--- each_key -> Enumerator
+
+ハッシュのキーを引数としてブロックを評価します。
+
+反復の際の評価順序はキーが追加された順です。
+ブロック付きの場合selfを、
+無しで呼ばれた場合[[c:Enumerator]]を返します。
+
+  {:a=>1, :b=>2}.each_key {|k| p k}
+  #=> :a
+      :b
+       
+  p({:a=>1, :b=>2}.each_key)  # => #<Enumerator: {:a=>1, :b=>2}:each_key>
+
+@see [[m:Hash#each_pair]],[[m:Hash#each_value]]
+

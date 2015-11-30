@@ -1,0 +1,8 @@
+kind=defined
+names=flush
+visibility=public
+
+--- flush     -> ()
+
+バッファされたデータを出力します。
+

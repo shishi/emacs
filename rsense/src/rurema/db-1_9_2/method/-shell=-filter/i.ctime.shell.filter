@@ -1,0 +1,11 @@
+kind=defined
+names=ctime
+visibility=public
+
+--- ctime(filename)    -> Time
+[[c:File]] クラスにある同名のクラスメソッドと同じです.
+
+@param filename ファイル名を表す文字列か IO オブジェクトを指定します。
+
+@see [[m:File.ctime]]
+

@@ -1,0 +1,13 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(name, value)    -> WEBrick::Cookie
+
+新しい [[c:WEBrick::Cookie]] オブジェクトを生成して返します。
+name にクッキーの名前を、value にクッキーで保持する値を与える。
+
+@param name Cookie の名前を文字列で指定します。
+
+@param value Cookie の値を文字列で指定します。
+

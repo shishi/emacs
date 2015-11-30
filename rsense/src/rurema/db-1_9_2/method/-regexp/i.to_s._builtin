@@ -1,0 +1,29 @@
+kind=defined
+names=to_s
+visibility=public
+
+--- to_s -> String
+
+正規表現の文字列表現を生成して返します。返される文字列は他の正規表
+現に埋め込んでもその意味が保持されるようになっています。
+
+  re = /foo|bar|baz/i
+  p re.to_s       # => "(?i-mx:foo|bar|baz)"
+  p /#{re}+/o     # => /(?i-mx:foo|bar|baz)+/
+
+ただし、後方参照を含む正規表現は意図通りにはならない場合があります。
+これは現状、後方参照を番号でしか指定できないためです。
+
+  re = /(foo|bar)\1/      # \1 は、foo か bar
+  p /(baz)#{re}/          # \1 は、baz
+  
+  # => /(baz)(?-mix:(foo|bar)\1)/
+
+使用例
+
+  re = /foo|bar|baz/i
+  p re.to_s       # => "(?i-mx:foo|bar|baz)"
+  p /#{re}+/o     # => /(?i-mx:foo|bar|baz)+/
+
+@see [[m:Regexp#inspect]]
+

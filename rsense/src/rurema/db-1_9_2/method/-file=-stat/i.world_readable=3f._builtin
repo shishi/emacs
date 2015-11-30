@@ -1,0 +1,14 @@
+kind=defined
+names=world_readable?
+visibility=public
+
+--- world_readable? -> Fixnum | nil
+
+If stat is readable by others, returns an integer representing
+the file permission bits of stat. Returns nil otherwise. The
+meaning of the bits is platform dependent; on Unix systems, see
+stat(2).
+
+   m = File.stat("/etc/passwd").world_readable?  # => 420
+   sprintf("%o", m)                              # => "644"
+

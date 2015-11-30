@@ -1,0 +1,8 @@
+kind=defined
+names=pos=
+visibility=public
+
+--- pos=(n)
+
+[[m:IO#pos=]] に委譲します。
+

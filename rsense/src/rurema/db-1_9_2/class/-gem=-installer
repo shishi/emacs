@@ -1,0 +1,11 @@
+superclass=Object
+type=class
+library=rubygems.installer
+extended=
+included=Gem=UserInteraction,Gem=RequirePathsBuilder
+
+[[c:Gem::Installer]] は Gem を展開し、  Gem に含まれていたファイルを
+ファイルシステム上の正しい位置に配置します。
+
+また、gemspec を specifications ディレクトリに、キャッシュを cache ディレクトリに、
+実行ファイルやシンボリックリンクなどを bin ディレクトリに配置します。

@@ -1,0 +1,10 @@
+kind=defined
+names=find
+visibility=public 
+
+--- find(path) -> nil | Gem::Specification
+
+与えられたパスにマッチする [[c:Gem::Specification]] を一つだけ返します。
+
+@see [[m:Array#find]]
+

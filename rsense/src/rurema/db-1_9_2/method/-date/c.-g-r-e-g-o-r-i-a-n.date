@@ -1,0 +1,8 @@
+kind=defined
+names=GREGORIAN
+visibility=public
+
+--- GREGORIAN
+常にグレゴリオ暦であることを示します。
+改暦日は無限の過去にあると考えられます。
+

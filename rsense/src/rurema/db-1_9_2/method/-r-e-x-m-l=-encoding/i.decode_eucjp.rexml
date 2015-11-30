@@ -1,0 +1,6 @@
+kind=added
+names=decode_eucjp
+visibility=public
+
+--- decode_eucjp(str)
+

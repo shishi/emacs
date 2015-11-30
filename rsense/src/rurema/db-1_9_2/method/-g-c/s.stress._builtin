@@ -1,0 +1,11 @@
+kind=defined
+names=stress,stress=
+visibility=public
+
+--- stress -> bool
+--- stress=(value)
+
+GC.stress が真に設定されている間は、GC を行えるすべての機会に GC を行います。
+
+@param value 任意のオブジェクト。真偽値として解釈されます。
+

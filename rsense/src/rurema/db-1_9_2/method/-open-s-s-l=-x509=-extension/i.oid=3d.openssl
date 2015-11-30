@@ -1,0 +1,12 @@
+kind=defined
+names=oid=
+visibility=public
+
+---oid=(oid)
+
+拡張領域の識別子(extnID)をOIDの文字列で設定します。
+
+@param oid OIDの文字列
+@raise OpenSSL::X509::Extension 識別子の設定に失敗した場合に発生します
+@see [[c:OpenSSL::X509::Extension#oid]]
+

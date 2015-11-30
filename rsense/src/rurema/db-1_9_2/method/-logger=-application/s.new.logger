@@ -1,0 +1,10 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(appname = nil) -> Logger::Application
+
+このクラスを初期化します。
+
+@param appname アプリケーション名を指定します。
+

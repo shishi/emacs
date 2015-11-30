@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rubygems.builder
+extended=
+included=Gem=UserInteraction
+
+[[c:Gem::Specification]] のインスタンスから Gem パッケージを作成するためのクラスです。

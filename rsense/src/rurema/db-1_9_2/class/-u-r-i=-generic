@@ -1,0 +1,10 @@
+superclass=Object
+type=class
+library=uri
+extended=
+included=URI
+
+すべての URI クラスの基底クラスです。
+
+hash と eql? が再定義されているため、[[c:Hash]] のキーとして
+利用することができます。

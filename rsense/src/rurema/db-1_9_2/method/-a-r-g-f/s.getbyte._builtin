@@ -1,0 +1,12 @@
+kind=defined
+names=getbyte
+visibility=public
+
+--- getbyte   -> Integer | nil
+
+自身から 1 バイトを読み込み整数として返します。
+既に EOF に達していれば nil を返します。
+
+   ARGF.getbyte   #=> 84
+   ARGF.getbyte   #=> 104
+

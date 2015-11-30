@@ -1,0 +1,18 @@
+kind=defined
+names=search,uid_search
+visibility=public
+
+--- search(keys, charset = nil)
+--- uid_search(keys, charset = nil)
+
+Sends a SEARCH command to search the mailbox for messages that
+match the given searching criteria, and returns message sequence
+numbers (search) or unique identifiers (uid_search).
+
+ex).
+
+  p imap.search(["SUBJECT", "hello"])
+  #=> [1, 6, 7, 8]
+  p imap.search('SUBJECT "hello"')
+  #=> [1, 6, 7, 8]
+

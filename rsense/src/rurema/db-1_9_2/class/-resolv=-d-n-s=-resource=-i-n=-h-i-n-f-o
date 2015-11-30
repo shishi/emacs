@@ -1,0 +1,8 @@
+superclass=Resolv=DNS=Resource=HINFO
+type=class
+library=resolv
+extended=
+included=
+
+DNS リソースのクラス IN、タイプ HINFO に対応する
+クラスです。

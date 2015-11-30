@@ -1,0 +1,8 @@
+superclass=OpenSSL=OpenSSLError
+type=class
+library=openssl
+extended=
+included=
+
+[[c:OpenSSL::X509::Attribute]] 関連のエラーが起きた場合に
+発生する例外です。

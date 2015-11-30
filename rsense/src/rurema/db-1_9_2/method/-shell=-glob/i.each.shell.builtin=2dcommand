@@ -1,0 +1,6 @@
+kind=defined
+names=each
+visibility=public
+
+--- each(rs = nil){|file| ... }
+

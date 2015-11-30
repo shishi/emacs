@@ -1,0 +1,19 @@
+kind=added
+names=tolocale
+visibility=public
+
+--- tolocale -> String
+self のエンコーディングをロケールエンコーディングに変換した文字列を
+返します。変換元のエンコーディングは文字列の内容から推測します。
+
+ロケールエンコーディングについては [[m:Encoding.locale_charmap]] を見てください。
+
+このメソッドは MIME エンコードされた文字列を展開し、
+いわゆる半角カナを全角に変換します。
+これらを変換したくない場合は、 [[m:String#encode]]
+を使ってください。
+
+@see [[m:Kconv.#tolocale]]
+
+
+

@@ -1,0 +1,8 @@
+kind=defined
+names=value=
+visibility=public
+
+--- value=(val)
+
+値をvalに設定します。
+

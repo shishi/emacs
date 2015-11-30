@@ -1,0 +1,15 @@
+kind=added
+names=depend_rules
+visibility=private 
+
+--- depend_rules(depend) -> Array
+
+ファイルの依存関係の書かれた depend ファイルの内容を処理します。
+
+@param depend depend ファイルの内容を指定します。
+
+@return 見つかった依存関係を Makefile 形式で返します。
+
+
+
+

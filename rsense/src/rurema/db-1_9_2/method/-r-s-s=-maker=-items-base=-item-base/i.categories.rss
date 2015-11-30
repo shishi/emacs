@@ -1,0 +1,10 @@
+kind=defined
+names=categories,enclosure,guid,source
+visibility=public
+
+--- guid
+--- enclosure
+--- source
+--- categories
+
+

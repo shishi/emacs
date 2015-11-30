@@ -1,0 +1,8 @@
+kind=defined
+names=media_subtype
+visibility=public
+
+--- media_subtype
+
+obsolete. use #subtype instead.
+

@@ -1,0 +1,34 @@
+superclass=Object
+type=class
+library=_builtin
+extended=
+included=Comparable
+
+ファイルの情報を格納したオブジェクトのクラス。
+
+[[c:FileTest]] に同名のモジュール関数がある場合はそれと同じ働きをします。ただ、
+ファイル名を引数に取るかわりに Stat 自身について判定する点が違います。
+
+  p File::Stat.new($0).directory? #=> false
+  p FileTest.directory?($0) #=> false
+
+以下の属性メソッドは、システムによってサポートされていない場合 0 が返ります。
+1.8.0 以降では nil が返ります。
+
+  dev         デバイス番号(ファイルシステム)
+  dev_major   dev の major 番号部
+  dev_minor   dev の minor 番号部
+  ino         i-node 番号
+  mode        ファイルモード
+  nlink       ハードリンクの数
+  uid         オーナーのユーザID
+  gid         オーナーのグループID
+  rdev        デバイスタイプ(スペシャルファイルのみ)
+  rdev_major  rdev の major 番号部
+  rdev_minor  rdev の minor 番号部
+  size        ファイルサイズ(バイト単位)
+  blksize     望ましいI/Oのブロックサイズ
+  blocks      割り当てられているブロック数
+  atime       最終アクセス時刻
+  mtime       最終更新時刻
+  ctime       最終状態変更時刻(状態の変更とは chmod などによるもので、Unix では i-node の変更を意味します)

@@ -1,0 +1,20 @@
+kind=defined
+names=assert_not_same
+visibility=public
+
+--- assert_not_same(expected, actual, message = "")    -> ()
+
+!actual.equal?(expected) が真ならパスします。
+
+@param expected 期待するオブジェクトを指定します。
+
+@param actual 検証するオブジェクトを指定します。
+
+@param message assert が失敗した時に表示するメッセージを文字列で指定し
+               ます。指定しなかった場合は表示しません。
+
+@raise MiniTest::Assertion assert が失敗した時に発生します。
+
+@see [[m:Object#equal?]], [[m:MiniTest::Assertions#assert_same]]
+
+

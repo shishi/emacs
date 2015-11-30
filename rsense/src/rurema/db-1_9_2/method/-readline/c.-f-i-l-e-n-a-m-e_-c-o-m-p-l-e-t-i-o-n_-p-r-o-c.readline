@@ -1,0 +1,12 @@
+kind=defined
+names=FILENAME_COMPLETION_PROC
+visibility=public
+
+--- FILENAME_COMPLETION_PROC -> Proc
+
+GNU Readline で定義されている関数を使用してファイル名の補完を行うための
+[[c:Proc]] オブジェクトです。
+[[m:Readline.completion_proc=]] で使用します。
+
+@see [[m:Readline.completion_proc=]]
+

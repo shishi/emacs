@@ -1,0 +1,12 @@
+name=rb_define_class_id
+private=false
+macro=false
+type=VALUE
+filename=class.c
+params=(ID id, VALUE super)
+
+
+クラス名 id でクラス super を継承したクラスを
+新しく作成する。クラス→クラス名 (定数名) の関連付けは
+なされるが、定数→クラスの関連付けはなされない。
+

@@ -1,0 +1,8 @@
+kind=defined
+names=version
+visibility=public 
+
+--- version -> String
+
+プラットフォームのバージョンを返します。
+

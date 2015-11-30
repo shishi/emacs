@@ -1,0 +1,10 @@
+kind=defined
+names=rid
+visibility=public
+
+--- rid    -> Integer
+        
+現在のプロセスの実グループ ID を返します。
+
+   Process.rid   #=> 500
+

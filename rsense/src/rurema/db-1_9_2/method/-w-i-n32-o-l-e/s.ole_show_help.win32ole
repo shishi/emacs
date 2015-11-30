@@ -1,0 +1,32 @@
+kind=defined
+names=ole_show_help
+visibility=public
+
+--- ole_show_help(obj, helpcontext = nil) -> ()
+
+WIN32OLEオブジェクトのヘルプファイルを表示します。
+
+Windows標準のヘルプ表示コンポーネントのHHCtrl.OCXを利用して、オブジェク
+トに関連付けられたヘルプファイル（chmファイル）を表示します。
+
+また、chmファイルのフルパス名を指定して表示させることも可能です。
+
+@param obj [[c:WIN32OLE_TYPE]]オブジェクトまたは[[c:WIN32OLE_METHOD]]オ
+           ブジェクト。直接ヘルプファイルのフルパス名を指定することも可
+           能です。
+
+@param helpcontext obj引数に[[c:WIN32OLE_TYPE]]オブジェクトまたは
+                  [[c:WIN32OLE_METHOD]]オブジェクトを指定した場合は、こ
+                  れらのオブジェクトの設定値を利用するため指定不要です。
+                  obj引数にヘルプファイルのフルパス名を設定した場合は
+                  0を指定してください。
+
+@raise RuntimeError オブジェクトが関連するヘルプファイルを持たない場合
+                    (no helpfile of `オブジェクト名') や、ヘルプファイル
+                    がインストールされていない場合 (failed to open
+                    help file `ファイル名') に通知します。
+
+   excel = WIN32OLE.new('Excel.Application')
+   typeobj = excel.ole_obj_help
+   WIN32OLE.ole_show_help(typeobj) if typeobj.helpfile
+

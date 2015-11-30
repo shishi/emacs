@@ -1,0 +1,6 @@
+kind=added
+names=encode_utf8
+visibility=public
+
+--- encode_utf8(content)
+

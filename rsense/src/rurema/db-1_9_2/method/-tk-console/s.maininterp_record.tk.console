@@ -1,0 +1,6 @@
+kind=defined
+names=maininterp_record
+visibility=public
+
+--- maininterp_record(tcl_script)
+

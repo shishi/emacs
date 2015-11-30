@@ -1,0 +1,6 @@
+kind=defined
+names=export_with_clear
+visibility=public
+
+--- export_with_clear(*patterns)
+

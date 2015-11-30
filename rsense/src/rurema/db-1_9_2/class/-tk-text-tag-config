@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=tk.text
+extended=
+included=TkTreatItemFont,TkItemConfigMethod
+
+

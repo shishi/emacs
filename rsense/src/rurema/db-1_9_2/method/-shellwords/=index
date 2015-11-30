@@ -1,0 +1,11 @@
+.escape	Shellwords.escape
+.join	Shellwords.join
+.shellescape	Shellwords.#shellescape
+.shelljoin	Shellwords.#shelljoin
+.shellsplit	Shellwords.#shellsplit
+.shellwords	Shellwords.#shellsplit
+.split	Shellwords.split
+#shellescape	Shellwords.#shellescape
+#shelljoin	Shellwords.#shelljoin
+#shellsplit	Shellwords.#shellsplit
+#shellwords	Shellwords.#shellsplit

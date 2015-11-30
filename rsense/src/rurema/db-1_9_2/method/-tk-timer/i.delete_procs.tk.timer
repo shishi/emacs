@@ -1,0 +1,6 @@
+kind=defined
+names=delete_procs
+visibility=public
+
+--- delete_procs(*procs)
+

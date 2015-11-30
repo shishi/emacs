@@ -1,0 +1,8 @@
+kind=defined
+names=request_line
+visibility=public
+
+--- request_line -> String
+
+クライアントのリクエストの最初の行(GET / HTTP/1.1)を文字列で返します。
+

@@ -1,0 +1,4 @@
+.basic_auth	WEBrick::HTTPAuth.#basic_auth
+.proxy_basic_auth	WEBrick::HTTPAuth.#proxy_basic_auth
+#basic_auth	WEBrick::HTTPAuth.#basic_auth
+#proxy_basic_auth	WEBrick::HTTPAuth.#proxy_basic_auth

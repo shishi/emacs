@@ -1,0 +1,24 @@
+kind=defined
+names=enable_ssl
+visibility=public
+
+--- enable_ssl(verify_or_params={}, certs=nil) -> ()
+このインスタンスが SSL による通信を利用するように設定します。
+
+verify_or_params にハッシュを渡した場合には、接続時に生成される
+[[c:OpenSSL::SSL::SSLContext]] オブジェクトの
+[[m:OpenSSL::SSL::SSLContext#set_params]] に渡されます。
+certs は無視されます。
+
+verify_or_params がハッシュでない場合には、接続時に生成される
+[[c:OpenSSL::SSL::SSLContext]] オブジェクトの
+[[m:OpenSSL::SSL::SSLContext#set_params]] に
+  { :verify_mode => verify_or_params, :ca_path => certs }
+というハッシュが渡されます。
+
+@param verify_or_params SSLの設定のハッシュ、もしくは SSL の設定の verify_mode
+@param certs SSL の設定の ca_path
+
+@see [[m:Net::POP3.enable_ssl]], [[m:Net::POP3#disable_ssl]], [[m:Net::POP3#use_ssl?]]
+
+

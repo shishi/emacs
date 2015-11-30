@@ -1,0 +1,15 @@
+kind=defined
+names=strict_decode64
+visibility=public
+
+--- strict_decode64(str) -> String
+与えられた文字列を Base64 デコードしたデータを返します。
+
+このメソッドは [[RFC:4648]] に対応しています。
+
+
+@param str Base64 デコードする文字列を指定します。
+
+@raise ArgumentError 与えられた引数が Base64 エンコードされたデータとして正しい形式ではない場合に発生します。
+       例えば、アルファベットでない文字列や CR, LF などが含まれている場合にこの例外は発生します。
+

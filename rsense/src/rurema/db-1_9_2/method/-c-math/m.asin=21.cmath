@@ -1,0 +1,19 @@
+kind=defined
+names=asin!
+visibility=public
+
+--- asin!(x) -> Float
+
+実数 x の逆正弦関数の値をラジアンで返します。[[m:Math.#asin]] のエイリ
+アスです。
+
+@param x -1.0 <= x <= 1 の範囲内の実数。
+
+@raise TypeError x に数値以外を指定した場合に発生します。
+
+@raise Math::DomainError x に範囲外の実数を指定した場合に発生します。
+
+@raise RangeError x に実数以外の数値を指定した場合に発生します。
+
+@see [[m:Math.#asin]]
+

@@ -1,0 +1,8 @@
+kind=defined
+names=fixup
+visibility=public
+
+--- fixup    -> ()
+
+リクエストの残りのエンティティボディを読み込みます。
+

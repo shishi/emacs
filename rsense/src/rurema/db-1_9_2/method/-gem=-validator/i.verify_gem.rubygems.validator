@@ -1,0 +1,15 @@
+kind=defined
+names=verify_gem
+visibility=public 
+
+--- verify_gem(gem_data) -> ()
+
+与えられた Gem ファイルの内容の MD5 チェックサムを検証します。
+
+@param gem_data Gem ファイルの内容を文字列で指定します。
+
+@raise Gem::VerificationError 空の Gem ファイルを指定した場合に発生します。
+
+@raise Gem::VerificationError MD5 チェックサムが不正である場合に発生します。
+
+

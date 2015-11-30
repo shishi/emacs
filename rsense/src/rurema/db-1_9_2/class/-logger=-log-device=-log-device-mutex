@@ -1,0 +1,9 @@
+superclass=Object
+type=class
+library=logger
+extended=
+included=MonitorMixin
+
+ログの出力先ファイルを同期するためのクラスです。
+
+@see [[c:MonitorMixin]]

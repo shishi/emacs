@@ -1,0 +1,15 @@
+kind=defined
+names=result
+visibility=public
+
+--- result  -> Hash
+
+測定結果をファイル名をキー、各行の実行回数を配列にした値のハッシュを返
+します。空行やコメントのみの行などの測定結果は nil になります。result
+メソッドが実行された後はカバレッジの測定を行いません。
+
+@return 測定結果を表すハッシュ
+
+@raise RuntimeError [[m:Coverage.start]] を実行する前に実行された場合に
+                    発生します。
+

@@ -1,0 +1,16 @@
+kind=defined
+names=clone,dup
+visibility=public
+
+--- clone    -> IO
+--- dup      -> IO
+
+レシーバと同じ IO を参照する新しい IO オブジェクトを返します。
+参照しているファイル記述子は [[man:dup(2)]] されます。
+
+clone の際に self は一旦 [[m:IO#flush]] されます。
+フリーズした IO の clone は同様にフリーズされた IO を返しますが、
+dup は内容の等しいフリーズされていない IO を返します。
+
+@raise IOError 既に close されていた場合に発生します。 
+

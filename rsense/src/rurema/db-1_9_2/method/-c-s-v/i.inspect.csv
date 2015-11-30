@@ -1,0 +1,8 @@
+kind=defined
+names=inspect
+visibility=public
+
+--- inspect -> String
+
+ASCII 互換文字列で自身の情報を表したものを返します。
+

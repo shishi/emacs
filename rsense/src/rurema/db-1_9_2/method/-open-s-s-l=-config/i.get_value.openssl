@@ -1,0 +1,12 @@
+kind=defined
+names=get_value
+visibility=public
+
+--- get_value(section, name) -> String | nil
+オブジェクトが持っている設定情報を返します。
+
+キーに対応する設定情報がない場合は nil を返します。
+
+@param section セクションを表す文字列。"" を渡すことでグローバルな設定情報を読むことができます。
+@param name キーを表す文字列
+

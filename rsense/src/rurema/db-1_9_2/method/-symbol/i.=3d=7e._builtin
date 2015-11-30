@@ -1,0 +1,21 @@
+kind=defined
+names==~,match
+visibility=public
+
+--- =~(other) -> Integer | nil
+--- match(other) -> Integer | nil
+
+正規表現 other とのマッチを行います。
+
+(self.to_s =~ other と同じです。)
+
+@param other 比較対象のシンボルを指定します。
+
+@return マッチが成功すればマッチした位置のインデックスを、そうでなければ nil を返します。
+
+  p :foo =~ /foo/    # => 0
+  p :foobar =~ /bar/ # => 3
+  p :foo =~ /bar/    # => nil
+
+@see [[m:String#=~]], [[m:String#match]]
+

@@ -1,0 +1,8 @@
+kind=defined
+names=cert_chain=
+visibility=public
+
+--- cert_chain=(arr)
+
+@param arr デフォルトは空の配列です。
+

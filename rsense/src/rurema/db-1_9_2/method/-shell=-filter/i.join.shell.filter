@@ -1,0 +1,11 @@
+kind=defined
+names=join
+visibility=public
+
+--- join(*item)    -> String
+[[c:File]] クラスにある同名のクラスメソッドと同じです.
+
+@param item 連結したいディレクトリ名やファイル名を文字列で与えます。
+
+@see [[m:File.join]]
+

@@ -1,0 +1,6 @@
+kind=defined
+names=tearoffcommand
+visibility=public
+
+--- tearoffcommand(cmd = Proc.new)
+

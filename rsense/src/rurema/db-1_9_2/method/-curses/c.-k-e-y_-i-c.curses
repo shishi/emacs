@@ -1,0 +1,8 @@
+kind=defined
+names=KEY_IC
+visibility=public
+
+--- KEY_IC -> Integer
+
+文字を挿入するか挿入モードに入るキーを表す定数です。
+

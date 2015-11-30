@@ -1,0 +1,4 @@
+.__getip	TkCore::INTERP.__getip
+.cb_entry_class	TkCore::INTERP.cb_entry_class
+.tk_cmd_tbl	TkCore::INTERP.tk_cmd_tbl
+.tk_windows	TkCore::INTERP.tk_windows

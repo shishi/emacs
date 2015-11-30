@@ -1,0 +1,59 @@
+kind=defined
+names=fill
+visibility=public
+
+--- fill(val)            -> self
+--- fill {|index| ... }  -> self
+
+すべての要素に val をセットします。
+
+このメソッドが val のコピーでなく val 自身をセットする
+ことに注意してください([[trap:Array]])。
+val の代わりにブロックを指定するとブロックの評価結果を値とします。
+
+@param val 自身にセットしたいオブジェクトを指定します。
+
+  a = [0, 1, 2, 3, 4]
+  a.fill(10)
+  p a #=> [10, 10, 10, 10, 10]
+  
+  a = [0, 1, 2, 3, 4]
+  a.fill("a")
+  p a #=> ["a", "a", "a", "a", "a"]
+  a[0].capitalize!
+  p a #=> ["A", "A", "A", "A", "A"]
+
+--- fill(val, start, length = nil)             -> self
+--- fill(val, range)                     -> self
+--- fill(start, length = nil) {|index| ... }    -> self
+--- fill(range) {|index| ... }            -> self
+
+配列の指定された範囲すべてに val をセットします。
+
+範囲の始点が自身の末尾を越える時には配列の長さを自動的に拡張し、拡張した領域を nil で初期化します。
+範囲の終点が自身の末尾を越える時は長さを自動的に拡張し、拡張した部分を val で初期化します。
+このメソッドが val のコピーでなく val 自身をセットすることに注意してください([[trap:Array]])。
+  a = [0, 1, 2]
+  a.fill("x", 5..10)
+  p a #=> [0, 1, 2, nil, nil, "x", "x", "x", "x", "x", "x"]
+
+val の代わりにブロックを指定するとブロックの評価結果を値とし
+ます。ブロックは要素毎に実行されるので、セットする値のそれぞれをあ
+るオブジェクトの複製にすることができます。
+ブロックのパラメータには start からのインデックスが渡されます。
+
+    ary = []
+    p ary.fill(1..2) {|i| i}         # => [nil, 1, 2]
+    p ary.fill(0,3) {|i| i}          # => [0, 1, 2]
+    p ary.fill { "foo" }             # => ["foo", "foo", "foo"]
+    p ary.collect {|v| v.object_id } # => [537770124, 537770112, 537770100]
+
+@param val 自身に設定したいオブジェクトを指定します。
+
+@param start val を設定する範囲の始点のインデックスを整数で指定します。start の値が負の時には末尾からのインデックスと見倣します。末尾の要素が -1 番目になります。
+
+@param length val を設定する要素の個数を指定します。nil が指定された時は配列の終りまでの長さを意味します。
+
+@param range val を設定する範囲を [[c:Range]] オブジェクトで指定します。
+
+

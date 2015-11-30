@@ -1,0 +1,7 @@
+#each_strongly_connected_component	TSort#each_strongly_connected_component
+#each_strongly_connected_component_from	TSort#each_strongly_connected_component_from
+#strongly_connected_components	TSort#strongly_connected_components
+#tsort	TSort#tsort
+#tsort_each	TSort#tsort_each
+#tsort_each_child	TSort#tsort_each_child
+#tsort_each_node	TSort#tsort_each_node

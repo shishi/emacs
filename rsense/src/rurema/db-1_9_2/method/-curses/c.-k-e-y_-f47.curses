@@ -1,0 +1,8 @@
+kind=defined
+names=KEY_F47
+visibility=public
+
+--- KEY_F47 -> Integer
+
+F47 キーを表す定数です。
+

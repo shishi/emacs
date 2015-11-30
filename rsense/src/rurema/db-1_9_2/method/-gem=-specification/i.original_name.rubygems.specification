@@ -1,0 +1,10 @@
+kind=defined
+names=original_name
+visibility=public
+
+--- original_name -> String
+
+このメソッドは後方互換性のために残されています。
+
+@see [[m:Gem::Specification#full_name]]
+

@@ -1,0 +1,35 @@
+superclass=
+type=module
+library=observer
+extended=
+included=
+
+Observer パターンを提供するモジュールです。
+
+Mix-in により Observer パターンを提供します。
+
+Observable モジュールを include したクラスは
+[[m:Observable#changed]] メソッドにより更新フラグを立て、
+[[m:Observable#notify_observers]] が呼び出されると
+更新フラグが立っている場合はオブザーバに通知します
+(オブザーバの update メソッドを呼び出す)。
+[[m:Observable#notify_observers]] の引数は
+そのままオブザーバの update メソッドに渡されます。
+
+=== サンプルコード
+  require 'observer'
+  class AObservable
+    include Observable
+    ...
+  end
+  class AObserver
+    def update(arg)
+      ...
+    end
+    ...
+  end
+  obj = AObservable.new
+  observer = AObserver.new
+  obj.add_observer(observer)
+  obj.changed
+  obj.notify_observers(args)

@@ -1,0 +1,6 @@
+kind=defined
+names=useinputmethods_displayof
+visibility=public
+
+--- useinputmethods_displayof(window, value = Tk::None)
+

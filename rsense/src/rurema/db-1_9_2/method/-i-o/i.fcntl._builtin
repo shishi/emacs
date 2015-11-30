@@ -1,0 +1,21 @@
+kind=defined
+names=fcntl
+visibility=public
+
+--- fcntl(cmd, arg = 0)    -> Integer
+
+IOに対してシステムコール fcntl を実行します。
+機能の詳細は [[man:fcntl(2)]] を参照してください。
+fcntl(2) が返した整数を返します。
+
+@param cmd IO に対するコマンドを、添付ライブラリ [[lib:fcntl]] が提供している定数で指定します。
+
+@param arg cmd に対する引数を整数、文字列、booleanのいずれかで指定します。
+           整数の時にはその値を [[man:fcntl(2)]] に渡します。
+           文字列の場合には Array#pack した構造体だとみなして渡します。
+           arg が nil か false の場合には 0を、true の場合には 1 を渡します。
+
+@raise Errno::EXXX fcntl の実行に失敗した場合に発生します。
+
+@raise IOError 既に close されている場合に発生します。
+

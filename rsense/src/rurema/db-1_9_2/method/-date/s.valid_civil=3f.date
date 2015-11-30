@@ -1,0 +1,15 @@
+kind=defined
+names=valid_civil?,valid_date?
+visibility=public
+
+--- valid_civil? (year, mon, mday, start = Date::GREGORIAN) -> bool
+--- valid_date? (year, mon, mday, start = Date::GREGORIAN) -> bool
+正しい暦日付であれば真、そうでないなら偽を返します。
+
+[[m:Date.jd]]、および [[m:Date.civil]] も参照してください。
+
+@param year 年
+@param mon 月
+@param mday 日
+@param start グレゴリオ暦をつかい始めた日をあらわすユリウス日
+

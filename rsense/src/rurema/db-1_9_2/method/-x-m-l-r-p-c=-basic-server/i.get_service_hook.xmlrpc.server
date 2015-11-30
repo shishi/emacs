@@ -1,0 +1,7 @@
+kind=defined
+names=get_service_hook
+visibility=public
+
+--- get_service_hook
+Returns the service-hook, which is called on each service request (RPC) unless it's nil.
+

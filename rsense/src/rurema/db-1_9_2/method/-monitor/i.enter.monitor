@@ -1,0 +1,7 @@
+kind=defined
+names=enter
+visibility=public
+
+--- enter -> ()
+[[m:MonitorMixin#mon_enter]] の別名です。
+

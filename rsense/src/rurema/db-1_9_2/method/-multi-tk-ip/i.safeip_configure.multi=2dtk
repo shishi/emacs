@@ -1,0 +1,6 @@
+kind=defined
+names=safeip_configure
+visibility=public
+
+--- safeip_configure(slot, value = Tk::None)
+

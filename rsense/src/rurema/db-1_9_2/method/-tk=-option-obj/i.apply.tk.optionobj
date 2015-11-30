@@ -1,0 +1,8 @@
+kind=defined
+names=apply,notify
+visibility=public
+
+--- notify(target = nil)
+--- apply(target = nil)
+
+

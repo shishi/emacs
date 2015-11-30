@@ -1,0 +1,8 @@
+kind=defined
+names=marshal_dump
+visibility=public 
+
+--- marshal_dump -> Array
+
+完全なオブジェクトではなく、バージョン文字列のみダンプします。
+

@@ -1,0 +1,11 @@
+name=rb_raise
+private=false
+macro=false
+type=void
+filename=error.c
+params=(VALUE err, const char *fmt, ...)
+
+
+クラス err の例外を発生します。fmt とその後の引数は、
+printf と同じ形式でエラーメッセージを表します。
+

@@ -1,0 +1,36 @@
+kind=defined
+names=printf
+visibility=public
+
+--- printf(format, *arg) -> nil
+--- printf(port, format, *arg) -> nil
+
+C 言語の printf と同じように、format に従い引数を文字列に変
+換して port に出力します。
+
+port を省略した場合は標準出力 [[m:$stdout]] に出力します。
+
+引数を 1 つも指定しなければ何もしません。
+
+Ruby における format 文字列の拡張については
+[[m:Kernel.#sprintf]]の項を参照してください。
+
+@param port 出力先になる[[c:IO]] のサブクラスのインスタンスです。
+@param format フォーマット文字列です。
+@param arg フォーマットされる引数です。
+@raise ArgumentError port を指定したのに format を省略した場合に発生します。
+@raise IOError port が書き込み用にオープンされていなければ発生します。
+@raise Errno::EXXX 出力に失敗した場合に発生します。 
+
+  printf("calculate%3s%-6s%.15f", 'PI', '...', Math::PI) 
+  #=> calculate PI...   3.141592653589793
+  
+  printf("%d %04x", 123, 123)               #=> "123 007b"
+  printf("%08b '%4s'", 123, 123)            #=> "01111011 ' 123'"
+  printf("%1$*2$s %2$d %1$s", "hello", 8)   #=> "   hello 8 hello"
+  printf("%1$*2$s %2$d", "hello", -8)       #=> "hello    -8"
+  printf("%+g:% g:%-g", 1.23, 1.23, 1.23)   #=> "+1.23: 1.23:1.23"
+  printf("%u", -123)                        #=> "..4294967173"
+
+@see [[m:Kernel.#sprintf]],[[m:IO#printf]]
+

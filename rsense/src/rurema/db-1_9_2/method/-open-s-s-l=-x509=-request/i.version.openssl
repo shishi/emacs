@@ -1,0 +1,11 @@
+kind=defined
+names=version
+visibility=public
+
+--- version -> Integer
+バージョンを返します。
+
+PKCS#10 v1.7([[RFC:2986]])では0を返します。
+
+@see [[m:OpenSSL::X509::Request#version=]]
+

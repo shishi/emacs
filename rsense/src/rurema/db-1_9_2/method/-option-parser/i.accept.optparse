@@ -1,0 +1,13 @@
+kind=defined
+names=accept
+visibility=public
+
+--- accept(klass, pat = /.*/){|str| ...}    -> ()
+
+[[m:OptionParser.accept]] と同様ですが、
+登録したブロックはレシーバーに限定されます。
+
+@param klass クラスオブジェクトを与えます。
+
+@param pat match メソッドを持ったオブジェクト([[c:Regexp]] オブジェクトなど)を与えます。
+

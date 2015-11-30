@@ -1,0 +1,12 @@
+kind=defined
+names=group=
+visibility=public
+
+--- group=(gr)
+鍵パラメータとなる群を表すオブジェクトを設定します。
+
+通常このメソッドで値を変更することはありません。
+よく考えて必要な場合のみ利用してください。
+
+@see [[m:OpenSSL::PKey::EC#group]]
+

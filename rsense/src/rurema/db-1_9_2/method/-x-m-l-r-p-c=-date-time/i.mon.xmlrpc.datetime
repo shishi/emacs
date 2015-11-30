@@ -1,0 +1,8 @@
+kind=defined
+names=mon
+visibility=public
+
+--- mon
+
+Alias for [[unknown:XMLRPC::DateTime#month]].
+

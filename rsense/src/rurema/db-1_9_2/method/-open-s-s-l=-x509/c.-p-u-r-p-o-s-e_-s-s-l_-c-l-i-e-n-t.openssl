@@ -1,0 +1,15 @@
+kind=defined
+names=PURPOSE_SSL_CLIENT
+visibility=public
+
+--- PURPOSE_SSL_CLIENT -> Integer
+証明書が
+SSL のクライアントサイドの証明書として使えるか
+チェックすることを意味します。
+
+[[m:OpenSSL::X509::Store#purpose=]] や
+[[m:OpenSSL::X509::StoreContext#purpose=]] で設定し、
+[[m:OpenSSL::X509::Store#verify]] や
+[[m:OpenSSL::X509::StoreContext#verify]] で
+このことを確認します。
+

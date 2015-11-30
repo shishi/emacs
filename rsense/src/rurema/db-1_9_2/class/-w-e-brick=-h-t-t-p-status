@@ -1,0 +1,19 @@
+superclass=
+type=module
+library=webrick.httpstatus
+extended=
+included=
+
+HTTP のステータスを表す例外クラスを提供するモジュールです。
+ステータスコード 200 などの成功の場合も含まれます。
+
+以下のような継承による階層を構成しています。
+
+ StandardError
+  * WEBrick::HTTPStatus::Status
+     * WEBrick::HTTPStatus::Info             (1XX)
+     * WEBrick::HTTPStatus::Success          (2XX)
+     * WEBrick::HTTPStatus::Redirect         (3XX)
+     * WEBrick::HTTPStatus::Error            
+        * WEBrick::HTTPStatus::ClientError   (4XX)
+        * WEBrick::HTTPStatus::ServerError   (5XX)

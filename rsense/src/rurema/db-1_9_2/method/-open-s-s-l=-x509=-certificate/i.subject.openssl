@@ -1,0 +1,8 @@
+kind=defined
+names=subject
+visibility=public
+
+--- subject -> OpenSSL::X509::Name
+証明書の所有者の名前を返します。
+
+

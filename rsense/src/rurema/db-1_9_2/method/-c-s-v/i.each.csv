@@ -1,0 +1,10 @@
+kind=defined
+names=each
+visibility=public
+
+--- each{|row| ... } -> nil
+
+各行に対してブロックを評価します。
+
+データソースは読み込み用にオープンされていなければなりません。
+

@@ -1,0 +1,21 @@
+kind=defined
+names=change_privilege
+visibility=public
+
+--- change_privilege(id)    -> Integer
+
+実ユーザ ID・実効ユーザ ID・保存ユーザ ID のすべてを指定された id に変更します。
+成功したら id を返します。主に root 権限を完全に放棄するために使います。
+
+利用できるかはプラットフォームに依存します。
+
+@param id ユーザ ID を整数で指定します。
+
+@raise ArgumentError 変更できないユーザ ID があった場合に発生します。例外の発生時にこのメソッドを呼び出す前の各ユーザ ID の値が保存されているかどうかは保証されません。
+
+@raise NotImplementedError メソッドが現在のプラットフォームで実装されていない場合に発生します。
+
+   [Process.uid, Process.euid]          #=> [0, 0]
+   Process::UID.change_privilege(33)    #=> 33
+   [Process.uid, Process.euid]          #=> [33, 33]
+

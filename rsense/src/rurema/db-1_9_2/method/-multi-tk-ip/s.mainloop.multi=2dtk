@@ -1,0 +1,6 @@
+kind=defined
+names=mainloop
+visibility=public
+
+--- mainloop(check_root = true)
+

@@ -1,0 +1,8 @@
+kind=defined
+names=noop
+visibility=public
+
+--- noop
+
+Sends a NOOP command to the server. It does nothing.
+

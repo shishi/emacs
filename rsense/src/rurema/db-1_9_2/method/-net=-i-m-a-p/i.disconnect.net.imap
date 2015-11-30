@@ -1,0 +1,8 @@
+kind=defined
+names=disconnect
+visibility=public
+
+--- disconnect
+
+Disconnects from the server.
+

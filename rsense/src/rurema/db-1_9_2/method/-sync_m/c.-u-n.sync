@@ -1,0 +1,7 @@
+kind=defined
+names=UN
+visibility=public
+
+--- UN
+ロックされていない状態を表す定数です。
+

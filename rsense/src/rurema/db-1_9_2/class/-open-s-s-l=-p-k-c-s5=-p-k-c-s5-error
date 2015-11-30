@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=openssl
+extended=
+included=
+
+OpenSSL PKCS#5 関連のエラーが起きた場合に発生する例外

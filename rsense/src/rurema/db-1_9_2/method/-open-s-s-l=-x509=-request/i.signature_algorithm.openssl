@@ -1,0 +1,8 @@
+kind=defined
+names=signature_algorithm
+visibility=public
+
+--- signature_algorithm -> String
+証明書署名要求の署名に使われているアルゴリズム名を文字列で返します。
+
+

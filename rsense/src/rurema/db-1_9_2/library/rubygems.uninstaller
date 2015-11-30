@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=rubygems.remote_fetcher,rubygems.requirement,rubygems.specification,rubygems.spec_fetcher,rubygems.doc_manager,rubygems.exceptions,rubygems.builder,rubygems.source_index,rubygems.source_info_cache_entry,rubygems.digest.sha2,rubygems.dependency_list,rubygems.defaults.operating_system,rubygems.gem_path_searcher,rubygems.platform,rubygems.defaults,rubygems.dependency,rubygems.source_info_cache,rubygems.user_interaction,rubygems,rubygems.version
+classes=Gem=Uninstaller
+is_sublibrary=true
+
+Gem のアンインストールを行うためのライブラリです。

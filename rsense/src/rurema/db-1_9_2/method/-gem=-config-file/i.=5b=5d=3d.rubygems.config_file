@@ -1,0 +1,12 @@
+kind=defined
+names=[]=
+visibility=public 
+
+--- []=(key, value)
+
+引数で与えられたキーに対応する設定情報を自身に保存します。
+
+@param key 設定情報をセットするために使用するキーを指定します。
+
+@param value 設定情報の値を指定します。
+

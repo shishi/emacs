@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=
+classes=Racc=Parser,Racc=ParseError
+is_sublibrary=false
+
+パーサジェネレータ Racc のランタイムライブラリです。

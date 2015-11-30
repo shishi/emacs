@@ -1,0 +1,8 @@
+kind=defined
+names=delete
+visibility=public
+
+--- delete(mailbox)
+
+Sends a DELETE command to remove the mailbox.
+

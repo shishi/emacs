@@ -1,0 +1,21 @@
+kind=defined
+names=activate
+visibility=public
+
+--- activate(y)
+
+((|y|))で指定した((*位置*))の要素をアクティブにします。そのリスト
+ボックスに((<入力フォーカス>))があれば、アクティブな行には下線が引
+かれます。
+
+     require "tk"
+     TkListbox.new {
+       insert 'end', "foo"
+       insert 'end', "bar"
+       insert 'end', "baz"
+       activate 1
+       #focus
+       pack
+     }
+     Tk.mainloop
+

@@ -1,0 +1,27 @@
+kind=defined
+names=userinfo=
+visibility=public
+
+--- userinfo=(s)
+
+自身の userinfo を設定します。
+
+@param s 自身の userinfo を "username" か "username:password" という形式の文字列、あるいは
+         [username, password] という形式の文字列の配列で指定します。
+
+@raise URI::InvalidComponentError 不正な引数 s に対して発生します。
+
+@raise URI::InvalidURIError userinfo と registry を同時に設定した場合に発生します。
+
+例:
+  require 'uri'
+  u = URI.parse('http://example.com/')
+  u.userinfo = 'hoge-san:jfae82kj'
+  p u.to_s                             #=> "http://hoge-san:jfae82kj@example.com/"
+  
+  u.userinfo = 'oreore'
+  p u.to_s                             #=> "http://oreore:jfae82kj@example.com/"
+
+  u.userinfo = ['you', 'akakfd']
+  p u.to_s                             #=> "http://you:akakfd@example.com/"
+

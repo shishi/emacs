@@ -1,0 +1,13 @@
+kind=defined
+names=bitmap
+visibility=public
+
+--- bitmap -> String
+そのホストで利用可能なサービスのビットマップを返します。
+
+例えば [[m:Resolv::DNS::Resource::IN::WKS#protocol]] が 6 (TCP)
+の場合、26番目のビットはポート25のサービス(SMTP)に対応しています。
+このビットが立っているならば SMTP は利用可能であり、
+そうでなければ利用できません。
+
+

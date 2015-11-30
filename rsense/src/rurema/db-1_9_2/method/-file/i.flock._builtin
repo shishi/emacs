@@ -1,0 +1,102 @@
+kind=defined
+names=flock
+visibility=public
+
+--- flock(operation)    -> 0 | false
+
+ファイルをロックします。
+
+ロックを取得するまでブロックされます。
+ロックの取得に成功した場合は 0 を返します。
+File::LOCK_NB (ノンブロッキング) を指定すると、本来ならブロックされる場合に
+ブロックされずに false を返すようになります。
+
+@param operation ロックに対する操作の種類を示す定数を指定します。
+                 どのような定数が利用可能かは以下を参照して下さい。
+
+@raise IOError 自身が close されている場合に発生します。
+
+@raise Errno::EXXX operation に不正な整数を与えた場合などに発生します。
+
+引数 operation に有効な定数は以下の通りです。定数は [[c:File::Constants]] で定義されていますが、
+[[c:File]] クラスの親クラスの IO が [[c:File::Constants]] をインクルードしているので、
+これらの定数は File::LOCK_SH などとして参照可能です。
+
+: LOCK_SH
+ 共有ロック。複数のプロセスが同時にロックを共有できます。
+ システムによってはロック対象のファイルは読み込みモード
+ ("r", "r+" など)でオープンされている必要があります。そのよ
+ うなシステムでは読み込み可能でないファイルに対するロックは例外
+ [[c:Errno::EXXX]] が発生するかもしれません。
+: LOCK_EX
+ 排他ロック。同時にはただひとつのプロセスだけがロックを保持できます。
+ システムによってはロック対象のファイルは書き込みモード
+ ("w", "r+" など)でオープンされている必要があります。そのよ
+ うなシステムでは書き込み可能でないファイルに対するロックは例外
+ [[c:Errno::EXXX]] が発生するかもしれません。
+: LOCK_UN
+ アンロック。
+ この明示的なアンロック以外に、ファイルのcloseやRubyインタプリタの終了
+ (プロセスの終了)によっても自動的にロック状態は解除されます。
+: LOCK_NB
+ ノンブロックモード。
+ File::LOCK_SH | File::LOCK_NB のように他の指定と or することで指
+ 定します。この指定がない場合、ブロックされる条件での flock
+ の呼び出しはロックが解除されるまでブロックされます。
+
+File::LOCK_NB の指定がある場合、ブロックされる条件での
+flock は false を返します。
+
+「ブロックされる条件」とは以下のいずれかです。
+  * 他のプロセスが排他ロックをすでに行っている場合にロックを行う
+  * 他のプロセスがロックしている状態で排他ロックを行う
+
+例1:
+
+    # 書き込みロック(write lock)を使用してカウンタを更新。
+    # ロック前にファイルを切り詰めてしまうので、
+    # モードに"w"を使ってはいけません。
+    File.open("counter", File::RDWR|File::CREAT, 0644) {|f|
+      f.flock(File::LOCK_EX)
+      value = f.read.to_i + 1
+      f.rewind
+      f.write("#{value}\n")
+      f.flush
+      f.truncate(f.pos)
+    }
+
+    # 読み込みロック(read lock)を使用してカウンタを読み込み。
+    File.open("counter", "r") {|f|
+      f.flock(File::LOCK_SH)
+      p f.read
+    }
+
+例2:
+
+    f = File.open("/tmp/foo", "w")
+
+    f.flock(File::LOCK_EX)
+    puts "locked by process1"
+
+    fork {
+      f = File.open("/tmp/foo", "r")
+      f.flock(File::LOCK_SH)
+      puts "locked by process2"
+      sleep 5
+      puts "unlocked by process2"
+    }
+
+    sleep 5
+
+    f.flock(File::LOCK_UN)
+    puts "unlocked by process1"
+    sleep 1 # <- 子プロセスが確実に先にロックするための sleep
+    f.flock(File::LOCK_EX)
+    puts "re-locked by process1"
+
+    => locked by process1
+       unlocked by process1
+       locked by process2
+       unlocked by process2
+       re-locked by process1
+

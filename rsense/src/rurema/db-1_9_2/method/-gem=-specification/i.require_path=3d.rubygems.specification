@@ -1,0 +1,12 @@
+kind=defined
+names=require_path=
+visibility=public
+
+--- require_path=(path)
+
+[[m:Gem::Specification#require_paths=]] の単数バージョンです。
+
+@param path この Gem パッケージを使用した際に require するファイルが置かれているディレクトリを指定します。
+
+@see [[m:Gem::Specification#require_paths=]]
+

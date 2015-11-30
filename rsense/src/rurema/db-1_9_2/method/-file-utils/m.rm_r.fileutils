@@ -1,0 +1,25 @@
+kind=defined
+names=rm_r
+visibility=public
+
+--- rm_r(list, options = {}) -> ()
+
+ファイルまたはディレクトリ list を再帰的に消去します。
+
+@param list 削除する対象。一つの場合は文字列も指定可能です。
+            二つ以上指定する場合は配列で指定します。
+
+@param options :force, :noop, :verbose, :secure が指定できます。
+               [[ref:c:FileUtils#options]]
+
+==== 注意
+
+このメソッドにはローカル脆弱性が存在します。
+詳しくは [[m:FileUtils.#remove_entry_secure]] の項を参照してください。
+
+例:
+
+  FileUtils.rm_r(Dir.glob('/tmp/*'))
+
+@see [[m:FileUtils.#rm]], [[m:FileUtils.#remove_entry_secure]]
+

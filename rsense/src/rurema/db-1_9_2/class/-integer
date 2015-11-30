@@ -1,0 +1,10 @@
+superclass=Numeric
+type=class
+library=_builtin
+extended=
+included=
+
+整数の抽象クラス。サブクラスとして [[c:Fixnum]] と [[c:Bignum]] があり
+ます。この 2 種類の整数は値の大きさに応じてお互いに自動的に変換されま
+す。ビット操作において整数は無限の長さのビットストリングとみなすことが
+できます。

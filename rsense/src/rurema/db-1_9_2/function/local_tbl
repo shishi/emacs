@@ -1,0 +1,10 @@
+name=local_tbl
+private=true
+macro=false
+type=ID *
+filename=parse.y
+params=(void)
+
+
+ローカル変数テーブルスタックの先頭にあるテーブルを取得します。
+

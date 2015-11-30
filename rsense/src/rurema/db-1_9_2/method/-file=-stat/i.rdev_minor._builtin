@@ -1,0 +1,11 @@
+kind=defined
+names=rdev_minor
+visibility=public
+
+--- rdev_minor -> Integer
+rdev の minor 番号部を返します。
+
+  fs = File::Stat.new($0)
+  #例
+  p fs.rdev_minor #=> nil
+

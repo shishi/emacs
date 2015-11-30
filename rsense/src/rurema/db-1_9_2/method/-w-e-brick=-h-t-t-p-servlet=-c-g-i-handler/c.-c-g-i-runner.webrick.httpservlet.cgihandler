@@ -1,0 +1,7 @@
+kind=defined
+names=CGIRunner
+visibility=public
+
+--- CGIRunner -> String
+
+CGI を実行するためのコマンドを返します。

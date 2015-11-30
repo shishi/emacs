@@ -1,0 +1,7 @@
+superclass=Shell=BuiltInCommand
+type=class
+library=shell.builtin=2dcommand
+extended=
+included=
+
+何もしないコマンドです。

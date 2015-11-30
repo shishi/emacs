@@ -1,0 +1,7 @@
+superclass=StandardError
+type=class
+library=win32.registry
+extended=
+included=
+
+

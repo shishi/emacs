@@ -1,0 +1,3 @@
+#to_json	JSON::Generator::GeneratorMethods::String#to_json
+#to_json_raw	JSON::Generator::GeneratorMethods::String#to_json_raw
+#to_json_raw_object	JSON::Generator::GeneratorMethods::String#to_json_raw_object

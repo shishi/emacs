@@ -1,0 +1,8 @@
+kind=defined
+names=libs
+visibility=public 
+
+--- libs -> Array
+
+テスト実行前に [[m:$LOAD_PATH]] に追加するパスを返します。
+

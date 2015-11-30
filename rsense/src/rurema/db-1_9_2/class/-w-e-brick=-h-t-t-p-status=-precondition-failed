@@ -1,0 +1,7 @@
+superclass=WEBrick=HTTPStatus=ClientError
+type=class
+library=webrick.httpstatus
+extended=
+included=
+
+HTTP のステータスコード 412 Precondition Failed を表すクラスです。

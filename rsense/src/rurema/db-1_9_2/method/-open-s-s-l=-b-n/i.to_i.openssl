@@ -1,0 +1,10 @@
+kind=defined
+names=to_i,to_int
+visibility=public
+
+--- to_i -> Integer
+--- to_int -> Integer
+自身を Integer のインスタンスに変換します。
+
+@raise OpenSSL::BNError 変換に失敗した場合に発生します
+

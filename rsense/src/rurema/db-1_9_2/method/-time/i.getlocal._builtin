@@ -1,0 +1,16 @@
+kind=defined
+names=getlocal
+visibility=public
+
+--- getlocal     -> Time
+
+タイムゾーンを地方時に設定した Time オブジェクトを新しく生成
+して返します。
+
+  t = Time.gm(2000,1,1,20,15,1)   #=> Sat Jan 01 20:15:01 UTC 2000
+  t.gmt?                          #=> true
+  l = t.getlocal                  #=> Sat Jan 01 14:15:01 CST 2000
+  l.gmt?                          #=> false
+  t == l                          #=> true
+
+

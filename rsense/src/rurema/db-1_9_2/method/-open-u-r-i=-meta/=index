@@ -1,0 +1,7 @@
+#base_uri	OpenURI::Meta#base_uri
+#charset	OpenURI::Meta#charset
+#content_encoding	OpenURI::Meta#content_encoding
+#content_type	OpenURI::Meta#content_type
+#last_modified	OpenURI::Meta#last_modified
+#meta	OpenURI::Meta#meta
+#status	OpenURI::Meta#status

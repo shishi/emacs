@@ -1,0 +1,9 @@
+kind=defined
+names=new,open
+visibility=public
+
+--- open([socktype])
+--- new([socktype])
+
+新しい UDP ソケットを返します。
+

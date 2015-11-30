@@ -1,0 +1,37 @@
+methods=REXML=Encoding/i.decode_eucjp.rexml,REXML=Encoding/i.encode_eucjp.rexml,REXML=Encoding/c.EUCTOU8.rexml,REXML=Encoding/c.U8TOEUC.rexml,REXML=Encoding/i.decode.rexml,REXML=Encoding/i.encode.rexml,REXML=Encoding/i.decode_iconv.rexml,REXML=Encoding/i.encode_iconv.rexml,REXML=Encoding/i.decode_sjis.rexml,REXML=Encoding/i.encode_sjis.rexml,REXML=Encoding/c.SJISTOU8.rexml,REXML=Encoding/c.U8TOSJIS.rexml,REXML=Encoding/i.encode_unile.rexml,REXML=Encoding/i.decode_unile.rexml,REXML=Encoding/i.encode_ascii.rexml,REXML=Encoding/i.decode_ascii.rexml,REXML=Encoding/i.encode_utf16.rexml,REXML=Encoding/i.decode_utf16.rexml,REXML=Encoding/i.encode_utf8.rexml,REXML=Encoding/i.decode_utf8.rexml,Object/i.dclone.rexml,Symbol/i.dclone.rexml,Array/i.dclone.rexml
+sublibraries=
+requires=
+classes=REXML=AttlistDecl,REXML=Attribute,REXML=CData,REXML=Child,REXML=Comment,REXML=DocType,REXML=Declaration,REXML=ElementDecl,REXML=ExternalEntity,REXML=NotationDecl,REXML=Document,REXML=DTD=AttlistDecl,REXML=DTD=Parser,REXML=DTD=ElementDecl,REXML=DTD=EntityDecl,REXML=DTD=NotationDecl,REXML=Element,REXML=Elements,REXML=Attributes,REXML=Encoding,REXML=Entity,REXML=EntityConst,REXML=Functions,REXML=Instruction,REXML=Light=Node,REXML=Namespace,REXML=Node,REXML=Output,REXML=Parent,REXML=ParseException,REXML=Parsers=BaseParser,REXML=Parsers=LightParser,REXML=Parsers=PullParser,REXML=Parsers=PullEvent,REXML=Parsers=SAX2Parser,REXML=Parsers=StreamParser,REXML=Parsers=TreeParser,REXML=Parsers=UltraLightParser,REXML=Parsers=XPathParser,REXML=QuickPath,REXML,REXML=SAX2Listener,REXML=SourceFactory,REXML=Source,REXML=IOSource,REXML=StreamListener,REXML=SyncEnumerator,REXML=Text,REXML=Validation=RelaxNG,REXML=Validation=State,REXML=Validation=Sequence,REXML=Validation=Optional,REXML=Validation=ZeroOrMore,REXML=Validation=OneOrMore,REXML=Validation=Choice,REXML=Validation=Interleave,REXML=Validation=Ref,REXML=Validation=Validator,REXML=Validation=Event,REXML=Validation=ValidationException,REXML=XMLDecl,REXML=XMLTokens,REXML=XPath,REXML=XPathParser
+is_sublibrary=false
+
+Pure Ruby の XML パーサです。
+DOM スタイルと SAX スタイルの両方をカバーしています。
+
+  * DOMっぽいAPI
+    * rexml/document
+    * rexml/element
+    * rexml/attribute
+    * rexml/namespace
+    * rexml/text (おまけで rexml/cdata も？)
+    * rexml/instruction
+
+  * SAXっぽいAPI
+    * rexml/parsers/streamparser
+    * rexml/streamlistener
+
+    * rexml/parsers/sax2parser
+    * rexml/sax2listener
+
+=== リンク
+
+  * REXML Home
+    [[url:http://www.germane-software.com/software/rexml]]
+  * API リファレンス
+    [[url:http://www.germane-software.com/software/rexml_doc]]
+    日本語訳 [[url:http://pub.cozmixng.org/~kou/rexml-doc-ja/]]
+  * チュートリアル
+    [[url:http://www.germane-software.com/software/rexml/docs/tutorial.html]]
+    日本語訳 [[url:http://www.baykit.org/~makotos/cgi-bin/wiliki.cgi?REXML%A5%C1%A5%E5%A1%BC%A5%C8%A5%EA%A5%A2%A5%EB&l=jp]]
+  * 日本語
+    [[url:http:#/www.cozmixng.org/~kou/ruby/rexml/]]
+    [[url:http:#/www.cozmixng.org/~kou/ruby/rexml/reference]]

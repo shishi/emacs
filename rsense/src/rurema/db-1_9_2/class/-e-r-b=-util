@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=erb
+extended=
+included=
+
+eRubyスクリプトのためのユーティリティを提供するモジュールです。

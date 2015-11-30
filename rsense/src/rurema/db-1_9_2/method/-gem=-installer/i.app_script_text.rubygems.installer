@@ -1,0 +1,8 @@
+kind=defined
+names=app_script_text
+visibility=public 
+
+--- app_script_text -> String
+
+アプリケーションのための実行ファイルの雛形のテキストを返します。
+

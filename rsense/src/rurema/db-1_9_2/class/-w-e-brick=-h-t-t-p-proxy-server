@@ -1,0 +1,21 @@
+superclass=WEBrick=HTTPServer
+type=class
+library=webrick.httpproxy
+extended=
+included=
+
+プロクシの機能を提供するクラスです。CONNECT メソッドにも対応しています。
+
+ * [[url:http://jp.rubyist.net/magazine/?0002-WEBrickProxy]]
+
+以下は完全に動作するプロクシサーバの例です。
+ 
+ require 'webrick'
+ require 'webrick/httpproxy'
+ 
+ config = { :BindAddress => '127.0.0.1', :Port => 8080 }
+ s = WEBrick::HTTPProxyServer.new( config ) 
+ Signal.trap('INT') do
+   s.shutdown
+ end
+ s.start

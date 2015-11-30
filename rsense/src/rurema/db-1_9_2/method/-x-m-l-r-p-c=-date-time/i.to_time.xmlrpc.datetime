@@ -1,0 +1,11 @@
+kind=defined
+names=to_time
+visibility=public
+
+--- to_time
+
+Return a Time object of the date/time which self represents.
+If the (('year')) is below 1970, this method returns nil,
+because Time cannot handle years below 1970.
+The used timezone is GMT.
+

@@ -1,0 +1,7 @@
+kind=defined
+names=odd?
+visibility=public
+
+--- odd? -> bool
+自身が奇数である場合に真を返します。
+

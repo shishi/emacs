@@ -1,0 +1,11 @@
+kind=defined
+names=ignore_eof,ignore_eof=
+visibility=public
+
+--- ignore_eof
+--- ignore_eof=(bool)
+
+Ctrl-D が入力された時の動作を設定する.
+true の時は Ctrl-D を無視する.
+false の時は irb を終了する. 
+

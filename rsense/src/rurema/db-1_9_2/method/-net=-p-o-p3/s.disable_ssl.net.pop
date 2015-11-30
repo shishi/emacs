@@ -1,0 +1,11 @@
+kind=defined
+names=disable_ssl
+visibility=public
+
+--- disable_ssl -> ()
+新しく生成する [[c:Net::POP3]] オブジェクトが
+SSL を利用しないように設定します。
+
+@see [[m:Net::POP3.enable_ssl]], [[m:Net::POP3.use_ssl?]]
+
+

@@ -1,0 +1,9 @@
+kind=defined
+names=value
+visibility=public
+
+--- value
+
+値を返します。selfがTclの配列ならば(Tclの配列は連想配列な
+ので) [[c:Hash]]として返します。それ以外では常に文字列を返します。
+

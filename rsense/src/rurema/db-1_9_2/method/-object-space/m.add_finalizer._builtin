@@ -1,0 +1,18 @@
+kind=defined
+names=add_finalizer
+visibility=public
+
+--- add_finalizer(proc)    -> Proc
+
+このメソッドは obsolete です。代わりに
+[[m:ObjectSpace.#define_finalizer]] を使用してください。
+
+proc をファイナライザとして設定します。
+proc を返します。
+
+[[m:ObjectSpace.#call_finalizer]] で指定したオブジェクトが解放され
+る時、そのオブジェクトの ID(c.f [[m:Object#__id__]])を引数に
+ファイナライザが評価されます。
+
+@param proc ファイナライザとしたい Proc オブジェクトを指定します。
+

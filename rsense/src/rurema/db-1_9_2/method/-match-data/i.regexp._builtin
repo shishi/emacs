@@ -1,0 +1,10 @@
+kind=defined
+names=regexp
+visibility=public
+
+--- regexp -> Regexp
+自身の元になった正規表現オブジェクトを返します。
+
+    m = /a.*b/.match("abc")
+    m.regexp #=> /a.*b/
+

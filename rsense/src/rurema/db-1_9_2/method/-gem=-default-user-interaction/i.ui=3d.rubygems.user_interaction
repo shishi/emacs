@@ -1,0 +1,12 @@
+kind=defined
+names=ui=
+visibility=public 
+
+--- ui=(new_ui)
+
+デフォルトの UI を新しくセットします。
+
+@param new_ui 新しい UI を指定します。
+
+@see [[m:Gem::DefaultUserInteraction.#ui=]]
+

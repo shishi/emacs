@@ -1,0 +1,9 @@
+kind=defined
+names=NOVERIFY
+visibility=public
+
+--- NOVERIFY -> Integer
+署名検証時に署名者の証明書の検証を行いません。
+
+[[m:OpenSSL::PKCS7#verify]] で利用可能なフラグです。
+

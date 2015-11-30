@@ -1,0 +1,14 @@
+kind=defined
+names=sync
+visibility=public
+
+--- sync(string) -> bool
+
+string を入力バッファの末尾に追加し、次の full flush
+point まで読み飛ばします。入力バッファ内に full flush point
+が存在しない場合は、入力バッファを空にし false を返します。
+入力バッファ内に full flush point が見つかった場合は
+true を返し、残りのデータは入力バッファ内に保持されます。
+
+@param string 入力バッファの末尾に追加する文字列を指定します。
+

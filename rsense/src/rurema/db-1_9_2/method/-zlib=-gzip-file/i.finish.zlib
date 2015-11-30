@@ -1,0 +1,10 @@
+kind=defined
+names=finish
+visibility=public
+
+--- finish -> IO
+
+GzipFile オブジェクトをクローズします。[[m:Zlib::GzipFile#close]]と違い、
+このメソッドは関連付けられている IO オブジェクトの close メソッドを
+呼び出しません。関連付けられている IO オブジェクトを返します。
+

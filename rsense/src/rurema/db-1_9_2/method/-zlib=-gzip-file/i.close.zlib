@@ -1,0 +1,10 @@
+kind=defined
+names=close
+visibility=public
+
+--- close -> IO
+
+GzipFile オブジェクトをクローズします。このメソッドは
+関連付けられている IO オブジェクトの close メソッドを呼び出します。
+関連付けられている IO オブジェクトを返します。
+

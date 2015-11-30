@@ -1,0 +1,50 @@
+kind=defined
+names=each_strongly_connected_component_from
+visibility=public
+
+--- each_strongly_connected_component_from(node) {|nodes| ...} -> ()
+
+node から到達可能な強連結成分についてのイテレータです。
+
+返す値は規定されていません。
+
+each_strongly_connected_component_from は
+tsort_each_node を呼びません。
+
+@param node ノードを指定します。
+
+  #例 到達可能なノードを表示する
+  require 'tsort'
+
+  class Hash
+    include TSort
+    alias tsort_each_node each_key
+    def tsort_each_child(node, &block)
+      fetch(node).each(&block)
+    end
+  end
+
+  non_sort = {1=>[2], 2=>[3, 4], 3=>[2], 4=>[]}
+
+  non_sort.each_strongly_connected_component{|nodes|
+    p nodes
+    nodes.each {|node|
+      non_sort.each_strongly_connected_component_from(node){|ns|
+        printf("%s -> %s\n", node, ns.join(","))
+      }
+    }
+  }
+
+  #出力
+  #=> [4]
+  #=> 4 -> 4
+  #=> [2, 3]
+  #=> 2 -> 4
+  #=> 2 -> 2,3
+  #=> 3 -> 4
+  #=> 3 -> 3,2
+  #=> [1]
+  #=> 1 -> 4
+  #=> 1 -> 2,3
+  #=> 1 -> 1
+

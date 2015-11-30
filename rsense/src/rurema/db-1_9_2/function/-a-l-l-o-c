@@ -1,0 +1,10 @@
+name=ALLOC
+private=false
+macro=true
+type=type*
+filename=ruby.h
+params=(type)
+
+
+type 型のメモリを割り当てる。
+

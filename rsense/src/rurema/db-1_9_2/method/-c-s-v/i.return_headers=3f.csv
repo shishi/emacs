@@ -1,0 +1,11 @@
+kind=defined
+names=return_headers?
+visibility=public
+
+--- return_headers? -> bool
+
+ヘッダを返す場合は、真を返します。
+そうでない場合は、偽を返します。
+
+@see [[m:CSV.new]]
+

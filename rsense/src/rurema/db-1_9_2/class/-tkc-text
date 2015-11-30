@@ -1,0 +1,7 @@
+superclass=TkcItem
+type=class
+library=tk.canvas
+extended=
+included=
+
+

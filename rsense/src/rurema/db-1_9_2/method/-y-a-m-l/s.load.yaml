@@ -1,0 +1,27 @@
+kind=defined
+names=load
+visibility=public
+
+--- load(io)
+--- load(str)
+
+YAML フォーマットの文書を読み込み Ruby のオブジェクトを生成して返します。
+引数として IO オブジェクトと文字列を受け付けます。
+io や 文字列が複数の YAML ドキュメントを含んでいても、最初のものしか
+Ruby のオブジェクトに変換しません。
+
+@param io YAMLフォーマットの文書の読み込み先のIOオブジェクト
+@param str YAMLフォーマットの文書の読み込み先の文字列
+
+
+  $ ruby-1.8 -ryaml -e '
+  p YAML.load(<<HERE)
+  - apple
+  - banana
+  - carrot
+  ---
+  foo: bar
+  HERE
+  '
+  ["apple", "banana", "carrot"]
+

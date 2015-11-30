@@ -1,0 +1,16 @@
+kind=defined
+names=realpath
+visibility=public
+
+--- realpath(pathname, basedir = nil) -> String
+
+与えられた pathname に対応する絶対パスを返します。
+
+pathname の全てのコンポーネントは存在しなければなりません。
+
+@param pathname ファイル名を指定します。
+
+@param basedir ベースディレクトリを指定します。省略するとカレントティレクトリを使用します。
+
+@raise Errno::ENOENT ファイルが存在しない場合に発生します。
+

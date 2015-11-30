@@ -1,0 +1,8 @@
+kind=defined
+names=FATAL
+visibility=public
+
+--- FATAL
+
+ログレベルを表す定数です。重要度は1番です。
+

@@ -1,0 +1,7 @@
+superclass=Digest=Class
+type=class
+library=digest.sha2
+extended=
+included=
+
+

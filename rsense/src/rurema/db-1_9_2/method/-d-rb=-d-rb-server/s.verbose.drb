@@ -1,0 +1,10 @@
+kind=defined
+names=verbose,verbose=
+visibility=public
+
+--- verbose
+--- verbose= 
+Get the default value of the :verbose option. 
+See new(). The initial default value is false.
+
+

@@ -1,0 +1,14 @@
+kind=defined
+names=valid_commercial?
+visibility=public
+
+--- valid_commercial? (cwyear, cweek, cwday, start = Date::GREGORIAN) -> bool
+正しい暦週日付であれば真、そうでないなら偽を返します。
+
+[[m:Date.jd]]、および [[m:Date.commercial]] も参照してください。
+
+@param cwyear 年
+@param cweek 週
+@param cwday 週の日 (曜日)
+@param start グレゴリオ暦をつかい始めた日をあらわすユリウス日
+

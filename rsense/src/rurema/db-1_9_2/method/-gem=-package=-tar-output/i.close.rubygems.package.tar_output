@@ -1,0 +1,8 @@
+kind=defined
+names=close
+visibility=public 
+
+--- close
+
+自身に関連付けられた IO を close します。
+

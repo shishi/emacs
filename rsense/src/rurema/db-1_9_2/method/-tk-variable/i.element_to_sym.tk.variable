@@ -1,0 +1,7 @@
+kind=defined
+names=element_to_sym
+visibility=public
+
+--- element_to_sym(*idxs)
+
+

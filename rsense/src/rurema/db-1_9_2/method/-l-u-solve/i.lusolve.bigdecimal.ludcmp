@@ -1,0 +1,7 @@
+kind=defined
+names=lusolve
+visibility=public
+
+--- lusolve(a, b, ps, zero = 0.0)
+
+

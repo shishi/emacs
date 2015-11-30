@@ -1,0 +1,21 @@
+kind=defined
+names=error_depth
+visibility=public
+
+--- error_depth -> Integer
+エラーが起きた場所の深さを返します。
+
+検証対象の証明書は深さ0、その証明書を発行した CA の証明書は
+深さ1、その CA の証明証を発行した上位の CA の証明書は深さ2、…
+と定義されいてます。
+
+[[m:OpenSSL::X509::StoreContext#verify]] を呼び出したあと、
+このメソッドを呼ぶと検証でエラーが起きた場所の深さを返します。
+
+証明書チェインの各証明書を検証した
+コールバック([[m:OpenSSL::X509::Store#verify_callback=]])が検証時に
+呼びだされ、StoreContext オブジェクトが渡されますが、そのオブジェクトに
+対しこのメソッドを呼びだすと、そこで検証された証明書の
+深さが得られます。
+
+

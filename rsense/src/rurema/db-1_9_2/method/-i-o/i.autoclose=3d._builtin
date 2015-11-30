@@ -1,0 +1,17 @@
+kind=defined
+names=autoclose=
+visibility=public
+
+--- autoclose=(bool)
+
+auto-close フラグを設定します。
+
+   f = open("/dev/null")
+   IO.for_fd(f.fileno)
+   # ...
+   f.gets # may cause IOError
+
+   f = open("/dev/null")
+   IO.for_fd(f.fileno).autoclose = true
+   # ...
+   f.gets # won't cause IOError

@@ -1,0 +1,9 @@
+kind=defined
+names=fixed_encoding?
+visibility=public
+
+--- fixed_encoding? -> bool
+
+正規表現が任意の ASCII 互換エンコーディングとマッチ可能な時に false を返します。
+
+

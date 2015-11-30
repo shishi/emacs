@@ -1,0 +1,10 @@
+kind=defined
+names=pass
+visibility=public 
+
+--- pass(message = nil) -> true
+
+アサーション数をカウントするために使用します。
+
+@param message 無視されます。
+

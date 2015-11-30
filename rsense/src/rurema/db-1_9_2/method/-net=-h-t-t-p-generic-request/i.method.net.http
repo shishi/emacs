@@ -1,0 +1,7 @@
+kind=defined
+names=method
+visibility=public
+
+--- method -> String
+リクエストの HTTP メソッドを文字列で返します。
+

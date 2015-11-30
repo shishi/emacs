@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=rubygems.local_remote_options
+extended=
+included=
+
+[[c:Gem::Command]] で使用する --local, --remote オプションのためのモジュールです。

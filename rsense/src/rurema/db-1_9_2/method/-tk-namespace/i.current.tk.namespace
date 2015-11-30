@@ -1,0 +1,7 @@
+kind=defined
+names=current,current_namespace
+visibility=public
+
+--- current_namespace
+--- current
+

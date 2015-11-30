@@ -1,0 +1,20 @@
+kind=defined
+names=asciicompat_encoding
+visibility=public
+
+--- asciicompat_encoding(string) -> Encoding | nil
+--- asciicompat_encoding(encoding) -> Encoding | nil
+同じ文字集合を持つ ASCII 互換エンコーディングを返します。
+
+@param string エンコーディング名
+@param encoding エンコーディングオブジェクト
+@return ASCII 互換エンコーディングのオブジェクトか nil
+
+引数とエンコーディングと同じ文字集合を持つ ASCII 互換エンコーディングを返します。引数と戻り値、2 つのエンコーディング間では変換しても未定義文字の例外は発生しません。
+引数が ASCII 互換エンコーディングである場合や、エンコーディングでない場合は nil を返します。
+
+  Encoding::Converter.asciicompat_encoding("ISO-2022-JP") #=> #<Encoding:stateless-ISO-2022-JP>
+  Encoding::Converter.asciicompat_encoding("UTF-16BE") #=> #<Encoding:UTF-8>
+  Encoding::Converter.asciicompat_encoding("UTF-8") #=> nil
+
+

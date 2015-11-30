@@ -1,0 +1,7 @@
+kind=defined
+names=port
+visibility=public
+
+--- port -> Integer
+対象のサービスの対象のホストにおけるポート番号を返します。
+

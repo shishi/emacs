@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=rubygems.remote_fetcher,rubygems.requirement,rubygems.specification,rubygems.spec_fetcher,rubygems.exceptions,rubygems.builder,rubygems.source_index,rubygems.source_info_cache_entry,rubygems.digest.sha2,rubygems.defaults.operating_system,rubygems.gem_path_searcher,rubygems.platform,rubygems.defaults,rubygems.dependency,rubygems.source_info_cache,rubygems.user_interaction,rubygems,rubygems.version
+classes=Gem=GemPathSearcher
+is_sublibrary=true
+
+Gem パッケージに含まれているファイルのうちロード可能なものを検索するためのライブラリです。

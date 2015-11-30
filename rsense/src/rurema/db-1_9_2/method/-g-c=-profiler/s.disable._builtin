@@ -1,0 +1,17 @@
+kind=defined
+names=disable
+visibility=public
+
+--- disable -> nil
+
+GC のプロファイラを停止します。
+
+例:
+  GC::Profiler.disable
+  GC::Profiler.enabled? #=> false
+
+このメソッドでは、蓄積したプロファイル情報は破棄しません。
+破棄したい場合は [[m:GC::Profiler.clear]] を呼び出してください。
+
+@see [[m:GC::Profiler.enable]], [[m:GC::Profiler.enabled?]]
+

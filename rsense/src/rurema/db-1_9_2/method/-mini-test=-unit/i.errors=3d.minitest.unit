@@ -1,0 +1,10 @@
+kind=defined
+names=errors=
+visibility=public 
+
+--- errors=(count)
+
+エラー数をセットします。
+
+@param count 件数を指定します。
+

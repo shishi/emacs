@@ -1,0 +1,7 @@
+superclass=StandardError
+type=class
+library=sdbm
+extended=
+included=
+
+SDBM 内部で使用する例外クラスです。

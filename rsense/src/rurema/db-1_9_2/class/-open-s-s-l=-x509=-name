@@ -1,0 +1,10 @@
+superclass=Object
+type=class
+library=openssl
+extended=
+included=
+
+X.500の識別名(DN, Distinguished Name)を表わすクラス。
+
+eql? と hash が定義されているため、[[c:Hash]] のキーとして
+利用できます。

@@ -1,0 +1,16 @@
+kind=added
+names=install
+visibility=private 
+
+--- install -> ()
+ファイルをコピーし、その属性を設定します。
+
+
+  ruby -run -e install -- [OPTION] SOURCE DEST
+
+  -p          ファイルのアクセス時刻と修正時刻を保持します。
+  -m          chmod と同じようにファイルのパーミッションを設定します。
+  -v          詳細表示
+
+@see [[man:install(1)]]
+

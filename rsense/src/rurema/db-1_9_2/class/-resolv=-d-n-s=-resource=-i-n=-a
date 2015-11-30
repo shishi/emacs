@@ -1,0 +1,10 @@
+superclass=Resolv=DNS=Resource
+type=class
+library=resolv
+extended=
+included=
+
+DNS リソースのクラス IN、タイプ A に対応する
+クラスです。
+
+IPv4アドレスリソースを表します。

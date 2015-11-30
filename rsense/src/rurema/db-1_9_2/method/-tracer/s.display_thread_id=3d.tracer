@@ -1,0 +1,10 @@
+kind=defined
+names=display_thread_id=
+visibility=public
+
+--- display_thread_id=(flag)
+
+スレッド ID を表示するかどうかを設定します。
+
+@param flag スレッド ID を表示するならば、真を指定します。
+

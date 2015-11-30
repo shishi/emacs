@@ -1,0 +1,13 @@
+kind=defined
+names=valid_ordinal?
+visibility=public
+
+--- valid_ordinal? (year, yday, start = Date::GREGORIAN) -> bool
+正しい年間通算日 (年日付) であれば真、そうでないなら偽を返します。
+
+[[m:Date.jd]]、および [[m:Date.ordinal]] も参照してください。
+
+@param year 年
+@param yday 年の日
+@param start グレゴリオ暦をつかい始めた日をあらわすユリウス日
+

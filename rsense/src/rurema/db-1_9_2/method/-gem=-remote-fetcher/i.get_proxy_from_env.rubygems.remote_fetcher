@@ -1,0 +1,17 @@
+kind=defined
+names=get_proxy_from_env
+visibility=public
+
+--- get_proxy_from_env -> URI | nil
+
+環境変数にセットされている HTTP proxy の情報を取得して返します。
+
+ここでチェックしている環境変数は以下の通りです。
+
+ * http_proxy
+ * http_proxy_user
+ * http_proxy_pass
+ * HTTP_PROXY
+ * HTTP_PROXY_USER
+ * HTTP_PROXY_PASS
+

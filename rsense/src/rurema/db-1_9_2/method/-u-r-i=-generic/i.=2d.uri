@@ -1,0 +1,16 @@
+kind=defined
+names=-,route_from
+visibility=public
+
+--- route_from(src)    -> URI::Generic
+--- -(src)             -> URI::Generic
+
+与えられた URI を表す src からの相対パスを返します。
+
+@param src 自身の相対パスを算出するための、ルートとなる Absolute URI を与えます。
+
+例:
+  require 'uri'
+  p URI.parse('http://www.ruby-lang.org/en/raa.html') - 'http://www.ruby-lang.org/'
+  #=> #<URI::Generic:0x20100256 URL:en/raa.html>
+

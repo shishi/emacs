@@ -1,0 +1,5 @@
+#_create_menu	TkMenuSpec#_create_menu
+#_create_menu_for_menubar	TkMenuSpec#_create_menu_for_menubar
+#_create_menubutton	TkMenuSpec#_create_menubutton
+#_get_cascade_menus	TkMenuSpec#_get_cascade_menus
+#_use_menubar?	TkMenuSpec#_use_menubar?

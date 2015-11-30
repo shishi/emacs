@@ -1,0 +1,13 @@
+kind=defined
+names=use_default_colors
+visibility=public
+
+--- use_default_colors -> nil
+
+前景色と背景色を端末のデフォルト値 (-1) に設定します。
+
+@raise  NotImplementedError サポートしていない環境で発生します。
+
+@see [[man:default_colors(3X)]]
+
+

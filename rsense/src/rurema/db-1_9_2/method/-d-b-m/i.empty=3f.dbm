@@ -1,0 +1,8 @@
+kind=defined
+names=empty?
+visibility=public
+
+--- empty?() -> bool
+
+データベースが空の時、真を返します。
+

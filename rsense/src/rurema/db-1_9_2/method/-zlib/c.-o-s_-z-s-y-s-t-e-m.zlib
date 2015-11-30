@@ -1,0 +1,8 @@
+kind=defined
+names=OS_ZSYSTEM
+visibility=public
+
+--- OS_ZSYSTEM -> Fixnum
+
+OS の種類を表す定数です。
+

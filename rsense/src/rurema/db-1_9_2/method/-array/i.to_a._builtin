@@ -1,0 +1,9 @@
+kind=defined
+names=to_a
+visibility=public
+
+--- to_a       -> Array
+
+self を返します。ただし、Array のサブクラスのインスタンスに対して呼ばれた時は、
+自身を Array に変換したものを返します。
+

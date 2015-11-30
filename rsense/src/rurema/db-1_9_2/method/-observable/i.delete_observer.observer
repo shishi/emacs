@@ -1,0 +1,14 @@
+kind=defined
+names=delete_observer
+visibility=public
+
+--- delete_observer(observer) -> object | nil
+
+オブザーバを削除します。
+
+指定されたオブジェクトがオブザーバとして登録されていた場合は、
+リストからオブジェクトを削除し、取り除かれたオブジェクトを返します。
+登録されていなかった場合は、nil を返します。
+
+@param observer 削除するオブザーバ
+

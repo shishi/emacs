@@ -1,0 +1,13 @@
+kind=defined
+names=connection_for
+visibility=public
+
+--- connection_for(uri) -> Net::HTTP
+
+HTTP コネクションを生成して返します。
+
+既に接続している URI であれば、生成済みのコネクションを返します。
+また、必要があればプロキシを使用します。
+
+@param uri 接続先の URI を指定します。
+

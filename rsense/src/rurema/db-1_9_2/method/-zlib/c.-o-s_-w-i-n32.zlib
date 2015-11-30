@@ -1,0 +1,8 @@
+kind=defined
+names=OS_WIN32
+visibility=public
+
+--- OS_WIN32 -> Fixnum
+
+OS の種類を表す定数です。
+

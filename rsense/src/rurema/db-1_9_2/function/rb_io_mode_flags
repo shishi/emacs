@@ -1,0 +1,20 @@
+name=rb_io_mode_flags
+private=false
+macro=false
+type=int
+filename=io.c
+params=(const char *mode)
+
+
+[[man:fopen(3)]] のようなモード指定modeをruby内部のモードフラグに
+変換します。
+
+modeは、[rwa][b][+] という文字列です (例: "rb+").
+戻り値は、
+FMODE_READABLE,
+FMODE_WRITABLE,
+FMODE_BINMODE,
+FMODE_READWRITE
+の論理和です。FMODE_READWRITEは、FMODE_READABLEと
+FMODE_WRITEABLEの論理和です。
+

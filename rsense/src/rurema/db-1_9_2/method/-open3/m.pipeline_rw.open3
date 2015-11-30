@@ -1,0 +1,40 @@
+kind=defined
+names=pipeline_rw
+visibility=public
+
+--- pipeline_rw(*cmds) -> [IO, IO, [Thread]]
+--- pipeline_rw(*cmds) {|first_stdin, last_stdout, wait_thrs| ... } -> ()
+
+指定したコマンドのリストをパイプで繋いで順番に実行します。最初の
+コマンドの標準入力に書き込む事も最後のコマンドの標準出力を受けとる事も
+できます。
+
+@param cmds 実行するコマンドのリストを指定します。
+
+@return ブロックを指定した場合はブロックの最後に評価された値を返します。
+        ブロックを指定しなかった場合は最初に実行するコマンドの標準入力
+        と最後に実行するコマンドの標準出力、実行したプロセスを待つため
+        のスレッドの配列を配列で返します。
+
+例:
+
+  require "open3"
+  
+  Open3.pipeline_rw("sort", "cat -n") {|stdin, stdout, wait_thrs|
+    stdin.puts "foo"
+    stdin.puts "bar"
+    stdin.puts "baz"
+    
+    # sortコマンドにEOFを送る。
+    stdin.close
+    
+    # stdinに渡した文字列をsortコマンドが並べ替えたものに、catコマンド
+    # が行番号を付けた文字列が表示される。
+    p stdout.read   #=> "     1\tbar\n     2\tbaz\n     3\tfoo\n"
+  }
+
+[[m:Open3.#popen3]]と同様に引数に環境変数とオプションを指定してコマンド
+を実行する事ができます。
+
+@see [[m:Open3.#popen3]]
+

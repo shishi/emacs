@@ -1,0 +1,8 @@
+kind=defined
+names=autorun
+visibility=public
+
+--- autorun -> true
+
+プロセスの終了時にテストを実行するように登録します。
+

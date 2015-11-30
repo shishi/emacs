@@ -1,0 +1,12 @@
+kind=defined
+names=set_backtrace
+visibility=public
+
+--- set_backtrace(array) -> [String]
+
+自身に array で指定したバックトレースを設定します。
+
+@param array バックトレースを文字列の配列で指定します。
+
+@return array を返します。
+

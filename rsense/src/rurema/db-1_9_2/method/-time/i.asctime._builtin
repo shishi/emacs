@@ -1,0 +1,10 @@
+kind=defined
+names=asctime,ctime
+visibility=public
+
+--- asctime    -> String
+--- ctime      -> String
+
+時刻を [[man:asctime(3)]] の形式の文字列に変換します。た
+だし、末尾の改行文字 "\n" は含まれません。
+

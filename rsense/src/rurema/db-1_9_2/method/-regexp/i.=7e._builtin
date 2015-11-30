@@ -1,0 +1,40 @@
+kind=defined
+names=~
+visibility=public
+
+--- ~ -> Fixnum | nil
+
+変数 [[m:$_]] の値との間でのマッチをとります。ちょうど以下と同じ意
+味です。
+
+  self =~ $_
+
+使用例
+  $_ = "hogehoge"
+
+  if  /foo/
+    puts "match"
+  else
+    puts "no match"
+  end
+  #=> no match
+  # ただし、警告がでる。warning: regex literal in condition
+
+  reg = Regexp.compile("foo")
+
+  if ~ reg
+    puts "match" 
+  else
+    puts "no match" 
+  end
+  #=> no match 
+
+  if reg
+    puts "match" 
+  else
+    puts "no match"
+  end
+  #=> match
+  # reg は nil でも false でも無いので常にtrue
+
+

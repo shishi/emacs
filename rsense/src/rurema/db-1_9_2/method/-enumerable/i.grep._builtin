@@ -1,0 +1,20 @@
+kind=defined
+names=grep
+visibility=public
+
+--- grep(pattern)                -> [object]
+--- grep(pattern) {|item| ... }  -> [object]
+
+pattern === item が成立する要素を全て含んだ配列を返します。
+
+ブロックとともに呼び出された時には条件の成立した要素に対して
+それぞれブロックを評価し、その結果の配列を返します。
+マッチする要素がひとつもなかった場合は空の配列を返します。
+
+@param pattern 「===」メソッドを持つオブジェクトを指定します。
+
+例:
+    ['aa', 'bb', 'cc', 'dd', 'ee'].grep(/[bc]/)  # => ["bb", "cc"]
+
+  Array.instance_methods.grep(/gr/) # => [:grep, :group_by]
+

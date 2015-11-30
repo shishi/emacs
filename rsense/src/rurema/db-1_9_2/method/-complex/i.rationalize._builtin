@@ -1,0 +1,20 @@
+kind=defined
+names=rationalize,to_r
+visibility=public
+
+--- to_r             -> Rational
+--- rationalize      -> Rational
+--- rationalize(eps) -> Rational
+
+自身を [[c:Rational]] に変換します。
+
+@param eps 許容する誤差。常に無視されます。
+
+@raise RangeError 虚部が 0 ではない場合に発生します。
+
+例:
+
+  Complex(3).to_r    # => (3/1)
+  Complex(3, 2).to_r # => RangeError
+
+

@@ -1,0 +1,12 @@
+kind=defined
+names=sync_close=
+visibility=public
+
+--- sync_close=(bool)
+SSLSocket を close するときにラップしているソケットも close するかどうかを
+設定します。
+
+true でソケットも close するようになります。
+
+@param bool 設定する真偽値
+

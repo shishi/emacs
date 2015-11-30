@@ -1,0 +1,8 @@
+kind=defined
+names=normalize
+visibility=public 
+
+--- normalize -> ()
+
+内部で保持しているバージョン情報から末尾のゼロを削除します。
+

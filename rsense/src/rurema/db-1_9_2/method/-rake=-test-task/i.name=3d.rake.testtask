@@ -1,0 +1,10 @@
+kind=defined
+names=name=
+visibility=public 
+
+--- name=(str)
+
+テストタスクの名前をセットします。
+
+@param str テストタスクの名前を指定します。
+

@@ -1,0 +1,9 @@
+kind=defined
+names=NOCHAIN
+visibility=public
+
+--- NOCHAIN  -> Integer
+署名検証時に、メッセージに含まれる証明書を中間 CA として利用しません。
+
+[[m:OpenSSL::PKCS7#verify]] で利用可能なフラグです。
+

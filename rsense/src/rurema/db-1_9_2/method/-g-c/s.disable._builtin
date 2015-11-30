@@ -1,0 +1,13 @@
+kind=defined
+names=disable
+visibility=public
+
+--- disable -> bool
+
+ガーベージコレクトを禁止します。
+
+前回の禁止状態を返します(禁止されていたなら true, GC が有効であったなら、
+false)。
+
+@see [[m:GC.enable]]
+

@@ -1,0 +1,34 @@
+kind=defined
+names=tr
+visibility=public
+
+--- tr(pattern, replace) -> String
+
+pattern 文字列に含まれる文字を検索し、
+それを replace 文字列の対応する文字に置き換えます。
+
+pattern の形式は [[man:tr(1)]] と同じです。つまり、
+`a-c' は a から c を意味し、"^0-9" のように
+文字列の先頭が `^' の場合は指定文字以外が置換の対象になります。
+
+replace に対しても `-' による範囲指定が可能です。
+例えば [[m:String#upcase]] は tr を使って
+"foo".tr('a-z', 'A-Z') と書けます。
+
+`-' は文字列の両端にない場合にだけ範囲指定の意味になります。
+`^' も文字列の先頭にあるときにだけ否定の効果を発揮します。
+また、`-', `^', `\' はバックスラッシュ (`\') によりエスケープできます。
+
+replace の範囲が pattern の範囲よりも小さい場合は、
+replace の最後の文字が無限に続くものとして扱われます。
+
+@param pattern    置き換える文字のパターン
+@param replace    pattern で指定した文字を置き換える文字
+
+例:
+    p "foo".tr("f", "X")      # => "Xoo"
+    p "foo".tr('a-z', 'A-Z')  # => "FOO"
+    p "FOO".tr('A-Z', 'a-z')  # => "foo"
+
+@see [[m:String#tr_s]]
+

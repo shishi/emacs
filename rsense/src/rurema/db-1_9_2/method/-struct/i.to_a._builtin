@@ -1,0 +1,14 @@
+kind=defined
+names=to_a,values
+visibility=public
+
+--- values -> [object]
+--- to_a -> [object]
+(このメソッドは Struct の下位クラスにのみ定義されています)
+構造体のメンバの値を配列にいれて返します。
+
+例えば以下のようにして passwd のエントリを出力できます。
+
+  require 'etc'
+  print Etc.getpwuid.values.join(":"), "\n"
+

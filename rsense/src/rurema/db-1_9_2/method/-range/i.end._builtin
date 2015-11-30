@@ -1,0 +1,13 @@
+kind=defined
+names=end,last
+visibility=public
+
+--- end -> object
+--- last -> object
+
+終端を返します。範囲オブジェクトが終端を含むかどうかは関係ありませ
+ん。
+
+  p (1..5).end   # => 5
+  p (1...5).end  # => 5
+

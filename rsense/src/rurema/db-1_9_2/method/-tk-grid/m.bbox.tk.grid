@@ -1,0 +1,6 @@
+kind=defined
+names=bbox
+visibility=public
+
+--- bbox(master, *args)
+

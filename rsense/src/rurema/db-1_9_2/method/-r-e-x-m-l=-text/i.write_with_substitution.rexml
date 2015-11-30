@@ -1,0 +1,6 @@
+kind=defined
+names=write_with_substitution
+visibility=public
+
+--- write_with_substitution(out, input)
+

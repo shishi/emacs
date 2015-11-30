@@ -1,0 +1,11 @@
+superclass=Resolv=DNS=Resource=DomainName
+type=class
+library=resolv
+extended=
+included=
+
+DNS リソースの NS (正式な(authoritative)ネームサーバ) レコード
+を表す抽象クラスです。
+
+[[m:Resolv::DNS#getresource]] で NS レコードを得たい場合は
+[[c:Resolv::DNS::Resource::IN::NS]] を使うべきです。

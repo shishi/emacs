@@ -1,0 +1,9 @@
+kind=defined
+names=overlapping,set_to_overlapping
+visibility=public
+
+--- set_to_overlapping(x1, y1, x2, y2)
+--- overlapping(x1, y1, x2, y2)
+
+
+

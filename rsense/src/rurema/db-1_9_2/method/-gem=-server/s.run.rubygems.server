@@ -1,0 +1,13 @@
+kind=defined
+names=run
+visibility=public
+
+--- run(options) -> Gem::Server
+
+与えられたオプションを使用してサーバを起動します。
+
+@param options オプションを表すハッシュを指定します。含まれるキーは :gemdir, :port, :daemon です。
+
+@see [[m:Gem::Server.new]]
+
+

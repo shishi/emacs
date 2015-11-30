@@ -1,0 +1,8 @@
+kind=defined
+names=configure
+visibility=public
+
+--- configure(slot, value = TkComm::None)
+
+
+

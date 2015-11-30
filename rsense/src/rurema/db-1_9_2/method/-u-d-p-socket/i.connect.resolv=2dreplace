@@ -1,0 +1,12 @@
+kind=redefined
+names=connect
+visibility=public
+
+--- connect(host, port) -> Integer
+[[m:UDPSocket#connect]] のパラメータ host の名前解決に 
+[[lib:resolv]] ライブラリを使います。
+
+@param host connect するホスト名を文字列で指定します。
+@param port connect するポートを指定します。
+@raise SocketError 名前解決に失敗した場合に発生します。
+

@@ -1,0 +1,8 @@
+name=RMODULE
+private=false
+macro=true
+type=struct RClass *
+filename=ruby.h
+params=(VALUE obj)
+
+

@@ -1,0 +1,10 @@
+kind=defined
+names=sync_point?
+visibility=public
+
+--- sync_point? -> bool
+
+What is this?
+
+
+

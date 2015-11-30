@@ -1,0 +1,11 @@
+kind=defined
+names=private_methods
+visibility=public
+
+--- private_methods(include_inherited = true) -> [Symbol]
+
+そのオブジェクトが理解できる private メソッド名の一覧を返します。
+
+@param include_inherited 偽となる値を指定すると自身のクラスのスーパークラスで定義されたメソッドを除きます。
+@see [[m:Module#private_instance_methods]],[[m:Object#methods]],[[m:Object#singleton_methods]]
+

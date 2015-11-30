@@ -1,0 +1,7 @@
+superclass=RuntimeError
+type=class
+library=pty
+extended=
+included=
+
+子プロセスが終了したり停止した場合に発生する例外です。

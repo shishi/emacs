@@ -1,0 +1,9 @@
+kind=defined
+names=debug=
+visibility=public
+
+--- debug= -> bool
+
+委譲部分をバックトレースに含めるかどうかの状態を設定します。
+
+

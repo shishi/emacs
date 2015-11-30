@@ -1,0 +1,11 @@
+kind=defined
+names=<=>
+visibility=public
+
+--- <=>(other) -> -1 | 0 | 1 | nil
+
+self と other の時刻を比較します。self の方が大きい場合は 1 を、等しい場合は 0 を、
+小さい場合は -1 を返します。比較できない場合は、nil を返します。
+
+@param other 自身と比較したい時刻を Time オブジェクトで指定します。
+

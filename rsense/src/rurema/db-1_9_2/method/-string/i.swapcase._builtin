@@ -1,0 +1,15 @@
+kind=defined
+names=swapcase
+visibility=public
+
+--- swapcase -> String
+
+'A' から 'Z' までのアルファベット大文字を小文字に、
+'a' から 'z' までのアルファベット小文字を大文字に変更した文字列を返します。
+
+このメソッドはマルチバイト文字を認識しません。
+例:
+    p "ABCxyz".swapcase   # => "abcXYZ"
+    p "Access".swapcase   # => "aCCESS"
+@see [[m:String#upcase]], [[m:String#downcase]], [[m:String#capitalize]]
+

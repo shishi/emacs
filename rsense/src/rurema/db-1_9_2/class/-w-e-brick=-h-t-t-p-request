@@ -1,0 +1,10 @@
+superclass=Object
+type=class
+library=webrick.httprequest
+extended=
+included=
+
+HTTP リクエストのためのクラスです。
+
+通常 WEBrick::HTTPRequest オブジェクトはサーブレットの service メソッドや do_XXX メソッドの
+引数として与えられるものであり、ユーザが明示的に生成する必要はありません。

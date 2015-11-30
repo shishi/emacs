@@ -1,0 +1,7 @@
+kind=defined
+names=write
+visibility=public
+
+--- write(tuple, sec = nil)
+
+詳細は [[m:Rinda::TupleSpace#write]] 参照

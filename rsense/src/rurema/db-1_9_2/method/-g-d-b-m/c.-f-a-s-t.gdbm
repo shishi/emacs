@@ -1,0 +1,13 @@
+kind=defined
+names=FAST
+visibility=public
+
+--- FAST -> Fixnum
+
+[[m:GDBM.open]] の第3引数に指定します。
+
+書き込みの結果が、ディスク上のファイルにすぐに反映しなくなります。
+このモードのときに結果を明示的にファイルに反映させるには [[m:GDBM#sync]]
+メソッドを呼びます。libgdbm version 1.8.0 以降ではこのモードがデフォルト
+です。
+

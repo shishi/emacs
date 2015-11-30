@@ -1,0 +1,26 @@
+superclass=Integer
+type=class
+library=_builtin
+extended=
+included=
+
+[[c:Bignum]] 同様、整数のクラスです。
+演算の結果が Fixnum の範囲を越えた時には
+自動的に [[c:Bignum]] に拡張されます。
+
+マシンのポインタのサイズに収まる長さの固定長整数で、
+ほとんどのマシンでは 31 ビット幅です。
+
+
+=== 破壊的な変更
+
+Ruby の Fixnum クラスは immutable です。
+つまり、オブジェクト自体を破壊的に変更することはできません。
+[[c:Bignum]] も同様です。
+
+
+例:
+
+  p 100000.class             # => Fixnum
+  p 100000 * 100000          # => 100000000
+  p (100000 * 100000).class  # => Bignum

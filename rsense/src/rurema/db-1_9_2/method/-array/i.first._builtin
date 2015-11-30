@@ -1,0 +1,35 @@
+kind=defined
+names=first
+visibility=public
+
+--- first       -> object | nil
+
+配列の先頭の要素を返します。要素がなければ nil を返します。
+
+    p [0, 1, 2].first   #=> 0
+    p [].first          #=> nil
+
+@see [[m:Array#last]]
+
+--- first(n)    -> Array
+
+先頭の n 要素を配列で返します。n は 0 以上でなければなりません。
+
+@param n 取得したい要素の個数を整数で指定します。
+
+@raise ArgumentError n が負値の場合発生します。
+
+    ary =  [0, 1, 2]
+    p ary.first(0)
+    p ary.first(1)
+    p ary.first(2)
+    p ary.first(3)
+    p ary.first(4)
+    # => []
+         [0]
+         [0, 1]
+         [0, 1, 2]
+         [0, 1, 2]
+
+@see [[m:Array#last]]
+

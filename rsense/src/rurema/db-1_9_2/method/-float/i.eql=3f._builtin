@@ -1,0 +1,16 @@
+kind=defined
+names=eql?
+visibility=public
+
+--- eql?(other)   -> bool
+
+自身と other のクラスが等しくかつ == メソッドで比較して等しい場合に true を返します。
+そうでない場合に false を返します。
+
+@param other 自身と比較したい数値を指定します。
+
+例:
+
+  1.0.eql?(1)   #=> false
+  1.0.eql?(1.0) #=> true
+

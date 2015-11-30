@@ -1,0 +1,12 @@
+kind=defined
+names=accept_charset=
+visibility=public
+
+--- accept_charset=(charset)
+
+受けとることができるキャラクタセットを設定します。
+
+@param charset 文字列でキャラクタセットの名前を指定します。
+
+@see [[d:spec/m17n]]
+

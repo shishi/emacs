@@ -1,0 +1,14 @@
+methods=
+sublibraries=
+requires=
+classes=Forwardable,SingleForwardable
+is_sublibrary=false
+
+クラスやオブジェクトに、メソッドの委譲機能を追加するためのライブラリです。
+
+
+
+
+=== 参考
+
+  * Rubyist Magazine 0012 号 標準添付ライブラリ紹介【第 6 回】委譲 ([[url:http://jp.rubyist.net/magazine/?0012-BundledLibraries]])

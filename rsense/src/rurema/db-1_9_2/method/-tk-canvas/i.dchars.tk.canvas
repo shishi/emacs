@@ -1,0 +1,8 @@
+kind=defined
+names=dchars
+visibility=public
+
+--- dchars(tag, first, last = Tk::None)
+
+
+

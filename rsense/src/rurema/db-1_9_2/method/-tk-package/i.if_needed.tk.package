@@ -1,0 +1,6 @@
+kind=defined
+names=if_needed
+visibility=public
+
+--- if_needed(pkg, ver, *arg) { .... }
+

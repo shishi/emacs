@@ -1,0 +1,7 @@
+superclass=Net=IMAP=Error
+type=class
+library=net.imap
+extended=
+included=
+
+データフォーマットが正しくない場合に発生する例外のクラスです。

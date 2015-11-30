@@ -1,0 +1,12 @@
+kind=defined
+names=reverse
+visibility=public
+
+--- reverse -> String
+
+文字列をバイト単位で左右逆転した文字列を返します。
+
+例:
+    p "foobar".reverse   # => "raboof"
+    p "".reverse         # => ""
+

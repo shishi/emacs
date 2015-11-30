@@ -1,0 +1,8 @@
+kind=defined
+names=command_names
+visibility=public 
+
+--- command_names -> Array
+
+登録されているコマンド名の配列を返します。
+

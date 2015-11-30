@@ -1,0 +1,11 @@
+kind=defined
+names=RLIMIT_FSIZE
+visibility=public
+
+--- RLIMIT_FSIZE
+
+リソースの種類がプロセスが生成するファイルのサイズであることを示す定数です。
+
+[[m:Process.#getrlimit]]、[[m:Process.#setrlimit]] で使われます。
+システムによっては定義されていません。
+

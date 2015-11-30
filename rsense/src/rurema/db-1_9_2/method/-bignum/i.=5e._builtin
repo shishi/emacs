@@ -1,0 +1,12 @@
+kind=defined
+names=^
+visibility=public
+
+--- ^(other) -> Fixnum | Bignum
+ビット二項演算子。排他的論理和を計算します。
+
+@param other 数値
+
+  1 ^ 1 #=> 0
+  2 ^ 3 #=> 1
+

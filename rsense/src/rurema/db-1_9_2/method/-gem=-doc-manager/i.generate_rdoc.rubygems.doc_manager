@@ -1,0 +1,8 @@
+kind=defined
+names=generate_rdoc
+visibility=public 
+
+--- generate_rdoc
+
+自身にセットされている [[c:Gem::Specification]] の情報をもとに RDoc のドキュメントを生成します。
+

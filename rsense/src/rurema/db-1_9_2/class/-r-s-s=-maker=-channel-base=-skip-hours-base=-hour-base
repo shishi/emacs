@@ -1,0 +1,11 @@
+superclass=Object
+type=class
+library=rss
+extended=
+included=
+
+hourは
+maker.channel.skipHours.new_hourで作成されたオ
+ブジェクトとします．
+
+contentを指定する必要があります．

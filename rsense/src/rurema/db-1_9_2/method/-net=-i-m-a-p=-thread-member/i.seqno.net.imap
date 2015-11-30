@@ -1,0 +1,8 @@
+kind=defined
+names=seqno
+visibility=public
+
+--- seqno
+
+The sequence number of this message.
+

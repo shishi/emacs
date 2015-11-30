@@ -1,0 +1,7 @@
+kind=defined
+names=count,count=
+visibility=public
+
+--- count
+--- count=(value)
+

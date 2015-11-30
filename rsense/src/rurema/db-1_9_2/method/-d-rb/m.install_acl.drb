@@ -1,0 +1,10 @@
+kind=defined
+names=install_acl
+visibility=public
+
+--- install_acl(acl)
+
+Set the default acl.
+
+See [[m:DRb::DRbServer.default_acl]].
+

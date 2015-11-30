@@ -1,0 +1,12 @@
+kind=defined
+names=process_args
+visibility=public 
+
+--- process_args(args = []) -> Hash
+
+[[lib:optparse]] を使ってコマンドライン引数を解析した結果を返します。
+
+@param args コマンドライン引数を指定します。
+
+@see [[lib:optparse]]
+

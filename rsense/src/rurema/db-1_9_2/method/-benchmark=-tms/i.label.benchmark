@@ -1,0 +1,9 @@
+kind=defined
+names=label
+visibility=public
+
+--- label -> String
+
+ラベル。
+
+

@@ -1,0 +1,9 @@
+superclass=Object
+type=class
+library=webrick.server
+extended=
+included=
+
+サーバのタイプを表すクラスです。
+[[m:WEBrick::GenericServer.new]] の設定の :ServerType の値として指定した場合
+サーバは通常のプロセスとして動作します。

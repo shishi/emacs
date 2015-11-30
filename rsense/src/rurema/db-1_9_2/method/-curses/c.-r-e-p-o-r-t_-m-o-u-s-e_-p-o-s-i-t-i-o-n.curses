@@ -1,0 +1,10 @@
+kind=defined
+names=REPORT_MOUSE_POSITION
+visibility=public
+
+--- REPORT_MOUSE_POSITION -> Integer
+
+マウスの位置を取得するために使用するマスク用の定数です。
+
+@see [[m:Curses.getmouse]]
+

@@ -1,0 +1,22 @@
+kind=defined
+names=beginning_of_line?,bol?
+visibility=public
+
+--- beginning_of_line? -> bool
+--- bol? -> bool
+スキャンポインタが行頭を指しているなら true を、
+行頭以外を指しているなら false を返します。
+
+行頭の定義は、文字列先頭かまたは \n の直後を指していることです。
+文字列末尾は必ずしも行頭ではありません。
+
+使用例
+      s = StringScanner.new("test\nstring")
+      s.bol?        # => true
+      s.scan(/\w+/)
+      s.bol?        # => false
+      s.scan(/\n/)
+      s.bol?        # => true
+      s.scan(/\w+/)
+      s.bol?        # => false
+

@@ -1,0 +1,51 @@
+methods=
+sublibraries=
+requires=rubygems.require_paths_builder,rubygems.ext.ext_conf_builder,rubygems.package.tar_writer,rubygems.remote_fetcher,rubygems.requirement,rubygems.specification,rubygems.spec_fetcher,rubygems.validator,rubygems.local_remote_options,rubygems.package,rubygems.gem_openssl,rubygems.exceptions,rubygems.builder,rubygems.doc_manager,rubygems.package.tar_input,rubygems.source_index,rubygems.installer,rubygems.package.tar_header,rubygems.package.tar_reader,rubygems.source_info_cache_entry,rubygems.version_option,rubygems.digest.sha2,rubygems.dependency_list,rubygems.ext.configure_builder,rubygems.ext,rubygems.dependency_installer,rubygems.gem_path_searcher,rubygems.defaults.operating_system,rubygems.platform,rubygems.defaults,rubygems.digest.md5,rubygems.package.f_sync_dir,rubygems.package.tar_reader.entry,rubygems.ext.rake_builder,rubygems,rubygems.dependency,rubygems.source_info_cache,rubygems.user_interaction,rubygems.command,rubygems.install_update_options,rubygems.version,rubygems.format,rubygems.package.tar_output,rubygems.ext.builder,rubygems.security
+classes=Gem=Commands=InstallCommand
+is_sublibrary=true
+
+Gem パッケージをローカルリポジトリにインストールするためのライブラリです。
+
+  Usage: gem install GEMNAME [GEMNAME ...] [options] -- --build-flags [options]
+    Options:
+          --platform PLATFORM          指定されたプラットフォームの Gem パッケージをインストールします
+      -v, --version VERSION            指定されたバージョンの Gem パッケージをインストールします
+    Install/Update Options:
+      -i, --install-dir DIR            Gem パッケージのインストー先を指定します
+      -n, --bindir DIR                 Gem パッケージに含まれるバイナリファイルの配置先を指定します
+      -d, --[no-]rdoc                  インストール時に RDoc を生成します
+          --[no-]ri                    インストール時に RI ドキュメントを生成します
+      -E, --[no-]env-shebang           インストールするスクリプトの shebang line を書き換えます(/usr/bin/env)
+      -f, --[no-]force                 依存関係のチェックをバイパスして強制的にインストールします
+      -t, --[no-]test                  インストール時にユニットテストを実行します
+      -w, --[no-]wrappers              Use bin wrappers for executables
+                                       DOSHISH なプラットフォーム上では無効です
+      -P, --trust-policy POLICY        Specify gem trust policy
+          --ignore-dependencies        依存している Gem パッケージをインストールしません
+      -y, --include-dependencies       依存している Gem パッケージをインストールします
+          --[no-]format-executable     Make installed executable names match ruby.
+                                       If ruby is ruby18, foo_exec will be
+                                       foo_exec18
+    Local/Remote Options:
+      -l, --local                      操作をローカルに限定します
+      -r, --remote                     操作をリモートに限定します
+      -b, --both                       ローカルとリモートの両方の操作を許可します
+      -B, --bulk-threshold COUNT       Threshold for switching to bulk
+                                       synchronization (default 1000)
+          --source URL                 Gem パッケージのリモートリポジトリの URL を指定します
+          --[no-]http-proxy [URL]      リモートの操作に HTTP プロクシを使用します
+      -u, --[no-]update-sources        ローカルソースキャッシュを更新します
+    Common Options:
+      -h, --help                       このコマンドのヘルプを表示します
+      -V, --[no-]verbose               表示を詳細にします
+      -q, --quiet                      静かに実行します
+          --config-file FILE           指定された設定ファイルを使用します
+          --backtrace                  バックトレースを表示します
+          --debug                      Ruby 自体のデバッグオプションを有効にします
+    Arguments:
+      GEMNAME       インストールする Gem パッケージ名を指定します
+    Summary:
+      Gem パッケージをローカルにインストールします
+    Defaults:
+      --both --version '>= 0' --rdoc --ri --no-force
+      --no-test --install-dir /usr/lib/ruby/gems/1.8

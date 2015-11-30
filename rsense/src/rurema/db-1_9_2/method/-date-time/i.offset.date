@@ -1,0 +1,7 @@
+kind=defined
+names=offset
+visibility=public
+
+--- offset -> Rational
+時差を返します。
+

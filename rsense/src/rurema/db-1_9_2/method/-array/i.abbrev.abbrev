@@ -1,0 +1,25 @@
+kind=added
+names=abbrev
+visibility=public
+
+--- abbrev(pattern = nil) -> Hash
+
+self が文字列の配列の場合、self から一意に決まる短縮形を計算し、
+短縮形をキー、元の文字列を値とするハッシュを返します。
+
+引数に正規表現を指定すると、self のうちそのパターンにマッチしたものから短縮形を計算します。
+引数に文字列を指定すると、self のうちその文字列で始まるものから短縮形を計算します。
+
+[[m:Abbrev.#abbrev]](self, pattern) と同じです。
+
+@param pattern [[c:Regexp]] か [[c:String]] を指定します。
+
+
+  p %w[ruby rubyist].abbrev
+  #=> {"ruby"    => "ruby",
+  #    "rubyi"   => "rubyist",
+  #    "rubyis"  => "rubyist",
+  #    "rubyist" => "rubyist"}
+
+@see [[m:Abbrev.#abbrev]]
+

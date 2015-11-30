@@ -1,0 +1,9 @@
+kind=defined
+names=to_f
+visibility=public
+
+--- to_f
+
+[[c:Float]] オブジェクトに変換します。
+よりきめ細かい値が必要ならば [[m:BigDecimal#split]] メソッドを利用してください。 
+

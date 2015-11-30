@@ -1,0 +1,12 @@
+kind=defined
+names=-@
+visibility=public
+
+--- -@    -> Numeric
+
+単項演算子の - です。
+self の符号を反転させたものを返します。
+
+このメソッドは、二項演算子 - で 0 - self によって定義されています。
+
+

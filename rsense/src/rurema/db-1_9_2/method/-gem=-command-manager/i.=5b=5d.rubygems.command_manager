@@ -1,0 +1,10 @@
+kind=defined
+names=[]
+visibility=public 
+
+--- [](command_name) -> Gem::Command | nil
+
+引数で指定されたコマンド名に対応するクラスのインスタンスを返します。
+
+@param command_name コマンド名を文字列で指定します。
+

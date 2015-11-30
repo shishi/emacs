@@ -1,0 +1,30 @@
+kind=defined
+names=each_document,load_documents
+visibility=public
+
+--- each_document(io) {|obj| ...}
+--- load_documents(io) {|obj| ...}
+
+与えられた io から YAML フォーマットの文書をすべて順に読み込み
+Ruby のオブジェクトに変換し、
+生成したオブジェクトを引数としてブロックを評価していきます。
+
+@param io YAMLフォーマットの文書の読み込み先のIOオブジェクト
+
+  # sample.yml
+  - apple
+  - banana
+  - carrot
+  ---
+  foo: bar
+  
+  #!/usr/bin/env ruby
+  require "yaml"
+  File.open( 'sample.yml' ) do |io|
+    YAML.load_documents(io){|y|
+      p y
+    }
+  end
+  #=>   ["apple", "banana", "carrot"]
+  #=>   {"foo"=>"bar"}
+

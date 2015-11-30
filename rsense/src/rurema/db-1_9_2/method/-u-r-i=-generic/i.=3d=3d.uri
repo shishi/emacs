@@ -1,0 +1,17 @@
+kind=defined
+names===
+visibility=public
+
+--- ==(uri)    -> bool
+
+引数に指定した URI (文字列またはURIオブジェクト)との一致判定を行い
+ます。URI は正規化して比較されます。
+
+@param uri 比較したい URI を URI オブジェクトで指定します。
+
+例:
+  require 'uri'
+  u1 = URI.parse('http://example.com/?hoge')
+  u2 = URI.parse('http://Example.Com/?hoge')
+  p u1 == u2                                  #=> true
+

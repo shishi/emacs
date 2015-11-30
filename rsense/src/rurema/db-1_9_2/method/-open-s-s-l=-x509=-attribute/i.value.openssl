@@ -1,0 +1,10 @@
+kind=defined
+names=value
+visibility=public
+
+--- value -> OpenSSL::ASN1::ASN1Data
+attribute の値を [[c:OpenSSL::ASN1::ASN1Data]] のオブジェクトで
+返します。
+
+@raise OpenSSL::X509::AttributeError 値の取得に失敗した場合に発生します
+@see [[m:OpenSSL::X509::Attribute#value=]]

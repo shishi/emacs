@@ -1,0 +1,11 @@
+kind=defined
+names=expires,expires=
+visibility=public
+
+--- expires    -> Time
+--- expires=(value)
+
+有効期限を [[c:Time]]オブジェクトで表すアクセサです。
+
+@param value 有効期限を [[c:Time]] オブジェクトまたは文字列を指定します。
+

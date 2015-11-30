@@ -1,0 +1,13 @@
+kind=defined
+names=ESCDELAY=
+visibility=public
+
+--- ESCDELAY=(val)
+
+ESC の入力を破棄する時間(ミリ秒単位)を val に設定します。
+設定した値を返します。
+
+@param val ESC の入力を破棄する時間(ミリ秒単位)を指定します。
+
+@raise  NotImplementedError サポートしていない環境で発生します。
+

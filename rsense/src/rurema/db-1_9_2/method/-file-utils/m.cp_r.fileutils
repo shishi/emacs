@@ -1,0 +1,27 @@
+kind=defined
+names=cp_r
+visibility=public
+
+--- cp_r(src, dest, options = {}) -> ()
+
+src を dest にコピーします。src がディレクトリであったら再帰的に
+コピーします。その際 dest がディレクトリなら dest/src にコピーします。
+
+@param src コピー元。一つの場合は文字列でも指定可能です。
+           二つ以上指定する場合は配列で指定します。
+
+@param dest コピー先のファイルかディレクトリです。
+
+@param options :preserve, :noop, :verbose, :dereference_root, :remove_destination が指定できます。
+               [[ref:c:FileUtils#options]]
+
+例:
+
+  # installing ruby library "mylib" under the site_ruby
+  FileUtils.rm_r(site_ruby + '/mylib', {:force => true})
+  FileUtils.cp_r('lib/', site_ruby + '/mylib')
+  # other sample
+  FileUtils.cp_r(%w(mail.rb field.rb debug/), site_ruby + '/tmail')
+  FileUtils.cp_r(Dir.glob('*.rb'), '/home/taro/lib/ruby',
+                 {:noop => true, :verbose => true})
+

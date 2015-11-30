@@ -1,0 +1,8 @@
+kind=defined
+names=kanjitagfont_configure
+visibility=public
+
+--- kanjitagfont_configure(tagOrId, knj, keys = nil)
+
+
+

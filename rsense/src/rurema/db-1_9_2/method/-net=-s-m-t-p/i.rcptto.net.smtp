@@ -1,0 +1,12 @@
+kind=defined
+names=rcptto
+visibility=public
+
+--- rcptto(to_addr) -> Net::SMTP::Response
+RCPTTO コマンドを送ります。
+
+通常は [[m:Net::SMTP#send_message]], [[m:Net::SMTP#open_message_stream]] で
+RCPTTO が送られるため利用する必要はないはずです。
+
+@param to_addr 送信先メールアドレス
+

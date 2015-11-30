@@ -1,0 +1,27 @@
+kind=defined
+names=proper_superset?,superset?
+visibility=public
+
+--- superset?(set) -> bool
+--- proper_superset?(set) -> bool
+
+自身が集合 set の上位集合 (スーパーセット) である場合に true を
+返します。
+
+superset? は、2 つの集合が等しい場合にも true となります。
+
+proper_superset? は、2 つの集合が等しい場合には false を返します。
+
+@param set 比較対象の Set オブジェクトを指定します。
+@raise ArgumentError 引数が Set オブジェクトでない場合に発生します。
+
+  s = Set[1, 2, 3]
+  p s1.superset?(Set[1, 2]) #=> true
+  p s1.superset?(Set[1, 4]) #=> false
+  p s1.superset?(Set[1, 2, 3]) #=> true
+  p s.proper_superset?(Set[1, 2]) #=> true
+  p s.proper_superset?(Set[1, 4]) #=> false
+  p s.proper_superset?(Set[1, 2, 3]) #=> false
+
+@see [[m:Set#subset?]]
+

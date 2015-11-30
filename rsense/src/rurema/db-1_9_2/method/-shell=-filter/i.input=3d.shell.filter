@@ -1,0 +1,12 @@
+kind=defined
+names=input=
+visibility=public
+
+--- input=(filter)
+
+フィルターを設定します。
+
+@param filter フィルターを指定します。
+
+
+

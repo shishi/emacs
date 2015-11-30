@@ -1,0 +1,8 @@
+kind=defined
+names=ruby_opts
+visibility=public 
+
+--- ruby_opts -> Array
+
+テスト実行時に Ruby コマンドに渡されるオプションを返します。
+

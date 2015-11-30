@@ -1,0 +1,7 @@
+superclass=Sync_m=Err
+type=class
+library=sync
+extended=
+included=
+
+誤ったロックモードがセットされている場合に発生する例外です。

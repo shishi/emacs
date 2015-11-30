@@ -1,0 +1,10 @@
+kind=defined
+names=INFINITY
+visibility=public
+
+--- INFINITY -> Float
+
+正の無限大 Infinity
+
+@see [[m:Numeric#finite?]], [[m:Numeric#infinite?]]
+

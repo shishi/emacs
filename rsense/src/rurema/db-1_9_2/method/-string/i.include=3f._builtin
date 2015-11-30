@@ -1,0 +1,10 @@
+kind=defined
+names=include?
+visibility=public
+
+--- include?(substr) -> bool
+
+文字列中に部分文字列 substr が含まれていれば真を返します。
+
+@param substr    検索する文字列
+

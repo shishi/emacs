@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=_builtin
+extended=
+included=
+
+UNIX のシグナル関連の操作を行うモジュールです。

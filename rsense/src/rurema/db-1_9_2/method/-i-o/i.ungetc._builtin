@@ -1,0 +1,14 @@
+kind=defined
+names=ungetc
+visibility=public
+
+--- ungetc(char)     -> nil
+
+指定された char を読み戻します。
+
+@param char 読み戻したい1文字かそのコードポイントを指定します。
+
+@raise IOError 読み戻しに失敗した場合に発生します。また、自身が読み込み用にオープンされていない時、
+               自身がまだ一度も read されていない時に発生します。
+
+

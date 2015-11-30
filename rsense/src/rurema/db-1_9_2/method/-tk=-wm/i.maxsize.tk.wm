@@ -1,0 +1,6 @@
+kind=defined
+names=maxsize
+visibility=public
+
+--- maxsize(*args)
+

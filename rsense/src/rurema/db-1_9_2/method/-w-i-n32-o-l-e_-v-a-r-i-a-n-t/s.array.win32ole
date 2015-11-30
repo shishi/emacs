@@ -1,0 +1,24 @@
+kind=defined
+names=array
+visibility=public
+
+--- array(dims, vt) -> WIN32OLE_VARIANT
+配列用のVARIANTオブジェクトを生成します。
+
+オートメーションメソッド呼び出し用の配列を生成します。なお、OLEオートメー
+ションの配列の次元と添え字の関係はVB型だという点に注意してください。こ
+れはCと逆順の並びです。
+
+@param dims 各次元の要素数を示す配列を与えます。たとえば4要素のベクター
+            であれば[4]、各3要素の2次元配列であれば[3, 3]とします。
+@param vt 配列要素の型を[[c:WIN32OLE::VARIANT]]の定数で指定します。
+@return 指定された次元/要素数を持つWIN32OLE_VARIANTオブジェクト。
+
+次の例は、最初の次元が3要素、次の次元が4要素の2次元配列を生成する例です。
+
+   ole_ary = WIN32OLE_VARIANT.array([3,4], WIN32OLE::VARIANT::VT_I4)
+   ruby_ary = ole_ary.value # => [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+
+@see [[m:WIN32OLE_VARIANT#value]]
+@see [[c:WIN32OLE::VARIANT]]
+

@@ -1,0 +1,6 @@
+kind=defined
+names=set_variable_element_type
+visibility=public
+
+--- set_variable_element_type(idxs, var)
+

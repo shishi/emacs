@@ -1,0 +1,12 @@
+kind=defined
+names=pub_key=
+visibility=public
+
+--- pub_key=(public_key)
+DSA 鍵の公開鍵パラメータを設定します。
+
+通常このメソッドで値を変更することはありません。
+よく考えて必要な場合のみ利用してください。
+
+@param public_key 設定する整数値
+

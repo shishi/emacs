@@ -1,0 +1,12 @@
+kind=defined
+names=test_methods
+visibility=public
+
+--- test_methods -> Array
+
+テストメソッドのリストを返します。
+
+[[m:MiniTest::Unit::TestCase.test_order]] の値が :random である場合は
+返されるメソッドリストの順番はランダムです。
+そうでない場合は、文字コード順にソートされます。
+

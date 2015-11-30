@@ -1,0 +1,32 @@
+kind=defined
+names=cleanpath
+visibility=public
+
+--- cleanpath(consider_symlink = false) -> Pathname
+余計な "."、".." や "/" を取り除いた新しい Pathname オブジェクトを返します。
+
+cleanpath は、実際にファイルシステムを参照することなく、文字列操作
+だけで処理を行います。
+
+@param consider_symlink 真ならパス要素にシンボリックリンクがあった場合
+                        にも問題ないように .. を残します。
+
+    require "pathname"
+    path = Pathname.new("//.././../")
+    path                  # => #<Pathname://.././../>
+    path.cleanpath        # => #<Pathname:/>
+
+
+    require 'pathname'
+    Dir.rmdir("/tmp/foo")      rescue nil
+    File.unlink("/tmp/bar/foo") rescue nil
+    Dir.rmdir("/tmp/bar")      rescue nil
+    Dir.mkdir("/tmp/foo")
+    Dir.mkdir("/tmp/bar")
+    File.symlink("../foo", "/tmp/bar/foo")
+    path = Pathname.new("bar/././//foo/../bar")
+    Dir.chdir("/tmp")
+    
+    path.cleanpath       # => #<Pathname:bar/bar>
+    path.cleanpath(true) # => #<Pathname:bar/foo/../bar>
+

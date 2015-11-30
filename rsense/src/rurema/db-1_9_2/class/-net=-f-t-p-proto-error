@@ -1,0 +1,8 @@
+superclass=Net=FTPError
+type=class
+library=net.ftp
+extended=
+included=
+
+サーバの応答が FTP のプロトコルに沿っていない場合に
+発生する例外のクラスです。

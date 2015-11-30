@@ -1,0 +1,20 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(port, host = GServer::DEFAULT_HOST, maxConnections = 4, stdlog = $stderr, audit = false, debug = false)
+
+GServer オブジェクトを生成します。
+
+@param port サーバがリッスンするポートを指定します。
+
+@param host ホストを指定します。
+
+@param maxConnections 最大接続数を指定します。デフォルトは 4 です。
+
+@param stdlog ログの出力先を指定します。デフォルトは標準エラー出力です。
+
+@param audit 真を指定するとサーバの起動時、接続時、切断時、停止時にログを出力します。
+
+@param debug 真を指定するとデバッグログを出力します。
+

@@ -1,0 +1,13 @@
+name=ruby_xcalloc
+private=false
+macro=false
+type=void *
+filename=gc.c
+params=(long n, long size)
+
+
+引数と返り値は calloc() と同じです。
+ただしメモリ割り当てに失敗したときは
+GC を行いそれでもだめなときは例外 NoMemoryError を発生します。
+つまりこの関数が返り値を返したときは常に割り当ては成功です。
+

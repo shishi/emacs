@@ -1,0 +1,10 @@
+kind=defined
+names=marshal_dump
+visibility=public 
+
+--- marshal_dump -> Array
+
+[[m:Rational#marshal_load]] で復元可能な配列を返します。
+
+@see [[m:Rational#marshal_load]]
+

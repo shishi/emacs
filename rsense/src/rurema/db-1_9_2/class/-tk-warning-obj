@@ -1,0 +1,7 @@
+superclass=TkDialogObj
+type=class
+library=tk.dialog
+extended=
+included=
+
+

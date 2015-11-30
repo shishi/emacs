@@ -1,0 +1,7 @@
+superclass=StandardError
+type=class
+library=resolv
+extended=
+included=
+
+DNS サーバへのリクエストに失敗した場合に発生する例外のクラスです。

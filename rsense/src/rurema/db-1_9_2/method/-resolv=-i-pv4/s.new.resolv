@@ -1,0 +1,12 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(address) -> Resolv::IPv4
+
+4 byte の文字列 address から Resolv::IPv4 のインスタンスを生成します。
+
+@param address 4 byte のバイナリ列の IPv4 のアドレス
+@see [[m:Resolv::IPv4.create]] 
+
+

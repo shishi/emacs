@@ -1,0 +1,16 @@
+kind=defined
+names=RUBY_ENGINE
+visibility=public
+
+--- RUBY_ENGINE -> String
+Ruby処理系実装の種類を表す文字列。
+
+例:
+  $ ruby-1.9.1 -ve 'p RUBY_ENGINE'
+  ruby 1.9.1p0 (2009-03-04 revision 22762) [x86_64-linux]
+  "ruby"
+  $ jruby -ve 'p RUBY_ENGINE'
+  jruby 1.2.0 (ruby 1.8.6 patchlevel 287) (2009-03-16 rev 9419) [i386-java]
+  "jruby"
+
+

@@ -1,0 +1,14 @@
+kind=defined
+names=content_type
+visibility=public
+
+--- content_type    -> String
+
+対象となるリソースの Content-Type を文字列の配列で返します。Content-Type ヘッダの情報が使われます。
+Content-Type ヘッダがない場合は、"application/octet-stream" を返します。
+
+例:
+
+  require 'open-uri'
+  p open('http://www.ruby-lang.org/').content_type  #=> "text/html"
+

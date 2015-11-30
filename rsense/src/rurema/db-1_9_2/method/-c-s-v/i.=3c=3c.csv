@@ -1,0 +1,16 @@
+kind=defined
+names=<<,add_row,puts
+visibility=public
+
+--- <<(row)      -> self
+--- add_row(row) -> self
+--- puts(row)    -> self
+
+自身に row を追加します。
+
+データソースは書き込み用にオープンされていなければなりません。
+
+@param row 配列か [[c:CSV::Row]] のインスタンスを指定します。
+           [[c:CSV::Row]] のインスタンスが指定された場合は、[[m:CSV::Row#fields]] の値
+           のみが追加されます。
+

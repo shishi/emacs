@@ -1,0 +1,13 @@
+kind=defined
+names=has_key?,include?,key?,member?
+visibility=public
+
+--- has_key?(key) -> bool
+--- key?(key) -> bool
+--- include?(key) -> bool
+--- member?(key) -> bool
+
+key がデータベース中に存在する時、真を返します。
+
+@param key キー。
+

@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=tk.canvas
+extended=
+included=TkItemConfigMethod
+
+

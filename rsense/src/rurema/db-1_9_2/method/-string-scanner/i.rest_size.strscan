@@ -1,0 +1,17 @@
+kind=defined
+names=rest_size,restsize
+visibility=public
+
+--- rest_size -> Fixnum
+--- restsize -> Fixnum
+文字列の残りの長さを返します。
+stringscanner.rest.size と同じです。
+
+[[m:StringScanner#restsize]] は将来のバージョンで削除される予定です。
+代わりに[[m:StringScanner#rest_size]] を使ってください。
+
+使用例
+      s = StringScanner.new('test string')
+      p s.rest_size # => 11
+      p s.rest.size # => 11
+

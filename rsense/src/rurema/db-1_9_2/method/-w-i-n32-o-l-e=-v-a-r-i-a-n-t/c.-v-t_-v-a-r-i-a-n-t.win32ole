@@ -1,0 +1,7 @@
+kind=defined
+names=VT_VARIANT
+visibility=public
+
+--- VT_VARIANT -> Integer
+VARIANT型を示します（12）。
+

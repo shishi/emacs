@@ -1,0 +1,14 @@
+kind=defined
+names=standend
+visibility=public
+
+--- standend -> nil
+
+強調する文字の書き込みを終えます。
+
+以下のコードと同じです。
+
+  Curses.attron(A_NORMAL)
+
+@see [[m:Curses::Window.attrset]]
+

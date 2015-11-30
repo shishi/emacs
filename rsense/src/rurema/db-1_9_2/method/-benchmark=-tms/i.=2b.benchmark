@@ -1,0 +1,14 @@
+kind=defined
+names=+
+visibility=public
+
+--- +(x) -> Benchmark::Tms
+
+self と x の加算を計算します。
+
+@param x [[c:Benchmark::Tms]] のオブジェクトか [[c:Float]] に暗黙の変換ができるオブジェクトです。
+
+@return 計算結果は新しい [[c:Benchmark::Tms]] オブジェクトです。
+
+@see [[m:Benchmark::Tms#memberwise]]
+

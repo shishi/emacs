@@ -1,0 +1,12 @@
+kind=defined
+names=connecting
+visibility=protected 
+
+--- connecting(client) -> true
+
+[[m:GServer#audit]] が真ならば、クライアント接続時に呼ばれます。
+
+サブクラスでオーバーライドします。
+
+@param client クライアントと接続している [[c:TCPSocket]] です。
+

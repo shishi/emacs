@@ -1,0 +1,11 @@
+kind=defined
+names=passwd
+visibility=public
+
+--- passwd -> String
+
+このユーザの暗号化されたパスワードを返します。
+
+シャドウパスワードが使用されている場合は、 'x' を返します。
+このユーザがログインできない場合は '*' を返します。
+

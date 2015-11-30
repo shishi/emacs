@@ -1,0 +1,14 @@
+superclass=Struct
+type=class
+library=net.imap
+extended=
+included=
+
+Net::IMAP::UntaggedResponse represents untagged responses.
+
+Data transmitted by the server to the client and status responses
+that do not indicate command completion are prefixed with the token
+"*", and are called untagged responses.
+
+  response_data   ::= "*" SPACE (resp_cond_state / resp_cond_bye /
+                      mailbox_data / message_data / capability_data)

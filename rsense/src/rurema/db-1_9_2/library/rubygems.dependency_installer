@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=rubygems.package.tar_writer,rubygems.ext.ext_conf_builder,rubygems.require_paths_builder,rubygems.requirement,rubygems.remote_fetcher,rubygems.specification,rubygems.spec_fetcher,rubygems.package,rubygems.gem_openssl,rubygems.exceptions,rubygems.builder,rubygems.package.tar_input,rubygems.source_index,rubygems.package.tar_header,rubygems.package.tar_reader,rubygems.installer,rubygems.source_info_cache_entry,rubygems.digest.sha2,rubygems.ext.configure_builder,rubygems.ext,rubygems.dependency_list,rubygems.defaults.operating_system,rubygems.gem_path_searcher,rubygems.platform,rubygems.defaults,rubygems.digest.md5,rubygems.package.f_sync_dir,rubygems.package.tar_reader.entry,rubygems.ext.rake_builder,rubygems.dependency,rubygems.source_info_cache,rubygems.user_interaction,rubygems,rubygems.version,rubygems.format,rubygems.security,rubygems.package.tar_output,rubygems.ext.builder
+classes=Gem=DependencyInstaller
+is_sublibrary=true
+
+ある Gem が依存している Gem を同時にインストールするためのライブラリです。

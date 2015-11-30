@@ -1,0 +1,41 @@
+kind=defined
+names=<=>
+visibility=public
+
+--- <=>(other) -> Integer | nil
+
+self と other の継承関係を比較します。
+
+self と other を比較して、
+self が other の子孫であるとき -1、
+同一のクラス／モジュールのとき 0、
+self が other の先祖であるとき 1
+を返します。
+
+継承関係にないクラス同士の比較では
+nil を返します。
+
+other がクラスやモジュールでなければ
+nil を返します。
+
+@param other 比較対象のクラスやモジュール
+
+  module Foo
+  end
+  class Bar
+    include Foo
+  end
+  class Baz < Bar
+  end
+  class Qux
+  end
+  p Bar <=> Foo     # => -1
+  p Baz <=> Bar     # => -1
+  p Baz <=> Foo     # => -1
+  p Baz <=> Qux     # => -1
+  p Qux <=> Baz     # => -1
+  p Baz <=> Qux     # => nil
+  p Qux <=> Baz     # => nil
+
+  p Baz <=> Object.new  # => nil
+

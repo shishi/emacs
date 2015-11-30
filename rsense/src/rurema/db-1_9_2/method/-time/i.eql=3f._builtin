@@ -1,0 +1,11 @@
+kind=defined
+names=eql?
+visibility=public
+
+--- eql?(other)    -> bool
+
+other が Time かそのサブクラスのインスタンスであり自身と時刻が等しい場合に
+true を返します。そうでない場合に false を返します。
+
+@param other 自身と比較したい時刻を Time オブジェクトを指定します。
+

@@ -1,0 +1,14 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(obj=nil, pass=nil) -> OpenSSL::PKCS12
+文字列もしくは [[c:IO]] オブジェクトから PKCS#12 オブジェクトを生成します。
+
+データは通常パスフレーズで暗号化されているため、pass でそのパスワードを渡し
+ます。
+
+@param obj PKCS#12データを読み込むオブジェクト(文字列もしくは IO)
+@param pass パスフレーズ文字列
+@raise OpenSSL::PKCS12::PKCS12Error データの読み込みに失敗した場合に発生します
+

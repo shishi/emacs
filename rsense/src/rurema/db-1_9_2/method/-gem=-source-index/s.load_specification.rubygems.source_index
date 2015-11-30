@@ -1,0 +1,14 @@
+kind=defined
+names=load_specification
+visibility=public
+
+--- load_specification(file_name) -> Gem::Specification | nil
+
+与えられたファイル名から Ruby スクリプト形式の gemspec をロードして
+[[c:Gem::Specification]] のインスタンスを返します。
+
+@param file_name ファイル名を指定します。
+
+@raise SignalException gemspec をロードしているときに発生します。
+
+@raise SystemExit gemspec をロードしているときに発生します。

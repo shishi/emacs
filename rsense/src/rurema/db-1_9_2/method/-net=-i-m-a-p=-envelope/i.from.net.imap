@@ -1,0 +1,8 @@
+kind=defined
+names=from
+visibility=public
+
+--- from
+
+Retunns an array of [[c:Net::IMAP::Address]] that represents the from.
+

@@ -1,0 +1,7 @@
+superclass=
+type=module
+library=bigdecimal.math
+extended=
+included=
+
+BigDecimalを使った数学的な機能を提供するモジュールです。

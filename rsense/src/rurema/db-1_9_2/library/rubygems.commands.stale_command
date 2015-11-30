@@ -1,0 +1,8 @@
+methods=
+sublibraries=
+requires=rubygems.user_interaction,rubygems.command
+classes=Gem=Commands=StaleCommand
+is_sublibrary=true
+
+インストールされている Gem パッケージの一覧をアクセス時刻とともに表示するための
+ライブラリです。

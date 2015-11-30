@@ -1,0 +1,9 @@
+kind=defined
+names=encoding
+visibility=public
+
+--- encoding   -> Encoding
+
+Returns the Encoding object that represents the encoding of obj.
+
+

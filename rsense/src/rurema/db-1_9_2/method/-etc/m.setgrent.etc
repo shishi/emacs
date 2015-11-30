@@ -1,0 +1,12 @@
+kind=defined
+names=setgrent
+visibility=public
+
+--- setgrent -> nil
+
+/etc/group の先頭に戻ります。
+
+このメソッドを呼び出した後 [[m:Etc.#getgrent]] を呼び出すと先頭のエントリを返します。
+
+@see [[man:getgrent(3)]]
+

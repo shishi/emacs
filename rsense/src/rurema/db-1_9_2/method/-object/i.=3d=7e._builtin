@@ -1,0 +1,23 @@
+kind=defined
+names==~
+visibility=public
+
+--- =~(other) -> false
+
+右辺に正規表現オブジェクトを置いた正規表現マッチ obj =~ /RE/
+をサポートするためのメソッドです。常に false を返します。
+
+この定義により、=~ が再定義されたオブジェクトでは正常にマッチを行い、
+それ以外のものは false を返すようになります。
+
+
+@param other 任意のオブジェクトです。結果に影響しません。
+
+  obj = 'regexp'
+  p(obj =~ /re/) #=> 0
+  
+  obj = nil
+  p(obj =~ /re/) #=> false
+
+@see [[m:String#=~]]
+

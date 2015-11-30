@@ -1,0 +1,11 @@
+kind=defined
+names=isatty,tty?
+visibility=public
+
+--- isatty    -> bool
+--- tty?      -> bool
+
+入出力ポートがttyに結合している時、真を返します。そうでない場合 false を返します。
+
+@raise IOError 既に close されている場合に発生します。
+

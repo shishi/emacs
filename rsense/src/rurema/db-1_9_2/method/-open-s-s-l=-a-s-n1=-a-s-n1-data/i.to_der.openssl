@@ -1,0 +1,8 @@
+kind=defined
+names=to_der
+visibility=public
+
+--- to_der -> String
+ASN.1 値の DER 表現を返します。
+
+@see [[m:OpenSSL::ASN1.decode]]

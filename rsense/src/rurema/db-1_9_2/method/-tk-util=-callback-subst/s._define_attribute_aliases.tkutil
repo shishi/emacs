@@ -1,0 +1,7 @@
+kind=defined
+names=_define_attribute_aliases
+visibility=public
+
+--- _define_attribute_aliases(tbl)
+
+

@@ -1,0 +1,10 @@
+kind=defined
+names=version=
+visibility=public
+
+--- version=(ver)
+
+プログラムのバージョンを文字列で指定します。
+
+@param ver プログラムのバージョンを文字列で指定します。
+

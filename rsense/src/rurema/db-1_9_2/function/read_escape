@@ -1,0 +1,13 @@
+name=read_escape
+private=true
+macro=false
+type=int
+filename=parse.y
+params=(void)
+
+
+一文字に相当するバックスラッシュ記法が許す
+文字列を入力バッファから読みとり、評価値を返す。
+先頭のバックスラッシュはすでに読みこんでいるものと仮定する。
+不正な記法に対しては yyerror を呼び出し, 0 を返す。
+

@@ -1,0 +1,4 @@
+:AuthException	WEBrick::HTTPAuth::ProxyAuthenticator::AuthException
+:InfoField	WEBrick::HTTPAuth::ProxyAuthenticator::InfoField
+:RequestField	WEBrick::HTTPAuth::ProxyAuthenticator::RequestField
+:ResponseField	WEBrick::HTTPAuth::ProxyAuthenticator::ResponseField

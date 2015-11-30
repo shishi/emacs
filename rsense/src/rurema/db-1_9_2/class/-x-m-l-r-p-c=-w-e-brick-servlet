@@ -1,0 +1,33 @@
+superclass=XMLRPC=BasicServer
+type=class
+library=xmlrpc.server
+extended=
+included=
+
+Implements a servlet for use with WEBrick, a pure Ruby (HTTP-) server framework.
+
+    require "webrick"
+    require "xmlrpc/server"
+
+    s = XMLRPC::WEBrickServlet.new
+    s.add_handler("michael.add") do |a,b|
+      a + b
+    end
+
+    s.add_handler("michael.div") do |a,b|
+      if b == 0
+        raise XMLRPC::FaultException.new(1, "division by zero")
+      else
+        a / b
+      end
+    end
+
+    s.set_default_handler do |name, *args|
+      raise XMLRPC::FaultException.new(-99, "Method #{name} missing" +
+                                       " or wrong number of parameters!")
+    end
+
+    httpserver = WEBrick::HTTPServer.new(:Port => 8080)
+    httpserver.mount("/RPC2", s)
+    trap("HUP") { httpserver.shutdown }   # use 1 instead of "HUP" on Windows
+    httpserver.start

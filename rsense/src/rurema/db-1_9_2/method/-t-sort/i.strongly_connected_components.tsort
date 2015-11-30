@@ -1,0 +1,25 @@
+kind=defined
+names=strongly_connected_components
+visibility=public
+
+--- strongly_connected_components -> Array
+
+強連結成分の集まりを配列の配列として返します。
+この配列は子から親に向かってソートされています。
+各要素は強連結成分を表す配列です。
+
+  require 'tsort'
+
+  class Hash
+    include TSort
+    alias tsort_each_node each_key
+    def tsort_each_child(node, &block)
+      fetch(node).each(&block)
+    end
+  end
+
+  non_sort = {1=>[2], 2=>[3, 4], 3=>[2], 4=>[]}
+
+  p non_sort.strongly_connected_components
+  #=> [[4], [2, 3], [1]]
+

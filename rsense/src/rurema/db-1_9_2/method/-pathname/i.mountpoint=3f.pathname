@@ -1,0 +1,7 @@
+kind=defined
+names=mountpoint?
+visibility=public
+
+--- mountpoint? -> bool
+self がマウントポイントであれば真を返します。
+

@@ -1,0 +1,6 @@
+kind=defined
+names=actual
+visibility=public
+
+--- actual(fnt, option = nil)
+

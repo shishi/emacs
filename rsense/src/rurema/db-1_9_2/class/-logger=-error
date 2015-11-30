@@ -1,0 +1,7 @@
+superclass=RuntimeError
+type=class
+library=logger
+extended=
+included=
+
+このライブラリで使用する例外です。

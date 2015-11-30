@@ -1,0 +1,12 @@
+kind=defined
+names=rcptto_list
+visibility=public
+
+--- rcptto_list(to_addrs) -> Net::SMTP::Response
+RCPTTO コマンドを to_addrs のすべてのメールアドレスに対して送ります。
+
+通常は [[m:Net::SMTP#send_message]], [[m:Net::SMTP#open_message_stream]] で
+RCPTTO が送られるため利用する必要はないはずです。
+
+@param to_addrs 送信先メールアドレスの配列
+

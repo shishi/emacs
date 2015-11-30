@@ -1,0 +1,11 @@
+kind=defined
+names=RLIMIT_NOFILE
+visibility=public
+
+--- RLIMIT_NOFILE
+
+リソースの種類がプロセスがオープンできるファイルの数であることを示す定数です。
+
+[[m:Process.#getrlimit]]、[[m:Process.#setrlimit]] で使われます。
+システムによっては定義されていません。
+

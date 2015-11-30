@@ -1,0 +1,16 @@
+kind=defined
+names=fdiv
+visibility=public 
+
+--- fdiv(other) -> Float
+
+自身を other で割った実数の商を返します。
+
+@param other 自身を割る数
+
+例:
+
+  Rational(2, 3).fdiv(1)   # => 0.6666666666666666
+  Rational(2, 3).fdiv(0.5) # => 1.3333333333333333
+  Rational(2).fdiv(3)      # => 0.6666666666666666
+

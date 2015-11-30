@@ -1,0 +1,16 @@
+kind=defined
+names=decrypt
+visibility=public
+
+--- decrypt(pass, iv = nil) -> self
+復号化の準備をします。
+
+暗号オブジェクトの内部状態を復号化のために初期化します。
+
+pass と iv が渡された場合、これらを用いて鍵を生成し、暗号オブジェクトに
+鍵と IV を設定します。このやりかたは非標準的であるため利用すべきではありません。
+
+@param pass パスワード文字列
+@param iv IV文字列
+@raise OpenSSL::Cipher::CipherError 準備に失敗した場合に発生します
+

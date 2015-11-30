@@ -1,0 +1,13 @@
+kind=defined
+names=typelibs
+visibility=public
+
+--- typelibs -> [WIN32OLE_TYPELIB]
+
+システムに登録されているすべてのTypeLibを取得します。
+
+@return 登録されているすべてのTypeLibを元にWIN32OLE_TYPELIBオブジェクト
+        の配列を返します。
+
+   tlibs = WIN32OLE_TYPELIB.typelibs
+

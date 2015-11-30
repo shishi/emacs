@@ -1,0 +1,13 @@
+kind=defined
+names=assert_nothing_thrown
+visibility=public
+
+--- assert_nothing_thrown(message = "") { ... }    -> ()
+
+ブロックを実行して throw が起こらなければパスします。
+
+@param message assert が失敗した時に表示するメッセージを文字列で指定し
+               ます。指定しなかった場合は表示しません。
+
+@raise MiniTest::Assertion assert が失敗した時に発生します。
+

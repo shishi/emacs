@@ -1,0 +1,22 @@
+kind=defined
+names=build2
+visibility=public
+
+--- build2(ary)     -> URI::Generic
+--- build2(hash)    -> URI::Generic
+
+URI::Generic.build と同じですが、例外 URI::InvalidComponentError
+が発生した場合に、引数の各要素を URI.escape して再度 build を試み
+ます。
+
+@param ary 構成要素を表す文字列の配列を与えます。要素は以下の順です。
+//emlist{
+      [scheme, userinfo, host, port, registry, path, opaque, query, fragment]
+//}
+
+@param hash  構成要素を表すハッシュを与えます。ハッシュのキーはシンボルは以下
+            のいずれかです。 ハッシュの値は文字列で与えます。
+//emlist{
+      :scheme, :userinfo, :host, :port, :registry, :path, :opaque, :query, :fragment 
+//}
+

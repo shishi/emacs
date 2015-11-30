@@ -1,0 +1,27 @@
+kind=defined
+names=alias_command
+visibility=public
+
+--- alias_command(alias, command, *opts) {...} -> self
+
+コマンドの別名(エイリアス)を作成します。
+コマンドが無い場合は、[[m:Shell.def_system_command]] などであらかじめ作成します.
+
+@param alias エイリアスの名前を文字列で指定します.
+
+@param command コマンド名を文字列で指定します.
+
+@param opts command で指定したコマンドのオプションを指定します.
+
+使用例: ls -la | sort -k 5 のような例。
+
+  Shell.def_system_command("ls")
+  Shell.alias_command("lsla", "ls", "-a", "-l")
+  Shell.def_system_command("sort")
+  sh = Shell.new
+  sh.transact {
+    (lsla | sort("-k 5")).each {|l|
+      puts l
+    }
+  }
+

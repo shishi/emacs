@@ -1,0 +1,12 @@
+kind=defined
+names=start_job
+visibility=public
+
+--- start_job(command = nil)
+
+指定されたコマンドの実行を開始します。
+
+コマンドを省略した場合は、待ち状態のジョブのうち先頭のものを実行します。
+
+@param command コマンドを指定します。
+

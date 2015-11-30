@@ -1,0 +1,8 @@
+kind=defined
+names=new_item
+visibility=public
+
+--- new_item
+新しくitemを作成し，返します．作成された
+itemはitemリストの最後に追加されています．
+

@@ -1,0 +1,10 @@
+name=rb_global_variable
+private=false
+macro=false
+type=void
+filename=gc.c
+params=(VALUE *var)
+
+
+[[f:rb_gc_register_address]] と同じです。
+

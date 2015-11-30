@@ -1,0 +1,25 @@
+kind=defined
+names=readchar
+visibility=public
+
+--- readchar    -> String
+
+IO ポートから 1 文字読み込んで返します。
+EOF に到達した時には EOFError が発生します。
+
+テキスト読み込みメソッドとして動作します。
+[[m:IO#getc]] との違いは EOF での振る舞いのみです。
+
+@raise EOFError EOF に到達した時に発生します。
+
+@raise IOError 自身が読み込み用にオープンされていなければ発生します。
+
+   f = File.new("testfile")
+   p f.readchar                   #=> "い"
+   p f.readchar                   #=> "ろ"
+   p f.readchar                   #=> "は"
+   f.read
+   f.readchar                   #=> EOFError
+
+@see [[m:IO#getc]]
+

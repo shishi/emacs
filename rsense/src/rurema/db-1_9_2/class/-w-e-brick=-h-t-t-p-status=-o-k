@@ -1,0 +1,7 @@
+superclass=WEBrick=HTTPStatus=Success
+type=class
+library=webrick.httpstatus
+extended=
+included=
+
+HTTP のステータスコード 200 OK を表すクラスです。

@@ -1,0 +1,8 @@
+kind=defined
+names=notify
+visibility=public
+
+--- notify(ev, tuple, sec = nil)
+
+詳細は [[m:Rinda::TupleSpace#notify]] 参照
+

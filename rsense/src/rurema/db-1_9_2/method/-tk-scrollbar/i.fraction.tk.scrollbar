@@ -1,0 +1,6 @@
+kind=defined
+names=fraction
+visibility=public
+
+--- fraction(x, y)
+

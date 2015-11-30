@@ -1,0 +1,10 @@
+kind=defined
+names=untrusted?
+visibility=public
+
+--- untrusted? -> bool
+
+オブジェクトの「untrustマーク」がセットされている時真を返します。
+
+@see [[m:Object#trust]],[[m:Object#untrust]]
+

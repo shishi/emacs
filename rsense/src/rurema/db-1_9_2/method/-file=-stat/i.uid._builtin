@@ -1,0 +1,11 @@
+kind=defined
+names=uid
+visibility=public
+
+--- uid -> Integer
+オーナーのユーザIDを返します。
+
+  fs = File::Stat.new($0)
+  #例
+  p fs.uid    #=> 0
+

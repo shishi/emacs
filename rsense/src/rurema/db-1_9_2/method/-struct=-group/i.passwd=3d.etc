@@ -1,0 +1,8 @@
+kind=defined
+names=passwd=
+visibility=public
+
+--- passwd=(passwd)
+
+このグループのパスワードを設定します。
+

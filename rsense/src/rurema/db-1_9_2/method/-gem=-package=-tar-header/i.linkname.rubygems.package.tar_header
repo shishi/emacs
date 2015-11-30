@@ -1,0 +1,8 @@
+kind=defined
+names=linkname
+visibility=public 
+
+--- linkname -> String
+
+tar のヘッダに含まれる linkname を返します。
+

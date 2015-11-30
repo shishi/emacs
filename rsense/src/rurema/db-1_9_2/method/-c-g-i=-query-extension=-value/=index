@@ -1,0 +1,6 @@
+#[]	CGI::QueryExtension::Value#[]
+#first	CGI::QueryExtension::Value#first
+#last	CGI::QueryExtension::Value#first
+#set_params	CGI::QueryExtension::Value#set_params
+#to_a	CGI::QueryExtension::Value#to_a
+#to_ary	CGI::QueryExtension::Value#to_a

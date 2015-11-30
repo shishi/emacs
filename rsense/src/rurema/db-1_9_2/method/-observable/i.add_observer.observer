@@ -1,0 +1,19 @@
+kind=defined
+names=add_observer
+visibility=public
+
+--- add_observer(observer) -> Array
+
+オブザーバを登録します。
+
+オブザーバを登録し、登録されているオブザーバのリストを返します。
+
+オブザーバは update メソッドを備えている必要があります。
+
+observer が update メソッドを持たないときは
+例外 [[c:NoMethodError]] が発生します。
+
+@param observer 更新の通知を受けるオブザーバ
+
+@raise NoMethodError updateメソッドを持たないオブジェクトをオブザーバに指定した場合に発生します。
+

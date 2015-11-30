@@ -1,0 +1,27 @@
+kind=added
+names=INPUT_LINE_NUMBER,NR
+visibility=public
+
+--- $INPUT_LINE_NUMBER -> Fixnum
+--- $NR                -> Fixnum
+
+[[m:$.]] ¤ÎÊÌÌ¾
+
+  1 e
+  2 f
+  3 g
+  4 h
+  5 i
+  # end of a.txt
+
+  require "English"
+
+  File.foreach(ARGV.at(0)){|line|
+    # read line
+  }
+  p $INPUT_LINE_NUMBER
+  # end of sample.rb
+
+  ruby sample.rb a.txt 
+  #=> 5
+

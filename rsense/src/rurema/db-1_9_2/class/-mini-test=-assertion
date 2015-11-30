@@ -1,0 +1,7 @@
+superclass=Exception
+type=class
+library=minitest.unit
+extended=
+included=
+
+アサーションに失敗した時に発生する例外です。

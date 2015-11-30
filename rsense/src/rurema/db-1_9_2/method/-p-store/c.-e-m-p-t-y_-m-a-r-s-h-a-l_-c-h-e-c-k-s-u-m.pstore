@@ -1,0 +1,7 @@
+kind=defined
+names=EMPTY_MARSHAL_CHECKSUM
+visibility=private 
+
+--- EMPTY_MARSHAL_CHECKSUM -> String
+内部で利用する定数です。
+

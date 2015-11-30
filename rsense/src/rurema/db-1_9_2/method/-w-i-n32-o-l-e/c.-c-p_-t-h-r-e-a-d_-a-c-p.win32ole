@@ -1,0 +1,10 @@
+kind=defined
+names=CP_THREAD_ACP
+visibility=public
+
+--- CP_THREAD_ACP -> Fixnum
+
+現在実行中のスレッドの既定のコードページ（3）を示します。
+
+Windowsのコードページはスレッド毎に異なる値を設定できます。
+

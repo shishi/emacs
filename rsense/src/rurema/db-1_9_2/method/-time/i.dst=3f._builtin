@@ -1,0 +1,13 @@
+kind=defined
+names=dst?,isdst
+visibility=public
+
+--- isdst    -> bool
+--- dst?     -> bool
+
+自身が表す日時が夏時間なら true を返します。そうでないなら false を返します。
+
+  ENV['TZ'] = 'US/Pacific'
+  Time.local(2000, 7, 1).isdst   #=> true
+  Time.local(2000, 1, 1).isdst   #=> false
+

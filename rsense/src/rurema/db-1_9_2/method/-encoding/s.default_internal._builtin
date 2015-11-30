@@ -1,0 +1,7 @@
+kind=defined
+names=default_internal
+visibility=public
+
+--- default_internal -> Encoding | nil
+規定の内部エンコーディングを返します。
+

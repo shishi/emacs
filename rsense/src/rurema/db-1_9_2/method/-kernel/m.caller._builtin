@@ -1,0 +1,78 @@
+kind=defined
+names=caller
+visibility=public
+
+--- caller(level_num = 1) -> [String] | nil
+
+level_num 段上の呼び出し元の情報を [[m:$@]]
+の形式のバックトレース(文字列の配列)として返します。
+
+トップレベルでは空の配列を返します。caller の戻り値を [[m:$@]] に代入することで
+例外の発生位置を設定できます。
+
+指定した level_num 段上が存在しない場合は nil を返します。
+
+@param level_num long の範囲を超えない正の整数でスタックレベルを指定します。
+@see [[m:Kernel.#set_trace_func]],[[m:Kernel.#raise]]
+
+    def foo
+      p caller(0)
+      p caller(1)
+      p caller(2)
+      p caller(3)
+      p caller(4)
+    end
+
+    def bar
+      foo
+    end
+
+    bar
+
+    #=> ["-:2:in `foo'", "-:10:in `bar'", "-:13:in `<main>'"]
+    #   ["-:10:in `bar'", "-:13:in `<main>'"]
+    #   ["-:13:in `<main>'"]
+    #   []
+    #   nil
+
+以下の関数は、caller の要素から [ファイル名, 行番号, メソッド名]
+を取り出して返します。
+
+    def parse_caller(at)
+      if /^(.+?):(\d+)(?::in `(.*)')?/ =~ at
+        file = $1
+        line = $2.to_i
+        method = $3
+        [file, line, method]
+      end
+    end
+
+    def foo
+      p parse_caller(caller.first)
+    end
+
+    def bar
+      foo
+      p parse_caller(caller.first)
+    end
+
+    bar
+    p parse_caller(caller.first)
+
+    #=> ["-", 15, "bar"]
+    #   ["-", 19, nil]
+    #   nil
+
+以下は、[[m:$DEBUG]] が真の場合に役に立つ debug 関数
+のサンプルです。
+
+    $DEBUG = true
+    
+    def debug(*args)
+      p [caller.first, *args] if $DEBUG
+    end
+
+    debug "debug information"
+
+    #=> ["-:7", "debug information"]
+

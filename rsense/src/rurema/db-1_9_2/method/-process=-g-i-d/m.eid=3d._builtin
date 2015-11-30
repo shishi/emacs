@@ -1,0 +1,28 @@
+kind=defined
+names=eid=,grant_privilege
+visibility=public
+
+--- grant_privilege(id)    -> Integer
+--- eid=(id)
+
+現在のプロセスの実効グループ ID を id に変更します。成功したら id を返します。
+
+実グループ ID は変更されないことが保証されます。
+保存グループ ID が変更されないかもしれないので root 権限の完全放棄には使えません。
+保存グループ ID が変化するかどうかは [[m:Process::GID.#re_exchangeable?]]
+が true を返すかどうかで決まります。
+ * true の環境では、実グループ ID と異なる値を設定した場合、保存グループ ID は新しい実効グループ ID の値に設定されます。
+ * false の環境では保存グループ ID は変化しません。
+
+利用できるかはプラットフォームに依存します。
+
+@param id グループ ID を整数で指定します。
+
+@raise Errno::EXXX 設定できない場合に発生します。
+
+@raise NotImplementedError メソッドが現在のプラットフォームで実装されていない場合に発生します。
+
+   [Process.gid, Process.egid]          #=> [0, 0]
+   Process::GID.grant_privilege(33)     #=> 33
+   [Process.gid, Process.egid]          #=> [0, 33]
+

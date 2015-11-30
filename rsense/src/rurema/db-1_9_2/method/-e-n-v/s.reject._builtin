@@ -1,0 +1,11 @@
+kind=defined
+names=reject
+visibility=public
+
+--- reject                     -> Enumerator
+--- reject {|key, value| ... } -> Hash
+
+環境変数のうち、ブロックを評価した値が真であるものをとり除きます。
+[[m:Enumerable#reject]] と異なり Hash を返します。また、とり除いた結果
+は実際の環境変数に影響を与えません。
+

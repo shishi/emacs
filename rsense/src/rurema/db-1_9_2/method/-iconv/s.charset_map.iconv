@@ -1,0 +1,9 @@
+kind=defined
+names=charset_map
+visibility=public
+
+--- charset_map -> Hash
+
+文字コードセット名からシステム依存の文字コードセット名への [[c:Hash]] を返します。
+
+

@@ -1,0 +1,8 @@
+kind=defined
+names=empty?
+visibility=public
+
+--- empty? -> bool
+
+文字列が空 (つまり長さ 0) の時、真を返します。
+

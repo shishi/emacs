@@ -1,0 +1,22 @@
+kind=defined
+names=install_system_commands
+visibility=public
+
+--- install_system_commands(pre = "sys_") -> ()
+
+system_path上にある全ての実行可能ファイルをShellに定義する. メソッ
+ド名は元のファイル名の頭にpreをつけたものとなる.
+
+@param pre Shellに定義するメソッド名の先頭に付加される文字列を指定します。
+
+使用例: ls -l | head -n 5 のような例。
+
+  Shell.install_system_commands
+  sh = Shell.new
+  sh.verbose = false
+  sh.transact {
+    (sys_ls("-l") | sys_head("-n 5")).each {|l|
+      puts l
+    } 
+  }
+

@@ -1,0 +1,7 @@
+superclass=OpenSSL=OpenSSLError
+type=class
+library=openssl
+extended=
+included=
+
+[[c:OpenSSL::X509::Extension]] 関連のエラーが起きたときに発生します。

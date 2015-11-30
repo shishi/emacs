@@ -1,0 +1,11 @@
+kind=defined
+names=new,now
+visibility=public
+
+--- new    -> Time
+--- now    -> Time
+
+現在時刻の Time オブジェクトを生成して返します。
+タイムゾーンは地方時となります。
+
+

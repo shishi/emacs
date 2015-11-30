@@ -1,0 +1,31 @@
+kind=defined
+names=minor
+visibility=public
+
+--- minor(from_row, row_size, from_col, col_size) -> Matrix
+--- minor(from_row..to_row, from_col..to_col) -> Matrix
+
+selfの部分行列を返します。
+
+自分自身の部分行列を返します。
+ただし、パラメータは次の方法で指定します。
+  (1) 開始行番号, 行の大きさ, 開始列番号, 列の大きさ
+  (2) 開始行番号..終了行番号, 開始列番号..終了列番号
+
+@param from_row 部分行列の開始行(0オリジンで指定)
+@param row_size 部分行列の行サイズ
+@param from_col 部分行列の開始列(0オリジンで指定)
+@param col_size 部分行列の列サイズ
+
+例:
+
+  a1 = [ 1,  2,  3,  4,  5]
+  a2 = [11, 12, 13, 14, 15]
+  a3 = [21, 22, 23, 24, 25]
+  a4 = [31, 32, 33, 34, 35]
+  a5 = [51, 52, 53, 54, 55]
+  m = Matrix[a1, a2, a3, a4, a5]
+
+  p m.minor(0, 2, 1, 2) #=> Matrix[[2, 3], [12, 13]]
+
+

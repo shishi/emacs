@@ -1,0 +1,26 @@
+kind=added
+names=have_struct_member
+visibility=private 
+
+--- have_struct_member(type, member, headers = nil) -> bool
+--- have_struct_member(type, member, headers = nil){ ... } -> bool
+
+member というメンバを持つ構造体 type がシステムに存在するかどうか検査します。
+
+member というメンバを持つ構造体 type がシステムに存在する場合は、
+グローバル変数 [[m:$defs]] に "-DHAVE_type_member" を追加し、真を返します。
+member というメンバを持つ構造体 type が存在しない場合は、偽を返します。
+
+例えば
+
+  have_struct_member('struct foo', 'bar') # => true
+
+である場合、HAVE_STRUCT_FOO_BAR というプリプロセッサマクロをコンパイラに渡します。
+また、後方互換性のために HAVE_ST_BAR というプリプロセッサマクロも定義します。
+
+@param type 検査したい構造体の名前を指定します。
+
+@param member 検査したい構造体のメンバの名前を指定します。
+
+@param headers 追加のヘッダファイルを指定します。
+

@@ -1,0 +1,12 @@
+name=st_delete_safe
+private=false
+macro=false
+type=int
+filename=st.c
+params=(register st_table *table, register char **key, char **value, char *never)
+
+
+[[f:st_delete]] と似ているが、その場ですぐに削除するのではなく never を
+書きこんでおく。st_cleanup_safe() で本当に削除できる。
+Ruby では never には Qundef を使う。
+

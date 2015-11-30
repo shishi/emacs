@@ -1,0 +1,7 @@
+kind=defined
+names=procedure=,set_procedure
+visibility=public
+
+--- set_procedure(cmd)
+--- procedure=
+

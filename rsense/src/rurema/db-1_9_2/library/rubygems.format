@@ -1,0 +1,7 @@
+methods=
+sublibraries=
+requires=rubygems.remote_fetcher,rubygems.requirement,rubygems.specification,rubygems.spec_fetcher,rubygems.package.tar_writer,rubygems.gem_openssl,rubygems.exceptions,rubygems.builder,rubygems.package,rubygems.package.tar_input,rubygems.source_index,rubygems.package.tar_header,rubygems.package.tar_reader,rubygems.source_info_cache_entry,rubygems.digest.sha2,rubygems.gem_path_searcher,rubygems.defaults.operating_system,rubygems.platform,rubygems.defaults,rubygems.digest.md5,rubygems.package.f_sync_dir,rubygems.package.tar_reader.entry,rubygems,rubygems.dependency,rubygems.source_info_cache,rubygems.user_interaction,rubygems.version,rubygems.security,rubygems.package.tar_output
+classes=Gem=Format
+is_sublibrary=true
+
+RubyGems の Gem ファイルの内部構造を扱うためのライブラリです。

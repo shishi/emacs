@@ -1,0 +1,16 @@
+kind=defined
+names=random_number
+visibility=public
+
+--- random_number(n = 0)     -> Integer | Float
+
+ランダムな数値を生成して返します。
+n が 1 以上の整数の場合、0 以上 n 未満の整数を返します。
+n が 0 の場合、0.0 以上 1.0 未満の実数を返します。
+
+@param n ランダムな数値の上限を数値で指定します。
+
+@raise NotImplementedError 安全な乱数発生器が使えない場合に発生します。
+
+  p SecureRandom.random_number(1 << 64)    #=> 4078466195356651249
+

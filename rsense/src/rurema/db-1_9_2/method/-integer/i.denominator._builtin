@@ -1,0 +1,12 @@
+kind=defined
+names=denominator
+visibility=public
+
+--- denominator -> Integer
+
+分母(常に1)を返します。
+
+@return 分母を返します。
+
+@see [[m:Integer#numerator]]
+

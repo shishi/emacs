@@ -1,0 +1,16 @@
+kind=defined
+names=ignore_sigint,ignore_sigint=
+visibility=public
+
+--- ignore_sigint
+--- ignore_sigint=(bool)
+
+Ctrl-C が入力された時の動作を設定します。
+false 時は irb を終了します。
+true の時の動作は以下のようになる.
+
+: 入力中
+    これまで入力したものをキャンセルしトップレベルに戻る. 
+: 実行中
+    実行を中止する.
+

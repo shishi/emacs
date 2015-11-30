@@ -1,0 +1,6 @@
+kind=defined
+names=apply
+visibility=public
+
+--- apply(obj, enc)
+

@@ -1,0 +1,11 @@
+kind=defined
+names=conf,irb_context
+visibility=public
+
+--- conf
+--- irb_context
+
+irb の現在の設定です。[[c:IRB::Context]] オブジェクトです。
+このメソッドで得た IRB::Context オブジェクトに対してメソッドを
+呼び出すことで、現在稼働中の irb インタプリタの設定を表示・変更できます。
+

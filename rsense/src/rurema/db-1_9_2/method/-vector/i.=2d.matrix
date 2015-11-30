@@ -1,0 +1,15 @@
+kind=defined
+names=-
+visibility=public
+
+--- -(v) -> Vector
+
+ベクトル v を減じたベクトルを返します。
+
+自分自身と引数 v の要素をそれぞれ減算し、その結果を[[c:Vector]]クラスのオブジェクトとして返します。
+
+@param v 減算するベクトル
+
+@raise ExceptionForMatrix::ErrDimensionMismatch 自分自身と引数のベクト
+       ルの要素の数(次元)が異なっていたときに発生します。
+

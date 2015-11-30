@@ -1,0 +1,8 @@
+kind=defined
+names=forget
+visibility=public
+
+--- forget(*args)
+
+argsで指定したウィジェットの配置を取り下げます(非表示になります)。
+

@@ -1,0 +1,10 @@
+kind=defined
+names=irb_pop_workspace,irb_popws,popws
+visibility=public
+
+--- popws
+--- irb_popws
+--- irb_pop_workspace
+
+UNIX シェルコマンドの popd と同じです。
+

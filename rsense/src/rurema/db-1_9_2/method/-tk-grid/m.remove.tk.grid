@@ -1,0 +1,6 @@
+kind=defined
+names=remove
+visibility=public
+
+--- remove(*args)
+

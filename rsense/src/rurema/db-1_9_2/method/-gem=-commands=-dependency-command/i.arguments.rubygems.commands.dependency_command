@@ -1,0 +1,8 @@
+kind=defined
+names=arguments
+visibility=public 
+
+--- arguments -> String
+
+引数の説明を表す文字列を返します。
+

@@ -1,0 +1,8 @@
+kind=defined
+names=shutdown
+visibility=public
+
+--- shutdown -> true
+
+自身を停止します。
+

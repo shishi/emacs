@@ -1,0 +1,14 @@
+kind=defined
+names=bytes
+visibility=public
+
+--- bytes(size) -> String
+
+ランダムなバイナリー文字列を返します。結果の文字列のサイズを指定できます。
+
+@param size 結果の文字列のサイズを指定します。
+
+動作例:
+  r2 = Random.new(1)
+  p r2.bytes(10) # => "%\xF4\xC1j\xEB\x80G\xFF\x8C/"
+

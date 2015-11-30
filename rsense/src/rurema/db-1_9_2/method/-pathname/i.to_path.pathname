@@ -1,0 +1,8 @@
+kind=defined
+names=to_path
+visibility=public
+
+--- to_path -> String
+File.open などの引数に渡す際に呼ばれるメソッドです。 Pathname オブジェ
+クトにおいては、 to_s と同じです。
+

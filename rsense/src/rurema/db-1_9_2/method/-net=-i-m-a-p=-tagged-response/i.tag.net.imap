@@ -1,0 +1,8 @@
+kind=defined
+names=tag
+visibility=public
+
+--- tag
+
+Returns the tag.
+

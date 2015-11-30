@@ -1,0 +1,10 @@
+kind=defined
+names=&
+visibility=public
+
+--- &(other) -> false
+
+常に false を返します。
+
+@param other 論理積を行なう式です
+

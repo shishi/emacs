@@ -1,0 +1,7 @@
+superclass=Object
+type=class
+library=rubygems.command
+extended=
+included=Gem=UserInteraction
+
+全ての gem コマンドのスーパークラスです。

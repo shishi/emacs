@@ -1,0 +1,15 @@
+kind=defined
+names=mails
+visibility=public
+
+--- mails -> [Net::POPMail]
+サーバ上の全てのメールを、[[c:Net::POPMail]]オブジェクトの配列として返します。
+
+この配列はメールを最初に取得しようとしたときに生成され、セッションの間
+キャッシュされます。
+
+@raise TimeoutError 接続がタイムアウトした場合に発生します
+@raise Net::POPError サーバがエラーを報告した場合に発生します
+@raise Net::POPBadResponse サーバからの応答がプロトコル上不正であった場合に発生します
+
+

@@ -1,0 +1,8 @@
+superclass=Resolv=DNS=Resource=MINFO
+type=class
+library=resolv
+extended=
+included=
+
+DNS リソースのクラス IN、タイプ MINFO に対応する
+クラスです。

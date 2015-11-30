@@ -1,0 +1,8 @@
+kind=defined
+names=__validcmd_call
+visibility=public
+
+--- __validcmd_call(klass, key, *args, &b)
+
+
+

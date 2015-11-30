@@ -1,0 +1,14 @@
+kind=defined
+names=public_key=
+visibility=public
+
+--- public_key=(pubkey)
+公開鍵となる楕円曲線上の点を表すオブジェクトを設定します。
+
+通常このメソッドで値を変更することはありません。
+よく考えて必要な場合のみ利用してください。
+
+@param pubkey 公開鍵となる [[c:OpenSSL::PKey::EC::Point]] オブジェクト
+
+@see [[m:OpenSSL::PKey::EC#public_key]]
+

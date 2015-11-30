@@ -1,0 +1,13 @@
+kind=defined
+names=sfork
+visibility=public
+
+--- sfork(command){ ... } -> [Integer, IO, IO]
+
+シンプルな fork です。
+
+@param command コマンドを指定します。
+
+@return [PID, 入力用 IO, 出力用 IO] からなる配列を返します。
+
+

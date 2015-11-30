@@ -1,0 +1,31 @@
+kind=defined
+names=pipeline_r
+visibility=public
+
+--- pipeline_r(*cmds) -> [IO, [Thread]]
+--- pipeline_r(*cmds) {|last_stdout, wait_thrs| ... } -> ()
+
+指定したコマンドのリストをパイプで繋いで順番に実行します。最後の
+コマンドの標準出力を受けとる事ができます。
+
+@param cmds 実行するコマンドのリストを指定します。
+
+@return ブロックを指定した場合はブロックの最後に評価された値を返します。
+        ブロックを指定しなかった場合は最後に実行するコマンドの標準出力、
+        実行したプロセスを待つためのスレッドの配列を配列で返します。
+
+例:
+
+  require "open3"
+  
+  Open3.pipeline_r("yes", "head -10") {|r, ts|
+    p r.read      #=> "y\ny\ny\ny\ny\ny\ny\ny\ny\ny\n"
+    p ts[0].value #=> #<Process::Status: pid 24910 SIGPIPE (signal 13)>
+    p ts[1].value #=> #<Process::Status: pid 24913 exit 0>
+  }
+
+[[m:Open3.#popen3]]と同様に引数に環境変数とオプションを指定してコマンド
+を実行する事ができます。
+
+@see [[m:Open3.#popen3]]
+

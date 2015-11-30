@@ -1,0 +1,8 @@
+kind=defined
+names=exclusive?,sync_exclusive?
+visibility=public
+
+--- sync_exclusive? -> bool
+--- exclusive? -> bool
+排他ロックされているかどうかを返します。
+

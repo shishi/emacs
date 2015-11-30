@@ -1,0 +1,8 @@
+kind=defined
+names=hash
+visibility=public
+
+--- hash() -> Fixnum
+
+自分自身のハッシュ値を返します。
+

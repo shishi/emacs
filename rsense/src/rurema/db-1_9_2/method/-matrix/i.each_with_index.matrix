@@ -1,0 +1,17 @@
+kind=defined
+names=each_with_index
+visibility=public
+
+--- each_with_index {|e, row, col| ... }  -> self
+
+Yields all elements of the matrix, starting with those of the first row,
+along with the row index and column index,
+or returns an Enumerator is no block given
+
+  Matrix[ [1,2], [3,4] ].each_with_index do |e, row, col|
+    puts "#{e} at #{row}, #{col}"
+  end
+    # => 1 at 0, 0
+    # => 2 at 0, 1
+    # => 3 at 1, 0
+    # => 4 at 1, 1

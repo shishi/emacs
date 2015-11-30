@@ -1,0 +1,16 @@
+kind=defined
+names=use_readline=
+visibility=public
+
+--- use_readline=(val)
+
+[[lib:readline]] を使うかどうかを指定します。
+val の値によって、このメソッドの効果は以下のように分かれます。
+
+: true
+    readline ライブラリを使う
+: false
+    readline ライブラリを使わない
+: nil
+    inf-ruby-mode 以外で readline ライブラリを利用しようとする (デフォルト)
+

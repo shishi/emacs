@@ -1,0 +1,10 @@
+name=rb_obj_alloc
+private=false
+macro=false
+type=VALUE
+filename=object.c
+params=(VALUE klass)
+
+
+klass のインスタンスを作成する。
+

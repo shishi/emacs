@@ -1,0 +1,6 @@
+kind=defined
+names=thread_update
+visibility=public
+
+--- thread_update(idle = nil)
+

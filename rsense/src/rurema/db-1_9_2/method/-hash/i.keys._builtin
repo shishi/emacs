@@ -1,0 +1,13 @@
+kind=defined
+names=keys
+visibility=public
+
+--- keys -> [object]
+
+全キーの配列を返します。
+
+   h1 = { "a" => 100, 2 => ["some"], :c => "c" }
+   p h1.keys           #=> ["a", 2, :c]
+
+@see [[m:Hash#values]],[[m:Hash#to_a]]
+

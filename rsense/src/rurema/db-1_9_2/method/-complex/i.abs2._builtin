@@ -1,0 +1,20 @@
+kind=defined
+names=abs2
+visibility=public
+
+--- abs2 -> Numeric
+
+自身の絶対値の 2 乗を返します。
+
+以下の計算の結果を返します。
+
+  self.real ** 2 + self.imag **2
+
+例:
+
+  Complex(1, 1).abs2         # => 2
+  Complex(1.0, 1.0).abs2     # => 2.0
+  Complex('1/2', '1/2').abs2 # => (1/2)
+
+@see [[m:Complex#abs]]
+

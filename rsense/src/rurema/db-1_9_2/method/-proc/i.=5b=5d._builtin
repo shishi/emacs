@@ -1,0 +1,15 @@
+kind=defined
+names=[],call
+visibility=public
+
+--- [](*arg) -> ()
+--- call(*arg) -> ()
+
+手続きオブジェクトを実行してその結果を返します。
+
+引数はブロックパラメータにそのまま(多重代入のルールに従い)代入されます。
+
+@param arg 手続きオブジェクトに与える引数を指定します。
+
+@raise LocalJumpError Procを生成したメソッドからリターンしてしまった場合に発生します。
+

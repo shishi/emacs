@@ -1,0 +1,8 @@
+kind=defined
+names=F34
+visibility=public
+
+--- F34 -> Integer
+
+F34 キーを表す定数です。
+

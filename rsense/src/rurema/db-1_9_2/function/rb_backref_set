@@ -1,0 +1,10 @@
+name=rb_backref_set
+private=false
+macro=false
+type=void
+filename=parse.y
+params=(VALUE val)
+
+
+現在の SCOPE の $~ に val を代入します。
+

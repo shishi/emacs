@@ -1,0 +1,20 @@
+kind=defined
+names=denominator
+visibility=public 
+
+--- denominator -> Integer
+
+分母を返します。常に正の整数を返します。
+
+@return 分母を返します。
+
+例:
+
+  Rational(7).denominator       # => 1
+  Rational(7, 1).denominator    # => 1
+  Rational(9, -4).denominator   # => 4
+  Rational(-2, -10).denominator # => 5
+
+@see [[m:Rational#numerator]]
+
+

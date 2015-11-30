@@ -1,0 +1,8 @@
+kind=defined
+names=config
+visibility=public
+
+--- config    -> Hash
+
+自身が生成される時に指定されたハッシュを返します。
+

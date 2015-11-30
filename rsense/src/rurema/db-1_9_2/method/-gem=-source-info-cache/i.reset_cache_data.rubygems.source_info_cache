@@ -1,0 +1,8 @@
+kind=defined
+names=reset_cache_data
+visibility=public 
+
+--- reset_cache_data -> true
+
+キャッシュデータをリセットします。
+

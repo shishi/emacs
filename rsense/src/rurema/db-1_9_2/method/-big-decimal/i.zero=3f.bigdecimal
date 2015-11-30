@@ -1,0 +1,10 @@
+kind=defined
+names=zero?
+visibility=public
+
+--- zero?
+
+a が 0 なら true を返します。 
+
+    c = a.zero? 
+

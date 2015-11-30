@@ -1,0 +1,16 @@
+kind=defined
+names=wait_until
+visibility=public
+
+--- wait_until { ... } -> ()
+モニタのロックを開放し、現在のスレッドを
+ブロックで指定した条件を満たすまで停止します。
+
+[[m:MonitorMixin::ConditionVariable#signal]] や
+[[m:MonitorMixin::ConditionVariable#broadcast]] で
+スレッドが起こされると、ロックを取得し、ブロックを評価し
+その結果によってこのメソッドから抜け処理を継続するか
+再びロックを開放しスレッドを停止するかを決めます。
+
+@see [[m:MonitorMixin::ConditionVariable#wait]]
+

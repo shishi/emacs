@@ -1,0 +1,21 @@
+kind=defined
+names=eql?
+visibility=public
+
+--- eql?(other)    -> bool
+
+自身と other のクラスが同じであり、各メンバが eql? メソッドで比較して等しい場合に
+true を返します。そうでない場合に false を返します。
+
+@param other 自身と比較したいオブジェクトを指定します。
+
+  Dog = Struct.new(:name, :age)
+  dog1 = Dog.new("fred", 5)
+  dog2 = Dog.new("fred", 5)
+
+  p dog1 == dog2                #=> true
+  p dog1.eql?(dog2)             #=> true
+  p dog1.equal?(dog2)           #=> false
+
+@see [[m:Struct#==]]
+

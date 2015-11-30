@@ -1,0 +1,8 @@
+kind=defined
+names=delim
+visibility=public
+
+--- delim
+
+Returns the hierarchy delimiter
+

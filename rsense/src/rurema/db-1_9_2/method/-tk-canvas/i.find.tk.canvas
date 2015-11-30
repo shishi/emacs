@@ -1,0 +1,8 @@
+kind=defined
+names=find
+visibility=public
+
+--- find(mode, *args)
+
+
+

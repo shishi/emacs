@@ -1,0 +1,14 @@
+kind=defined
+names=uninstall_gem
+visibility=public 
+
+--- uninstall_gem(spec, specs)
+
+与えられた spec に対応する Gem をアンインストールします。
+
+@param spec アンインストール指定されている Gem の [[c:Gem::Specification]] を指定します。
+
+@param specs アンインストールする Gem のリストを指定します。
+             このパラメータは破壊的に変更されます。
+
+

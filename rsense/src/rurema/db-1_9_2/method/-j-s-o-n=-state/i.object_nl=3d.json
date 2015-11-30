@@ -1,0 +1,10 @@
+kind=defined
+names=object_nl=
+visibility=public 
+
+--- object_nl=(string)
+
+JSON 形式の文字列中に現れる JavaScript のオブジェクトの行末に挿入する文字列をセットします。
+
+@param string JSON 形式の文字列中に現れる JavaScript のオブジェクトの行末に挿入する文字列を指定します。
+

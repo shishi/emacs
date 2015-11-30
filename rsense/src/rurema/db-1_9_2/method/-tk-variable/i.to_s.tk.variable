@@ -1,0 +1,8 @@
+kind=defined
+names=to_s
+visibility=public
+
+--- to_s
+
+値を文字列([[c:String]])として返します。
+

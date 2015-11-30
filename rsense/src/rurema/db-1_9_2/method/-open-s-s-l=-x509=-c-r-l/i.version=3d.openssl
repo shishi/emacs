@@ -1,0 +1,13 @@
+kind=defined
+names=version=
+visibility=public
+
+--- version=(version)
+その CRL が準拠している規格のバージョンを設定します。
+
+X.509 v2 CRL であれば 1 を渡します。
+
+@param version 設定するバージョンの整数
+@raise OpenSSL::X509::CRLError 設定に失敗した場合に発生します
+@see [[m:OpenSSL::X509::CRL#version]]
+

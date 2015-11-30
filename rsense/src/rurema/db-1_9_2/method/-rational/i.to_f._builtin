@@ -1,0 +1,17 @@
+kind=defined
+names=to_f
+visibility=public 
+
+--- to_f -> Float
+
+自身を [[c:Float]] に変換します。
+
+@return 実数を返します。
+
+例:
+
+  Rational(2).to_f      # => 2.0
+  Rational(9, 4).to_f   # => 2.25
+  Rational(-3, 4).to_f  # => -0.75
+  Rational(20, 3).to_f  # => 6.666666666666667
+

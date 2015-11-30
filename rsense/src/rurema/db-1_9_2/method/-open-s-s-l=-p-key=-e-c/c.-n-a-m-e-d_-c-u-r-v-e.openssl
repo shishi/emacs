@@ -1,0 +1,6 @@
+kind=defined
+names=NAMED_CURVE
+visibility=public
+
+--- NAMED_CURVE -> Integer
+

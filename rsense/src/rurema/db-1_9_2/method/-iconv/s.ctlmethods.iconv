@@ -1,0 +1,9 @@
+kind=defined
+names=ctlmethods
+visibility=public
+
+--- ctlmethods -> Array
+
+システム上のlibiconvのiconvctl()関数で使用可能なフラグのリストを [[c:Array]] として返します。
+
+

@@ -1,0 +1,33 @@
+kind=defined
+names=pos,tell
+visibility=public
+
+--- pos -> Integer
+--- tell -> Integer
+ARGFが現在開いているファイルのファイルポインタの現在の位置を整数で返します。
+
+  ARGV.replace(
+    Dir.glob("*").reject{|name| FileTest.file?(name) == false}
+  )
+
+  while c = ARGF.getc
+    printf("%d '%c' %s\n", ARGF.pos, c, ARGF.filename)
+    if ARGF.pos == 3
+      ARGF.skip
+    end
+  end
+
+  # 例
+  #=> 1 'c' sample.yaml
+  #=> 2 'a' sample.yaml
+  #=> 3 't' sample.yaml
+  #=> 1 '#' test.rb
+  #=> 2 '!' test.rb
+  #=> 3 '/' test.rb
+  #=> 1 'd' third.txt
+  #=> 2 'r' third.txt
+  #=> 3 'y' third.txt
+  #...
+
+@see [[m:IO#pos]], [[m:IO#tell]]
+

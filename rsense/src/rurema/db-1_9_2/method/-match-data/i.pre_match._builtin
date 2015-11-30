@@ -1,0 +1,12 @@
+kind=defined
+names=pre_match
+visibility=public
+
+--- pre_match -> String
+
+マッチした部分より前の文字列を返します([[m:$`]]と同じ)。
+
+  /(bar)(BAZ)?/ =~ "foobarbaz"
+  p $~.pre_match  # => "foo"
+
+

@@ -1,0 +1,2 @@
+.escape	WEBrick::HTMLUtils.#escape
+#escape	WEBrick::HTMLUtils.#escape

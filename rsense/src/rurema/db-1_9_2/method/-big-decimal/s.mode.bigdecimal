@@ -1,0 +1,63 @@
+kind=defined
+names=mode
+visibility=public
+
+--- mode(s [, v])
+
+BigDecimalの実行結果を制御します。
+第2引数を省略、または nil を指定すると現状の設定値が戻ります。
+以下の使用方法が定義されています。
+
+==== 例外処理
+
+計算結果が非数(NaN)やゼロによる除算になったときの処理を定義することができます。
+
+//emlist{
+f = BigDecimal::mode(BigDecimal::EXCEPTION_NaN,flag)
+f = BigDecimal::mode(BigDecimal::EXCEPTION_INFINITY,flag)
+f = BigDecimal::mode(BigDecimal::EXCEPTION_UNDERFLOW,flag)
+f = BigDecimal::mode(BigDecimal::EXCEPTION_OVERFLOW,flag)
+f = BigDecimal::mode(BigDecimal::EXCEPTION_ZERODIVIDE,flag)
+f = BigDecimal::mode(BigDecimal::EXCEPTION_ALL,flag)
+//}
+
+  * [[m:BigDecimal::EXCEPTION_NaN]] は結果が NaN になったときの指定です。
+  * [[m:BigDecimal::EXCEPTION_INFINITY]] は結果が無限大(±Infinity)になったときの指定です。
+  * [[m:BigDecimal::EXCEPTION_UNDERFLOW]] は指数部がアンダーフローするときの指定です。
+  * [[m:BigDecimal::EXCEPTION_OVERFLOW]] は指数部がオーバーフローするときの指定です。
+  * [[m:BigDecimal::EXCEPTION_ZERODIVIDE]] はゼロによる割り算を実行したときの指定です。
+  * [[m:BigDecimal::EXCEPTION_ALL]] は、可能な全てに対して一括して設定するときに使用します。
+
+flag が true のときは、指定した状態になったときに例外を発行するようになります。
+flag が false(デフォルト)なら、例外は発行されません。計算結果は以下のようになります。
+
+  * [[m:BigDecimal::EXCEPTION_NaN]] のとき、非数(NaN)
+  * [[m:BigDecimal::EXCEPTION_INFINITY]] のとき、無限(+ or -Infinity)
+  * [[m:BigDecimal::EXCEPTION_UNDERFLOW]] のとき、ゼロ
+  * [[m:BigDecimal::EXCEPTION_OVERFLOW]] のとき、+Infinity か -Infinity
+  * [[m:BigDecimal::EXCEPTION_ZERODIVIDE]] のとき、+Infinity か -Infinity
+
+[[m:BigDecimal::EXCEPTION_INFINITY]]、[[m:BigDecimal::EXCEPTION_OVERFLOW]]、
+[[m:BigDecimal::EXCEPTION_ZERODIVIDE]] は今のところ同じです。
+戻り値は、設定後の値です。「値」の意味は、例えば [[m:BigDecimal::EXCEPTION_NaN]]
+と「値」の & が ゼロ以外ならば [[m:BigDecimal::EXCEPTION_NaN]]が設定されているという意味です。
+
+==== 丸め処理指定
+
+計算途中の丸め操作の指定ができます。
+
+  f = BigDecimal::mode(BigDecimal::ROUND_MODE,flag) 
+
+の形式で指定します。
+ここで、flag は以下(括弧内は対応するインスタンスメソッド)の一つを指定します。
+
+  * [[m:BigDecimal::ROUND_UP]] 全て切り上げます。
+  * [[m:BigDecimal::ROUND_DOWN]] 全て切り捨てます(truncate)。
+  * [[m:BigDecimal::ROUND_HALF_UP]] 四捨五入します(デフォルト)。
+  * [[m:BigDecimal::ROUND_HALF_DOWN]] 五捨六入します。
+  * [[m:BigDecimal::ROUND_HALF_EVEN]] 四捨六入します。5の時は上位1桁が奇数の時のみ繰り上げます(Banker's rounding)。
+  * [[m:BigDecimal::ROUND_CEILING]] 数値の大きい方に繰り上げます(ceil)。
+  * [[m:BigDecimal::ROUND_FLOOR]] 数値の小さい方に繰り下げます(floor)。
+
+戻り値は指定後の flag の値です。第2引数に nil を指定すると、現状の設定値が返ります。 mode メソッドでは丸め操作の位置をユーザが指定することはできません。丸め操作と位置を自分で制御したい場合は BigDecimal::limit や truncate/round/ceil/floor、 add/sub/mult/div といったインスタンスメソッドを使用して下さい。 
+

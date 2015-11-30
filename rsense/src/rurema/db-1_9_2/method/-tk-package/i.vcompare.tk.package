@@ -1,0 +1,6 @@
+kind=defined
+names=vcompare
+visibility=public
+
+--- vcompare(version1, version2)
+

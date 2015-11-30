@@ -1,0 +1,27 @@
+kind=defined
+names=new2
+visibility=public
+
+--- new2(user, password, host, port, path, typecode = nil, arg_check = true)    -> URI::FTP
+
+URI::FTP オブジェクトを生成して返します。
+引数の正当性を検査します。
+
+@param user 構成要素を表す文字列を与えます。
+
+@param password 構成要素を表す文字列を与えます。
+
+@param host 構成要素を表す文字列を与えます。
+
+@param port 構成要素を表す文字列を与えます。
+
+@param path 構成要素を表す文字列を与えます。
+
+@param typecode 構成要素を表す文字列を与えます。
+
+@param arg_check 真が与えられた場合は、各引数が字句規則に適合しているか否かを検査します。適合しない場合は例外 URI::InvalidComponentError が起ります。
+
+@raise ArgumentError typecode が正当でなかった場合に発生します。
+
+@raise URI::InvalidURIError 引数が invalid な場合に発生します。
+

@@ -1,0 +1,16 @@
+kind=defined
+names=close
+visibility=public
+
+--- close(real = false) -> nil
+
+テンポラリファイルをクローズします。
+real が偽ならば、テンポラリファイルはGCによって削除されます。
+そうでなければ、すぐに削除されます。
+
+@param real false もしくはそれ以外を指定します。
+
+  tf = Tempfile.open("bar")
+  tf.close
+  p FileTest.exist?(tf.path) # => true
+

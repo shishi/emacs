@@ -1,0 +1,9 @@
+kind=defined
+names===,eql?
+visibility=public
+
+--- ==(other) -> bool
+--- eql?(other) -> bool
+
+自分自身と other を比較し、同値であれば真(true)を返します。
+

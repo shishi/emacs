@@ -1,0 +1,18 @@
+kind=defined
+names=log10!
+visibility=public
+
+--- log10!(x) -> Float
+
+実数 x の常用対数を返します。[[m:Math.#log10]] のエイリアスです。
+
+@param x 真数を正の実数で指定します。
+
+@raise Math::DomainError x が負の数である場合に発生します。
+
+@raise TypeError x に数値以外を指定した場合に発生します。
+
+@raise RangeError x に実数以外の数値を指定した場合に発生します。
+
+@see [[m:Math.#log10]]
+

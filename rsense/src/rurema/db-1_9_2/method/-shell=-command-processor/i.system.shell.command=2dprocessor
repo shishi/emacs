@@ -1,0 +1,23 @@
+kind=defined
+names=system
+visibility=public
+
+--- system(command, *opts) -> Shell::SystemCommand
+
+command を実行する.
+
+@param command 実行するコマンドのパスを文字列で指定します。
+
+@param opts command のオプションを文字列で指定します。複数可。
+
+使用例:
+
+  require 'shell'
+  Shell.verbose = false
+  sh = Shell.new
+
+  print sh.system("ls", "-l")
+  Shell.def_system_command("head")
+  sh.system("ls", "-l") | sh.head("-n 3") > STDOUT
+
+

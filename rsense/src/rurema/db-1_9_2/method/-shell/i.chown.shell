@@ -1,0 +1,15 @@
+kind=defined
+names=chown
+visibility=public
+
+--- chown(owner, group, *filename)    -> Integer
+[[c:File]] クラスにある同名のクラスメソッドと同じです.
+
+@param owner [[man:chown(2)]] と同様に数値で指定します。nil または -1 を指定することで、オーナーを現在の>ままにすることができます。
+
+@param group [[man:chown(2)]] と同様に数値で指定します。nil または -1 を指定することで、グループを現在の>ままにすることができます。
+
+@param filename ファイル名を表す文字列を指定します。
+
+@see [[m:File.chown]]
+

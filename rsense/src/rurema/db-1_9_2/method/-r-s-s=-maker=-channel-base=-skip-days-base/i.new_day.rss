@@ -1,0 +1,9 @@
+kind=defined
+names=new_day
+visibility=public
+
+--- new_day
+新しくdayを作成し，返します．作成された
+dayはdayリストの最後
+に追加されています．
+

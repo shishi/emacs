@@ -1,0 +1,12 @@
+kind=defined
+names=-
+visibility=public
+
+--- - (x) -> Rational | Date
+x が日付オブジェクトなら、ふたつの差を返します。
+あるいは
+x が数値ならば、self より x 日前の日付を返します。
+
+@param x 日数、あるいは日付オブジェクト
+@raise TypeError x が数値でも日付オブジェクトでもない場合に発生します。
+

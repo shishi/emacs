@@ -1,0 +1,22 @@
+kind=defined
+names=VERIFY_NONE
+visibility=public
+
+--- VERIFY_NONE -> Integer
+[[m:OpenSSL::SSL::SSLContext#verify_mode=]] で指定できるフラグです。
+
+サーバーモードであるかクライアントモードであるかによって意味がことなります。
+
+サーバーモード: クライアントに証明書を要求せず、クライアントは証明書を
+送り返しません。
+
+クライアントモード: サーバから受け取った証明書は検証されますが、失敗しても
+ハンドシェイクは継続します。
+ハンドシェイクの結果は [[m:OpenSSL::SSL::SSLSocket#verify_result]] で
+取得できます。
+
+このフラグは単独で用いられるべきです。
+
+
+
+

@@ -1,0 +1,20 @@
+kind=defined
+names=chown
+visibility=public
+
+--- chown(owner, group)    -> 0
+
+ファイルのオーナーとグループを変更します。
+
+適切な権限があればファイルのオーナーとグループを変更できます。
+所有者の変更に成功した場合は 0 を返します。変更に失敗した場合は
+例外 [[c:Errno::EXXX]] が発生します。
+
+@param owner [[man:chown(2)]] と同様に数値で指定します。nil または -1 を指定することで、オーナーを現在のままにすることができます。
+
+@param group [[man:chown(2)]] と同様に数値で指定します。nil または -1 を指定することで、グループを現在のままにすることができます。
+
+@raise IOError 自身が close されている場合に発生します。
+
+@raise Errno::EXXX 変更に失敗した場合に発生します。
+

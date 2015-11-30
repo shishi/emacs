@@ -1,0 +1,7 @@
+kind=defined
+names=widget,window
+visibility=public
+
+--- widget
+--- window
+

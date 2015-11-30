@@ -1,0 +1,9 @@
+kind=defined
+names=writable?
+visibility=public
+
+--- writable? -> bool
+書き込み可能な時に真を返します。
+
+  p File::Stat.new($0).writable? #=> true
+

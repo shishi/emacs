@@ -1,0 +1,11 @@
+kind=defined
+names=<=>
+visibility=public
+
+--- <=> (other) -> Integer
+ふたつを比較し、-1、零、あるいは 1 を返します。
+other は日付オブジェクトか、
+天文学的なユリウス日をあらわす数値でなければなりません。
+
+@param other 日付オブジェクト
+

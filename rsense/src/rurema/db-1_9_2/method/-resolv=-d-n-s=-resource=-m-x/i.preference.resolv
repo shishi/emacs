@@ -1,0 +1,7 @@
+kind=defined
+names=preference
+visibility=public
+
+--- preference -> Integer
+このMXレコードの優先度を返します。
+

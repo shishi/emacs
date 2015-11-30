@@ -1,0 +1,8 @@
+kind=defined
+names=SPECIFICATION_VERSION_HISTORY
+visibility=public
+
+--- SPECIFICATION_VERSION_HISTORY -> Hash
+
+gemspec ファイルのバージョンの歴史を表す定数です。
+

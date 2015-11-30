@@ -1,0 +1,17 @@
+kind=defined
+names=abort_on_exception,abort_on_exception=
+visibility=public
+
+--- abort_on_exception             -> bool
+--- abort_on_exception=(newstate)
+
+真の時は、いずれかのスレッドが例外によって終了した時に、インタプリタ
+全体を中断させます。false の場合、あるスレッドで起こった例外は、[[m:Thread#join]]
+などで検出されない限りそのスレッドだけをなにも警告を出さずに終了させます。
+
+デフォルトは false です。
+
+[[ref:c:Thread#exception]]を参照してください。
+
+@param newstate スレッド実行中に例外発生した場合、インタプリタ全体を終了させるかどうかを true か false で指定します。
+

@@ -1,0 +1,11 @@
+kind=defined
+names=disable_ssl,disable_tls
+visibility=public
+
+--- disable_ssl -> ()
+--- disable_tls -> ()
+
+その Net::SMTP オブジェクトが SMTPS を利用しないよう設定します。
+
+@see [[m:Net::SMTP#disable_tls]], [[m:Net::SMTP#tls?]]
+

@@ -1,0 +1,8 @@
+kind=defined
+names=SRSUME
+visibility=public
+
+--- SRSUME -> Integer
+
+Shift + Resume キーを表す定数です。
+

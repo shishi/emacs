@@ -1,0 +1,7 @@
+superclass=ArgumentError
+type=class
+library=rake
+extended=
+included=
+
+間違ったタスクの定義を行った場合に発生する例外です。

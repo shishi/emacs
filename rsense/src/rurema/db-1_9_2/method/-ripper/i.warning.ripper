@@ -1,0 +1,17 @@
+kind=defined
+names=warning
+visibility=private 
+
+--- warning(fmt, *args) -> nil
+
+解析した Ruby プログラムの中に重要な警告([[m:$-w]] が false の時だけ出
+力される警告)を出力するようなものがあった場合に実行されます。
+
+@param fmt エラーメッセージのフォーマット文字列です。
+
+@param args エラーメッセージのフォーマットされる引数です。
+
+サブクラスでオーバライドして使用します。
+
+引数のエラーメッセージは printf フォーマットに従って渡されます。
+

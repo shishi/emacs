@@ -1,0 +1,9 @@
+kind=defined
+names=lineno
+visibility=public
+
+--- lineno -> Fixnum
+
+このファイルから読み込んだ最終行の行番号を返します。
+フィールドに含まれる改行はこの値には影響しません。
+
