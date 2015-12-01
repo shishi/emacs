@@ -11,4 +11,3 @@
   (add-to-list 'ac-modes 'haml-mode))
 
 (add-hook 'haml-mode-hook 'haml-mode-hook-for-haml-mode-setting)
-(add-hook 'haml-mode-hook 'flycheck-mode)

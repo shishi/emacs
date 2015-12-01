@@ -10,5 +10,3 @@
     (turn-on-eldoc-mode)))
 ;; emacs-lisp-modeのフックをセット
 (add-hook 'emacs-lisp-mode-hook 'elisp-mode-hooks)
-
-(add-hook 'emacs-lisp-mode-hook 'flycheck-mode)

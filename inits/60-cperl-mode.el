@@ -53,5 +53,3 @@
 ;; (global-set-key "?C-ct" 'perltidy-region)
 ;; (global-set-key "?C-c?C-t" 'perltidy-defun)
 (add-hook  'cperl-mode-hook 'cperl-mode-hook-for-perltidy)
-
-(add-hook 'cperl-mode-hook 'flycheck-mode)

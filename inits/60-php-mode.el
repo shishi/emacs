@@ -26,4 +26,3 @@
   )
 
 (add-hook 'php-mode-hook 'php-mode-hook-for-php-mode-setting)
-(add-hook 'php-mode-hook 'flycheck-mode)

@@ -18,4 +18,5 @@ tramp
 !/elisp/el-get/.loaddefs.elc
 !/elisp/el-get/.status.el
 !/elisp/el-get/.status.elc
+
 projectile-bookmarks.eld

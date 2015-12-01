@@ -2,11 +2,7 @@
 
 ;; built-in color theme
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/elisp/package/solarized-theme-20150220.1042")
-(add-to-list 'custom-theme-load-path "~/.emacs.d/elisp/package/smyx-theme-20141127.28")
-(add-to-list 'custom-theme-load-path "~/.emacs.d/elisp/package/darcula-theme-20150115.2340")
-(add-to-list 'custom-theme-load-path "~/.emacs.d/elisp/package/sublime-themes-20150217.23")
-(load-theme 'darcula t)
+(load-theme 'atom-dark t)
 
 ;; old color theme
 ;; ;; (setq color-theme-directory "~/.emacs.d/elisp/theme/")

@@ -26,8 +26,6 @@
 ;; (define-key ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent)
 ;; (define-key ruby-mode-map (kbd "C-m") 'reindent-then-newline-and-indent)
 
-(add-hook 'enh-ruby-mode-hook 'flycheck-mode)
-
 ;; auto-complete-mode on
 (setq ac-modes
   (append ac-modes
