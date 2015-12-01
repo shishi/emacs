@@ -1,10 +1,5 @@
 ;; 他のものと結びつかない独立した関数など
 
-;; 自動で適用する local-variables
-(custom-set-variables
- '(safe-local-variable-values (quote ((encoding . utf-8) (ruby-compilation-executable . "ruby") (ruby-compilation-executable . "ruby1.8") (ruby-compilation-executable . "ruby1.9") (ruby-compilation-executable . "rbx") (ruby-compilation-executable . "jruby"))))
- )
-
 ;; display 'git log -p'
 ;; http://d.hatena.ne.jp/kitokitoki/20120218/p2 改
 (require 'cl)
@@ -128,6 +123,7 @@
     ""))
 (add-to-list 'default-mode-line-format
              '(:eval (count-lines-and-chars)))
+
 ;;; shibang のあるファイルに保存時実行権限付加
 (add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)
 
@@ -156,45 +152,6 @@
      ((string-match "[\t\n -@\[-`{-~]" char) (kill-word 1))
      (t (forward-char) (backward-word) (kill-word 1)))))
 (global-set-key "\M-d" 'kill-word-at-point)
-
-;;; 削除ファイルをゴミ箱へ
-(setq delete-by-moving-to-trash t)
-(setq trash-directory "~/.emacs.d/trash")
-
-;;; オートセーブファイル作成までの秒間隔
-(setq auto-save-timeout 15)
-
-;;; オートセーブファイル作成までのタイプ間隔
-(setq auto-save-interval 60)
-
-;;; バックアップ設定
-(setq backup-by-copying t)
-(setq backup-by-copying-when-linked t)
-(setq backup-by-copying-when-mismatch t)
-
-(setq version-control t)
-(setq kept-new-versions 5)
-(setq kept-old-versions 5)
-(setq delete-old-versions t)
-(setq dired-kept-versions 5)
-
-;;; バックアップとオートセーブファイルを~/.emacs.d/backup/へ集める
-(setq backup-directory-alist
-          `((".*" . ,(expand-file-name "~/.emacs.d/backup/"))))
-(setq auto-save-file-name-transforms
-          `((".*" ,(expand-file-name "~/.emacs.d/backup/") t)))
-
-;; ;;; バックアップファイルの保存場所を変更
-;; (setq backup-directory "~/.emacs.d/backup")
-;; (if (and (boundp 'backup-directory)
-;;          (not (fboundp 'make-backup-file-name-original)))
-;;     (progn
-;;       (fset 'make-backup-file-name-original
-;;             (symbol-function 'make-backup-file-name))
-;;       (defun make-backup-file-name (filename)
-;;         (if (file-directory-p backup-directory)
-;;             (concat backup-directory "/" (file-name-nondirectory filename))
-;;           (make-backup-file-name-original filename)))))
 
 ;;; 自分以外の所有のファイルを sudo で開き直す
 (defun file-root-p (filename)

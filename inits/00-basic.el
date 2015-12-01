@@ -140,9 +140,6 @@
 ;; gzファイルも編集できるようにする
 (auto-compression-mode t)
 
-;; D&Dでファイルオープン
-(define-key global-map [ns-drag-file] 'ns-find-file)
-
 ;; マウスで選択するとコピー
 (setq mouse-drag-copy-region t)
 
@@ -206,3 +203,42 @@
 ;; (setq cua-mode-normal-cursor-color "white")
 ;; (setq cua-mode-overwrite-cursor-color "red")
 ;; (setq cua-mode-read-only-cursor-color "green")
+
+;;; 削除ファイルをゴミ箱へ
+(setq delete-by-moving-to-trash t)
+(setq trash-directory "~/.emacs.d/trash")
+
+;;; オートセーブファイル作成までの秒間隔
+(setq auto-save-timeout 15)
+
+;;; オートセーブファイル作成までのタイプ間隔
+(setq auto-save-interval 60)
+
+;;; バックアップ設定
+(setq backup-by-copying t)
+(setq backup-by-copying-when-linked t)
+(setq backup-by-copying-when-mismatch t)
+
+(setq version-control t)
+(setq kept-new-versions 5)
+(setq kept-old-versions 5)
+(setq delete-old-versions t)
+(setq dired-kept-versions 5)
+
+;;; バックアップとオートセーブファイルを~/.emacs.d/backup/へ集める
+(setq backup-directory-alist
+          `((".*" . ,(expand-file-name "~/.emacs.d/backup/"))))
+(setq auto-save-file-name-transforms
+          `((".*" ,(expand-file-name "~/.emacs.d/backup/") t)))
+
+;; ;;; バックアップファイルの保存場所を変更
+;; (setq backup-directory "~/.emacs.d/backup")
+;; (if (and (boundp 'backup-directory)
+;;          (not (fboundp 'make-backup-file-name-original)))
+;;     (progn
+;;       (fset 'make-backup-file-name-original
+;;             (symbol-function 'make-backup-file-name))
+;;       (defun make-backup-file-name (filename)
+;;         (if (file-directory-p backup-directory)
+;;             (concat backup-directory "/" (file-name-nondirectory filename))
+;;           (make-backup-file-name-original filename)))))
