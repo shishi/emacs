@@ -64,6 +64,7 @@
 (depends-on "projectile")
 (depends-on "projectile-rails")
 (depends-on "quickrun")
+(depends-on "railscasts-theme")
 (depends-on "rainbow-delimiters")
 (depends-on "rake")
 (depends-on "rbenv")
