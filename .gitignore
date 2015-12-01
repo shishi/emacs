@@ -13,10 +13,10 @@ tramp
 /url
 /var
 
-/elisp/el-get/*
-!/elisp/el-get/.loaddefs.el
-!/elisp/el-get/.loaddefs.elc
-!/elisp/el-get/.status.el
-!/elisp/el-get/.status.elc
+# /elisp/el-get/*
+# !/elisp/el-get/.loaddefs.el
+# !/elisp/el-get/.loaddefs.elc
+# !/elisp/el-get/.status.el
+# !/elisp/el-get/.status.elc
 
 projectile-bookmarks.eld
