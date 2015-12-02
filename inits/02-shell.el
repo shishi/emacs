@@ -6,8 +6,8 @@
       (remove-duplicates
        (append
         (list
-         (expand-file-name "~/.rbenv/bin")
-         (expand-file-name "~/.rbenv/shims")
+         (expand-file-name "~/.anyenv/envs/rbenv/bin")
+         (expand-file-name "~/.anyenv/envs/rbenv/shims")
          (expand-file-name "~/.emacs.d/bin")
          (expand-file-name "~/bin")
          "/Developer/Tools"

@@ -10,5 +10,5 @@
 ;; (define-key projectile-rails-mode-map (kbd "s-M-v")   'projectile-rails-find-current-view)
 ;; (define-key projectile-rails-mode-map (kbd "s-M-h")   'projectile-rails-find-current-helper)
 ;; (define-key projectile-rails-mode-map (kbd "s-M-s")   'projectile-rails-find-current-spec)
-;; (define-key projectile-rails-mode-map (kbd "s-M-RET") 'projectile-rails-goto-file-at-point)
-;; (define-key projectile-rails-mode-map (kbd "s-M-g")  projectile-rails-mode-goto-map)
+;; (define-key projectile-rails-mode-map (kbd "s-M-p")   'projectile-rails-goto-file-at-point)
+;; (define-key projectile-rails-mode-map (kbd "s-M-g")   projectile-rails-mode-goto-map)

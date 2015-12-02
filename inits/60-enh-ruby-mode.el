@@ -23,13 +23,11 @@
 
 ;; 上書きされるため再定義
 (define-key enh-ruby-mode-map (kbd "C-m") 'newline-and-indent)
-;; (define-key ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent)
+;; (define-key ruby-mode-map (kbd "<return>") 'reindent-then-newline-and-indent)
 ;; (define-key ruby-mode-map (kbd "C-m") 'reindent-then-newline-and-indent)
 
-;; auto-complete-mode on
-(setq ac-modes
-  (append ac-modes
-    (list 'enh-ruby-mode)))
+;; ;; auto-complete-mode on
+;; (add-to-list 'ac-modes 'enh-ruby-mode))
 
 ;; 保存時にmagic commentを追加しないようにする
 (setq enh-ruby-use-encoding-map nil)

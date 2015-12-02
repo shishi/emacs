@@ -37,4 +37,5 @@
                      ac-source-dictionary
                      ))
   (flymake-mode t))
-(add-to-list 'ac-modes 'scss-mode)
+
+;; (add-to-list 'ac-modes 'scss-mode)

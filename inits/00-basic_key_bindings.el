@@ -49,10 +49,6 @@
 ;; C-x l で goto-line を実行
 (define-key ctl-x-map "l" 'goto-line)
 
-;; C-j の挙動を C-m でも
-(define-key global-map (kbd "C-m") 'newline-and-indent)
-(define-key global-map (kbd "RET") 'newline-and-indent)
-
 ;; C-o のときインデントもする
 (defun open-line-above ()
   "Open a line above the line the point is at .

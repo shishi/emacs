@@ -4,8 +4,8 @@
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
 (smartrep-define-key
-    global-map "C-c" '(("M-n" . 'flycheck-next-error)
-                       ("M-p" . 'flycheck-previous-error)))
+    global-map "C-c" '(("n" . 'flycheck-next-error)
+                       ("p" . 'flycheck-previous-error)))
 
 (delete 'ruby-rubocop flycheck-checkers)
 ;; ;; ruby-rubocop を削除
