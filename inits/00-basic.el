@@ -149,8 +149,8 @@
 ;; always follow symlink
 (setq vc-follow-symlinks t)
 
-;; auto-scroll
-(setq compilation-scroll-output t)
+;; ;; auto-scroll
+;; (setq compilation-scroll-output t)
 
 ;; abbrev-mode
 (setq-default abbrev-mode t)

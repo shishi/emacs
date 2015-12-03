@@ -1,4 +1,4 @@
-;; smartrep
+;;; smartrep
 (require 'smartrep)
 
 (defvar ctl-q-map (make-keymap))
@@ -15,9 +15,5 @@
 
 ;; (previous|next)-error
 (smartrep-define-key
-    global-map "C-q" '(("M-n" . (next-error))
-                       ("M-p" . (previous-error))))
-
-;; redo
-(smartrep-define-key
-    global-map "C-q" '(("C-/" . (redo))))
+    global-map "C-q" '(("C-n" . (next-error))
+                       ("C-p" . (previous-error))))
