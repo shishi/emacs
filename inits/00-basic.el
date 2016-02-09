@@ -119,6 +119,9 @@
 ;;;; 行末の空白を削除
 ;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;; ファイル終端に改行
+(setq require-final-newline t)
+
 ;; find-file で大文字小文字を区別しない
 (setq completion-ignore-case t)
 (setq read-file-name-completion-ignore-case t)

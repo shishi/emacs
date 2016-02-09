@@ -93,13 +93,13 @@
 	  ((:url . "https://github.com/Malabarba/beacon")
 	   (:keywords "convenience"))])
  (bug-hunter .
-	     [(1 0)
+	     [(1 0 1)
 	      ((seq
 		(1 3))
 	       (cl-lib
 		(0 5)))
-	      "Hunt down errors in elisp files" single
-	      ((:url . "http://github.com/Malabarba/elisp-bug-hunter")
+	      "Hunt down errors by bisecting elisp files" single
+	      ((:url . "https://github.com/Malabarba/elisp-bug-hunter")
 	       (:keywords "lisp"))])
  (caps-lock .
 	    [(1 0)
@@ -318,7 +318,7 @@
        ((:url . "http://elpa.gnu.org/packages/fsm.html")
 	(:keywords "extensions"))])
  (ggtags .
-	 [(0 8 10)
+	 [(0 8 11)
 	  ((emacs
 	    (24))
 	   (cl-lib
@@ -350,7 +350,7 @@
 	((:url . "http://www.dr-qubit.org/emacs.php")
 	 (:keywords "extensions" "data structures" "heap" "priority queue"))])
  (hydra .
-	[(0 13 3)
+	[(0 13 4)
 	 ((cl-lib
 	   (0 5)))
 	 "Make bindings that stick around." tar
@@ -480,14 +480,14 @@
 	    ((:url . "https://github.com/Malabarba/nameless")
 	     (:keywords "convenience" "lisp"))])
  (names .
-	[(20150723 0)
+	[(20151201 0)
 	 ((emacs
 	   (24 1))
 	  (cl-lib
 	   (0 5)))
 	 "Namespaces for emacs-lisp. Avoid name clobbering without hiding symbols." tar
 	 ((:keywords "extensions" "lisp")
-	  (:url . "https://github.com/Bruce-Connor/names"))])
+	  (:url . "https://github.com/Malabarba/names"))])
  (nhexl-mode .
 	     [(0 1)
 	      nil "Minor mode to edit files via hex-dump format" single
@@ -530,7 +530,7 @@
 	     ((:url . "https://github.com/michael-heerdegen/on-screen.el")
 	      (:keywords "convenience"))])
  (org .
-      [(20151123)
+      [(20151228)
        nil "Outline-based notes management and organizer" tar nil])
  (osc .
       [(0 1)
@@ -559,6 +559,15 @@
 	 nil "Texas hold'em poker" single
 	 ((:url . "http://elpa.gnu.org/packages/poker.html")
 	  (:keywords "games"))])
+ (python .
+	 [(0 25 1)
+	  ((emacs
+	    (24 1))
+	   (cl-lib
+	    (1 0)))
+	  "Python's flying circus support for Emacs" single
+	  ((:url . "https://github.com/fgallina/python.el")
+	   (:keywords "languages"))])
  (quarter-plane .
 		[(0 1)
 		 nil "Minor mode for quarter-plane style editing" single
@@ -580,7 +589,7 @@
 		 ((:url . "http://elpa.gnu.org/packages/register-list.html")
 		  (:keywords "register"))])
  (rich-minority .
-		[(1 0)
+		[(1 0 1)
 		 ((cl-lib
 		   (0 5)))
 		 "Clean-up and Beautify the list of minor-modes." single
@@ -664,7 +673,7 @@
 	     ((:url . "http://elpa.gnu.org/packages/svg-clock.html")
 	      (:keywords "demo" "svg" "clock"))])
  (swiper .
-	 [(0 5 1)
+	 [(0 7 0)
 	  ((emacs
 	    (24 1)))
 	  "Isearch with an overview. Oh, man!" tar
@@ -697,13 +706,13 @@
 		  ((:url . "http://elpa.gnu.org/packages/timerfunctions.html")
 		   (:keywords))])
  (tiny .
-       [(0 1)
+       [(0 1 1)
 	nil "Quickly generate linear ranges in Emacs" tar
 	((:keywords "convenience")
 	 (:url . "https://github.com/abo-abo/tiny"))])
  (transcribe .
-	     [(0 0 1)
-	      nil "package for audio transcriptions" single
+	     [(1 0 2)
+	      nil "Package for audio transcriptions" single
 	      ((:url . "http://elpa.gnu.org/packages/transcribe.html")
 	       (:keywords))])
  (trie .
