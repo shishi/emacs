@@ -117,7 +117,7 @@
 (setq comint-scroll-show-maximum-output t)
 
 ;;;; 行末の空白を削除
-;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; ファイル終端に改行
 (setq require-final-newline t)
