@@ -62,6 +62,11 @@
 	nil "Asynchronous Music Player Controller" single
 	((:url . "http://elpa.gnu.org/packages/ampc.html")
 	 (:keywords "ampc" "mpc" "mpd"))])
+ (arbitools .
+	    [(0 51)
+	     nil "Package for chess tournaments administration" single
+	     ((:url . "http://elpa.gnu.org/packages/arbitools.html")
+	      (:keywords))])
  (ascii-art-to-unicode .
 		       [(1 9)
 			nil "a small artist adjunct" single
@@ -166,7 +171,7 @@
 		      ((:keywords "abbrev" "convenience" "matching")
 		       (:url . "https://github.com/company-mode/company-statistics"))])
  (context-coloring .
-		   [(7 2 0)
+		   [(7 2 1)
 		    ((emacs
 		      (24 3))
 		     (js2-mode
@@ -300,9 +305,9 @@
 		  ((:keywords "convenience")
 		   (:url . "https://github.com/ergoemacs/ergoemacs-mode"))])
  (exwm .
-       [(0 2)
+       [(0 3)
 	((xelb
-	  (0 5)))
+	  (0 6)))
 	"Emacs X Window Manager" tar
 	((:keywords "unix")
 	 (:url . "https://github.com/ch11ng/exwm"))])
@@ -564,7 +569,7 @@
 	     ((:url . "https://github.com/michael-heerdegen/on-screen.el")
 	      (:keywords "convenience"))])
  (org .
-      [(20160215)
+      [(20160222)
        nil "Outline-based notes management and organizer" tar nil])
  (osc .
       [(0 1)
@@ -655,10 +660,10 @@
 	     ((:keywords "languages" "shen")
 	      (:url . "http://elpa.gnu.org/packages/shen-mode.html"))])
  (sisu-mode .
-	    [(3 0 3)
+	    [(7 1 8)
 	     nil "Major mode for SiSU markup text" single
-	     ((:url . "http://elpa.gnu.org/packages/sisu-mode.html")
-	      (:keywords "text" "processes" "tools"))])
+	     ((:url . "http://www.sisudoc.org/")
+	      (:keywords "text" "syntax" "processes" "tools"))])
  (sml-mode .
 	   [(6 7)
 	    nil "Major mode for editing (Standard) ML" single
@@ -677,7 +682,7 @@
 	   ((:keywords "games")
 	    (:url . "http://elpa.gnu.org/packages/sokoban.html"))])
  (sotlisp .
-	  [(1 4 1)
+	  [(1 5 1)
 	   ((emacs
 	     (24 1)))
 	   "Write lisp at the speed of thought." single
@@ -780,14 +785,14 @@
 		   nil "Unicode confusables table" tar
 		   ((:url . "http://elpa.gnu.org/packages/uni-confusables.html"))])
  (url-http-ntlm .
-		[(2 0 1)
+		[(2 0 2)
 		 ((cl-lib
 		   (0 5))
 		  (ntlm
 		   (2 0 0)))
-		 "NTLM authentication for the url library" tar
-		 ((:keywords "comm" "data" "processes" "hypermedia")
-		  (:url . "http://elpa.gnu.org/packages/url-http-ntlm.html"))])
+		 "NTLM authentication for the url library" single
+		 ((:url . "http://elpa.gnu.org/packages/url-http-ntlm.html")
+		  (:keywords "comm" "data" "processes" "hypermedia"))])
  (vlf .
       [(1 7)
        nil "View Large Files" tar
@@ -847,7 +852,7 @@
 	 ((:url . "http://elpa.gnu.org/packages/xclip.html")
 	  (:keywords "convenience" "tools"))])
  (xelb .
-       [(0 5)
+       [(0 6)
 	((emacs
 	  (24 4))
 	 (cl-generic
