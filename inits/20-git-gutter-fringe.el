@@ -16,9 +16,6 @@
 ;; Jump to next/previous hunk
 ;; (define-key global-map (kbd "C-x C-p") 'git-gutter:previous-hunk)
 ;; (define-key global-map (kbd "C-x C-n") 'git-gutter:next-hunk)
-(smartrep-define-key
-    global-map "C-q" '(("M-n" . (next-error))
-                       ("M-p" . (previous-error))))
 
 ;; Revert current hunk
 ;; (define-key global-map (kbd "C-x C-r") 'git-gutter:revert-hunk)
