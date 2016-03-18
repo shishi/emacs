@@ -31,11 +31,11 @@
   (define-key scss-mode-map ";" 'my-semicolon-ret)
   (setq css-indent-offset 2)
   (setq scss-compile-at-save nil)
-  (setq ac-sources '(ac-source-yasnippet
-                     ;; ac-source-words-in-same-mode-buffers
-                     ac-source-words-in-all-buffer
-                     ac-source-dictionary
-                     ))
+  ;; (setq ac-sources '(ac-source-yasnippet
+  ;;                    ;; ac-source-words-in-same-mode-buffers
+  ;;                    ac-source-words-in-all-buffer
+  ;;                    ac-source-dictionary
+  ;;                    ))
   (flymake-mode t))
 
 ;; (add-to-list 'ac-modes 'scss-mode)

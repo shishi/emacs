@@ -26,7 +26,7 @@
 ;; (define-key ruby-mode-map (kbd "<return>") 'reindent-then-newline-and-indent)
 ;; (define-key ruby-mode-map (kbd "C-m") 'reindent-then-newline-and-indent)
 
-;; ;; auto-complete-mode on
+;; auto-complete
 ;; (add-to-list 'ac-modes 'enh-ruby-mode))
 
 ;; 保存時にmagic commentを追加しないようにする

@@ -33,7 +33,7 @@
     global-map "C-q" '(("C-/" . (redo))))
 
 
-;; js2-mode
-(smartrep-define-key
-    js2-mode-map "C-q" '(("n" . 'js2-next-error)
-                         ("p" . 'js2-prev-error)))
+;; ;; js2-mode
+;; (smartrep-define-key
+;;     js2-mode-map "C-q" '(("n" . 'js2-next-error)
+;;                          ("p" . 'js2-prev-error)))

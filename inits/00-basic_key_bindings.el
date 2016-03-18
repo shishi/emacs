@@ -69,3 +69,6 @@ Then move to that line and indent accordning to mode"
   (newline)
   (indent-according-to-mode))
 (define-key global-map (kbd "C-S-o") 'open-line-below)
+
+;; 検索中の削除
+(define-key isearch-mode-map (kbd "C-h") 'isearch-del-char)
