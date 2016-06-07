@@ -8,6 +8,3 @@
 (add-hook 'enh-ruby-mode-hook 'highlight-symbol-mode)
 (add-hook 'yaml-mode-hook 'highlight-symbol-mode)
 (add-hook 'coffee-mode-hook 'highlight-symbol-mode)
-
-;; (global-set-key (kbd "C-S-h") 'highlight-symbol-at-point)
-;; (global-set-key (kbd "C-S-M-h") 'highlight-symbol-remove-all)

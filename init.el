@@ -29,9 +29,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(company-dabbrev-code-modes
+ '(custom-safe-themes
    (quote
-    (prog-mode batch-file-mode csharp-mode css-mode erlang-mode haskell-mode jde-mode lua-mode python-mode ruby-mode)))
+    ("a1289424bbc0e9f9877aa2c9a03c7dfd2835ea51d8781a0bf9e2415101f70a7e" "c697b65591ba1fdda42fae093563867a95046466285459bd4e686dc95a819310" "045251e7ff119a8b065b4cb0072067eb2f297acc44a9e36407e6ff165e35c528" default)))
  '(js2-auto-indent-p t)
  '(js2-enter-indents-newline t)
  '(js2-indent-on-enter-key nil)

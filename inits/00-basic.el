@@ -36,7 +36,9 @@
 (setq-default transient-mark-mode t)
 
 ;; emacs-server起動
-(server-start)
+(require 'server)
+(unless (server-running-p)
+  (server-start))
 
 ;; 行番号表示
 (global-linum-mode t)
@@ -85,13 +87,13 @@
 (savehist-mode t)
 
 ;; mini buffer の履歴数
-(setq history-length 1000)
+(setq history-length 500)
 
 ;; mini buffer の再帰的使用
 (setq enable-recursive-minibuffers t)
 
 ;; 最近使ったファイルの表示数
-(setq recentf-max-menu-items 100)
+(setq recentf-max-menu-items 500)
 
 ;; 最近開いたファイルを保存する数
 (setq recentf-max-saved-items 500)
@@ -168,32 +170,6 @@
 ;; フォントロックモード (強調表示等) を有効にする
 (global-font-lock-mode t)
 
-;; 10-color-theme.el へ
-;; ;; web+db press vol.58 P.78
-;; ;; 括弧の対応をハイライト
-;; ;; 表示までの秒数。初期値は0.125
-;; (setq show-paren-delay 0)
-;; (show-paren-mode t)
-;; (setq show-paren-style 'expression)
-;; (set-face-foreground 'show-paren-match-face nil)
-;; (set-face-background 'show-paren-match-face nil)
-;; (set-face-underline-p 'show-paren-match-face "yellow")
-
-;; 現在行を目立たせる
-;; ;; web+db press vol.58 P.79
-;; (defface my-hl-line-face
-;;   ;; 背景がdarkならば背景色を紺に
-;;   '((((class color) (background dark))
-;;      (:background "DarkSlateBlue" t))
-;;      ;; (:background "NavyBlue" t))
-;;     ;; 背景がlightならば背景色を緑に
-;;     (((class color) (background light))
-;;      (:background "LightGoldenrodYellow" t))
-;;     (t (:bold t)))
-;;   "hl-line's my face")
-;; (setq hl-line-face 'my-hl-line-face)
-;; (global-hl-line-mode t)
-
 ;; 行末の空白を強調させる
 (setq-default show-trailing-whitespace t)
 ;; 見た目を変える
@@ -233,18 +209,6 @@
 
 ;;; バックアップとオートセーブファイルを~/.emacs.d/backup/へ集める
 (setq backup-directory-alist
-          `((".*" . ,(expand-file-name "~/.emacs.d/backup/"))))
+      `((".*" . ,(expand-file-name "~/.emacs.d/backup/"))))
 (setq auto-save-file-name-transforms
-          `((".*" ,(expand-file-name "~/.emacs.d/backup/") t)))
-
-;; ;;; バックアップファイルの保存場所を変更
-;; (setq backup-directory "~/.emacs.d/backup")
-;; (if (and (boundp 'backup-directory)
-;;          (not (fboundp 'make-backup-file-name-original)))
-;;     (progn
-;;       (fset 'make-backup-file-name-original
-;;             (symbol-function 'make-backup-file-name))
-;;       (defun make-backup-file-name (filename)
-;;         (if (file-directory-p backup-directory)
-;;             (concat backup-directory "/" (file-name-nondirectory filename))
-;;           (make-backup-file-name-original filename)))))
+      `((".*" ,(expand-file-name "~/.emacs.d/backup/") t)))

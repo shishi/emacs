@@ -2,7 +2,7 @@
 
 ;; built-in color theme
 
-(load-theme 'railscasts t)
+(load-theme 'smyx t)
 
 ;; old color theme
 ;; ;; (setq color-theme-directory "~/.emacs.d/elisp/theme/")
