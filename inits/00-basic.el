@@ -2,6 +2,8 @@
 ;; ===============================================================================
 
 ;; 日本語設定 (UTF-8)
+;;(setenv "LC_ALL" "ja_JP.UTF-8")
+(setenv "LANG" "ja_JP.UTF-8")
 (set-language-environment "Japanese")
 (prefer-coding-system 'utf-8-unix)
 (set-default-coding-systems 'utf-8-unix)

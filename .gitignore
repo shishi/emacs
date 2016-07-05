@@ -20,3 +20,4 @@ tramp
 # !/elisp/el-get/.status.elc
 
 projectile-bookmarks.eld
+/projectile.cache
