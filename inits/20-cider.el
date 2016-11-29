@@ -1,0 +1,3 @@
+;;; cider
+
+(require 'cider)

@@ -6,6 +6,7 @@
 (add-hook 'emacs-lisp-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'ruby-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'enh-ruby-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
 
 ;; 括弧の色を強調する設定
 (require 'cl-lib)

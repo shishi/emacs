@@ -1,5 +1,4 @@
 ;;; ruby-block
-;; (require 'ruby-block)
 
 (defun ruby-mode-hook-for-ruby-block ()
   (require 'ruby-block)
