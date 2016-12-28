@@ -107,6 +107,7 @@
 (depends-on "web-mode")
 (depends-on "wgrep")
 (depends-on "wgrep-ag")
+(depends-on "which-key")
 (depends-on "with-editor")
 (depends-on "yaml-mode")
 (depends-on "yasnippet")
