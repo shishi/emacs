@@ -147,11 +147,14 @@
 ;; gzファイルも編集できるようにする
 (auto-compression-mode t)
 
+;; clipboard
+(setq x-select-enable-clipboard t)
+
 ;; マウスで選択するとコピー
 (setq mouse-drag-copy-region t)
 
 ;; Emacs 内外のコピーを有効に
-(setq x-select-enable-primary t)
+(setq x-select-enable-primary nil)
 
 ;; always follow symlink
 (setq vc-follow-symlinks t)
@@ -214,3 +217,11 @@
       `((".*" . ,(expand-file-name "~/.emacs.d/backup/"))))
 (setq auto-save-file-name-transforms
       `((".*" ,(expand-file-name "~/.emacs.d/backup/") t)))
+
+;;; auto IME off
+(defun mac-selected-keyboard-input-source-change-hook-func ()
+  ;; 入力モードが英語の時はカーソルの色をfirebrickに、日本語の時はblackにする
+  (set-cursor-color (if (string-match "\\.US$" (mac-input-source))
+                        "firebrick" "black")))
+(add-hook 'mac-selected-keyboard-input-source-change-hook
+          'mac-selected-keyboard-input-source-change-hook-func)

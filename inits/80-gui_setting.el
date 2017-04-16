@@ -83,30 +83,37 @@
        '("Hiragino Maru Gothic Pro" . "iso10646-1"))))
 
   (when (eq system-type 'gnu/linux)
-    (set-face-attribute 'default nil
-                        :family "Ricty"  ;; 英数
-                        :height 130)
-    (set-fontset-font
-     (frame-parameter nil 'font)
-     'japanese-jisx0208
-     '("Ricty Diminished" . "iso10646-1"))
-    (set-fontset-font
-     (frame-parameter nil 'font)
-     'japanese-jisx0212
-     '("Ricty Diminished" . "iso10646-1"))
-    ;; ウィンドウサイズ
-    (setq initial-frame-alist
-          (append '((top . 0) ;; フレームの Y 位置(ピクセル数)
-                    (left . 10) ;; フレームの X 位置(ピクセル数)
-                    (width . 360) ;; フレーム幅(文字数)
-                    (height . 60) ;; フレーム高(文字数)
-                    ) initial-frame-alist))
-    (setq default-frame-alist
-          (append '((top . 0) ;; フレームの Y 位置(ピクセル数)
-                    (left . 20) ;; フレームの X 位置(ピクセル数)
-                    (width . 360) ;; フレーム幅(文字数)
-                    (height . 60) ;; フレーム高(文字数)
-                    ) default-frame-alist)))
+    ;; Basic font
+    (custom-set-faces
+     '(default ((t (
+                    :foundry "Monaco" :family "Monaco")))))
+
+    ;; ;; Japanese font
+    ;; (set-fontset-font t 'japanese-jisx0208 (font-spec :family "IPAGothic"))
+    ;; (set-face-attribute 'default nil
+    ;;                     :family "Monaco"  ;; 英数
+    ;;                     :height 130)
+    ;; (set-fontset-font
+    ;;  (frame-parameter nil 'font)
+    ;;  'japanese-jisx0208
+    ;;  '("IPAGothic" . "iso10646-1"))
+    ;; (set-fontset-font
+    ;;  (frame-parameter nil 'font)
+    ;;  'japanese-jisx0212
+    ;;  '("IPAGothic" . "iso10646-1"))
+    ;; ;; ウィンドウサイズ
+    ;; (setq initial-frame-alist
+    ;;       (append '((top . 0) ;; フレームの Y 位置(ピクセル数)
+    ;;                 (left . 10) ;; フレームの X 位置(ピクセル数)
+    ;;                 (width . 360) ;; フレーム幅(文字数)
+    ;;                 (height . 60) ;; フレーム高(文字数)
+    ;;                 ) initial-frame-alist))
+    ;; (setq default-frame-alist
+    ;;       (append '((top . 0) ;; フレームの Y 位置(ピクセル数)
+    ;;                 (left . 20) ;; フレームの X 位置(ピクセル数)
+    ;;                 (width . 360) ;; フレーム幅(文字数)
+    ;;                 (height . 60) ;; フレーム高(文字数)
+    ;;                 ) default-frame-alist)))
 
     (when (eq system-type 'cygwin)
     (set-face-attribute 'default nil
