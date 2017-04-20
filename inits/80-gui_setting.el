@@ -84,16 +84,16 @@
 
   (when (eq system-type 'gnu/linux)
     (set-face-attribute 'default nil
-                        :family "Monaco"  ;; 英数
-                        :height 110)
-    (set-fontset-font
-     (frame-parameter nil 'font)
-     'japanese-jisx0208
-     '("IPAGothic" . "iso10646-1"))
-    (set-fontset-font
-     (frame-parameter nil 'font)
-     'japanese-jisx0212
-     '("IPAGothic" . "iso10646-1"))
+                        :family "Ricty"  ;; 英数
+                        :height 130)
+    ;; (set-fontset-font
+    ;;  (frame-parameter nil 'font)
+    ;;  'japanese-jisx0208
+    ;;  '("IPAGothic" . "iso10646-1"))
+    ;; (set-fontset-font
+    ;;  (frame-parameter nil 'font)
+    ;;  'japanese-jisx0212
+    ;;  '("IPAGothic" . "iso10646-1"))
     ;; ;; ウィンドウサイズ
     ;; (setq initial-frame-alist
     ;;       (append '((top . 0) ;; フレームの Y 位置(ピクセル数)
