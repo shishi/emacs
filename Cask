@@ -22,6 +22,7 @@
 (depends-on "date-at-point")
 (depends-on "dired+")
 (depends-on "dockerfile-mode")
+(depends-on "easy-kill")
 (depends-on "enh-ruby-mode")
 (depends-on "epl")
 (depends-on "expand-region")
