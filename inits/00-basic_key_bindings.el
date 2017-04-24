@@ -33,7 +33,7 @@
 ;; (define-key global-map (kbd "C-M-h") 'windmove-left)
 
 ;; フレーム移動
-(define-key global-map (kbd "C-S-z") 'other-frame)
+(define-key global-map (kbd "C-M-z") 'other-frame)
 
 ;; (define-key global-map (kbd "s-3") 'split-window-horizontally)
 ;; (define-key global-map (kbd "s-2") 'split-window-vertically)
@@ -48,18 +48,21 @@
 ;; C-x l で goto-line を実行
 (define-key ctl-x-map "l" 'goto-line)
 
-;; C-o のときインデントもする
+;; C-M-k で kill-whole-lien
+(define-key global-map (kbd "C-M-k") 'kill-whole-line)
+
+;; 現在行に新規行を作ってインデント
 (defun open-line-above ()
   "Open a line above the line the point is at .
 Then move to that line and indent accordning to mode"
   (interactive)
   (move-beginning-of-line 1)
   (newline)
-  (previous-line)
+  (forward-line)
   (indent-according-to-mode))
 (define-key global-map (kbd "C-o") 'open-line-above)
 
-;; C-s-o で下に C-o
+;; 現在行のひとつ下に新規行を作ってインデント
 (defun open-line-below ()
   "Open a line below the line the point is at.
 Then move to that line and indent accordning to mode"
@@ -67,7 +70,7 @@ Then move to that line and indent accordning to mode"
   (move-end-of-line 1)
   (newline)
   (indent-according-to-mode))
-(define-key global-map (kbd "C-S-o") 'open-line-below)
+(define-key global-map (kbd "C-M-o") 'open-line-below)
 
 ;; 検索中の削除
 (define-key isearch-mode-map (kbd "C-h") 'isearch-del-char)

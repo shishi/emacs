@@ -135,8 +135,8 @@
 ;; Emacs24 からデフォルトでそういう動作
 ;; (partial-completion-mode t)
 
-;; C-kで行全体を削除
-(setq kill-whole-line t)
+;; ;; C-kで行全体を削除
+;; (setq kill-whole-line t)
 
 ;; BSで選択範囲を消す
 (delete-selection-mode t)

@@ -2,48 +2,12 @@
 
 (require 'mozc)
 (require 'mozc-popup)
-;; (require 'mozc-im)
-;; (require 'mozc-cursor-color)
 
 (set-language-environment "Japanese")
 (setq default-input-method "japanese-mozc")
 (prefer-coding-system 'utf-8-unix)
 (setq quail-japanese-use-double-n t)
 (setq mozc-candidate-style 'popup)
-
-;; ;; カーソルカラーを設定する
-;; (setq mozc-cursor-color-alist '((direct        . "red")
-;;                                 (read-only     . "yellow")
-;;                                 (hiragana      . "green")
-;;                                 (full-katakana . "goldenrod")
-;;                                 (half-ascii    . "dark orchid")
-;;                                 (full-ascii    . "orchid")
-;;                                 (half-katakana . "dark goldenrod")))
-
-;; ;; C-o で IME をトグルする
-;; (global-set-key (kbd "C-o") 'toggle-input-method)
-;; (define-key isearch-mode-map (kbd "C-o") 'isearch-toggle-input-method)
-
-;; ;; mozc-cursor-color を利用するための対策
-;; (make-variable-buffer-local 'mozc-im-mode)
-;; (add-hook 'mozc-im-activate-hook (lambda () (setq mozc-im-mode t)))
-;; (add-hook 'mozc-im-deactivate-hook (lambda () (setq mozc-im-mode nil)))
-
-;; (advice-add 'mozc-cursor-color-update
-;;             :around (lambda (orig-fun &rest args)
-;;                       (let ((mozc-mode mozc-im-mode))
-;;                         (apply orig-fun args))))
-
-;; isearch を利用する前後で IME の状態を維持するための対策
-(add-hook 'isearch-mode-hook
-          (lambda ()
-            (setq im-state mozc-im-mode)))
-(add-hook 'isearch-mode-end-hook
-          (lambda ()
-            (unless (eq im-state mozc-im-mode)
-              (if im-state
-                  (activate-input-method default-input-method)
-                (deactivate-input-method)))))
 
 ;; wdired 終了時に IME を OFF にする
 (require 'wdired)
