@@ -27,6 +27,7 @@
 (depends-on "epl")
 (depends-on "expand-region")
 (depends-on "f")
+(depends-on "fish-mode")
 (depends-on "flex-autopair")
 (depends-on "flycheck")
 (depends-on "flycheck-clojure")
