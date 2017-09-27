@@ -1,7 +1,10 @@
 ;; auto-complete
-(require 'pos-tip)
-(require 'auto-complete-config)
 
+;; extra
+(require 'pos-tip)
+(require 'go-autocomplete)
+
+(require 'auto-complete-config)
 (ac-config-default)
 
 ;; (global-auto-complete-mode t)
@@ -16,7 +19,7 @@
 
 ;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/elisp/el-get/auto-complete/dict")
 
-;; 補完メニュー表示時にC-n/C-pで補完候補選択
+;; C-n/C-pで補完候補選択
 (setq ac-use-menu-map t)
 
 (define-key global-map (kbd "M-<return>") 'auto-complete)

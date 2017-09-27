@@ -6,16 +6,17 @@
       (remove-duplicates
        (append
         (list
-         (expand-file-name "~/.anyenv/envs/rbenv/bin")
-         (expand-file-name "~/.anyenv/envs/rbenv/shims")
+         (expand-file-name "~/.rbenv/bin")
+         (expand-file-name "~/.rbenv/shims")
+         ;; (expand-file-name "~/.anyenv/envs/rbenv/bin")
+         ;; (expand-file-name "~/.anyenv/envs/rbenv/shims")
          (expand-file-name "~/.emacs.d/bin")
          (expand-file-name "~/bin")
-         "/Developer/Tools"
+         (expand-file-name "~/dev/bin")
          "/usr/local/sbin"
          "/usr/local/bin"
-         "/usr/X11/bin"
-         "/opt/local/sbin"
-         "/opt/local/bin"
+         ;; "/opt/local/sbin"
+         ;; "/opt/local/bin"
          "/usr/sbin"
          "/usr/bin"
          "/sbin"

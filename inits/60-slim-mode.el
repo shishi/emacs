@@ -3,4 +3,3 @@
 (require 'slim-mode)
 
 (add-to-list 'auto-mode-alist '("\\.slim$" . slim-mode))
-(add-hook 'sass-mode-hook 'flymake-slim-load)

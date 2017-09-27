@@ -94,45 +94,45 @@
     ;;  (frame-parameter nil 'font)
     ;;  'japanese-jisx0212
     ;;  '("IPAGothic" . "iso10646-1"))
-    ;; ;; ウィンドウサイズ
-    ;; (setq initial-frame-alist
-    ;;       (append '((top . 0) ;; フレームの Y 位置(ピクセル数)
-    ;;                 (left . 10) ;; フレームの X 位置(ピクセル数)
-    ;;                 (width . 360) ;; フレーム幅(文字数)
-    ;;                 (height . 60) ;; フレーム高(文字数)
-    ;;                 ) initial-frame-alist))
-    ;; (setq default-frame-alist
-    ;;       (append '((top . 0) ;; フレームの Y 位置(ピクセル数)
-    ;;                 (left . 20) ;; フレームの X 位置(ピクセル数)
-    ;;                 (width . 360) ;; フレーム幅(文字数)
-    ;;                 (height . 60) ;; フレーム高(文字数)
-    ;;                 ) default-frame-alist)))
-
-    (when (eq system-type 'cygwin)
-    (set-face-attribute 'default nil
-                        :family "Ricty"  ;; 英数
-                        :height 130)
-    (set-fontset-font
-     (frame-parameter nil 'font)
-     'japanese-jisx0208
-     '("Ricty Diminished" . "iso10646-1"))
-    (set-fontset-font
-     (frame-parameter nil 'font)
-     'japanese-jisx0212
-     '("Ricty Diminished" . "iso10646-1"))
     ;; ウィンドウサイズ
     (setq initial-frame-alist
-          (append '((top . 0) ;; フレームの Y 位置(ピクセル数)
-                    (left . 10) ;; フレームの X 位置(ピクセル数)
-                    (width . 360) ;; フレーム幅(文字数)
-                    (height . 60) ;; フレーム高(文字数)
+          (append '((top . 20) ;; フレームの Y 位置(ピクセル数)
+                    (left . 75) ;; フレームの X 位置(ピクセル数)
+                    (width . 150) ;; フレーム幅(文字数)
+                    (height . 45) ;; フレーム高(文字数)
                     ) initial-frame-alist))
     (setq default-frame-alist
-          (append '((top . 0) ;; フレームの Y 位置(ピクセル数)
-                    (left . 20) ;; フレームの X 位置(ピクセル数)
-                    (width . 360) ;; フレーム幅(文字数)
-                    (height . 60) ;; フレーム高(文字数)
-                    ) default-frame-alist)))))
+          (append '((top . 20) ;; フレームの Y 位置(ピクセル数)
+                    (left . 75) ;; フレームの X 位置(ピクセル数)
+                    (width . 150) ;; フレーム幅(文字数)
+                    (height . 45) ;; フレーム高(文字数)
+                    ) default-frame-alist)))
+
+    (when (eq system-type 'cygwin)
+      (set-face-attribute 'default nil
+                          :family "Ricty"  ;; 英数
+                          :height 130)
+      (set-fontset-font
+       (frame-parameter nil 'font)
+       'japanese-jisx0208
+       '("Ricty Diminished" . "iso10646-1"))
+      (set-fontset-font
+       (frame-parameter nil 'font)
+       'japanese-jisx0212
+       '("Ricty Diminished" . "iso10646-1"))
+      ;; ウィンドウサイズ
+      (setq initial-frame-alist
+            (append '((top . 0) ;; フレームの Y 位置(ピクセル数)
+                      (left . 10) ;; フレームの X 位置(ピクセル数)
+                      (width . 360) ;; フレーム幅(文字数)
+                      (height . 60) ;; フレーム高(文字数)
+                      ) initial-frame-alist))
+      (setq default-frame-alist
+            (append '((top . 0) ;; フレームの Y 位置(ピクセル数)
+                      (left . 20) ;; フレームの X 位置(ピクセル数)
+                      (width . 360) ;; フレーム幅(文字数)
+                      (height . 60) ;; フレーム高(文字数)
+                      ) default-frame-alist))))
 
 (defun set-alpha (alpha-num)
   "set frame parameter 'alpha"

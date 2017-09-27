@@ -1,5 +1,7 @@
 ;; emacs-lisp-mode
 
+(add-to-list 'auto-mode-alist '("\\.el$" . emacs-lisp-mode))
+
 ;; eldoc をミニバッファに表示
 ;; emacs-lisp-mode-hook用の関数を定義
 (defun elisp-mode-hooks ()
