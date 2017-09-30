@@ -32,7 +32,7 @@
                                    (popwin:find-file (dired-get-file-for-visit))))
 ;; (key-chord-define-global "mn" 'popwin:messages)
 
-(define-key global-map (kbd "C-,") popwin:keymap)
+(define-key global-map (kbd "C->") popwin:keymap)
 ;; (defun add-popwin-find-file (dired-get-file-for-visit)
 ;;   (interactive)
 ;;   (popwin:find-file (dired-get-file-for-visit)))

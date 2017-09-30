@@ -1,5 +1,5 @@
-;; basic settings
-;; ===============================================================================
+;;; basic settings
+;;; ===============================================================================
 
 ;; 日本語設定 (UTF-8)
 ;;(setenv "LC_ALL" "ja_JP.UTF-8")
@@ -136,7 +136,7 @@
 ;; (partial-completion-mode t)
 
 ;; ;; C-kで行全体を削除
-;; (setq kill-whole-line t)
+(setq kill-whole-line t)
 
 ;; BSで選択範囲を消す
 (delete-selection-mode t)
@@ -218,10 +218,10 @@
 (setq auto-save-file-name-transforms
       `((".*" ,(expand-file-name "~/.emacs.d/backup/") t)))
 
-;;; auto IME off
-(defun mac-selected-keyboard-input-source-change-hook-func ()
-  ;; 入力モードが英語の時はカーソルの色をfirebrickに、日本語の時はblackにする
-  (set-cursor-color (if (string-match "\\.US$" (mac-input-source))
-                        "firebrick" "black")))
-(add-hook 'mac-selected-keyboard-input-source-change-hook
-          'mac-selected-keyboard-input-source-change-hook-func)
+;; ;;; auto IME off
+;; (defun mac-selected-keyboard-input-source-change-hook-func ()
+;;   ;; 入力モードが英語の時はカーソルの色をfirebrickに、日本語の時はblackにする
+;;   (set-cursor-color (if (string-match "\\.US$" (mac-input-source))
+;;                         "firebrick" "black")))
+;; (add-hook 'mac-selected-keyboard-input-source-change-hook
+;;           'mac-selected-keyboard-input-source-change-hook-func)

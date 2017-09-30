@@ -69,7 +69,7 @@
     ;; フォントを出来る限り揃える
     (when (>= emacs-major-version 23)
       ;; (setq fixed-width-use-QuickDraw-for-ascii t)
-      (setq mac-allow-anti-aliasing t)
+      ;; (setq mac-allow-anti-aliasing t)
       (set-face-attribute 'default nil
                           :family "monaco"
                           :height 130)

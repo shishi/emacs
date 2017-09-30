@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil nil ("auto-async-byte-compile.el") (22986 61482
-;;;;;;  742277 583000))
+;;;### (autoloads nil nil ("auto-async-byte-compile.el") (22991 8574
+;;;;;;  104244 240000))
 
 ;;;***
 

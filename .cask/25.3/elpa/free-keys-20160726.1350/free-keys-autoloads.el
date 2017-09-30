@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "free-keys" "free-keys.el" (22986 61230 751945
-;;;;;;  975000))
+;;;### (autoloads nil "free-keys" "free-keys.el" (22991 8553 794226
+;;;;;;  920000))
 ;;; Generated autoloads from free-keys.el
 
 (autoload 'free-keys "free-keys" "\

@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "easy-kill" "easy-kill.el" (22986 61248 268638
-;;;;;;  261000))
+;;;### (autoloads nil "easy-kill" "easy-kill.el" (22991 8559 860898
+;;;;;;  758000))
 ;;; Generated autoloads from easy-kill.el
 
 (autoload 'easy-kill "easy-kill" "\

@@ -4,7 +4,7 @@
 ;; 先頭のディレクトリは開発用ディレクトリとして扱われる
 ;; 後に読み込んだものが優先される
 ;; package.el からインストールしたのだと、デフォルトで
-;; "~/.emacs.d/snippets", "~/.emacs.d/elisp/package/yasnippet-hogehoge/snippets"
+;; "~/.emacs.d/snippets", "~/.emacs.d/elisp/package/yasnippet-hoge/snippets"
 ;; 追加の場合
 ;; (setq yas-snippet-dirs
 ;;       (append

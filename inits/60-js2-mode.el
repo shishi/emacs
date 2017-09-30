@@ -4,9 +4,9 @@
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
 
-(smartrep-define-key
-    js2-mode-map "C-c" '(("M-n" . 'js2-next-error)
-                         ("M-p" . 'js2-prev-error)))
+;; (smartrep-define-key
+;;     js2-mode-map "C-c" '(("M-n" . 'js2-next-error)
+;;                          ("M-p" . 'js2-prev-error)))
 
 ;; (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
 

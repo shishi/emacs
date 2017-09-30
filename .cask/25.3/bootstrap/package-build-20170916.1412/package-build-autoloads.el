@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "package-build" "package-build.el" (22986 61041
-;;;;;;  141709 771000))
+;;;### (autoloads nil "package-build" "package-build.el" (22991 8622
+;;;;;;  267618 742000))
 ;;; Generated autoloads from package-build.el
 
 (autoload 'package-build-archive "package-build" "\
@@ -45,6 +45,11 @@ Create a new recipe for package NAME using FETCHER.
 Build archive for the recipe defined in the current buffer.
 
 \(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("package-build-autoloads [conflicted].el"
+;;;;;;  "package-build-pkg [conflicted].el") (22991 8239 33961 574000))
 
 ;;;***
 

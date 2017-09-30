@@ -56,9 +56,9 @@
   "Open a line above the line the point is at .
 Then move to that line and indent accordning to mode"
   (interactive)
-  (move-beginning-of-line 1)
-  (newline)
-  (forward-line)
+  (move-beginning-of-line nil)
+  (newline-and-indent)
+  (forward-line -1)
   (indent-according-to-mode))
 (define-key global-map (kbd "C-o") 'open-line-above)
 

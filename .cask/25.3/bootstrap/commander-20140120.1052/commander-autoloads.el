@@ -3,7 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil nil ("commander.el") (22986 61038 428374 730000))
+;;;### (autoloads nil nil ("commander-autoloads [conflicted].el"
+;;;;;;  "commander-pkg [conflicted].el" "commander.el") (22991 8617
+;;;;;;  830948 279000))
 
 ;;;***
 

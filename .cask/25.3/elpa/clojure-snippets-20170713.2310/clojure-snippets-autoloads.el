@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "clojure-snippets" "clojure-snippets.el" (22986
-;;;;;;  61259 145320 614000))
+;;;### (autoloads nil "clojure-snippets" "clojure-snippets.el" (22991
+;;;;;;  8311 400688 722000))
 ;;; Generated autoloads from clojure-snippets.el
 
 (autoload 'clojure-snippets-initialize "clojure-snippets" "\
@@ -16,8 +16,8 @@
 
 ;;;***
 
-;;;### (autoloads nil nil ("clojure-snippets-pkg.el") (22986 61259
-;;;;;;  145320 614000))
+;;;### (autoloads nil nil ("clojure-snippets-pkg.el") (22991 8311
+;;;;;;  400688 722000))
 
 ;;;***
 

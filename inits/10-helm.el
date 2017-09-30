@@ -46,14 +46,3 @@
 ;; (define-key global-map (kbd "M-o") 'helm-occur)
 ;; (define-key global-map (kbd "C-M-o") 'helm-multi-occur)
 ;; (define-key isearch-mode-map (kbd "M-o") 'helm-occur-from-isearch)
-
-;; helm in dired
-;; http://d.hatena.ne.jp/syohex/20120105/1325770778
-(defun my/helm-dired ()
-  (interactive)
-  (let ((curbuf (current-buffer)))
-    (if (helm-other-buffer
-         '(helm-c-source-files-in-current-dir)
-         "*helm-dired*")
-        (kill-buffer curbuf))))
-(define-key dired-mode-map (kbd "p") 'my/helm-dired)

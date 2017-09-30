@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil nil ("git-gutter-fringe.el") (22986 61225 28604
-;;;;;;  173000))
+;;;### (autoloads nil nil ("git-gutter-fringe.el") (22991 8452 644141
+;;;;;;  11000))
 
 ;;;***
 

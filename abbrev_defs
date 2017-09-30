@@ -53,7 +53,10 @@
 
 (define-abbrev-table 'edit-server-text-mode-abbrev-table '())
 
-(define-abbrev-table 'emacs-lisp-mode-abbrev-table '())
+(define-abbrev-table 'emacs-lisp-mode-abbrev-table
+  '(
+    ("typename" "TypeName" nil 0)
+    ))
 
 (define-abbrev-table 'fundamental-mode-abbrev-table '())
 
@@ -562,4 +565,3 @@
 (define-abbrev-table 'wikipedia-mode-abbrev-table '())
 
 (define-abbrev-table 'yaml-mode-abbrev-table '())
-

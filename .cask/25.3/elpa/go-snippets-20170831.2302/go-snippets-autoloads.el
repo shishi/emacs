@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "go-snippets" "go-snippets.el" (22986 61215
-;;;;;;  841923 810000))
+;;;### (autoloads nil "go-snippets" "go-snippets.el" (22991 8334
+;;;;;;  990708 506000))
 ;;; Generated autoloads from go-snippets.el
 
 (autoload 'go-snippets-initialize "go-snippets" "\
@@ -16,8 +16,8 @@
 
 ;;;***
 
-;;;### (autoloads nil nil ("go-snippets-pkg.el") (22986 61215 841923
-;;;;;;  810000))
+;;;### (autoloads nil nil ("go-snippets-pkg.el") (22991 8334 990708
+;;;;;;  506000))
 
 ;;;***
 
