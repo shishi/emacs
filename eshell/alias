@@ -1,3 +1,0 @@
-alias g git $*
-alias lv lv -c $*
-alias ll ls -la $*
