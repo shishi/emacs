@@ -1,2 +1,2 @@
 ;;; -*- no-byte-compile: t -*-
-(define-package "inf-ruby" "20170615.335" "Run a Ruby process in a buffer" 'nil :commit "c14a68d1643ac3f439234da6a8275b48cae970d3" :url "http://github.com/nonsequitur/inf-ruby" :keywords '("languages" "ruby"))
+(define-package "inf-ruby" "20170615.335" "Run a Ruby process in a buffer" 'nil :commit "674a2a837fccea88ada6634e981a656b41d16d8e" :url "http://github.com/nonsequitur/inf-ruby" :keywords '("languages" "ruby"))

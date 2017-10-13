@@ -3,7 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "shut-up" "shut-up.el" (22991 8620 740950 769000))
+;;;### (autoloads nil "shut-up" "shut-up.el" (23009 19172 563080
+;;;;;;  700000))
 ;;; Generated autoloads from shut-up.el
 
 (autoload 'shut-up "shut-up" "\
@@ -36,48 +37,6 @@ WARNING: This function has GLOBAL SIDE-EFFECTS.  You should only
 call this function in `noninteractive' sessions.
 
 \(fn)" nil nil)
-
-;;;***
-
-;;;### (autoloads nil "shut-up [conflicted]" "shut-up [conflicted].el"
-;;;;;;  (22991 8237 667293 767000))
-;;; Generated autoloads from shut-up [conflicted].el
-
-(autoload 'shut-up "shut-up [conflicted]" "\
-Evaluate BODY with silenced output.
-
-While BODY is evaluated, all output is redirected to a buffer,
-unless `shut-up-ignore' is non-nil.  This affects:
-
-- `message'
-- All functions using `standard-output' (e.g. `print', `princ', etc.)
-
-Inside BODY, the buffer is bound to the lexical variable
-`shut-up-sink'.  Additionally provide a lexical function
-`shut-up-current-output', which returns the current contents of
-`shut-up-sink' when called with no arguments.
-
-Changes to the variable `shut-up-ignore' inside BODY does not
-have any affect.
-
-\(fn &rest BODY)" nil t)
-
-(function-put 'shut-up 'lisp-indent-function '0)
-
-(autoload 'shut-up-silence-emacs "shut-up [conflicted]" "\
-Silence Emacs.
-
-Change Emacs settings to reduce the output.
-
-WARNING: This function has GLOBAL SIDE-EFFECTS.  You should only
-call this function in `noninteractive' sessions.
-
-\(fn)" nil nil)
-
-;;;***
-
-;;;### (autoloads nil nil ("shut-up-autoloads [conflicted].el" "shut-up-pkg
-;;;;;;  [conflicted].el") (22991 8237 703960 465000))
 
 ;;;***
 
