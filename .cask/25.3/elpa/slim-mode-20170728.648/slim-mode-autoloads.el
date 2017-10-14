@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "slim-mode" "slim-mode.el" (23009 19734 676249
-;;;;;;  600000))
+;;;### (autoloads nil "slim-mode" "slim-mode.el" (23009 22842 859283
+;;;;;;  0))
 ;;; Generated autoloads from slim-mode.el
 
 (autoload 'slim-mode "slim-mode" "\

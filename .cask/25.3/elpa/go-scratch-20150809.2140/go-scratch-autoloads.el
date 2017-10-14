@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "go-scratch" "go-scratch.el" (23009 19492 990039
-;;;;;;  600000))
+;;;### (autoloads nil "go-scratch" "go-scratch.el" (23009 22593 678164
+;;;;;;  0))
 ;;; Generated autoloads from go-scratch.el
 
 (autoload 'go-scratch "go-scratch" "\

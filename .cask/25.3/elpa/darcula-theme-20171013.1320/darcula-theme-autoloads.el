@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "darcula-theme" "darcula-theme.el" (23009 19220
-;;;;;;  596960 400000))
+;;;### (autoloads nil "darcula-theme" "darcula-theme.el" (23009 21938
+;;;;;;  770150 900000))
 ;;; Generated autoloads from darcula-theme.el
 
 (when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))

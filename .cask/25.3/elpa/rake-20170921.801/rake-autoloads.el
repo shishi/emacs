@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "rake" "rake.el" (23009 19602 796636 200000))
+;;;### (autoloads nil "rake" "rake.el" (23009 22666 63445 200000))
 ;;; Generated autoloads from rake.el
 
 (autoload 'rake-compile "rake" "\

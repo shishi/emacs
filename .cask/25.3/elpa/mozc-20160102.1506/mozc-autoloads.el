@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "mozc" "mozc.el" (23009 19190 256747 500000))
+;;;### (autoloads nil "mozc" "mozc.el" (23009 21872 641007 400000))
 ;;; Generated autoloads from mozc.el
 
 (defvar mozc-mode-map (let ((map (make-sparse-keymap))) (prog1 map (mapc (lambda (command) (mapc (lambda (key-sequence) (and (= (length key-sequence) 1) (integerp (aref key-sequence 0)) (define-key map key-sequence command))) (where-is-internal command global-map))) '(execute-extended-command toggle-input-method)) (mapc (lambda (event) (define-key map (vector event) nil)) '(delete-frame iconify-frame make-frame-visible select-window switch-frame)) (define-key map [t] #'mozc-handle-event))) "\

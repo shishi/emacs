@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil nil ("ruby-block.el") (23009 19553 453349 300000))
+;;;### (autoloads nil nil ("ruby-block.el") (23009 22632 282034 500000))
 
 ;;;***
 

@@ -4,7 +4,7 @@
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
 ;;;### (autoloads nil "clojure-snippets" "clojure-snippets.el" (23009
-;;;;;;  19373 163245 900000))
+;;;;;;  22519 834222 300000))
 ;;; Generated autoloads from clojure-snippets.el
 
 (autoload 'clojure-snippets-initialize "clojure-snippets" "\
@@ -16,8 +16,8 @@
 
 ;;;***
 
-;;;### (autoloads nil nil ("clojure-snippets-pkg.el") (23009 19373
-;;;;;;  186307 600000))
+;;;### (autoloads nil nil ("clojure-snippets-pkg.el") (23009 22519
+;;;;;;  861792 500000))
 
 ;;;***
 
