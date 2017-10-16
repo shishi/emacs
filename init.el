@@ -271,6 +271,11 @@
 ;; swap C-h and C-?, make C-h is backspace
 (keyboard-translate ?\C-h ?\C-?)
 
+;; help
+(define-key global-map (kbd "C-x ?") 'help)
+;; (define-key global-map (kbd "C-x p") 'help-for-help)
+;; (define-key global-map "\C-x\C-h" 'help-command)
+
 ;; swap C-a and M-m
 (define-key global-map (kbd "C-a") 'back-to-indentation)
 (define-key global-map (kbd "M-m") 'move-beginning-of-line)
@@ -1154,4 +1159,4 @@ Position the cursor at its beginning, according to the current mode."
 ;;; utilities
 ;;; ============================================================
 
-(load-file (expand-file-name "~/.emacs.d/utilities.elc"))
+(load (expand-file-name "~/.emacs.d/utilities"))

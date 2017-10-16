@@ -120,13 +120,13 @@
 ;; helm-dired
 ;; helm in dired
 ;; http://d.hatena.ne.jp/syohex/20120105/1325770778
-(require 'helm)
+(require 'helm-for-files)
 (require 'dired)
 (defun my/helm-dired ()
   (interactive)
   (let ((curbuf (current-buffer)))
     (if (helm-other-buffer
-         '(helm-c-source-files-in-current-dir)
+         '(helm-source-files-in-current-dir)
          "*helm-dired*")
         (kill-buffer curbuf))))
 (define-key dired-mode-map (kbd "p") 'my/helm-dired)
