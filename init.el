@@ -21,7 +21,7 @@
        load-path))
 
 ;; cask
-(require 'cask) ;"/usr/local/share/emacs/site-lisp/cask/cask.el")
+(require 'cask "~/.cask/cask.el")
 (cask-initialize)
 
 ;; use-package
@@ -455,8 +455,7 @@ Position the cursor at its beginning, according to the current mode."
   (custom-set-variables '(helm-yas-space-match-any-greedy t)))
 
 ;; helm-descbinds
-(use-package helm-descbinds
-  :bind ("C-x ? b" . helm-descbinds))
+(use-package helm-descbinds)
 
 ;; abbrev mode
 (use-package abbrev
@@ -1093,7 +1092,7 @@ Position the cursor at its beginning, according to the current mode."
 
   (when (eq system-type 'gnu/linux)
     (set-face-attribute 'default nil
-                        :family "Ricty"  ;; 英数
+                        :family "Ricty Diminished"  ;; 英数
                         :height 130)
     ;; (set-fontset-font
     ;;  (frame-parameter nil 'font)

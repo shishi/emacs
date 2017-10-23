@@ -49,7 +49,7 @@
 (defun indent-whole-buffer ()
   (interactive)
   (indent-region (point-min) (point-max)))
-(define-key global-map (kbd "C-s-\\") 'indent-whole-buffer)
+(define-key global-map (kbd "C-M-\\") 'indent-whole-buffer)
 
 ;;; camerize<->snakecase-on-region
 ;;; http://d.hatena.ne.jp/IMAKADO/20091209/1260323922
