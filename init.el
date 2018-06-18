@@ -15,19 +15,30 @@
       (append
        (list
         ;; (expand-file-name "~/.emacs.d/")
-        ;; (expand-file-name "~/.emacs.d/elisp/")
-        ;; (expand-file-name "~/.emacs.d/elisp/el-get/el-get")
+        (expand-file-name "~/.emacs.d/elisps/")
+        (expand-file-name "~/dev/src/github.com/jwiegley/use-package")
         )
        load-path))
 
-;; cask
-(require 'cask "~/.cask/cask.el")
-(cask-initialize)
+(package-initialize)
+(setq package-archives
+      '(("gnu" . "http://elpa.gnu.org/packages/")
+        ("melpa" . "http://melpa.org/packages/")
+        ("org" . "http://orgmode.org/elpa/")))
 
 ;; use-package
 (require 'use-package)
-(require 'delight)
-;; (setq use-package-always-ensure t)
+(require 'use-package-delight)
+(setq use-package-always-ensure t)
+
+;; quelpa
+(require 'quelpa)
+(quelpa
+ '(quelpa-use-package
+   :fetcher github
+   :repo "quelpa/quelpa-use-package"))
+(require 'quelpa-use-package)
+(setq use-package-ensure-function 'quelpa)
 
 ;; emacs-server
 (use-package server
@@ -87,7 +98,7 @@
 ;; load newer file even it's compiled
 (setq load-prefer-newer t)
 
-(setq custom-file (expand-file-name "~/.emacs.d/custom.el"))
+(setq custom-file (expand-file-name "~/.emacs.d/elisps/custom.el"))
 
 ;; no beep
 (setq ring-bell-function 'ignore)
@@ -117,9 +128,10 @@
  '(recentf-max-saved-items 500))
 
 ;; ui
-(global-linum-mode t)
-(line-number-mode t);
-(column-number-mode t);
+(global-display-line-numbers-mode)
+;; (global-linum-mode t)
+;; (line-number-mode t);
+;; (column-number-mode t);
 (scroll-bar-mode -1)
 (menu-bar-mode t)
 (tool-bar-mode -1)
@@ -144,7 +156,7 @@
       (format "%d lines,%d chars "
               (count-lines (region-beginning) (region-end))
               (- (region-end) (region-beginning))) ""))
-(add-to-list 'default-mode-line-format '(:eval (count-lines-and-chars)))
+;; (add-to-list 'default-mode-line-format '(:eval (count-lines-and-chars)))
 
 
 ;; hide startup screen
@@ -185,7 +197,6 @@
 (setq kept-new-versions 5)
 (setq kept-old-versions 5)
 (setq delete-old-versions t)
-(setq dired-kept-versions 5)
 
 ;; default tab setting
 (setq-default tab-width 4)
@@ -197,10 +208,12 @@
 (add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)
 
 ;; including various config major mode
-(use-package generic-x)
+(use-package generic-x
+  :ensure nil)
 
 ;; add path to file name in buffer if conflict file name
-(use-package uniquify)
+(use-package uniquify
+  :ensure nil)
 
 ;; trailing space
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
@@ -316,14 +329,18 @@ Position the cursor at its beginning, according to the current mode."
 
 ;; dired
 (use-package dired
+  :ensure nil
   :init
-  (use-package dired+)
   (setq delete-by-moving-to-trash t)
+  (setq dired-kept-versions 5)
   (custom-set-variables
    '(diredp-hide-details-initially-flag nil)
    '(dired-recursive-copies 'always)
    '(dired-recursive-deletes 'always)))
 
+(use-package dired+
+  :quelpa (dired+ :fetcher url :url "https://www.emacswiki.org/emacs/download/dired+.el")
+  :after (dired))
 
 ;; smart-mode-line
 (use-package smart-mode-line
@@ -331,7 +348,7 @@ Position the cursor at its beginning, according to the current mode."
   :init
   (custom-set-variables
    '(sml/no-confirm-load-theme t))
-   ;;'(sml/theme 'respectful))
+  ;;'(sml/theme 'respectful))
   (sml/setup))
 
 ;; cua mode
@@ -362,9 +379,9 @@ Position the cursor at its beginning, according to the current mode."
 
 ;; flycheck
 (use-package flycheck
- :commands global-flycheck-mode
- :init
- (add-hook 'after-init-hook #'global-flycheck-mode))
+  :commands global-flycheck-mode
+  :init
+  (add-hook 'after-init-hook #'global-flycheck-mode))
 
 ;; easy-kill
 (use-package easy-kill
@@ -377,7 +394,7 @@ Position the cursor at its beginning, according to the current mode."
   ("C-=" . er/expand-region))
 
 ;; helm
-(use-package helm-config
+(use-package helm
   :commands helm-mode
   :functions (helm-get-current-source helm-execute-persistent-action)
   :bind
@@ -389,6 +406,7 @@ Position the cursor at its beginning, according to the current mode."
   ("C-x C-b" . helm-buffers-list)
   ("M-y" . helm-show-kill-ring)
   :init
+  (require 'helm-config)
   (helm-mode 1)
 
   (custom-set-variables
@@ -459,6 +477,7 @@ Position the cursor at its beginning, according to the current mode."
 
 ;; abbrev mode
 (use-package abbrev
+  :ensure nil
   :delight
   :init
   ;; (setq-default abbrev-mode t)
@@ -499,12 +518,11 @@ Position the cursor at its beginning, according to the current mode."
   (yas-global-mode t))
 
 ;; auto-complete
-(use-package auto-complete-config
+(use-package auto-complete
   :commands (ac-config-default auto-complete-mode)
   :functions ac-flyspell-workaround
   :init
-  (use-package pos-tip)
-  (use-package go-autocomplete)
+  (require 'auto-complete-config)
   (use-package auto-complete-config)
   (ac-config-default)
   ;; (global-auto-complete-mode t)
@@ -526,8 +544,8 @@ Position the cursor at its beginning, according to the current mode."
   ;; auto-complete commonc sources setup
   ;; this is executed in the last of ac-config-default, so you should "add", don't make new list
   (defun ac-common-setup ()
-  ;(add-to-list 'ac-sources 'ac-source-filename)
-  )
+                                        ;(add-to-list 'ac-sources 'ac-source-filename)
+    )
 
   ;; auto-complete everywhere
   (defun auto-complete-mode-maybe ()
@@ -536,9 +554,17 @@ Position the cursor at its beginning, according to the current mode."
       (auto-complete-mode 1)))
   (setq ac-sources (append '(ac-source-filename) ac-sources)))
 
+;; go-autocomplete
+(use-package go-autocomplete
+  :after (auto-complete))
+
+;; pos-tip
+(use-package pos-tip
+  :after (auto-complete))
+
 ;; popwin
 (use-package popwin
-  :defines dired-mode-map
+  :after (dired)
   :init
   (custom-set-variables
    '(popwin:special-display-config
@@ -557,15 +583,12 @@ Position the cursor at its beginning, according to the current mode."
        (" *auto-async-byte-compile*" :noselect t)
        ))))
 
-;; pos-tip
-(use-package pos-tip)
-
 ;; smartparens
-(use-package smartparens-config
+(use-package smartparens
   :commands smartparens-global-mode
+  :delight
   :init
-  (use-package smartparens
-    :delight)
+  (require 'smartparens-config)
   (smartparens-global-mode))
 
 ;; anzu
@@ -636,6 +659,7 @@ Position the cursor at its beginning, according to the current mode."
 
 ;; redo
 (use-package redo+
+  :quelpa (redo+  :fetcher url :url "https://www.emacswiki.org/emacs/download/redo+.el")
   :bind
   ("C-M-/" . redo))
 
@@ -690,11 +714,34 @@ Position the cursor at its beginning, according to the current mode."
 ;; fish
 (use-package fish-mode)
 
+;; ddskk
+(use-package ddskk
+  :init
+  ;; from skk-setup
+  (defun skk-isearch-setup-maybe ()
+    (require 'skk-vars)
+    (when (or (eq skk-isearch-mode-enable 'always)
+              (and (boundp 'skk-mode)
+                   skk-mode
+                   skk-isearch-mode-enable))
+      (skk-isearch-mode-setup)))
+  (defun skk-isearch-cleanup-maybe ()
+    (require 'skk-vars)
+    (when (and (featurep 'skk-isearch)
+               skk-isearch-mode-enable)
+      (skk-isearch-mode-cleanup)))
+  (add-hook 'isearch-mode-hook #'skk-isearch-setup-maybe)
+  (add-hook 'isearch-mode-end-hook #'skk-isearch-cleanup-maybe)
+  :bind
+  ("C-x C-j" . skk-mode))
+
+
 ;;; for specific language settings
 ;;; ============================================================
 
 ;; elisp
 (use-package elisp-mode
+  :ensure nil
   :mode
   ("\\.el$" . emacs-lisp-mode)
   :init
@@ -995,20 +1042,20 @@ Position the cursor at its beginning, according to the current mode."
 
 ;; color-theme
 
-(load-theme 'smyx t)
-
-;; web+db press vol.58 P.78
-;; this settings are overwritten by theme often, so re-define
-(show-paren-mode t)
-(custom-set-variables
- '(show-paren-delay 0)
- '(show-paren-style 'expression))
-(set-face-foreground 'show-paren-match-face nil)
-(set-face-background 'show-paren-match-face nil)
-(set-face-underline 'show-paren-match-face "yellow")
+(use-package smyx-theme
+  :config
+  (load-theme 'smyx 'no-confirm)
+  ;; web+db press vol.58 P.78
+  ;; this settings are overwritten by theme often, so re-define
+  (show-paren-mode t)
+  (custom-set-variables
+   '(show-paren-delay 0)
+   '(show-paren-style 'expression))
+  (set-face-attribute 'show-paren-match nil
+                      :background nil :foreground nil
+                      :underline "#ffff00" :weight 'extra-bold))
 
 ;; gui
-
 (when (window-system)
   ;; (set-background-color "black")
   ;; (set-foreground-color "LightGray")
@@ -1116,46 +1163,46 @@ Position the cursor at its beginning, according to the current mode."
                     (height . 50) ;; フレーム高(文字数)
                     ) default-frame-alist)))
 
-    (when (eq system-type 'cygwin)
-      (set-face-attribute 'default nil
-                          :family "Ricty"  ;; 英数
-                          :height 130)
-      (set-fontset-font
-       (frame-parameter nil 'font)
-       'japanese-jisx0208
-       '("Ricty Diminished" . "iso10646-1"))
-      (set-fontset-font
-       (frame-parameter nil 'font)
-       'japanese-jisx0212
-       '("Ricty Diminished" . "iso10646-1"))
-      ;; ウィンドウサイズ
-      (setq initial-frame-alist
-            (append '((top . 0) ;; フレームの Y 位置(ピクセル数)
-                      (left . 10) ;; フレームの X 位置(ピクセル数)
-                      (width . 360) ;; フレーム幅(文字数)
-                      (height . 60) ;; フレーム高(文字数)
-                      ) initial-frame-alist))
-      (setq default-frame-alist
-            (append '((top . 0) ;; フレームの Y 位置(ピクセル数)
-                      (left . 20) ;; フレームの X 位置(ピクセル数)
-                      (width . 360) ;; フレーム幅(文字数)
-                      (height . 60) ;; フレーム高(文字数)
-                      ) default-frame-alist))))
+  (when (eq system-type 'windows-nt)
+    (set-face-attribute 'default nil
+                        :family "Ricty Diminished"  ;; 英数
+                        :height 130)
+    (set-fontset-font
+     (frame-parameter nil 'font)
+     'japanese-jisx0208
+     '("Ricty Diminished" . "iso10646-1"))
+    (set-fontset-font
+     (frame-parameter nil 'font)
+     'japanese-jisx0212
+     '("Ricty Diminished" . "iso10646-1"))
+    ;; ウィンドウサイズ
+    (setq initial-frame-alist
+          (append '((top . 80) ;; フレームの Y 位置(ピクセル数)
+                    (left . 400) ;; フレームの X 位置(ピクセル数)
+                    (width . 200) ;; フレーム幅(文字数)
+                    (height . 60) ;; フレーム高(文字数)
+                    ) initial-frame-alist))
+    (setq default-frame-alist
+          (append '((top . 80) ;; フレームの Y 位置(ピクセル数)
+                    (left . 400) ;; フレームの X 位置(ピクセル数)
+                    (width . 200) ;; フレーム幅(文字数)
+                    (height . 60) ;; フレーム高(文字数)
+                    ) default-frame-alist))))
 
 
 ;;; other settings
 ;;; ============================================================
 
 ;; mozc
-(use-package mozc-popup
-  :init
-  (set-language-environment "Japanese")
-  (prefer-coding-system 'utf-8-unix)
-  (custom-set-variables
-   '(default-input-method "japanese-mozc")
-   '(mozc-candidate-style 'popup)))
+;; (use-package mozc-popup
+;;   :init
+;;   (set-language-environment "Japanese")
+;;   (prefer-coding-system 'utf-8-unix)
+;;   (custom-set-variables
+;;    '(default-input-method "japanese-mozc")
+;;    '(mozc-candidate-style 'popup)))
 
 ;;; utilities
 ;;; ============================================================
 
-(load (expand-file-name "~/.emacs.d/utilities"))
+(load (expand-file-name "~/.emacs.d/elisps/utilities"))

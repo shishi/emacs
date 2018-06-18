@@ -1,23 +1,19 @@
 !.gitkeep
 
 *.elc
-ac-comphist.dat
-recentf
-tramp
-
-/auto-save-list
-/backup
+/ac-comphist.dat
+/recentf
 /history
-/trash
-/undohist
-/url
-/var
+/tramp
 
-# /elisp/el-get/*
-# !/elisp/el-get/.loaddefs.el
-# !/elisp/el-get/.loaddefs.elc
-# !/elisp/el-get/.status.el
-# !/elisp/el-get/.status.elc
+/auto-save-list/
+/backup/
+/trash/
+/undohist/
+/url/
+/var/
+
+/quelpa/melpa
 
 projectile-bookmarks.eld
 /projectile.cache
