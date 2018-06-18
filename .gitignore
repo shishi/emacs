@@ -1,6 +1,7 @@
 !.gitkeep
 
 *.elc
+flycheck_*.el
 /ac-comphist.dat
 /recentf
 /history
@@ -12,6 +13,7 @@
 /undohist/
 /url/
 /var/
+/server/
 
 /quelpa/melpa
 

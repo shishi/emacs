@@ -29,7 +29,7 @@
 ;; use-package
 (require 'use-package)
 (require 'use-package-delight)
-(setq use-package-always-ensure t)
+(setq use-package-always-ensure nil)
 
 ;; quelpa
 (require 'quelpa)
@@ -89,7 +89,7 @@
   (set-file-name-coding-system 'utf-8-hfs)
   (setq locale-coding-system 'utf-8-hfs))
 
-(when (eq system-type 'cygwin)
+(when (eq system-type 'windows-nt)
   ;; (setq file-name-coding-system 'sjis)
   ;; (setq locale-coding-system 'sjis)
   (set-file-name-coding-system 'utf-8-unix)
@@ -156,8 +156,7 @@
       (format "%d lines,%d chars "
               (count-lines (region-beginning) (region-end))
               (- (region-end) (region-beginning))) ""))
-;; (add-to-list 'default-mode-line-format '(:eval (count-lines-and-chars)))
-
+(setq-default mode-line-format (add-to-list 'mode-line-format '(:eval (count-lines-and-chars))))
 
 ;; hide startup screen
 ;; (setq inhibit-startup-screen t)
@@ -218,8 +217,8 @@
 ;; trailing space
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (setq show-trailing-whitespace t)
-;;(set-face-background 'trailing-whitespace "blue")
-;;(set-face-underline 'trailing-whitespace t)
+(set-face-background 'trailing-whitespace "blue")
+(set-face-underline 'trailing-whitespace t)
 (setq require-final-newline t)
 
 ;; show eol
@@ -227,51 +226,51 @@
 ;; (setq eol-mnemonic-mac "(CR)")
 ;; (setq eol-mnemonic-unix "(LF)")
 
-;; whitespace mode
-;; https://qiita.com/itiut@github/items/4d74da2412a29ef59c3a
-(use-package whitespace
-  :config
-  (setq whitespace-style '(face           ; faceで可視化
-                           trailing       ; 行末
-                           tabs           ; タブ
-                           spaces         ; スペース
-                           empty          ; 先頭/末尾の空行
-                           space-mark     ; 表示のマッピング
-                           tab-mark
-                           ))
+;; ;; whitespace mode
+;; ;; https://qiita.com/itiut@github/items/4d74da2412a29ef59c3a
+;; (use-package whitespace
+;;   :init
+;;   (setq whitespace-style '(face           ; faceで可視化
+;;                            trailing       ; 行末
+;;                            tabs           ; タブ
+;;                            spaces         ; スペース
+;;                            empty          ; 先頭/末尾の空行
+;;                            space-mark     ; 表示のマッピング
+;;                            tab-mark
+;;                            ))
 
-  (setq whitespace-display-mappings
-        '((space-mark ?\u3000 [?\u25a1])
-          ;; WARNING: the mapping below has a problem.
-          ;; When a TAB occupies exactly one column, it will display the
-          ;; character ?\xBB at that column followed by a TAB which goes to
-          ;; the next TAB column.
-          ;; If this is a problem for you, please, comment the line below.
-          (tab-mark ?\t [?\u00BB ?\t] [?\\ ?\t])))
+;;   (setq whitespace-display-mappings
+;;         '((space-mark ?\u3000 [?\u25a1])
+;;           ;; WARNING: the mapping below has a problem.
+;;           ;; When a TAB occupies exactly one column, it will display the
+;;           ;; character ?\xBB at that column followed by a TAB which goes to
+;;           ;; the next TAB column.
+;;           ;; If this is a problem for you, please, comment the line below.
+;;           (tab-mark ?\t [?\u00BB ?\t] [?\\ ?\t])))
 
-  ;; スペースは全角のみを可視化
-  (setq whitespace-space-regexp "\\(\u3000+\\)")
+;;   ;; スペースは全角のみを可視化
+;;   (setq whitespace-space-regexp "\\(\u3000+\\)")
 
-  ;; 保存前に自動でクリーンアップ
-  ;; (setq whitespace-action '(auto-cleanup))
+;;   ;; 保存前に自動でクリーンアップ
+;;   ;; (setq whitespace-action '(auto-cleanup))
 
-  ;; (defvar my/bg-color "#232323")
-  (set-face-attribute 'whitespace-trailing nil
-                      ;; :background my/bg-color
-                      :foreground "DeepPink"
-                      :underline t)
-  (set-face-attribute 'whitespace-tab nil
-                      ;; :background my/bg-color
-                      :foreground "LightSkyBlue"
-                      :underline t)
-  (set-face-attribute 'whitespace-space nil
-                      ;; :background my/bg-color
-                      :foreground "GreenYellow"
-                      :weight 'bold)
-  (set-face-attribute 'whitespace-empty nil
-                      :background "Green")
+;;   ;; (defvar my/bg-color "#232323")
+;;   (set-face-attribute 'whitespace-trailing nil
+;;                       ;; :background my/bg-color
+;;                       :foreground "DeepPink"
+;;                       :underline t)
+;;   (set-face-attribute 'whitespace-tab nil
+;;                       ;; :background my/bg-color
+;;                       :foreground "LightSkyBlue"
+;;                       :underline t)
+;;   (set-face-attribute 'whitespace-space nil
+;;                       ;; :background my/bg-color
+;;                       :foreground "GreenYellow"
+;;                       :weight 'bold)
+;;   (set-face-attribute 'whitespace-empty nil
+;;                       :background "Green")
 
-  (global-whitespace-mode t))
+;;   (global-whitespace-mode t))
 
 ;;; built-in keybindings
 ;;; ============================================================
@@ -555,17 +554,18 @@ Position the cursor at its beginning, according to the current mode."
   (setq ac-sources (append '(ac-source-filename) ac-sources)))
 
 ;; go-autocomplete
-(use-package go-autocomplete
-  :after (auto-complete))
+(use-package go-autocomplete)
+;; :after (auto-complete))
 
 ;; pos-tip
-(use-package pos-tip
-  :after (auto-complete))
+(use-package pos-tip)
+;; :after (auto-complete))
 
 ;; popwin
 (use-package popwin
   :after (dired)
-  :init
+  :config
+  (popwin-mode t)
   (custom-set-variables
    '(popwin:special-display-config
      '(
@@ -669,11 +669,14 @@ Position the cursor at its beginning, according to the current mode."
   ("C-c m" . magit-status)
   ("C-x m" . magit-file-popup))
 
+(use-package git-gutter
+  :delight)
+
 (use-package git-gutter-fringe
+  :delight
+  :after (git-gutter)
   :commands global-git-gutter-mode
   :init
-  (use-package git-gutter
-    :delight)
   (global-git-gutter-mode t))
 
 (use-package gist)
@@ -705,6 +708,7 @@ Position the cursor at its beginning, according to the current mode."
 
 ;; free-keys
 (use-package free-keys
+  :delight
   :init
   (custom-set-variables '(free-keys-modifiers '("" "C" "M" "C-M" "C-S-M" "s"))))
 
@@ -717,6 +721,9 @@ Position the cursor at its beginning, according to the current mode."
 ;; ddskk
 (use-package ddskk
   :init
+  (setq skk-server-host "localhost"
+        skk-server-portnum 1178
+        skk-server-report-response t)
   ;; from skk-setup
   (defun skk-isearch-setup-maybe ()
     (require 'skk-vars)
