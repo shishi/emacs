@@ -30,9 +30,6 @@
  '(helm-yas-space-match-any-greedy t)
  '(imenu-auto-rescan t)
  '(inf-ruby-default-implementation "pry")
- '(package-selected-packages
-   (quote
-    (dired+ elisp-mode ddskk redo+ smartparens-config auto-complete-config abbrev helm-config yaml-mode which-key wgrep web-mode vimrc-mode undo-tree tuareg textile-mode swift-mode smyx-theme smartrep smartparens smart-mode-line slim-mode scss-mode sass-mode ruby-end rspec-mode robe rbenv rainbow-delimiters quickrun quelpa-use-package pos-tip popwin php-mode package-utils markdown-mode magit js2-mode highlight-symbol helm-swoop helm-projectile helm-ls-git helm-descbinds helm-c-yasnippet helm-ag google-this go-rename go-guru go-eldoc go-autocomplete gitignore-mode gitconfig-mode gitattributes-mode git-gutter-fringe gist free-keys flycheck fish-mode expand-region enh-ruby-mode easy-kill dockerfile-mode coffee-mode clj-refactor auto-async-byte-compile anzu ag)))
  '(popwin:special-display-config
    (quote
     ("*Help*" "*Backtrace*" "*Org Agenda*" "*Apropos*"
@@ -44,7 +41,6 @@
      ("*Occur*" :noselect t)
      ("*Remember*" :stick t)
      (" *auto-async-byte-compile*" :noselect t))))
- '(rbenv-installation-dir "~/.rbenv/bin/rbenv")
  '(recentf-max-menu-items 500)
  '(recentf-max-saved-items 500)
  '(show-paren-delay 0)

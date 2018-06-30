@@ -1,0 +1,6 @@
+git
+echo $PATH
+ruby -=
+which ruby
+scoop.cmd help
+scoop

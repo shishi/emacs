@@ -20,15 +20,15 @@
         )
        load-path))
 
-(package-initialize)
-(setq package-archives
+(defvar package-archives
       '(("gnu" . "http://elpa.gnu.org/packages/")
         ("melpa" . "http://melpa.org/packages/")
         ("org" . "http://orgmode.org/elpa/")))
+(package-initialize)
 
 ;; use-package
 (require 'use-package)
-(require 'use-package-delight)
+                                        ; (require 'use-package-delight)
 (setq use-package-always-ensure nil)
 
 ;; quelpa
@@ -42,7 +42,7 @@
 
 ;; emacs-server
 (use-package server
-  :init
+  :config
   (add-hook 'after-init-hook 'server-start t))
 
 ;; cl
@@ -53,12 +53,11 @@
 ;;       (remove-duplicates
 ;;        (append
 ;;         (list
-;;          (expand-file-name "~/.rbenv/bin")
-;;          (expand-file-name "~/.rbenv/shims")
+;;          ;; (expand-file-name "~/.rbenv/bin")
+;;          ;; (expand-file-name "~/.rbenv/shims")
 ;;          ;; (expand-file-name "~/.anyenv/envs/rbenv/bin")
 ;;          ;; (expand-file-name "~/.anyenv/envs/rbenv/shims")
 ;;          (expand-file-name "~/.emacs.d/bin")
-;;          (expand-file-name "~/bin")
 ;;          (expand-file-name "~/dev/bin")
 ;;          "/usr/local/sbin"
 ;;          "/usr/local/bin"
@@ -83,6 +82,7 @@
 (set-clipboard-coding-system 'utf-8-unix)
 (setq default-file-name-coding-system 'utf-8-unix)
 (setq buffer-file-coding-system 'utf-8-unix)
+(setq select-enable-clipboard t)
 
 (when (eq system-type 'darwin)
   (use-package ucs-normalize)
@@ -175,7 +175,7 @@
 
 ;; clipboard
 ;; (setq select-enable-clipboard t)
-;; (setq select-enable-primary nil)
+;; (setq elect-enable-primary nil)
 (setq mouse-drag-copy-region t)
 
 ;; move deleted to trash
@@ -226,51 +226,28 @@
 ;; (setq eol-mnemonic-mac "(CR)")
 ;; (setq eol-mnemonic-unix "(LF)")
 
-;; ;; whitespace mode
-;; ;; https://qiita.com/itiut@github/items/4d74da2412a29ef59c3a
-;; (use-package whitespace
-;;   :init
-;;   (setq whitespace-style '(face           ; faceで可視化
-;;                            trailing       ; 行末
-;;                            tabs           ; タブ
-;;                            spaces         ; スペース
-;;                            empty          ; 先頭/末尾の空行
-;;                            space-mark     ; 表示のマッピング
-;;                            tab-mark
-;;                            ))
-
-;;   (setq whitespace-display-mappings
-;;         '((space-mark ?\u3000 [?\u25a1])
-;;           ;; WARNING: the mapping below has a problem.
-;;           ;; When a TAB occupies exactly one column, it will display the
-;;           ;; character ?\xBB at that column followed by a TAB which goes to
-;;           ;; the next TAB column.
-;;           ;; If this is a problem for you, please, comment the line below.
-;;           (tab-mark ?\t [?\u00BB ?\t] [?\\ ?\t])))
-
-;;   ;; スペースは全角のみを可視化
-;;   (setq whitespace-space-regexp "\\(\u3000+\\)")
-
-;;   ;; 保存前に自動でクリーンアップ
-;;   ;; (setq whitespace-action '(auto-cleanup))
-
-;;   ;; (defvar my/bg-color "#232323")
-;;   (set-face-attribute 'whitespace-trailing nil
-;;                       ;; :background my/bg-color
-;;                       :foreground "DeepPink"
-;;                       :underline t)
-;;   (set-face-attribute 'whitespace-tab nil
-;;                       ;; :background my/bg-color
-;;                       :foreground "LightSkyBlue"
-;;                       :underline t)
-;;   (set-face-attribute 'whitespace-space nil
-;;                       ;; :background my/bg-color
-;;                       :foreground "GreenYellow"
-;;                       :weight 'bold)
-;;   (set-face-attribute 'whitespace-empty nil
-;;                       :background "Green")
-
-;;   (global-whitespace-mode t))
+;; whitespace mode
+;; https://qiita.com/itiut@github/items/4d74da2412a29ef59c3a
+(use-package whitespace
+  :delight
+  :config
+  (setq whitespace-style '(face tabs tab-mark spaces space-mark))
+  (setq whitespace-display-mappings
+        '((space-mark ?\u3000 [?\u25a1])
+          ;; WARNING: the mapping below has a problem.
+          ;; When a TAB occupies exactly one column, it will display the
+          ;; character ?\xBB at that column followed by a TAB which goes to
+          ;; the next TAB column.
+          ;; If this is a problem for you, please, comment the line below.
+          (tab-mark ?\t [?\xBB ?\t] [?\\ ?\t])))
+  (setq whitespace-space-regexp "\\(\u3000+\\)")
+  (set-face-foreground 'whitespace-tab "#adff2f")
+  (set-face-background 'whitespace-tab 'nil)
+  (set-face-underline  'whitespace-tab t)
+  (set-face-foreground 'whitespace-space "#7cfc00")
+  (set-face-background 'whitespace-space 'nil)
+  (set-face-bold 'whitespace-space t)
+  (global-whitespace-mode t))
 
 ;;; built-in keybindings
 ;;; ============================================================
@@ -326,10 +303,10 @@ Position the cursor at its beginning, according to the current mode."
 
 (use-package package-utils)
 
-;; dired
+                                        ; dired
 (use-package dired
   :ensure nil
-  :init
+  :config
   (setq delete-by-moving-to-trash t)
   (setq dired-kept-versions 5)
   (custom-set-variables
@@ -344,7 +321,7 @@ Position the cursor at its beginning, according to the current mode."
 ;; smart-mode-line
 (use-package smart-mode-line
   :commands sml/setup
-  :init
+  :config
   (custom-set-variables
    '(sml/no-confirm-load-theme t))
   ;;'(sml/theme 'respectful))
@@ -352,16 +329,16 @@ Position the cursor at its beginning, according to the current mode."
 
 ;; cua mode
 (use-package cua-base
-  :init
-  (cua-mode t)
-  (custom-set-variables
-   '(cua-rectangle-mark-key [(s-return)])
-   '(cua-enable-cua-keys nil)))
+  :costom
+  :config
+  (cua-rectangle-mark-key [(s-return)]
+  (cua-enable-cua-keys nil)
+  (cua-mode t)))
 
 ;; smartrep
 (use-package smartrep
   :commands smartrep-define-key
-  :init
+  :config
   (defvar ctl-q-map (make-keymap))
   (define-key global-map "\C-q" ctl-q-map)
   ;; flycheck
@@ -379,7 +356,7 @@ Position the cursor at its beginning, according to the current mode."
 ;; flycheck
 (use-package flycheck
   :commands global-flycheck-mode
-  :init
+  :config
   (add-hook 'after-init-hook #'global-flycheck-mode))
 
 ;; easy-kill
@@ -394,8 +371,8 @@ Position the cursor at its beginning, according to the current mode."
 
 ;; helm
 (use-package helm
-  :commands helm-mode
-  :functions (helm-get-current-source helm-execute-persistent-action)
+  :delight
+  :commands (helm-mode helm-get-current-source helm-execute-persistent-action)
   :bind
   ("M-x" . helm-M-x)
   ;; ("C-;" . helm-buffers-list)
@@ -404,21 +381,19 @@ Position the cursor at its beginning, according to the current mode."
   ("C-x C-r" . helm-recentf)
   ("C-x C-b" . helm-buffers-list)
   ("M-y" . helm-show-kill-ring)
-  :init
+  :custom
+  (helm-input-idle-delay 0.1)
+  (helm-candidate-number-limit 200)
+  (helm-buffers-fuzzy-matching t)
+  (helm-ff-file-name-history-use-recentf t)
+  (helm-su-or-sudo "sudo")
+  (helm-inherit-input-method nil)
+  ;; settings for splitting
+  (helm-full-frame nil)
+  (helm-split-window-default-side 'other)
+  :config
   (require 'helm-config)
-  (helm-mode 1)
-
-  (custom-set-variables
-   '(helm-input-idle-delay 0.1)
-   '(helm-candidate-number-limit 200)
-   '(helm-buffers-fuzzy-matching t)
-   '(helm-ff-file-name-history-use-recentf t)
-   '(helm-su-or-sudo "sudo")
-   '(helm-inherit-input-method nil)
-   ;; settings for splitting
-   '(helm-full-frame nil)
-   '(helm-split-window-default-side 'other))
-
+  (helm-mode t)
   ;; helm カーソル合った時に persistent-action 実行
   (defun show-buffer-move-by-move-extend ()
     (interactive)
@@ -468,8 +443,8 @@ Position the cursor at its beginning, according to the current mode."
 (use-package helm-c-yasnippet
   :bind
   ("C-s-<return>" . helm-yas-complete)
-  :init
-  (custom-set-variables '(helm-yas-space-match-any-greedy t)))
+  :custom
+  (helm-yas-space-match-any-greedy t))
 
 ;; helm-descbinds
 (use-package helm-descbinds)
@@ -478,7 +453,8 @@ Position the cursor at its beginning, according to the current mode."
 (use-package abbrev
   :ensure nil
   :delight
-  :init
+  :commands quietly-read-abbrev-file
+  :config
   ;; (setq-default abbrev-mode t)
   (setq abbrev-file-name "~/.emacs.d/abbrev_defs")
   (setq save-abbrevs t)
@@ -496,7 +472,7 @@ Position the cursor at its beginning, according to the current mode."
   ("C-x y e" . yas-expand)
   :mode
   ("\\.yasnippet$" . snippet-mode)
-  :init
+  :config
   ;; 先頭のディレクトリは開発用ディレクトリとして扱われる
   ;; 後に読み込んだものが優先される
   ;; package.el からインストールしたのだと、デフォルトで
@@ -518,11 +494,10 @@ Position the cursor at its beginning, according to the current mode."
 
 ;; auto-complete
 (use-package auto-complete
-  :commands (ac-config-default auto-complete-mode)
-  :functions ac-flyspell-workaround
-  :init
+  :commands (ac-flyspell-workaround auto-complete-mode)
+  :functions ac-config-default
+  :config
   (require 'auto-complete-config)
-  (use-package auto-complete-config)
   (ac-config-default)
   ;; (global-auto-complete-mode t)
 
@@ -564,30 +539,31 @@ Position the cursor at its beginning, according to the current mode."
 ;; popwin
 (use-package popwin
   :after (dired)
+  :commands (popwin-mode)
+  :custom
+  (popwin:special-display-config
+   '(
+     "*Help*"
+     "*Backtrace*"
+     "*Org Agenda*"
+     "*Apropos*"
+     ("*quickrun*")
+     ("*Warnings*" :noselect t)
+     ("*Completions*" :noselect t)
+     ("*compilation*" :noselect t)
+     ("*Compile-Log*" :noselect t)
+     ("*Occur*" :noselect t)
+     ("*Remember*" :stick t)
+     (" *auto-async-byte-compile*" :noselect t)
+     ))
   :config
-  (popwin-mode t)
-  (custom-set-variables
-   '(popwin:special-display-config
-     '(
-       "*Help*"
-       "*Backtrace*"
-       "*Org Agenda*"
-       "*Apropos*"
-       ("*quickrun*")
-       ("*Warnings*" :noselect t)
-       ("*Completions*" :noselect t)
-       ("*compilation*" :noselect t)
-       ("*Compile-Log*" :noselect t)
-       ("*Occur*" :noselect t)
-       ("*Remember*" :stick t)
-       (" *auto-async-byte-compile*" :noselect t)
-       ))))
+  (popwin-mode t))
 
 ;; smartparens
 (use-package smartparens
   :commands smartparens-global-mode
   :delight
-  :init
+  :config
   (require 'smartparens-config)
   (smartparens-global-mode))
 
@@ -597,17 +573,18 @@ Position the cursor at its beginning, according to the current mode."
   :bind
   ("C-c r" . anzu-query-replace)
   ("C-c R" . anzu-query-replace-regexp)
+  :custom
+  (anzu-use-migemo nil)
+  (anzu-search-threshold 10000)
+  (anzu-minimum-input-length 2)
   :config
   (global-anzu-mode +1)
-  (custom-set-variables
-   '(anzu-use-migemo nil)
-   '(anzu-search-threshold 10000)
-   '(anzu-minimum-input-length 2)))
+  (custom-set-variables))
 
 ;; highlight-symbol
 (use-package highlight-symbol
   :delight
-  :init
+  :config
   (add-hook 'emacs-lisp-mode-hook 'highlight-symbol-mode)
   (add-hook 'ruby-mode-hook 'highlight-symbol-mode)
   (add-hook 'enh-ruby-mode-hook 'highlight-symbol-mode)
@@ -627,12 +604,12 @@ Position the cursor at its beginning, according to the current mode."
 
 ;; projectile
 (use-package projectile
-  :delight '(:eval (concat " " "[" (projectile-project-name) "]"))
+  :delight ; '(:eval (concat " " "[" (projectile-project-name) "]"))
   :commands projectile-mode
   :bind
   ("C-x C-'" . helm-projectile)
   ("C-M-'" . projectile-find-dir)
-  :init
+  :config
   (projectile-mode)
   ;; (setq projectile-enable-caching t)
   (setq projectile-indexing-method
@@ -640,7 +617,9 @@ Position the cursor at its beginning, according to the current mode."
             'native
           'alien)))
 
-(use-package helm-projectile)
+(use-package helm-projectile
+  :delight
+  :after (helm projectile))
 
 ;; google-this
 (use-package google-this)
@@ -654,7 +633,7 @@ Position the cursor at its beginning, according to the current mode."
 (use-package undo-tree
   :delight
   :commands global-undo-tree-mode
-  :init
+  :config
   (global-undo-tree-mode t))
 
 ;; redo
@@ -676,7 +655,7 @@ Position the cursor at its beginning, according to the current mode."
   :delight
   :after (git-gutter)
   :commands global-git-gutter-mode
-  :init
+  :config
   (global-git-gutter-mode t))
 
 (use-package gist)
@@ -689,19 +668,19 @@ Position the cursor at its beginning, according to the current mode."
   :bind
   (:map dired-mode-map
         ("r" . wdired-change-to-wdired-mode))
-  :init
-  (custom-set-variables '(wdired-allow-to-change-permissions t)))
+  :custom
+  (wdired-allow-to-change-permissions t))
 
 ;; wgrep
 (use-package wgrep
-  :init
-  (custom-set-variables '(wgrep-enable-key "r")))
+  :custom
+  (wgrep-enable-key "r"))
 
 ;; which-key
 (use-package which-key
   :delight
   :commands (which-key-mode which-key-setup-side-window-bottom)
-  :init
+  :config
   (which-key-mode)
   (setq which-key-idle-delay 0.2)
   (which-key-setup-side-window-bottom))
@@ -709,8 +688,9 @@ Position the cursor at its beginning, according to the current mode."
 ;; free-keys
 (use-package free-keys
   :delight
-  :init
-  (custom-set-variables '(free-keys-modifiers '("" "C" "M" "C-M" "C-S-M" "s"))))
+  :custom
+  (free-keys-modifiers '("" "C" "M" "C-M" "C-S-M" "s")))
+
 
 ;; dockerfile
 (use-package dockerfile-mode)
@@ -718,12 +698,36 @@ Position the cursor at its beginning, according to the current mode."
 ;; fish
 (use-package fish-mode)
 
+;; ccc
+(use-package ccc)
+
 ;; ddskk
 (use-package ddskk
-  :init
-  (setq skk-server-host "localhost"
-        skk-server-portnum 1178
-        skk-server-report-response t)
+  :ensure skk
+  :after (ccc)
+  :config
+  (setq default-input-method "japanese-skk")
+  (setq skk-sticky-key ";")
+  (setq skk-save-jisyo-instantly t)
+  (setq skk-user-directory "~/.emacs.d")
+  (setq skk-large-jisyo "~/.emacs.d/SKK-JISYO.L")
+  (setq skk-server-host "localhost")
+  (setq skk-server-portnum 1178)
+  (setq skk-server-report-response t)
+  (setq skk-use-search-web t)
+
+  (when skk-use-search-web
+    ;; 辞書変換が尽きたらGoogle CGI API for Japanese Inputによる変換を実行
+    ;; https://www.google.co.jp/ime/cgiapi.html
+    (add-to-list 'skk-search-prog-list
+                 '(skk-search-web 'skk-google-cgi-api-for-japanese-input)
+                 t)
+    ;; 辞書登録モードの初期値にGoogleサジェストを使用する
+    (setq skk-read-from-minibuffer-function
+          (lambda ()
+            (car (skk-google-suggest skk-henkan-key))))
+    ;; 動的補完にGoogleサジェストを表示
+    (add-to-list 'skk-completion-prog-list '(skk-comp-google) t))
   ;; from skk-setup
   (defun skk-isearch-setup-maybe ()
     (require 'skk-vars)
@@ -738,10 +742,7 @@ Position the cursor at its beginning, according to the current mode."
                skk-isearch-mode-enable)
       (skk-isearch-mode-cleanup)))
   (add-hook 'isearch-mode-hook #'skk-isearch-setup-maybe)
-  (add-hook 'isearch-mode-end-hook #'skk-isearch-cleanup-maybe)
-  :bind
-  ("C-x C-j" . skk-mode))
-
+  (add-hook 'isearch-mode-end-hook #'skk-isearch-cleanup-maybe))
 
 ;;; for specific language settings
 ;;; ============================================================
@@ -750,26 +751,29 @@ Position the cursor at its beginning, according to the current mode."
 (use-package elisp-mode
   :ensure nil
   :mode
-  ("\\.el$" . emacs-lisp-mode)
-  :init
-  (defun elisp-mode-hooks ()
-    (use-package eldoc
-      :init
-      (setq eldoc-idle-delay 0.2)
-      (setq eldoc-echo-area-use-multiline-p t)
-      (eldoc-mode))
-    (add-hook 'emacs-lisp-mode-hook 'elisp-mode-hooks)))
+  ("\\.el$" . emacs-lisp-mode))
+
+(use-package eldoc
+  :delight
+  :after (elisp-mode)
+  :config
+  (setq eldoc-idle-delay 0.2)
+  (setq eldoc-echo-area-use-multiline-p t)
+  (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode))
 
 (use-package auto-async-byte-compile
-  :init
-  (custom-set-variables '(auto-async-byte-compile-exclude-files-regexp "/\(backup\|trash\)/"))
+  :custom
+  (auto-async-byte-compile-exclude-files-regexp "/\(backup\|trash\)/")
+  :config
   (add-hook 'emacs-lisp-mode-hook 'enable-auto-async-byte-compile-mode))
 
 ;; ruby
 (use-package rbenv
+  :disabled
   :commands global-rbenv-mode
-  :init
-  (custom-set-variables '(rbenv-installation-dir "~/.rbenv/bin/rbenv"))
+  :custom
+  (rbenv-installation-dir "~/.rbenv/bin/rbenv")
+  :config
   (global-rbenv-mode))
 
 (use-package enh-ruby-mode
@@ -786,8 +790,9 @@ Position the cursor at its beginning, according to the current mode."
   ("\\.jbuilder$" . enh-ruby-mode)
   :interpreter
   ("ruby" . enh-ruby-mode)
-  :init
-  (custom-set-variables '(enh-ruby-add-encoding-comment-on-save nil))
+  :custom
+  (enh-ruby-add-encoding-comment-on-save nil)
+  :config
   (defun my-ac-ruby-mode-setup ()
     (add-to-list 'ac-sources 'ac-source-yasnippet))
   (add-hook 'enh-ruby-mode-hook 'my-ac-ruby-mode-setup))
@@ -807,8 +812,9 @@ Position the cursor at its beginning, according to the current mode."
   ("\\.jbuilder$" . ruby-mode)
   :interpreter
   ("ruby" . ruby-mode)
-  :init
-  (custom-set-variables '(ruby-insert-encoding-magic-comment nil))
+  :custom
+  (ruby-insert-encoding-magic-comment nil)
+  :config
   (defun my-ac-ruby-mode-setup ()
     (add-to-list 'ac-sources 'ac-source-yasnippet))
   (add-hook 'ruby-mode-hook 'my-ac-ruby-mode-setup))
@@ -819,33 +825,34 @@ Position the cursor at its beginning, according to the current mode."
 (use-package ruby-block
   :disabled
   :functions ruby-block-mode
-  :init
+  :custom
+  (ruby-block-highlight-toggle t)
+  (ruby-block-delay 0.1)
+  :config
   (defun ruby-block-hooks ()
     (ruby-block-mode t)
-    (custom-set-variables
-     '(ruby-block-highlight-toggle t)
-     '(ruby-block-delay 0.1)))
-  (add-hook 'ruby-mode-hook 'ruby-block-hooks)
-  (add-hook 'enh-ruby-mode-hook 'ruby-block-hooks))
+    (add-hook 'ruby-mode-hook 'ruby-block-hooks)
+    (add-hook 'enh-ruby-mode-hook 'ruby-block-hooks)))
 
 (use-package robe
-  :init
+  :config
   ;; (eval-after-load 'company '(push 'company-robe company-backends))
   (add-hook 'robe-mode-hook 'ac-robe-setup)
   (add-hook 'ruby-mode-hook 'robe-mode)
   (add-hook 'enh-ruby-mode-hook 'robe-mode))
 
 (use-package rspec-mode
-  :functions rspec-install-snippets
-  :init
+  :commands rspec-install-snippets
+  :config
   (eval-after-load 'rspec-mode '(rspec-install-snippets)))
 
 (use-package inf-ruby
   :bind
   (:map inf-ruby-mode-map
         ("<return>" . comint-send-input))
-  :init
-  (custom-set-variables '(inf-ruby-default-implementation "pry"))
+  :custom
+  (inf-ruby-default-implementation "pry")
+  :config
   (add-hook 'inf-ruby-mode-hook 'ansi-color-for-comint-mode-on)
   (add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
   (add-hook 'enh-ruby-mode-hook 'inf-ruby-minor-mode)
@@ -856,18 +863,17 @@ Position the cursor at its beginning, according to the current mode."
   :bind
   (:map go-mode-map
         ("M-." . godef-jump))
-  :init
-  (custom-set-variables
-   '(gofmt-command "goimports")
-   '(compile-command "go build -v && go test -v && go vet")))
+  :custom
+  (gofmt-command "goimports")
+  (compile-command "go build -v && go test -v && go vet"))
 
 (use-package go-eldoc
-  :init
+  :config
   (add-hook 'go-mode-hook 'go-eldoc-setup))
 
 (use-package go-guru
   :commands go-guru-hl-identifier-mode
-  :init
+  :config
   (add-hook 'go-mode-hook #'go-guru-hl-identifier-mode))
 
 (use-package go-rename)
@@ -878,7 +884,7 @@ Position the cursor at its beginning, according to the current mode."
 (use-package clj-refactor
   :functions my-clojure-mode-hook
   :commands (clj-refactor-mode cljr-add-keybindings-with-prefix)
-  :init
+  :config
   (defun my-clojure-mode-hook ()
     (clj-refactor-mode 1)
     ;; (yas-minor-mode 1) ; for adding require/use/import statements
@@ -899,8 +905,8 @@ Position the cursor at its beginning, according to the current mode."
   :mode
   ("\.coffee$" . coffee-mode)
   ("Cakefile" . coffee-mode)
-  :init
-  (custom-set-variables '(coffee-tab-width 2)))
+  :custom
+  (coffee-tab-width 2))
 
 ;; php
 (use-package php-mode
@@ -917,14 +923,13 @@ Position the cursor at its beginning, according to the current mode."
   ("perl" . cperl-mode)
   ("perl5" . cperl-mode)
   ("miniperl" . cperl-mode)
-  :init
-  (defalias 'perl-mode 'cperl-mode)
-  ;; (cperl-set-style "PerlStyle")
-  (custom-set-variables
-   '(cperl-font-lock t)
-   '(cperl-auto-newline t)
-   '(cperl-highlight-variables-indiscriminately t)
-   '(cperl-indent-parens-as-block t)))
+  :custom
+  (cperl-font-lock t)
+  (cperl-auto-newline t)
+  (cperl-highlight-variables-indiscriminately t)
+  (cperl-indent-parens-as-block t)
+  :config
+  (defalias 'perl-mode 'cperl-mode))
 
 ;; swift
 (use-package swift-mode)
@@ -942,7 +947,7 @@ Position the cursor at its beginning, according to the current mode."
 
 ;; sass
 (use-package sass-mode
-  :init
+  :config
   (add-hook 'sass-mode-hook 'ac-css-mode-setup))
 
 ;; scss
@@ -954,8 +959,9 @@ Position the cursor at its beginning, according to the current mode."
   (:map scss-mode-map
         ("{" . my-css-electric-pair-brace)
         (";" . my-semicolon-ret))
-  :init
-  (custom-set-variables '(css-indent-offset 2))
+  :custom
+  (css-indent-offset 2)
+  :config
   (add-hook 'scss-mode-hook 'ac-css-mode-setup)
   ;; http://d.hatena.ne.jp/CortYuming/20120110/p1
   (defun my-css-electric-pair-brace ()
@@ -979,8 +985,8 @@ Position the cursor at its beginning, according to the current mode."
   :mode
   ("\\.md$" . markdown-mode)
   ("\\.apib$" . markdown-mode)
-  :init
-  (custom-set-variables '(whitespace-action nil)))
+  :custom
+  (whitespace-action nil))
 
 ;; rst
 (use-package rst
@@ -988,7 +994,7 @@ Position the cursor at its beginning, according to the current mode."
   ("\\.howm$" . rst-mode)
   ("\\.rst$" . rst-mode)
   ("\\.rest$" . rst-mode)
-  :init
+  :config
   (setq indent-tabs-mode nil))
 
 ;; textile
@@ -996,7 +1002,7 @@ Position the cursor at its beginning, according to the current mode."
   :commands quickrun-add-command
   :mode
   ("\\.textile\\'" . textile-mode)
-  :init
+  :config
   (quickrun-add-command "textile" '((:command . "redcloth")
                                     (:exec . "%c %s")
                                     (:outputter . browser)))
@@ -1011,17 +1017,16 @@ Position the cursor at its beginning, according to the current mode."
   ("\\.as[cp]x\\'" . web-mode)
   ("\\.erb\\'" . web-mode)
   ("\\.mustache\\'" . web-mode)
-  :init
-  (custom-set-variables
-   '(web-mode-markup-indent-offset 2)
-   '(web-mode-css-indent-offset 2)
-   '(web-mode-code-indent-offset 2)
-   '(web-mode-enable-auto-pairing t)
-   '(web-mode-enable-auto-closing t)
-   '(web-mode-auto-close-style 2)
-   '(web-mode-enable-css-colorization t)
-   '(web-mode-enable-heredoc-fontification t)
-   '(web-mode-enable-current-element-highlight t)))
+  :custom
+  (web-mode-markup-indent-offset 2)
+  (web-mode-css-indent-offset 2)
+  (web-mode-code-indent-offset 2)
+  (web-mode-enable-auto-pairing t)
+  (web-mode-enable-auto-closing t)
+  (web-mode-auto-close-style 2)
+  (web-mode-enable-css-colorization t)
+  (web-mode-enable-heredoc-fontification t)
+  (web-mode-enable-current-element-highlight t))
 
 ;; vimrc
 (use-package vimrc-mode
@@ -1041,8 +1046,8 @@ Position the cursor at its beginning, according to the current mode."
 ;; text-mode
 (use-package text-mode
   :disabled
-  :init
-  (custom-set-variables '(paragraph-start '"^\\([ 　・○<\t\n\f]\\|(?[0-9a-zA-Z]+)\\)")))
+  :custom
+  (paragraph-start '"^\\([ 　・○<\t\n\f]\\|(?[0-9a-zA-Z]+)\\)"))
 
 ;;; ui settings
 ;;; ============================================================
@@ -1050,14 +1055,14 @@ Position the cursor at its beginning, according to the current mode."
 ;; color-theme
 
 (use-package smyx-theme
+  :custom
+  (show-paren-delay 0)
+  (show-paren-style 'expression)
   :config
   (load-theme 'smyx 'no-confirm)
   ;; web+db press vol.58 P.78
   ;; this settings are overwritten by theme often, so re-define
   (show-paren-mode t)
-  (custom-set-variables
-   '(show-paren-delay 0)
-   '(show-paren-style 'expression))
   (set-face-attribute 'show-paren-match nil
                       :background nil :foreground nil
                       :underline "#ffff00" :weight 'extra-bold))
@@ -1202,7 +1207,7 @@ Position the cursor at its beginning, according to the current mode."
 
 ;; mozc
 ;; (use-package mozc-popup
-;;   :init
+;;   :config
 ;;   (set-language-environment "Japanese")
 ;;   (prefer-coding-system 'utf-8-unix)
 ;;   (custom-set-variables
