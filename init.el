@@ -6,7 +6,7 @@
 ;; load-path
 
 ;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
+;; installed packages.  Don't delete this line.      If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 ;; (package-initialize)
@@ -21,14 +21,13 @@
        load-path))
 
 (defvar package-archives
-      '(("gnu" . "http://elpa.gnu.org/packages/")
-        ("melpa" . "http://melpa.org/packages/")
-        ("org" . "http://orgmode.org/elpa/")))
+  '(("gnu" . "http://elpa.gnu.org/packages/")
+    ("melpa" . "http://melpa.org/packages/")
+    ("org" . "http://orgmode.org/elpa/")))
 (package-initialize)
 
 ;; use-package
 (require 'use-package)
-                                        ; (require 'use-package-delight)
 (setq use-package-always-ensure nil)
 
 ;; quelpa
@@ -39,6 +38,9 @@
    :repo "quelpa/quelpa-use-package"))
 (require 'quelpa-use-package)
 (setq use-package-ensure-function 'quelpa)
+
+;; delight
+(use-package delight)
 
 ;; emacs-server
 (use-package server
@@ -216,9 +218,9 @@
 
 ;; trailing space
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-(setq show-trailing-whitespace t)
-(set-face-background 'trailing-whitespace "blue")
-(set-face-underline 'trailing-whitespace t)
+;; (setq show-trailing-whitespace t)
+;; (set-face-background 'trailing-whitespace "blue")
+;; (set-face-underline 'trailing-whitespace t)
 (setq require-final-newline t)
 
 ;; show eol
@@ -229,25 +231,44 @@
 ;; whitespace mode
 ;; https://qiita.com/itiut@github/items/4d74da2412a29ef59c3a
 (use-package whitespace
+  :ensure nil
   :delight
+  (global-whitespace-mode
+   whitespace-mode
+   whitespace-newline-mode)
+  :custom
+  (whitespace-style
+        '(
+          face
+          trailing
+          tabs
+          spaces
+          space-mark
+          tab-mark
+          empty
+              ))
+  (whitespace-display-mappings
+        '(
+          (space-mark ?\u3000 [?\u2423])
+          (tab-mark ?\t [?\u00BB ?\t] [?\\ ?\t])
+           ))
+  (whitespace-trailing-regexp  "\\([ \u00A0]+\\)$")
+  (whitespace-space-regexp "\\(\u3000+\\)")
+  :init
+  (global-whitespace-mode t)
   :config
-  (setq whitespace-style '(face tabs tab-mark spaces space-mark))
-  (setq whitespace-display-mappings
-        '((space-mark ?\u3000 [?\u25a1])
-          ;; WARNING: the mapping below has a problem.
-          ;; When a TAB occupies exactly one column, it will display the
-          ;; character ?\xBB at that column followed by a TAB which goes to
-          ;; the next TAB column.
-          ;; If this is a problem for you, please, comment the line below.
-          (tab-mark ?\t [?\xBB ?\t] [?\\ ?\t])))
-  (setq whitespace-space-regexp "\\(\u3000+\\)")
-  (set-face-foreground 'whitespace-tab "#adff2f")
-  (set-face-background 'whitespace-tab 'nil)
-  (set-face-underline  'whitespace-tab t)
-  (set-face-foreground 'whitespace-space "#7cfc00")
-  (set-face-background 'whitespace-space 'nil)
-  (set-face-bold 'whitespace-space t)
-  (global-whitespace-mode t))
+  (custom-set-faces
+  '(whitespace-space ((t (:bold t :background "Green4"))))
+  '(whitespace-empty ((t (:foreground "firebrick" :background "SlateGray1"))))
+  ;; '(whitespace-hspace ((t (:foreground "lightgray" :background "LemonChiffon3"))))
+  ;; '(whitespace-indentation ((t (:foreground "firebrick" :background "beige"))))
+  ;; '(whitespace-line ((t (:foreground "black" :background "red"))))
+  ;; '(whitespace-newline ((t (:foreground "orange" :background "blue"))))
+  ;; '(whitespace-space-after-tab ((t (:foreground "black" :background "green"))))
+  ;; '(whitespace-space-before-tab ((t (:foreground "black" :background "DarkOrange"))))
+  '(whitespace-tab ((t (:foreground "blue" :background "Yellow4"))))
+  '(whitespace-trailing ((t (:foreground "white" :background "Red4"))))
+  ))
 
 ;;; built-in keybindings
 ;;; ============================================================
@@ -303,7 +324,6 @@ Position the cursor at its beginning, according to the current mode."
 
 (use-package package-utils)
 
-                                        ; dired
 (use-package dired
   :ensure nil
   :config
@@ -321,24 +341,24 @@ Position the cursor at its beginning, according to the current mode."
 ;; smart-mode-line
 (use-package smart-mode-line
   :commands sml/setup
-  :config
-  (custom-set-variables
-   '(sml/no-confirm-load-theme t))
+  :custom
+  (sml/no-confirm-load-theme t)
+  :init
   ;;'(sml/theme 'respectful))
   (sml/setup))
 
 ;; cua mode
 (use-package cua-base
-  :costom
-  :config
-  (cua-rectangle-mark-key [(s-return)]
+  :ensure nil
+  :custom
   (cua-enable-cua-keys nil)
-  (cua-mode t)))
+  :bind
+  ("C-x SPC" . cua-rectangle-mark-mode))
 
 ;; smartrep
 (use-package smartrep
   :commands smartrep-define-key
-  :config
+  :init
   (defvar ctl-q-map (make-keymap))
   (define-key global-map "\C-q" ctl-q-map)
   ;; flycheck
@@ -356,7 +376,7 @@ Position the cursor at its beginning, according to the current mode."
 ;; flycheck
 (use-package flycheck
   :commands global-flycheck-mode
-  :config
+  :init
   (add-hook 'after-init-hook #'global-flycheck-mode))
 
 ;; easy-kill
@@ -391,7 +411,7 @@ Position the cursor at its beginning, according to the current mode."
   ;; settings for splitting
   (helm-full-frame nil)
   (helm-split-window-default-side 'other)
-  :config
+  :init
   (require 'helm-config)
   (helm-mode t)
   ;; helm カーソル合った時に persistent-action 実行
@@ -408,10 +428,12 @@ Position the cursor at its beginning, according to the current mode."
   (add-hook 'helm-move-selection-after-hook 'show-buffer-move-by-move-extend))
 
 ;; helm-ls-git
-(use-package helm-ls-git)
+(use-package helm-ls-git
+  :after (helm))
 
 ;; helm-swoop
 (use-package helm-swoop
+  :after (helm)
   :bind
   ("M-o" . helm-swoop)
   ("s-M-o" . helm-multi-swoop-all)
@@ -421,7 +443,8 @@ Position the cursor at its beginning, according to the current mode."
         ("C-s" . helm-next-line)))
 
 ;; helm-ag
-(use-package helm-ag)
+(use-package helm-ag
+  :after (helm))
 ;; keymap from helm-ag.el
 ;; (defvar helm-ag-map
 ;;   (let ((map (make-sparse-keymap)))
@@ -441,20 +464,22 @@ Position the cursor at its beginning, according to the current mode."
 
 ;; helm-c-yasnippet
 (use-package helm-c-yasnippet
+  :after (helm yasnippet)
   :bind
   ("C-s-<return>" . helm-yas-complete)
   :custom
   (helm-yas-space-match-any-greedy t))
 
 ;; helm-descbinds
-(use-package helm-descbinds)
+(use-package helm-descbinds
+  :after (helm))
 
 ;; abbrev mode
 (use-package abbrev
   :ensure nil
-  :delight
+  :delight (yas-minor-mode)
   :commands quietly-read-abbrev-file
-  :config
+  :init
   ;; (setq-default abbrev-mode t)
   (setq abbrev-file-name "~/.emacs.d/abbrev_defs")
   (setq save-abbrevs t)
@@ -472,7 +497,7 @@ Position the cursor at its beginning, according to the current mode."
   ("C-x y e" . yas-expand)
   :mode
   ("\\.yasnippet$" . snippet-mode)
-  :config
+  :init
   ;; 先頭のディレクトリは開発用ディレクトリとして扱われる
   ;; 後に読み込んだものが優先される
   ;; package.el からインストールしたのだと、デフォルトで
@@ -492,11 +517,16 @@ Position the cursor at its beginning, according to the current mode."
   ;; yas-load-directory という関数もあった
   (yas-global-mode t))
 
+;; yasnippet-snippets
+(use-package yasnippet-snippets
+  :after (yasnippet))
+
 ;; auto-complete
 (use-package auto-complete
+  :delight
   :commands (ac-flyspell-workaround auto-complete-mode)
   :functions ac-config-default
-  :config
+  :init
   (require 'auto-complete-config)
   (ac-config-default)
   ;; (global-auto-complete-mode t)
@@ -529,12 +559,11 @@ Position the cursor at its beginning, according to the current mode."
   (setq ac-sources (append '(ac-source-filename) ac-sources)))
 
 ;; go-autocomplete
-(use-package go-autocomplete)
-;; :after (auto-complete))
+(use-package go-autocomplete
+  :after (auto-complete))
 
 ;; pos-tip
 (use-package pos-tip)
-;; :after (auto-complete))
 
 ;; popwin
 (use-package popwin
@@ -561,14 +590,15 @@ Position the cursor at its beginning, according to the current mode."
 
 ;; smartparens
 (use-package smartparens
-  :commands smartparens-global-mode
   :delight
-  :config
+  :commands smartparens-global-mode
+  :init
   (require 'smartparens-config)
   (smartparens-global-mode))
 
 ;; anzu
 (use-package anzu
+  :delight
   :commands global-anzu-mode
   :bind
   ("C-c r" . anzu-query-replace)
@@ -577,14 +607,14 @@ Position the cursor at its beginning, according to the current mode."
   (anzu-use-migemo nil)
   (anzu-search-threshold 10000)
   (anzu-minimum-input-length 2)
-  :config
+  :init
   (global-anzu-mode +1)
   (custom-set-variables))
 
 ;; highlight-symbol
 (use-package highlight-symbol
   :delight
-  :config
+  :init
   (add-hook 'emacs-lisp-mode-hook 'highlight-symbol-mode)
   (add-hook 'ruby-mode-hook 'highlight-symbol-mode)
   (add-hook 'enh-ruby-mode-hook 'highlight-symbol-mode)
@@ -609,7 +639,7 @@ Position the cursor at its beginning, according to the current mode."
   :bind
   ("C-x C-'" . helm-projectile)
   ("C-M-'" . projectile-find-dir)
-  :config
+  :init
   (projectile-mode)
   ;; (setq projectile-enable-caching t)
   (setq projectile-indexing-method
@@ -633,7 +663,7 @@ Position the cursor at its beginning, according to the current mode."
 (use-package undo-tree
   :delight
   :commands global-undo-tree-mode
-  :config
+  :init
   (global-undo-tree-mode t))
 
 ;; redo
@@ -655,7 +685,7 @@ Position the cursor at its beginning, according to the current mode."
   :delight
   :after (git-gutter)
   :commands global-git-gutter-mode
-  :config
+  :init
   (global-git-gutter-mode t))
 
 (use-package gist)
@@ -690,32 +720,25 @@ Position the cursor at its beginning, according to the current mode."
   :delight
   :custom
   (free-keys-modifiers '("" "C" "M" "C-M" "C-S-M" "s")))
-
-
-;; dockerfile
-(use-package dockerfile-mode)
-
-;; fish
-(use-package fish-mode)
-
 ;; ccc
 (use-package ccc)
 
 ;; ddskk
-(use-package ddskk
-  :ensure skk
+(use-package skk
+  :ensure ddskk
   :after (ccc)
-  :config
+  :custom
+  (skk-sticky-key ";")
+  (skk-save-jisyo-instantly t)
+  (skk-user-directory "~/.emacs.d")
+  (skk-large-jisyo "~/.emacs.d/SKK-JISYO.L")
+  (skk-server-host "localhost")
+  (skk-server-portnum 1178)
+  (skk-server-report-response t)
+  (skk-use-search-web t)
+  :init
   (setq default-input-method "japanese-skk")
-  (setq skk-sticky-key ";")
-  (setq skk-save-jisyo-instantly t)
-  (setq skk-user-directory "~/.emacs.d")
-  (setq skk-large-jisyo "~/.emacs.d/SKK-JISYO.L")
-  (setq skk-server-host "localhost")
-  (setq skk-server-portnum 1178)
-  (setq skk-server-report-response t)
-  (setq skk-use-search-web t)
-
+  :config
   (when skk-use-search-web
     ;; 辞書変換が尽きたらGoogle CGI API for Japanese Inputによる変換を実行
     ;; https://www.google.co.jp/ime/cgiapi.html
@@ -1028,6 +1051,12 @@ Position the cursor at its beginning, according to the current mode."
   (web-mode-enable-heredoc-fontification t)
   (web-mode-enable-current-element-highlight t))
 
+;; dockerfile
+(use-package dockerfile-mode)
+
+;; fish
+(use-package fish-mode)
+
 ;; vimrc
 (use-package vimrc-mode
   :mode
@@ -1087,9 +1116,9 @@ Position the cursor at its beginning, according to the current mode."
   ;;    ;; (font-spec :family "Hiragino Mincho Pro"))
   ;;    (font-spec :family "ヒラギノ明朝 Pro"))
   ;;   ;; ひらがなとカタカナをモトヤシーダに
-  ;;   ;; U+3000-303F	CJKの記号および句読点
-  ;;   ;; U+3040-309F	ひらがな
-  ;;   ;; U+30A0-30FF	カタカナ
+  ;;   ;; U+3000-303F   CJKの記号および句読点
+  ;;   ;; U+3040-309F   ひらがな
+  ;;   ;; U+30A0-30FF   カタカナ
   ;;   (set-fontset-font
   ;;    nil '(#x3040 . #x30ff)
   ;;    (font-spec :family "NfMotoyaCedar"))
