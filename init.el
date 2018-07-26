@@ -11,24 +11,24 @@
 ;; You may delete these explanatory comments.
 ;; (package-initialize)
 
-(setq load-path
-      (append
-       (list
-        ;; (expand-file-name "~/.emacs.d/")
-        (expand-file-name "~/.emacs.d/elisps/")
-        (expand-file-name "~/dev/src/github.com/jwiegley/use-package")
-        )
-       load-path))
-
 (defvar package-archives
   '(("gnu" . "http://elpa.gnu.org/packages/")
     ("melpa" . "http://melpa.org/packages/")
     ("org" . "http://orgmode.org/elpa/")))
 (package-initialize)
 
-;; use-package
-(require 'use-package)
-(setq use-package-always-ensure nil)
+(eval-when-compile
+  ;; Following line is not needed if use-package.el is in ~/.emacs.d
+  (setq load-path
+        (append
+         (list
+          ;; (expand-file-name "~/.emacs.d/")
+          (expand-file-name "~/.emacs.d/elisps/")
+          (expand-file-name "~/dev/src/github.com/jwiegley/use-package")
+          )
+         load-path))
+  (require 'use-package)
+  (setq use-package-always-ensure nil))
 
 ;; quelpa
 (require 'quelpa)
@@ -41,6 +41,8 @@
 
 ;; delight
 (use-package delight)
+
+(setq custom-file (expand-file-name "~/.emacs.d/elisps/custom.el"))
 
 ;; emacs-server
 (use-package server
@@ -77,6 +79,8 @@
 ;;; ============================================================
 
 ;; encoding
+(setenv "LANG" "ja_JP.UTF-8")
+;; (set-language-environment "Japanese")
 (prefer-coding-system 'utf-8-unix)
 (set-default-coding-systems 'utf-8-unix)
 (set-terminal-coding-system 'utf-8-unix)
@@ -99,8 +103,6 @@
 
 ;; load newer file even it's compiled
 (setq load-prefer-newer t)
-
-(setq custom-file (expand-file-name "~/.emacs.d/elisps/custom.el"))
 
 ;; no beep
 (setq ring-bell-function 'ignore)
@@ -232,43 +234,40 @@
 ;; https://qiita.com/itiut@github/items/4d74da2412a29ef59c3a
 (use-package whitespace
   :ensure nil
-  :delight
-  (global-whitespace-mode
-   whitespace-mode
-   whitespace-newline-mode)
+  :delight (global-whitespace-mode)
   :custom
   (whitespace-style
-        '(
-          face
-          trailing
-          tabs
-          spaces
-          space-mark
-          tab-mark
-          empty
-              ))
+   '(
+     face
+     trailing
+     tabs
+     spaces
+     space-mark
+     tab-mark
+     empty
+     ))
   (whitespace-display-mappings
-        '(
-          (space-mark ?\u3000 [?\u2423])
-          (tab-mark ?\t [?\u00BB ?\t] [?\\ ?\t])
-           ))
+   '(
+     (space-mark ?\u3000 [?\u2423])
+     (tab-mark ?\t [?\u00BB ?\t] [?\\ ?\t])
+     ))
   (whitespace-trailing-regexp  "\\([ \u00A0]+\\)$")
   (whitespace-space-regexp "\\(\u3000+\\)")
   :init
   (global-whitespace-mode t)
   :config
   (custom-set-faces
-  '(whitespace-space ((t (:bold t :background "Green4"))))
-  '(whitespace-empty ((t (:foreground "firebrick" :background "SlateGray1"))))
-  ;; '(whitespace-hspace ((t (:foreground "lightgray" :background "LemonChiffon3"))))
-  ;; '(whitespace-indentation ((t (:foreground "firebrick" :background "beige"))))
-  ;; '(whitespace-line ((t (:foreground "black" :background "red"))))
-  ;; '(whitespace-newline ((t (:foreground "orange" :background "blue"))))
-  ;; '(whitespace-space-after-tab ((t (:foreground "black" :background "green"))))
-  ;; '(whitespace-space-before-tab ((t (:foreground "black" :background "DarkOrange"))))
-  '(whitespace-tab ((t (:foreground "blue" :background "Yellow4"))))
-  '(whitespace-trailing ((t (:foreground "white" :background "Red4"))))
-  ))
+   '(whitespace-space ((t (:bold t :background "Green4"))))
+   '(whitespace-empty ((t (:foreground "firebrick" :background "SlateGray1"))))
+   ;; '(whitespace-hspace ((t (:foreground "lightgray" :background "LemonChiffon3"))))
+   ;; '(whitespace-indentation ((t (:foreground "firebrick" :background "beige"))))
+   ;; '(whitespace-line ((t (:foreground "black" :background "red"))))
+   ;; '(whitespace-newline ((t (:foreground "orange" :background "blue"))))
+   ;; '(whitespace-space-after-tab ((t (:foreground "black" :background "green"))))
+   ;; '(whitespace-space-before-tab ((t (:foreground "black" :background "DarkOrange"))))
+   '(whitespace-tab ((t (:foreground "blue" :background "Yellow4"))))
+   '(whitespace-trailing ((t (:foreground "white" :background "Red4"))))
+   ))
 
 ;;; built-in keybindings
 ;;; ============================================================
@@ -488,7 +487,7 @@ Position the cursor at its beginning, according to the current mode."
 
 ;; yasnippet
 (use-package yasnippet
-  :delight
+  :delight (yas-minor-mode)
   :commands yas-global-mode
   :bind
   ("C-x y i" . yas-insert-snippet)
@@ -515,6 +514,7 @@ Position the cursor at its beginning, according to the current mode."
   ;;         "~/.emacs.d/elpa/yasnippet/snippets"
   ;;         ))
   ;; yas-load-directory という関数もあった
+
   (yas-global-mode t))
 
 ;; yasnippet-snippets
@@ -524,22 +524,22 @@ Position the cursor at its beginning, according to the current mode."
 ;; auto-complete
 (use-package auto-complete
   :delight
-  :commands (ac-flyspell-workaround auto-complete-mode)
+  :after (yasnippet)
+  :commands (ac-flyspell-workaround global-auto-complete-mode)
   :functions ac-config-default
+  :custom
+  (ac-use-menu-map t)
+  (ac-auto-start t)
+  (ac-delay 0.3)
+  (ac-use-quick-help t)
+  (ac-quick-help-delay 1.0)
+  (ac-candidate-limit nil)
+  (ac-use-fuzzy t)
+  :bind
+  ("M-<return>" . auto-complete)
   :init
   (require 'auto-complete-config)
   (ac-config-default)
-  ;; (global-auto-complete-mode t)
-
-  (define-key global-map (kbd "M-<return>") 'auto-complete)
-
-  (setq ac-use-menu-map t)
-  (setq ac-auto-start t)
-  (setq ac-delay 0.5)
-  (setq ac-use-quick-help t)
-  (setq ac-quick-help-delay 0.5)
-  (setq ac-candidate-limit nil)
-  (setq ac-use-fuzzy t)
   (ac-flyspell-workaround)
 
   ;; ac-souces default by auto-complete-config.el
@@ -547,20 +547,11 @@ Position the cursor at its beginning, according to the current mode."
 
   ;; auto-complete commonc sources setup
   ;; this is executed in the last of ac-config-default, so you should "add", don't make new list
-  (defun ac-common-setup ()
-                                        ;(add-to-list 'ac-sources 'ac-source-filename)
-    )
+  ;; (defun ac-common-setup ()
+  ;;   (add-to-list 'ac-sources 'ac-source-filename))
+  (setq ac-sources (append '(ac-source-filename) ac-sources))
 
-  ;; auto-complete everywhere
-  (defun auto-complete-mode-maybe ()
-    "No maybe for you. Only AC!"
-    (unless (minibufferp (current-buffer))
-      (auto-complete-mode 1)))
-  (setq ac-sources (append '(ac-source-filename) ac-sources)))
-
-;; go-autocomplete
-(use-package go-autocomplete
-  :after (auto-complete))
+  (global-auto-complete-mode t))
 
 ;; pos-tip
 (use-package pos-tip)
@@ -634,11 +625,12 @@ Position the cursor at its beginning, according to the current mode."
 
 ;; projectile
 (use-package projectile
+  :disabled
   :delight ; '(:eval (concat " " "[" (projectile-project-name) "]"))
   :commands projectile-mode
   :bind
-  ("C-x C-'" . helm-projectile)
-  ("C-M-'" . projectile-find-dir)
+  ("C-x C-;" . helm-projectile)
+  ("C-M-;" . projectile-find-dir)
   :init
   (projectile-mode)
   ;; (setq projectile-enable-caching t)
@@ -648,6 +640,7 @@ Position the cursor at its beginning, according to the current mode."
           'alien)))
 
 (use-package helm-projectile
+  :disabled
   :delight
   :after (helm projectile))
 
@@ -708,11 +701,12 @@ Position the cursor at its beginning, according to the current mode."
 
 ;; which-key
 (use-package which-key
+  :disabled
   :delight
   :commands (which-key-mode which-key-setup-side-window-bottom)
   :config
   (which-key-mode)
-  (setq which-key-idle-delay 0.2)
+  (setq which-key-idle-delay 1.0)
   (which-key-setup-side-window-bottom))
 
 ;; free-keys
@@ -720,52 +714,40 @@ Position the cursor at its beginning, according to the current mode."
   :delight
   :custom
   (free-keys-modifiers '("" "C" "M" "C-M" "C-S-M" "s")))
-;; ccc
-(use-package ccc)
+
+;; ;; ccc
+;; (use-package ccc
+;;   :ensure nil)
 
 ;; ddskk
 (use-package skk
   :ensure ddskk
-  :after (ccc)
+  :bind
+  ("C-\\" . skk-mode)
   :custom
+  (default-input-method "japanese-skk")
   (skk-sticky-key ";")
   (skk-save-jisyo-instantly t)
   (skk-user-directory "~/.emacs.d")
   (skk-large-jisyo "~/.emacs.d/SKK-JISYO.L")
-  (skk-server-host "localhost")
-  (skk-server-portnum 1178)
-  (skk-server-report-response t)
-  (skk-use-search-web t)
-  :init
-  (setq default-input-method "japanese-skk")
+  ;; (skk-server-host "localhost")
+  ;; (skk-server-portnum 1178)
+  ;; (skk-server-report-response t)
   :config
-  (when skk-use-search-web
-    ;; 辞書変換が尽きたらGoogle CGI API for Japanese Inputによる変換を実行
-    ;; https://www.google.co.jp/ime/cgiapi.html
-    (add-to-list 'skk-search-prog-list
-                 '(skk-search-web 'skk-google-cgi-api-for-japanese-input)
-                 t)
-    ;; 辞書登録モードの初期値にGoogleサジェストを使用する
-    (setq skk-read-from-minibuffer-function
-          (lambda ()
-            (car (skk-google-suggest skk-henkan-key))))
-    ;; 動的補完にGoogleサジェストを表示
-    (add-to-list 'skk-completion-prog-list '(skk-comp-google) t))
-  ;; from skk-setup
-  (defun skk-isearch-setup-maybe ()
-    (require 'skk-vars)
-    (when (or (eq skk-isearch-mode-enable 'always)
-              (and (boundp 'skk-mode)
-                   skk-mode
-                   skk-isearch-mode-enable))
-      (skk-isearch-mode-setup)))
-  (defun skk-isearch-cleanup-maybe ()
-    (require 'skk-vars)
-    (when (and (featurep 'skk-isearch)
-               skk-isearch-mode-enable)
-      (skk-isearch-mode-cleanup)))
-  (add-hook 'isearch-mode-hook #'skk-isearch-setup-maybe)
-  (add-hook 'isearch-mode-end-hook #'skk-isearch-cleanup-maybe))
+  (require 'skk-vars)
+  (require 'skk-search-web)
+
+  (add-to-list 'skk-search-prog-list
+               '(skk-search-web 'skk-google-cgi-api-for-japanese-input)
+               t)
+
+  ;; ;; 辞書登録モードへの突入時の初期値にGoogle cgiを利用する
+  ;;     (setq skk-read-from-minibuffer-function
+  ;;         (lambda ()
+  ;;           (car (skk-google-cgi-api-for-japanese-input skk-henkan-key))))
+
+  ;; 動的補完にGoogleサジェストを表示
+  (add-to-list 'skk-completion-prog-list '(skk-comp-google) t))
 
 ;;; for specific language settings
 ;;; ============================================================
@@ -889,6 +871,9 @@ Position the cursor at its beginning, according to the current mode."
   :custom
   (gofmt-command "goimports")
   (compile-command "go build -v && go test -v && go vet"))
+
+(use-package go-autocomplete
+  :after (auto-complete))
 
 (use-package go-eldoc
   :config
@@ -1180,16 +1165,16 @@ Position the cursor at its beginning, according to the current mode."
 
   (when (eq system-type 'gnu/linux)
     (set-face-attribute 'default nil
-                        :family "Ricty Diminished"  ;; 英数
+                        :family "Ricty"  ;; 英数
                         :height 130)
-    ;; (set-fontset-font
-    ;;  (frame-parameter nil 'font)
-    ;;  'japanese-jisx0208
-    ;;  '("IPAGothic" . "iso10646-1"))
-    ;; (set-fontset-font
-    ;;  (frame-parameter nil 'font)
-    ;;  'japanese-jisx0212
-    ;;  '("IPAGothic" . "iso10646-1"))
+    (set-fontset-font
+     (frame-parameter nil 'font)
+     'japanese-jisx0208
+     '("Ricty" . "iso10646-1"))
+    (set-fontset-font
+     (frame-parameter nil 'font)
+     'japanese-jisx0212
+     '("Ricty" . "iso10646-1"))
     ;; ウィンドウサイズ
     (setq initial-frame-alist
           (append '((top . 20) ;; フレームの Y 位置(ピクセル数)
