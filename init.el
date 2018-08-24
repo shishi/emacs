@@ -53,27 +53,25 @@
 (use-package cl)
 
 ;; exec-path
-;; (setq exec-path
-;;       (remove-duplicates
-;;        (append
-;;         (list
-;;          ;; (expand-file-name "~/.rbenv/bin")
-;;          ;; (expand-file-name "~/.rbenv/shims")
-;;          ;; (expand-file-name "~/.anyenv/envs/rbenv/bin")
-;;          ;; (expand-file-name "~/.anyenv/envs/rbenv/shims")
-;;          (expand-file-name "~/.emacs.d/bin")
-;;          (expand-file-name "~/dev/bin")
-;;          "/usr/local/sbin"
-;;          "/usr/local/bin"
-;;          ;; "/opt/local/sbin"
-;;          ;; "/opt/local/bin"
-;;          "/usr/sbin"
-;;          "/usr/bin"
-;;          "/sbin"
-;;          "/bin"
-;;          )
-;;         exec-path)
-;;        :test 'equal :from-end t))
+(setq exec-path
+      (append
+        (list
+         (expand-file-name "~/.rbenv/bin")
+         (expand-file-name "~/.rbenv/shims")
+         ;; (expand-file-name "~/.anyenv/envs/rbenv/bin")
+         ;; (expand-file-name "~/.anyenv/envs/rbenv/shims")
+         (expand-file-name "~/.emacs.d/bin")
+         (expand-file-name "~/dev/bin")
+         "/usr/local/sbin"
+         "/usr/local/bin"
+         ;; "/opt/local/sbin"
+         ;; "/opt/local/bin"
+         "/usr/sbin"
+         "/usr/bin"
+         "/sbin"
+         "/bin"
+         )
+        exec-path))
 
 ;;; built-in settings
 ;;; ============================================================
@@ -286,15 +284,15 @@
 ;; (define-key global-map "\C-x\C-h" 'help-command)
 
 ;; swap C-a and M-m
-(define-key global-map (kbd "C-a") 'back-to-indentation)
-(define-key global-map (kbd "M-m") 'move-beginning-of-line)
+;; (define-key global-map (kbd "C-a") 'back-to-indentation)
+;; (define-key global-map (kbd "M-m") 'move-beginning-of-line)
 
 (define-key global-map (kbd "RET") 'reindent-then-newline-and-indent)
 (define-key global-map (kbd "C-m") 'reindent-then-newline-and-indent)
 
 (define-key global-map (kbd "M-k") 'kill-this-buffer)
-(define-key global-map (kbd "C-z") 'other-window)
 (define-key global-map (kbd "C-M-k") 'kill-whole-line)
+(define-key global-map (kbd "M-l") 'other-window)
 
 (define-key ctl-x-map "l" 'goto-line)
 
@@ -715,10 +713,6 @@ Position the cursor at its beginning, according to the current mode."
   :custom
   (free-keys-modifiers '("" "C" "M" "C-M" "C-S-M" "s")))
 
-;; ;; ccc
-;; (use-package ccc
-;;   :ensure nil)
-
 ;; ddskk
 (use-package skk
   :ensure ddskk
@@ -774,10 +768,9 @@ Position the cursor at its beginning, according to the current mode."
 
 ;; ruby
 (use-package rbenv
-  :disabled
   :commands global-rbenv-mode
   :custom
-  (rbenv-installation-dir "~/.rbenv/bin/rbenv")
+  (rbenv-installation-dir "/usr/bin/rbenv")
   :config
   (global-rbenv-mode))
 
